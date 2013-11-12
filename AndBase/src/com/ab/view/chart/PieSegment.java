@@ -97,12 +97,12 @@ public class PieSegment implements Serializable {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @return the string
    * @see java.lang.Object#toString()
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:50
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:50
    * @version v1.0
    */
   public String toString() {

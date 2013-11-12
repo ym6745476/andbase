@@ -83,10 +83,10 @@ public class GraphicalView extends View {
   /** The old y coordinate. */
   private float oldY;
   
-  /** ÆÁÄ»¿í¶È. */
+  /** å±å¹•å®½åº¦. */
   private int screenWidth = 0;
 	
-  /** ÆÁÄ»¸ß¶È. */
+  /** å±å¹•é«˜åº¦. */
   private int screenHeight = 0;
   
   /**
@@ -130,13 +130,13 @@ public class GraphicalView extends View {
     if (mChart instanceof XYChart) {
     	XYMultipleSeriesRenderer  mXYMultipleSeriesRenderer  = ((XYChart) mChart).getRenderer();
     	
-    	//¸ù¾İÆÁÄ»´óĞ¡ÖØÖÃËùÓĞ³ß´ç
+    	//æ ¹æ®å±å¹•å¤§å°é‡ç½®æ‰€æœ‰å°ºå¯¸
         int explainTextSize1 = mXYMultipleSeriesRenderer.getExplainTextSize1();
         int explainTextSize2 = mXYMultipleSeriesRenderer.getExplainTextSize2();
         int scaleCircleRadius = mXYMultipleSeriesRenderer.getScaleCircleRadius();
         int scaleRectWidth = mXYMultipleSeriesRenderer.getScaleRectWidth();
         int scaleRectHeight = mXYMultipleSeriesRenderer.getScaleRectHeight();
-        //°´·Ö±æÂÊ×ª»»
+        //æŒ‰åˆ†è¾¨ç‡è½¬æ¢
         mXYMultipleSeriesRenderer.setExplainTextSize1(AbViewUtil.resizeTextSize(screenWidth, screenHeight, explainTextSize1));
         mXYMultipleSeriesRenderer.setExplainTextSize2(AbViewUtil.resizeTextSize(screenWidth, screenHeight, explainTextSize2));
         mXYMultipleSeriesRenderer.setScaleCircleRadius(AbViewUtil.resizeTextSize(screenWidth, screenHeight, scaleCircleRadius));
@@ -155,10 +155,10 @@ public class GraphicalView extends View {
     
     int chartTitleTextSize = (int)mRenderer.getChartTitleTextSize();
     mRenderer.setChartTitleTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, chartTitleTextSize));
-    //ÖáÏßÉÏ±êÇ©ÎÄ×Ö´óĞ¡
+    //è½´çº¿ä¸Šæ ‡ç­¾æ–‡å­—å¤§å°
     int mLabelsTextSize  = (int)mRenderer.getLabelsTextSize();
     mRenderer.setLabelsTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, mLabelsTextSize));
-  	//ËµÃ÷ÎÄ×Ö´óĞ¡
+  	//è¯´æ˜æ–‡å­—å¤§å°
     int mLegendTextSize  =  (int)mRenderer.getLegendTextSize();
     mRenderer.setLabelsTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, mLegendTextSize));
     
@@ -188,12 +188,12 @@ public class GraphicalView extends View {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param canvas the canvas
    * @see android.view.View#onDraw(android.graphics.Canvas)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:51
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
    * @version v1.0
    */
   @Override
@@ -230,17 +230,17 @@ public class GraphicalView extends View {
 	    if(mXYMultipleSeriesRenderer.isScaleLineEnabled()){
 	    	oldX = ((TouchHandler) mTouchHandler).getOldX();
 	    	int scaleTopPadding = 50;
-	    	//´Ó×ø±êÖáÍùÏÂ
+	    	//ä»åæ ‡è½´å¾€ä¸‹
 	    	int scaleBottomPadding = 20;
 	        int explainTextSize1 = mXYMultipleSeriesRenderer.getExplainTextSize1();
 	        int explainTextSize2 = mXYMultipleSeriesRenderer.getExplainTextSize2();
 	        int scaleCircleRadius = mXYMultipleSeriesRenderer.getScaleCircleRadius();
-	        //°´·Ö±æÂÊ×ª»»
+	        //æŒ‰åˆ†è¾¨ç‡è½¬æ¢
 	        scaleTopPadding = AbViewUtil.resizeTextSize(width, height, scaleTopPadding);
 	        scaleBottomPadding = AbViewUtil.resizeTextSize(width, height, scaleBottomPadding);
 	        
 	        
-	        //YÖáÎ»ÖÃ
+	        //Yè½´ä½ç½®
 	        int bottomY = 0;
 	        int topY = 0;
 	        if (mChart instanceof XYChart) {
@@ -253,7 +253,7 @@ public class GraphicalView extends View {
 	        } else {
 	        }
 	        
-	        //±ê³ßÏßÓëÍÏÊÖ
+	        //æ ‡å°ºçº¿ä¸æ‹–æ‰‹
 	        mPaint.setColor(mXYMultipleSeriesRenderer.getScaleLineColor());
 	        canvas.drawLine(oldX,scaleTopPadding,oldX, bottomY+scaleBottomPadding, mPaint);
 	        mPaint.setStyle(Paint.Style.FILL);
@@ -261,14 +261,14 @@ public class GraphicalView extends View {
 	        canvas.drawCircle(oldX, bottomY+scaleBottomPadding+scaleCircleRadius, scaleCircleRadius, mPaint);
 	        
 	        
-	        //ÅĞ¶Ï¹Òµ½ÄÄ¸öµãÉÏ
+	        //åˆ¤æ–­æŒ‚åˆ°å“ªä¸ªç‚¹ä¸Š
 	        if(mChart instanceof XYChart){
 	          List<Float> mPoints = null;
 	          List<Double> mValues = null;
 	          List<String> mExplains = null;
 	          float minValue = -1;
 	          int minIndex = -1;
-	          //ÒªÏÔÊ¾µÄÎÄ±¾
+	          //è¦æ˜¾ç¤ºçš„æ–‡æœ¬
 	          String showValue = "";
 	          String showExplain = "";
 	          Map<Integer, List<Float>> points = ((XYChart) mChart).getPoints();
@@ -280,7 +280,7 @@ public class GraphicalView extends View {
 	            mValues = values.get(value.getKey());
 	            mExplains = explains.get(value.getKey());
 	            
-	            //ÅĞ¶Ï¾àÀëÔÚ2·¶Î§µÄµãµÄË÷Òı
+	            //åˆ¤æ–­è·ç¦»åœ¨2èŒƒå›´çš„ç‚¹çš„ç´¢å¼•
 	            minValue = 1000;
 	            minIndex = -1;
 	           
@@ -324,8 +324,8 @@ public class GraphicalView extends View {
 	                  }
 	              }
 	              if(showRect){
-	                  //»­¿ò¿òºÍµã
-	            	  //»ñÈ¡ÎÄ±¾µÄ¸ß¶È
+	                  //ç”»æ¡†æ¡†å’Œç‚¹
+	            	  //è·å–æ–‡æœ¬çš„é«˜åº¦
 	            	  TextPaint mTextPaint1 = new TextPaint(Paint.ANTI_ALIAS_FLAG);
 	                  mTextPaint1.setColor(Color.WHITE);
 	                  mTextPaint1.setTypeface(Typeface.DEFAULT);
@@ -336,24 +336,24 @@ public class GraphicalView extends View {
 	                  mTextPaint2.setTypeface(Typeface.DEFAULT);
 	                  mTextPaint2.setTextSize(explainTextSize2);
 	                  FontMetrics  fm1  = mTextPaint1.getFontMetrics();
-	                  //ĞĞ¸ß
+	                  //è¡Œé«˜
 	                  int hSize1 = (int)Math.ceil(fm1.descent - fm1.ascent)+2;
 	                  
 	                  FontMetrics  fm2  = mTextPaint2.getFontMetrics();
-	                  //ĞĞ¸ß
+	                  //è¡Œé«˜
 	                  int hSize2 = (int)Math.ceil(fm2.descent - fm2.ascent)+2;
-	                  //ÉèÖÃ¸öĞÂµÄ³¤·½ĞÎ  
-	                  //ÅĞ¶ÏÎÄ×ÖÊÇ·ñ³¬³öÉèÖÃµÄ¿ò¿ò
+	                  //è®¾ç½®ä¸ªæ–°çš„é•¿æ–¹å½¢  
+	                  //åˆ¤æ–­æ–‡å­—æ˜¯å¦è¶…å‡ºè®¾ç½®çš„æ¡†æ¡†
 	                  int row1 = AbGraphical.getDrawRowCount(showValue,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint1);
 	                  int row2 = AbGraphical.getDrawRowCount(showExplain,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint2);
 	                  RectF mRectF = null;
 	                  int  textHeight = row1*hSize1+row2*hSize2+10;
 	                  int realScaleRectHeight = mXYMultipleSeriesRenderer.getScaleRectHeight();
 	                  
-	                  //»­Ô²½Ç¾ØĞÎ  //³äÂú
+	                  //ç”»åœ†è§’çŸ©å½¢  //å……æ»¡
 	                  mPaint.setStyle(Paint.Style.FILL);  
 	                  mPaint.setColor(mXYMultipleSeriesRenderer.getScaleRectColor()); 
-	                  //ÉèÖÃ»­±ÊµÄ¾â³İĞ§¹û  
+	                  //è®¾ç½®ç”»ç¬”çš„é”¯é½¿æ•ˆæœ  
 	                  mPaint.setAntiAlias(true);
 	                  
 	                  int mRectLeft  = (int)(double)mPoints.get(minIndex)+5;
@@ -366,18 +366,18 @@ public class GraphicalView extends View {
 	                	  mRectBottom = mRectTop + realScaleRectHeight;
 	                  }
 	                  
-	                  //ÅĞ¶ÏÊÇ·ñ»á³¬³öÆÁÄ»
+	                  //åˆ¤æ–­æ˜¯å¦ä¼šè¶…å‡ºå±å¹•
 	                  if(mRectRight>width){
-	                    //³¬³öÁË
+	                    //è¶…å‡ºäº†
 	                    mRectLeft  = (int)(double)mPoints.get(minIndex)-5-mXYMultipleSeriesRenderer.getScaleRectWidth();
 	                    mRectRight = (int)(double)mPoints.get(minIndex)-5;
 	                  }
 	                  if(mRectBottom>bottomY){
-	                    //³¬³öÁË
+	                    //è¶…å‡ºäº†
 	                    mRectTop  = (int)(double)mPoints.get(minIndex+1)-5-realScaleRectHeight;
 	                    mRectBottom = (int)(double)mPoints.get(minIndex+1)-5;
 	                    
-	                    //ÊÇ·ñ³¬³öY=0µÄÎ»ÖÃµÄ
+	                    //æ˜¯å¦è¶…å‡ºY=0çš„ä½ç½®çš„
 	                    if(mRectTop<topY){
 	                      mRectTop = mRectTop+realScaleRectHeight/2;
 	                      mRectBottom = mRectBottom+realScaleRectHeight/2;
@@ -385,7 +385,7 @@ public class GraphicalView extends View {
 	                  }
 	                 
 	                  mRectF = new RectF(mRectLeft,mRectTop, mRectRight,mRectBottom);
-	                  //µÚ¶ş¸ö²ÎÊıÊÇx°ë¾¶£¬µÚÈı¸ö²ÎÊıÊÇy°ë¾¶
+	                  //ç¬¬äºŒä¸ªå‚æ•°æ˜¯xåŠå¾„ï¼Œç¬¬ä¸‰ä¸ªå‚æ•°æ˜¯yåŠå¾„
 	                  canvas.drawRoundRect(mRectF, 5, 5, mPaint);
 	                  
 	                  int textTopPadding = 15;
@@ -511,23 +511,23 @@ public class GraphicalView extends View {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param event the event
    * @return true, if successful
    * @see android.view.View#onTouchEvent(android.view.MotionEvent)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:51
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
    * @version v1.0
    */
   @Override
   public boolean onTouchEvent(MotionEvent event) {
-    	//ÅĞ¶ÏÊÂ¼şµÄÎ»ÖÃ ÊÇ±ê³ß »¹ÊÇÍ¼±í
+    	//åˆ¤æ–­äº‹ä»¶çš„ä½ç½® æ˜¯æ ‡å°º è¿˜æ˜¯å›¾è¡¨
         if(mRenderer != null){
-            //·Ö½âÊÂ¼ş
+            //åˆ†è§£äº‹ä»¶
             float newX = event.getX();
             float newY = event.getY();
-            //×ø±êÖáÖ®ÍâÊÂ¼ş   
+            //åæ ‡è½´ä¹‹å¤–äº‹ä»¶   
             //int bottom = y + height - margins[2] - legendSize;
             int bottom = 0;
             if (mChart instanceof XYChart) {
@@ -536,12 +536,12 @@ public class GraphicalView extends View {
             } else {
             }
             if(newY >= bottom-10){
-          	//²»ÊÇÍ¼±íÊÂ¼ş
+          	//ä¸æ˜¯å›¾è¡¨äº‹ä»¶
               if (mTouchHandler.handleTouchControl(event)) {
                 return true;
               }
             }else{
-          	  //¿ÉÍÏ¶¯£¬Ëõ·Å´ò¿ªÄ¬ÈÏÍÏ¶¯Ò²´ò¿ª
+          	  //å¯æ‹–åŠ¨ï¼Œç¼©æ”¾æ‰“å¼€é»˜è®¤æ‹–åŠ¨ä¹Ÿæ‰“å¼€
           	  if ((mRenderer.isPanEnabled() || mRenderer.isZoomEnabled())) {
                     if (mTouchHandler.handleTouch(event)) {
                         return true;

@@ -133,10 +133,10 @@ public class BinaryHttpResponseHandler extends AsyncHttpResponseHandler {
 
     // Interface to AsyncHttpRequest
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see com.ab.http.AsyncHttpResponseHandler#sendResponseMessage(org.apache.http.HttpResponse)
      * @author: zhaoqp
-     * @date£º2013-10-22 ÏÂÎç4:23:15
+     * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
      * @version v1.0
      */
     @Override

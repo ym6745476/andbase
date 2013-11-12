@@ -27,8 +27,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºHttpActivity
- * ÃèÊö£ºHttp¿ò¼Ü
+ * åç§°ï¼šHttpActivity
+ * æè¿°ï¼šHttpæ¡†æ¶
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -57,21 +57,21 @@ public class HttpActivity extends AbActivity {
         Button fileDownBtn  = (Button)this.findViewById(R.id.fileBtn);
         Button fileUploadBtn  = (Button)this.findViewById(R.id.fileUploadBtn);
         
-        //getÇëÇó
+        //getè¯·æ±‚
         getBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				
 				showProgressDialog();
-				// Ò»‚€«@È¡²ËÆ×µÄurlµØÖ·
+				// ä¸€å€‹ç²å–èœè°±çš„urlåœ°å€
 				String urlString = "http://client.azrj.cn/json/cook/cook_list.jsp?type=1&p=2&size=10"; 
 				AbHttpUtil.get(urlString, new AsyncHttpResponseHandler() {
 		        	
-		        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+		        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
 		            public void onSuccess(String content) {
 		            	
-		            	showDialog("·µ»Ø½á¹û",content,new OnClickListener(){
+		            	showDialog("è¿”å›ç»“æœ",content,new OnClickListener(){
 
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
@@ -80,12 +80,12 @@ public class HttpActivity extends AbActivity {
 		            	});
 		            };
 		            
-		            // Ê§°Ü£¬µ÷ÓÃ
+		            // å¤±è´¥ï¼Œè°ƒç”¨
 		            public void onFailure(Throwable arg0) { 
 		            	showToast("onFailure");
 		            };
 		            
-		            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+		            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
 		            public void onFinish() { 
 		            	removeProgressDialog();
 		            };
@@ -95,24 +95,24 @@ public class HttpActivity extends AbActivity {
 			}
 		});
         
-        //postÇëÇó
+        //postè¯·æ±‚
         postBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				showProgressDialog();
 				String url = "http://client.azrj.cn/json/cook/cook_list.jsp?";
-				// °ó¶¨²ÎÊı
+				// ç»‘å®šå‚æ•°
 		        RequestParams params = new RequestParams(); 
 		        params.put("type", "1");
 		        params.put("p", "2");
 		        params.put("size", "10");
 		        AbHttpUtil.post(url,params, new AsyncHttpResponseHandler() {
 		        	
-		        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+		        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
 		            public void onSuccess(String content) {
 		            	
-		            	showDialog("·µ»Ø½á¹û",content,new OnClickListener(){
+		            	showDialog("è¿”å›ç»“æœ",content,new OnClickListener(){
 
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
@@ -121,12 +121,12 @@ public class HttpActivity extends AbActivity {
 		            	});
 		            };
 		            
-		            // Ê§°Ü£¬µ÷ÓÃ
+		            // å¤±è´¥ï¼Œè°ƒç”¨
 		            public void onFailure(Throwable arg0) { 
 		            	showToast("onFailure");
 		            };
 		            
-		            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+		            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
 		            public void onFinish() { 
 		            	removeProgressDialog();
 		            };
@@ -135,7 +135,7 @@ public class HttpActivity extends AbActivity {
 			}
 		});
         
-        //×Ö½ÚÊı×éÏÂÔØ
+        //å­—èŠ‚æ•°ç»„ä¸‹è½½
         byteBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -144,14 +144,14 @@ public class HttpActivity extends AbActivity {
 				String url = "http://f.hiphotos.baidu.com/album/w%3D2048/sign=38c43ff7902397ddd6799f046dbab3b7/9c16fdfaaf51f3dee973bf7495eef01f3b2979d8.jpg";
 				AbHttpUtil.get(url, new BinaryHttpResponseHandler() {
 		        	
-		        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+		        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
 		            public void onSuccess(byte[] imgByte) {
 		            	
 		            	Bitmap bitmap = AbImageUtil.bytes2Bimap(imgByte);
 		            	ImageView view = new ImageView(HttpActivity.this);
 		            	view.setImageBitmap(bitmap);
 		            	
-		            	showDialog("·µ»Ø½á¹û",view,new OnClickListener(){
+		            	showDialog("è¿”å›ç»“æœ",view,new OnClickListener(){
 
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
@@ -160,12 +160,12 @@ public class HttpActivity extends AbActivity {
 		            	});
 		            };
 		            
-		            // Ê§°Ü£¬µ÷ÓÃ
+		            // å¤±è´¥ï¼Œè°ƒç”¨
 		            public void onFailure(Throwable arg0) { 
 		            	showToast("onFailure");
 		            };
 		            
-		            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+		            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
 		            public void onFinish() { 
 		            	removeProgressDialog();
 		            };
@@ -174,7 +174,7 @@ public class HttpActivity extends AbActivity {
 			}
 		});
         
-        //ÎÄ¼şÏÂÔØ
+        //æ–‡ä»¶ä¸‹è½½
         fileDownBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -184,14 +184,14 @@ public class HttpActivity extends AbActivity {
 				
 				AbHttpUtil.get(url, new FileAsyncHttpResponseHandler(url) {
 		        	
-		        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+		        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
 		            public void onSuccess(File file) {
 		            	
 		            	Bitmap bitmap = AbFileUtil.getBitmapFromSD(file);
 		            	ImageView view = new ImageView(HttpActivity.this);
 		            	view.setImageBitmap(bitmap);
 		            	
-		            	showDialog("·µ»Ø½á¹û",view,new OnClickListener(){
+		            	showDialog("è¿”å›ç»“æœ",view,new OnClickListener(){
 
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
@@ -200,12 +200,12 @@ public class HttpActivity extends AbActivity {
 		            	});
 		            };
 		            
-		            // Ê§°Ü£¬µ÷ÓÃ
+		            // å¤±è´¥ï¼Œè°ƒç”¨
 		            public void onFailure(Throwable arg0) { 
 		            	showToast("onFailure");
 		            };
 		            
-		            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+		            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
 		            public void onFinish() { 
 		            	removeProgressDialog();
 		            };
@@ -214,7 +214,7 @@ public class HttpActivity extends AbActivity {
 			}
 		});
         
-        //ÎÄ¼şÉÏ´«
+        //æ–‡ä»¶ä¸Šä¼ 
         fileUploadBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -226,7 +226,7 @@ public class HttpActivity extends AbActivity {
 				try {
 					File pathRoot = Environment.getExternalStorageDirectory();
 					String path = pathRoot.getAbsolutePath();
-					params.put("data1",URLEncoder.encode("ÖĞÎÄ¿É´¦Àí",HTTP.UTF_8));
+					params.put("data1",URLEncoder.encode("ä¸­æ–‡å¯å¤„ç†",HTTP.UTF_8));
 					params.put("data2","100");
 					File file1 = new File(path+"/download/cache_files/1.jpg");
 					File file2 = new File(path+"/download/cache_files/2.jpg");
@@ -238,17 +238,17 @@ public class HttpActivity extends AbActivity {
 				
 				AbHttpUtil.post(url, params, files, new AsyncHttpResponseHandler() {
 		        	
-		        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+		        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
 		            public void onSuccess(String content) {
 		            	showToast(content);
 		            };
 		            
-		            // Ê§°Ü£¬µ÷ÓÃ
+		            // å¤±è´¥ï¼Œè°ƒç”¨
 		            public void onFailure(Throwable e) { 
 		            	showToast(e.getMessage());
 		            };
 		            
-		            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+		            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
 		            public void onFinish() { 
 		            	removeProgressDialog();
 		            };

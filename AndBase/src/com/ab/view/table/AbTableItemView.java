@@ -33,10 +33,10 @@ import com.ab.view.listener.AbOnItemClickListener;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º±í¸ñÒ»ĞĞµÄÊÓÍ¼.
+ * æè¿°ï¼šè¡¨æ ¼ä¸€è¡Œçš„è§†å›¾.
  *
  * @author zhaoqp
- * @date£º2013-1-28 ÏÂÎç3:56:29
+ * @dateï¼š2013-1-28 ä¸‹åˆ3:56:29
  * @version v1.0
  */
 public class AbTableItemView extends LinearLayout {
@@ -49,14 +49,14 @@ public class AbTableItemView extends LinearLayout {
 	
 	/** The m context. */
 	private Context mContext;
-	//¸ÃĞĞµÄµ¥Ôª¸ñÊıÁ¿
+	//è¯¥è¡Œçš„å•å…ƒæ ¼æ•°é‡
 	/** The cell count. */
 	private int cellCount;
-	//¸ÃĞĞµ¥Ôª¸ñÎÄ±¾Êı×é
+	//è¯¥è¡Œå•å…ƒæ ¼æ–‡æœ¬æ•°ç»„
 	/** The row cell. */
 	private View[] rowCell;
 	
-	/** ViewÔÚÁĞ±íÖĞµÄÎ»ÖÃ. */
+	/** Viewåœ¨åˆ—è¡¨ä¸­çš„ä½ç½®. */
 	private int mPosition;
 	
 	/** The m table. */
@@ -66,12 +66,12 @@ public class AbTableItemView extends LinearLayout {
 	private AbTableArrayAdapter mAdapter = null;
 	
 	/**
-	 * ´´½¨Ò»ĞĞµÄView.
+	 * åˆ›å»ºä¸€è¡Œçš„View.
 	 *
 	 * @param context  Context
 	 * @param adapter the adapter
 	 * @param position the position
-	 * @param tableRow ĞĞÊı¾İ
+	 * @param tableRow è¡Œæ•°æ®
 	 * @param table the table
 	 */
 	public AbTableItemView(Context context,AbTableArrayAdapter adapter,int position,AbTableRow tableRow,AbTable table) {
@@ -80,46 +80,46 @@ public class AbTableItemView extends LinearLayout {
 		mContext = context;
 		mTable = table;
 		mAdapter = adapter;
-		//Ë®Æ½ÅÅÁĞ
+		//æ°´å¹³æ’åˆ—
 		this.setOrientation(LinearLayout.HORIZONTAL);
-		//³õÊ¼»¯ĞĞÖĞÁĞµÄÊıÁ¿
+		//åˆå§‹åŒ–è¡Œä¸­åˆ—çš„æ•°é‡
 		cellCount = tableRow.getCellSize();
-		//³õÊ¼»¯¸ÃĞĞµ¥Ôª¸ñÎÄ±¾ViewÊı×é
+		//åˆå§‹åŒ–è¯¥è¡Œå•å…ƒæ ¼æ–‡æœ¬Viewæ•°ç»„
 		rowCell = new View[cellCount];
-		//½«µ¥Ôª¸ñÖğ¸öÌí¼Óµ½ĞĞ
+		//å°†å•å…ƒæ ¼é€ä¸ªæ·»åŠ åˆ°è¡Œ
 		LinearLayout.LayoutParams layoutParams = null;
 		for (int i = 0; i < cellCount; i++) {
 			    final int index = i;
 				final AbTableCell tableCell = tableRow.getCellValue(index);
-				//°´ÕÕ¸ñµ¥ÔªÖ¸¶¨µÄ´óĞ¡ÉèÖÃ¿Õ¼ä
+				//æŒ‰ç…§æ ¼å•å…ƒæŒ‡å®šçš„å¤§å°è®¾ç½®ç©ºé—´
 				layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, tableRow.height);
 				if (tableCell.type == AbCellType.STRING) {
 						TextView textCell = new TextView(mContext);
 						textCell.setMinimumWidth(tableCell.width);
 						textCell.setMinimumHeight(tableRow.height);
-						if(D)Log.d(TAG, "ĞĞ¸ß£º"+tableRow.height);
+						if(D)Log.d(TAG, "è¡Œé«˜ï¼š"+tableRow.height);
 						textCell.setLines(1);
 						textCell.setGravity(Gravity.CENTER);
 						textCell.setTextColor(tableRow.textColor);
 						if(mPosition==0){
-						   if(D)Log.d(TAG, "±êÌâÀ¸µÄÑÕÉ«£º"+tableRow.textColor);
-						   //´ÖÌå
+						   if(D)Log.d(TAG, "æ ‡é¢˜æ çš„é¢œè‰²ï¼š"+tableRow.textColor);
+						   //ç²—ä½“
 					       textCell.setTypeface(Typeface.DEFAULT_BOLD);
 					       textCell.setBackgroundResource(mTable.getTableResource()[1]);
 						}else{
-						  //ÆÕÍ¨×ÖÌå
+						  //æ™®é€šå­—ä½“
 						  textCell.setTypeface(Typeface.DEFAULT);
 						  textCell.setBackgroundResource(mTable.getTableResource()[3]);
 						}
-						//ÉèÖÃµ¥Ôª¸ñÄÚÈİ
+						//è®¾ç½®å•å…ƒæ ¼å†…å®¹
 						textCell.setText(String.valueOf(tableCell.value));
 						textCell.setTextSize(tableRow.textSize);
 						rowCell[i] = textCell;
 						addView(textCell, layoutParams);
 				} 
-				//Èç¹û¸ñµ¥ÔªÊÇÍ¼ÏñÄÚÈİ
+				//å¦‚æœæ ¼å•å…ƒæ˜¯å›¾åƒå†…å®¹
 				else if (tableCell.type == AbCellType.IMAGE) {
-					//°´ÕÕ¸ñµ¥ÔªÖ¸¶¨µÄ´óĞ¡ÉèÖÃ¿Õ¼ä
+					//æŒ‰ç…§æ ¼å•å…ƒæŒ‡å®šçš„å¤§å°è®¾ç½®ç©ºé—´
 					LinearLayout mLinearLayout = new LinearLayout(mContext);
 					mLinearLayout.setMinimumWidth(tableCell.width);
 					ImageView imgCell = new ImageView(mContext);
@@ -152,14 +152,14 @@ public class AbTableItemView extends LinearLayout {
 					}
 					rowCell[i] = imgCell;
 					
-				//Èç¹û¸ñµ¥ÔªÊÇ¸´Ñ¡¿ò	
+				//å¦‚æœæ ¼å•å…ƒæ˜¯å¤é€‰æ¡†	
 				}else if (tableCell.type == AbCellType.CHECKBOX) {
 					
 					LinearLayout mLinearLayout = new LinearLayout(mContext);
 					mLinearLayout.setMinimumWidth(tableCell.width);
 					final CheckBox mCheckBox = new CheckBox(context);
 					mCheckBox.setGravity(Gravity.CENTER);
-					//±ØĞëÏÈÇå¿ÕÊÂ¼ş
+					//å¿…é¡»å…ˆæ¸…ç©ºäº‹ä»¶
 					mCheckBox.setOnCheckedChangeListener(null);
 					mCheckBox.setFocusable(false);
 					int isCheck = Integer.parseInt(String.valueOf(tableCell.value));
@@ -186,7 +186,7 @@ public class AbTableItemView extends LinearLayout {
 								boolean isChecked) {
 							
 							if(mPosition==0){
-								//È«Ñ¡
+								//å…¨é€‰
 								if (isChecked) {
 									mTable.getTitles()[index]= "1";
 									for (int i = 0; i < mTable.getContents().size(); i++) {
@@ -199,7 +199,7 @@ public class AbTableItemView extends LinearLayout {
 									}
 								}
 							}else{
-								//µ¥Ìõ
+								//å•æ¡
 								if (isChecked) {
 									mTable.getContents().get(mPosition-1)[index]= "1";
 								} else {
@@ -220,10 +220,10 @@ public class AbTableItemView extends LinearLayout {
 	}
 	
 	/**
-	 * ¸üĞÂ±í¸ñÒ»ĞĞÄÚÈİ.
+	 * æ›´æ–°è¡¨æ ¼ä¸€è¡Œå†…å®¹.
 	 *
 	 * @param position the position
-	 * @param tableRow ĞĞµÄÊı¾İ
+	 * @param tableRow è¡Œçš„æ•°æ®
 	 */
 	public void setTableRowView(int position,AbTableRow tableRow){
 		    mPosition = position;
@@ -240,15 +240,15 @@ public class AbTableItemView extends LinearLayout {
 					textCell.setTextColor(tableRow.textColor);
 					textCell.setTextSize(tableRow.textSize);
 					if(mPosition==0){
-					   //´ÖÌå
+					   //ç²—ä½“
 				       textCell.setTypeface(Typeface.DEFAULT_BOLD);
 				       textCell.setBackgroundResource(mTable.getTableResource()[1]);
 					}else{
-					  //ÆÕÍ¨×ÖÌå
+					  //æ™®é€šå­—ä½“
 					  textCell.setTypeface(Typeface.DEFAULT);
 					  textCell.setBackgroundResource(mTable.getTableResource()[3]);
 					}
-					//Èç¹û¸ñµ¥ÔªÊÇÍ¼ÏñÄÚÈİ
+					//å¦‚æœæ ¼å•å…ƒæ˜¯å›¾åƒå†…å®¹
 				}else if (tableCell.type == AbCellType.IMAGE) {
 					if(mPosition==0){
 						ImageView imgCell = (ImageView)rowCell[index];
@@ -276,7 +276,7 @@ public class AbTableItemView extends LinearLayout {
 						
 				}else if (tableCell.type == AbCellType.CHECKBOX) {
 					final CheckBox mCheckBox = (CheckBox)rowCell[index];
-					//±ØĞëÏÈÇå¿ÕÊÂ¼ş
+					//å¿…é¡»å…ˆæ¸…ç©ºäº‹ä»¶
 					mCheckBox.setOnCheckedChangeListener(null);
 					int isCheck = Integer.parseInt(String.valueOf(tableCell.value));
 					
@@ -295,7 +295,7 @@ public class AbTableItemView extends LinearLayout {
 						public void onCheckedChanged(CompoundButton buttonView,
 								boolean isChecked) {
 							if(mPosition==0){
-								//È«Ñ¡
+								//å…¨é€‰
 								if (isChecked) {
 									mTable.getTitles()[index]= "1";
 									for (int i = 0; i < mTable.getContents().size(); i++) {
@@ -308,7 +308,7 @@ public class AbTableItemView extends LinearLayout {
 									}
 								}
 							}else{
-								//µ¥Ìõ
+								//å•æ¡
 								if (isChecked) {
 									mTable.getContents().get(mPosition-1)[index]= "1";
 								} else {

@@ -17,10 +17,10 @@ import com.andbase.R;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºCarouselImageActivity.java 
- * ÃèÊö£ºÍ¼Æ¬ÊÊÅäµÄĞı×ªÄ¾Âí
+ * åç§°ï¼šCarouselImageActivity.java 
+ * æè¿°ï¼šå›¾ç‰‡é€‚é…çš„æ—‹è½¬æœ¨é©¬
  * @author zhaoqp
- * @date£º2013-8-23 ÏÂÎç2:06:48
+ * @dateï¼š2013-8-23 ä¸‹åˆ2:06:48
  * @version v1.0
  */
 public class CarouselImageActivity extends AbActivity {
@@ -42,7 +42,7 @@ public class CarouselImageActivity extends AbActivity {
 		mDrawables.add(this.getResources().getDrawable(R.drawable.icon5));
 		mDrawables.add(this.getResources().getDrawable(R.drawable.icon6));
 		
-		//²»Ö§³ÖµÄ¶¯Ì¬Ìí¼Ódapter.notifyDataSetChanged();ÔöÇ¿»¬¶¯µÄÁ÷³©
+		//ä¸æ”¯æŒçš„åŠ¨æ€æ·»åŠ dapter.notifyDataSetChanged();å¢å¼ºæ»‘åŠ¨çš„æµç•…
 		
 		CarouselImageAdapter adapter = new CarouselImageAdapter(this,mDrawables,true);
 		carousel.setAdapter(adapter);

@@ -15,14 +15,14 @@ public class TitleTransparentActivity extends AbActivity {
 	private MyApplication application;
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    	//»òÕßÔÚsuperÖ®Ç°ÉèÖÃ²ÎÊıÄÜ¹»ÏÔÊ¾¸²¸Ç±êÌâÀ¸
+    	//æˆ–è€…åœ¨superä¹‹å‰è®¾ç½®å‚æ•°èƒ½å¤Ÿæ˜¾ç¤ºè¦†ç›–æ ‡é¢˜æ 
     	//this.getIntent().putExtra(AbConstant.TITLE_TRANSPARENT_FLAG,AbConstant.TITLE_TRANSPARENT);
         super.onCreate(savedInstanceState);
         setAbContentView(R.layout.base_detail);
         application = (MyApplication)abApplication;
         
         AbTitleBar mAbTitleBar = this.getTitleBar();
-        mAbTitleBar.setTitleText("Í¸Ã÷±êÌâÀ¸");
+        mAbTitleBar.setTitleText("é€æ˜æ ‡é¢˜æ ");
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
         mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
@@ -33,7 +33,7 @@ public class TitleTransparentActivity extends AbActivity {
 			
 			@Override
 			public void onClick(View v) {
-				showToast("µãÁË±êÌâÅ¶");
+				showToast("ç‚¹äº†æ ‡é¢˜å“¦");
 				
 			}
 		});

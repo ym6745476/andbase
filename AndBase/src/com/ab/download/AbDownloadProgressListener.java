@@ -17,10 +17,10 @@ package com.ab.download;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÏÂÔØÏß³Ì¼àÌı.
+ * æè¿°ï¼šä¸‹è½½çº¿ç¨‹ç›‘å¬.
  *
  * @author zhaoqp
- * @date£º2013-3-14 ÏÂÎç5:01:44
+ * @dateï¼š2013-3-14 ä¸‹åˆ5:01:44
  * @version v1.0
  */
 public interface AbDownloadProgressListener {

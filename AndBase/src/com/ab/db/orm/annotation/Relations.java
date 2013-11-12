@@ -6,35 +6,35 @@ import java.lang.annotation.Target;
 
 /**
  * The Interface Relations.
- * ±íÊ¾¹ØÁª±í
+ * è¡¨ç¤ºå…³è”è¡¨
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target( { java.lang.annotation.ElementType.FIELD })
 public @interface Relations {
 	
 	/**
-	 * ¹ØÁªÃû,¶ÔÏóÄÚÎ¨Ò»¼´¿É.
+	 * å…³è”å,å¯¹è±¡å†…å”¯ä¸€å³å¯.
 	 *
 	 * @return the string
 	 */
 	public abstract String name();
 	
 	/**
-	 * Íâ¼ü.
+	 * å¤–é”®.
 	 *
 	 * @return the string
 	 */
 	public abstract String foreignKey();
 	
 	/**
-	 * ¹ØÁªÀàĞÍ.
+	 * å…³è”ç±»å‹.
 	 *
 	 * @return the string  one2one  one2many many2many
 	 */
 	public abstract String type();
 	
 	/**
-	 * ¹ØÁªÀàĞÍ.
+	 * å…³è”ç±»å‹.
 	 *
 	 * @return the string  query insert query_insert
 	 */

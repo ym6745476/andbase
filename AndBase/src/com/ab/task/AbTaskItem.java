@@ -17,7 +17,7 @@ package com.ab.task;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÊı¾İÖ´ĞĞµ¥Î».
+ * æè¿°ï¼šæ•°æ®æ‰§è¡Œå•ä½.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -25,13 +25,13 @@ package com.ab.task;
  */
 public class AbTaskItem { 
 	
-	/** ¼ÇÂ¼µÄµ±Ç°Ë÷Òı. */
+	/** è®°å½•çš„å½“å‰ç´¢å¼•. */
 	public int position;
 	 
- 	/** Ö´ĞĞÍê³ÉµÄ»Øµ÷½Ó¿Ú. */
+ 	/** æ‰§è¡Œå®Œæˆçš„å›è°ƒæ¥å£. */
     public AbTaskCallback callback; 
     
-    /** Ö´ĞĞÍê³ÉµÄ½á¹û. */
+    /** æ‰§è¡Œå®Œæˆçš„ç»“æœ. */
     private Object result;
 
 	public int getPosition() {

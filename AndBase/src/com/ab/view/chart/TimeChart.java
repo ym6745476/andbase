@@ -96,14 +96,14 @@ public class TimeChart extends LineChart {
       boolean showLabels = mRenderer.isShowLabels();
       boolean showGridY = mRenderer.isShowGridY();
       DateFormat format = getDateFormat(xLabels.get(0), xLabels.get(length - 1));
-      //System.out.println("Ê±¼äµãµÄÊıÁ¿i"+length);
+      //System.out.println("æ—¶é—´ç‚¹çš„æ•°é‡i"+length);
       for (int i = 0; i < length; i++) {
         long label = Math.round(xLabels.get(i));
         float xLabel = (float) (left + xPixelsPerUnit * (label - minX));
         if (showLabels) {
           paint.setColor(mRenderer.getXLabelsColor());
           canvas.drawLine(xLabel, bottom, xLabel, bottom + mRenderer.getLabelsTextSize() / 3, paint);
-          //System.out.println("Ê±¼äµã:"+format.format(new Date(label)));
+          //System.out.println("æ—¶é—´ç‚¹:"+format.format(new Date(label)));
           drawText(canvas, format.format(new Date(label)), xLabel,bottom + mRenderer.getLabelsTextSize() * 4 / 3, paint, mRenderer.getXLabelsAngle());
         }
         if (showGridY) {
@@ -153,7 +153,7 @@ public class TimeChart extends LineChart {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param min the min
    * @param max the max
@@ -161,7 +161,7 @@ public class TimeChart extends LineChart {
    * @return the x labels
    * @see com.ab.view.chart.XYChart#getXLabels(double, double, int)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:48
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:48
    * @version v1.0
    */
   protected List<Double> getXLabels(double min, double max, int count) {

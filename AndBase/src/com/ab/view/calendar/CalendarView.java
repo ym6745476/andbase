@@ -59,17 +59,17 @@ public class CalendarView extends LinearLayout {
 	/** The height. */
 	private int height = 480;
 	
-	/** ĞÇÆÚÍ·µÄĞĞ¸ß. */
+	/** æ˜ŸæœŸå¤´çš„è¡Œé«˜. */
 	private int headerHeight = 45;
 	
-	//ĞĞ¸ß
+	//è¡Œé«˜
 	/** The row height. */
 	private int rowHeight = 40;
-	//Ã¿¸öµ¥Ôª¸ñµÄ¿í¶È
+	//æ¯ä¸ªå•å…ƒæ ¼çš„å®½åº¦
 	/** The cell width. */
 	private int cellWidth = 40;
 	
-	// ÈÕÆÚ±äÁ¿
+	// æ—¥æœŸå˜é‡
 	/** The cal start date. */
 	public static Calendar calStartDate = Calendar.getInstance();
 	
@@ -78,7 +78,7 @@ public class CalendarView extends LinearLayout {
 	
 	/** The cal selected. */
 	private Calendar calSelected = null;
-	//ÀÛ¼ÆÈÕÆÚ
+	//ç´¯è®¡æ—¥æœŸ
 	/** The cal calendar. */
 	private Calendar calCalendar = Calendar.getInstance();
 	
@@ -88,12 +88,12 @@ public class CalendarView extends LinearLayout {
 	/** The current year. */
 	private int currentYear = 0;
 	
-	//±¾ÈÕÀúµÄµÚÒ»¸öµ¥Ôª¸ñµÄĞÇÆÚ
+	//æœ¬æ—¥å†çš„ç¬¬ä¸€ä¸ªå•å…ƒæ ¼çš„æ˜ŸæœŸ
 	/** The first day of week. */
 	private int firstDayOfWeek = Calendar.SUNDAY;
 
 	
-	//µ±Ç°ÏÔÊ¾µÄµ¥Ôª¸ñ
+	//å½“å‰æ˜¾ç¤ºçš„å•å…ƒæ ¼
 	/** The m calendar cells. */
 	private ArrayList<CalendarCell> mCalendarCells = new ArrayList<CalendarCell>();
     
@@ -144,7 +144,7 @@ public class CalendarView extends LinearLayout {
 		cellWidth = (width-20)/7;
 		rowHeight = cellWidth;
 		
-		//³õÊ¼»¯Ñ¡ÖĞ½ñÌì
+		//åˆå§‹åŒ–é€‰ä¸­ä»Šå¤©
 		calSelected = Calendar.getInstance();
 		initRow();
 		initStartDateForMonth();
@@ -173,11 +173,11 @@ public class CalendarView extends LinearLayout {
 	
 	
 	/**
-	 * ÃèÊö£ºÓÉÓÚÈÕÀúÉÏµÄÈÕÆÚ¶¼ÊÇ´ÓÖÜÈÕ¿ªÊ¼µÄ£¬¼ÆËãµÚÒ»¸öµ¥Ôª¸ñµÄÈÕÆÚ.
+	 * æè¿°ï¼šç”±äºæ—¥å†ä¸Šçš„æ—¥æœŸéƒ½æ˜¯ä»å‘¨æ—¥å¼€å§‹çš„ï¼Œè®¡ç®—ç¬¬ä¸€ä¸ªå•å…ƒæ ¼çš„æ—¥æœŸ.
 	 */
 	private void initStartDateForMonth() {
 		calStartDate.setTimeInMillis(calSelected.getTimeInMillis());
-		//»ñÈ¡µ±Ç°µÄ
+		//è·å–å½“å‰çš„
 		currentMonth = calStartDate.get(Calendar.MONTH);
 		currentYear = calStartDate.get(Calendar.YEAR);
 		
@@ -205,7 +205,7 @@ public class CalendarView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£º¸üĞÂÈÕÀú.
+	 * æè¿°ï¼šæ›´æ–°æ—¥å†.
 	 */
 	private void updateCalendar() {
 		final boolean bIsSelection = (calSelected.getTimeInMillis() != 0);
@@ -214,7 +214,7 @@ public class CalendarView extends LinearLayout {
 		final int iSelectedDay = calSelected.get(Calendar.DAY_OF_MONTH);
 		
 		boolean isThisMonth  = false;
-		//½ñÌìÔÚµ±Ç°ÔÂ£¬ÔòÈ¥µôÄ¬ÈÏÑ¡ÖĞµÄ1ºÅ
+		//ä»Šå¤©åœ¨å½“å‰æœˆï¼Œåˆ™å»æ‰é»˜è®¤é€‰ä¸­çš„1å·
 		if (calToday.get(Calendar.YEAR) == iSelectedYear) {
 			if (calToday.get(Calendar.MONTH) == iSelectedMonth) {
 				isThisMonth = true;
@@ -231,13 +231,13 @@ public class CalendarView extends LinearLayout {
 			final int iDayOfWeek = calCalendar.get(Calendar.DAY_OF_WEEK);
 			
 
-			// ÅĞ¶ÏÊÇ·ñµ±Ìì
+			// åˆ¤æ–­æ˜¯å¦å½“å¤©
 			boolean bToday = false;
-			// ÊÇ·ñ±»Ñ¡ÖĞ
+			// æ˜¯å¦è¢«é€‰ä¸­
 			boolean bSelected = false;
 			// check holiday
 			boolean bHoliday = false;
-			// ÊÇ·ñÓĞ¼ÇÂ¼
+			// æ˜¯å¦æœ‰è®°å½•
 			boolean hasRecord = false;
 			
 			if (calToday.get(Calendar.YEAR) == iYear) {
@@ -276,7 +276,7 @@ public class CalendarView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£º¸üĞÂÈÕÀú.
+	 * æè¿°ï¼šæ›´æ–°æ—¥å†.
 	 */
 	private void initCalendar() {
 		final boolean bIsSelection = (calSelected.getTimeInMillis() != 0);
@@ -293,9 +293,9 @@ public class CalendarView extends LinearLayout {
 			final int iDay = calCalendar.get(Calendar.DAY_OF_MONTH);
 			final int iDayOfWeek = calCalendar.get(Calendar.DAY_OF_WEEK);
 
-			// ÅĞ¶ÏÊÇ·ñµ±Ìì
+			// åˆ¤æ–­æ˜¯å¦å½“å¤©
 			boolean bToday = false;
-			// ÊÇ·ñ±»Ñ¡ÖĞ
+			// æ˜¯å¦è¢«é€‰ä¸­
 			boolean bSelected = false;
 			// check holiday
 			boolean bHoliday = false;
@@ -373,14 +373,14 @@ public class CalendarView extends LinearLayout {
 	 * @param calendar the calendar
 	 */
 	public void rebuildCalendar(Calendar calendar) {
-		//³õÊ¼»¯Ñ¡ÖĞ1ºÅ
+		//åˆå§‹åŒ–é€‰ä¸­1å·
 		calSelected.setTimeInMillis(calendar.getTimeInMillis());
 		initRow();
 		initStartDateForMonth();
 		updateCalendar();
 	}
     
-    /** µã»÷ÈÕÀú£¬´¥·¢ÊÂ¼ş. */
+    /** ç‚¹å‡»æ—¥å†ï¼Œè§¦å‘äº‹ä»¶. */
  	private AbOnItemClickListener mOnDayCellClick = new AbOnItemClickListener(){
 
 		@Override
@@ -402,7 +402,7 @@ public class CalendarView extends LinearLayout {
  	};
  	
  	/**
-	  * ÃèÊö£ºÉèÖÃ±êÌâ±³¾°.
+	  * æè¿°ï¼šè®¾ç½®æ ‡é¢˜èƒŒæ™¯.
 	  *
 	  * @param resid the new header background resource
 	  */
@@ -411,7 +411,7 @@ public class CalendarView extends LinearLayout {
  	}
  	
  	/**
-	  * ÃèÊö£º¸ù¾İË÷Òı»ñÈ¡Ñ¡ÔñµÄÈÕÆÚ.
+	  * æè¿°ï¼šæ ¹æ®ç´¢å¼•è·å–é€‰æ‹©çš„æ—¥æœŸ.
 	  *
 	  * @param position the position
 	  * @return the str date at position
@@ -426,7 +426,7 @@ public class CalendarView extends LinearLayout {
  	}
  	
  	/**
-	  * ÃèÊö£º»ñÈ¡Õâ¸öÈÕÀúµÄ×ÜÈÕÆÚÊı.
+	  * æè¿°ï¼šè·å–è¿™ä¸ªæ—¥å†çš„æ€»æ—¥æœŸæ•°.
 	  *
 	  * @return the calendar cell size
 	  */
@@ -435,7 +435,7 @@ public class CalendarView extends LinearLayout {
  	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡µ±Ç°ÈÕÀúµÄËùÓĞÌõÄ¿.
+	 * æè¿°ï¼šè·å–å½“å‰æ—¥å†çš„æ‰€æœ‰æ¡ç›®.
 	 *
 	 * @return the calendar cells
 	 */
@@ -444,7 +444,7 @@ public class CalendarView extends LinearLayout {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Ñ¡ÖĞµÄÈÕÆÚ£¬Ä¬ÈÏÎª½ñÌì.
+	 * æè¿°ï¼šè·å–é€‰ä¸­çš„æ—¥æœŸï¼Œé»˜è®¤ä¸ºä»Šå¤©.
 	 *
 	 * @return the cal selected
 	 */

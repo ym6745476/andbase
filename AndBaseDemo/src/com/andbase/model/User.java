@@ -6,7 +6,7 @@ import com.ab.db.orm.annotation.Table;
 @Table(name = "user")
 public class User {
 
-	// ID @IdÖ÷¼ü,intÀàĞÍ,Êı¾İ¿â½¨±íÊ±´Ë×Ö¶Î»áÉèÎª×ÔÔö³¤
+	// ID @Idä¸»é”®,intç±»å‹,æ•°æ®åº“å»ºè¡¨æ—¶æ­¤å­—æ®µä¼šè®¾ä¸ºè‡ªå¢é•¿
 	@Id
 	@Column(name = "_id")
 	private int _id;
@@ -14,75 +14,75 @@ public class User {
 	@Column(name = "u_id")
 	private String uId;
 
-	// µÇÂ¼ÓÃ»§Ãû length=20Êı¾İ×Ö¶ÎµÄ³¤¶ÈÊÇ20
+	// ç™»å½•ç”¨æˆ·å length=20æ•°æ®å­—æ®µçš„é•¿åº¦æ˜¯20
 	@Column(name = "name", length = 20)
 	private String name;
 
-	// ÓÃ»§ÃÜÂë
+	// ç”¨æˆ·å¯†ç 
 	@Column(name = "password")
 	private String password;
 
-	// êÇ³Æ
+	// æ˜µç§°
 	@Column(name = "nick_name")
 	public String nickName;
 
-	// ÄêÁäÒ»°ãÊÇÊıÖµ,ÓÃtype = "INTEGER"¹æ·¶Ò»ÏÂ.
+	// å¹´é¾„ä¸€èˆ¬æ˜¯æ•°å€¼,ç”¨type = "INTEGER"è§„èŒƒä¸€ä¸‹.
 	@Column(name = "age", type = "INTEGER")
 	private int age;
 
-	// ÓÃ»§ĞÔ±ğ
+	// ç”¨æˆ·æ€§åˆ«
 	@Column(name = "sex")
 	public String sex;
 
-	// ÓÃ»§ÓÊÏä
-	// ¼ÙÉèÄú¿ªÊ¼Ê±Ã»ÓĞ´ËÊôĞÔ,³ÌĞò¿ª·¢ÖĞ²ÅÏëµ½´ËÊôĞÔ,Ò²²»ÓÃĞ¶ÔØ³ÌĞò.
+	// ç”¨æˆ·é‚®ç®±
+	// å‡è®¾æ‚¨å¼€å§‹æ—¶æ²¡æœ‰æ­¤å±æ€§,ç¨‹åºå¼€å‘ä¸­æ‰æƒ³åˆ°æ­¤å±æ€§,ä¹Ÿä¸ç”¨å¸è½½ç¨‹åº.
 	@Column(name = "email")
 	private String email;
 
-	// Í·ÏñµØÖ·
+	// å¤´åƒåœ°å€
 	@Column(name = "photo_url")
 	private String photoUrl;
 
-	// ´´½¨Ê±¼ä
+	// åˆ›å»ºæ—¶é—´
 	@Column(name = "create_time")
 	private String createTime;
 
-	// ³ÇÊĞ
+	// åŸå¸‚
 	@Column(name = "city")
 	private String city;
 
-	// ¼ò½é
+	// ç®€ä»‹
 	@Column(name = "intro")
 	private String intro;
 
-	// »ı·Ö
+	// ç§¯åˆ†
 	@Column(name = "point")
 	private int point;
 
-	// ÓÃ»§È¨ÏŞ,0±íÊ¾¹ÜÀíÔ±£¬1±íÊ¾»áÔ±
+	// ç”¨æˆ·æƒé™,0è¡¨ç¤ºç®¡ç†å‘˜ï¼Œ1è¡¨ç¤ºä¼šå‘˜
 	@Column(name = "rights")
 	public int rights;
 
-	// ÓÃ»§ÎÊÌâ
+	// ç”¨æˆ·é—®é¢˜
 	@Column(name = "question")
 	public String question;
 
-	// ÓÃ»§´ğ°¸
+	// ç”¨æˆ·ç­”æ¡ˆ
 	@Column(name = "answer")
 	public String answer;
 	
-	// µÇÂ¼´ÎÊı
+	// ç™»å½•æ¬¡æ•°
 	@Column(name = "login_count")
 	public int loginCount;
 	
-	// ÓĞĞ©×Ö¶ÎÄú¿ÉÄÜ²»Ï£Íû±£´æµ½Êı¾İ¿âÖĞ,²»ÓÃ@Column×¢ÊÍ¾Í²»»áÓ³Éäµ½Êı¾İ¿â.
+	// æœ‰äº›å­—æ®µæ‚¨å¯èƒ½ä¸å¸Œæœ›ä¿å­˜åˆ°æ•°æ®åº“ä¸­,ä¸ç”¨@Columnæ³¨é‡Šå°±ä¸ä¼šæ˜ å°„åˆ°æ•°æ®åº“.
 	private String remark;
 	
-	// µÇÂ¼ÊÚÈ¨
+	// ç™»å½•æˆæƒ
 	@Column(name = "access_token")
 	private String accessToken;
 	
-	// ÊÇ·ñÎªµ±Ç°µÇÂ¼
+	// æ˜¯å¦ä¸ºå½“å‰ç™»å½•
 	@Column(name = "is_login_user")
 	private boolean isLoginUser;
 

@@ -130,7 +130,7 @@ public abstract class AbstractChart implements Serializable {
           text = text.substring(0, nr) + "...";
         }
         if (!calculate) {  
-          //±êÇ©ËµÃ÷
+          //æ ‡ç­¾è¯´æ˜Ž
           drawLegendShape(canvas, renderer.getSeriesRendererAt(i), currentX, currentY, i, paint);
           drawString(canvas, text, currentX + lineSize + 5, currentY + 5, paint);
         }

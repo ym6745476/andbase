@@ -156,10 +156,10 @@ public class AbWheelView extends View {
 	/** The scrolling listeners. */
 	private List<AbOnWheelScrollListener> scrollingListeners = new LinkedList<AbOnWheelScrollListener>();
 	
-	/** ÖĞ¼ä¸²¸ÇÌõµÄ±³¾°Í¼. */
+	/** ä¸­é—´è¦†ç›–æ¡çš„èƒŒæ™¯å›¾. */
 	private Drawable centerSelectDrawable;
 	
-	/** ÖĞ¼ä¸²¸ÇÌõµÄÑÕÉ«£¬Èç¹ûÃ»ÓĞÉèÖÃcenterDrawableÊ±²ÅÉúĞ§. */
+	/** ä¸­é—´è¦†ç›–æ¡çš„é¢œè‰²ï¼Œå¦‚æœæ²¡æœ‰è®¾ç½®centerDrawableæ—¶æ‰ç”Ÿæ•ˆ. */
 	private int[] centerSelectGradientColors = new int[] {0x70222222,0x70222222, 0x70EEEEEE};
 	
 	/** The center select stroke width. */
@@ -180,10 +180,10 @@ public class AbWheelView extends View {
 	/** Current label text color. */
 	private int labelTextColor = 0xF0000000;
 	
-	//ÂÖ×ÓµÄ±³¾° µ×²¿µÄÑÕÉ« 
+	//è½®å­çš„èƒŒæ™¯ åº•éƒ¨çš„é¢œè‰² 
 	/** The bottom gradient colors. */
 	private int[] bottomGradientColors = new int[] { 0x333, 0xDDD, 0x333 };
-	//ÂÖ×ÓµÄ±³¾° ¶¥²¿µÄÑÕÉ« 
+	//è½®å­çš„èƒŒæ™¯ é¡¶éƒ¨çš„é¢œè‰² 
 	/** The top gradient colors. */
 	private int[] topGradientColors = new int[] { 0xAAA, 0xFFF, 0xAAA };
 	
@@ -193,22 +193,22 @@ public class AbWheelView extends View {
 	/** The top stroke color. */
 	private int topStrokeColor  = 0xFF333333;
 	
-	/** ÖµµÄÎÄ×Ö´óĞ¡. */
+	/** å€¼çš„æ–‡å­—å¤§å°. */
 	private int valueTextSize = 35;
 	
-	/** ±êÇ©µÄÎÄ×Ö´óĞ¡. */
+	/** æ ‡ç­¾çš„æ–‡å­—å¤§å°. */
 	private int labelTextSize = 35;
 
 	/** Top and bottom items offset. */
 	private int itemOffset = valueTextSize / 5;
 	
-	/** ÖĞ¼ä¸²¸ÇÌõ¸ß¶È. */
+	/** ä¸­é—´è¦†ç›–æ¡é«˜åº¦. */
 	private int additionalItemHeight = 30;
 	
-	/** ÆÁÄ»¿í¶È. */
+	/** å±å¹•å®½åº¦. */
 	private int screenWidth = 0;
 	
-	/** ÆÁÄ»¸ß¶È. */
+	/** å±å¹•é«˜åº¦. */
 	private int screenHeight = 0;
 	
 	/**
@@ -277,7 +277,7 @@ public class AbWheelView extends View {
 	public void setAdapter(AbWheelAdapter adapter) {
 		this.adapter = adapter;
 		invalidateLayouts();
-		invalidate();// ÖØ»æ
+		invalidate();// é‡ç»˜
 	}
 
 	/**
@@ -498,36 +498,36 @@ public class AbWheelView extends View {
 		if (labelPaint == null) {
 			labelPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | Paint.FAKE_BOLD_TEXT_FLAG | Paint.DITHER_FLAG);
 			labelPaint.setTextSize(labelTextSize);
-			//ÉèÖÃÒõÓ°
+			//è®¾ç½®é˜´å½±
 			labelPaint.setShadowLayer(0.5f, 0, 1, 0xFFFFFFFF);
 		}
 
-		//Èç¹ûÃ»ÉèÖÃÖĞ¼äµÄÑ¡ÖĞÌõÓÃÄ¬ÈÏµÄÑÕÉ«
+		//å¦‚æœæ²¡è®¾ç½®ä¸­é—´çš„é€‰ä¸­æ¡ç”¨é»˜è®¤çš„é¢œè‰²
 		if (centerSelectDrawable == null) {
 			GradientDrawable mGradientDrawable = new GradientDrawable(Orientation.BOTTOM_TOP, centerSelectGradientColors);
 			mGradientDrawable.setStroke(centerSelectStrokeWidth, centerSelectStrokeColor);
 			centerSelectDrawable = mGradientDrawable;
 		}
 
-		/* AndroidÖĞÌá¹©ÁËShaderÀà×¨ÃÅÓÃÀ´äÖÈ¾Í¼ÏñÒÔ¼°Ò»Ğ©¼¸ºÎÍ¼ĞÎ£¬
-		 ShaderÏÂÃæ°üÀ¨¼¸¸öÖ±½Ó×ÓÀà£¬·Ö±ğÊÇBitmapShader¡¢ ComposeShader¡¢LinearGradient¡¢
-		 RadialGradient¡¢SweepGradient¡£ BitmapShaderÖ÷ÒªÓÃÀ´äÖÈ¾Í¼Ïñ£¬
-		 LinearGradient ÓÃÀ´½øĞĞÌİ¶ÈäÖÈ¾£¬RadialGradient ÓÃÀ´½øĞĞ»·ĞÎäÖÈ¾£¬
+		/* Androidä¸­æä¾›äº†Shaderç±»ä¸“é—¨ç”¨æ¥æ¸²æŸ“å›¾åƒä»¥åŠä¸€äº›å‡ ä½•å›¾å½¢ï¼Œ
+		 Shaderä¸‹é¢åŒ…æ‹¬å‡ ä¸ªç›´æ¥å­ç±»ï¼Œåˆ†åˆ«æ˜¯BitmapShaderã€ ComposeShaderã€LinearGradientã€
+		 RadialGradientã€SweepGradientã€‚ BitmapShaderä¸»è¦ç”¨æ¥æ¸²æŸ“å›¾åƒï¼Œ
+		 LinearGradient ç”¨æ¥è¿›è¡Œæ¢¯åº¦æ¸²æŸ“ï¼ŒRadialGradient ç”¨æ¥è¿›è¡Œç¯å½¢æ¸²æŸ“ï¼Œ
 		 SweepGradient 
-		 ÓÃÀ´½øĞĞÌİ¶ÈäÖÈ¾£¬ComposeShaderÔòÊÇÒ»¸ö »ìºÏäÖÈ¾£¬¿ÉÒÔºÍÆäËü¼¸¸ö×ÓÀà×éºÏÆğÀ´Ê¹ÓÃ¡£ */
+		 ç”¨æ¥è¿›è¡Œæ¢¯åº¦æ¸²æŸ“ï¼ŒComposeShaderåˆ™æ˜¯ä¸€ä¸ª æ··åˆæ¸²æŸ“ï¼Œå¯ä»¥å’Œå…¶å®ƒå‡ ä¸ªå­ç±»ç»„åˆèµ·æ¥ä½¿ç”¨ã€‚ */
 
-		//ÉÏ±ß½ç½¥±ä²ã
+		//ä¸Šè¾¹ç•Œæ¸å˜å±‚
 		if (topShadow == null) {
 			topShadow = new GradientDrawable(Orientation.TOP_BOTTOM, SHADOWS_COLORS);
 		}
-		//ÏÂ±ß½ç½¥±ä²ã
+		//ä¸‹è¾¹ç•Œæ¸å˜å±‚
 		if (bottomShadow == null) {
 			bottomShadow = new GradientDrawable(Orientation.BOTTOM_TOP, SHADOWS_COLORS);
 		}
 		
 		if(this.getBackground()==null){
-			//Ô­À´ÓÃÑÕÉ«½¥±äÊµÏÖsetBackgroundDrawable(layerDrawable);
-			//µ×²¿µÄÑÕÉ«
+			//åŸæ¥ç”¨é¢œè‰²æ¸å˜å®ç°setBackgroundDrawable(layerDrawable);
+			//åº•éƒ¨çš„é¢œè‰²
 			GradientDrawable mGradientDrawable1 = new GradientDrawable(Orientation.TOP_BOTTOM, topGradientColors);
 			GradientDrawable mGradientDrawable2 = new GradientDrawable(Orientation.BOTTOM_TOP, bottomGradientColors);
 			
@@ -542,8 +542,8 @@ public class AbWheelView extends View {
 			mDrawables[1] = mGradientDrawable2;
 			
 			LayerDrawable layerDrawable = new LayerDrawable(mDrawables); 
-			layerDrawable.setLayerInset(0, 0, 0, 0, 0);  //µÚÒ»¸ö²ÎÊı0´ú±íÊı×éµÄµÚ1¸öÔªËØ
-			layerDrawable.setLayerInset(1, 4, 1, 4, 1);  //µÚÒ»¸ö²ÎÊı1´ú±íÊı×éµÄµÚ2¸öÔªËØ
+			layerDrawable.setLayerInset(0, 0, 0, 0, 0);  //ç¬¬ä¸€ä¸ªå‚æ•°0ä»£è¡¨æ•°ç»„çš„ç¬¬1ä¸ªå…ƒç´ 
+			layerDrawable.setLayerInset(1, 4, 1, 4, 1);  //ç¬¬ä¸€ä¸ªå‚æ•°1ä»£è¡¨æ•°ç»„çš„ç¬¬2ä¸ªå…ƒç´ 
 			setBackgroundDrawable(layerDrawable);
 		}
 		
@@ -666,18 +666,18 @@ public class AbWheelView extends View {
 
 		int maxLength = getMaxTextLength();
 		if (maxLength > 0) {
-			//Ò»¸ö×Ö·û¿í¶È
+			//ä¸€ä¸ªå­—ç¬¦å®½åº¦
 			float textWidth = (int)AbGraphical.getStringWidth("0", labelPaint);
-			//²»ËãlableµÄ¿í¶È
+			//ä¸ç®—lableçš„å®½åº¦
 			itemsWidth = (int) (maxLength * textWidth);
 		} else {
 			itemsWidth = 0;
 		}
 		
-		//¿ÕÏ¶¿í¶È
+		//ç©ºéš™å®½åº¦
 		itemsWidth += LABEL_OFFSET; 
 
-		//label¿í¶ÈµÄ¼ÆËã
+		//labelå®½åº¦çš„è®¡ç®—
 		labelWidth = 0;
 		if (label != null && label.length() > 0) {
 			labelWidth = (int)AbGraphical.getStringWidth(label, labelPaint);
@@ -710,11 +710,11 @@ public class AbWheelView extends View {
 				itemsWidth = labelWidth = 0;
 			}
 			if (labelWidth > 0) {
-				//¶Ô°ë·ÖºóÔÙµ÷ÕûÏÂ
+				//å¯¹åŠåˆ†åå†è°ƒæ•´ä¸‹
 				int newItemsWidth = pureWidth/2;
 				int newLabelWidth = pureWidth - itemsWidth;
 				if(newItemsWidth<itemsWidth){
-					//·Å²»ÏÂÁË,¿´labelÓĞ¿ÕÓà¿í¶ÈÃ»ÓĞ
+					//æ”¾ä¸ä¸‹äº†,çœ‹labelæœ‰ç©ºä½™å®½åº¦æ²¡æœ‰
 					itemsWidth = newItemsWidth + newLabelWidth-labelWidth;
 				}else{
 					labelWidth = newLabelWidth;
@@ -777,13 +777,13 @@ public class AbWheelView extends View {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param widthMeasureSpec the width measure spec
 	 * @param heightMeasureSpec the height measure spec
 	 * @see android.view.View#onMeasure(int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:47
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:47
 	 * @version v1.0
 	 */
 	@Override
@@ -810,12 +810,12 @@ public class AbWheelView extends View {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param canvas the canvas
 	 * @see android.view.View#onDraw(android.graphics.Canvas)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:47
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:47
 	 * @version v1.0
 	 */
 	@Override
@@ -919,13 +919,13 @@ public class AbWheelView extends View {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.view.View#onTouchEvent(android.view.MotionEvent)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:47
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:47
 	 * @version v1.0
 	 */
 	@Override
@@ -1198,7 +1198,7 @@ public class AbWheelView extends View {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃÖĞ¼äµÄÑ¡ÖĞ²ãÍ¼Æ¬.
+	 * æè¿°ï¼šè®¾ç½®ä¸­é—´çš„é€‰ä¸­å±‚å›¾ç‰‡.
 	 *
 	 * @param centerSelectDrawable the new center select drawable
 	 */

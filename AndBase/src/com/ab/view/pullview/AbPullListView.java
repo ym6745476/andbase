@@ -95,7 +95,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	/** The Constant OFFSET_RADIO. */
 	private final static float OFFSET_RADIO = 1.8f; // support iOS like pull
 													// feature.
-	/** Êı¾İÏà¹Ø. */
+	/** æ•°æ®ç›¸å…³. */
 	private ListAdapter mAdapter = null;
 	
 	/**
@@ -143,16 +143,16 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		
 		mFooterViewHeight= mFooterView.getFooterHeight();
 		mFooterView.hide();
-		//Ä¬ÈÏÊÇ´ò¿ªË¢ĞÂÓë¸ü¶à
+		//é»˜è®¤æ˜¯æ‰“å¼€åˆ·æ–°ä¸æ›´å¤š
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.ListView#setAdapter(android.widget.ListAdapter)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -168,9 +168,9 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ´ò¿ª»òÕß¹Ø±ÕÏÂÀ­Ë¢ĞÂ¹¦ÄÜ.
+	 * æ‰“å¼€æˆ–è€…å…³é—­ä¸‹æ‹‰åˆ·æ–°åŠŸèƒ½.
 	 *
-	 * @param enable ¿ª¹Ø±ê¼Ç
+	 * @param enable å¼€å…³æ ‡è®°
 	 */
 	public void setPullRefreshEnable(boolean enable) {
 		mEnablePullRefresh = enable;
@@ -182,9 +182,9 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ´ò¿ª»òÕß¹Ø±Õ¼ÓÔØ¸ü¶à¹¦ÄÜ.
+	 * æ‰“å¼€æˆ–è€…å…³é—­åŠ è½½æ›´å¤šåŠŸèƒ½.
 	 *
-	 * @param enable ¿ª¹Ø±ê¼Ç
+	 * @param enable å¼€å…³æ ‡è®°
 	 */
 	public void setPullLoadEnable(boolean enable) {
 		mEnablePullLoad = enable;
@@ -194,7 +194,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		} else {
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
-			//load moreµã»÷ÊÂ¼ş.
+			//load moreç‚¹å‡»äº‹ä»¶.
 			mFooterView.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -214,7 +214,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		}
 		
 		int count = mAdapter.getCount();
-		//ÅĞ¶ÏÓĞÃ»ÓĞÊı¾İ
+		//åˆ¤æ–­æœ‰æ²¡æœ‰æ•°æ®
 		if(count>0){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
@@ -232,7 +232,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}
-		//ÅĞ¶ÏÓĞÃ»ÓĞ¸ü¶àÊı¾İÁË
+		//åˆ¤æ–­æœ‰æ²¡æœ‰æ›´å¤šæ•°æ®äº†
 		if(more){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
@@ -261,17 +261,17 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ¸ù¾İ×´Ì¬ÉèÖÃHeaderµÄÎ»ÖÃ.
+	 * æ ¹æ®çŠ¶æ€è®¾ç½®Headerçš„ä½ç½®.
 	 */
 	private void resetHeaderHeight() {
-		//µ±Ç°ÏÂÀ­µ½µÄ¸ß¶È
+		//å½“å‰ä¸‹æ‹‰åˆ°çš„é«˜åº¦
 		int height = mHeaderView.getVisiableHeight();
 		if (height < mHeaderViewHeight || !mPullRefreshing) {
-			//¾àÀë¶Ì  Òş²Ø
+			//è·ç¦»çŸ­  éšè—
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -1*height, SCROLL_DURATION);
 		}else if(height > mHeaderViewHeight || !mPullRefreshing){
-			//¾àÀë¶àµÄ  µ¯»Øµ½mHeaderViewHeight
+			//è·ç¦»å¤šçš„  å¼¹å›åˆ°mHeaderViewHeight
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -(height-mHeaderViewHeight), SCROLL_DURATION);
 		}
@@ -280,8 +280,8 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ¸üĞÂ footerµÄÏÔÊ¾.
-	 * @param delta Ôö¼ÓÖµ
+	 * æ›´æ–° footerçš„æ˜¾ç¤º.
+	 * @param delta å¢åŠ å€¼
 	 */
 	private void updateFooterHeight(float delta) {
 		int newHeight = mFooterView.getVisiableHeight() + (int) delta;
@@ -303,13 +303,13 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		mPullLoading = true;
 		mFooterView.setState(AbListViewFooter.STATE_LOADING);
 		if (mListViewListener != null) {
-			//¿ªÊ¼ÏÂÔØÊı¾İ
+			//å¼€å§‹ä¸‹è½½æ•°æ®
 			mListViewListener.onLoadMore();
 		}
 	}
 
 	/**
-	 * ÃèÊö£ºonTouchEvent
+	 * æè¿°ï¼šonTouchEvent
 	 * @see android.widget.ListView#onTouchEvent(android.view.MotionEvent)
 	 */
 	@Override
@@ -334,21 +334,21 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		case MotionEvent.ACTION_UP:
 			mLastY = -1; 
 			if (getFirstVisiblePosition() == 0) {
-				//ĞèÒªË¢ĞÂµÄÌõ¼ş
+				//éœ€è¦åˆ·æ–°çš„æ¡ä»¶
 				if (mEnablePullRefresh && mHeaderView.getVisiableHeight() >= mHeaderViewHeight) {
 					mPullRefreshing = true;
 					mHeaderView.setState(AbListViewHeader.STATE_REFRESHING);
 					if (mListViewListener != null) {
-						//Ë¢ĞÂ
+						//åˆ·æ–°
 						mListViewListener.onRefresh();
 					}
 				}
 				
 				if(mEnablePullRefresh){
-					//µ¯»Ø
+					//å¼¹å›
 					resetHeaderHeight();
 				}
-			//ÔÚµ½µ×²¿¾Í¼ÓÔØÏÂÒ»Ò³
+			//åœ¨åˆ°åº•éƒ¨å°±åŠ è½½ä¸‹ä¸€é¡µ
 			}else if (getLastVisiblePosition() == mTotalItemCount-1) {
 				if (mEnablePullLoad && mFooterView.getVisiableHeight() > mFooterViewHeight-2) {
 					startLoadMore();
@@ -362,7 +362,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.view.View#computeScroll()
 	 */
 	@Override
@@ -377,7 +377,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃListViewµÄ¼àÌıÆ÷.
+	 * æè¿°ï¼šè®¾ç½®ListViewçš„ç›‘å¬å™¨.
 	 *
 	 * @param listViewListener the new ab on list view listener
 	 */
@@ -386,10 +386,10 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.AbsListView.OnScrollListener#onScrollStateChanged(android.widget.AbsListView, int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -400,7 +400,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.AbsListView.OnScrollListener#onScroll(android.widget.AbsListView, int, int, int)
 	 */
 	@Override
@@ -414,7 +414,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Header View
+	 * æè¿°ï¼šè·å–Header View
 	 * @return
 	 * @throws 
 	 */
@@ -424,7 +424,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Footer View
+	 * æè¿°ï¼šè·å–Footer View
 	 * @return
 	 * @throws 
 	 */
@@ -434,7 +434,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Header ProgressBar£¬ÓÃÓÚÉèÖÃ×Ô¶¨ÒåÑùÊ½
+	 * æè¿°ï¼šè·å–Header ProgressBarï¼Œç”¨äºè®¾ç½®è‡ªå®šä¹‰æ ·å¼
 	 * @return
 	 * @throws 
 	 */
@@ -445,7 +445,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Footer ProgressBar£¬ÓÃÓÚÉèÖÃ×Ô¶¨ÒåÑùÊ½
+	 * æè¿°ï¼šè·å–Footer ProgressBarï¼Œç”¨äºè®¾ç½®è‡ªå®šä¹‰æ ·å¼
 	 * @return
 	 * @throws 
 	 */

@@ -20,8 +20,8 @@ import com.andbase.demo.dao.UserInsideDao;
 import com.andbase.demo.model.LocalUser;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºDBInsideSampleActivity
- * ÃèÊö£ºÊı¾İ¿âÑİÊ¾ÄÚÖÃÊı¾İ¿â´æ´¢
+ * åç§°ï¼šDBInsideSampleActivity
+ * æè¿°ï¼šæ•°æ®åº“æ¼”ç¤ºå†…ç½®æ•°æ®åº“å­˜å‚¨
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -29,25 +29,25 @@ import com.andbase.global.MyApplication;
 public class DBInsideSampleActivity extends AbActivity {
 	
 	private MyApplication application;
-	//ÁĞ±íÊÊÅäÆ÷
+	//åˆ—è¡¨é€‚é…å™¨
 	private UserDBListAdapter myListViewAdapter = null;
-	//ÁĞ±íÊı¾İ
+	//åˆ—è¡¨æ•°æ®
 	private List<LocalUser> userList = null;
 	private ListView mListView = null;
-	//¶¨ÒåÊı¾İ¿â²Ù×÷ÊµÏÖÀà
+	//å®šä¹‰æ•°æ®åº“æ“ä½œå®ç°ç±»
 	private UserInsideDao userDao = null;
 	
-	//Ã¿Ò»Ò³ÏÔÊ¾µÄĞĞÊı
+	//æ¯ä¸€é¡µæ˜¾ç¤ºçš„è¡Œæ•°
 	public int pageSize = 10;
-	//µ±Ç°Ò³Êı
+	//å½“å‰é¡µæ•°
 	public int pageNum = 1;
-	//×ÜÌõÊı
+	//æ€»æ¡æ•°
 	public int totalCount = 0;
-	//·ÖÒ³À¸
+	//åˆ†é¡µæ 
 	private LinearLayout mListViewForPage;
-	//×ÜÌõÊıºÍµ±Ç°ÏÔÊ¾µÄ¼¸Ò³
+	//æ€»æ¡æ•°å’Œå½“å‰æ˜¾ç¤ºçš„å‡ é¡µ
 	public TextView  total, current;
-	//ÉÏÒ»Ò³ºÍÏÂÒ»Ò³µÄ°´Å¥
+	//ä¸Šä¸€é¡µå’Œä¸‹ä¸€é¡µçš„æŒ‰é’®
 	private Button preView,nextView;
 	
     @Override
@@ -65,67 +65,67 @@ public class DBInsideSampleActivity extends AbActivity {
 	    
 	    application = (MyApplication)abApplication;
 	    
-	    //³õÊ¼»¯Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+	    //åˆå§‹åŒ–æ•°æ®åº“æ“ä½œå®ç°ç±»
 	    userDao = new UserInsideDao(DBInsideSampleActivity.this);
 	    
-	    //(1)»ñÈ¡Êı¾İ¿â 
+	    //(1)è·å–æ•°æ®åº“ 
 	  	userDao.startReadableDatabase(false);
-	  	//(2)Ö´ĞĞ²éÑ¯
+	  	//(2)æ‰§è¡ŒæŸ¥è¯¢
 	    userList = userDao.queryList(null, null, null, null, null, "create_time desc limit "+String.valueOf(pageSize)+ " offset " +0, null);
 	    totalCount = userDao.queryCount(null, null);
-	    //(3)¹Ø±ÕÊı¾İ¿â
+	    //(3)å…³é—­æ•°æ®åº“
 	  	userDao.closeDatabase(false);
 	  	
-        //»ñÈ¡ListView¶ÔÏó
+        //è·å–ListViewå¯¹è±¡
         mListView = (ListView)this.findViewById(R.id.mListView);
-        //·ÖÒ³À¸
+        //åˆ†é¡µæ 
         mListViewForPage = (LinearLayout) this.findViewById(R.id.mListViewForPage);
-        //ÉÏÒ»Ò³ºÍÏÂÒ»Ò³µÄ°´Å¥
+        //ä¸Šä¸€é¡µå’Œä¸‹ä¸€é¡µçš„æŒ‰é’®
         preView = (Button) this.findViewById(R.id.preView);
 		nextView = (Button) this.findViewById(R.id.nextView);
-		//·ÖÒ³À¸ÏÔÊ¾µÄÎÄ±¾
+		//åˆ†é¡µæ æ˜¾ç¤ºçš„æ–‡æœ¬
 		total = (TextView)findViewById(R.id.total);
 		current = (TextView)findViewById(R.id.current);
 		
-		//´´½¨Ò»¸öHeaderViewÓÃÓÚÏòÊı¾İ¿âÖĞÔö¼ÓÒ»ÌõÊı¾İ
+		//åˆ›å»ºä¸€ä¸ªHeaderViewç”¨äºå‘æ•°æ®åº“ä¸­å¢åŠ ä¸€æ¡æ•°æ®
         View headerView = mInflater.inflate(R.layout.db_list_header,null);
-        //¼Óµ½ListViewµÄ¶¥²¿
+        //åŠ åˆ°ListViewçš„é¡¶éƒ¨
         mListView.addHeaderView(headerView);
-        //Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+        //ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
     	myListViewAdapter = new UserDBListAdapter(this,userList);
     	mListView.setAdapter(myListViewAdapter);
     	
     	if(userList == null || userList.size()==0){
-			//ÎŞÊı¾İÒş²Ø·ÖÒ³À¸
+			//æ— æ•°æ®éšè—åˆ†é¡µæ 
 			mListViewForPage.setVisibility(View.GONE);
 		}else{
-			total.setText("×ÜÌõÊı:" +String.valueOf(totalCount));
-			current.setText("µ±Ç°Ò³:" + String.valueOf(pageNum));
+			total.setText("æ€»æ¡æ•°:" +String.valueOf(totalCount));
+			current.setText("å½“å‰é¡µ:" + String.valueOf(pageNum));
 			checkView();
 			mListViewForPage.setVisibility(View.VISIBLE);
 		}
         
-        //Ôö¼Ó¼ÇÂ¼µÄ°´Å¥
+        //å¢åŠ è®°å½•çš„æŒ‰é’®
         final Button addBtn = (Button)headerView.findViewById(R.id.addBtn);
-        //Ôö¼ÓµÄ×Ö¶ÎÊı¾İ
+        //å¢åŠ çš„å­—æ®µæ•°æ®
         final EditText mEditText = (EditText)headerView.findViewById(R.id.add_name);
         addBtn.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				//»ñÈ¡ÓÃ»§ÊäÈëµÄÊı¾İ
+				//è·å–ç”¨æˆ·è¾“å…¥çš„æ•°æ®
 				String name = mEditText.getText().toString();
 				if(name!=null && !"".equals(name.trim())){
-					//Ôö¼ÓÒ»ÌõÊı¾İµ½Êı¾İ¿â
+					//å¢åŠ ä¸€æ¡æ•°æ®åˆ°æ•°æ®åº“
 					LocalUser u = new LocalUser();
 					u.setName(name);
 					saveData(u);
 				}else{
-					showToast("ÇëÊäÈëÃû³Æ!");
+					showToast("è¯·è¾“å…¥åç§°!");
 				}
 			}
         });
         
-        //ÉÏÒ»Ò³ÊÂ¼ş
+        //ä¸Šä¸€é¡µäº‹ä»¶
         preView.setOnTouchListener(new Button.OnTouchListener(){
 		      @Override
 		      public boolean onTouch(View arg0, MotionEvent arg1){
@@ -146,7 +146,7 @@ public class DBInsideSampleActivity extends AbActivity {
 		      } 
 		 });
 		
-        //ÏÂÒ»Ò³ÊÂ¼ş
+        //ä¸‹ä¸€é¡µäº‹ä»¶
 		nextView.setOnTouchListener(new Button.OnTouchListener(){
 		      @Override
 		      public boolean onTouch(View arg0, MotionEvent arg1){
@@ -171,52 +171,52 @@ public class DBInsideSampleActivity extends AbActivity {
     
     
     /*
-     * ÉÏÒ»Ò³
+     * ä¸Šä¸€é¡µ
      */
 	private void preView() {
 		pageNum--;
-		current.setText("µ±Ç°Ò³:" + String.valueOf(pageNum));
+		current.setText("å½“å‰é¡µ:" + String.valueOf(pageNum));
 		userList.clear();
 		
 		queryData();
 	}
     /*
-     * ÏÂÒ»Ò³
+     * ä¸‹ä¸€é¡µ
      */
 	private void nextView() {
 		pageNum++;
-		current.setText("µ±Ç°Ò³:" + String.valueOf(pageNum));
+		current.setText("å½“å‰é¡µ:" + String.valueOf(pageNum));
 		userList.clear();
 		
 		queryData();
 	}
     
     /*
-     * ÎÄ±¾ÊÇ·ñ¿Éµã»÷
+     * æ–‡æœ¬æ˜¯å¦å¯ç‚¹å‡»
      */
 	public void checkView() {
 		if (pageNum <= 1) {
-			//ÉÏÒ»Ò³ÎÄ±¾Îª²»¿Éµã»÷×´Ì¬
+			//ä¸Šä¸€é¡µæ–‡æœ¬ä¸ºä¸å¯ç‚¹å‡»çŠ¶æ€
 			preView.setEnabled(false);
 			preView.setBackgroundResource(R.drawable.left_press);
-			//×ÜÌõÊıĞ¡ÓÚÃ¿Ò³ÏÔÊ¾µÄÌõÊı
+			//æ€»æ¡æ•°å°äºæ¯é¡µæ˜¾ç¤ºçš„æ¡æ•°
 			if (totalCount <= pageSize) {
-				//ÏÂÒ»Ò³ÎÄ±¾Îª²»¿Éµã»÷×´Ì¬
+				//ä¸‹ä¸€é¡µæ–‡æœ¬ä¸ºä¸å¯ç‚¹å‡»çŠ¶æ€
 				nextView.setEnabled(false);
 				nextView.setBackgroundResource(R.drawable.right_press);
 			}else{
 				nextView.setEnabled(true);
 				nextView.setBackgroundResource(R.drawable.right_normal);
 			}
-		}//×ÜÌõÊı-µ±Ç°Ò³*Ã¿Ò³ÏÔÊ¾µÄÌõÊı <=Ã¿Ò³ÏÔÊ¾µÄÌõÊı
+		}//æ€»æ¡æ•°-å½“å‰é¡µ*æ¯é¡µæ˜¾ç¤ºçš„æ¡æ•° <=æ¯é¡µæ˜¾ç¤ºçš„æ¡æ•°
 		else if (totalCount - (pageNum-1) * pageSize <= pageSize){
-			//ÏÂÒ»Ò³ÎÄ±¾Îª²»¿Éµã»÷×´Ì¬,ÉÏÒ»Ò³±äÎª¿Éµã»÷
+			//ä¸‹ä¸€é¡µæ–‡æœ¬ä¸ºä¸å¯ç‚¹å‡»çŠ¶æ€,ä¸Šä¸€é¡µå˜ä¸ºå¯ç‚¹å‡»
 			nextView.setEnabled(false);
 			nextView.setBackgroundResource(R.drawable.right_press);
 			preView.setEnabled(true);
 			preView.setBackgroundResource(R.drawable.left_normal);
 		}else {
-			//ÉÏÒ»Ò³ÏÂÒ»Ò³ÎÄ±¾ÉèÖÃÎª¿Éµã»÷×´Ì¬
+			//ä¸Šä¸€é¡µä¸‹ä¸€é¡µæ–‡æœ¬è®¾ç½®ä¸ºå¯ç‚¹å‡»çŠ¶æ€
 			preView.setEnabled(true);
 			preView.setBackgroundResource(R.drawable.left_normal);
 			nextView.setEnabled(true);
@@ -226,7 +226,7 @@ public class DBInsideSampleActivity extends AbActivity {
 	
 	private void checkPageBar(){
     	if(userList == null || userList.size()==0){
-			//ÎŞÊı¾İÒş²Ø·ÖÒ³À¸
+			//æ— æ•°æ®éšè—åˆ†é¡µæ 
 			mListViewForPage.setVisibility(View.GONE);
 		}else{
 			queryDataCount();
@@ -235,15 +235,15 @@ public class DBInsideSampleActivity extends AbActivity {
 	
 	/**
 	 * 
-	 * ÃèÊö£º²éÑ¯Êı¾İ
+	 * æè¿°ï¼šæŸ¥è¯¢æ•°æ®
 	 * @throws 
 	 */
 	public void queryData(){
-		//(1)»ñÈ¡Êı¾İ¿â
+		//(1)è·å–æ•°æ®åº“
 		userDao.startReadableDatabase(false);
-		//(2)Ö´ĞĞ²éÑ¯
+		//(2)æ‰§è¡ŒæŸ¥è¯¢
 		List<LocalUser> userListNew = userDao.queryList(null, null, null, null, null, "create_time desc limit "+String.valueOf(pageSize)+ " offset " +String.valueOf((pageNum-1)*pageSize), null);
-		//(3)¹Ø±ÕÊı¾İ¿â
+		//(3)å…³é—­æ•°æ®åº“
 		userDao.closeDatabase(false);
 		
 		userList.clear();
@@ -257,19 +257,19 @@ public class DBInsideSampleActivity extends AbActivity {
 	
 	/**
 	 * 
-	 * ÃèÊö£º²éÑ¯ÊıÁ¿
+	 * æè¿°ï¼šæŸ¥è¯¢æ•°é‡
 	 * @throws 
 	 */
 	public void queryDataCount(){
-		//(1)»ñÈ¡Êı¾İ¿â
+		//(1)è·å–æ•°æ®åº“
 		userDao.startReadableDatabase(false);
-		//(2)Ö´ĞĞ²éÑ¯
+		//(2)æ‰§è¡ŒæŸ¥è¯¢
 		totalCount = userDao.queryCount(null, null);
-		//(3)¹Ø±ÕÊı¾İ¿â
+		//(3)å…³é—­æ•°æ®åº“
 		userDao.closeDatabase(false);
 		
-		total.setText("×ÜÌõÊı:" +String.valueOf(totalCount));
-		current.setText("µ±Ç°Ò³:" + String.valueOf(pageNum));
+		total.setText("æ€»æ¡æ•°:" +String.valueOf(totalCount));
+		current.setText("å½“å‰é¡µ:" + String.valueOf(pageNum));
 		checkView();
 		mListViewForPage.setVisibility(View.VISIBLE);
 		
@@ -277,33 +277,33 @@ public class DBInsideSampleActivity extends AbActivity {
 	
 	/**
 	 * 
-	 * ÃèÊö£º±£´æÊı¾İ
+	 * æè¿°ï¼šä¿å­˜æ•°æ®
 	 * @param u
 	 * @throws 
 	 */
 	public void saveData(LocalUser u){
-		//(1)»ñÈ¡Êı¾İ¿â
+		//(1)è·å–æ•°æ®åº“
 		userDao.startWritableDatabase(false);
-		//(2)Ö´ĞĞ²éÑ¯
+		//(2)æ‰§è¡ŒæŸ¥è¯¢
 		long id = userDao.insert(u);
-		//(3)¹Ø±ÕÊı¾İ¿â
+		//(3)å…³é—­æ•°æ®åº“
 		userDao.closeDatabase(false);
 		
-		//showToast("²åÈëÊı¾İ³É¹¦,ID:"+id);
-		//²åÈëÊı¾İ³É¹¦
+		//showToast("æ’å…¥æ•°æ®æˆåŠŸ,ID:"+id);
+		//æ’å…¥æ•°æ®æˆåŠŸ
 		if(id!=-1){
-			//²éÑ¯Êı¾İ
+			//æŸ¥è¯¢æ•°æ®
 			queryData();
 		}
 	}
 	
 	/**
-	 * ¸üĞÂÊı¾İ
-	 * ÃèÊö£ºTODO
+	 * æ›´æ–°æ•°æ®
+	 * æè¿°ï¼šTODO
 	 * @param u
 	 */
 	public void updateData(LocalUser u){
-		//(1)»ñÈ¡Êı¾İ¿â
+		//(1)è·å–æ•°æ®åº“
 		userDao.startWritableDatabase(false);
 		userDao.update(u);
 		userDao.closeDatabase(false);
@@ -311,12 +311,12 @@ public class DBInsideSampleActivity extends AbActivity {
 	
 	/**
 	 * 
-	 * ÃèÊö£º¸ù¾İID²éÑ¯Êı¾İ
+	 * æè¿°ï¼šæ ¹æ®IDæŸ¥è¯¢æ•°æ®
 	 * @param id
 	 * @return
 	 */
 	public LocalUser queryDataById(int id){
-		//(1)»ñÈ¡Êı¾İ¿â
+		//(1)è·å–æ•°æ®åº“
 		userDao.startReadableDatabase(false);
 		LocalUser u =  (LocalUser)userDao.queryOne(id);
 		userDao.closeDatabase(false);
@@ -325,16 +325,16 @@ public class DBInsideSampleActivity extends AbActivity {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉ¾³ıÊı¾İ
+	 * æè¿°ï¼šåˆ é™¤æ•°æ®
 	 * @param id
 	 */
 	public void delData(int id){
 		
-		//(1)»ñÈ¡Êı¾İ¿â
+		//(1)è·å–æ•°æ®åº“
 		userDao.startWritableDatabase(false);
-		//(2)Ö´ĞĞ²éÑ¯
+		//(2)æ‰§è¡ŒæŸ¥è¯¢
 		userDao.delete(id);
-		//(3)¹Ø±ÕÊı¾İ¿â
+		//(3)å…³é—­æ•°æ®åº“
 		userDao.closeDatabase(false);
 		
 		queryData();

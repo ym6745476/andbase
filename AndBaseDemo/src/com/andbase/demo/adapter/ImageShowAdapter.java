@@ -41,7 +41,7 @@ import com.andbase.R;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÊÊÅäÆ÷ ÍøÂçURLµÄÍ¼Æ¬.
+ * é€‚é…å™¨ ç½‘ç»œURLçš„å›¾ç‰‡.
  */
 public class ImageShowAdapter extends BaseAdapter {
 	
@@ -57,7 +57,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	/** The m height. */
 	private int mHeight;
 	
-	//Í¼Æ¬ÏÂÔØÆ÷
+	//å›¾ç‰‡ä¸‹è½½å™¨
     private AbImageDownloader mAbImageDownloader = null;
 	
 	/**
@@ -72,7 +72,7 @@ public class ImageShowAdapter extends BaseAdapter {
 		this.mImagePaths = imagePaths;
 		this.mWidth = width;
 		this.mHeight = height;
-		//Í¼Æ¬ÏÂÔØÆ÷
+		//å›¾ç‰‡ä¸‹è½½å™¨
         mAbImageDownloader = new AbImageDownloader(mContext);
         mAbImageDownloader.setWidth(this.mWidth);
         mAbImageDownloader.setHeight(this.mHeight);
@@ -82,7 +82,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡ÊıÁ¿.
+	 * æè¿°ï¼šè·å–æ•°é‡.
 	 *
 	 * @return the count
 	 * @see android.widget.Adapter#getCount()
@@ -92,7 +92,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Ë÷ÒıÎ»ÖÃµÄÂ·¾¶.
+	 * æè¿°ï¼šè·å–ç´¢å¼•ä½ç½®çš„è·¯å¾„.
 	 *
 	 * @param position the position
 	 * @return the item
@@ -103,7 +103,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Î»ÖÃ.
+	 * æè¿°ï¼šè·å–ä½ç½®.
 	 *
 	 * @param position the position
 	 * @return the item id
@@ -114,7 +114,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºÏÔÊ¾View.
+	 * æè¿°ï¼šæ˜¾ç¤ºView.
 	 *
 	 * @param position the position
 	 * @param convertView the convert view
@@ -156,18 +156,18 @@ public class ImageShowAdapter extends BaseAdapter {
 		String imagePath = mImagePaths.get(position);
 		
 		if(!AbStrUtil.isEmpty(imagePath)){
-		  //´Ó»º´æÖĞ»ñÈ¡Í¼Æ¬£¬ºÜÖØÒª·ñÔò»áµ¼ÖÂÒ³ÃæÉÁ¶¯
+		  //ä»ç¼“å­˜ä¸­è·å–å›¾ç‰‡ï¼Œå¾ˆé‡è¦å¦åˆ™ä¼šå¯¼è‡´é¡µé¢é—ªåŠ¨
       	  Bitmap bitmap = AbImageCache.getBitmapFromMemCache(imagePath);
-      	  //»º´æÖĞÃ»ÓĞÔò´ÓÍøÂçºÍSD¿¨»ñÈ¡
+      	  //ç¼“å­˜ä¸­æ²¡æœ‰åˆ™ä»ç½‘ç»œå’ŒSDå¡è·å–
       	  if(bitmap == null){
       		    holder.mImageView1.setImageResource(R.drawable.image_loading);
 	      		if(imagePath.indexOf("http://")!=-1){
-	      		    //Í¼Æ¬µÄÏÂÔØ
+	      		    //å›¾ç‰‡çš„ä¸‹è½½
 	                mAbImageDownloader.setType(AbConstant.ORIGINALIMG);
 	                mAbImageDownloader.display(holder.mImageView1,imagePath);
 					
 				}else if(imagePath.indexOf("/")==-1){
-					//Ë÷ÒıÍ¼Æ¬
+					//ç´¢å¼•å›¾ç‰‡
 					try {
 						int res  = Integer.parseInt(imagePath);
 						holder.mImageView1.setImageDrawable(mContext.getResources().getDrawable(res));
@@ -179,16 +179,16 @@ public class ImageShowAdapter extends BaseAdapter {
 					if(mBitmap!=null){
 						holder.mImageView1.setImageBitmap(mBitmap);
 					}else{
-						// ÎŞÍ¼Æ¬Ê±ÏÔÊ¾
+						// æ— å›¾ç‰‡æ—¶æ˜¾ç¤º
 						holder.mImageView1.setImageResource(R.drawable.image_no);
 					}
 				}
       	  }else{
-      		  //Ö±½ÓÏÔÊ¾
+      		  //ç›´æ¥æ˜¾ç¤º
   			  holder.mImageView1.setImageBitmap(bitmap);
       	  }
 		}else{
-			// ÎŞÍ¼Æ¬Ê±ÏÔÊ¾
+			// æ— å›¾ç‰‡æ—¶æ˜¾ç¤º
 			holder.mImageView1.setImageResource(R.drawable.image_no);
 	    }
 		holder.mImageView1.setAdjustViewBounds(true);
@@ -197,7 +197,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	
 	
 	/**
-	 * Ôö¼Ó²¢¸Ä±äÊÓÍ¼.
+	 * å¢åŠ å¹¶æ”¹å˜è§†å›¾.
 	 * @param position the position
 	 * @param imagePaths the image paths
 	 */
@@ -207,7 +207,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * Ôö¼Ó¶àÌõ²¢¸Ä±äÊÓÍ¼.
+	 * å¢åŠ å¤šæ¡å¹¶æ”¹å˜è§†å›¾.
 	 * @param imagePaths the image paths
 	 */
 	public void addItems(List<String> imagePaths) {
@@ -216,7 +216,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * Ôö¼Ó¶àÌõ²¢¸Ä±äÊÓÍ¼.
+	 * å¢åŠ å¤šæ¡å¹¶æ”¹å˜è§†å›¾.
 	 */
 	public void clearItems() {
 		mImagePaths.clear();
@@ -224,7 +224,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * ViewÔªËØ.
+	 * Viewå…ƒç´ .
 	 */
 	public static class ViewHolder {
 		

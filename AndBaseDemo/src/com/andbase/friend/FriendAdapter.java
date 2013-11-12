@@ -21,12 +21,12 @@ public class FriendAdapter extends BaseAdapter {
 	private List<FrontiaUser.FrontiaUserDetail> mList;
 	private Context mContext;
 	public  int pageSize = 16;
-	//Í¼Æ¬ÏÂÔØÆ÷
+	//å›¾ç‰‡ä¸‹è½½å™¨
     private AbImageDownloader mAbImageDownloader = null;
 	
 	public FriendAdapter(Context context, List<FrontiaUser.FrontiaUserDetail> list, int page) {
 		mContext = context;
-		//Í¼Æ¬ÏÂÔØÆ÷
+		//å›¾ç‰‡ä¸‹è½½å™¨
         mAbImageDownloader = new AbImageDownloader(mContext);
         mAbImageDownloader.setWidth(120);
         mAbImageDownloader.setHeight(120);
@@ -74,7 +74,7 @@ public class FriendAdapter extends BaseAdapter {
 		
 		String imageUrl = userInfo.getHeadUrl();
 		
-		//Í¼Æ¬µÄÏÂÔØ
+		//å›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader.setType(AbConstant.SCALEIMG);
         mAbImageDownloader.display(holder.itemIcon,imageUrl);
 		

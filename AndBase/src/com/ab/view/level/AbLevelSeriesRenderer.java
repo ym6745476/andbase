@@ -24,58 +24,58 @@ public class AbLevelSeriesRenderer extends AbLevelDefaultRenderer {
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 	
-	/** µÈ¼¶Í¼ĞÎµÄ¿í. */
+	/** ç­‰çº§å›¾å½¢çš„å®½. */
 	private int width;
 	
-	/** µÈ¼¶Í¼ĞÎµÄ¸ß. */
+	/** ç­‰çº§å›¾å½¢çš„é«˜. */
 	private int height;
 	
-	/** ¸÷µÈ¼¶¶ÎµÄÑÕÉ«. */
+	/** å„ç­‰çº§æ®µçš„é¢œè‰². */
 	private int [] color = null;
 	
-	/** ¼ÙÈç Ã¿¶ÎµÄ°Ù·Ö±È  2  3  2  1  1  1. */
+	/** å‡å¦‚ æ¯æ®µçš„ç™¾åˆ†æ¯”  2  3  2  1  1  1. */
 	private float [] part = null;
 	
-	/** ¸÷µÈ¼¶¶ÎµÄÖµ. */
+	/** å„ç­‰çº§æ®µçš„å€¼. */
 	private float [] partValue = null;
 	
-	/** µ±Ç°Öµ. */
+	/** å½“å‰å€¼. */
 	private String textValue = null;
 	
-	/** µ±Ç°ÖµÃèÊö. */
+	/** å½“å‰å€¼æè¿°. */
 	private String textDesc = null;
 	
-	/** µ±Ç°ÖµµÄµÈ¼¶. */
+	/** å½“å‰å€¼çš„ç­‰çº§. */
 	private int textlevelIndex = 0;
 	
-	/** µ±Ç°ÖµÎÄ×Ö´óĞ¡. */
+	/** å½“å‰å€¼æ–‡å­—å¤§å°. */
 	private int textLevelSize = 30;
 	
-	/** µ±Ç°ÖµÎÄ×ÖÓë¶¥²¿µÄ¾àÀë. */
+	/** å½“å‰å€¼æ–‡å­—ä¸é¡¶éƒ¨çš„è·ç¦». */
 	private int marginTop = 30;
 	
-	/** Ö¸Ê¾Èı½ÇĞÎµÄ¿í¶È. */
+	/** æŒ‡ç¤ºä¸‰è§’å½¢çš„å®½åº¦. */
 	private int arrowWidth  = 20;
 	
-	/** Ö¸Ê¾Èı½ÇĞÎµÄ¸ß¶È. */
+	/** æŒ‡ç¤ºä¸‰è§’å½¢çš„é«˜åº¦. */
 	private int arrowHeight = 10;
 	
-	/** µÈ¼¶ÌõµÄ¸ß¶È. */
+	/** ç­‰çº§æ¡çš„é«˜åº¦. */
 	private int levelHeight = 20;
 	
-	/** Ö¸Ê¾Èı½ÇĞÎÓëÆäËû¼ä¾à. */
+	/** æŒ‡ç¤ºä¸‰è§’å½¢ä¸å…¶ä»–é—´è·. */
 	private int arrowMarginTop = 10;
 	
-	/** µÈ¼¶×ø±êÎÄ×Ö´óĞ¡. */
+	/** ç­‰çº§åæ ‡æ–‡å­—å¤§å°. */
 	private int partTextSize = 15;
 	
-	/** µÈ¼¶ËµÃ÷ÎÄ×Ö´óĞ¡. */
+	/** ç­‰çº§è¯´æ˜æ–‡å­—å¤§å°. */
 	private int textDescSize = 22;
 	
-	/** µÈ¼¶ËµÃ÷ÎÄ×ÖÍâ±ß¿òµÄ¿í. */
+	/** ç­‰çº§è¯´æ˜æ–‡å­—å¤–è¾¹æ¡†çš„å®½. */
 	private int textRectWidth = 120;
 	
-	/** µÈ¼¶ËµÃ÷ÎÄ×ÖÍâ±ß¿òµÄ¸ã. */
+	/** ç­‰çº§è¯´æ˜æ–‡å­—å¤–è¾¹æ¡†çš„æ. */
 	private int textRectHeight = 60;
 
 	/**

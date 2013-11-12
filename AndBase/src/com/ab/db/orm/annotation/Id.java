@@ -21,7 +21,7 @@ import java.lang.annotation.Target;
 
 /**
  * The Interface Id.
- * Ö÷¼ü
+ * ä¸»é”®
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target( { java.lang.annotation.ElementType.FIELD })

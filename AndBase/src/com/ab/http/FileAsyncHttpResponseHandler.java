@@ -38,13 +38,13 @@ public class FileAsyncHttpResponseHandler extends AsyncHttpResponseHandler {
     private File mFile;
 
     /**
-     * ²»Ö¸¶¨±£´æÄ¿Â¼.
+     * ä¸æŒ‡å®šä¿å­˜ç›®å½•.
      *
      * @param url the url
      */
     public FileAsyncHttpResponseHandler(String url) {
         super();
-        //Éú³É»º´æÎÄ¼ş
+        //ç”Ÿæˆç¼“å­˜æ–‡ä»¶
         if(AbFileUtil.isCanUseSD()){
 	        File path = Environment.getExternalStorageDirectory();
 			String fileName = AbFileUtil.getFileNameFromUrl(url);
@@ -55,7 +55,7 @@ public class FileAsyncHttpResponseHandler extends AsyncHttpResponseHandler {
     }
     
     /**
-     * Ö¸¶¨±£´æÄ¿Â¼.
+     * æŒ‡å®šä¿å­˜ç›®å½•.
      *
      * @param file the file
      */
@@ -119,10 +119,10 @@ public class FileAsyncHttpResponseHandler extends AsyncHttpResponseHandler {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see com.ab.http.AsyncHttpResponseHandler#onFailure(int, org.apache.http.Header[], byte[], java.lang.Throwable)
      * @author: zhaoqp
-     * @date£º2013-10-22 ÏÂÎç4:23:15
+     * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
      * @version v1.0
      */
     @Override
@@ -131,10 +131,10 @@ public class FileAsyncHttpResponseHandler extends AsyncHttpResponseHandler {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see com.ab.http.AsyncHttpResponseHandler#onSuccess(int, org.apache.http.Header[], byte[])
      * @author: zhaoqp
-     * @date£º2013-10-22 ÏÂÎç4:23:15
+     * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
      * @version v1.0
      */
     @Override
@@ -143,10 +143,10 @@ public class FileAsyncHttpResponseHandler extends AsyncHttpResponseHandler {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see com.ab.http.AsyncHttpResponseHandler#getResponseData(org.apache.http.HttpEntity)
      * @author: zhaoqp
-     * @date£º2013-10-22 ÏÂÎç4:23:15
+     * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
      * @version v1.0
      */
     @Override

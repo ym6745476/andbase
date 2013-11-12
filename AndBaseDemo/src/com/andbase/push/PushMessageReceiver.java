@@ -28,11 +28,11 @@ import com.google.gson.GsonBuilder;
 public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 
 	private final static String TAG = "PushMessageReceiver";
-	//Í¨Öª¹ÜÀíÆ÷
+	//é€šçŸ¥ç®¡ç†å™¨
 	private NotificationManager mNotificationManager;
-	//Í¨ÖªµÄid
+	//é€šçŸ¥çš„id
 	private static int NOTIFICATIONS_ID = R.layout.main;
-	//Êı¾İ¿â²Ù×÷Àà
+	//æ•°æ®åº“æ“ä½œç±»
 	public AbSqliteStorage mAbSqliteStorage = null;
 	public ChatMsgDao mChatMsgDao = null;
 	public UserDao mUserDao = null;
@@ -42,7 +42,7 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 			String userId, String channelId, String requestId) {
 		
 		StringBuffer sb = new StringBuffer();
-		sb.append("°ó¶¨³É¹¦\n");
+		sb.append("ç»‘å®šæˆåŠŸ\n");
 		sb.append("errCode:"+errorCode);
 		sb.append("appid:"+appid+"\n");
 		sb.append("userId:"+userId+"\n");
@@ -50,14 +50,14 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 		sb.append("requestId"+requestId+"\n");
 		Log.d(TAG,sb.toString());
 		
-		//±£´æÆğÀ´¹©ÆäËûÓÃ»§Ê¹ÓÃ
+		//ä¿å­˜èµ·æ¥ä¾›å…¶ä»–ç”¨æˆ·ä½¿ç”¨
         PushUtil.saveChannelId(appid,userId,channelId,requestId);
 	}
 
 	@Override
 	public void onUnbind(Context context, int errorCode, String requestId) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("½â°ó³É¹¦\n");
+		sb.append("è§£ç»‘æˆåŠŸ\n");
 		sb.append("errCode:"+errorCode);
 		sb.append("requestId"+requestId+"\n");
 		Log.d(TAG,sb.toString());
@@ -68,7 +68,7 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 			List<String> successTags, List<String> failTags,
 			String requestId) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("ÉèÖÃtag³É¹¦\n");
+		sb.append("è®¾ç½®tagæˆåŠŸ\n");
 		sb.append("errCode:"+errorCode);
 		sb.append("success tags:");
 		for(String tag:successTags){
@@ -87,7 +87,7 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 			List<String> successTags, List<String> failTags,
 			String requestId) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("É¾³ıtag³É¹¦\n");
+		sb.append("åˆ é™¤tagæˆåŠŸ\n");
 		sb.append("errCode:"+errorCode);
 		sb.append("success tags:");
 		for(String tag:successTags){
@@ -105,7 +105,7 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 	public void onListTags(Context context, int errorCode,
 			List<String> tags, String requestId) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("list tag³É¹¦\n");
+		sb.append("list tagæˆåŠŸ\n");
 		sb.append("errCode:"+errorCode);
 		sb.append("tags:");
 		for(String tag:tags){
@@ -117,12 +117,12 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 	
 	@Override
 	public void onMessage(Context context, String message,String customContentString) {
-		Log.d(TAG, "ÊÕµ½ÁËÏûÏ¢:" + message);
+		Log.d(TAG, "æ”¶åˆ°äº†æ¶ˆæ¯:" + message);
 		if(mAbSqliteStorage == null){
-			//³õÊ¼»¯AbSqliteStorage
+			//åˆå§‹åŒ–AbSqliteStorage
 		    mAbSqliteStorage = AbSqliteStorage.getInstance(context);
 		    
-		    //³õÊ¼»¯Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+		    //åˆå§‹åŒ–æ•°æ®åº“æ“ä½œå®ç°ç±»
 		    mChatMsgDao = new ChatMsgDao(context);
 		    mUserDao  = new UserDao(context);
 		}
@@ -137,11 +137,11 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 			saveData(mChatMsg);
 			saveUserData(mChatMsg.getUser());
 			
-			//»ñÈ¡Í¨Öª¹ÜÀíÆ÷
+			//è·å–é€šçŸ¥ç®¡ç†å™¨
 	        mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-	        //ÉèÖÃÍ¨ÖªµÄÍ¼±êÓëÌáÊ¾µÄÄÚÈİ
-	        Notification notification = new Notification(R.drawable.ic_launcher,"ĞÂÏûÏ¢",System.currentTimeMillis());
-	        //µã»÷Í¨Öªºó½«Ìô×ªµ½Ö¸¶¨Activity
+	        //è®¾ç½®é€šçŸ¥çš„å›¾æ ‡ä¸æç¤ºçš„å†…å®¹
+	        Notification notification = new Notification(R.drawable.ic_launcher,"æ–°æ¶ˆæ¯",System.currentTimeMillis());
+	        //ç‚¹å‡»é€šçŸ¥åå°†æŒ‘è½¬åˆ°æŒ‡å®šActivity
 	        Intent mIntent  = new Intent(context, MainActivity.class);
 	        User u = mChatMsg.getUser();
 	        mIntent.putExtra("ID",u.getuId());
@@ -150,13 +150,13 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 	        mIntent.putExtra("TO","chat");
 	        PendingIntent contentIntent = PendingIntent.getActivity(context, 0,mIntent, 0);
 	        
-	        //ÉèÖÃÍ¨ÖªµÄ±êÌâÓëÏÔÊ¾µÄÄÚÈİ¼°µã»÷Í¨ÖªºóµÄÌø×ª
+	        //è®¾ç½®é€šçŸ¥çš„æ ‡é¢˜ä¸æ˜¾ç¤ºçš„å†…å®¹åŠç‚¹å‡»é€šçŸ¥åçš„è·³è½¬
 	        notification.setLatestEventInfo(context,u.getName(), mChatMsg.getContent(), contentIntent);
-	        //µã»÷notificationÖ®ºó£¬¸Ãnotification×Ô¶¯ÏûÊ§
+	        //ç‚¹å‡»notificationä¹‹åï¼Œè¯¥notificationè‡ªåŠ¨æ¶ˆå¤±
 	        notification.flags = Notification.FLAG_AUTO_CANCEL;
-	        //notification±»notifyµÄÊ±ºò£¬´¥·¢Ä¬ÈÏÉùÒôºÍÄ¬ÈÏÕğ¶¯
+	        //notificationè¢«notifyçš„æ—¶å€™ï¼Œè§¦å‘é»˜è®¤å£°éŸ³å’Œé»˜è®¤éœ‡åŠ¨
 	        notification.defaults = Notification.DEFAULT_SOUND|Notification.DEFAULT_VIBRATE;
-	        //ÏÔÊ¾Í¨Öª
+	        //æ˜¾ç¤ºé€šçŸ¥
 	        mNotificationManager.notify(NOTIFICATIONS_ID, notification);
 		}else{
 			
@@ -167,7 +167,7 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 	public void onNotificationClicked(Context context, String title,
 			String description, String customContentString) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("Í¨Öª±»µã»÷\n");
+		sb.append("é€šçŸ¥è¢«ç‚¹å‡»\n");
 		sb.append("title:"+title+"\n");
 		sb.append("description:"+description);
 		sb.append("customContentString:"+customContentString+"\n");
@@ -182,7 +182,7 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 
 			@Override
 			public void onSuccess(long id) {
-				Log.d(TAG,"ÏûÏ¢±£´æ³É¹¦");
+				Log.d(TAG,"æ¶ˆæ¯ä¿å­˜æˆåŠŸ");
 				chatMsg.set_id((int)id);
 			}
 
@@ -197,11 +197,11 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 		if(mAbSqliteStorage == null){
 			return;
 		}
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
 		mAbStorageQuery.equals("u_id",user.getuId());
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao, new AbDataInfoListener(){
 
 			@Override
@@ -215,17 +215,17 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 
 						@Override
 						public void onSuccess(long id) {
-							Log.d(TAG,"²åÈëÒ»ÌõÓÃ»§ĞÅÏ¢³É¹¦");
+							Log.d(TAG,"æ’å…¥ä¸€æ¡ç”¨æˆ·ä¿¡æ¯æˆåŠŸ");
 						}
 
 						@Override
 						public void onFailure(int errorCode, String errorMessage) {
-							Log.d(TAG,"²åÈëÒ»ÌõÓÃ»§ĞÅÏ¢Ê§°Ü");
+							Log.d(TAG,"æ’å…¥ä¸€æ¡ç”¨æˆ·ä¿¡æ¯å¤±è´¥");
 						}
 						
 					});
 				}else{
-					Log.d(TAG,"ÓÃ»§ĞÅÏ¢ÒÑ¾­´æÔÚ");
+					Log.d(TAG,"ç”¨æˆ·ä¿¡æ¯å·²ç»å­˜åœ¨");
 				}
 			}
 			
@@ -236,9 +236,9 @@ public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 	/*<!-- push service client -->
     <receiver android:name="com.andbase.push.PushMessageReceiver">
         <intent-filter>
-            <!-- ½ÓÊÕpushÏûÏ¢ -->
+            <!-- æ¥æ”¶pushæ¶ˆæ¯ -->
             <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
-            <!-- ½ÓÊÕbind,unbind,fetch,deleteµÈ·´À¡ÏûÏ¢ -->
+            <!-- æ¥æ”¶bind,unbind,fetch,deleteç­‰åé¦ˆæ¶ˆæ¯ -->
             <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
             <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
         </intent-filter>

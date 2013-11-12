@@ -31,7 +31,7 @@ import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÏÂÔØÍ¼Æ¬²¢ÏÔÊ¾µÄ¹¤¾ßÀà.
+ * æè¿°ï¼šä¸‹è½½å›¾ç‰‡å¹¶æ˜¾ç¤ºçš„å·¥å…·ç±».
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -48,35 +48,35 @@ public class AbImageDownloader {
     /** Context. */
     private static Context context = null;
     
-    /** ÏÔÊ¾µÄÍ¼Æ¬µÄ¿í. */
+    /** æ˜¾ç¤ºçš„å›¾ç‰‡çš„å®½. */
     private int width;
 	
-	/** ÏÔÊ¾µÄÍ¼Æ¬µÄ¸ß. */
+	/** æ˜¾ç¤ºçš„å›¾ç‰‡çš„é«˜. */
     private int height;
 	
-	/** Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©. */
+	/** å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰. */
     private int type  = AbConstant.ORIGINALIMG;
     
-    /** ÏÔÊ¾ÎªÏÂÔØÖĞµÄÍ¼Æ¬. */
+    /** æ˜¾ç¤ºä¸ºä¸‹è½½ä¸­çš„å›¾ç‰‡. */
     private Drawable loadingImage;
     
-    /** ÏÔÊ¾ÎªÏÂÔØÖĞµÄView. */
+    /** æ˜¾ç¤ºä¸ºä¸‹è½½ä¸­çš„View. */
     private View loadingView;
     
-    /** ÏÔÊ¾ÏÂÔØÊ§°ÜµÄÍ¼Æ¬. */
+    /** æ˜¾ç¤ºä¸‹è½½å¤±è´¥çš„å›¾ç‰‡. */
     private Drawable errorImage;
     
-    /** Í¼Æ¬Î´ÕÒµ½µÄÍ¼Æ¬. */
+    /** å›¾ç‰‡æœªæ‰¾åˆ°çš„å›¾ç‰‡. */
     private Drawable noImage;
     
-    /** Ïß³Ì³Ø. */
+    /** çº¿ç¨‹æ± . */
     private AbImageDownloadPool mAbImageDownloadPool = null;
     
-    /** ¶¯»­¿ØÖÆ. */
+    /** åŠ¨ç”»æ§åˆ¶. */
     private boolean animation;
     
     /**
-     * ¹¹ÔìÍ¼Æ¬ÏÂÔØÆ÷.
+     * æ„é€ å›¾ç‰‡ä¸‹è½½å™¨.
      */
     public AbImageDownloader(Context context) {
     	this.context = context;
@@ -84,10 +84,10 @@ public class AbImageDownloader {
     } 
      
     /**
-     * ÏÔÊ¾Õâ¸öÍ¼Æ¬.
-     * ¼ÓÈë¶¯»­Ğ§¹ûºó¼ÓÔØÏÂÒ»Ò³ºóÍ¼Æ¬»áÈ«²¿ÉÁÒ»ÏÂ£¬ÒòÎªÉèÖÃÁË²»Í¬µÄÍ¼Æ¬
-     * @param imageView ÏÔµÃµÄView
-     * @return url ÍøÂçurl
+     * æ˜¾ç¤ºè¿™ä¸ªå›¾ç‰‡.
+     * åŠ å…¥åŠ¨ç”»æ•ˆæœååŠ è½½ä¸‹ä¸€é¡µåå›¾ç‰‡ä¼šå…¨éƒ¨é—ªä¸€ä¸‹ï¼Œå› ä¸ºè®¾ç½®äº†ä¸åŒçš„å›¾ç‰‡
+     * @param imageView æ˜¾å¾—çš„View
+     * @return url ç½‘ç»œurl
      */
     public void display(final ImageView imageView,String url) { 
     	
@@ -102,21 +102,21 @@ public class AbImageDownloader {
     		return;
     	}
     	
-    	//ÉèÖÃÏÂÔØÏî
+    	//è®¾ç½®ä¸‹è½½é¡¹
         AbImageDownloadItem item = new AbImageDownloadItem(); 
-        //ÉèÖÃÏÔÊ¾µÄ´óĞ¡
+        //è®¾ç½®æ˜¾ç¤ºçš„å¤§å°
         item.width = width;
         item.height = height;
-        //ÉèÖÃÎªËõ·Å
+        //è®¾ç½®ä¸ºç¼©æ”¾
         item.type = type;
         item.imageUrl = url;
         String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
         item.bitmap =  AbImageCache.getBitmapFromMemCache(cacheKey);
-		if(D) Log.d(TAG, "»º´æÖĞ»ñÈ¡µÄ"+cacheKey+":"+item.bitmap);
+		if(D) Log.d(TAG, "ç¼“å­˜ä¸­è·å–çš„"+cacheKey+":"+item.bitmap);
 		
     	if(item.bitmap == null){
     		
-    		//ÏÈÏÔÊ¾¼ÓÔØÖĞ
+    		//å…ˆæ˜¾ç¤ºåŠ è½½ä¸­
         	if(loadingView!=null){
     			loadingView.setVisibility(View.VISIBLE);
     			imageView.setVisibility(View.INVISIBLE);
@@ -130,11 +130,11 @@ public class AbImageDownloader {
     			}
     		}
     		
-    		//ÏÂÔØÍê³Éºó¸üĞÂ½çÃæ
+    		//ä¸‹è½½å®Œæˆåæ›´æ–°ç•Œé¢
             item.callback = new AbImageDownloadCallback() { 
                 @Override 
                 public void update(Bitmap bitmap, String imageUrl) { 
-                	//Î´ÉèÖÃ¼ÓÔØÖĞµÄÍ¼Æ¬£¬²¢ÇÒÉèÖÃÁËÒş²ØµÄView
+                	//æœªè®¾ç½®åŠ è½½ä¸­çš„å›¾ç‰‡ï¼Œå¹¶ä¸”è®¾ç½®äº†éšè—çš„View
             		if(loadingView != null){
             			loadingView.setVisibility(View.INVISIBLE);
 						imageView.setVisibility(View.VISIBLE);
@@ -175,7 +175,7 @@ public class AbImageDownloader {
     
     /**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÏÂÔØÖĞµÄÍ¼Æ¬
+	 * æè¿°ï¼šè®¾ç½®ä¸‹è½½ä¸­çš„å›¾ç‰‡
 	 * @param resID
 	 * @throws 
 	 */
@@ -185,8 +185,8 @@ public class AbImageDownloader {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÏÂÔØÖĞµÄView£¬ÓÅÏÈ¼¶¸ßÓÚsetLoadingImage
-	 * @param view ·ÅÔÚImageViewµÄÉÏ±ß»òÕßÏÂ±ßµÄView
+	 * æè¿°ï¼šè®¾ç½®ä¸‹è½½ä¸­çš„Viewï¼Œä¼˜å…ˆçº§é«˜äºsetLoadingImage
+	 * @param view æ”¾åœ¨ImageViewçš„ä¸Šè¾¹æˆ–è€…ä¸‹è¾¹çš„View
 	 * @throws 
 	 */
 	public void setLoadingView(View view) {
@@ -195,7 +195,7 @@ public class AbImageDownloader {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÏÂÔØÊ§°ÜµÄÍ¼Æ¬
+	 * æè¿°ï¼šè®¾ç½®ä¸‹è½½å¤±è´¥çš„å›¾ç‰‡
 	 * @param resID
 	 * @throws 
 	 */
@@ -205,7 +205,7 @@ public class AbImageDownloader {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÎ´ÕÒµ½µÄÍ¼Æ¬
+	 * æè¿°ï¼šè®¾ç½®æœªæ‰¾åˆ°çš„å›¾ç‰‡
 	 * @param resID
 	 * @throws 
 	 */
@@ -219,7 +219,7 @@ public class AbImageDownloader {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÍ¼Æ¬µÄ¿í¶È
+	 * æè¿°ï¼šè®¾ç½®å›¾ç‰‡çš„å®½åº¦
 	 * @param height
 	 * @throws 
 	 */
@@ -233,7 +233,7 @@ public class AbImageDownloader {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÍ¼Æ¬µÄ¸ß¶È
+	 * æè¿°ï¼šè®¾ç½®å›¾ç‰‡çš„é«˜åº¦
 	 * @param height
 	 * @throws 
 	 */
@@ -249,7 +249,7 @@ public class AbImageDownloader {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÍ¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©.
+	 * æè¿°ï¼šå›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰.
 	 * @param type
 	 * @throws 
 	 */
@@ -259,7 +259,7 @@ public class AbImageDownloader {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÊÇ·ñ¿ªÆô¶¯»­.
+	 * æè¿°ï¼šæ˜¯å¦å¼€å¯åŠ¨ç”».
 	 * @param animation
 	 * @throws 
 	 */

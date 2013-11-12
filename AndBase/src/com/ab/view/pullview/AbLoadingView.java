@@ -66,7 +66,7 @@ public class AbLoadingView extends LinearLayout {
 		mContext = context;
 		
 		loadingView  = new LinearLayout(context);  
-		//设置布局 水平方向  
+		//璁剧疆甯冨眬 姘村钩鏂瑰悜  
 		loadingView.setOrientation(LinearLayout.HORIZONTAL);
 		loadingView.setGravity(Gravity.CENTER); 
 		
@@ -83,7 +83,7 @@ public class AbLoadingView extends LinearLayout {
 
 	/**
 	 * 
-	 * 描述：获取ProgressBar，用于设置自定义样式
+	 * 鎻忚堪锛氳幏鍙朠rogressBar锛岀敤浜庤缃嚜瀹氫箟鏍峰紡
 	 * @return
 	 * @throws 
 	 */

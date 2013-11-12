@@ -33,10 +33,10 @@ public class SlidingButtonActivity extends AbActivity {
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         
-	    //»ñÈ¡ListView¶ÔÏó
+	    //è·å–ListViewå¯¹è±¡
         ListView mListView = (ListView)this.findViewById(R.id.mListView);
         
-        //ListViewÊı¾İ
+        //ListViewæ•°æ®
     	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
     	Map<String, Object> map = new HashMap<String, Object>();
     	
@@ -89,13 +89,13 @@ public class SlidingButtonActivity extends AbActivity {
     	map.put("itemsCheck", false);
     	list.add(map);
     	
-        //¹»ÔìSimpleAdapter¶ÔÏó£¬ÊÊÅäÊı¾İ
+        //å¤Ÿé€ SimpleAdapterå¯¹è±¡ï¼Œé€‚é…æ•°æ®
     	CheckListViewAdapter simpleAdapter = new CheckListViewAdapter(this, list,R.layout.list_items_button,
     				new String[] {"itemsTitle","itemsText","itemsCheck" }, new int[] {
     						R.id.itemsTitle,R.id.itemsText,R.id.mSliderBtn});
     	mListView.setAdapter(simpleAdapter);
     	
-    	//item±»µã»÷ÊÂ¼ş
+    	//itemè¢«ç‚¹å‡»äº‹ä»¶
     	mListView.setOnItemClickListener(new OnItemClickListener(){
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,

@@ -43,7 +43,7 @@ public class SampleListFragment extends ListFragment {
 		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i4/13215035563144015/T1Q.eyXsldXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
 		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg"); 
 		
-		//ListView数据
+		//ListView鏁版嵁
    	    list = new ArrayList<Map<String, Object>>();
    	    Map<String, Object> map = null;
     	
@@ -54,7 +54,7 @@ public class SampleListFragment extends ListFragment {
 	    	map.put("itemsText", "item..."+i);
 	    	list.add(map);
 		}
-   	    //使用自定义的Adapter
+   	    //浣跨敤鑷畾涔夌殑Adapter
    	    ImageListAdapter myListViewAdapter = new ImageListAdapter(mActivity, list,R.layout.list_items,
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
 						R.id.itemsTitle,R.id.itemsText });

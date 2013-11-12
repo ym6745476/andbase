@@ -66,7 +66,7 @@ public class TouchHandler implements ITouchHandler {
 
   /**
    * Handles the touch event.
-   * Í¼±íµÄ»¬¶¯ÊÂ¼þ
+   * å›¾è¡¨çš„æ»‘åŠ¨äº‹ä»¶
    *
    * @param event the touch event
    * @return true, if successful
@@ -141,19 +141,19 @@ public class TouchHandler implements ITouchHandler {
   }
 
   /**
-   * ÃèÊö£º±ê³ß»¬¶¯ºÍ±ÈÀýËõ·ÅµÄµã»÷µÄÊÂ¼þ.
+   * æè¿°ï¼šæ ‡å°ºæ»‘åŠ¨å’Œæ¯”ä¾‹ç¼©æ”¾çš„ç‚¹å‡»çš„äº‹ä»¶.
    *
    * @param event the event
    * @return true, if successful
    * @see com.ab.view.chart.ITouchHandler#handleTouchControl(android.view.MotionEvent)
    * @author: zhaoqp
-   * @date£º2013-6-7 ÉÏÎç9:56:06
+   * @dateï¼š2013-6-7 ä¸Šåˆ9:56:06
    * @version v1.0
    */
   @Override
   public boolean handleTouchControl(MotionEvent event) {
     int action = event.getAction();
-    //ÅÐ¶ÏÊÇ·ñÎª±ÈÀýËõ·Å
+    //åˆ¤æ–­æ˜¯å¦ä¸ºæ¯”ä¾‹ç¼©æ”¾
     if (mRenderer != null && action == MotionEvent.ACTION_MOVE) {
       if (oldX >= 0 || oldY >= 0) {
     	  if (oldX >= 0 || oldY >= 0) {

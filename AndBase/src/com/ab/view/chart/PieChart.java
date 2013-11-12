@@ -126,13 +126,13 @@ public class PieChart extends RoundChart {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param screenPoint the screen point
    * @return the series and point for screen coordinate
    * @see com.ab.view.chart.AbstractChart#getSeriesAndPointForScreenCoordinate(com.ab.view.chart.Point)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:46
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:46
    * @version v1.0
    */
   public SeriesSelection getSeriesAndPointForScreenCoordinate(Point screenPoint) {

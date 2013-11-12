@@ -70,7 +70,7 @@ public class SlidingPlayViewActivity extends AbActivity {
 				View mPlayView = mInflater.inflate(R.layout.play_view_item, null);
 				ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
 				TextView mPlayText = (TextView) mPlayView.findViewById(R.id.mPlayText);
-				mPlayText.setText("ÕâÊÇµÚ"+mSlidingPlayView.getCount()+"¸ö");
+				mPlayText.setText("è¿™æ˜¯ç¬¬"+mSlidingPlayView.getCount()+"ä¸ª");
 				mPlayImage.setBackgroundResource(R.drawable.guide_pic2);
 				mSlidingPlayView.addView(mPlayView);
 			}
@@ -120,7 +120,7 @@ public class SlidingPlayViewActivity extends AbActivity {
 			
 			@Override
 			public void onClick(int position) {
-				showToast("µã»÷"+position);
+				showToast("ç‚¹å‡»"+position);
 			}
 		});
         
@@ -128,7 +128,7 @@ public class SlidingPlayViewActivity extends AbActivity {
 			
 			@Override
 			public void onChange(int position) {
-				showToast("¸Ä±ä"+position);
+				showToast("æ”¹å˜"+position);
 			}
 		});
         

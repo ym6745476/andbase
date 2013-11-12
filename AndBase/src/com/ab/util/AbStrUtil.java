@@ -25,19 +25,19 @@ import java.util.regex.Pattern;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º×Ö·û´®´¦ÀíÀà.
+ * æè¿°ï¼šå­—ç¬¦ä¸²å¤„ç†ç±».
  *
  * @author zhaoqp
- * @date£º2013-1-17 ÉÏÎç10:07:09
+ * @dateï¼š2013-1-17 ä¸Šåˆ10:07:09
  * @version v1.0
  */
 public final class AbStrUtil {
     
     /**
-     * ÃèÊö£º½«null×ª»¯Îª¡°¡±.
+     * æè¿°ï¼šå°†nullè½¬åŒ–ä¸ºâ€œâ€.
      *
-     * @param str Ö¸¶¨µÄ×Ö·û´®
-     * @return ×Ö·û´®µÄStringÀàĞÍ
+     * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+     * @return å­—ç¬¦ä¸²çš„Stringç±»å‹
      */
     public static String parseEmpty(String str) {
         if(str==null || "null".equals(str.trim())){
@@ -47,9 +47,9 @@ public final class AbStrUtil {
     }
     
     /**
-     * ÃèÊö£ºÅĞ¶ÏÒ»¸ö×Ö·û´®ÊÇ·ñÎªnull»ò¿ÕÖµ.
+     * æè¿°ï¼šåˆ¤æ–­ä¸€ä¸ªå­—ç¬¦ä¸²æ˜¯å¦ä¸ºnullæˆ–ç©ºå€¼.
      *
-     * @param str Ö¸¶¨µÄ×Ö·û´®
+     * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
      * @return true or false
      */
     public static boolean isEmpty(String str) {
@@ -57,20 +57,20 @@ public final class AbStrUtil {
     }
     
     /**
-     * »ñÈ¡×Ö·û´®ÖĞÎÄ×Ö·ûµÄ³¤¶È£¨Ã¿¸öÖĞÎÄËã2¸ö×Ö·û£©.
+     * è·å–å­—ç¬¦ä¸²ä¸­æ–‡å­—ç¬¦çš„é•¿åº¦ï¼ˆæ¯ä¸ªä¸­æ–‡ç®—2ä¸ªå­—ç¬¦ï¼‰.
      *
-     * @param str Ö¸¶¨µÄ×Ö·û´®
-     * @return ÖĞÎÄ×Ö·ûµÄ³¤¶È
+     * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+     * @return ä¸­æ–‡å­—ç¬¦çš„é•¿åº¦
      */
     public static int chineseLength(String str) {
         int valueLength = 0;
         String chinese = "[\u0391-\uFFE5]";
-        /* »ñÈ¡×Ö¶ÎÖµµÄ³¤¶È£¬Èç¹ûº¬ÖĞÎÄ×Ö·û£¬ÔòÃ¿¸öÖĞÎÄ×Ö·û³¤¶ÈÎª2£¬·ñÔòÎª1 */
+        /* è·å–å­—æ®µå€¼çš„é•¿åº¦ï¼Œå¦‚æœå«ä¸­æ–‡å­—ç¬¦ï¼Œåˆ™æ¯ä¸ªä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2ï¼Œå¦åˆ™ä¸º1 */
         if(!isEmpty(str)){
 	        for (int i = 0; i < str.length(); i++) {
-	            /* »ñÈ¡Ò»¸ö×Ö·û */
+	            /* è·å–ä¸€ä¸ªå­—ç¬¦ */
 	            String temp = str.substring(i, i + 1);
-	            /* ÅĞ¶ÏÊÇ·ñÎªÖĞÎÄ×Ö·û */
+	            /* åˆ¤æ–­æ˜¯å¦ä¸ºä¸­æ–‡å­—ç¬¦ */
 	            if (temp.matches(chinese)) {
 	                valueLength += 2;
 	            }
@@ -80,25 +80,25 @@ public final class AbStrUtil {
     }
     
     /**
-     * ÃèÊö£º»ñÈ¡×Ö·û´®µÄ³¤¶È.
+     * æè¿°ï¼šè·å–å­—ç¬¦ä¸²çš„é•¿åº¦.
      *
-     * @param str Ö¸¶¨µÄ×Ö·û´®
-     * @return  ×Ö·û´®µÄ³¤¶È£¨ÖĞÎÄ×Ö·û¼Æ2¸ö£©
+     * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+     * @return  å­—ç¬¦ä¸²çš„é•¿åº¦ï¼ˆä¸­æ–‡å­—ç¬¦è®¡2ä¸ªï¼‰
      */
      public static int strLength(String str) {
          int valueLength = 0;
          String chinese = "[\u0391-\uFFE5]";
          if(!isEmpty(str)){
-	         //»ñÈ¡×Ö¶ÎÖµµÄ³¤¶È£¬Èç¹ûº¬ÖĞÎÄ×Ö·û£¬ÔòÃ¿¸öÖĞÎÄ×Ö·û³¤¶ÈÎª2£¬·ñÔòÎª1
+	         //è·å–å­—æ®µå€¼çš„é•¿åº¦ï¼Œå¦‚æœå«ä¸­æ–‡å­—ç¬¦ï¼Œåˆ™æ¯ä¸ªä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2ï¼Œå¦åˆ™ä¸º1
 	         for (int i = 0; i < str.length(); i++) {
-	             //»ñÈ¡Ò»¸ö×Ö·û
+	             //è·å–ä¸€ä¸ªå­—ç¬¦
 	             String temp = str.substring(i, i + 1);
-	             //ÅĞ¶ÏÊÇ·ñÎªÖĞÎÄ×Ö·û
+	             //åˆ¤æ–­æ˜¯å¦ä¸ºä¸­æ–‡å­—ç¬¦
 	             if (temp.matches(chinese)) {
-	                 //ÖĞÎÄ×Ö·û³¤¶ÈÎª2
+	                 //ä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2
 	                 valueLength += 2;
 	             } else {
-	                 //ÆäËû×Ö·û³¤¶ÈÎª1
+	                 //å…¶ä»–å­—ç¬¦é•¿åº¦ä¸º1
 	                 valueLength += 1;
 	             }
 	         }
@@ -107,26 +107,26 @@ public final class AbStrUtil {
      }
      
      /**
-      * ÃèÊö£º»ñÈ¡Ö¸¶¨³¤¶ÈµÄ×Ö·ûËùÔÚÎ»ÖÃ.
+      * æè¿°ï¼šè·å–æŒ‡å®šé•¿åº¦çš„å­—ç¬¦æ‰€åœ¨ä½ç½®.
       *
-      * @param str Ö¸¶¨µÄ×Ö·û´®
-      * @param maxL ÒªÈ¡µ½µÄ³¤¶È£¨×Ö·û³¤¶È£¬ÖĞÎÄ×Ö·û¼Æ2¸ö£©
-      * @return ×Ö·ûµÄËùÔÚÎ»ÖÃ
+      * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+      * @param maxL è¦å–åˆ°çš„é•¿åº¦ï¼ˆå­—ç¬¦é•¿åº¦ï¼Œä¸­æ–‡å­—ç¬¦è®¡2ä¸ªï¼‰
+      * @return å­—ç¬¦çš„æ‰€åœ¨ä½ç½®
       */
      public static int subStringLength(String str,int maxL) {
     	 int currentIndex = 0;
          int valueLength = 0;
          String chinese = "[\u0391-\uFFE5]";
-         //»ñÈ¡×Ö¶ÎÖµµÄ³¤¶È£¬Èç¹ûº¬ÖĞÎÄ×Ö·û£¬ÔòÃ¿¸öÖĞÎÄ×Ö·û³¤¶ÈÎª2£¬·ñÔòÎª1
+         //è·å–å­—æ®µå€¼çš„é•¿åº¦ï¼Œå¦‚æœå«ä¸­æ–‡å­—ç¬¦ï¼Œåˆ™æ¯ä¸ªä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2ï¼Œå¦åˆ™ä¸º1
          for (int i = 0; i < str.length(); i++) {
-             //»ñÈ¡Ò»¸ö×Ö·û
+             //è·å–ä¸€ä¸ªå­—ç¬¦
              String temp = str.substring(i, i + 1);
-             //ÅĞ¶ÏÊÇ·ñÎªÖĞÎÄ×Ö·û
+             //åˆ¤æ–­æ˜¯å¦ä¸ºä¸­æ–‡å­—ç¬¦
              if (temp.matches(chinese)) {
-                 //ÖĞÎÄ×Ö·û³¤¶ÈÎª2
+                 //ä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2
                  valueLength += 2;
              } else {
-                 //ÆäËû×Ö·û³¤¶ÈÎª1
+                 //å…¶ä»–å­—ç¬¦é•¿åº¦ä¸º1
                  valueLength += 1;
              }
              if(valueLength >= maxL){
@@ -138,10 +138,10 @@ public final class AbStrUtil {
      }
      
     /**
-     * ÃèÊö£ºÊÖ»úºÅ¸ñÊ½ÑéÖ¤.
+     * æè¿°ï¼šæ‰‹æœºå·æ ¼å¼éªŒè¯.
      *
-     * @param str Ö¸¶¨µÄÊÖ»úºÅÂë×Ö·û´®
-     * @return ÊÇ·ñÎªÊÖ»úºÅÂë¸ñÊ½:ÊÇÎªtrue£¬·ñÔòfalse
+     * @param str æŒ‡å®šçš„æ‰‹æœºå·ç å­—ç¬¦ä¸²
+     * @return æ˜¯å¦ä¸ºæ‰‹æœºå·ç æ ¼å¼:æ˜¯ä¸ºtrueï¼Œå¦åˆ™false
      */
  	public static Boolean isMobileNo(String str) {
  		Boolean isMobileNo = false;
@@ -156,10 +156,10 @@ public final class AbStrUtil {
  	}
  	
  	/**
-	  * ÃèÊö£ºÊÇ·ñÖ»ÊÇ×ÖÄ¸ºÍÊı×Ö.
+	  * æè¿°ï¼šæ˜¯å¦åªæ˜¯å­—æ¯å’Œæ•°å­—.
 	  *
-	  * @param str Ö¸¶¨µÄ×Ö·û´®
-	  * @return ÊÇ·ñÖ»ÊÇ×ÖÄ¸ºÍÊı×Ö:ÊÇÎªtrue£¬·ñÔòfalse
+	  * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+	  * @return æ˜¯å¦åªæ˜¯å­—æ¯å’Œæ•°å­—:æ˜¯ä¸ºtrueï¼Œå¦åˆ™false
 	  */
  	public static Boolean isNumberLetter(String str) {
  		Boolean isNoLetter = false;
@@ -171,10 +171,10 @@ public final class AbStrUtil {
  	}
  	
  	/**
-	  * ÃèÊö£ºÊÇ·ñÖ»ÊÇÊı×Ö.
+	  * æè¿°ï¼šæ˜¯å¦åªæ˜¯æ•°å­—.
 	  *
-	  * @param str Ö¸¶¨µÄ×Ö·û´®
-	  * @return ÊÇ·ñÖ»ÊÇÊı×Ö:ÊÇÎªtrue£¬·ñÔòfalse
+	  * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+	  * @return æ˜¯å¦åªæ˜¯æ•°å­—:æ˜¯ä¸ºtrueï¼Œå¦åˆ™false
 	  */
  	public static Boolean isNumber(String str) {
  		Boolean isNumber = false;
@@ -186,10 +186,10 @@ public final class AbStrUtil {
  	}
  	
  	/**
-	  * ÃèÊö£ºÊÇ·ñÊÇÓÊÏä.
+	  * æè¿°ï¼šæ˜¯å¦æ˜¯é‚®ç®±.
 	  *
-	  * @param str Ö¸¶¨µÄ×Ö·û´®
-	  * @return ÊÇ·ñÊÇÓÊÏä:ÊÇÎªtrue£¬·ñÔòfalse
+	  * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+	  * @return æ˜¯å¦æ˜¯é‚®ç®±:æ˜¯ä¸ºtrueï¼Œå¦åˆ™false
 	  */
  	public static Boolean isEmail(String str) {
  		Boolean isEmail = false;
@@ -201,20 +201,20 @@ public final class AbStrUtil {
  	}
  	
  	/**
-	  * ÃèÊö£ºÊÇ·ñÊÇÖĞÎÄ.
+	  * æè¿°ï¼šæ˜¯å¦æ˜¯ä¸­æ–‡.
 	  *
-	  * @param str Ö¸¶¨µÄ×Ö·û´®
-	  * @return  ÊÇ·ñÊÇÖĞÎÄ:ÊÇÎªtrue£¬·ñÔòfalse
+	  * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+	  * @return  æ˜¯å¦æ˜¯ä¸­æ–‡:æ˜¯ä¸ºtrueï¼Œå¦åˆ™false
 	  */
     public static Boolean isChinese(String str) {
     	Boolean isChinese = true;
         String chinese = "[\u0391-\uFFE5]";
         if(!isEmpty(str)){
-	         //»ñÈ¡×Ö¶ÎÖµµÄ³¤¶È£¬Èç¹ûº¬ÖĞÎÄ×Ö·û£¬ÔòÃ¿¸öÖĞÎÄ×Ö·û³¤¶ÈÎª2£¬·ñÔòÎª1
+	         //è·å–å­—æ®µå€¼çš„é•¿åº¦ï¼Œå¦‚æœå«ä¸­æ–‡å­—ç¬¦ï¼Œåˆ™æ¯ä¸ªä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2ï¼Œå¦åˆ™ä¸º1
 	         for (int i = 0; i < str.length(); i++) {
-	             //»ñÈ¡Ò»¸ö×Ö·û
+	             //è·å–ä¸€ä¸ªå­—ç¬¦
 	             String temp = str.substring(i, i + 1);
-	             //ÅĞ¶ÏÊÇ·ñÎªÖĞÎÄ×Ö·û
+	             //åˆ¤æ–­æ˜¯å¦ä¸ºä¸­æ–‡å­—ç¬¦
 	             if (temp.matches(chinese)) {
 	             }else{
 	            	 isChinese = false;
@@ -225,20 +225,20 @@ public final class AbStrUtil {
     }
     
     /**
-     * ÃèÊö£ºÊÇ·ñ°üº¬ÖĞÎÄ.
+     * æè¿°ï¼šæ˜¯å¦åŒ…å«ä¸­æ–‡.
      *
-     * @param str Ö¸¶¨µÄ×Ö·û´®
-     * @return  ÊÇ·ñ°üº¬ÖĞÎÄ:ÊÇÎªtrue£¬·ñÔòfalse
+     * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+     * @return  æ˜¯å¦åŒ…å«ä¸­æ–‡:æ˜¯ä¸ºtrueï¼Œå¦åˆ™false
      */
     public static Boolean isContainChinese(String str) {
     	Boolean isChinese = false;
         String chinese = "[\u0391-\uFFE5]";
         if(!isEmpty(str)){
-	         //»ñÈ¡×Ö¶ÎÖµµÄ³¤¶È£¬Èç¹ûº¬ÖĞÎÄ×Ö·û£¬ÔòÃ¿¸öÖĞÎÄ×Ö·û³¤¶ÈÎª2£¬·ñÔòÎª1
+	         //è·å–å­—æ®µå€¼çš„é•¿åº¦ï¼Œå¦‚æœå«ä¸­æ–‡å­—ç¬¦ï¼Œåˆ™æ¯ä¸ªä¸­æ–‡å­—ç¬¦é•¿åº¦ä¸º2ï¼Œå¦åˆ™ä¸º1
 	         for (int i = 0; i < str.length(); i++) {
-	             //»ñÈ¡Ò»¸ö×Ö·û
+	             //è·å–ä¸€ä¸ªå­—ç¬¦
 	             String temp = str.substring(i, i + 1);
-	             //ÅĞ¶ÏÊÇ·ñÎªÖĞÎÄ×Ö·û
+	             //åˆ¤æ–­æ˜¯å¦ä¸ºä¸­æ–‡å­—ç¬¦
 	             if (temp.matches(chinese)) {
 	            	 isChinese = true;
 	             }else{
@@ -250,10 +250,10 @@ public final class AbStrUtil {
     }
  	
  	/**
-	  * ÃèÊö£º´ÓÊäÈëÁ÷ÖĞ»ñµÃString.
+	  * æè¿°ï¼šä»è¾“å…¥æµä¸­è·å¾—String.
 	  *
-	  * @param is ÊäÈëÁ÷
-	  * @return »ñµÃµÄString
+	  * @param is è¾“å…¥æµ
+	  * @return è·å¾—çš„String
 	  */
  	public static String convertStreamToString(InputStream is) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
@@ -264,7 +264,7 @@ public final class AbStrUtil {
 				sb.append(line + "\n");
 			}
 			
-			//×îºóÒ»¸ö\nÉ¾³ı
+			//æœ€åä¸€ä¸ª\nåˆ é™¤
 			if(sb.indexOf("\n")!=-1 && sb.lastIndexOf("\n") == sb.length()-1){
 				sb.delete(sb.lastIndexOf("\n"), sb.lastIndexOf("\n")+1);
 			}
@@ -282,10 +282,10 @@ public final class AbStrUtil {
 	}
  	
  	/**
-	  * ÃèÊö£º±ê×¼»¯ÈÕÆÚÊ±¼äÀàĞÍµÄÊı¾İ£¬²»×ãÁ½Î»µÄ²¹0.
+	  * æè¿°ï¼šæ ‡å‡†åŒ–æ—¥æœŸæ—¶é—´ç±»å‹çš„æ•°æ®ï¼Œä¸è¶³ä¸¤ä½çš„è¡¥0.
 	  *
-	  * @param dateTime Ô¤¸ñÊ½µÄÊ±¼ä×Ö·û´®£¬Èç:2012-3-2 12:2:20
-	  * @return String ¸ñÊ½»¯ºÃµÄÊ±¼ä×Ö·û´®£¬Èç:2012-03-20 12:02:20
+	  * @param dateTime é¢„æ ¼å¼çš„æ—¶é—´å­—ç¬¦ä¸²ï¼Œå¦‚:2012-3-2 12:2:20
+	  * @return String æ ¼å¼åŒ–å¥½çš„æ—¶é—´å­—ç¬¦ä¸²ï¼Œå¦‚:2012-03-20 12:02:20
 	  */
  	public static String dateTimeFormat(String dateTime) {
 		StringBuilder sb = new StringBuilder();
@@ -326,10 +326,10 @@ public final class AbStrUtil {
 	}
  	
  	/**
-	  * ÃèÊö£º²»×ã2¸ö×Ö·ûµÄÔÚÇ°Ãæ²¹¡°0¡±.
+	  * æè¿°ï¼šä¸è¶³2ä¸ªå­—ç¬¦çš„åœ¨å‰é¢è¡¥â€œ0â€.
 	  *
-	  * @param str Ö¸¶¨µÄ×Ö·û´®
-	  * @return ÖÁÉÙ2¸ö×Ö·ûµÄ×Ö·û´®
+	  * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+	  * @return è‡³å°‘2ä¸ªå­—ç¬¦çš„å­—ç¬¦ä¸²
 	  */
     public static String strFormat2(String str) {
 		try {
@@ -343,23 +343,23 @@ public final class AbStrUtil {
 	}
     
     /**
-     * ÃèÊö£º½ØÈ¡×Ö·û´®µ½Ö¸¶¨×Ö½Ú³¤¶È.
+     * æè¿°ï¼šæˆªå–å­—ç¬¦ä¸²åˆ°æŒ‡å®šå­—èŠ‚é•¿åº¦.
      *
      * @param str the str
-     * @param length Ö¸¶¨×Ö½Ú³¤¶È
-     * @return ½ØÈ¡ºóµÄ×Ö·û´®
+     * @param length æŒ‡å®šå­—èŠ‚é•¿åº¦
+     * @return æˆªå–åçš„å­—ç¬¦ä¸²
      */
     public static String cutString(String str,int length){
 		return cutString(str, length,"");
 	}
     
     /**
-     * ÃèÊö£º½ØÈ¡×Ö·û´®µ½Ö¸¶¨×Ö½Ú³¤¶È.
+     * æè¿°ï¼šæˆªå–å­—ç¬¦ä¸²åˆ°æŒ‡å®šå­—èŠ‚é•¿åº¦.
      *
-     * @param str ÎÄ±¾
-     * @param length ×Ö½Ú³¤¶È
-     * @param dot Ê¡ÂÔ·ûºÅ
-     * @return ½ØÈ¡ºóµÄ×Ö·û´®
+     * @param str æ–‡æœ¬
+     * @param length å­—èŠ‚é•¿åº¦
+     * @param dot çœç•¥ç¬¦å·
+     * @return æˆªå–åçš„å­—ç¬¦ä¸²
      */
 	public static String cutString(String str,int length,String dot){
 		int strBLen = strlen(str,"GBK");
@@ -387,12 +387,12 @@ public final class AbStrUtil {
     }
 	
 	/**
-	 * ÃèÊö£º½ØÈ¡×Ö·û´®´ÓµÚÒ»¸öÖ¸¶¨×Ö·û.
+	 * æè¿°ï¼šæˆªå–å­—ç¬¦ä¸²ä»ç¬¬ä¸€ä¸ªæŒ‡å®šå­—ç¬¦.
 	 *
-	 * @param str1 Ô­ÎÄ±¾
-	 * @param str2 Ö¸¶¨×Ö·û
-	 * @param offset Æ«ÒÆµÄË÷Òı
-	 * @return ½ØÈ¡ºóµÄ×Ö·û´®
+	 * @param str1 åŸæ–‡æœ¬
+	 * @param str2 æŒ‡å®šå­—ç¬¦
+	 * @param offset åç§»çš„ç´¢å¼•
+	 * @return æˆªå–åçš„å­—ç¬¦ä¸²
 	 */
 	public static String cutStringFromChar(String str1,String str2,int offset){
 		if(isEmpty(str1)){
@@ -408,10 +408,10 @@ public final class AbStrUtil {
     }
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡×Ö½Ú³¤¶È.
+	 * æè¿°ï¼šè·å–å­—èŠ‚é•¿åº¦.
 	 *
-	 * @param str ÎÄ±¾
-	 * @param charset ×Ö·û¼¯£¨GBK£©
+	 * @param str æ–‡æœ¬
+	 * @param charset å­—ç¬¦é›†ï¼ˆGBKï¼‰
 	 * @return the int
 	 */
 	public static int strlen(String str,String charset){
@@ -428,10 +428,10 @@ public final class AbStrUtil {
 	}
     
 	/**
-	 * »ñÈ¡´óĞ¡µÄÃèÊö.
+	 * è·å–å¤§å°çš„æè¿°.
 	 *
-	 * @param size ×Ö½Ú¸öÊı
-	 * @return  ´óĞ¡µÄÃèÊö
+	 * @param size å­—èŠ‚ä¸ªæ•°
+	 * @return  å¤§å°çš„æè¿°
 	 */
     public static String getSizeDesc(long size) {
 	   	 String suffix = "B";
@@ -453,7 +453,7 @@ public final class AbStrUtil {
     }
     
     /**
-     * ÃèÊö£ºipµØÖ·×ª»»Îª10½øÖÆÊı.
+     * æè¿°ï¼šipåœ°å€è½¬æ¢ä¸º10è¿›åˆ¶æ•°.
      *
      * @param ip the ip
      * @return the long

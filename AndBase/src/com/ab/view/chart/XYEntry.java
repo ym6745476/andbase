@@ -44,12 +44,12 @@ public class XYEntry<K, V> implements Entry<K, V> {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @return the key
    * @see java.util.Map.Entry#getKey()
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:49
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:49
    * @version v1.0
    */
   public K getKey() {
@@ -57,12 +57,12 @@ public class XYEntry<K, V> implements Entry<K, V> {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @return the value
    * @see java.util.Map.Entry#getValue()
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:49
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:49
    * @version v1.0
    */
   public V getValue() {
@@ -70,13 +70,13 @@ public class XYEntry<K, V> implements Entry<K, V> {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param object the object
    * @return the v
    * @see java.util.Map.Entry#setValue(java.lang.Object)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:49
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:49
    * @version v1.0
    */
   public V setValue(V object) {

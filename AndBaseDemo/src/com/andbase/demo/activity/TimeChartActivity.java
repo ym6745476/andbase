@@ -23,9 +23,9 @@ import com.andbase.R;
 import com.andbase.global.MyApplication;
 
 /**
- * Copyright (c) 2011 All rights reserved¡£
- * Ãû³Æ£ºXYLineChartActivity
- * ÃèÊö£ºÏßÍ¼
+ * Copyright (c) 2011 All rights reservedã€‚
+ * åç§°ï¼šXYLineChartActivity
+ * æè¿°ï¼šçº¿å›¾
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -53,10 +53,10 @@ public class TimeChartActivity extends AbActivity {
 	    
         application = (MyApplication)abApplication;
         
-    	//ÒªÏÔÊ¾Í¼ĞÎµÄView
+    	//è¦æ˜¾ç¤ºå›¾å½¢çš„View
 		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.chart01);
-		//ËµÃ÷ÎÄ×Ö
-		String[] titles = new String[] { "µÚÒ»ÌõÏß", "µÚ¶şÌõÏß" };
+		//è¯´æ˜æ–‡å­—
+		String[] titles = new String[] { "ç¬¬ä¸€æ¡çº¿", "ç¬¬äºŒæ¡çº¿" };
 		
 		List<Date[]> x = new ArrayList<Date[]>();
 		List<double[]> values = new ArrayList<double[]>();
@@ -90,40 +90,40 @@ public class TimeChartActivity extends AbActivity {
 			  
 		      renderer.addSeriesRenderer(r);
 	    }
-	    //µãµÄ´óĞ¡
+	    //ç‚¹çš„å¤§å°
 	    renderer.setPointSize(2f);
-	    //×ø±êÖá±êÌâÎÄ×Ö´óĞ¡
+	    //åæ ‡è½´æ ‡é¢˜æ–‡å­—å¤§å°
   		renderer.setAxisTitleTextSize(16);
-  		//Í¼ĞÎ±êÌâÎÄ×Ö´óĞ¡
+  		//å›¾å½¢æ ‡é¢˜æ–‡å­—å¤§å°
   		renderer.setChartTitleTextSize(25);
-  		//ÖáÏßÉÏ±êÇ©ÎÄ×Ö´óĞ¡
+  		//è½´çº¿ä¸Šæ ‡ç­¾æ–‡å­—å¤§å°
   		renderer.setLabelsTextSize(15);
-  		//ËµÃ÷ÎÄ×Ö´óĞ¡
+  		//è¯´æ˜æ–‡å­—å¤§å°
   		renderer.setLegendTextSize(15);
-	    //Í¼±í±êÌâ
-	    renderer.setChartTitle("ÎÒÊÇÍ¼±íµÄ±êÌâ");
-	    //XÖá±êÌâ
-	    renderer.setXTitle("XÖá");
-	    //YÖá±êÌâ
-	    renderer.setYTitle("YÖá");
-	    //XÖá×îĞ¡×ø±êµã
+	    //å›¾è¡¨æ ‡é¢˜
+	    renderer.setChartTitle("æˆ‘æ˜¯å›¾è¡¨çš„æ ‡é¢˜");
+	    //Xè½´æ ‡é¢˜
+	    renderer.setXTitle("Xè½´");
+	    //Yè½´æ ‡é¢˜
+	    renderer.setYTitle("Yè½´");
+	    //Xè½´æœ€å°åæ ‡ç‚¹
 	    renderer.setXAxisMin(x.get(0)[0].getTime());
-	    //XÖá×î´ó×ø±êµã
+	    //Xè½´æœ€å¤§åæ ‡ç‚¹
 	    renderer.setXAxisMax(x.get(0)[HOURS - 1].getTime());
-	    //YÖá×îĞ¡×ø±êµã
+	    //Yè½´æœ€å°åæ ‡ç‚¹
 	    renderer.setYAxisMin(-5);
-	    //YÖá×î´ó×ø±êµã
+	    //Yè½´æœ€å¤§åæ ‡ç‚¹
 	    renderer.setYAxisMax(30);
-	    //×ø±êÖáÑÕÉ«
+	    //åæ ‡è½´é¢œè‰²
 	    renderer.setAxesColor(Color.rgb(51, 181, 229));
 	    renderer.setXLabelsColor(Color.rgb(51, 181, 229));
 	    renderer.setYLabelsColor(0,Color.rgb(51, 181, 229));
-	    //ÉèÖÃÍ¼±íÉÏ±êÌâÓëXÖáÓëYÖáµÄËµÃ÷ÎÄ×ÖÑÕÉ«
+	    //è®¾ç½®å›¾è¡¨ä¸Šæ ‡é¢˜ä¸Xè½´ä¸Yè½´çš„è¯´æ˜æ–‡å­—é¢œè‰²
 	    renderer.setLabelsColor(Color.GRAY);
 	    //renderer.setGridColor(Color.GRAY);
-	    //ÉèÖÃ×ÖÌå¼Ó´Ö
+	    //è®¾ç½®å­—ä½“åŠ ç²—
 		renderer.setTextTypeface("sans_serif", Typeface.BOLD);
-		//ÉèÖÃÔÚÍ¼±íÉÏÊÇ·ñÏÔÊ¾Öµ±êÇ©
+		//è®¾ç½®åœ¨å›¾è¡¨ä¸Šæ˜¯å¦æ˜¾ç¤ºå€¼æ ‡ç­¾
 	    renderer.getSeriesRendererAt(0).setDisplayChartValues(true);
 	    renderer.getSeriesRendererAt(1).setDisplayChartValues(true);
 	    renderer.setMargins(new int[] { 20, 30, 15, 20 });
@@ -133,7 +133,7 @@ public class TimeChartActivity extends AbActivity {
 	    renderer.setXLabelsAlign(Align.CENTER);
 	    renderer.setYLabelsAlign(Align.RIGHT);
 	    
-	    // ´´½¨äÖÈ¾Æ÷Êı¾İÌî³äÆ÷
+	    // åˆ›å»ºæ¸²æŸ“å™¨æ•°æ®å¡«å……å™¨
 		XYMultipleSeriesDataset mXYMultipleSeriesDataset = new XYMultipleSeriesDataset();
 	    for (int i = 0; i < length; i++) {
 		      TimeSeries series = new TimeSeries(titles[i]);
@@ -146,7 +146,7 @@ public class TimeChartActivity extends AbActivity {
 		      mXYMultipleSeriesDataset.addSeries(series);
 	    }
 	    
-	    //Y¿Ì¶È±êÇ©Ïà¶ÔYÖáÎ»ÖÃ
+	    //Yåˆ»åº¦æ ‡ç­¾ç›¸å¯¹Yè½´ä½ç½®
 	    renderer.setYLabelsAlign(Align.LEFT);
 	    renderer.setPanEnabled(true, true);
 	    renderer.setZoomEnabled(true);
@@ -154,19 +154,19 @@ public class TimeChartActivity extends AbActivity {
 	    renderer.setZoomRate(1.1f);
 	    renderer.setBarSpacing(0.5f);
 	    
-	    //±ê³ß¿ªÆô
+	    //æ ‡å°ºå¼€å¯
 	    renderer.setScaleLineEnabled(true);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò¸ß
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†é«˜
 	    renderer.setScaleRectHeight(60);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò¿í
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†å®½
 	    renderer.setScaleRectWidth(150);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò±³¾°É«
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†èƒŒæ™¯è‰²
 	    renderer.setScaleRectColor(Color.argb(150, 52, 182, 232));
 	    renderer.setScaleLineColor(Color.argb(175, 150, 150, 150));
 	    renderer.setScaleCircleRadius(35);
-	    //µÚÒ»ĞĞÎÄ×ÖµÄ´óĞ¡
+	    //ç¬¬ä¸€è¡Œæ–‡å­—çš„å¤§å°
 	    renderer.setExplainTextSize1(20);
-	    //µÚ¶şĞĞÎÄ×ÖµÄ´óĞ¡
+	    //ç¬¬äºŒè¡Œæ–‡å­—çš„å¤§å°
 	    renderer.setExplainTextSize2(20);
 	    
 	    
@@ -175,12 +175,12 @@ public class TimeChartActivity extends AbActivity {
 		int[] colorsLimit = new int[] { Color.rgb(221, 241,248),Color.rgb(221, 241,248),Color.rgb(233, 242,222),Color.rgb(233, 242,222) };
 		renderer.setmYLimitsLineColor(colorsLimit);
 	    
-	    //±³¾°
+	    //èƒŒæ™¯
 	    renderer.setApplyBackgroundColor(true);
 	    renderer.setBackgroundColor(Color.rgb(222, 222, 200));
 	    renderer.setMarginsColor(Color.rgb(222, 222, 200));
 	    
-	    //ÏßÍ¼
+	    //çº¿å›¾
 	    View chart = ChartFactory.getTimeChartView(this,mXYMultipleSeriesDataset,renderer,"MM-dd HH:mm");
         linearLayout.addView(chart);
 		

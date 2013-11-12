@@ -30,10 +30,10 @@ public class CategorySeries implements Serializable {
   private List<String> mCategories = new ArrayList<String>();
   /** The series values. */
   private List<Double> mValues = new ArrayList<Double>();
-  /** Ã¿¸öµãµÄÑÕÉ«. */
+  /** æ¯ä¸ªç‚¹çš„é¢œè‰². */
   private List<Integer> mColors = new ArrayList<Integer>();
   
-  /** Ã¿¸öÊı¾İµãµÄ¼òÒª ËµÃ÷. */
+  /** æ¯ä¸ªæ•°æ®ç‚¹çš„ç®€è¦ è¯´æ˜. */
   List<String> mExplains = new ArrayList<String>();
   /**
    * Builds a new category series.
@@ -63,7 +63,7 @@ public class CategorySeries implements Serializable {
   }
   
   /**
-   * Ôö¼ÓÒ»¸öĞÂµÄµãÒÔ¼°ÑÕÉ«Öµ.
+   * å¢åŠ ä¸€ä¸ªæ–°çš„ç‚¹ä»¥åŠé¢œè‰²å€¼.
    *
    * @param value the new value
    * @param color the new color
@@ -73,7 +73,7 @@ public class CategorySeries implements Serializable {
   }
   
   /**
-   * Ôö¼ÓÒ»¸öĞÂµÄµãÒÔ¼°ÑÕÉ«Öµ,ÒÔ¼°ÑÕÉ«,ÎÄ×ÖËµÃ÷.
+   * å¢åŠ ä¸€ä¸ªæ–°çš„ç‚¹ä»¥åŠé¢œè‰²å€¼,ä»¥åŠé¢œè‰²,æ–‡å­—è¯´æ˜.
    *
    * @param value the new value
    * @param color the new color
@@ -94,7 +94,7 @@ public class CategorySeries implements Serializable {
   }
   
   /**
-   * Adds a new value to the series. ÒÔ¼°ÑÕÉ«
+   * Adds a new value to the series. ä»¥åŠé¢œè‰²
    * @param category the category
    * @param value the new value
    * @param color the new color
@@ -106,7 +106,7 @@ public class CategorySeries implements Serializable {
   }
   
   /**
-   * Adds a new value to the series. ÒÔ¼°ÑÕÉ«,ÎÄ×ÖËµÃ÷
+   * Adds a new value to the series. ä»¥åŠé¢œè‰²,æ–‡å­—è¯´æ˜
    *
    * @param category the category
    * @param value the new value
@@ -171,7 +171,7 @@ public class CategorySeries implements Serializable {
   }
   
   /**
-   * ÃèÊö£º»ñÈ¡µãÑÕÉ«Êı×é.
+   * æè¿°ï¼šè·å–ç‚¹é¢œè‰²æ•°ç»„.
    *
    * @return the colors
    */
@@ -180,7 +180,7 @@ public class CategorySeries implements Serializable {
   }
   
   /**
-   * ÃèÊö£º»ñÈ¡µãËµÃ÷.
+   * æè¿°ï¼šè·å–ç‚¹è¯´æ˜.
    *
    * @return the explains
    */
@@ -205,7 +205,7 @@ public class CategorySeries implements Serializable {
     XYSeries xySeries = new XYSeries(mTitle);
     for (int i=0;i<mValues.size();i++) {
       double value = mValues.get(i);
-      //×ø±ê£¬ÑÕÉ«£¬ÎÄ×Ö
+      //åæ ‡ï¼Œé¢œè‰²ï¼Œæ–‡å­—
       xySeries.add(i+1, value,mColors.get(i),mExplains.get(i));
     }
     return xySeries;

@@ -58,7 +58,7 @@ public class PullToRefreshGridActivity extends AbActivity {
 		application = (MyApplication) this.getApplication();
 		mAbPullGridView = (AbPullGridView)findViewById(R.id.mPhotoGridView);
 		
-		//¿ª¹ØÄ¬ÈÏ´ò¿ª
+		//å¼€å…³é»˜è®¤æ‰“å¼€
         mAbPullGridView.setPullRefreshEnable(true); 
         mAbPullGridView.setPullLoadEnable(true);
 		
@@ -68,26 +68,26 @@ public class PullToRefreshGridActivity extends AbActivity {
 		mGridView.setHorizontalSpacing(5);
 		
 		//Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade);
-	    //µÃµ½Ò»¸öLayoutAnimationController¶ÔÏó;
+	    //å¾—åˆ°ä¸€ä¸ªLayoutAnimationControllerå¯¹è±¡;
 	    //LayoutAnimationController lac = new LayoutAnimationController(animation);
 		//mGridView.setLayoutAnimation(lac);
 		/*AlphaAnimation animationAlpha = new AlphaAnimation(0.0f,1.0f);  
-	    //µÃµ½Ò»¸öLayoutAnimationController¶ÔÏó;
+	    //å¾—åˆ°ä¸€ä¸ªLayoutAnimationControllerå¯¹è±¡;
 	    LayoutAnimationController lac = new LayoutAnimationController(animationAlpha);
-	    //ÉèÖÃ¿Ø¼şÏÔÊ¾µÄË³Ğò;
+	    //è®¾ç½®æ§ä»¶æ˜¾ç¤ºçš„é¡ºåº;
 	    lac.setOrder(LayoutAnimationController.ORDER_RANDOM);
-	    //ÉèÖÃ¿Ø¼şÏÔÊ¾¼ä¸ôÊ±¼ä;
+	    //è®¾ç½®æ§ä»¶æ˜¾ç¤ºé—´éš”æ—¶é—´;
 	    lac.setDelay(0.5f);
-	    //ÎªViewÉèÖÃLayoutAnimationControllerÊôĞÔ;
+	    //ä¸ºViewè®¾ç½®LayoutAnimationControllerå±æ€§;
 		mGridView.setLayoutAnimation(lac);*/
 
 		mGridView.setNumColumns(GridView.AUTO_FIT);
 		mGridView.setPadding(5, 5, 5, 5);
 		mGridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
 		mGridView.setVerticalSpacing(5);
-		// ListViewÊı¾İ
+		// ListViewæ•°æ®
 		mUserList = new ArrayList<User>();
-		// Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+		// ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
 		myGridViewAdapter = new ImageGridAdapter(this, mUserList,
 				R.layout.photo_grid_items, new String[] { "itemsIcon" },
 				new int[] { R.id.itemsIcon });
@@ -95,7 +95,7 @@ public class PullToRefreshGridActivity extends AbActivity {
 		
 		showProgressDialog();
 		
-    	//¶¨ÒåÁ½ÖÖ²éÑ¯µÄÊÂ¼ş
+    	//å®šä¹‰ä¸¤ç§æŸ¥è¯¢çš„äº‹ä»¶
     	final AbTaskItem item1 = new AbTaskItem();
 		item1.callback = new AbTaskCallback() {
 
@@ -140,7 +140,7 @@ public class PullToRefreshGridActivity extends AbActivity {
                 	mNewUserList.clear();
                 	mAbPullGridView.stopLoadMore(true);
                 }else{
-                	//Ã»ÓĞĞÂÊı¾İÁË
+                	//æ²¡æœ‰æ–°æ•°æ®äº†
                 	mAbPullGridView.stopLoadMore(false);
                 }
 				
@@ -165,12 +165,12 @@ public class PullToRefreshGridActivity extends AbActivity {
 	   		   
 		  };
 		};
-		//ÉèÖÃÁ½ÖÖ²éÑ¯µÄÊÂ¼ş
+		//è®¾ç½®ä¸¤ç§æŸ¥è¯¢çš„äº‹ä»¶
 		mAbPullGridView.setAbOnListViewListener(new AbOnListViewListener() {
 			
 			@Override
 			public void onRefresh() {
-				//µÚÒ»´ÎÏÂÔØÊı¾İ
+				//ç¬¬ä¸€æ¬¡ä¸‹è½½æ•°æ®
 				mAbTaskQueue.execute(item1);
 			}
 			
@@ -180,7 +180,7 @@ public class PullToRefreshGridActivity extends AbActivity {
 			}
 		});
 		
-    	//µÚÒ»´ÎÏÂÔØÊı¾İ
+    	//ç¬¬ä¸€æ¬¡ä¸‹è½½æ•°æ®
 		mAbTaskQueue.execute(item1);
 		
 		mAbPullGridView.getGridView().setOnItemClickListener(new OnItemClickListener(){

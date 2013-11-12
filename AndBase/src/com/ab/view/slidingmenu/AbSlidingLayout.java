@@ -27,10 +27,10 @@ import android.widget.Scroller;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º²à±ßÀ¸ÊµÏÖ.
+ * æè¿°ï¼šä¾§è¾¹æ å®ç°.
  *
  * @author zhaoqp
- * @date£º2013-4-24 ÏÂÎç3:46:47
+ * @dateï¼š2013-4-24 ä¸‹åˆ3:46:47
  * @version v1.0
  */
 public class AbSlidingLayout extends ViewGroup {
@@ -111,7 +111,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * ÃèÊö£ºViewµÄÎ»ÖÃÉè¶¨.
+	 * æè¿°ï¼šViewçš„ä½ç½®è®¾å®š.
 	 *
 	 * @param changed the changed
 	 * @param l the l
@@ -120,7 +120,7 @@ public class AbSlidingLayout extends ViewGroup {
 	 * @param b the b
 	 * @see android.view.ViewGroup#onLayout(boolean, int, int, int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:51
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
 	 * @version v1.0
 	 */
 	@Override
@@ -134,13 +134,13 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * ÃèÊö£º²âÁ¿ViewµÄ¿í¸ß.
+	 * æè¿°ï¼šæµ‹é‡Viewçš„å®½é«˜.
 	 *
 	 * @param widthMeasureSpec the width measure spec
 	 * @param heightMeasureSpec the height measure spec
 	 * @see android.view.View#onMeasure(int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:51
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
 	 * @version v1.0
 	 */
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -154,7 +154,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * ÃèÊö£ºÖ´ĞĞ´¥ÃşÊÂ¼ş.
+	 * æè¿°ï¼šæ‰§è¡Œè§¦æ‘¸äº‹ä»¶.
 	 *
 	 * @param ev the ev
 	 * @return true, if successful
@@ -202,7 +202,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * ÃèÊö£ºÀ¹½ØµÄ´¥ÃşÊÂ¼ş.
+	 * æè¿°ï¼šæ‹¦æˆªçš„è§¦æ‘¸äº‹ä»¶.
 	 *
 	 * @param ev the ev
 	 * @return true, if successful
@@ -237,7 +237,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * ÃèÊö£º´¥ÃşÊÂ¼ş.
+	 * æè¿°ï¼šè§¦æ‘¸äº‹ä»¶.
 	 *
 	 * @param event the event
 	 * @return true, if successful
@@ -307,7 +307,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * ÃèÊö£º¹ö¶¯.
+	 * æè¿°ï¼šæ»šåŠ¨.
 	 *
 	 * @see android.view.View#computeScroll()
 	 */

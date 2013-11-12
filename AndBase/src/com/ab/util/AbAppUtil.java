@@ -44,10 +44,10 @@ import com.ab.global.AbAppData;
 public class AbAppUtil {
 
 	/**
-	 * ÃèÊö£º´ò¿ª²¢°²×°ÎÄ¼ş.
+	 * æè¿°ï¼šæ‰“å¼€å¹¶å®‰è£…æ–‡ä»¶.
 	 *
 	 * @param context the context
-	 * @param file apkÎÄ¼şÂ·¾¶
+	 * @param file apkæ–‡ä»¶è·¯å¾„
 	 */
 	public static void installApk(Context context, File file) {
 		Intent intent = new Intent();
@@ -59,10 +59,10 @@ public class AbAppUtil {
 	}
 	
 	/**
-	 * ÃèÊö£ºĞ¶ÔØ³ÌĞò.
+	 * æè¿°ï¼šå¸è½½ç¨‹åº.
 	 *
 	 * @param context the context
-	 * @param packageName °üÃû
+	 * @param packageName åŒ…å
 	 */
 	public static void uninstallApk(Context context,String packageName) {
 		Intent intent = new Intent(Intent.ACTION_DELETE);
@@ -73,11 +73,11 @@ public class AbAppUtil {
 
 
 	/**
-	 * ÓÃÀ´ÅĞ¶Ï·şÎñÊÇ·ñÔËĞĞ.
+	 * ç”¨æ¥åˆ¤æ–­æœåŠ¡æ˜¯å¦è¿è¡Œ.
 	 *
 	 * @param ctx the ctx
-	 * @param className ÅĞ¶ÏµÄ·şÎñÃû×Ö "com.xxx.xx..XXXService"
-	 * @return true ÔÚÔËĞĞ false ²»ÔÚÔËĞĞ
+	 * @param className åˆ¤æ–­çš„æœåŠ¡åå­— "com.xxx.xx..XXXService"
+	 * @return true åœ¨è¿è¡Œ false ä¸åœ¨è¿è¡Œ
 	 */
 	public static boolean isServiceRunning(Context ctx, String className) {
 		boolean isRunning = false;
@@ -94,7 +94,7 @@ public class AbAppUtil {
 	}
 
 	/**
-	 * Í£Ö¹·şÎñ.
+	 * åœæ­¢æœåŠ¡.
 	 *
 	 * @param ctx the ctx
 	 * @param className the class name
@@ -147,7 +147,7 @@ public class AbAppUtil {
 	
 	
 	/**
-	 * ÃèÊö£ºÅĞ¶ÏÍøÂçÊÇ·ñÓĞĞ§.
+	 * æè¿°ï¼šåˆ¤æ–­ç½‘ç»œæ˜¯å¦æœ‰æ•ˆ.
 	 *
 	 * @param context the context
 	 * @return true, if is network available
@@ -171,8 +171,8 @@ public class AbAppUtil {
 	}
 	
 	/**
-	 * GpsÊÇ·ñ´ò¿ª
-	 * ĞèÒª<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />È¨ÏŞ
+	 * Gpsæ˜¯å¦æ‰“å¼€
+	 * éœ€è¦<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />æƒé™
 	 *
 	 * @param context the context
 	 * @return true, if is gps enabled
@@ -183,7 +183,7 @@ public class AbAppUtil {
 	}
 
 	/**
-	 * wifiÊÇ·ñ´ò¿ª.
+	 * wifiæ˜¯å¦æ‰“å¼€.
 	 *
 	 * @param context the context
 	 * @return true, if is wifi enabled
@@ -199,7 +199,7 @@ public class AbAppUtil {
 	}
 
 	/**
-	 * ÅĞ¶Ïµ±Ç°ÍøÂçÊÇ·ñÊÇwifiÍøÂç.
+	 * åˆ¤æ–­å½“å‰ç½‘ç»œæ˜¯å¦æ˜¯wifiç½‘ç»œ.
 	 *
 	 * @param context the context
 	 * @return boolean
@@ -216,7 +216,7 @@ public class AbAppUtil {
 	}
 
 	/**
-	 * ÅĞ¶Ïµ±Ç°ÍøÂçÊÇ·ñÊÇ3GÍøÂç.
+	 * åˆ¤æ–­å½“å‰ç½‘ç»œæ˜¯å¦æ˜¯3Gç½‘ç»œ.
 	 *
 	 * @param context the context
 	 * @return boolean
@@ -233,7 +233,7 @@ public class AbAppUtil {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÎªµ÷ÊÔÄ£Ê½.
+	 * æè¿°ï¼šè®¾ç½®ä¸ºè°ƒè¯•æ¨¡å¼.
 	 *
 	 * @param debug the new debug
 	 */
@@ -243,7 +243,7 @@ public class AbAppUtil {
 	
 	
 	/**
-     * ÃèÊö£º¼ÇÂ¼µ±Ç°Ê±¼äºÁÃë
+     * æè¿°ï¼šè®°å½•å½“å‰æ—¶é—´æ¯«ç§’
      * @throws 
      */
 	public static void prepareStartTime() {
@@ -253,10 +253,10 @@ public class AbAppUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£º´òÓ¡Õâ´ÎµÄÖ´ĞĞÊ±¼äºÁÃë£¬ĞèÒªÊ×ÏÈµ÷ÓÃlogStartTime()
-	 * @param D  ÈÕÖ¾¿ª¹Ø±ê¼Ç
-	 * @param tag ±ê¼Ç
-	 * @param msg ÃèÊö
+	 * æè¿°ï¼šæ‰“å°è¿™æ¬¡çš„æ‰§è¡Œæ—¶é—´æ¯«ç§’ï¼Œéœ€è¦é¦–å…ˆè°ƒç”¨logStartTime()
+	 * @param D  æ—¥å¿—å¼€å…³æ ‡è®°
+	 * @param tag æ ‡è®°
+	 * @param msg æè¿°
 	 */
 	public static void logEndTime(boolean D,String tag, String msg) {
 		Calendar current = Calendar.getInstance();
@@ -265,7 +265,7 @@ public class AbAppUtil {
 	}
 	
 	/**
-     * µ¼ÈëÊı¾İ¿â
+     * å¯¼å…¥æ•°æ®åº“
      * @param context
      * @param dbfile
      * @return
@@ -279,9 +279,9 @@ public class AbAppUtil {
 		try {
 			String dbPath = "/data/data/"+context.getPackageName()+"/databases/"+dbName; 
 			File dbfile = new File(dbPath);
-			//ÅĞ¶ÏÊı¾İ¿âÎÄ¼şÊÇ·ñ´æÔÚ£¬Èô²»´æÔÚÔòÖ´ĞĞµ¼Èë£¬·ñÔòÖ±½Ó´ò¿ªÊı¾İ¿â
+			//åˆ¤æ–­æ•°æ®åº“æ–‡ä»¶æ˜¯å¦å­˜åœ¨ï¼Œè‹¥ä¸å­˜åœ¨åˆ™æ‰§è¡Œå¯¼å…¥ï¼Œå¦åˆ™ç›´æ¥æ‰“å¼€æ•°æ®åº“
 			if (!dbfile.exists()) {
-				//Óûµ¼ÈëµÄÊı¾İ¿â
+				//æ¬²å¯¼å…¥çš„æ•°æ®åº“
 				if(!dbfile.getParentFile().exists()){
 					dbfile.getParentFile().mkdirs();
 				}

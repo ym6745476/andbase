@@ -43,7 +43,7 @@ public class TimeSeries extends XYSeries {
   }
   
   /**
-   * ÃèÊö£ºÔö¼ÓÖµ ÑÕÉ«£¬ËµÃ÷.
+   * æè¿°ï¼šå¢åŠ å€¼ é¢œè‰²ï¼Œè¯´æ˜.
    *
    * @param x the x
    * @param y the y

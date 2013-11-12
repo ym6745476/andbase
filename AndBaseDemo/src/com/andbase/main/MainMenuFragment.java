@@ -87,16 +87,16 @@ public class MainMenuFragment extends Fragment {
 			
 			@Override
 			public void onClick(View arg0) {
-				mActivity.showProgressDialog("ÕıÔÚÇå¿Õ»º´æ...");
+				mActivity.showProgressDialog("æ­£åœ¨æ¸…ç©ºç¼“å­˜...");
 				AbAsyncTask task = new AbAsyncTask();
-				//¶¨ÒåÒì²½Ö´ĞĞµÄ¶ÔÏó
+				//å®šä¹‰å¼‚æ­¥æ‰§è¡Œçš„å¯¹è±¡
 		    	final AbTaskItem item = new AbTaskItem();
 				item.callback = new AbTaskCallback() {
 
 					@Override
 					public void update() {
 						mActivity.removeProgressDialog();
-						mActivity.showToast("»º´æÒÑÇå¿ÕÍê³É");
+						mActivity.showToast("ç¼“å­˜å·²æ¸…ç©ºå®Œæˆ");
 					}
 
 					@Override
@@ -153,7 +153,7 @@ public class MainMenuFragment extends Fragment {
 		
         startAnimation(sunshineView);
 		
-        //Í¼Æ¬µÄÏÂÔØ
+        //å›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader = new AbImageDownloader(mActivity);
         mAbImageDownloader.setWidth(150);
         mAbImageDownloader.setHeight(150);
@@ -164,7 +164,7 @@ public class MainMenuFragment extends Fragment {
 		mSocialShare.setContext(mActivity);
 		mSocialShare.setClientId(MediaType.WEIXIN.toString(), "wx329c742cb69b41b8");
 		mImageContent.setTitle(mActivity.getResources().getString(R.string.app_name));
-		mImageContent.setContent("Android¿ª·¢±¦£¬¼òµ¥ÄãµÄ¹¤×÷£¬¸Ä±ä±à³Ì·½Ê½£¬¶ÀÒ»ÎŞ¶ş×îÈ«¿ò¼Ü¡£Ïà¹ØÎÊÌâÇëµ½www.418log.orgÁôÑÔ");
+		mImageContent.setContent("Androidå¼€å‘å®ï¼Œç®€å•ä½ çš„å·¥ä½œï¼Œæ”¹å˜ç¼–ç¨‹æ–¹å¼ï¼Œç‹¬ä¸€æ— äºŒæœ€å…¨æ¡†æ¶ã€‚ç›¸å…³é—®é¢˜è¯·åˆ°www.418log.orgç•™è¨€");
 		mImageContent.setLinkUrl("http://www.418log.org/");
 		mImageContent.setImageUri(Uri.parse("http://apps.bdimg.com/developer/static/04171450/developer/images/icon/terminal_adapter.png"));
         
@@ -198,45 +198,45 @@ public class MainMenuFragment extends Fragment {
 		mChild2.clear();
 		
 		
-		mGroupName.add("³£ÓÃ");
-		mGroupName.add("²Ù×÷");
+		mGroupName.add("å¸¸ç”¨");
+		mGroupName.add("æ“ä½œ");
 		
 		MenuItem m0 = new MenuItem();
 		m0.setIconId(R.drawable.square);
-		m0.setText("ÅóÓÑÈ¦");
+		m0.setText("æœ‹å‹åœˆ");
 		mChild1.add(m0);
 		
 		MenuItem m1 = new MenuItem();
 		m1.setIconId(R.drawable.share);
-		m1.setText("²©¿Í");
+		m1.setText("åšå®¢");
 		mChild1.add(m1);
 		
 		MenuItem m2 = new MenuItem();
 		m2.setIconId(R.drawable.app);
-		m2.setText("Ó¦ÓÃÓÎÏ·");
+		m2.setText("åº”ç”¨æ¸¸æˆ");
 		mChild1.add(m2);
 		
 		MenuItem m3 = new MenuItem();
 		m3.setIconId(R.drawable.set);
-		m3.setText("Ñ¡Ïî");
+		m3.setText("é€‰é¡¹");
 		mChild2.add(m3);
 		
 		MenuItem m4 = new MenuItem();
 		m4.setIconId(R.drawable.recommend);
-		m4.setText("ÍÆ¼ö¸øºÃÓÑ");
+		m4.setText("æ¨èç»™å¥½å‹");
 		mChild2.add(m4);
 		
 		mUser = application.mUser;
 		if(mUser!=null){
 			MenuItem m5 = new MenuItem();
 			m5.setIconId(R.drawable.quit);
-			m5.setText("×¢Ïú");
+			m5.setText("æ³¨é”€");
 			mChild2.add(m5);
 		}
 		
 		MenuItem m6 = new MenuItem();
 		m6.setIconId(R.drawable.about);
-		m6.setText("¹ØÓÚ");
+		m6.setText("å…³äº");
 		mChild2.add(m6);
 		mAdapter.notifyDataSetChanged();
 		for (int i = 0; i < mGroupName.size(); i++) {
@@ -245,7 +245,7 @@ public class MainMenuFragment extends Fragment {
 		
 		
 		if(mUser==null){
-			setNameText("µÇÂ¼");
+			setNameText("ç™»å½•");
 			setUserPhoto(R.drawable.photo01);
 			setUserPoint("0");
 			mNameText.setCompoundDrawables(null, null,null, null);
@@ -293,7 +293,7 @@ public class MainMenuFragment extends Fragment {
 			public void onChangeView(int groupPosition, int childPosition) {
 				if(groupPosition==0){
 					if(childPosition==0){
-						//ÅóÓÑÈ¦
+						//æœ‹å‹åœˆ
 						if(application.mUser == null){
 							((MainActivity)mActivity).loginAuthorization(1);
 						}else{
@@ -302,47 +302,47 @@ public class MainMenuFragment extends Fragment {
     						startActivity(intent);
 						}
 					}else if(childPosition==1){
-						//²©¿Í
+						//åšå®¢
 						Intent intent = new Intent(mActivity,WebActivity.class);
 						intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 						startActivity(intent); 
 					}else if(childPosition==2){
-						//Ó¦ÓÃÓÎÏ·
+						//åº”ç”¨æ¸¸æˆ
 						mActivity.showApp();
 					}
 				}else if(groupPosition==1){
                     if(childPosition==0){
-						//Ñ¡Ïî
+						//é€‰é¡¹
                     	mActivity.showChaping();
 					}else if(childPosition==1){
-						//ÍÆ¼ö
+						//æ¨è
 						mSocialShare.show(mActivity.getWindow().getDecorView(), mImageContent, FrontiaTheme.LIGHT,  new ShareListener());
 					}else if(childPosition==2){
 						if(mUser!=null){
-							mActivity.showDialog("×¢Ïú", "È·¶¨Òª×¢Ïú¸ÃÓÃ»§Âğ?", new DialogInterface.OnClickListener() {
+							mActivity.showDialog("æ³¨é”€", "ç¡®å®šè¦æ³¨é”€è¯¥ç”¨æˆ·å—?", new DialogInterface.OnClickListener() {
 								
 								@Override
 								public void onClick(DialogInterface dialog, int which) {
-									//×¢Ïú
+									//æ³¨é”€
 									application.clearLoginParams();
 									initMenu();
 								}
 							});
 							
 						}else{
-							//¹ØÓÚ
+							//å…³äº
 							Intent intent = new Intent(mActivity,AboutActivity.class); 
 							intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 							startActivity(intent);
 						}
 					}else if(childPosition==3){
 						if(application.mUser!=null){
-							//¹ØÓÚ
+							//å…³äº
 							Intent intent = new Intent(mActivity,AboutActivity.class); 
 							intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 							startActivity(intent);
 						}else{
-							//ÎŞ
+							//æ— 
 						}
 					}
 				}
@@ -353,7 +353,7 @@ public class MainMenuFragment extends Fragment {
 	}
 	
 	/**
-	 * ÃèÊö£ºÓÃ»§ÃûµÄÉèÖÃ
+	 * æè¿°ï¼šç”¨æˆ·åçš„è®¾ç½®
 	 * @param mNameText
 	 */
 	public void setNameText(String mNameText) {
@@ -361,7 +361,7 @@ public class MainMenuFragment extends Fragment {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÓÃ»§Ñô¹â
+	 * æè¿°ï¼šè®¾ç½®ç”¨æˆ·é˜³å…‰
 	 * @param mPoint
 	 */
 	public void setUserPoint(String mPoint) {
@@ -370,7 +370,7 @@ public class MainMenuFragment extends Fragment {
 	}
 	
 	public void downSetPhoto(String mPhotoUrl) {
-		//Ëõ·ÅÍ¼Æ¬µÄÏÂÔØ
+		//ç¼©æ”¾å›¾ç‰‡çš„ä¸‹è½½
 		mAbImageDownloader.setNoImage(R.drawable.photo01);
 		mAbImageDownloader.setErrorImage(R.drawable.photo01_error);
         mAbImageDownloader.setType(AbConstant.SCALEIMG);
@@ -379,26 +379,26 @@ public class MainMenuFragment extends Fragment {
 	
     public void startAnimation(ImageView v) {
     	
-        //´´½¨AnimationSet¶ÔÏó
+        //åˆ›å»ºAnimationSetå¯¹è±¡
         AnimationSet animationSet = new AnimationSet(true);
-        //´´½¨RotateAnimation¶ÔÏó
+        //åˆ›å»ºRotateAnimationå¯¹è±¡
         RotateAnimation rotateAnimation = new RotateAnimation(0f,+360f, 
 					Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF, 0.5f);
-        //ÉèÖÃ¶¯»­³ÖĞø
+        //è®¾ç½®åŠ¨ç”»æŒç»­
         rotateAnimation.setDuration(2000);
         rotateAnimation.setRepeatCount(5);
         //rotateAnimation.setRepeatMode(Animation.RESTART);
-        //¶¯»­²åÈëÆ÷
+        //åŠ¨ç”»æ’å…¥å™¨
         rotateAnimation.setInterpolator(mActivity, android.R.anim.decelerate_interpolator);
-        //Ìí¼Óµ½AnimationSet
+        //æ·»åŠ åˆ°AnimationSet
         animationSet.addAnimation(rotateAnimation);
         
-        //¿ªÊ¼¶¯»­ 
+        //å¼€å§‹åŠ¨ç”» 
         v.startAnimation(animationSet);
 	}
 
     /**
-     * ÃèÊö£ºÉèÖÃÍ·Ïñ
+     * æè¿°ï¼šè®¾ç½®å¤´åƒ
      * @param drawable
      */
 	public void setUserPhoto(int resId) {
@@ -410,7 +410,7 @@ public class MainMenuFragment extends Fragment {
 		@Override
 		public void onSuccess() {
 			Log.d("TAG","share success");
-			mActivity.showToast("·ÖÏí³É¹¦");
+			mActivity.showToast("åˆ†äº«æˆåŠŸ");
 		}
 
 		@Override

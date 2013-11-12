@@ -38,7 +38,7 @@ public class LoginActivity extends AbActivity {
 	
 	private Button loginBtn = null;
 	
-	//Êı¾İ¿â²Ù×÷Àà
+	//æ•°æ®åº“æ“ä½œç±»
 	public AbSqliteStorage mAbSqliteStorage = null;
 	public UserDao mUserDao = null;
 		
@@ -49,10 +49,10 @@ public class LoginActivity extends AbActivity {
         setAbContentView(R.layout.login);
         application = (MyApplication)abApplication;
         
-        //³õÊ¼»¯AbSqliteStorage
+        //åˆå§‹åŒ–AbSqliteStorage
 	    mAbSqliteStorage = AbSqliteStorage.getInstance(this);
 	    
-	    //³õÊ¼»¯Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+	    //åˆå§‹åŒ–æ•°æ®åº“æ“ä½œå®ç°ç±»
 	    mUserDao  = new UserDao(LoginActivity.this);
         
         mAbTitleBar = this.getTitleBar();
@@ -287,7 +287,7 @@ public class LoginActivity extends AbActivity {
 					return;
 				}
 				
-				showToast("ÑİÊ¾½çÃæ,Ã»Ê²Ã´ÓÃ");
+				showToast("æ¼”ç¤ºç•Œé¢,æ²¡ä»€ä¹ˆç”¨");
 				
 				//showProgressDialog();
 				
@@ -309,7 +309,7 @@ public class LoginActivity extends AbActivity {
 					
 					finish();
 				}else{
-		        	showToast("ÓÃ»§²»´æÔÚ");
+		        	showToast("ç”¨æˆ·ä¸å­˜åœ¨");
 		        }*/
 
 			}

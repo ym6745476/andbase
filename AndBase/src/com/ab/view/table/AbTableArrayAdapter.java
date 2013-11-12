@@ -25,10 +25,10 @@ import android.widget.BaseAdapter;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºTable¿Ø¼şÊÊÅäÆ÷.
+ * æè¿°ï¼šTableæ§ä»¶é€‚é…å™¨.
  *
  * @author zhaoqp
- * @date£º2013-1-28 ÏÂÎç3:55:19
+ * @dateï¼š2013-1-28 ä¸‹åˆ3:55:19
  * @version v1.0
  */
 
@@ -36,34 +36,34 @@ public class AbTableArrayAdapter extends BaseAdapter {
 
 	/** The context. */
 	private Context context;
-	//»º´æView
+	//ç¼“å­˜View
 	/** The table view. */
 	private ArrayList<View> tableView;
 	
-	/** ±êÌâÄÚÈİÊı×é. */
+	/** æ ‡é¢˜å†…å®¹æ•°ç»„. */
 	private String[] titles;
-	//±í¸ñÄÚÈİ
+	//è¡¨æ ¼å†…å®¹
 	/** The contents. */
 	private List<String[]>  contents;
-	//µ¥Ôª¸ñÊı
+	//å•å…ƒæ ¼æ•°
 	/** The columns. */
 	private int columns;
-	//µ¥Ôª¸ñ¿í¶È
+	//å•å…ƒæ ¼å®½åº¦
 	/** The cell width. */
 	private int[] cellWidth;
 	
 	/** The cell types. */
 	private int[] cellTypes;
-	//±í¸ñ×ÊÔ´ £¨Ë÷Òı0±êÌâ±³¾°£¬1ÄÚÈİÁĞ±í±³¾°¡£2±í¸ñ±³¾°£©
+	//è¡¨æ ¼èµ„æº ï¼ˆç´¢å¼•0æ ‡é¢˜èƒŒæ™¯ï¼Œ1å†…å®¹åˆ—è¡¨èƒŒæ™¯ã€‚2è¡¨æ ¼èƒŒæ™¯ï¼‰
 	/** The table resource. */
 	private int[] tableResource;
-	//ĞĞ¸ß¶È
+	//è¡Œé«˜åº¦
 	/** The row height. */
 	private int[] rowHeight;
-	//ĞĞÎÄ×Ö´óĞ¡£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+	//è¡Œæ–‡å­—å¤§å°ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 	/** The row text size. */
 	private int[] rowTextSize;
-	//ĞĞÎÄ×ÖÑÕÉ«£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+	//è¡Œæ–‡å­—é¢œè‰²ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 	/** The row text color. */
 	private int[] rowTextColor;
 	
@@ -71,10 +71,10 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	private AbTable table;
 
 	/**
-	 * Table¿Ø¼şÊÊÅäÆ÷.
+	 * Tableæ§ä»¶é€‚é…å™¨.
 	 *
 	 * @param context the context
-	 * @param table  Table¶ÔÏó
+	 * @param table  Tableå¯¹è±¡
 	 */
 	public AbTableArrayAdapter(Context context,AbTable table) {
 		this.context = context;
@@ -83,7 +83,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * ÃèÊö£º¸üĞÂTableÄÚÈİ.
+	 * æè¿°ï¼šæ›´æ–°Tableå†…å®¹.
 	 *
 	 * @param table the new table
 	 */
@@ -103,7 +103,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	
 
 	/**
-	 * ÃèÊö£º»ñÈ¡ÊıÁ¿.
+	 * æè¿°ï¼šè·å–æ•°é‡.
 	 *
 	 * @return the count
 	 * @see android.widget.Adapter#getCount()
@@ -114,7 +114,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Î»ÖÃ.
+	 * æè¿°ï¼šè·å–ä½ç½®.
 	 *
 	 * @param position the position
 	 * @return the item id
@@ -126,7 +126,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Ë÷ÒıÎ»ÖÃµÄView.
+	 * æè¿°ï¼šè·å–ç´¢å¼•ä½ç½®çš„View.
 	 *
 	 * @param position the position
 	 * @return the item
@@ -137,7 +137,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£º»æÖÆView.
+	 * æè¿°ï¼šç»˜åˆ¶View.
 	 *
 	 * @param position the position
 	 * @param convertView the convert view
@@ -147,7 +147,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	 */
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if(convertView == null){
-			//±êÌâ
+			//æ ‡é¢˜
 			if(position==0){
 				AbTableCell[] tableCells = new AbTableCell[columns];
 				for (int j = 0; j < columns; j++) {
@@ -156,7 +156,7 @@ public class AbTableArrayAdapter extends BaseAdapter {
 				convertView = new AbTableItemView(context,this,position,new AbTableRow(tableCells,rowHeight[0],rowTextSize[0],rowTextColor[0],tableResource[1]),table);
 				convertView.setBackgroundResource(tableResource[0]);
 			}else{
-				//ÄÚÈİ
+				//å†…å®¹
 				AbTableCell[] tableCells = new AbTableCell[columns];
 				String []content = contents.get(position-1);
 				int size = contents.size();
@@ -166,15 +166,15 @@ public class AbTableArrayAdapter extends BaseAdapter {
 						}
 						convertView = new AbTableItemView(context,this,position,new AbTableRow(tableCells,rowHeight[1],rowTextSize[1],rowTextColor[1],tableResource[3]),table);
 				}else{
-					//Ä¬ÈÏÏÔÊ¾Ò»ĞĞÎŞÊı¾İ
+					//é»˜è®¤æ˜¾ç¤ºä¸€è¡Œæ— æ•°æ®
 			    }
 				convertView.setBackgroundResource(tableResource[2]);
 			}
 		}else{
 			if(position==0){
-				//½«ÖµÖØÖÃ
+				//å°†å€¼é‡ç½®
 			    AbTableItemView rowView = (AbTableItemView)convertView;
-				//ÄÚÈİ
+				//å†…å®¹
 				AbTableCell[] tableCells = new AbTableCell[columns];
 				for (int j = 0; j < columns; j++) {
 					tableCells[j] = new AbTableCell(titles[j],cellWidth[j],cellTypes[j]);
@@ -182,9 +182,9 @@ public class AbTableArrayAdapter extends BaseAdapter {
 				rowView.setTableRowView(position,new AbTableRow(tableCells,rowHeight[0],rowTextSize[0],rowTextColor[0],tableResource[1]));
 				convertView.setBackgroundResource(tableResource[0]);
 			}else{
-			    //½«ÖµÖØÖÃ
+			    //å°†å€¼é‡ç½®
 			    AbTableItemView rowView = (AbTableItemView)convertView;
-				//ÄÚÈİ
+				//å†…å®¹
 				AbTableCell[] tableCells = new AbTableCell[columns];
 				String []content = contents.get(position-1);
 				int size = contents.size();
@@ -194,12 +194,12 @@ public class AbTableArrayAdapter extends BaseAdapter {
 						}
 						rowView.setTableRowView(position,new AbTableRow(tableCells,rowHeight[1],rowTextSize[1],rowTextColor[1],tableResource[3]));
 				}else{
-					//Ä¬ÈÏÏÔÊ¾Ò»ĞĞÎŞÊı¾İ
+					//é»˜è®¤æ˜¾ç¤ºä¸€è¡Œæ— æ•°æ®
 			    }
 				convertView.setBackgroundResource(tableResource[2]);
 			}
 		}
-		//½«ĞÂµÄViewÎ¬»¤µ½tableView
+		//å°†æ–°çš„Viewç»´æŠ¤åˆ°tableView
 		if(tableView.size()>position){
 			tableView.set(position, convertView);
 		}else{
@@ -209,9 +209,9 @@ public class AbTableArrayAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * Ôö¼ÓÒ»ĞĞ.
+	 * å¢åŠ ä¸€è¡Œ.
 	 *
-	 * @param row ĞĞµÄÊı¾İ
+	 * @param row è¡Œçš„æ•°æ®
 	 */
 	public void addItem(String[] row) {
 		contents.add(row);

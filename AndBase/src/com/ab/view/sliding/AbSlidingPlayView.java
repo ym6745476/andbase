@@ -48,8 +48,8 @@ import com.ab.view.sample.AbInnerViewPager;
 
 // TODO: Auto-generated Javadoc
 /**
- * Ãû³Æ£ºAbPlayView
- * ÃèÊö£º¿É²¥·ÅÏÔÊ¾µÄView.
+ * åç§°ï¼šAbPlayView
+ * æè¿°ï¼šå¯æ’­æ”¾æ˜¾ç¤ºçš„View.
  *
  * @author zhaoqp
  * @date 2011-11-28
@@ -108,20 +108,20 @@ public class AbSlidingPlayView extends LinearLayout {
 	/** The m ab view pager adapter. */
 	private AbViewPagerAdapter mAbViewPagerAdapter = null;
 	
-	/**µ¼º½µÄµã¸¸View*/
+	/**å¯¼èˆªçš„ç‚¹çˆ¶View*/
 	private LinearLayout mPageLineLayoutParent = null;
 	
 	/** The page line horizontal gravity. */
 	private int pageLineHorizontalGravity = Gravity.RIGHT;
 	
-	/**²¥·ÅµÄ·½Ïò*/
+	/**æ’­æ”¾çš„æ–¹å‘*/
 	private int playingDirection = 0;
 	
-	/**²¥·ÅµÄ¿ª¹Ø*/
+	/**æ’­æ”¾çš„å¼€å…³*/
 	private boolean play = false;
 	
 	/**
-	 * ´´½¨Ò»¸öAbSlidingPlayView
+	 * åˆ›å»ºä¸€ä¸ªAbSlidingPlayView
 	 * @param context
 	 */
 	public AbSlidingPlayView(Context context) {
@@ -130,7 +130,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 
 	/**
-	 * ´Óxml³õÊ¼»¯µÄAbSlidingPlayView
+	 * ä»xmlåˆå§‹åŒ–çš„AbSlidingPlayView
 	 * @param context the context
 	 * @param attrs the attrs
 	 */
@@ -141,7 +141,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£º³õÊ¼»¯Õâ¸öView
+	 * æè¿°ï¼šåˆå§‹åŒ–è¿™ä¸ªView
 	 * @param context
 	 * @throws 
 	 */
@@ -157,9 +157,9 @@ public class AbSlidingPlayView extends LinearLayout {
 		RelativeLayout mRelativeLayout = new RelativeLayout(context);
 
 		mViewPager = new AbInnerViewPager(context);
-		//ÊÖ¶¯´´½¨µÄViewPager,Èç¹ûÓÃfragment±ØĞëµ÷ÓÃsetId()·½·¨ÉèÖÃÒ»¸öid
+		//æ‰‹åŠ¨åˆ›å»ºçš„ViewPager,å¦‚æœç”¨fragmentå¿…é¡»è°ƒç”¨setId()æ–¹æ³•è®¾ç½®ä¸€ä¸ªid
 		mViewPager.setId(1985);
-		//µ¼º½µÄµã
+		//å¯¼èˆªçš„ç‚¹
 		mPageLineLayoutParent = new LinearLayout(context);
 		mPageLineLayoutParent.setPadding(0,5, 0, 5);
 		pageLineLayout = new LinearLayout(context);
@@ -206,10 +206,10 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 
 	/**
-	 * ´´½¨µ¼º½µã.
+	 * åˆ›å»ºå¯¼èˆªç‚¹.
 	 */
 	public void creatIndex() {
-		//ÏÔÊ¾ÏÂÃæµÄµã
+		//æ˜¾ç¤ºä¸‹é¢çš„ç‚¹
 		pageLineLayout.removeAllViews();
 		mPageLineLayoutParent.setHorizontalGravity(pageLineHorizontalGravity);
 		pageLineLayout.setGravity(Gravity.CENTER);
@@ -229,7 +229,7 @@ public class AbSlidingPlayView extends LinearLayout {
 
 
 	/**
-	 * ¶¨Î»µãµÄÎ»ÖÃ.
+	 * å®šä½ç‚¹çš„ä½ç½®.
 	 */
 	public void makesurePosition() {
 		position = mViewPager.getCurrentItem();
@@ -243,7 +243,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÌí¼Ó¿É²¥·ÅÊÓÍ¼.
+	 * æè¿°ï¼šæ·»åŠ å¯æ’­æ”¾è§†å›¾.
 	 *
 	 * @param view the view
 	 */
@@ -277,7 +277,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÌí¼Ó¿É²¥·ÅÊÓÍ¼ÁĞ±í.
+	 * æè¿°ï¼šæ·»åŠ å¯æ’­æ”¾è§†å›¾åˆ—è¡¨.
 	 *
 	 * @param views the views
 	 */
@@ -310,7 +310,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉ¾³ı¿É²¥·ÅÊÓÍ¼.
+	 * æè¿°ï¼šåˆ é™¤å¯æ’­æ”¾è§†å›¾.
 	 *
 	 */
 	@Override
@@ -323,7 +323,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÒ³ÃæÇĞ»»ÊÂ¼ş.
+	 * æè¿°ï¼šè®¾ç½®é¡µé¢åˆ‡æ¢äº‹ä»¶.
 	 *
 	 * @param position the position
 	 */
@@ -335,7 +335,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÒ³ÃæÇĞ»»ÊÂ¼ş.
+	 * æè¿°ï¼šè®¾ç½®é¡µé¢åˆ‡æ¢äº‹ä»¶.
 	 *
 	 * @param position the position
 	 */
@@ -347,7 +347,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	
-	/** ÓÃÓëÂÖ»»µÄ handler. */
+	/** ç”¨ä¸è½®æ¢çš„ handler. */
 	private Handler handler = new Handler(){
 
 		@Override
@@ -380,7 +380,7 @@ public class AbSlidingPlayView extends LinearLayout {
 		
 	};  
 	
-	/** ÓÃÓÚÂÖ²¥µÄÏß³Ì. */
+	/** ç”¨äºè½®æ’­çš„çº¿ç¨‹. */
 	private Runnable runnable = new Runnable() {  
 	    public void run() {  
 	    	if(mViewPager!=null){
@@ -391,7 +391,7 @@ public class AbSlidingPlayView extends LinearLayout {
 
 	
 	/**
-	 * ÃèÊö£º×Ô¶¯ÂÖ²¥.
+	 * æè¿°ï¼šè‡ªåŠ¨è½®æ’­.
 	 */
 	public void startPlay(){
 		if(handler!=null){
@@ -401,7 +401,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£º×Ô¶¯ÂÖ²¥.
+	 * æè¿°ï¼šè‡ªåŠ¨è½®æ’­.
 	 */
 	public void stopPlay(){
 		if(handler!=null){
@@ -411,7 +411,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÉèÖÃµã»÷ÊÂ¼ş¼àÌı.
+	 * è®¾ç½®ç‚¹å‡»äº‹ä»¶ç›‘å¬.
 	 *
 	 * @param onItemClickListener the new on item click listener
 	 */
@@ -421,7 +421,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÒ³ÃæÇĞ»»µÄ¼àÌıÆ÷.
+	 * æè¿°ï¼šè®¾ç½®é¡µé¢åˆ‡æ¢çš„ç›‘å¬å™¨.
 	 *
 	 * @param abChangeListener the new on page change listener
 	 */
@@ -430,7 +430,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
     
     /**
-     * ÃèÊö£ºÉèÖÃÒ³Ãæ»¬¶¯µÄ¼àÌıÆ÷.
+     * æè¿°ï¼šè®¾ç½®é¡µé¢æ»‘åŠ¨çš„ç›‘å¬å™¨.
      *
      * @param abScrolledListener the new on page scrolled listener
      */
@@ -440,7 +440,7 @@ public class AbSlidingPlayView extends LinearLayout {
     
     /**
      * 
-     * ÃèÊö£ºÉèÖÃÒ³ÃæTouchµÄ¼àÌıÆ÷.
+     * æè¿°ï¼šè®¾ç½®é¡µé¢Touchçš„ç›‘å¬å™¨.
      * @param abOnTouchListener
      * @throws 
      */
@@ -463,7 +463,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Õâ¸ö»¬¶¯µÄViewPagerÀà.
+	 * æè¿°ï¼šè·å–è¿™ä¸ªæ»‘åŠ¨çš„ViewPagerç±».
 	 *
 	 * @return the view pager
 	 */
@@ -472,7 +472,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡µ±Ç°µÄViewµÄÊıÁ¿.
+	 * æè¿°ï¼šè·å–å½“å‰çš„Viewçš„æ•°é‡.
 	 *
 	 * @return the count
 	 */
@@ -481,7 +481,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÒ³ÏÔÊ¾ÌõµÄÎ»ÖÃ,ÔÚAddViewÇ°ÉèÖÃ.
+	 * æè¿°ï¼šè®¾ç½®é¡µæ˜¾ç¤ºæ¡çš„ä½ç½®,åœ¨AddViewå‰è®¾ç½®.
 	 *
 	 * @param horizontalGravity the new page line horizontal gravity
 	 */
@@ -490,7 +490,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * Èç¹ûÍâ²ãÓĞScrollViewĞèÒªÉèÖÃ.
+	 * å¦‚æœå¤–å±‚æœ‰ScrollViewéœ€è¦è®¾ç½®.
 	 *
 	 * @param parentScrollView the new parent scroll view
 	 */
@@ -499,7 +499,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * Èç¹ûÍâ²ãÓĞListViewĞèÒªÉèÖÃ.
+	 * å¦‚æœå¤–å±‚æœ‰ListViewéœ€è¦è®¾ç½®.
 	 *
 	 * @param parentListView the new parent list view
 	 */
@@ -509,7 +509,7 @@ public class AbSlidingPlayView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃµ¼º½µãµÄ±³¾°
+	 * æè¿°ï¼šè®¾ç½®å¯¼èˆªç‚¹çš„èƒŒæ™¯
 	 * @param resid
 	 * @throws 
 	 */

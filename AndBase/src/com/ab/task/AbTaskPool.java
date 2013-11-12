@@ -30,10 +30,10 @@ import com.ab.util.AbAppUtil;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbTaskPool.java 
- * ÃèÊö£ºÏß³Ì³Ø,³ÌĞòÖĞÖ»ÓĞ1¸ö
+ * åç§°ï¼šAbTaskPool.java 
+ * æè¿°ï¼šçº¿ç¨‹æ± ,ç¨‹åºä¸­åªæœ‰1ä¸ª
  * @author zhaoqp
- * @date£º2013-5-23 ÉÏÎç10:10:53
+ * @dateï¼š2013-5-23 ä¸Šåˆ10:10:53
  * @version v1.0
  */
 
@@ -45,16 +45,16 @@ public class AbTaskPool{
 	/** The Constant D. */
 	private static final boolean D = AbAppData.DEBUG;
 	
-	/** µ¥Àı¶ÔÏó The http pool. */
+	/** å•ä¾‹å¯¹è±¡ The http pool. */
 	private static AbTaskPool mAbTaskPool = null; 
 	
-	/** ¹Ì¶¨5¸öÏß³ÌÀ´Ö´ĞĞÈÎÎñ. */
+	/** å›ºå®š5ä¸ªçº¿ç¨‹æ¥æ‰§è¡Œä»»åŠ¡. */
 	private static int nThreads  = 5;
 	
 	/** The executor service. */
 	private static ExecutorService executorService = null; 
 	
-	/** ÏÂÔØÍê³ÉºóµÄÏûÏ¢¾ä±ú. */
+	/** ä¸‹è½½å®Œæˆåçš„æ¶ˆæ¯å¥æŸ„. */
     private static Handler handler = new Handler() { 
         @Override 
         public void handleMessage(Message msg) { 
@@ -70,7 +70,7 @@ public class AbTaskPool{
     }; 
     
     /**
-     * ³õÊ¼»¯Ïß³Ì³Ø
+     * åˆå§‹åŒ–çº¿ç¨‹æ± 
      */
     static{
     	nThreads = AbAppUtil.getNumCores();
@@ -78,16 +78,16 @@ public class AbTaskPool{
     }
 	
 	/**
-	 * ¹¹ÔìÏß³Ì³Ø.
+	 * æ„é€ çº¿ç¨‹æ± .
 	 *
-	 * @param nThreads ³õÊ¼µÄÏß³ÌÊı
+	 * @param nThreads åˆå§‹çš„çº¿ç¨‹æ•°
 	 */
     protected AbTaskPool(int nThreads) {
     	executorService = Executors.newFixedThreadPool(nThreads); 
     } 
 	
 	/**
-	 * µ¥Àı¹¹ÔìÍ¼Æ¬ÏÂÔØÆ÷.
+	 * å•ä¾‹æ„é€ å›¾ç‰‡ä¸‹è½½å™¨.
 	 *
 	 * @return single instance of AbHttpPool
 	 */
@@ -96,17 +96,17 @@ public class AbTaskPool{
     } 
     
     /**
-     * Ö´ĞĞÈÎÎñ.
+     * æ‰§è¡Œä»»åŠ¡.
      * @param item the item
      */
     public void execute(final AbTaskItem item) {    
     	executorService.submit(new Runnable() { 
     		public void run() {
     			try {
-    				//¶¨ÒåÁË»Øµ÷
+    				//å®šä¹‰äº†å›è°ƒ
                     if (item.callback != null) { 
                     	item.callback.get();
-                    	//½»ÓÉUIÏß³Ì´¦Àí 
+                    	//äº¤ç”±UIçº¿ç¨‹å¤„ç† 
                         Message msg = handler.obtainMessage(); 
                         msg.obj = item; 
                         handler.sendMessage(msg); 
@@ -122,7 +122,7 @@ public class AbTaskPool{
     
     /**
      * 
-     * ÃèÊö£º»ñÈ¡Ïß³Ì³ØµÄÖ´ĞĞÆ÷
+     * æè¿°ï¼šè·å–çº¿ç¨‹æ± çš„æ‰§è¡Œå™¨
      * @return executorService
      * @throws 
      */
@@ -132,7 +132,7 @@ public class AbTaskPool{
 
 
 	/**
-     * ÃèÊö£ºÁ¢¼´¹Ø±Õ.
+     * æè¿°ï¼šç«‹å³å…³é—­.
      */
     public void shutdownNow(){
     	if(!executorService.isTerminated()){
@@ -143,7 +143,7 @@ public class AbTaskPool{
     }
     
     /**
-     * ÃèÊö£ºÆ½»¬¹Ø±Õ.
+     * æè¿°ï¼šå¹³æ»‘å…³é—­.
      */
     public void shutdown(){
     	if(!executorService.isTerminated()){
@@ -153,14 +153,14 @@ public class AbTaskPool{
     }
     
     /**
-     * ÃèÊö£º¹Ø±Õ¼àÌı.
+     * æè¿°ï¼šå…³é—­ç›‘å¬.
      */
     public void listenShutdown(){
     	try {
 			while(!executorService.awaitTermination(1, TimeUnit.MILLISECONDS)) { 
-				if(D) Log.d(TAG, "Ïß³Ì³ØÎ´¹Ø±Õ");
+				if(D) Log.d(TAG, "çº¿ç¨‹æ± æœªå…³é—­");
 			}  
-			if(D) Log.d(TAG, "Ïß³Ì³ØÒÑ¹Ø±Õ");
+			if(D) Log.d(TAG, "çº¿ç¨‹æ± å·²å…³é—­");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -20,18 +20,18 @@ import com.andbase.demo.model.LocalUser;
 public class UserDBListAdapter extends BaseAdapter {
 
 	private Context mContext;
-	// xml×ªView¶ÔÏó
+	// xmlè½¬Viewå¯¹è±¡
 	private LayoutInflater mInflater;
-	// ÁĞ±íÕ¹ÏÖµÄÊı¾İ
+	// åˆ—è¡¨å±•ç°çš„æ•°æ®
 	private List<LocalUser> mUserlist;
 
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 * @param context
-	 * @param data ÁĞ±íÕ¹ÏÖµÄÊı¾İ
-	 * @param resource µ¥ĞĞµÄ²¼¾Ö
-	 * @param from MapÖĞµÄkey
-	 * @param to viewµÄid
+	 * @param data åˆ—è¡¨å±•ç°çš„æ•°æ®
+	 * @param resource å•è¡Œçš„å¸ƒå±€
+	 * @param from Mapä¸­çš„key
+	 * @param to viewçš„id
 	 */
 	public UserDBListAdapter(Context context, List<LocalUser> userlist) {
 		mContext = context;
@@ -57,15 +57,15 @@ public class UserDBListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		final ViewHolder holder;
-		// µ±Ç°Ë÷Òı
+		// å½“å‰ç´¢å¼•
 		final int index = position;
 		
 		if (convertView == null) {
-			// Ê¹ÓÃ×Ô¶¨ÒåµÄlist_items×÷ÎªLayout
+			// ä½¿ç”¨è‡ªå®šä¹‰çš„list_itemsä½œä¸ºLayout
 			convertView = mInflater.inflate(R.layout.db_list_items, parent, false);
-			// ¼õÉÙfindViewµÄ´ÎÊı
+			// å‡å°‘findViewçš„æ¬¡æ•°
 			holder = new ViewHolder();
-			// ³õÊ¼»¯²¼¾ÖÖĞµÄÔªËØ
+			// åˆå§‹åŒ–å¸ƒå±€ä¸­çš„å…ƒç´ 
 			holder.itemsTitle = ((TextView) convertView.findViewById(R.id.itemsTitle));
 			holder.itemsText = ((EditText) convertView.findViewById(R.id.itemsText));
 			holder.modifyBtn = ((Button) convertView.findViewById(R.id.modBtn));
@@ -74,20 +74,20 @@ public class UserDBListAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		// »ñÈ¡¸ÃĞĞµÄÊı¾İ
+		// è·å–è¯¥è¡Œçš„æ•°æ®
 		final LocalUser user = mUserlist.get(position);
-		// ÉèÖÃÊı¾İµ½View
+		// è®¾ç½®æ•°æ®åˆ°View
 		holder.itemsTitle.setText(String.valueOf(user.get_id()));
 		holder.itemsText.setText(user.getName());
-		// ĞŞ¸ÄºÍÉ¾³ı°´Å¥
-		// ÊÍ·Å½¹µã
+		// ä¿®æ”¹å’Œåˆ é™¤æŒ‰é’®
+		// é‡Šæ”¾ç„¦ç‚¹
 		holder.modifyBtn.setFocusable(false);
 		holder.delBtn.setFocusable(false);
-		// ĞŞ¸Ä°´Å¥ÊÂ¼ş
+		// ä¿®æ”¹æŒ‰é’®äº‹ä»¶
 		holder.modifyBtn.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				 //ĞŞ¸ÄÊı¾İ
+				 //ä¿®æ”¹æ•°æ®
 				 user.setName(holder.itemsText.getText().toString().trim());
 				 
 				 if(mContext instanceof DBInsideSampleActivity){
@@ -102,7 +102,7 @@ public class UserDBListAdapter extends BaseAdapter {
 			}
 		});
 		
-		// É¾³ı°´Å¥ÊÂ¼ş
+		// åˆ é™¤æŒ‰é’®äº‹ä»¶
 		holder.delBtn.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -119,7 +119,7 @@ public class UserDBListAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * Ôö¼ÓÒ»Ìõ²¢¸Ä±äÊÓÍ¼
+	 * å¢åŠ ä¸€æ¡å¹¶æ”¹å˜è§†å›¾
 	 * @param item
 	 */
 	public void addItem(int position,LocalUser user) {
@@ -128,7 +128,7 @@ public class UserDBListAdapter extends BaseAdapter {
 	}
 	
 	/**
-	 * Ôö¼ÓÒ»Ìõ²¢¸Ä±äÊÓÍ¼
+	 * å¢åŠ ä¸€æ¡å¹¶æ”¹å˜è§†å›¾
 	 * @param item
 	 */
 	public void addItem(LocalUser user) {
@@ -137,7 +137,7 @@ public class UserDBListAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ViewÔªËØ
+	 * Viewå…ƒç´ 
 	 */
 	static class ViewHolder {
 		TextView itemsTitle;

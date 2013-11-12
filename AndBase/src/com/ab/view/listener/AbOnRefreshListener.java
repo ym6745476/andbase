@@ -18,10 +18,10 @@ package com.ab.view.listener;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbOnRefreshListener.java 
- * ÃèÊö£ºË¢ĞÂÊÂ¼şµÄ½Ó¿Ú
+ * åç§°ï¼šAbOnRefreshListener.java 
+ * æè¿°ï¼šåˆ·æ–°äº‹ä»¶çš„æ¥å£
  * @author zhaoqp
- * @date£º2013-8-19 ÏÂÎç2:39:48
+ * @dateï¼š2013-8-19 ä¸‹åˆ2:39:48
  * @version v1.0
  */
 public interface AbOnRefreshListener {

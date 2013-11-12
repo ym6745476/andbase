@@ -22,10 +22,10 @@ import android.view.MotionEvent;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º²»ÄÜ»¬¶¯µÄViewPager.
+ * æè¿°ï¼šä¸èƒ½æ»‘åŠ¨çš„ViewPager.
  *
  * @author zhaoqp
- * @date£º2013-5-17 ÏÂÎç6:46:29
+ * @dateï¼š2013-5-17 ä¸‹åˆ6:46:29
  * @version v1.0
  */
 public class AbUnSlideViewPager extends ViewPager {
@@ -56,7 +56,7 @@ public class AbUnSlideViewPager extends ViewPager {
 	}
 
 	/**
-	 * ÃèÊö£º´¥ÃşÃ»ÓĞ·´Ó¦¾Í¿ÉÒÔÁË.
+	 * æè¿°ï¼šè§¦æ‘¸æ²¡æœ‰ååº”å°±å¯ä»¥äº†.
 	 *
 	 * @param event the event
 	 * @return true, if successful
@@ -72,13 +72,13 @@ public class AbUnSlideViewPager extends ViewPager {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.support.v4.view.ViewPager#onInterceptTouchEvent(android.view.MotionEvent)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:50
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:50
 	 * @version v1.0
 	 */
 	@Override

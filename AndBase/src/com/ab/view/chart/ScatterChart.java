@@ -49,19 +49,19 @@ public class ScatterChart extends XYChart {
    */
   public ScatterChart(XYMultipleSeriesDataset dataset, XYMultipleSeriesRenderer renderer) {
     super(dataset, renderer);
-    Log.d("ScatterChart", "µ÷ÓÃ¸¸ÀàXYChartµÄXYMultipleSeriesDataset ÉèÖÃ2");
+    Log.d("ScatterChart", "è°ƒç”¨çˆ¶ç±»XYChartçš„XYMultipleSeriesDataset è®¾ç½®2");
     size = renderer.getPointSize();
   }
 
   // TODO: javadoc
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param dataset the dataset
    * @param renderer the renderer
    * @see com.ab.view.chart.XYChart#setDatasetRenderer(com.ab.view.chart.XYMultipleSeriesDataset, com.ab.view.chart.XYMultipleSeriesRenderer)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:49
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:49
    * @version v1.0
    */
   protected void setDatasetRenderer(XYMultipleSeriesDataset dataset,
@@ -98,7 +98,7 @@ public class ScatterChart extends XYChart {
         drawX(canvas, paint, points[i], points[i + 1]);
       }
       break;
-    //»æÖÆÔ²µã
+    //ç»˜åˆ¶åœ†ç‚¹
     case CIRCLE:
       for (int i = 0; i < length; i += 2) {
         if(colors!=null && colors[i/2]!=0){
@@ -132,7 +132,7 @@ public class ScatterChart extends XYChart {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param points the points
    * @param values the values
@@ -142,7 +142,7 @@ public class ScatterChart extends XYChart {
    * @return the clickable area[]
    * @see com.ab.view.chart.XYChart#clickableAreasForPoints(float[], double[], float, int, int)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:49
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:49
    * @version v1.0
    */
   @Override

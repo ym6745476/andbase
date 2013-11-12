@@ -16,10 +16,10 @@ import com.ab.view.listener.AbOnProgressListener;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbCircleProgressBar.java 
- * ÃèÊö£º»·ĞÎµÄProgressBar
+ * åç§°ï¼šAbCircleProgressBar.java 
+ * æè¿°ï¼šç¯å½¢çš„ProgressBar
  * @author zhaoqp
- * @date£º2013-9-22 ÏÂÎç2:44:17
+ * @dateï¼š2013-9-22 ä¸‹åˆ2:44:17
  * @version v1.0
  */
 public class AbCircleProgressBar extends View {
@@ -28,22 +28,22 @@ public class AbCircleProgressBar extends View {
 	private int progress = 0;
 	private int max = 100;
 	
-	//»æÖÆ¹ì¼£
+	//ç»˜åˆ¶è½¨è¿¹
 	private Paint pathPaint = null;
 	
-	//»æÖÆÌî³ä
+	//ç»˜åˆ¶å¡«å……
 	private Paint fillArcPaint = null;
 	
 	private RectF oval;
 	
-	//Ìİ¶È½¥±äµÄÌî³äÑÕÉ«
+	//æ¢¯åº¦æ¸å˜çš„å¡«å……é¢œè‰²
 	private int[] arcColors = new int[] {0xFF02C016,  0xFF3DF346, 0xFF40F1D5, 0xFF02C016 };
 	private int[] shadowsColors = new int[] { 0xFF111111, 0x00AAAAAA, 0x00AAAAAA };
-	//»ÒÉ«¹ì¼£
+	//ç°è‰²è½¨è¿¹
 	private int pathColor = 0xFFF0EEDF;
 	private int pathBorderColor = 0xFFD2D1C4;
 	
-	//»·µÄÂ·¾¶¿í¶È
+	//ç¯çš„è·¯å¾„å®½åº¦
 	private int pathWidth = 35;
 	
 	/** The width. */
@@ -52,48 +52,48 @@ public class AbCircleProgressBar extends View {
 	/** The height. */
 	private int height; 
 	
-	//Ä¬ÈÏÔ²µÄ°ë¾¶
+	//é»˜è®¤åœ†çš„åŠå¾„
 	private int radius = 120;
 	
-	// Ö¸¶¨ÁË¹âÔ´µÄ·½ÏòºÍ»·¾³¹âÇ¿¶ÈÀ´Ìí¼Ó¸¡µñĞ§¹û
+	// æŒ‡å®šäº†å…‰æºçš„æ–¹å‘å’Œç¯å¢ƒå…‰å¼ºåº¦æ¥æ·»åŠ æµ®é›•æ•ˆæœ
 	private EmbossMaskFilter emboss = null;
-	// ÉèÖÃ¹âÔ´µÄ·½Ïò  
+	// è®¾ç½®å…‰æºçš„æ–¹å‘  
 	float[] direction = new float[]{1,1,1};
-	//ÉèÖÃ»·¾³¹âÁÁ¶È  
+	//è®¾ç½®ç¯å¢ƒå…‰äº®åº¦  
 	float light = 0.4f;  
-	// Ñ¡ÔñÒªÓ¦ÓÃµÄ·´ÉäµÈ¼¶  
+	// é€‰æ‹©è¦åº”ç”¨çš„åå°„ç­‰çº§  
 	float specular = 6;  
-	// Ïò maskÓ¦ÓÃÒ»¶¨¼¶±ğµÄÄ£ºı  
+	// å‘ maskåº”ç”¨ä¸€å®šçº§åˆ«çš„æ¨¡ç³Š  
 	float blur = 3.5f;  
 	
-	//Ö¸¶¨ÁËÒ»¸öÄ£ºıµÄÑùÊ½ºÍ°ë¾¶À´´¦Àí Paint µÄ±ßÔµ
+	//æŒ‡å®šäº†ä¸€ä¸ªæ¨¡ç³Šçš„æ ·å¼å’ŒåŠå¾„æ¥å¤„ç† Paint çš„è¾¹ç¼˜
 	private BlurMaskFilter mBlur = null;
 	
-	//¼àÌıÆ÷
+	//ç›‘å¬å™¨
 	private AbOnProgressListener mAbOnProgressListener = null;
 	
-	//viewÖØ»æµÄ±ê¼Ç
+	//viewé‡ç»˜çš„æ ‡è®°
 	private boolean reset = false;
 	
 
 	public AbCircleProgressBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		pathPaint  = new Paint();
-		// ÉèÖÃÊÇ·ñ¿¹¾â³İ
+		// è®¾ç½®æ˜¯å¦æŠ—é”¯é½¿
 		pathPaint.setAntiAlias(true);
-		// °ïÖúÏû³ı¾â³İ
+		// å¸®åŠ©æ¶ˆé™¤é”¯é½¿
 		pathPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
-		// ÉèÖÃÖĞ¿ÕµÄÑùÊ½
+		// è®¾ç½®ä¸­ç©ºçš„æ ·å¼
 		pathPaint.setStyle(Paint.Style.STROKE);
 		pathPaint.setDither(true);
 		pathPaint.setStrokeJoin(Paint.Join.ROUND);
 		
 		fillArcPaint = new Paint();
-		// ÉèÖÃÊÇ·ñ¿¹¾â³İ
+		// è®¾ç½®æ˜¯å¦æŠ—é”¯é½¿
 		fillArcPaint.setAntiAlias(true);
-		// °ïÖúÏû³ı¾â³İ
+		// å¸®åŠ©æ¶ˆé™¤é”¯é½¿
 		fillArcPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
-		// ÉèÖÃÖĞ¿ÕµÄÑùÊ½
+		// è®¾ç½®ä¸­ç©ºçš„æ ·å¼
 		fillArcPaint.setStyle(Paint.Style.STROKE);
 		fillArcPaint.setDither(true);
 		fillArcPaint.setStrokeJoin(Paint.Join.ROUND);
@@ -115,18 +115,18 @@ public class AbCircleProgressBar extends View {
 		this.height = getMeasuredHeight();
 		this.radius = getMeasuredWidth()/2 - pathWidth;
 		
-		// ÉèÖÃ»­±ÊÑÕÉ«
+		// è®¾ç½®ç”»ç¬”é¢œè‰²
 		pathPaint.setColor(pathColor);
-		// ÉèÖÃ»­±Ê¿í¶È
+		// è®¾ç½®ç”»ç¬”å®½åº¦
 		pathPaint.setStrokeWidth(pathWidth);
 		
-		//Ìí¼Ó¸¡µñĞ§¹û
+		//æ·»åŠ æµ®é›•æ•ˆæœ
 		pathPaint.setMaskFilter(emboss); 
 		
-		// ÔÚÖĞĞÄµÄµØ·½»­¸ö°ë¾¶ÎªrµÄÔ²
+		// åœ¨ä¸­å¿ƒçš„åœ°æ–¹ç”»ä¸ªåŠå¾„ä¸ºrçš„åœ†
 		canvas.drawCircle(this.width/2, this.height/2, radius, pathPaint);
 		
-		//±ßÏß
+		//è¾¹çº¿
 		pathPaint.setStrokeWidth(0.5f);
 		pathPaint.setColor(pathBorderColor);
 		canvas.drawCircle(this.width/2, this.height/2, radius+pathWidth/2+0.5f, pathPaint);
@@ -142,36 +142,36 @@ public class AbCircleProgressBar extends View {
 		gradientPositions[1] = 0.5f;  
 		gradientPositions[2] = 1.0f;  
 		
-		//°´ÑÕÉ«±ÈÀıÔ²ĞÎÌî³ä
+		//æŒ‰é¢œè‰²æ¯”ä¾‹åœ†å½¢å¡«å……
 		RadialGradient radialGradientShader = new RadialGradient(this.width/2,this.height/2, 
 				radius, gradientColors, gradientPositions, TileMode.CLAMP); 
 		
 		paint1.setShader(radialGradientShader);*/
 		
-		//»·ĞÎÑÕÉ«Ìî³ä
+		//ç¯å½¢é¢œè‰²å¡«å……
 		SweepGradient sweepGradient = new SweepGradient(this.width/2, this.height/2, arcColors, null);
 		fillArcPaint.setShader(sweepGradient);
-		// ÉèÖÃ»­±ÊÎª°×É«
+		// è®¾ç½®ç”»ç¬”ä¸ºç™½è‰²
 		
-		//Ä£ºıĞ§¹û
+		//æ¨¡ç³Šæ•ˆæœ
 		fillArcPaint.setMaskFilter(mBlur);
 		
-		//ÉèÖÃÏßµÄÀàĞÍ,±ßÊÇÔ²µÄ
+		//è®¾ç½®çº¿çš„ç±»å‹,è¾¹æ˜¯åœ†çš„
 		fillArcPaint.setStrokeCap(Paint.Cap.ROUND);
 		
 		//fillArcPaint.setColor(Color.BLUE);
 		
 		fillArcPaint.setStrokeWidth(pathWidth);
-		// ÉèÖÃÀàËÆÓÚ×óÉÏ½Ç×ø±ê£¬ÓÒÏÂ½Ç×ø±ê
+		// è®¾ç½®ç±»ä¼¼äºå·¦ä¸Šè§’åæ ‡ï¼Œå³ä¸‹è§’åæ ‡
 		oval.set(this.width/2 - radius, this.height/2 - radius, this.width/2 + radius, this.height/2 + radius);
-		// »­Ô²»¡£¬µÚ¶ş¸ö²ÎÊıÎª£ºÆğÊ¼½Ç¶È£¬µÚÈı¸öÎª¿çµÄ½Ç¶È£¬µÚËÄ¸öÎªtrueµÄÊ±ºòÊÇÊµĞÄ£¬falseµÄÊ±ºòÎª¿ÕĞÄ
+		// ç”»åœ†å¼§ï¼Œç¬¬äºŒä¸ªå‚æ•°ä¸ºï¼šèµ·å§‹è§’åº¦ï¼Œç¬¬ä¸‰ä¸ªä¸ºè·¨çš„è§’åº¦ï¼Œç¬¬å››ä¸ªä¸ºtrueçš„æ—¶å€™æ˜¯å®å¿ƒï¼Œfalseçš„æ—¶å€™ä¸ºç©ºå¿ƒ
 		canvas.drawArc(oval, -90, ((float) progress / max) * 360, false, fillArcPaint);
 		
 	}
 
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Ô²µÄ°ë¾¶
+	 * æè¿°ï¼šè·å–åœ†çš„åŠå¾„
 	 * @return
 	 * @throws 
 	 */
@@ -182,7 +182,7 @@ public class AbCircleProgressBar extends View {
 	
     /**
      * 
-     * ÃèÊö£ºÉèÖÃÔ²µÄ°ë¾¶
+     * æè¿°ï¼šè®¾ç½®åœ†çš„åŠå¾„
      * @param radius
      * @throws 
      */
@@ -232,7 +232,7 @@ public class AbCircleProgressBar extends View {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÖØÖÃ½ø¶È
+	 * æè¿°ï¼šé‡ç½®è¿›åº¦
 	 * @throws 
 	 */
 	public void reset(){

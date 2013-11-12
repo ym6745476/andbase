@@ -15,8 +15,8 @@ import com.andbase.demo.model.LocalUser;
 import com.andbase.demo.model.Stock;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºDBOne2OneActivity
- * ÃèÊö£ºÒ»¶ÔÒ»¹ØÁª
+ * åç§°ï¼šDBOne2OneActivity
+ * æè¿°ï¼šä¸€å¯¹ä¸€å…³è”
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -24,7 +24,7 @@ import com.andbase.global.MyApplication;
 public class DBOne2OneActivity extends AbActivity {
 	
 	private MyApplication application;
-	//¶¨ÒåÊı¾İ¿â²Ù×÷ÊµÏÖÀà
+	//å®šä¹‰æ•°æ®åº“æ“ä½œå®ç°ç±»
 	private UserInsideDao userDao = null;
 	private TextView sourseData  = null;
 	private TextView resultData = null;
@@ -49,17 +49,17 @@ public class DBOne2OneActivity extends AbActivity {
         sourseData  = (TextView)this.findViewById(R.id.sourseData);
         resultData  = (TextView)this.findViewById(R.id.resultData);
         
-        //³õÊ¼»¯Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+        //åˆå§‹åŒ–æ•°æ®åº“æ“ä½œå®ç°ç±»
 	    userDao = new UserInsideDao(DBOne2OneActivity.this);
 	    
-	    //²âÊÔÊı¾İ
+	    //æµ‹è¯•æ•°æ®
 		final LocalUser mLocalUser  = new LocalUser();
 		mLocalUser.setuId("99");
-		mLocalUser.setName("²âÊÔÄÚÈİ");
+		mLocalUser.setName("æµ‹è¯•å†…å®¹");
 		
 		Stock mStock = new Stock();
 		mStock.setuId("99");
-		mStock.setText1("¹ØÁªÄÚÈİ");
+		mStock.setText1("å…³è”å†…å®¹");
 		
 		mLocalUser.setStock(mStock);
 		
@@ -69,10 +69,10 @@ public class DBOne2OneActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				//±£´æ
+				//ä¿å­˜
 				
-				//ÏÔÊ¾²åÈëµÄÊı¾İ
-				sourseData.setText("²åÈëÊı¾İ£º");
+				//æ˜¾ç¤ºæ’å…¥çš„æ•°æ®
+				sourseData.setText("æ’å…¥æ•°æ®ï¼š");
 				sourseData.append("\nlocal_user{");
 				sourseData.append("\nuId:"+mLocalUser.get_id());
 				sourseData.append(",name:"+mLocalUser.getName());
@@ -82,11 +82,11 @@ public class DBOne2OneActivity extends AbActivity {
 				sourseData.append("}\n}");
 				
 				
-				//(1)»ñÈ¡Êı¾İ¿â
+				//(1)è·å–æ•°æ®åº“
 				userDao.startWritableDatabase(false);
-				//(2)Ö´ĞĞ²éÑ¯
+				//(2)æ‰§è¡ŒæŸ¥è¯¢
 				long id = userDao.insert(mLocalUser);
-				//(3)¹Ø±ÕÊı¾İ¿â
+				//(3)å…³é—­æ•°æ®åº“
 				userDao.closeDatabase(false);
 				
 			}
@@ -105,12 +105,12 @@ public class DBOne2OneActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				//±£´æ
-				//(1)»ñÈ¡Êı¾İ¿â
+				//ä¿å­˜
+				//(1)è·å–æ•°æ®åº“
 				userDao.startWritableDatabase(false);
-				//(2)Ö´ĞĞ²éÑ¯
+				//(2)æ‰§è¡ŒæŸ¥è¯¢
 				userDao.deleteAll();
-				//(3)¹Ø±ÕÊı¾İ¿â
+				//(3)å…³é—­æ•°æ®åº“
 				userDao.closeDatabase(false);
 			}
 		});
@@ -119,13 +119,13 @@ public class DBOne2OneActivity extends AbActivity {
       } 
     
      public void queryData(){
-    	    //²éÑ¯³ö½á¹û¼ì²éÊÇ·ñ³É¹¦ÁË
+    	    //æŸ¥è¯¢å‡ºç»“æœæ£€æŸ¥æ˜¯å¦æˆåŠŸäº†
 			userDao.startReadableDatabase(false);
 			List<LocalUser>  mLocalUserList = userDao.queryList();
 			userDao.closeDatabase(false);
-			resultData.setText("²éÑ¯½á¹ûÎª£º");
+			resultData.setText("æŸ¥è¯¢ç»“æœä¸ºï¼š");
 			if(mLocalUserList==null || mLocalUserList.size()==0){
-				resultData.append("²éÑ¯½á¹ûÎª£º0");
+				resultData.append("æŸ¥è¯¢ç»“æœä¸ºï¼š0");
 			}else{
 				for(LocalUser localUser:mLocalUserList){
 					Stock stock = localUser.getStock();

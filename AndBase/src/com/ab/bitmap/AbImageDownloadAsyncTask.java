@@ -12,10 +12,10 @@ import com.ab.util.AbStrUtil;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbImageDownloadAsyncTask.java 
- * ÃèÊö£ºAsyncTaskÊµÏÖµÄÏÂÔØ£¬µ¥´ÎÏÂÔØ
+ * åç§°ï¼šAbImageDownloadAsyncTask.java 
+ * æè¿°ï¼šAsyncTaskå®ç°çš„ä¸‹è½½ï¼Œå•æ¬¡ä¸‹è½½
  * @author zhaoqp
- * @date£º2013-9-2 ÏÂÎç12:47:51
+ * @dateï¼š2013-9-2 ä¸‹åˆ12:47:51
  * @version v1.0
  */
 public class AbImageDownloadAsyncTask extends AsyncTask<AbImageDownloadItem, Integer, AbImageDownloadItem> {
@@ -26,11 +26,11 @@ public class AbImageDownloadAsyncTask extends AsyncTask<AbImageDownloadItem, Int
 	/** The Constant D. */
 	private static final boolean D = AbAppData.DEBUG;
 	
-	/** ÏÂÔØÍê³ÉºóµÄÏûÏ¢¾ä±ú. */
+	/** ä¸‹è½½å®Œæˆåçš„æ¶ˆæ¯å¥æŸ„. */
     private static Handler handler = new Handler() { 
         @Override 
         public void handleMessage(Message msg) { 
-        	//if(D)Log.d(TAG, "ÈÎÎñcallback handleMessage...");
+        	//if(D)Log.d(TAG, "ä»»åŠ¡callback handleMessage...");
             AbImageDownloadItem item = (AbImageDownloadItem)msg.obj; 
             item.callback.update(item.bitmap, item.imageUrl); 
         } 
@@ -41,29 +41,29 @@ public class AbImageDownloadAsyncTask extends AsyncTask<AbImageDownloadItem, Int
 	}
 
 	/**  
-     * ÕâÀïµÄµÚÒ»¸ö²ÎÊı¶ÔÓ¦AsyncTaskÖĞµÄµÚÒ»¸ö²ÎÊı   
-     * ÕâÀïµÄString·µ»ØÖµ¶ÔÓ¦AsyncTaskµÄµÚÈı¸ö²ÎÊı  
-     * ¸Ã·½·¨²¢²»ÔËĞĞÔÚUIÏß³Ìµ±ÖĞ£¬Ö÷ÒªÓÃÓÚÒì²½²Ù×÷£¬ËùÓĞÔÚ¸Ã·½·¨ÖĞ²»ÄÜ¶ÔUIµ±ÖĞµÄ¿Õ¼ä½øĞĞÉèÖÃºÍĞŞ¸Ä  
-     * µ«ÊÇ¿ÉÒÔµ÷ÓÃpublishProgress·½·¨´¥·¢onProgressUpdate¶ÔUI½øĞĞ²Ù×÷  
+     * è¿™é‡Œçš„ç¬¬ä¸€ä¸ªå‚æ•°å¯¹åº”AsyncTaskä¸­çš„ç¬¬ä¸€ä¸ªå‚æ•°   
+     * è¿™é‡Œçš„Stringè¿”å›å€¼å¯¹åº”AsyncTaskçš„ç¬¬ä¸‰ä¸ªå‚æ•°  
+     * è¯¥æ–¹æ³•å¹¶ä¸è¿è¡Œåœ¨UIçº¿ç¨‹å½“ä¸­ï¼Œä¸»è¦ç”¨äºå¼‚æ­¥æ“ä½œï¼Œæ‰€æœ‰åœ¨è¯¥æ–¹æ³•ä¸­ä¸èƒ½å¯¹UIå½“ä¸­çš„ç©ºé—´è¿›è¡Œè®¾ç½®å’Œä¿®æ”¹  
+     * ä½†æ˜¯å¯ä»¥è°ƒç”¨publishProgressæ–¹æ³•è§¦å‘onProgressUpdateå¯¹UIè¿›è¡Œæ“ä½œ  
      */  
 	@Override
 	protected AbImageDownloadItem doInBackground(AbImageDownloadItem... items) {
 		AbImageDownloadItem item = items[0];
-		//¼ì²éÍ¼Æ¬Â·¾¶
+		//æ£€æŸ¥å›¾ç‰‡è·¯å¾„
     	String url = item.imageUrl;
     	if(AbStrUtil.isEmpty(url)){
-    		if(D)Log.d(TAG, "Í¼Æ¬URLÎª¿Õ£¬ÇëÏÈÅĞ¶Ï");
+    		if(D)Log.d(TAG, "å›¾ç‰‡URLä¸ºç©ºï¼Œè¯·å…ˆåˆ¤æ–­");
     	}else{
     		url = url.trim();
     	}
-		//Èç¹ûSD¿¨ÓĞÕâ¸öÍ¼Æ¬, ÏÈµ½SDÖĞÕÒÕâ¸öÍ¼Æ¬
+		//å¦‚æœSDå¡æœ‰è¿™ä¸ªå›¾ç‰‡, å…ˆåˆ°SDä¸­æ‰¾è¿™ä¸ªå›¾ç‰‡
 		item.bitmap =  AbImageCache.getBitmapFromMemCache(AbMd5.MD5(url+"_"+item.width+"x"+item.height+"t"+item.type));
     	if(item.bitmap == null){
-    		//¿ªÊ¼ÏÂÔØ
+    		//å¼€å§‹ä¸‹è½½
             item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
-            //»º´æÍ¼Æ¬Â·¾¶
+            //ç¼“å­˜å›¾ç‰‡è·¯å¾„
             AbImageCache.addBitmapToMemoryCache(AbMd5.MD5(item.imageUrl+"_"+item.width+"x"+item.height+"t"+item.type),item.bitmap);                                           
-            //ĞèÒªÖ´ĞĞ»Øµ÷À´ÏÔÊ¾Í¼Æ¬
+            //éœ€è¦æ‰§è¡Œå›è°ƒæ¥æ˜¾ç¤ºå›¾ç‰‡
             if (item.callback != null) {
                 Message msg = handler.obtainMessage(); 
                 msg.obj = item; 

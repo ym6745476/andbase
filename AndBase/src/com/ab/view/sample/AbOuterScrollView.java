@@ -25,10 +25,10 @@ import android.widget.ScrollView;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbOuterScrollView.java 
- * ÃèÊö£ºÕâ¸öScrollViewÓëÄÚ²¿µÄ»¬¶¯²»³åÍ»
+ * åç§°ï¼šAbOuterScrollView.java 
+ * æè¿°ï¼šè¿™ä¸ªScrollViewä¸å†…éƒ¨çš„æ»‘åŠ¨ä¸å†²çª
  * @author zhaoqp
- * @date£º2013-5-21 ÏÂÎç3:59:38
+ * @dateï¼š2013-5-21 ä¸‹åˆ3:59:38
  * @version v1.0
  */
 public class AbOuterScrollView extends ScrollView {
@@ -49,7 +49,7 @@ public class AbOuterScrollView extends ScrollView {
     }
 
     /**
-     * ÃèÊö£ºTODO.
+     * æè¿°ï¼šTODO.
      *
      * @param ev the ev
      * @return true, if successful
@@ -65,7 +65,7 @@ public class AbOuterScrollView extends ScrollView {
     class YScrollDetector extends SimpleOnGestureListener {
         
         /**
-         * ÃèÊö£ºTODO.
+         * æè¿°ï¼šTODO.
          *
          * @param e1 the e1
          * @param e2 the e2

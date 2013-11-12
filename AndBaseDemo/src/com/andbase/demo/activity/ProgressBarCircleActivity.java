@@ -17,10 +17,10 @@ import com.andbase.global.MyApplication;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºProgressBarCircleActivity.java 
- * ÃèÊö£º»·ĞÎ½ø¶ÈÌõ
+ * åç§°ï¼šProgressBarCircleActivity.java 
+ * æè¿°ï¼šç¯å½¢è¿›åº¦æ¡
  * @author zhaoqp
- * @date£º2013-9-22 ÏÂÎç4:52:06
+ * @dateï¼š2013-9-22 ä¸‹åˆ4:52:06
  * @version v1.0
  */
 public class ProgressBarCircleActivity extends AbActivity {
@@ -29,9 +29,9 @@ public class ProgressBarCircleActivity extends AbActivity {
 	private static final boolean D = Constant.DEBUG;
 	private MyApplication application;
 
-	// ProgressBar½ø¶È¿ØÖÆ
+	// ProgressBarè¿›åº¦æ§åˆ¶
 	private AbCircleProgressBar mAbProgressBar;
-	// ×î´ó100
+	// æœ€å¤§100
 	private int max = 100;	
 	private int progress = 0;
 	private TextView numberText, maxText;
@@ -51,13 +51,13 @@ public class ProgressBarCircleActivity extends AbActivity {
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
 
-		// ProgressBar½ø¶È¿ØÖÆ
+		// ProgressBarè¿›åº¦æ§åˆ¶
 		mAbProgressBar = (AbCircleProgressBar) findViewById(R.id.circleProgressBar);
 		
 		numberText = (TextView) findViewById(R.id.numberText);
 		maxText = (TextView) findViewById(R.id.maxText);
 		
-		maxText.setText("×Ü¹²  "+String.valueOf(max));
+		maxText.setText("æ€»å…±  "+String.valueOf(max));
 		mAbProgressBar.setMax(max);
 		mAbProgressBar.setProgress(progress);
 		
@@ -113,7 +113,7 @@ public class ProgressBarCircleActivity extends AbActivity {
 				message.what = 1;
 				mUpdateHandler.sendMessage(message);
 				try {
-					// ¸üĞÂ¼ä¸ôºÁÃëÊı
+					// æ›´æ–°é—´éš”æ¯«ç§’æ•°
 					Thread.sleep(200);
 				} catch (InterruptedException e) {
 					Thread.currentThread().interrupt();

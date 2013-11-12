@@ -61,7 +61,7 @@ public class ChatActivity extends AbActivity {
 	
 	private AbTitleBar mAbTitleBar = null;
 	
-	//·¢ËÍÑ¡ÏîÃæ°å
+	//å‘é€é€‰é¡¹é¢æ¿
 	private LinearLayout chatAppPanel = null;
 	
 	private User faceUser = null;
@@ -69,26 +69,26 @@ public class ChatActivity extends AbActivity {
 	private String faceUserPushChannelId = null;
 	private String faceUserPushUserlId = null;
 	
-	//Ó¦ÓÃÊı¾İ´æ´¢
+	//åº”ç”¨æ•°æ®å­˜å‚¨
 	private FrontiaStorage mCloudStorage = null;
 	
-	//ÍÆËÍ·şÎñ
+	//æ¨é€æœåŠ¡
 	private FrontiaPush mPush = null;
 	
-	//ÍÆËÍÄÚÈİ
+	//æ¨é€å†…å®¹
 	private String mContentStr = null;
 	
-	//ÊÇ·ñ¿ÉÒÔ·¢ËÍÏÂÒ»Ìõ
+	//æ˜¯å¦å¯ä»¥å‘é€ä¸‹ä¸€æ¡
 	private boolean isSendEnable  = true;
 	
 	private final String action = "com.baidu.android.pushservice.action.MESSAGE";
 			
-	//Êı¾İ¿â²Ù×÷Àà
+	//æ•°æ®åº“æ“ä½œç±»
 	public AbSqliteStorage mAbSqliteStorage = null;
 	public ChatMsgDao mChatMsgDao = null;
 	public UserDao mUserDao = null;
 	
-	//´´½¨BroadcastReceiver
+	//åˆ›å»ºBroadcastReceiver
 	private BroadcastReceiver mDataReceiver = new FrontiaPushMessageReceiver() {
 
 		@Override
@@ -99,7 +99,7 @@ public class ChatActivity extends AbActivity {
 		
 		@Override
 		public void onMessage(Context context, String message,String customContentString) {
-			Log.d(TAG, "ÊÕµ½ÁËÏûÏ¢:" + message);
+			Log.d(TAG, "æ”¶åˆ°äº†æ¶ˆæ¯:" + message);
 			if(message!=null && message.indexOf("content")!=-1){
 				GsonBuilder builder = new GsonBuilder();
 				Gson gson = builder.create();
@@ -111,7 +111,7 @@ public class ChatActivity extends AbActivity {
 					mChatMsgList.add(mChatMsg);
 					mChatMsgViewAdapter.notifyDataSetChanged();
 				}
-				//ÓÉÍâ²¿µÄ½ÓÊÕÆ÷±£´æ
+				//ç”±å¤–éƒ¨çš„æ¥æ”¶å™¨ä¿å­˜
 				//saveData(mChatMsg);
 				//saveUserData(mChatMsg.getUser());
 			}
@@ -151,15 +151,15 @@ public class ChatActivity extends AbActivity {
 		setAbContentView(R.layout.chat);
 		application = (MyApplication) abApplication;
 		
-		//Êı¾İ´æ´¢³õÊ¼»¯
+		//æ•°æ®å­˜å‚¨åˆå§‹åŒ–
       	Frontia.init(this.getApplicationContext(), Constant.APIKEY);
 		mCloudStorage = Frontia.getStorage();
 		mPush = Frontia.getPush();
 		
-		//³õÊ¼»¯AbSqliteStorage
+		//åˆå§‹åŒ–AbSqliteStorage
 	    mAbSqliteStorage = AbSqliteStorage.getInstance(this);
 	    
-	    //³õÊ¼»¯Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+	    //åˆå§‹åŒ–æ•°æ®åº“æ“ä½œå®ç°ç±»
 	    mChatMsgDao = new ChatMsgDao(ChatActivity.this);
 	    mUserDao  = new UserDao(ChatActivity.this);
 		mAbTitleBar = this.getTitleBar();
@@ -171,7 +171,7 @@ public class ChatActivity extends AbActivity {
 		mAbTitleBar.setTitleTextBold(false);
 		mAbTitleBar.setTitleLayoutGravity(Gravity.CENTER,Gravity.CENTER);
 		
-		//»ñÈ¡´«µİµÄ²ÎÊı
+		//è·å–ä¼ é€’çš„å‚æ•°
 		Intent mIntent = this.getIntent();
 		String uId = mIntent.getStringExtra("ID");
 		String name = mIntent.getStringExtra("NAME");
@@ -182,7 +182,7 @@ public class ChatActivity extends AbActivity {
 		faceUser.setName(name);
 		faceUser.setPhotoUrl(headUrl);
 		
-		mAbTitleBar.setTitleText("Óë"+name+"µÄ»á»°");
+		mAbTitleBar.setTitleText("ä¸"+name+"çš„ä¼šè¯");
 		
 		
 		mContentEdit = (EditText)findViewById(R.id.content);
@@ -193,26 +193,26 @@ public class ChatActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				if(application.mUser == null){
-					showToast("ÇëÏÈ·µ»ØµÇÂ¼");
+					showToast("è¯·å…ˆè¿”å›ç™»å½•");
 					return;
 				}
 				
 				mContentStr = mContentEdit.getText().toString().trim();
 				if(!AbStrUtil.isEmpty(mContentStr)){
 					if(!isSendEnable){
-						showToast("ÉÏÒ»ÌõÕıÔÚ·¢ËÍ£¬ÇëÉÔµÈ");
+						showToast("ä¸Šä¸€æ¡æ­£åœ¨å‘é€ï¼Œè¯·ç¨ç­‰");
 						return;
 					}
 					
 					
-					//·¢ËÍÍ¨Öª
+					//å‘é€é€šçŸ¥
 					if(faceUserPushChannelId!=null){
 						isSendEnable = false;
 						
-						//Çå¿ÕÎÄ±¾¿ò
+						//æ¸…ç©ºæ–‡æœ¬æ¡†
 	                    mContentEdit.setText("");
 						
-						//ÏÔÊ¾
+						//æ˜¾ç¤º
 						ChatMsg mChatMsg  = new ChatMsg();
 						mChatMsg.setContent(mContentStr);
 						mChatMsg.setSendState(0);
@@ -230,18 +230,18 @@ public class ChatActivity extends AbActivity {
 						Gson gson = builder.create();
 						
 						if(mPush!=null && mPush.isPushWorking()){
-					    	 Log.d("TAG", "·¢ËÍÍ¨Öª");
+					    	 Log.d("TAG", "å‘é€é€šçŸ¥");
 					    	 //notificationToUser(mContentStr);
 					    	 messageToUser(gson.toJson(mChatMsg));
 					    }else{
-					    	 Log.d("TAG", "ÍÆËÍ·şÎñÎ´Æô¶¯");
-					    	 //Æô¶¯ÍÆËÍ·şÎñ
+					    	 Log.d("TAG", "æ¨é€æœåŠ¡æœªå¯åŠ¨");
+					    	 //å¯åŠ¨æ¨é€æœåŠ¡
                              PushUtil.startPushService(mPush,ChatActivity.this);
 					    }
 						
 						
 					}else{
-						showToast(faceUser.getName()+"[²»ÄÜ·¢ËÍ]");
+						showToast(faceUser.getName()+"[ä¸èƒ½å‘é€]");
 					}
 					
 				}
@@ -255,7 +255,7 @@ public class ChatActivity extends AbActivity {
 		mChatMsgViewAdapter = new ChatMsgViewAdapter(this,mChatMsgList);
 		mMsgListView.setAdapter(mChatMsgViewAdapter);
 		
-		//Ãæ°åÑ¡Ïî
+		//é¢æ¿é€‰é¡¹
 	    chatAppPanel = (LinearLayout)this.findViewById(R.id.chatAppPanel);
 	    ImageButton addBtn = (ImageButton)this.findViewById(R.id.addBtn);
 	    addBtn.setOnClickListener(new OnClickListener() {
@@ -275,7 +275,7 @@ public class ChatActivity extends AbActivity {
 	    if(application.mUser != null){
 	    	queryMsgList();
 		    
-		    //²éÑ¯Õâ¸öÓÃ»§µÄchannelId
+		    //æŸ¥è¯¢è¿™ä¸ªç”¨æˆ·çš„channelId
 		    queryChannelId();
 		}
 	    
@@ -290,7 +290,7 @@ public class ChatActivity extends AbActivity {
 	
 	@Override
 	protected void onStart() {
-		// ×¢²á¹ã²¥½ÓÊÕÆ÷
+		// æ³¨å†Œå¹¿æ’­æ¥æ”¶å™¨
 		IntentFilter mIntentFilter = new IntentFilter(action);
 		mIntentFilter.addAction("com.baidu.android.pushservice.action.RECEIVE");
 		mIntentFilter.addAction("com.baidu.android.pushservice.action.notification.CLICK");
@@ -300,21 +300,21 @@ public class ChatActivity extends AbActivity {
 
 	@Override
 	protected void onStop() {
-		// È¡Ïû×¢²áµÄ¹ã²¥½ÓÊÕÆ÷
+		// å–æ¶ˆæ³¨å†Œçš„å¹¿æ’­æ¥æ”¶å™¨
 		unregisterReceiver(mDataReceiver);
 		super.onStop();
 	}
 
 	@Override
 	public void finish() {
-		//±ØĞëÒªÊÍ·Å
+		//å¿…é¡»è¦é‡Šæ”¾
 		mAbSqliteStorage.release();
 		super.finish();
 	}
 	
 	/**
 	 * 
-	 * ÃèÊö£º·¢ÏûÏ¢
+	 * æè¿°ï¼šå‘æ¶ˆæ¯
 	 * @param mMessage
 	 * @throws 
 	 */
@@ -330,7 +330,7 @@ public class ChatActivity extends AbActivity {
 			@Override
 			public void onSuccess(String id) {
 				
-				//¸üĞÂÏÔÊ¾×´Ì¬
+				//æ›´æ–°æ˜¾ç¤ºçŠ¶æ€
                 ChatMsg mChatMsg = mChatMsgList.get(mChatMsgList.size()-1);
                 mChatMsg.setSendState(1);
                 mChatMsg.setCreateTime(AbDateUtil.getCurrentDate(AbDateUtil.dateFormatYMDHMS));
@@ -343,7 +343,7 @@ public class ChatActivity extends AbActivity {
 			public void onFailure(int errCode, String errMsg) {
 				 showToast(errMsg);
 				 isSendEnable = true;
-				 //¸üĞÂÏÔÊ¾×´Ì¬
+				 //æ›´æ–°æ˜¾ç¤ºçŠ¶æ€
                  ChatMsg msg = mChatMsgList.get(mChatMsgList.size()-1);
                  msg.setSendState(-1);
 			     mChatMsgViewAdapter.notifyDataSetChanged();
@@ -356,7 +356,7 @@ public class ChatActivity extends AbActivity {
 	
 	/**
 	 * 
-	 * ÃèÊö£º·¢Í¨Öª
+	 * æè¿°ï¼šå‘é€šçŸ¥
 	 * @param mMessage
 	 * @throws 
 	 */
@@ -372,7 +372,7 @@ public class ChatActivity extends AbActivity {
 			@Override
 			public void onSuccess(String id) {
                     
-                    //¸üĞÂÏÔÊ¾×´Ì¬
+                    //æ›´æ–°æ˜¾ç¤ºçŠ¶æ€
                     ChatMsg msg = mChatMsgList.get(mChatMsgList.size()-1);
                     msg.setSendState(1);
 					msg.setCreateTime(AbDateUtil.getCurrentDate(AbDateUtil.dateFormatYMDHMS));
@@ -385,7 +385,7 @@ public class ChatActivity extends AbActivity {
 			public void onFailure(int errCode, String errMsg) {
 				    showToast(errMsg);
 				    isSendEnable = true;
-				    //¸üĞÂÏÔÊ¾×´Ì¬
+				    //æ›´æ–°æ˜¾ç¤ºçŠ¶æ€
                     ChatMsg msg = mChatMsgList.get(mChatMsgList.size()-1);
                     msg.setSendState(-1);
 					mChatMsgViewAdapter.notifyDataSetChanged();
@@ -398,9 +398,9 @@ public class ChatActivity extends AbActivity {
 
 	
 	public void queryChannelId(){
-		showProgressDialog("ÕıÔÚÁ¬Ïß"+faceUser.getName()+"...");
+		showProgressDialog("æ­£åœ¨è¿çº¿"+faceUser.getName()+"...");
 		
-		/*//²âÊÔ
+		/*//æµ‹è¯•
 		if(faceUser.getuId().equals("1627666132")){
 			//2442547254
 			{"push_app_channel_id":"3487968799628127529",
@@ -424,10 +424,10 @@ public class ChatActivity extends AbActivity {
 			return;
 		}*/
 		
-		//²éÑ¯
+		//æŸ¥è¯¢
 		FrontiaQuery query = new FrontiaQuery();
 		query = query.equals("push_local_user_id", faceUser.getuId());
-		Log.d(TAG, "²éÑ¯channelÊı¾İpush_local_user_id="+faceUser.getuId());
+		Log.d(TAG, "æŸ¥è¯¢channelæ•°æ®push_local_user_id="+faceUser.getuId());
 		mCloudStorage.findData(query,new DataInfoListener() {
 
 			@Override
@@ -437,22 +437,22 @@ public class ChatActivity extends AbActivity {
 		        	FrontiaData fd = dataList.get(0);
 		        	try {
 						JSONObject data = fd.getData();
-						Log.d(TAG, "²éÑ¯µ½channelÊı¾İ"+data.toString());
+						Log.d(TAG, "æŸ¥è¯¢åˆ°channelæ•°æ®"+data.toString());
 						faceUserPushChannelId = data.getString("push_channel_id");
 						faceUserPushUserlId = data.getString("push_user_id");
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
 		        }else{
-		        	showToast(faceUser.getName()+"[²»ÄÜ·¢ËÍ]");
+		        	showToast(faceUser.getName()+"[ä¸èƒ½å‘é€]");
 		        }
 			}
 
 			@Override
 			public void onFailure(int errCode, String errMsg) {
 				removeProgressDialog();
-				Log.d("TAG","queryChannelId´íÎóÎª"+errCode+errMsg);
-				showToast(faceUser.getName()+"[²»ÄÜ·¢ËÍ]");
+				Log.d("TAG","queryChannelIdé”™è¯¯ä¸º"+errCode+errMsg);
+				showToast(faceUser.getName()+"[ä¸èƒ½å‘é€]");
 			}
 		});
 	}
@@ -468,7 +468,7 @@ public class ChatActivity extends AbActivity {
 
 			@Override
 			public void onSuccess(long id) {
-				//showToast("²åÈëÊı¾İ³É¹¦id="+id);
+				//showToast("æ’å…¥æ•°æ®æˆåŠŸid="+id);
 				chatMsg.set_id((int)id);
 			}
 
@@ -481,11 +481,11 @@ public class ChatActivity extends AbActivity {
 	}
 	
 	public void saveUserData(final User user){
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
 		mAbStorageQuery.equals("u_id",user.getuId());
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao, new AbDataInfoListener(){
 
 			@Override
@@ -518,22 +518,22 @@ public class ChatActivity extends AbActivity {
 	}
 	
 	public void queryMsgList(){
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		AbStorageQuery mAbStorageQuery1 = new AbStorageQuery();
 		
-		//µÚÒ»×éÌõ¼ş
+		//ç¬¬ä¸€ç»„æ¡ä»¶
 		mAbStorageQuery1.equals("u_id",application.mUser.getuId());
 		mAbStorageQuery1.equals("face_u_id",faceUser.getuId());
 		
-		//µÚ¶ş×éÌõ¼ş
+		//ç¬¬äºŒç»„æ¡ä»¶
 		AbStorageQuery mAbStorageQuery2 = new AbStorageQuery();
 		mAbStorageQuery2.equals("face_u_id",application.mUser.getuId());
 		mAbStorageQuery2.equals("u_id",faceUser.getuId());
 		
-		//×éºÏ²éÑ¯
+		//ç»„åˆæŸ¥è¯¢
 		AbStorageQuery mAbStorageQuery = mAbStorageQuery1.or(mAbStorageQuery2);
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.findData(mAbStorageQuery, mChatMsgDao, new AbDataInfoListener(){
 
 			@Override
@@ -555,7 +555,7 @@ public class ChatActivity extends AbActivity {
 	
 	public void updateData(ChatMsg mChatMsg){
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.updateData(mChatMsg, mChatMsgDao, new AbDataOperationListener(){
 
 			@Override
@@ -573,11 +573,11 @@ public class ChatActivity extends AbActivity {
 	
 	
 	public void queryUserById(String uId,final int position){
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
 		mAbStorageQuery.equals("u_id",uId);
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao, new AbDataInfoListener(){
 
 			@Override

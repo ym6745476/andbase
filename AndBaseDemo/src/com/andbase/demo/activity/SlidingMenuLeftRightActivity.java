@@ -18,12 +18,12 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//Ê¹ÓÃÏµÍ³±êÌâÀ¸Î»ÖÃ£¬ÎªÁË·ÅÈë×Ô¶¨ÒåµÄ±êÌâÀ¸
+		//ä½¿ç”¨ç³»ç»Ÿæ ‡é¢˜æ ä½ç½®ï¼Œä¸ºäº†æ”¾å…¥è‡ªå®šä¹‰çš„æ ‡é¢˜æ 
 		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);  
 		setContentView(R.layout.sliding_menu_content);
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title_bar);  
 		
-		//×Ô¶¨ÒåµÄ±êÌâÀ¸
+		//è‡ªå®šä¹‰çš„æ ‡é¢˜æ 
 		AbTitleBar mAbTitleBar = new AbTitleBar(this);
 		mAbTitleBar.setTitleText(R.string.sliding_menu_name);
 		mAbTitleBar.setLogo(R.drawable.button_selector_back);
@@ -32,17 +32,17 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
-		//¼Óµ½ÏµÍ³±êÌâÀ¸Î»ÖÃÉÏ
+		//åŠ åˆ°ç³»ç»Ÿæ ‡é¢˜æ ä½ç½®ä¸Š
 		LinearLayout titleBarLinearLayout = (LinearLayout)this.findViewById(R.id.titleBar);
 		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		
 		titleBarLinearLayout.addView(mAbTitleBar,layoutParamsFF);
 		
 		
-	    //±ØĞëÔÚsetContentView()Ö®Ç°ÉèÖÃ
+	    //å¿…é¡»åœ¨setContentView()ä¹‹å‰è®¾ç½®
 	    setBehindContentView(R.layout.sliding_menu_menu);
 		
-	    //SlidingMenuµÄÅäÖÃ
+	    //SlidingMenuçš„é…ç½®
  		menu = getSlidingMenu();
  		menu.setMode(SlidingMenu.LEFT_RIGHT);
  		menu.setShadowWidthRes(R.dimen.shadow_width);
@@ -50,7 +50,7 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
  		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
  		menu.setFadeDegree(0.35f);
  		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
- 		//¿ÉÅäÖÃµÄ²ÎÊı
+ 		//å¯é…ç½®çš„å‚æ•°
  		//menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
  		//menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
  		
@@ -62,21 +62,21 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
  		//menu.setFadeEnabled(true);
  		
  		
- 		//Ö÷ÊÓÍ¼µÄFragmentÌí¼Ó
+ 		//ä¸»è§†å›¾çš„Fragmentæ·»åŠ 
 	    setContentView(R.layout.sliding_menu_content);
         getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, new Fragment1())
 		.commit();
  		
- 		//menu1ÊÓÍ¼µÄFragmentÌí¼Ó
+ 		//menu1è§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.menu_frame, new Fragment2())
 		.commit();
  		
- 		//menu2ÊÓÍ¼µÄFragmentÌí¼Ó
+ 		//menu2è§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setSecondaryMenu(R.layout.sliding_menu_menu2);
 		menu.setSecondaryShadowDrawable(R.drawable.shadow_right);
 		getSupportFragmentManager()

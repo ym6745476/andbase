@@ -42,11 +42,11 @@ public class AbPullView extends ScrollView{
 	
 	/** The m scroll layout. */
 	private LinearLayout mScrollLayout;
-	//Í·²¿Ë¢ĞÂView
+	//å¤´éƒ¨åˆ·æ–°View
 	/** The m header view. */
 	private AbListViewHeader mHeaderView;
 	
-	//Í·²¿ViewµÄ¸ß¶È
+	//å¤´éƒ¨Viewçš„é«˜åº¦
 	/** The m header view height. */
 	private int mHeaderViewHeight; 
 	
@@ -157,17 +157,17 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * ¸ù¾İ×´Ì¬ÉèÖÃHeaderµÄÎ»ÖÃ.
+	 * æ ¹æ®çŠ¶æ€è®¾ç½®Headerçš„ä½ç½®.
 	 */
 	private void resetHeaderHeight() {
-		//µ±Ç°ÏÂÀ­µ½µÄ¸ß¶È
+		//å½“å‰ä¸‹æ‹‰åˆ°çš„é«˜åº¦
 		int height = mHeaderView.getVisiableHeight();
 		if (height < mHeaderViewHeight || !mPullRefreshing) {
-			//¾àÀë¶Ì  Òş²Ø
+			//è·ç¦»çŸ­  éšè—
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -1*height, SCROLL_DURATION);
 		}else if(height > mHeaderViewHeight || !mPullRefreshing){
-			//¾àÀë¶àµÄ  µ¯»Øµ½mHeaderViewHeight
+			//è·ç¦»å¤šçš„  å¼¹å›åˆ°mHeaderViewHeight
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -(height-mHeaderViewHeight), SCROLL_DURATION);
 		}
@@ -176,10 +176,10 @@ public class AbPullView extends ScrollView{
 	}
 	
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.ScrollView#onTouchEvent(android.view.MotionEvent)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -201,17 +201,17 @@ public class AbPullView extends ScrollView{
 			break;
 		case MotionEvent.ACTION_UP:
 			mLastY = -1;
-			//ĞèÒªË¢ĞÂµÄÌõ¼ş
+			//éœ€è¦åˆ·æ–°çš„æ¡ä»¶
 			if (mEnablePullRefresh && mHeaderView.getVisiableHeight() >= mHeaderViewHeight) {
 				mPullRefreshing = true;
 				mHeaderView.setState(AbListViewHeader.STATE_REFRESHING);
 				if (mAbOnRefreshListener != null) {
-					//Ë¢ĞÂ
+					//åˆ·æ–°
 					mAbOnRefreshListener.onRefresh();
 				}
 			}
 			if(mEnablePullRefresh){
-				//µ¯»Ø
+				//å¼¹å›
 				resetHeaderHeight();
 			}
 			break;
@@ -222,10 +222,10 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.ScrollView#computeScroll()
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -240,7 +240,7 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃListViewµÄ¼àÌıÆ÷.
+	 * æè¿°ï¼šè®¾ç½®ListViewçš„ç›‘å¬å™¨.
 	 *
 	 * @param abOnRefreshListener the new ab on refresh listener
 	 */
@@ -249,7 +249,7 @@ public class AbPullView extends ScrollView{
 	}
 	
 	/**
-	 * ÃèÊö£ºÏò¹ö¶¯ÈİÆ÷ÖĞÌí¼ÓView.
+	 * æè¿°ï¼šå‘æ»šåŠ¨å®¹å™¨ä¸­æ·»åŠ View.
 	 *
 	 * @param child the child
 	 * @param index the index
@@ -259,7 +259,7 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * ÃèÊö£ºÏò¹ö¶¯ÈİÆ÷ÖĞÌí¼ÓView.
+	 * æè¿°ï¼šå‘æ»šåŠ¨å®¹å™¨ä¸­æ·»åŠ View.
 	 *
 	 * @param child the child
 	 */

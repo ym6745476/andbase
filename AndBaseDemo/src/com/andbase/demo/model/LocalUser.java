@@ -9,7 +9,7 @@ import com.ab.db.orm.annotation.Table;
 @Table(name = "local_user")
 public class LocalUser {
 
-	// ID @IdÖ÷¼ü,intÀàĞÍ,Êı¾İ¿â½¨±íÊ±´Ë×Ö¶Î»áÉèÎª×ÔÔö³¤
+	// ID @Idä¸»é”®,intç±»å‹,æ•°æ®åº“å»ºè¡¨æ—¶æ­¤å­—æ®µä¼šè®¾ä¸ºè‡ªå¢é•¿
 	@Id
 	@Column(name = "_id")
 	private int _id;
@@ -17,31 +17,31 @@ public class LocalUser {
 	@Column(name = "u_id")
 	private String uId;
 
-	// µÇÂ¼ÓÃ»§Ãû length=20Êı¾İ×Ö¶ÎµÄ³¤¶ÈÊÇ20
+	// ç™»å½•ç”¨æˆ·å length=20æ•°æ®å­—æ®µçš„é•¿åº¦æ˜¯20
 	@Column(name = "name", length = 20)
 	private String name;
 
-	// ÓÃ»§ÃÜÂë
+	// ç”¨æˆ·å¯†ç 
 	@Column(name = "password")
 	private String password;
 
-	// ÄêÁäÒ»°ãÊÇÊıÖµ,ÓÃtype = "INTEGER"¹æ·¶Ò»ÏÂ.
+	// å¹´é¾„ä¸€èˆ¬æ˜¯æ•°å€¼,ç”¨type = "INTEGER"è§„èŒƒä¸€ä¸‹.
 	@Column(name = "age", type = "INTEGER")
 	private int age;
 
-	// ´´½¨Ê±¼ä
+	// åˆ›å»ºæ—¶é—´
 	@Column(name = "create_time")
 	private String createTime;
 	
-	// °üº¬ÊµÌåµÄ´æ´¢£¬Ö¸¶¨Íâ¼ü
+	// åŒ…å«å®ä½“çš„å­˜å‚¨ï¼ŒæŒ‡å®šå¤–é”®
 	@Relations(name="stock",type="one2one",foreignKey = "u_id",action="query_insert")
 	private Stock stock;
 
-	// °üº¬ListµÄ´æ´¢£¬Ö¸¶¨Íâ¼ü
+	// åŒ…å«Listçš„å­˜å‚¨ï¼ŒæŒ‡å®šå¤–é”®
 	@Relations(name="stocks",type="one2many",foreignKey = "u_id",action="query_insert")
 	private List<Stock> stocks;
 	
-	// ÓĞĞ©×Ö¶ÎÄú¿ÉÄÜ²»Ï£Íû±£´æµ½Êı¾İ¿âÖĞ,²»ÓÃ@Column×¢ÊÍ¾Í²»»áÓ³Éäµ½Êı¾İ¿â.
+	// æœ‰äº›å­—æ®µæ‚¨å¯èƒ½ä¸å¸Œæœ›ä¿å­˜åˆ°æ•°æ®åº“ä¸­,ä¸ç”¨@Columnæ³¨é‡Šå°±ä¸ä¼šæ˜ å°„åˆ°æ•°æ®åº“.
 	private String remark;
 
 

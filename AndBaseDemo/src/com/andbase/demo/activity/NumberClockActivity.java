@@ -50,7 +50,7 @@ public class NumberClockActivity extends AbActivity {
 		dTimeArray.add(this.getResources().getDrawable(R.drawable.time8));
 		dTimeArray.add(this.getResources().getDrawable(R.drawable.time9));
 		
-		//AM ºÍPMµÄÍ¼±ê
+		//AM å’ŒPMçš„å›¾æ ‡
 		//dApmArray.add(this.getResources().getDrawable(R.drawable.time0));
 		//dApmArray.add(this.getResources().getDrawable(R.drawable.time1));
 		

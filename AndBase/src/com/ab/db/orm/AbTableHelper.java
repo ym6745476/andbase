@@ -37,15 +37,15 @@ import com.ab.util.AbStrUtil;
  */
 public class AbTableHelper {
 	
-	/** ÈÕÖ¾±ê¼Ç. */
+	/** æ—¥å¿—æ ‡è®°. */
 	private static final String TAG = "AbTableHelper";
 
 	/**
-	 * ¸ù¾İÓ³ÉäµÄ¶ÔÏó´´½¨±í.
+	 * æ ¹æ®æ˜ å°„çš„å¯¹è±¡åˆ›å»ºè¡¨.
 	 *
 	 * @param <T> the generic type
-	 * @param db Êı¾İ¿â¶ÔÏó
-	 * @param clazzs ¶ÔÏóÓ³Éä
+	 * @param db æ•°æ®åº“å¯¹è±¡
+	 * @param clazzs å¯¹è±¡æ˜ å°„
 	 */
 	public static <T> void createTablesByClasses(SQLiteDatabase db,Class<?>[] clazzs) {
 		for (Class<?> clazz : clazzs){
@@ -54,11 +54,11 @@ public class AbTableHelper {
 	}
 
 	/**
-	 * ¸ù¾İÓ³ÉäµÄ¶ÔÏóÉ¾³ı±í.
+	 * æ ¹æ®æ˜ å°„çš„å¯¹è±¡åˆ é™¤è¡¨.
 	 *
 	 * @param <T> the generic type
-	 * @param db Êı¾İ¿â¶ÔÏó
-	 * @param clazzs ¶ÔÏóÓ³Éä
+	 * @param db æ•°æ®åº“å¯¹è±¡
+	 * @param clazzs å¯¹è±¡æ˜ å°„
 	 */
 	public static <T> void dropTablesByClasses(SQLiteDatabase db,Class<?>[] clazzs) {
 		for (Class<?> clazz : clazzs){
@@ -67,11 +67,11 @@ public class AbTableHelper {
 	}
 
 	/**
-	 * ´´½¨±í.
+	 * åˆ›å»ºè¡¨.
 	 *
 	 * @param <T> the generic type
-	 * @param db ¸ù¾İÓ³ÉäµÄ¶ÔÏó´´½¨±í.
-	 * @param clazz ¶ÔÏóÓ³Éä
+	 * @param db æ ¹æ®æ˜ å°„çš„å¯¹è±¡åˆ›å»ºè¡¨.
+	 * @param clazz å¯¹è±¡æ˜ å°„
 	 */
 	public static <T> void createTable(SQLiteDatabase db, Class<T> clazz) {
 		String tableName = "";
@@ -80,7 +80,7 @@ public class AbTableHelper {
 			tableName = table.name();
 		}
 		if(AbStrUtil.isEmpty(tableName)){
-			Log.d(TAG, "ÏëÒªÓ³ÉäµÄÊµÌå["+clazz.getName()+"],Î´×¢½â@Table(name=\"?\"),±»Ìø¹ı");
+			Log.d(TAG, "æƒ³è¦æ˜ å°„çš„å®ä½“["+clazz.getName()+"],æœªæ³¨è§£@Table(name=\"?\"),è¢«è·³è¿‡");
 			return;
 		}
 		StringBuilder sb = new StringBuilder();
@@ -106,7 +106,7 @@ public class AbTableHelper {
 			if (column.length() != 0) {
 				sb.append("(" + column.length() + ")");
 			}
-			//ÊµÌåÀà¶¨ÒåÎªIntegerÀàĞÍºó²»ÄÜÉú³ÉIdÒì³£
+			//å®ä½“ç±»å®šä¹‰ä¸ºIntegerç±»å‹åä¸èƒ½ç”ŸæˆIdå¼‚å¸¸
 			if ((field.isAnnotationPresent(Id.class)) 
 					&& ((field.getType() == Integer.TYPE) || (field.getType() == Integer.class)))
 				sb.append(" primary key autoincrement");
@@ -128,11 +128,11 @@ public class AbTableHelper {
 	}
 
 	/**
-	 * É¾³ı±í.
+	 * åˆ é™¤è¡¨.
 	 *
 	 * @param <T> the generic type
-	 * @param db ¸ù¾İÓ³ÉäµÄ¶ÔÏó´´½¨±í.
-	 * @param clazz ¶ÔÏóÓ³Éä
+	 * @param db æ ¹æ®æ˜ å°„çš„å¯¹è±¡åˆ›å»ºè¡¨.
+	 * @param clazz å¯¹è±¡æ˜ å°„
 	 */
 	public static <T> void dropTable(SQLiteDatabase db, Class<T> clazz) {
 		String tableName = "";
@@ -146,10 +146,10 @@ public class AbTableHelper {
 	}
 
 	/**
-	 * »ñÈ¡ÁĞÀàĞÍ.
+	 * è·å–åˆ—ç±»å‹.
 	 *
 	 * @param fieldType the field type
-	 * @return ÁĞÀàĞÍ
+	 * @return åˆ—ç±»å‹
 	 */
 	private static String getColumnType(Class<?> fieldType) {
 		if (String.class == fieldType) {
@@ -178,16 +178,16 @@ public class AbTableHelper {
 	}
 
 	/**
-	 * ºÏ²¢FieldÊı×é²¢È¥ÖØ,²¢ÊµÏÖ¹ıÂËµô·ÇColumn×Ö¶Î,ºÍÊµÏÖId·ÅÔÚÊ××Ö¶ÎÎ»ÖÃ¹¦ÄÜ.
+	 * åˆå¹¶Fieldæ•°ç»„å¹¶å»é‡,å¹¶å®ç°è¿‡æ»¤æ‰éColumnå­—æ®µ,å’Œå®ç°Idæ”¾åœ¨é¦–å­—æ®µä½ç½®åŠŸèƒ½.
 	 *
-	 * @param fields1 ÊôĞÔÊı×é1
-	 * @param fields2 ÊôĞÔÊı×é2
-	 * @return ÊôĞÔµÄÁĞ±í
+	 * @param fields1 å±æ€§æ•°ç»„1
+	 * @param fields2 å±æ€§æ•°ç»„2
+	 * @return å±æ€§çš„åˆ—è¡¨
 	 */
 	public static List<Field> joinFieldsOnlyColumn(Field[] fields1, Field[] fields2) {
 		Map<String, Field> map = new LinkedHashMap<String, Field>();
 		for (Field field : fields1) {
-			// ¹ıÂËµô·ÇColumn¶¨ÒåµÄ×Ö¶Î
+			// è¿‡æ»¤æ‰éColumnå®šä¹‰çš„å­—æ®µ
 			if (!field.isAnnotationPresent(Column.class)) {
 				continue;
 			}
@@ -195,7 +195,7 @@ public class AbTableHelper {
 			map.put(column.name(), field);
 		}
 		for (Field field : fields2) {
-			// ¹ıÂËµô·ÇColumn¶¨ÒåµÄ×Ö¶Î
+			// è¿‡æ»¤æ‰éColumnå®šä¹‰çš„å­—æ®µ
 			if (!field.isAnnotationPresent(Column.class)) {
 				continue;
 			}
@@ -207,7 +207,7 @@ public class AbTableHelper {
 		List<Field> list = new ArrayList<Field>();
 		for (String key : map.keySet()) {
 			Field tempField = map.get(key);
-			// Èç¹ûÊÇIdÔò·ÅÔÚÊ×Î»ÖÃ.
+			// å¦‚æœæ˜¯Idåˆ™æ”¾åœ¨é¦–ä½ç½®.
 			if (tempField.isAnnotationPresent(Id.class)) {
 				list.add(0, tempField);
 			} else {
@@ -218,16 +218,16 @@ public class AbTableHelper {
 	}
 	
 	/**
-	 * ºÏ²¢FieldÊı×é²¢È¥ÖØ.
+	 * åˆå¹¶Fieldæ•°ç»„å¹¶å»é‡.
 	 *
-	 * @param fields1 ÊôĞÔÊı×é1
-	 * @param fields2 ÊôĞÔÊı×é2
-	 * @return ÊôĞÔµÄÁĞ±í
+	 * @param fields1 å±æ€§æ•°ç»„1
+	 * @param fields2 å±æ€§æ•°ç»„2
+	 * @return å±æ€§çš„åˆ—è¡¨
 	 */
 	public static List<Field> joinFields(Field[] fields1, Field[] fields2) {
 		Map<String, Field> map = new LinkedHashMap<String, Field>();
 		for (Field field : fields1) {
-			// ¹ıÂËµô·ÇColumnºÍRelations¶¨ÒåµÄ×Ö¶Î
+			// è¿‡æ»¤æ‰éColumnå’ŒRelationså®šä¹‰çš„å­—æ®µ
 			if (field.isAnnotationPresent(Column.class)) {
 				Column column = (Column) field.getAnnotation(Column.class);
 				map.put(column.name(), field);
@@ -238,7 +238,7 @@ public class AbTableHelper {
 			
 		}
 		for (Field field : fields2) {
-			// ¹ıÂËµô·ÇColumnºÍRelations¶¨ÒåµÄ×Ö¶Î
+			// è¿‡æ»¤æ‰éColumnå’ŒRelationså®šä¹‰çš„å­—æ®µ
 			if (field.isAnnotationPresent(Column.class)) {
 				Column column = (Column) field.getAnnotation(Column.class);
 				if (!map.containsKey(column.name())) {
@@ -254,7 +254,7 @@ public class AbTableHelper {
 		List<Field> list = new ArrayList<Field>();
 		for (String key : map.keySet()) {
 			Field tempField = map.get(key);
-			// Èç¹ûÊÇIdÔò·ÅÔÚÊ×Î»ÖÃ.
+			// å¦‚æœæ˜¯Idåˆ™æ”¾åœ¨é¦–ä½ç½®.
 			if (tempField.isAnnotationPresent(Id.class)) {
 				list.add(0, tempField);
 			} else {

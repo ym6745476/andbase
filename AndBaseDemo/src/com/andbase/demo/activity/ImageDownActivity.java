@@ -24,7 +24,7 @@ public class ImageDownActivity extends AbActivity {
 	private AbScaleImageView setView = null;
 	private AbNetworkImageView netView = null;
 	
-	//Í¼Æ¬ÏÂÔØÀà
+	//å›¾ç‰‡ä¸‹è½½ç±»
 	private AbImageDownloader mAbImageDownloader = null;
 	
     @Override
@@ -61,7 +61,7 @@ public class ImageDownActivity extends AbActivity {
         
         String imageUrl = "http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg";
         
-        //Í¼Æ¬µÄÏÂÔØ
+        //å›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader = new AbImageDownloader(this);
         mAbImageDownloader.setWidth(150);
         mAbImageDownloader.setHeight(150);
@@ -70,20 +70,20 @@ public class ImageDownActivity extends AbActivity {
         mAbImageDownloader.setNoImage(R.drawable.image_no);
         
         
-        //²Ã¼ôÍ¼Æ¬µÄÏÂÔØ
+        //è£å‰ªå›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader.setType(AbConstant.CUTIMG);
         mAbImageDownloader.display(cutView,imageUrl);
         
         
-        //Ëõ·ÅÍ¼Æ¬µÄÏÂÔØ
+        //ç¼©æ”¾å›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader.setType(AbConstant.SCALEIMG);
         mAbImageDownloader.display(scaleView,imageUrl);
         
-        //Ô­Í¼Æ¬µÄÏÂÔØ
+        //åŸå›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader.setType(AbConstant.ORIGINALIMG);
         mAbImageDownloader.display(originalView,imageUrl);
         
-        //ÏÔÊ¾ÎªÉèÖÃµÄ´óĞ¡px
+        //æ˜¾ç¤ºä¸ºè®¾ç½®çš„å¤§å°px
         setView.setImageWidth(120);
         setView.setImageHeight(120);
         mAbImageDownloader.setWidth(120);
@@ -91,7 +91,7 @@ public class ImageDownActivity extends AbActivity {
         mAbImageDownloader.setType(AbConstant.ORIGINALIMG);
         mAbImageDownloader.display(setView,imageUrl);
         
-        //×Ô¶¯»ñÈ¡
+        //è‡ªåŠ¨è·å–
         mAbImageDownloader.setWidth(150);
         mAbImageDownloader.setHeight(150);
         mAbImageDownloader.setType(AbConstant.SCALEIMG);

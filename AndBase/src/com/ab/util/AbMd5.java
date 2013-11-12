@@ -19,40 +19,40 @@ import java.security.MessageDigest;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºMD5¼ÓÃÜ.
+ * æè¿°ï¼šMD5åŠ å¯†.
  *
  * @author zhaoqp
- * @date£º2013-1-15 ÏÂÎç3:11:18
+ * @dateï¼š2013-1-15 ä¸‹åˆ3:11:18
  * @version v1.0
  */
 public class AbMd5 {
 	
 	/**
-	 * ÃèÊö£ºMD5¼ÓÃÜ.
-	 * @param str Òª¼ÓÃÜµÄ×Ö·û´®
-	 * @return String ¼ÓÃÜµÄ×Ö·û´®
+	 * æè¿°ï¼šMD5åŠ å¯†.
+	 * @param str è¦åŠ å¯†çš„å­—ç¬¦ä¸²
+	 * @return String åŠ å¯†çš„å­—ç¬¦ä¸²
 	 */
 	public final static String MD5(String str) {
-		char hexDigits[] = { // ÓÃÀ´½«×Ö½Ú×ª»»³É 16 ½øÖÆ±íÊ¾µÄ×Ö·û
+		char hexDigits[] = { // ç”¨æ¥å°†å­—èŠ‚è½¬æ¢æˆ 16 è¿›åˆ¶è¡¨ç¤ºçš„å­—ç¬¦
 		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd',
 				'e', 'f' };
 		try {
 			byte[] strTemp = str.getBytes();
 			MessageDigest mdTemp = MessageDigest.getInstance("MD5");
 			mdTemp.update(strTemp);
-			byte tmp[] = mdTemp.digest(); // MD5 µÄ¼ÆËã½á¹ûÊÇÒ»¸ö 128 Î»µÄ³¤ÕûÊı£¬
-			// ÓÃ×Ö½Ú±íÊ¾¾ÍÊÇ 16 ¸ö×Ö½Ú
-			char strs[] = new char[16 * 2]; // Ã¿¸ö×Ö½ÚÓÃ 16 ½øÖÆ±íÊ¾µÄ»°£¬Ê¹ÓÃÁ½¸ö×Ö·û£¬
-			// ËùÒÔ±íÊ¾³É 16 ½øÖÆĞèÒª 32 ¸ö×Ö·û
-			int k = 0; // ±íÊ¾×ª»»½á¹ûÖĞ¶ÔÓ¦µÄ×Ö·ûÎ»ÖÃ
-			for (int i = 0; i < 16; i++) { // ´ÓµÚÒ»¸ö×Ö½Ú¿ªÊ¼£¬¶Ô MD5 µÄÃ¿Ò»¸ö×Ö½Ú
-				// ×ª»»³É 16 ½øÖÆ×Ö·ûµÄ×ª»»
-				byte byte0 = tmp[i]; // È¡µÚ i ¸ö×Ö½Ú
-				strs[k++] = hexDigits[byte0 >>> 4 & 0xf]; // È¡×Ö½ÚÖĞ¸ß 4 Î»µÄÊı×Ö×ª»»,
-				// >>> ÎªÂß¼­ÓÒÒÆ£¬½«·ûºÅÎ»Ò»ÆğÓÒÒÆ
-				strs[k++] = hexDigits[byte0 & 0xf]; // È¡×Ö½ÚÖĞµÍ 4 Î»µÄÊı×Ö×ª»»
+			byte tmp[] = mdTemp.digest(); // MD5 çš„è®¡ç®—ç»“æœæ˜¯ä¸€ä¸ª 128 ä½çš„é•¿æ•´æ•°ï¼Œ
+			// ç”¨å­—èŠ‚è¡¨ç¤ºå°±æ˜¯ 16 ä¸ªå­—èŠ‚
+			char strs[] = new char[16 * 2]; // æ¯ä¸ªå­—èŠ‚ç”¨ 16 è¿›åˆ¶è¡¨ç¤ºçš„è¯ï¼Œä½¿ç”¨ä¸¤ä¸ªå­—ç¬¦ï¼Œ
+			// æ‰€ä»¥è¡¨ç¤ºæˆ 16 è¿›åˆ¶éœ€è¦ 32 ä¸ªå­—ç¬¦
+			int k = 0; // è¡¨ç¤ºè½¬æ¢ç»“æœä¸­å¯¹åº”çš„å­—ç¬¦ä½ç½®
+			for (int i = 0; i < 16; i++) { // ä»ç¬¬ä¸€ä¸ªå­—èŠ‚å¼€å§‹ï¼Œå¯¹ MD5 çš„æ¯ä¸€ä¸ªå­—èŠ‚
+				// è½¬æ¢æˆ 16 è¿›åˆ¶å­—ç¬¦çš„è½¬æ¢
+				byte byte0 = tmp[i]; // å–ç¬¬ i ä¸ªå­—èŠ‚
+				strs[k++] = hexDigits[byte0 >>> 4 & 0xf]; // å–å­—èŠ‚ä¸­é«˜ 4 ä½çš„æ•°å­—è½¬æ¢,
+				// >>> ä¸ºé€»è¾‘å³ç§»ï¼Œå°†ç¬¦å·ä½ä¸€èµ·å³ç§»
+				strs[k++] = hexDigits[byte0 & 0xf]; // å–å­—èŠ‚ä¸­ä½ 4 ä½çš„æ•°å­—è½¬æ¢
 			}
-			return new String(strs).toUpperCase(); // »»ºóµÄ½á¹û×ª»»Îª×Ö·û´®
+			return new String(strs).toUpperCase(); // æ¢åçš„ç»“æœè½¬æ¢ä¸ºå­—ç¬¦ä¸²
 		} catch (Exception e) {
 			return null;
 		}

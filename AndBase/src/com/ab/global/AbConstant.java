@@ -17,75 +17,75 @@ package com.ab.global;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º³£Á¿.
+ * æè¿°ï¼šå¸¸é‡.
  *
  * @author zhaoqp
- * @date£º2013-1-15 ÏÂÎç3:12:06
+ * @dateï¼š2013-1-15 ä¸‹åˆ3:12:06
  * @version v1.0
  */
 public class AbConstant {
 	
-	/** SharePreferencesÎÄ¼şÃû. */
+	/** SharePreferencesæ–‡ä»¶å. */
 	public static final String SHAREPATH = "app_share";
     
-	/** Êı¾İ×´Ì¬£º¿ÉÓÃ. */
+	/** æ•°æ®çŠ¶æ€ï¼šå¯ç”¨. */
     public static final int STATEYES = 1;
     
-    /** Êı¾İ×´Ì¬£º²»¿ÉÓÃ. */
+    /** æ•°æ®çŠ¶æ€ï¼šä¸å¯ç”¨. */
     public static final int STATENO = 0;
     
-    /** Êı¾İ×´Ì¬£ºÈ«²¿. */
+    /** æ•°æ®çŠ¶æ€ï¼šå…¨éƒ¨. */
     public static final int STATEALL = 9;
     
-    /** Êı¾İ×´Ì¬£ºÓĞ. */
+    /** æ•°æ®çŠ¶æ€ï¼šæœ‰. */
     public static final int HAVE = 1;
     
-    /** Êı¾İ×´Ì¬£ºÃ»ÓĞ. */
+    /** æ•°æ®çŠ¶æ€ï¼šæ²¡æœ‰. */
     public static final int NOTHAVE = 0;
     
-    /** Í¼Æ¬´¦Àí£º²Ã¼ô. */
+    /** å›¾ç‰‡å¤„ç†ï¼šè£å‰ª. */
 	public static final int CUTIMG = 0;
 	
-	/** Í¼Æ¬´¦Àí£ºËõ·Å. */
+	/** å›¾ç‰‡å¤„ç†ï¼šç¼©æ”¾. */
     public static final int SCALEIMG = 1;
     
-    /** Í¼Æ¬´¦Àí£º²»´¦Àí. */
+    /** å›¾ç‰‡å¤„ç†ï¼šä¸å¤„ç†. */
     public static final int ORIGINALIMG = 2;
     
-    /** ·µ»ØÂë£º³É¹¦. */
+    /** è¿”å›ç ï¼šæˆåŠŸ. */
     public static final int RESULRCODE_OK = 0;
     
-    /** ·µ»ØÂë£ºÊ§°Ü. */
+    /** è¿”å›ç ï¼šå¤±è´¥. */
     public static final int RESULRCODE_ERROR = -1;
     
-    /** ÏÔÊ¾Toast. */
+    /** æ˜¾ç¤ºToast. */
     public static final int SHOW_TOAST = 0;
     
-    /** ÏÔÊ¾½ø¶È¿ò. */
+    /** æ˜¾ç¤ºè¿›åº¦æ¡†. */
     public static final int SHOW_PROGRESS = 1;
     
-    /** É¾³ı½ø¶È¿ò. */
+    /** åˆ é™¤è¿›åº¦æ¡†. */
 	public static final int REMOVE_PROGRESS = 2;
 	
-	/** É¾³ıµ×²¿½ø¶È¿ò. */
+	/** åˆ é™¤åº•éƒ¨è¿›åº¦æ¡†. */
 	public static final int REMOVE_DIALOGBOTTOM = 3;
 	
-	/** É¾³ıÖĞ¼ä½ø¶È¿ò. */
+	/** åˆ é™¤ä¸­é—´è¿›åº¦æ¡†. */
 	public static final int REMOVE_DIALOGCENTER = 4;
 	
-	/** É¾³ı¶¥²¿½ø¶È¿ò. */
+	/** åˆ é™¤é¡¶éƒ¨è¿›åº¦æ¡†. */
 	public static final int REMOVE_DIALOGTOP = 5;
 	
-	/** ±êÌâÀ¸Í¸Ã÷±ê¼Ç. */
+	/** æ ‡é¢˜æ é€æ˜æ ‡è®°. */
 	public static final String TITLE_TRANSPARENT_FLAG = "TITLE_TRANSPARENT_FLAG";
 	
-	/** ±êÌâÀ¸Í¸Ã÷. */
+	/** æ ‡é¢˜æ é€æ˜. */
 	public static final int TITLE_TRANSPARENT = 0;
 	
-	/** ±êÌâÀ¸²»Í¸Ã÷. */
+	/** æ ‡é¢˜æ ä¸é€æ˜. */
 	public static final int TITLE_NOTRANSPARENT = 1;
 	
-	/** ViewµÄÀàĞÍ. */
+	/** Viewçš„ç±»å‹. */
 	public static final int LISTVIEW = 1;
 	
 	/** The Constant GRIDVIEW. */
@@ -97,7 +97,7 @@ public class AbConstant {
 	/** The Constant RELATIVELAYOUTVIEW. */
 	public static final int RELATIVELAYOUTVIEW = 3;
 	
-	/** DialogµÄÀàĞÍ. */
+	/** Dialogçš„ç±»å‹. */
 	public static final int DIALOGPROGRESS = 0;
 	
 	/** The Constant DIALOGBOTTOM. */
@@ -109,7 +109,7 @@ public class AbConstant {
 	/** The Constant DIALOGTOP. */
 	public static final int DIALOGTOP = 3;
 	
-	/** »º´æµÄ¼¸ÕÅÄ¬ÈÏµÄÍ¼Æ¬. */
+	/** ç¼“å­˜çš„å‡ å¼ é»˜è®¤çš„å›¾ç‰‡. */
 	public static final String IMAGEERRORURL = "image/image_error.png";
 	
 	/** The Constant IMAGELOADINGURL. */

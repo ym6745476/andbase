@@ -14,30 +14,30 @@ public class ChatMsg {
 	@Column(name = "_id")
 	private int _id;
 	
-	//ÓÃ»§ID
+	//ç”¨æˆ·ID
 	@Column(name = "u_id")
 	private String uId;
 	
-	//ÓÃ»§ID
+	//ç”¨æˆ·ID
 	@Column(name = "face_u_id")
 	private String faceUid;
 	
-	//±êÌâ
+	//æ ‡é¢˜
 	@Column(name = "title")
 	private String title;
 	
-	//ÄÚÈİ
+	//å†…å®¹
 	@Column(name = "content")
 	private String content;
 	
-	// ´´½¨Ê±¼ä
+	// åˆ›å»ºæ—¶é—´
 	@Column(name = "create_time")
 	private String createTime;
 	
-	//Í¼Æ¬»òÕßÒôÆµµØÖ·
+	//å›¾ç‰‡æˆ–è€…éŸ³é¢‘åœ°å€
 	private String mediaUrl;
 	
-	//·¢ËÍ×´Ì¬1ÒÑ·¢ËÍ/ÒÑµ½´ï£¬£­1·¢ËÍÊ§°Ü  0ÕıÔÚ·¢ËÍ
+	//å‘é€çŠ¶æ€1å·²å‘é€/å·²åˆ°è¾¾ï¼Œï¼1å‘é€å¤±è´¥  0æ­£åœ¨å‘é€
 	@Column(name = "send_state")
 	private int sendState;
 	

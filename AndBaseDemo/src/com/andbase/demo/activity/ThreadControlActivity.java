@@ -40,64 +40,64 @@ public class ThreadControlActivity extends AbActivity {
         Button poolBtn  = (Button)this.findViewById(R.id.poolBtn);
         Button taskBtn  = (Button)this.findViewById(R.id.taskBtn);
         
-        //µ¥¸öÏß³Ì
+        //å•ä¸ªçº¿ç¨‹
         threadBtn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				//ÏÔÊ¾½ø¶È¿ò
+				//æ˜¾ç¤ºè¿›åº¦æ¡†
 				showProgressDialog();
 				AbAsyncThread mAbTaskThread = new AbAsyncThread();
-				//¶¨ÒåÒì²½Ö´ĞĞµÄ¶ÔÏó
+				//å®šä¹‰å¼‚æ­¥æ‰§è¡Œçš„å¯¹è±¡
 		    	final AbTaskItem item = new AbTaskItem();
 				item.callback = new AbTaskCallback() {
 
 					@Override
 					public void update() {
 						removeProgressDialog();
-						showToast("Ö´ĞĞÍê³É");
+						showToast("æ‰§è¡Œå®Œæˆ");
 					}
 
 					@Override
 					public void get() {
 			   		    try {
-			   		    	showToastInThread("¿ªÊ¼Ö´ĞĞ");
+			   		    	showToastInThread("å¼€å§‹æ‰§è¡Œ");
 			   		    	Thread.sleep(3000);
-			   		    	//ÏÂÃæĞ´ÒªÖ´ĞĞµÄ´úÂë£¬ÈçÏÂÔØÊı¾İ
+			   		    	//ä¸‹é¢å†™è¦æ‰§è¡Œçš„ä»£ç ï¼Œå¦‚ä¸‹è½½æ•°æ®
 			   		    } catch (Exception e) {
 			   		    }
 				  };
 				};
-				//¿ªÊ¼Ö´ĞĞ
+				//å¼€å§‹æ‰§è¡Œ
 				mAbTaskThread.execute(item);
 			}
         	
         });
         
-        //Ïß³Ì¶ÓÁĞ
+        //çº¿ç¨‹é˜Ÿåˆ—
         queueBtn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				//ÏÔÊ¾½ø¶È¿ò
+				//æ˜¾ç¤ºè¿›åº¦æ¡†
 				showProgressDialog();
-				//»ñÈ¡¶ÓÁĞ
+				//è·å–é˜Ÿåˆ—
 				AbTaskQueue mAbTaskQueue = AbTaskQueue.getInstance();
-				//¶¨ÒåÒì²½Ö´ĞĞµÄ¶ÔÏó
+				//å®šä¹‰å¼‚æ­¥æ‰§è¡Œçš„å¯¹è±¡
 		    	AbTaskItem item1 = new AbTaskItem();
 				item1.callback = new AbTaskCallback() {
 
 					@Override
 					public void update() {
-						showToast("Ö´ĞĞÍê³É1");
+						showToast("æ‰§è¡Œå®Œæˆ1");
 					}
 
 					@Override
 					public void get() {
 			   		    try {
-			   		    	showToastInThread("¿ªÊ¼Ö´ĞĞ1");
+			   		    	showToastInThread("å¼€å§‹æ‰§è¡Œ1");
 			   		    	Thread.sleep(2000);
-			   		    	//ÏÂÃæĞ´ÒªÖ´ĞĞµÄ´úÂë£¬ÈçÏÂÔØÊı¾İ
+			   		    	//ä¸‹é¢å†™è¦æ‰§è¡Œçš„ä»£ç ï¼Œå¦‚ä¸‹è½½æ•°æ®
 			   		    } catch (Exception e) {
 			   		    }
 				  };
@@ -108,92 +108,92 @@ public class ThreadControlActivity extends AbActivity {
 
 					@Override
 					public void update() {
-						showToast("Ö´ĞĞÍê³É2");
+						showToast("æ‰§è¡Œå®Œæˆ2");
 						removeProgressDialog();
 					}
 
 					@Override
 					public void get() {
 			   		    try {
-			   		    	showToastInThread("¿ªÊ¼Ö´ĞĞ2");
+			   		    	showToastInThread("å¼€å§‹æ‰§è¡Œ2");
 			   		    	Thread.sleep(3000);
-			   		    	//ÏÂÃæĞ´ÒªÖ´ĞĞµÄ´úÂë£¬ÈçÏÂÔØÊı¾İ
+			   		    	//ä¸‹é¢å†™è¦æ‰§è¡Œçš„ä»£ç ï¼Œå¦‚ä¸‹è½½æ•°æ®
 			   		    } catch (Exception e) {
 			   		    }
 				  };
 				};
 				
-				//¿ªÊ¼Ö´ĞĞ
+				//å¼€å§‹æ‰§è¡Œ
 				mAbTaskQueue.execute(item1);
 				mAbTaskQueue.execute(item2);
 				
-				//Ç¿ÖÆÍ£Ö¹
+				//å¼ºåˆ¶åœæ­¢
 				//mAbTaskQueue.quit();
 				
-				//Ç¿ÖÆÍ£Ö¹Ç°ÃæµÄÇëÇó
+				//å¼ºåˆ¶åœæ­¢å‰é¢çš„è¯·æ±‚
 				//mAbTaskQueue.execute(item2,true);
 			}
         	
         });
         
         
-        //Ïß³Ì³Ø
+        //çº¿ç¨‹æ± 
         poolBtn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				//ÏÔÊ¾½ø¶È¿ò
+				//æ˜¾ç¤ºè¿›åº¦æ¡†
 				showProgressDialog();
 				AbTaskPool mAbTaskPool = AbTaskPool.getInstance();
-				//¶¨ÒåÒì²½Ö´ĞĞµÄ¶ÔÏó
+				//å®šä¹‰å¼‚æ­¥æ‰§è¡Œçš„å¯¹è±¡
 		    	final AbTaskItem item = new AbTaskItem();
 				item.callback = new AbTaskCallback() {
 
 					@Override
 					public void update() {
 						removeProgressDialog();
-						showToast("Ö´ĞĞÍê³É");
+						showToast("æ‰§è¡Œå®Œæˆ");
 					}
 
 					@Override
 					public void get() {
 			   		    try {
-			   		    	showToastInThread("¿ªÊ¼Ö´ĞĞ");
+			   		    	showToastInThread("å¼€å§‹æ‰§è¡Œ");
 			   		    	Thread.sleep(1000);
-			   		    	//ÏÂÃæĞ´ÒªÖ´ĞĞµÄ´úÂë£¬ÈçÏÂÔØÊı¾İ
+			   		    	//ä¸‹é¢å†™è¦æ‰§è¡Œçš„ä»£ç ï¼Œå¦‚ä¸‹è½½æ•°æ®
 			   		    } catch (Exception e) {
 			   		    }
 				  };
 				};
-				//¿ªÊ¼Ö´ĞĞ
+				//å¼€å§‹æ‰§è¡Œ
 				mAbTaskPool.execute(item);
 			}
         	
         });
         
-        //Òì²½ÈÎÎñ
+        //å¼‚æ­¥ä»»åŠ¡
         taskBtn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 				showProgressDialog();
 				AbAsyncTask task = new AbAsyncTask();
-				//¶¨ÒåÒì²½Ö´ĞĞµÄ¶ÔÏó
+				//å®šä¹‰å¼‚æ­¥æ‰§è¡Œçš„å¯¹è±¡
 		    	final AbTaskItem item = new AbTaskItem();
 				item.callback = new AbTaskCallback() {
 
 					@Override
 					public void update() {
 						removeProgressDialog();
-						showToast("Ö´ĞĞÍê³É");
+						showToast("æ‰§è¡Œå®Œæˆ");
 					}
 
 					@Override
 					public void get() {
 			   		    try {
-			   		    	showToastInThread("¿ªÊ¼Ö´ĞĞ");
+			   		    	showToastInThread("å¼€å§‹æ‰§è¡Œ");
 			   		    	Thread.sleep(3000);
-			   		    	//ÏÂÃæĞ´ÒªÖ´ĞĞµÄ´úÂë£¬ÈçÏÂÔØÊı¾İ
+			   		    	//ä¸‹é¢å†™è¦æ‰§è¡Œçš„ä»£ç ï¼Œå¦‚ä¸‹è½½æ•°æ®
 			   		    } catch (Exception e) {
 			   		    }
 				  };

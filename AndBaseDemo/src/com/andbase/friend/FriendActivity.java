@@ -43,7 +43,7 @@ public class FriendActivity extends AbActivity {
 		mSlidingPlayView.setPageLineLayoutBackground(R.drawable.page_layout_bg);
 		showProgressDialog();
 		
-		//¶ÔÓÃ»§µÄ²éÑ¯Ê¹ÓÃFrontiaUserQuery£¬ÊÇFrontiaQueryµÄ×ÓÀà¡£
+		//å¯¹ç”¨æˆ·çš„æŸ¥è¯¢ä½¿ç”¨FrontiaUserQueryï¼Œæ˜¯FrontiaQueryçš„å­ç±»ã€‚
         FrontiaUserQuery query = new FrontiaUserQuery();
         FrontiaUser.findUsers(query, new FrontiaUser.FetchUserListener() {
             @Override
@@ -83,8 +83,8 @@ public class FriendActivity extends AbActivity {
 									View arg1, int arg2, long arg3) {
 								
 								FrontiaUserDetail  mFrontiaUserDetail = mUserList.get(p*pageSize+arg2);
-								//Ìø×ªµ½ÁÄÌì½çÃæ
-								//ÅóÓÑÈ¦
+								//è·³è½¬åˆ°èŠå¤©ç•Œé¢
+								//æœ‹å‹åœˆ
 								Intent intent = new Intent(FriendActivity.this,ChatActivity.class);
 								intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 								intent.putExtra("ID", mFrontiaUserDetail.getId());

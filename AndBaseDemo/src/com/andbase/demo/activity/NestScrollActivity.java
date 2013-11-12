@@ -11,8 +11,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºNestScrollActivity
- * ÃèÊö£º¸÷ÖÖÇ¶Ì×
+ * åç§°ï¼šNestScrollActivity
+ * æè¿°ï¼šå„ç§åµŒå¥—
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -64,7 +64,7 @@ public class NestScrollActivity extends AbActivity {
 			
 			@Override
 			public void onClick(View v) {
-				showDialog("ÌáÊ¾", "°ÑÄãµÄListVie»»³ÉAbInnerListView¾Í¿ÉÒÔÁË", new DialogInterface.OnClickListener() {
+				showDialog("æç¤º", "æŠŠä½ çš„ListVieæ¢æˆAbInnerListViewå°±å¯ä»¥äº†", new DialogInterface.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
@@ -77,7 +77,7 @@ public class NestScrollActivity extends AbActivity {
 			
 			@Override
 			public void onClick(View v) {
-                 showDialog("ÌáÊ¾", "°ÑÄãµÄScrollView»»³ÉAbOuterScrollView¾Í¿ÉÒÔÁË", new DialogInterface.OnClickListener() {
+                 showDialog("æç¤º", "æŠŠä½ çš„ScrollViewæ¢æˆAbOuterScrollViewå°±å¯ä»¥äº†", new DialogInterface.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {

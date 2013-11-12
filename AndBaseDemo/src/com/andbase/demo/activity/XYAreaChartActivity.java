@@ -22,9 +22,9 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Copyright (c) 2011 All rights reserved¡£
- * Ãû³Æ£ºXYAreaChartActivity
- * ÃèÊö£ºÇøÓòÍ¼
+ * Copyright (c) 2011 All rights reservedã€‚
+ * åç§°ï¼šXYAreaChartActivity
+ * æè¿°ï¼šåŒºåŸŸå›¾
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -48,32 +48,32 @@ private MyApplication application;
 	    
         application = (MyApplication)abApplication;
         
-    	//ÒªÏÔÊ¾Í¼ĞÎµÄView
+    	//è¦æ˜¾ç¤ºå›¾å½¢çš„View
 		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.chart01);
-		//ËµÃ÷ÎÄ×Ö
-		String[] titles = new String[] { "µÚÒ»×é"};
-		//Êı¾İ
+		//è¯´æ˜æ–‡å­—
+		String[] titles = new String[] { "ç¬¬ä¸€ç»„"};
+		//æ•°æ®
 	    List<double[]> values = new ArrayList<double[]>();
-	    //Ã¿¸öÊı¾İµãµÄÑÕÉ«
+	    //æ¯ä¸ªæ•°æ®ç‚¹çš„é¢œè‰²
 	    List<int[]> colors = new ArrayList<int[]>();
-	    //Ã¿¸öÊı¾İµãµÄ¼òÒª ËµÃ÷
+	    //æ¯ä¸ªæ•°æ®ç‚¹çš„ç®€è¦ è¯´æ˜
 	    List<String[]> explains = new ArrayList<String[]>();
 	    
 	    values.add(new double[] { 14230, 0, 0, 0, 15900, 17200, 12030});
 	    
 	    colors.add(new int[] { Color.BLUE, Color.GREEN, Color.RED, Color.BLACK, Color.GRAY, Color.YELLOW, Color.BLUE});
 	    
-	    explains.add(new String[] { "À¶É«", "µã2", "µã3", "µã4", "", "µã6", ""});
+	    explains.add(new String[] { "è“è‰²", "ç‚¹2", "ç‚¹3", "ç‚¹4", "", "ç‚¹6", ""});
 	    
-	    //ÖùÌå»òÕßÏßÌõÑÕÉ«
+	    //æŸ±ä½“æˆ–è€…çº¿æ¡é¢œè‰²
 	    int[] mSeriescolors = new int[] { Color.rgb(153, 204, 0)};
-	    //´´½¨äÖÈ¾Æ÷
+	    //åˆ›å»ºæ¸²æŸ“å™¨
 	    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
 	    int length = mSeriescolors.length;
 	    for (int i = 0; i < length; i++) {
-	      //´´½¨SimpleSeriesRendererµ¥Ò»äÖÈ¾Æ÷
+	      //åˆ›å»ºSimpleSeriesRendererå•ä¸€æ¸²æŸ“å™¨
 	      XYSeriesRenderer r = new XYSeriesRenderer();
-	      //ÉèÖÃäÖÈ¾Æ÷ÑÕÉ«
+	      //è®¾ç½®æ¸²æŸ“å™¨é¢œè‰²
 	      r.setColor(mSeriescolors[i]);
 	      r.setFillBelowLine(true);
 	      r.setFillBelowLineColor(mSeriescolors[i]);
@@ -81,50 +81,50 @@ private MyApplication application;
 		  r.setPointStyle(PointStyle.CIRCLE);
 		  r.setLineWidth(1);
 		  r.setChartValuesTextSize(16);
-	      //¼ÓÈëµ½¼¯ºÏÖĞ
+	      //åŠ å…¥åˆ°é›†åˆä¸­
 	      renderer.addSeriesRenderer(r);
 	    }
-	    //µãµÄ´óĞ¡
+	    //ç‚¹çš„å¤§å°
 	    renderer.setPointSize(2f);
-	    //×ø±êÖá±êÌâÎÄ×Ö´óĞ¡
+	    //åæ ‡è½´æ ‡é¢˜æ–‡å­—å¤§å°
 		renderer.setAxisTitleTextSize(16);
-		//Í¼ĞÎ±êÌâÎÄ×Ö´óĞ¡
+		//å›¾å½¢æ ‡é¢˜æ–‡å­—å¤§å°
 		renderer.setChartTitleTextSize(25);
-		//ÖáÏßÉÏ±êÇ©ÎÄ×Ö´óĞ¡
+		//è½´çº¿ä¸Šæ ‡ç­¾æ–‡å­—å¤§å°
 		renderer.setLabelsTextSize(15);
-		//ËµÃ÷ÎÄ×Ö´óĞ¡
+		//è¯´æ˜æ–‡å­—å¤§å°
 		renderer.setLegendTextSize(15);
-		//Í¼±í±êÌâ
-	    renderer.setChartTitle("ÎÒÊÇÍ¼±íµÄ±êÌâ");
-	    //XÖá±êÌâ
-	    renderer.setXTitle("XÖá");
-	    //YÖá±êÌâ
-	    renderer.setYTitle("YÖá");
-	    //XÖá×îĞ¡×ø±êµã
+		//å›¾è¡¨æ ‡é¢˜
+	    renderer.setChartTitle("æˆ‘æ˜¯å›¾è¡¨çš„æ ‡é¢˜");
+	    //Xè½´æ ‡é¢˜
+	    renderer.setXTitle("Xè½´");
+	    //Yè½´æ ‡é¢˜
+	    renderer.setYTitle("Yè½´");
+	    //Xè½´æœ€å°åæ ‡ç‚¹
 	    renderer.setXAxisMin(0.5);
-	    //XÖá×î´ó×ø±êµã
+	    //Xè½´æœ€å¤§åæ ‡ç‚¹
 	    renderer.setXAxisMax(7.5);
-	    //YÖá×îĞ¡×ø±êµã
+	    //Yè½´æœ€å°åæ ‡ç‚¹
 	    renderer.setYAxisMin(0);
-	    //YÖá×î´ó×ø±êµã
+	    //Yè½´æœ€å¤§åæ ‡ç‚¹
 	    renderer.setYAxisMax(24000);
-	    //×ø±êÖáÑÕÉ«
+	    //åæ ‡è½´é¢œè‰²
 	    renderer.setAxesColor(Color.rgb(51, 181, 229));
 	    renderer.setXLabelsColor(Color.rgb(51, 181, 229));
 	    renderer.setYLabelsColor(0,Color.rgb(51, 181, 229));
-	    //ÉèÖÃÍ¼±íÉÏ±êÌâÓëXÖáÓëYÖáµÄËµÃ÷ÎÄ×ÖÑÕÉ«
+	    //è®¾ç½®å›¾è¡¨ä¸Šæ ‡é¢˜ä¸Xè½´ä¸Yè½´çš„è¯´æ˜æ–‡å­—é¢œè‰²
 	    renderer.setLabelsColor(Color.GRAY);
 	    //renderer.setGridColor(Color.GRAY);
-	    //ÉèÖÃ×ÖÌå¼Ó´Ö
+	    //è®¾ç½®å­—ä½“åŠ ç²—
 		renderer.setTextTypeface("sans_serif", Typeface.BOLD);
-		//ÉèÖÃÔÚÍ¼±íÉÏÊÇ·ñÏÔÊ¾Öµ±êÇ©
+		//è®¾ç½®åœ¨å›¾è¡¨ä¸Šæ˜¯å¦æ˜¾ç¤ºå€¼æ ‡ç­¾
 	    renderer.getSeriesRendererAt(0).setDisplayChartValues(true);
-	    //ÏÔÊ¾ÆÁÄ»¿É¼ûÈ¡ÇøµÄXY·Ö¸îÊı
+	    //æ˜¾ç¤ºå±å¹•å¯è§å–åŒºçš„XYåˆ†å‰²æ•°
 	    renderer.setXLabels(7);
 	    renderer.setYLabels(10);
-	    //X¿Ì¶È±êÇ©Ïà¶ÔXÖáÎ»ÖÃ
+	    //Xåˆ»åº¦æ ‡ç­¾ç›¸å¯¹Xè½´ä½ç½®
 	    renderer.setXLabelsAlign(Align.CENTER);
-	    //Y¿Ì¶È±êÇ©Ïà¶ÔYÖáÎ»ÖÃ
+	    //Yåˆ»åº¦æ ‡ç­¾ç›¸å¯¹Yè½´ä½ç½®
 	    renderer.setYLabelsAlign(Align.LEFT);
 	    renderer.setPanEnabled(true, false);
 	    renderer.setZoomEnabled(true);
@@ -132,33 +132,33 @@ private MyApplication application;
 	    renderer.setZoomRate(1.1f);
 	    renderer.setBarSpacing(0.5f);
 	    
-	    //±ê³ß¿ªÆô
+	    //æ ‡å°ºå¼€å¯
 	    renderer.setScaleLineEnabled(false);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò¸ß
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†é«˜
 	    renderer.setScaleRectHeight(60);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò¿í
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†å®½
 	    renderer.setScaleRectWidth(150);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò±³¾°É«
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†èƒŒæ™¯è‰²
 	    renderer.setScaleRectColor(Color.argb(150, 52, 182, 232));
 	    renderer.setScaleLineColor(Color.argb(175, 150, 150, 150));
 	    renderer.setScaleCircleRadius(35);
-	    //µÚÒ»ĞĞÎÄ×ÖµÄ´óĞ¡
+	    //ç¬¬ä¸€è¡Œæ–‡å­—çš„å¤§å°
 	    renderer.setExplainTextSize1(20);
-	    //µÚ¶şĞĞÎÄ×ÖµÄ´óĞ¡
+	    //ç¬¬äºŒè¡Œæ–‡å­—çš„å¤§å°
 	    renderer.setExplainTextSize2(20);
 	    
-	    //ÁÙ½çÏß
+	    //ä¸´ç•Œçº¿
 	    //double[] limit = new double[]{15000,12000,4000,9000};
 	    //renderer.setmYLimitsLine(limit);
 	    //int[] colorsLimit = new int[] { Color.rgb(100, 255,255),Color.rgb(100, 255,255),Color.rgb(0, 255, 255),Color.rgb(0, 255, 255) };
 	    //renderer.setmYLimitsLineColor(colorsLimit);
 	    
-	    //ÏÔÊ¾±í¸ñÏß
+	    //æ˜¾ç¤ºè¡¨æ ¼çº¿
 	    renderer.setShowGrid(true);
 	    
-	    //Èç¹ûÖµÊÇ0ÊÇ·ñÒªÏÔÊ¾
+	    //å¦‚æœå€¼æ˜¯0æ˜¯å¦è¦æ˜¾ç¤º
 	    renderer.setDisplayValue0(true);
-	    //´´½¨äÖÈ¾Æ÷Êı¾İÌî³äÆ÷
+	    //åˆ›å»ºæ¸²æŸ“å™¨æ•°æ®å¡«å……å™¨
 	    XYMultipleSeriesDataset mXYMultipleSeriesDataset = new XYMultipleSeriesDataset();
 	    for (int i = 0; i < length; i++) {
 	    	CategorySeries series = new CategorySeries(titles[i]);
@@ -167,17 +167,17 @@ private MyApplication application;
 	        String[] e = explains.get(i);
 	        int seriesLength = v.length;
 	        for (int k = 0; k < seriesLength; k++) {
-	    	  //ÉèÖÃÃ¿¸öµãµÄÑÕÉ«
+	    	  //è®¾ç½®æ¯ä¸ªç‚¹çš„é¢œè‰²
 	          series.add(v[k],c[k],e[k]);
 	        }
 	        mXYMultipleSeriesDataset.addSeries(series.toXYSeries());
 	    }
-	    //±³¾°
+	    //èƒŒæ™¯
 	    renderer.setApplyBackgroundColor(true);
 	    renderer.setBackgroundColor(Color.rgb(222, 222, 200));
 	    renderer.setMarginsColor(Color.rgb(222, 222, 200));
 	    
-	    //ÏßÍ¼
+	    //çº¿å›¾
 	    View chart = ChartFactory.getAreaChartView(this,mXYMultipleSeriesDataset,renderer,0.5f);
         linearLayout.addView(chart); 
 		

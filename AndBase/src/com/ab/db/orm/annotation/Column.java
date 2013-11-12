@@ -22,28 +22,28 @@ import java.lang.annotation.Target;
 // TODO: Auto-generated Javadoc
 /**
  * The Interface Column.
- * ±íÊ¾ÁĞ
+ * è¡¨ç¤ºåˆ—
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target( { java.lang.annotation.ElementType.FIELD })
 public @interface Column {
 	
 	/**
-	 * ÁĞÃû.
+	 * åˆ—å.
 	 *
 	 * @return the string
 	 */
 	public abstract String name();
 
 	/**
-	 * ÁĞÀàĞÍ.
+	 * åˆ—ç±»å‹.
 	 *
 	 * @return the string
 	 */
 	public abstract String type() default "";
 
 	/**
-	 * ³¤¶È.
+	 * é•¿åº¦.
 	 *
 	 * @return the int
 	 */

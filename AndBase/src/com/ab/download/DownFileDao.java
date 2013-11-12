@@ -34,7 +34,7 @@ public class DownFileDao extends AbBasicDBDao{
 	
 	/** The m context. */
 	public static Context mContext = null;
-	// ╣╔юЩ
+	// Е█∙Д╬▀
 	/** The m down file dao. */
 	public static DownFileDao mDownFileDao = null;
 
@@ -62,7 +62,7 @@ public class DownFileDao extends AbBasicDBDao{
 	}
 	
 	/**
-	 * ╩Ях║ря╬╜обть╣днд╪Ч╣дпео╒.
+	 * Х▌╥Е▐√Е╥╡Г╩▐Д╦▀Х╫╫Г └Ф√┤Д╩╤Г └Д©║Ф│╞.
 	 *
 	 * @param path the path
 	 * @return the down file
@@ -100,7 +100,7 @@ public class DownFileDao extends AbBasicDBDao{
 	}
 	
 	/**
-	 * ╠ё╢ФоъЁлря╬╜обть╣днд╪Чпео╒.
+	 * Д©²Е╜≤Г╨©Г╗▀Е╥╡Г╩▐Д╦▀Х╫╫Г └Ф√┤Д╩╤Д©║Ф│╞.
 	 *
 	 * @param mDownFile the m down file
 	 * @return the long
@@ -130,7 +130,7 @@ public class DownFileDao extends AbBasicDBDao{
 	}
 	
 	/**
-	 * й╣й╠╦ЭпбоъЁлря╬╜обть╣днд╪ЧЁ╓╤х.
+	 * Е╝·Ф≈╤Ф⌡╢Ф√╟Г╨©Г╗▀Е╥╡Г╩▐Д╦▀Х╫╫Г └Ф√┤Д╩╤И∙©Е╨╕.
 	 *
 	 * @param mDownFile the m down file
 	 * @return the long
@@ -156,7 +156,7 @@ public class DownFileDao extends AbBasicDBDao{
 	}
 		
 	/**
-	 * и╬ЁЩ╤тс╕╣добть╪гб╪.
+	 * Е┬═И≥╓Е╞╧Е╨■Г └Д╦▀Х╫╫Х╝╟Е╫∙.
 	 *
 	 * @param path the path
 	 * @return the long

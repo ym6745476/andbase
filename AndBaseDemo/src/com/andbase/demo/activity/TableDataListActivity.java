@@ -28,23 +28,23 @@ public class TableDataListActivity extends AbActivity {
 	
 	private MyApplication application;
 	/////////////////////////////////////////
-	//±í¸ñÄÚÈİÊı¾İÔ´
+	//è¡¨æ ¼å†…å®¹æ•°æ®æº
 	private List<String[]> contents;
-	//±í¸ñ±êÌâÊı¾İÔ´
+	//è¡¨æ ¼æ ‡é¢˜æ•°æ®æº
 	private String[] titles = null;
 	private AbTable table = null;
 	private ListView mListView = null;
 	private int[] cellTypes = null;
 	private int[] cellWidth = null;
 	private int[] rowHeight = null;
-	// (6)ĞĞÎÄ×Ö´óĞ¡£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+	// (6)è¡Œæ–‡å­—å¤§å°ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 	private int[] rowTextSize = null;
-	// (7)ĞĞÎÄ×ÖÑÕÉ«£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+	// (7)è¡Œæ–‡å­—é¢œè‰²ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 	private int[] rowTextColor = null;
-	// (8)±³¾°×ÊÔ´
+	// (8)èƒŒæ™¯èµ„æº
 	private int[] tableResource = null;
 	
-	// ±í¸ñµÄAdapter
+	// è¡¨æ ¼çš„Adapter
 	private AbTableArrayAdapter tableAdapter;
 	
 	///////////////////////////////////////////////
@@ -70,23 +70,23 @@ public class TableDataListActivity extends AbActivity {
 		
 		noView = LayoutInflater.from(this).inflate(R.layout.no_data, null);
 		
-		// (1)±êÌâÅäÖÃ
-		titles = new String[] { "±êÌâ1", "±êÌâ2", "±êÌâ3", "±êÌâ4","±êÌâ5"};
-		// (2)ÄÚÈİÁĞ±íÅäÖÃ
+		// (1)æ ‡é¢˜é…ç½®
+		titles = new String[] { "æ ‡é¢˜1", "æ ‡é¢˜2", "æ ‡é¢˜3", "æ ‡é¢˜4","æ ‡é¢˜5"};
+		// (2)å†…å®¹åˆ—è¡¨é…ç½®
 		contents = new ArrayList<String[]>();
-		// (3)ÁĞÀàĞÍÅäÖÃ
+		// (3)åˆ—ç±»å‹é…ç½®
 		cellTypes = new int[] { AbCellType.STRING, AbCellType.STRING, AbCellType.STRING, AbCellType.STRING,AbCellType.STRING};
-		// (4)ÁĞ¿íÅäÖÃ(%) ³¬¹ı100% ¿ÉÒÔºáÏò»¬¶¯
+		// (4)åˆ—å®½é…ç½®(%) è¶…è¿‡100% å¯ä»¥æ¨ªå‘æ»‘åŠ¨
 		cellWidth = new int[] {50,25,25,25,25};
-		// (5)ĞĞ¸ß£¨Ë÷Òı0£º±êÌâ¸ß£¬1£ºÄÚÈİÁĞ±í¸ß£©
+		// (5)è¡Œé«˜ï¼ˆç´¢å¼•0ï¼šæ ‡é¢˜é«˜ï¼Œ1ï¼šå†…å®¹åˆ—è¡¨é«˜ï¼‰
 		rowHeight = new int[] { 90, 80 };
-		// (6)ĞĞÎÄ×Ö´óĞ¡£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+		// (6)è¡Œæ–‡å­—å¤§å°ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 		rowTextSize = new int[] { 18, 15};
-		// (7)ĞĞÎÄ×ÖÑÕÉ«£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+		// (7)è¡Œæ–‡å­—é¢œè‰²ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 		rowTextColor = new int[] {Color.rgb(255, 255, 255),Color.rgb(113, 113, 113) };
-		// (8)±³¾°×ÊÔ´
+		// (8)èƒŒæ™¯èµ„æº
 		tableResource = new int[] {android.R.color.transparent,R.drawable.title_cell,android.R.color.transparent,R.drawable.content_cell};
-		// (9)±í¸ñÊµÌå
+		// (9)è¡¨æ ¼å®ä½“
 		table = AbTable.newAbTable(this,5); 
 		table.setTitles(titles);
 		table.setContents(contents);
@@ -97,14 +97,14 @@ public class TableDataListActivity extends AbActivity {
 		table.setTableResource(tableResource);
 		table.setRowTextColor(rowTextColor);
 		
-		// (10)TableAdapter¶ÔÏó
+		// (10)TableAdapterå¯¹è±¡
 		tableAdapter = new AbTableArrayAdapter(TableDataListActivity.this, table);
 		// (12)ListView
 		mListView = (ListView)findViewById(R.id.mListView);
-		// (11)ÉèÖÃAdapter
+		// (11)è®¾ç½®Adapter
 		mListView.setAdapter(tableAdapter);
-		// -------------- ±í¸ñ¿Ø¼ş-------end------------------
-		// µã»÷ÊÂ¼ş
+		// -------------- è¡¨æ ¼æ§ä»¶-------end------------------
+		// ç‚¹å‡»äº‹ä»¶
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -120,7 +120,7 @@ public class TableDataListActivity extends AbActivity {
 	
 	public void loadData(){
 		
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		showProgressDialog();
 		final AbTaskItem item = new AbTaskItem();
 		item.callback = new AbTaskCallback() {

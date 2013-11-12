@@ -42,52 +42,52 @@ public class AbLevelChart extends AbLevelAbstractChart {
 	/** The m renderer. */
 	protected AbLevelSeriesRenderer mRenderer;
 	
-	/** µÈ¼¶Í¼ĞÎµÄ¿í. */
+	/** ç­‰çº§å›¾å½¢çš„å®½. */
 	private int measureWidth;
 	
-	/** µÈ¼¶Í¼ĞÎµÄ¸ß. */
+	/** ç­‰çº§å›¾å½¢çš„é«˜. */
 	private int measureHeight;
 	
-	/** ¸÷µÈ¼¶¶ÎµÄÑÕÉ«. */
+	/** å„ç­‰çº§æ®µçš„é¢œè‰². */
 	private int [] color = null;
 	
-	/** ¼ÙÈç Ã¿¶ÎµÄ°Ù·Ö±È  2  3  2  1  1  1. */
+	/** å‡å¦‚ æ¯æ®µçš„ç™¾åˆ†æ¯”  2  3  2  1  1  1. */
 	private float [] part = null;
 	
-	/** ¸÷µÈ¼¶¶ÎµÄÖµ. */
+	/** å„ç­‰çº§æ®µçš„å€¼. */
 	private float [] partValue = null;
 	
-	/** µ±Ç°Öµ. */
+	/** å½“å‰å€¼. */
 	private String textValue = null;
 	
-	/** µ±Ç°ÖµÃèÊö. */
+	/** å½“å‰å€¼æè¿°. */
 	private String textDesc = null;
 	
-	/** µ±Ç°ÖµµÄµÈ¼¶. */
+	/** å½“å‰å€¼çš„ç­‰çº§. */
 	private int textlevelIndex = 0;
 	
-	/** µ±Ç°ÖµÎÄ×Ö´óĞ¡. */
+	/** å½“å‰å€¼æ–‡å­—å¤§å°. */
 	private int textLevelSize = 30;
 	
-	/** µ±Ç°ÖµÎÄ×ÖÓë¶¥²¿µÄ¾àÀë. */
+	/** å½“å‰å€¼æ–‡å­—ä¸é¡¶éƒ¨çš„è·ç¦». */
 	private int marginTop = 30;
 	
-	/** Ö¸Ê¾Èı½ÇĞÎµÄ¿í¶È. */
+	/** æŒ‡ç¤ºä¸‰è§’å½¢çš„å®½åº¦. */
 	private int arrowWidth  = 20;
 	
-	/** Ö¸Ê¾Èı½ÇĞÎµÄ¸ß¶È. */
+	/** æŒ‡ç¤ºä¸‰è§’å½¢çš„é«˜åº¦. */
 	private int arrowHeight = 10;
 	
-	/** µÈ¼¶ÌõµÄ¸ß¶È. */
+	/** ç­‰çº§æ¡çš„é«˜åº¦. */
 	private int levelHeight = 20;
 	
-	/** Ö¸Ê¾Èı½ÇĞÎÓëÆäËû¼ä¾à. */
+	/** æŒ‡ç¤ºä¸‰è§’å½¢ä¸å…¶ä»–é—´è·. */
 	private int arrowMarginTop = 10;
 	
-	/** µÈ¼¶×ø±êÎÄ×Ö´óĞ¡. */
+	/** ç­‰çº§åæ ‡æ–‡å­—å¤§å°. */
 	private int partTextSize = 15;
 	
-	/** µÈ¼¶ËµÃ÷ÎÄ×Ö´óĞ¡. */
+	/** ç­‰çº§è¯´æ˜æ–‡å­—å¤§å°. */
 	private int textDescSize = 22;
 
 	/**
@@ -122,7 +122,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 	}
 
 	/**
-	 * ÃèÊö£º»æÖÆ.
+	 * æè¿°ï¼šç»˜åˆ¶.
 	 *
 	 * @param canvas the canvas
 	 * @param x the x
@@ -137,50 +137,50 @@ public class AbLevelChart extends AbLevelAbstractChart {
 	public void draw(Canvas canvas, int x, int y,int measureWidth,int measureHeight,int screenWidth, int screenHeight,
 			Paint paint) {
 		
-		//¸÷µÈ¼¶¶ÎµÄÑÕÉ«
+		//å„ç­‰çº§æ®µçš„é¢œè‰²
 		color = mRenderer.getColor();
-		//¼ÙÈç Ã¿¶ÎµÄ°Ù·Ö±È  2  3  2  1  1  1
+		//å‡å¦‚ æ¯æ®µçš„ç™¾åˆ†æ¯”  2  3  2  1  1  1
 		part = mRenderer.getPart();
-		//¸÷µÈ¼¶¶ÎµÄÖµ
+		//å„ç­‰çº§æ®µçš„å€¼
 		partValue = mRenderer.getPartValue();
-		//µ±Ç°Öµ
+		//å½“å‰å€¼
 		textValue = mRenderer.getTextValue();
-		//µ±Ç°ÖµÃèÊö
+		//å½“å‰å€¼æè¿°
 		textDesc = mRenderer.getTextDesc();
-		//µ±Ç°ÖµµÄµÈ¼¶
+		//å½“å‰å€¼çš„ç­‰çº§
 		textlevelIndex = mRenderer.getTextlevelIndex();
-		//µ±Ç°ÖµÎÄ×Ö´óĞ¡
+		//å½“å‰å€¼æ–‡å­—å¤§å°
 		textLevelSize = mRenderer.getTextLevelSize();
 		textLevelSize = AbViewUtil.resizeTextSize(screenWidth,screenHeight, textLevelSize);
-		//µ±Ç°ÖµÎÄ×ÖÓë¶¥²¿µÄ¾àÀë
+		//å½“å‰å€¼æ–‡å­—ä¸é¡¶éƒ¨çš„è·ç¦»
 		marginTop = mRenderer.getMarginTop();
-		//Ö¸Ê¾Èı½ÇĞÎµÄ¿í¶È
+		//æŒ‡ç¤ºä¸‰è§’å½¢çš„å®½åº¦
 		arrowWidth  = mRenderer.getArrowWidth();
-		//Ö¸Ê¾Èı½ÇĞÎµÄ¸ß¶È
+		//æŒ‡ç¤ºä¸‰è§’å½¢çš„é«˜åº¦
 		arrowHeight = mRenderer.getArrowHeight();
-		//µÈ¼¶ÌõµÄ¸ß¶È
+		//ç­‰çº§æ¡çš„é«˜åº¦
 		levelHeight = mRenderer.getLevelHeight();
-		//Ö¸Ê¾Èı½ÇĞÎÓëÆäËû¼ä¾à
+		//æŒ‡ç¤ºä¸‰è§’å½¢ä¸å…¶ä»–é—´è·
 		arrowMarginTop = mRenderer.getArrowMarginTop();
-		//µÈ¼¶Ìõ×ø±êÎÄ×Ö´óĞ¡
+		//ç­‰çº§æ¡åæ ‡æ–‡å­—å¤§å°
 		partTextSize = mRenderer.getPartTextSize();
 		textDescSize = mRenderer.getTextDescSize();
-		//»ñÈ¡ÖµµÄÎÄ±¾µÄ¸ß¶È
+		//è·å–å€¼çš„æ–‡æœ¬çš„é«˜åº¦
         TextPaint mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setTypeface(Typeface.DEFAULT_BOLD);
         mTextPaint.setTextSize(textLevelSize);
         FontMetrics fm  = mTextPaint.getFontMetrics();
-        //µÃµ½ĞĞ¸ß
+        //å¾—åˆ°è¡Œé«˜
         int textHeight = (int)Math.ceil(fm.descent - fm.ascent)+2-20;
         int textWidth = (int)AbGraphical.getStringWidth(textValue,mTextPaint);
         
         int left = (screenWidth-measureWidth)/2;
 		
-        //»æÖÆlevelÌõ
+        //ç»˜åˆ¶levelæ¡
 		int topLevel = marginTop+textHeight+arrowHeight+arrowMarginTop;
 		RectF mLevelRect = new RectF(left,topLevel ,left+measureWidth,topLevel+levelHeight);
 		paint.setStyle(Paint.Style.FILL);  
-        //ÉèÖÃ»­±ÊµÄ¾â³İĞ§¹û  
+        //è®¾ç½®ç”»ç¬”çš„é”¯é½¿æ•ˆæœ  
 		paint.setAntiAlias(true);
 		paint.setStrokeWidth(2);
 		paint.setColor(Color.rgb(228, 228, 228));
@@ -201,7 +201,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 				mLevelRectPart = new RectF(sumLeft+1,topLevel ,sumRight,topLevel+levelHeight);
 			}
 			paint.setColor(color[i]);
-			//µ±Ç°µÄÖµ
+			//å½“å‰çš„å€¼
 			if(textlevelIndex == i){
 				
 				paint.setFlags(Paint.ANTI_ALIAS_FLAG);
@@ -220,7 +220,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 				path1.close();
 				canvas.drawPath(path1, paint);
 				
-				//»æÖÆµÈ¼¶ÌõÏÂ·½µÄµ¹Èı½Ç
+				//ç»˜åˆ¶ç­‰çº§æ¡ä¸‹æ–¹çš„å€’ä¸‰è§’
 				paint.setColor(Color.rgb(227, 227, 227));  
 				paint.setStyle(Paint.Style.FILL);  
 				Path path2 = new Path();  
@@ -230,7 +230,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 				path2.close();
 				canvas.drawPath(path2, paint);
 				
-				//»æÖÆµÈ¼¶ÌõÏÂ·½µÄÎÄ×ÖÃèÊö
+				//ç»˜åˆ¶ç­‰çº§æ¡ä¸‹æ–¹çš„æ–‡å­—æè¿°
 				int topDesc = marginTop+textHeight+2*arrowHeight+2*arrowMarginTop+levelHeight;
 				RectF mLevelDescRect = new RectF(center-mRenderer.getTextRectWidth()/2,topDesc ,center+mRenderer.getTextRectWidth()/2,topDesc+mRenderer.getTextRectHeight());
 				canvas.drawRoundRect(mLevelDescRect,5, 5, paint);
@@ -240,17 +240,17 @@ public class AbLevelChart extends AbLevelAbstractChart {
 				mTextPaint.setTypeface(Typeface.DEFAULT_BOLD);
 		        mTextPaint.setTextSize(textDescSize);
 		        FontMetrics textDescFm  = mTextPaint.getFontMetrics();
-		        //µÃµ½ĞĞ¸ß
+		        //å¾—åˆ°è¡Œé«˜
 		        int textDescHeight = (int)Math.ceil(textDescFm.descent - textDescFm.ascent)+2;
 		        int textDescWidth = (int)AbGraphical.getStringWidth(textDesc,mTextPaint);
 				canvas.drawText(textDesc,center-textDescWidth/2,topDesc+20+((mRenderer.getTextRectHeight()-textDescHeight)/2),paint);
 				paint.setColor(color[i]);
 				
 			}
-			//»æÖÆµÈ¼¶¶Î
+			//ç»˜åˆ¶ç­‰çº§æ®µ
 			canvas.drawRoundRect(mLevelRectPart, 1, 1, paint);
 			
-			//»æÖÆ¶Î×ø±ê
+			//ç»˜åˆ¶æ®µåæ ‡
 			if(partValue!=null && partValue.length == color.length){
 				paint.setTextSize(partTextSize);
 		        mTextPaint.setTextSize(partTextSize);

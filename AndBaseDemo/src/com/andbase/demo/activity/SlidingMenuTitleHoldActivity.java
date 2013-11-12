@@ -18,12 +18,12 @@ public class SlidingMenuTitleHoldActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//Ê¹ÓÃÏµÍ³±êÌâÀ¸Î»ÖÃ£¬ÎªÁË·ÅÈë×Ô¶¨ÒåµÄ±êÌâÀ¸
+		//ä½¿ç”¨ç³»ç»Ÿæ ‡é¢˜æ ä½ç½®ï¼Œä¸ºäº†æ”¾å…¥è‡ªå®šä¹‰çš„æ ‡é¢˜æ 
 		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);  
 		setContentView(R.layout.sliding_menu_content);
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title_bar);  
 		
-		//×Ô¶¨ÒåµÄ±êÌâÀ¸
+		//è‡ªå®šä¹‰çš„æ ‡é¢˜æ 
 		AbTitleBar mAbTitleBar = new AbTitleBar(this);
 		mAbTitleBar.setTitleText(R.string.sliding_menu_name);
 		mAbTitleBar.setLogo(R.drawable.button_selector_back);
@@ -32,19 +32,19 @@ public class SlidingMenuTitleHoldActivity extends FragmentActivity {
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
-		//¼Óµ½ÏµÍ³±êÌâÀ¸Î»ÖÃÉÏ
+		//åŠ åˆ°ç³»ç»Ÿæ ‡é¢˜æ ä½ç½®ä¸Š
 		LinearLayout titleBarLinearLayout = (LinearLayout)this.findViewById(R.id.titleBar);
 		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		
 		titleBarLinearLayout.addView(mAbTitleBar,layoutParamsFF);
 		
-        //Ö÷ÊÓÍ¼µÄFragmentÌí¼Ó
+        //ä¸»è§†å›¾çš„Fragmentæ·»åŠ 
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, new Fragment1())
 		.commit();
 
-		//SlidingMenuµÄÅäÖÃ
+		//SlidingMenuçš„é…ç½®
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
@@ -54,7 +54,7 @@ public class SlidingMenuTitleHoldActivity extends FragmentActivity {
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
-		//menuÊÓÍ¼µÄFragmentÌí¼Ó
+		//menuè§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()

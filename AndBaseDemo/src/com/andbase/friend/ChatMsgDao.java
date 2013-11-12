@@ -7,10 +7,10 @@ import com.andbase.db.DBInsideHelper;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºChatMsgDao.java 
- * ÃèÊö£ºChatMsgµÄ´æ´¢ÊµÏÖÀà
+ * åç§°ï¼šChatMsgDao.java 
+ * æè¿°ï¼šChatMsgçš„å­˜å‚¨å®ç°ç±»
  * @author zhaoqp
- * @date£º2013-7-31 ÏÂÎç4:12:36
+ * @dateï¼š2013-7-31 ä¸‹åˆ4:12:36
  * @version v1.0
  */
 public class ChatMsgDao extends AbDBDaoImpl<ChatMsg> {

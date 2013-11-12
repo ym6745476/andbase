@@ -37,10 +37,10 @@ public class PullToRefreshViewActivity extends AbActivity {
         mAbTitleBar.setLogoLine(R.drawable.line);
         
         mAbTaskQueue = AbTaskQueue.getInstance();
-	    //»ñÈ¡ListView¶ÔÏó
+	    //è·å–ListViewå¯¹è±¡
         mAbPullView = (AbPullView)this.findViewById(R.id.mPullView);
         textView = new TextView(this);
-        textView.setText("ÏÂÀ­¿´¿´°É");
+        textView.setText("ä¸‹æ‹‰çœ‹çœ‹å§");
         textView.setGravity(Gravity.CENTER);
         textView.setLayoutParams(layoutParamsFF);
         textView.setPadding(0, 100, 0, 100);
@@ -48,7 +48,7 @@ public class PullToRefreshViewActivity extends AbActivity {
         
     	showProgressDialog();
 
-    	//¶¨Òå²éÑ¯µÄÊÂ¼ş
+    	//å®šä¹‰æŸ¥è¯¢çš„äº‹ä»¶
     	final AbTaskItem item = new AbTaskItem();
 		item.callback = new AbTaskCallback() {
 
@@ -56,7 +56,7 @@ public class PullToRefreshViewActivity extends AbActivity {
 			public void update() {
 				removeProgressDialog();
 				mAbPullView.stopRefresh();
-				textView.setText("±ğÈË¶¼ËµÎÒ±äÁË"+new Random().nextInt(100));
+				textView.setText("åˆ«äººéƒ½è¯´æˆ‘å˜äº†"+new Random().nextInt(100));
 			}
 
 			@Override
@@ -78,7 +78,7 @@ public class PullToRefreshViewActivity extends AbActivity {
 			
 		});
 		
-    	//µÚÒ»´ÎÏÂÔØÊı¾İ
+    	//ç¬¬ä¸€æ¬¡ä¸‹è½½æ•°æ®
 		mAbTaskQueue.execute(item);
 	    
     }

@@ -31,10 +31,10 @@ import android.widget.ListView;
 public class AbViewUtil {
 	
 	/**
-	 * ÃèÊö£ºÖØÖÃAbsListViewµÄ¸ß¶È.
-	 * item µÄ×îÍâ²ã²¼¾ÖÒªÓÃ RelativeLayout,Èç¹û¼ÆËãµÄ²»×¼£¬¾ÍÎªRelativeLayoutÖ¸¶¨Ò»¸ö¸ß¶È
+	 * æè¿°ï¼šé‡ç½®AbsListViewçš„é«˜åº¦.
+	 * item çš„æœ€å¤–å±‚å¸ƒå±€è¦ç”¨ RelativeLayout,å¦‚æœè®¡ç®—çš„ä¸å‡†ï¼Œå°±ä¸ºRelativeLayoutæŒ‡å®šä¸€ä¸ªé«˜åº¦
 	 * @param absListView the abs list view
-	 * @param lineNumber Ã¿ĞĞ¼¸¸ö  ListViewÒ»ĞĞÒ»¸öitem
+	 * @param lineNumber æ¯è¡Œå‡ ä¸ª  ListViewä¸€è¡Œä¸€ä¸ªitem
 	 * @param verticalSpace the vertical space
 	 */
 	public static void setAbsListViewHeight(AbsListView absListView,int lineNumber,int verticalSpace) {
@@ -85,10 +85,10 @@ public class AbViewUtil {
 	}
 	
 	/**
-	 * ²âÁ¿Õâ¸öview£¬×îºóÍ¨¹ıgetMeasuredWidth()»ñÈ¡¿í¶ÈºÍ¸ß¶È.
+	 * æµ‹é‡è¿™ä¸ªviewï¼Œæœ€åé€šè¿‡getMeasuredWidth()è·å–å®½åº¦å’Œé«˜åº¦.
 	 *
-	 * @param v Òª²âÁ¿µÄview
-	 * @return ²âÁ¿¹ıµÄview
+	 * @param v è¦æµ‹é‡çš„view
+	 * @return æµ‹é‡è¿‡çš„view
 	 */
 	public static void measureView(View v){
 		if(v == null){
@@ -100,7 +100,7 @@ public class AbViewUtil {
 	}
 	
 	/**
-	 * ÃèÊö£º¸ù¾İ·Ö±æÂÊ»ñµÃ×ÖÌå´óĞ¡.
+	 * æè¿°ï¼šæ ¹æ®åˆ†è¾¨ç‡è·å¾—å­—ä½“å¤§å°.
 	 *
 	 * @param screenWidth the screen width
 	 * @param screenHeight the screen height
@@ -120,7 +120,7 @@ public class AbViewUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºdip×ª»»Îªpx
+	 * æè¿°ï¼šdipè½¬æ¢ä¸ºpx
 	 * @param context
 	 * @param dipValue
 	 * @return
@@ -133,7 +133,7 @@ public class AbViewUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºpx×ª»»Îªdip
+	 * æè¿°ï¼špxè½¬æ¢ä¸ºdip
 	 * @param context
 	 * @param pxValue
 	 * @return

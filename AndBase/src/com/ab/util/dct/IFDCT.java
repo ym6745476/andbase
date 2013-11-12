@@ -9,7 +9,7 @@ public class IFDCT  implements DCT {
 					blk[i][j] = ablk[i][j];
 				}
 			}
-			// 对列做IDCT
+			// 瀵瑰垪鍋欼DCT
 			for (int j = 0; j <= 7; j++) {
 				double[] tmp = new double[16];
 				// first step
@@ -48,7 +48,7 @@ public class IFDCT  implements DCT {
 				blk[6][j] = tmp[1] - tmp[6];
 				blk[7][j] = tmp[0] - tmp[7];
 			}
-			// 对行做IDCT
+			// 瀵硅鍋欼DCT
 			for (int i = 0; i <= 7; i++) {
 				double[] tmp = new double[16];
 				// first step

@@ -22,13 +22,13 @@ package com.ab.global;
  */
 public class AbAppData {
 	
-	/** ÈÕÖ¾¿ª¹Ø. */
+	/** æ—¥å¿—å¼€å…³. */
 	public static  boolean DEBUG = true;
 	
-	/** ÐÔÄÜ²âÊÔ. */
+	/** æ€§èƒ½æµ‹è¯•. */
 	public static boolean mMonitorOpened = false;
 	
-	/** ÆðÊ¼Ö´ÐÐÊ±¼ä. */
+	/** èµ·å§‹æ‰§è¡Œæ—¶é—´. */
 	public static long startLogTimeInMillis = 0;
 
 }

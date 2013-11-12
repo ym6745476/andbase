@@ -14,8 +14,8 @@ import com.ab.view.sliding.AbSlidingButton;
 
 /**
  * Copyright (c) 2011 All rights reserved 
- * Ãû³Æ£ºMyListViewAdapter 
- * ÃèÊö£ºListView×Ô¶¨ÒåAdapterÀı×Ó
+ * åç§°ï¼šMyListViewAdapter 
+ * æè¿°ï¼šListViewè‡ªå®šä¹‰Adapterä¾‹å­
  * @author zhaoqp
  * @date 2011-11-8
  * @version
@@ -23,22 +23,22 @@ import com.ab.view.sliding.AbSlidingButton;
 public class CheckListViewAdapter extends BaseAdapter{
   
 	private Context mContext;
-    //µ¥ĞĞµÄ²¼¾Ö
+    //å•è¡Œçš„å¸ƒå±€
     private int mResource;
-    //ÁĞ±íÕ¹ÏÖµÄÊı¾İ
+    //åˆ—è¡¨å±•ç°çš„æ•°æ®
     private List<? extends Map<String, ?>> mData;
-    //MapÖĞµÄkey
+    //Mapä¸­çš„key
     private String[] mFrom;
-    //viewµÄid
+    //viewçš„id
     private int[] mTo;
     
    /**
-    * ¹¹Ôì·½·¨
+    * æ„é€ æ–¹æ³•
     * @param context
-    * @param data ÁĞ±íÕ¹ÏÖµÄÊı¾İ
-    * @param resource µ¥ĞĞµÄ²¼¾Ö
-    * @param from MapÖĞµÄkey
-    * @param to viewµÄid
+    * @param data åˆ—è¡¨å±•ç°çš„æ•°æ®
+    * @param resource å•è¡Œçš„å¸ƒå±€
+    * @param from Mapä¸­çš„key
+    * @param to viewçš„id
     */
     public CheckListViewAdapter(Context context, List<? extends Map<String, ?>> data,
             int resource, String[] from, int[] to){
@@ -68,28 +68,28 @@ public class CheckListViewAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent){
     	  final ViewHolder holder;
           if(convertView == null){
-	          //Ê¹ÓÃ×Ô¶¨ÒåµÄlist_items×÷ÎªLayout
+	          //ä½¿ç”¨è‡ªå®šä¹‰çš„list_itemsä½œä¸ºLayout
 	          convertView = LayoutInflater.from(mContext).inflate(mResource, parent, false);
-	          //Ê¹ÓÃ¼õÉÙfindViewµÄ´ÎÊı
+	          //ä½¿ç”¨å‡å°‘findViewçš„æ¬¡æ•°
 			  holder = new ViewHolder();
 			  holder.itemsTitle = ((TextView) convertView.findViewById(mTo[0]));
 			  holder.itemsText = ((TextView) convertView.findViewById(mTo[1]));
 			  holder.itemsCheck = ((AbSlidingButton) convertView.findViewById(mTo[2])) ;
-			  //ÉèÖÃ±ê¼Ç
+			  //è®¾ç½®æ ‡è®°
 			  convertView.setTag(holder);
           }else{
         	  holder = (ViewHolder) convertView.getTag();
           }
-	      //ÉèÖÃÊı¾İ
+	      //è®¾ç½®æ•°æ®
           final Map<String, ?> dataSet = mData.get(position);
           if (dataSet == null) {
               return null;
           }
-          //»ñÈ¡¸ÃĞĞÊı¾İ
+          //è·å–è¯¥è¡Œæ•°æ®
           final Object data0 = dataSet.get(mFrom[0]);
           final Object data1 = dataSet.get(mFrom[1]);
           final Object data2 = dataSet.get(mFrom[2]);
-          //ÉèÖÃÊı¾İµ½View
+          //è®¾ç½®æ•°æ®åˆ°View
           holder.itemsTitle.setText(data0.toString());
           holder.itemsText.setText(data1.toString());
           holder.itemsCheck.setChecked((Boolean)data2, false, false);
@@ -97,7 +97,7 @@ public class CheckListViewAdapter extends BaseAdapter{
     }
     
     /**
-	 * ViewHolderÀà
+	 * ViewHolderç±»
 	 */
 	static class ViewHolder {
 		TextView itemsTitle;

@@ -27,24 +27,24 @@ import android.widget.Toast;
 import com.ab.view.listener.AbOnItemClickListener;
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º±í¸ñ¿Ø¼şÊµÌåÀà
- *  <p>(1)±êÌâÅäÖÃ
-	<p>titles = new String[] { "±êÌâ1", "±êÌâ2", "±êÌâ3", "±êÌâ4","±êÌâ5"};
-	<p>(2)ÄÚÈİÁĞ±íÅäÖÃ(³õÊ¼Îª¿ÕµÄ)
+ * æè¿°ï¼šè¡¨æ ¼æ§ä»¶å®ä½“ç±»
+ *  <p>(1)æ ‡é¢˜é…ç½®
+	<p>titles = new String[] { "æ ‡é¢˜1", "æ ‡é¢˜2", "æ ‡é¢˜3", "æ ‡é¢˜4","æ ‡é¢˜5"};
+	<p>(2)å†…å®¹åˆ—è¡¨é…ç½®(åˆå§‹ä¸ºç©ºçš„)
 	<p>contents = new ArrayList<String[]>();
-	<p>(3)ÁĞÀàĞÍÅäÖÃ£¨²ÎÕÕAbCellType£©
+	<p>(3)åˆ—ç±»å‹é…ç½®ï¼ˆå‚ç…§AbCellTypeï¼‰
 	<p>cellTypes = new int[] { AbCellType.STRING, AbCellType.STRING, AbCellType.STRING, AbCellType.STRING,AbCellType.STRING};
-	<p>(4)ÁĞ¿íÅäÖÃ(%) ³¬¹ı100% ¿ÉÒÔºáÏò»¬¶¯
+	<p>(4)åˆ—å®½é…ç½®(%) è¶…è¿‡100% å¯ä»¥æ¨ªå‘æ»‘åŠ¨
 	<p>cellWidth = new int[] {20,50,10,20,50};
-	<p>(5)ĞĞ¸ß£¨Ë÷Òı0£º±êÌâ¸ß£¬1£ºÄÚÈİÁĞ±í¸ß£©
+	<p>(5)è¡Œé«˜ï¼ˆç´¢å¼•0ï¼šæ ‡é¢˜é«˜ï¼Œ1ï¼šå†…å®¹åˆ—è¡¨é«˜ï¼‰
 	<p>rowHeight = new int[] { 35, 35 };
-	<p>(6)ĞĞÎÄ×Ö´óĞ¡£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+	<p>(6)è¡Œæ–‡å­—å¤§å°ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 	<p>rowTextSize = new int[] { 15, 12};
-	<p>(7)ĞĞÎÄ×ÖÑÕÉ«£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+	<p>(7)è¡Œæ–‡å­—é¢œè‰²ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 	<p>rowTextColor = new int[] {Color.rgb(255, 255, 255),Color.rgb(113, 113, 113) };
-	<p>(8)±³¾°×ÊÔ´£¨Ë÷Òı0±êÌâĞĞ±³¾°£¬1±êÌâµ¥Ôª¸ñ±³¾°£¬2ÄÚÈİÁĞ±íĞĞ±³¾°¡£3±í¸ñÄÚÈİµ¥Ôª¸ñ±³¾°£©
+	<p>(8)èƒŒæ™¯èµ„æºï¼ˆç´¢å¼•0æ ‡é¢˜è¡ŒèƒŒæ™¯ï¼Œ1æ ‡é¢˜å•å…ƒæ ¼èƒŒæ™¯ï¼Œ2å†…å®¹åˆ—è¡¨è¡ŒèƒŒæ™¯ã€‚3è¡¨æ ¼å†…å®¹å•å…ƒæ ¼èƒŒæ™¯ï¼‰
 	<p>tableResource = new int[] {android.R.color.transparent,R.drawable.title_cell,android.R.color.transparent,R.drawable.content_cell};
-	<p> (9)±í¸ñÊµÌå£¨Í¨¹ınewAbTableÊµÀı»¯²¢³õÊ¼»¯ÁĞÊı£¬¿É×Ô¶¯Íê³ÉAbTableµÄÅäÖÃ£©
+	<p> (9)è¡¨æ ¼å®ä½“ï¼ˆé€šè¿‡newAbTableå®ä¾‹åŒ–å¹¶åˆå§‹åŒ–åˆ—æ•°ï¼Œå¯è‡ªåŠ¨å®ŒæˆAbTableçš„é…ç½®ï¼‰
 	<p>table = AbTable.newAbTable(this,5); 
 	<p>table.setTitles(titles);
 	<p>table.setContents(contents);
@@ -54,9 +54,9 @@ import com.ab.view.listener.AbOnItemClickListener;
 	<p>table.setRowTextSize(rowTextSize);
 	<p>table.setTableResource(tableResource);
 	<p>table.setRowTextColor(rowTextColor);
-	<p>(10)AbTableArrayAdapter¶ÔÏó
+	<p>(10)AbTableArrayAdapterå¯¹è±¡
 	<p>mAbTableArrayAdapter = new AbTableArrayAdapter(this, table);
-	<p>(12)ListView£¨²¼¾Ö²ÎÕÕ£©£º
+	<p>(12)ListViewï¼ˆå¸ƒå±€å‚ç…§ï¼‰ï¼š
 	<p> &nbsp;&nbsp; < HorizontalScrollView
     <p> &nbsp;&nbsp;&nbsp;&nbsp; android:id="@+id/horView"
     <p> &nbsp;&nbsp;&nbsp;&nbsp; android:layout_width="fill_parent"
@@ -72,45 +72,45 @@ import com.ab.view.listener.AbOnItemClickListener;
     <p> &nbsp;&nbsp;&nbsp;&nbsp;  < /ListView>
     <p> &nbsp;&nbsp;< /HorizontalScrollView>
 	<p>mListView = (ListView)findViewById(R.id.mListView);
-	<p>(11)ÉèÖÃAdapter
+	<p>(11)è®¾ç½®Adapter
 	<p>mListView.setAdapter(tableAdapter);
  * @author zhaoqp
- * @date£º2013-1-28 ÏÂÎç3:54:41
+ * @dateï¼š2013-1-28 ä¸‹åˆ3:54:41
  * @version v1.0
  */
 public class AbTable {
 	
-	/** AbTableÊµÀı. */
+	/** AbTableå®ä¾‹. */
 	private static AbTable mAbTable = null;
 	
-	/** ÆÁÄ»µÄ¿í. */
+	/** å±å¹•çš„å®½. */
 	private static int mScreenWidth = 0;
 	
-	/** ÆÁÄ»µÄ¸ß. */
+	/** å±å¹•çš„é«˜. */
 	private static int mScreenHeight = 0;
 	
-	/** ±êÌâÊı×é. */
+	/** æ ‡é¢˜æ•°ç»„. */
 	private String[] titles;
 	
-	/** ÄÚÈİÁĞ±íÊı×é. */
+	/** å†…å®¹åˆ—è¡¨æ•°ç»„. */
 	private List<String[]> contents;
 	
-	/** µ¥Ôª¸ñÀàĞÍÊı×é. */
+	/** å•å…ƒæ ¼ç±»å‹æ•°ç»„. */
 	private int[] cellTypes;
 	
-    /** µ¥Ôª¸ñ¿í¶ÈÊı×é. */
+    /** å•å…ƒæ ¼å®½åº¦æ•°ç»„. */
 	private int[] cellWidth;
 	
-	/** ĞĞ¸ß¶ÈÊı×é£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©. */
+	/** è¡Œé«˜åº¦æ•°ç»„ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰. */
 	private int[]  rowHeight;
 	
-	/** ĞĞÎÄ×Ö´óĞ¡Êı×é£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©. */
+	/** è¡Œæ–‡å­—å¤§å°æ•°ç»„ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰. */
 	private int[] rowTextSize;
 	
-	/** ĞĞÎÄ×ÖÑÕÉ«Êı×é£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©. */
+	/** è¡Œæ–‡å­—é¢œè‰²æ•°ç»„ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰. */
 	private int[] rowTextColor;
 	
-	/** ±í¸ñ×ÊÔ´Êı×é£¨Ë÷Òı0±êÌâĞĞ±³¾°£¬1±êÌâµ¥Ôª¸ñ±³¾°£¬2ÄÚÈİÁĞ±íĞĞ±³¾°¡£3±í¸ñÄÚÈİµ¥Ôª¸ñ±³¾°£©. */
+	/** è¡¨æ ¼èµ„æºæ•°ç»„ï¼ˆç´¢å¼•0æ ‡é¢˜è¡ŒèƒŒæ™¯ï¼Œ1æ ‡é¢˜å•å…ƒæ ¼èƒŒæ™¯ï¼Œ2å†…å®¹åˆ—è¡¨è¡ŒèƒŒæ™¯ã€‚3è¡¨æ ¼å†…å®¹å•å…ƒæ ¼èƒŒæ™¯ï¼‰. */
 	private int[] tableResource;
 	
 	/** The item cell touch listener. */
@@ -121,15 +121,15 @@ public class AbTable {
 	
 	
 	/**
-	 * ÃèÊö£º±í¸ñ¶ÔÏó¹¹Ôì.
+	 * æè¿°ï¼šè¡¨æ ¼å¯¹è±¡æ„é€ .
 	 *
-	 * @param context context¶ÔÏó
-	 * @param columnSize ÁĞÊı
+	 * @param context contextå¯¹è±¡
+	 * @param columnSize åˆ—æ•°
 	 * @return the ab table
 	 */
 	public static AbTable newAbTable(Context context,int columnSize) {
 		if(columnSize<=0){
-			Toast.makeText(context,"ÇëÉèÖÃ±í¸ñµÄÁĞÊı>0!", Toast.LENGTH_SHORT).show();
+			Toast.makeText(context,"è¯·è®¾ç½®è¡¨æ ¼çš„åˆ—æ•°>0!", Toast.LENGTH_SHORT).show();
 		    return null;
 		}
 		WindowManager manager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
@@ -138,30 +138,30 @@ public class AbTable {
 		mScreenHeight = display.getHeight();
 		
 		mAbTable = new AbTable();
-		//±êÌâÅäÖÃ
+		//æ ‡é¢˜é…ç½®
 		mAbTable.titles = new String[columnSize];
 		for(int i=0;i<columnSize;i++){
-			mAbTable.titles[i] = "±êÌâ"+i;
+			mAbTable.titles[i] = "æ ‡é¢˜"+i;
 		}
-		//ÁĞÀàĞÍÅäÖÃ
+		//åˆ—ç±»å‹é…ç½®
 		mAbTable.cellTypes = new int[columnSize];
 		for(int i=0;i<columnSize;i++){
 			mAbTable.cellTypes[i] = AbCellType.STRING;
 		}
 		
-		//ÁĞ¿íÅäÖÃ(%)
+		//åˆ—å®½é…ç½®(%)
 		mAbTable.cellWidth = new int[columnSize];
 		for(int i=0;i<columnSize;i++){
 			mAbTable.cellWidth[i] = mScreenWidth/columnSize;
 		}
 		
-		//ĞĞ¸ßÅäÖÃ£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+		//è¡Œé«˜é…ç½®ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 		mAbTable.rowHeight = new int[] { 30, 30 };
-		//ĞĞÎÄ×Ö´óĞ¡£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+		//è¡Œæ–‡å­—å¤§å°ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 		mAbTable.rowTextSize = new int[] { 18, 16};
-		//ĞĞÎÄ×ÖÑÕÉ«£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©
+		//è¡Œæ–‡å­—é¢œè‰²ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰
 		mAbTable.rowTextColor = new int[] { Color.rgb(113, 113, 113), Color.rgb(113, 113, 113) };
-		//±³¾°×ÊÔ´£¨Ë÷Òı0±êÌâĞĞ±³¾°£¬1±êÌâµ¥Ôª¸ñ±³¾°£¬2ÄÚÈİÁĞ±íĞĞ±³¾°¡£3±í¸ñÄÚÈİµ¥Ôª¸ñ±³¾°£©
+		//èƒŒæ™¯èµ„æºï¼ˆç´¢å¼•0æ ‡é¢˜è¡ŒèƒŒæ™¯ï¼Œ1æ ‡é¢˜å•å…ƒæ ¼èƒŒæ™¯ï¼Œ2å†…å®¹åˆ—è¡¨è¡ŒèƒŒæ™¯ã€‚3è¡¨æ ¼å†…å®¹å•å…ƒæ ¼èƒŒæ™¯ï¼‰
 		mAbTable.tableResource = new int[] {android.R.color.transparent,android.R.color.transparent,android.R.color.transparent,android.R.color.transparent};
 		
 		return mAbTable;
@@ -169,7 +169,7 @@ public class AbTable {
 
 
 	/**
-	 * ÃèÊö£º»ñÈ¡±í¸ñµÄ±êÌâ.
+	 * æè¿°ï¼šè·å–è¡¨æ ¼çš„æ ‡é¢˜.
 	 *
 	 * @return the titles
 	 */
@@ -178,9 +178,9 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃ±í¸ñµÄ±êÌâ.
+	 * æè¿°ï¼šè®¾ç½®è¡¨æ ¼çš„æ ‡é¢˜.
 	 *
-	 * @param titles ±í¸ñµÄ±êÌâÊı×é
+	 * @param titles è¡¨æ ¼çš„æ ‡é¢˜æ•°ç»„
 	 */
 	public void setTitles(String[] titles) {
 		for(int i=0;i<titles.length;i++){
@@ -198,9 +198,9 @@ public class AbTable {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÁĞ±íÄÚÈİµÄÊı¾İ.
+	 * æè¿°ï¼šè®¾ç½®åˆ—è¡¨å†…å®¹çš„æ•°æ®.
 	 *
-	 * @param contents ÁĞ±íÄÚÈİµÄÊı¾İ
+	 * @param contents åˆ—è¡¨å†…å®¹çš„æ•°æ®
 	 */
 	public void setContents(List<String[]> contents) {
 		this.contents = contents;
@@ -216,9 +216,9 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£ºÁĞÀàĞÍÅäÖÃ£¨²ÎÕÕAbCellType£©.
+	 * æè¿°ï¼šåˆ—ç±»å‹é…ç½®ï¼ˆå‚ç…§AbCellTypeï¼‰.
 	 *
-	 * @param cellTypes ÁĞÀàĞÍ
+	 * @param cellTypes åˆ—ç±»å‹
 	 */
 	public void setCellTypes(int[] cellTypes) {
 		this.cellTypes = cellTypes;
@@ -234,9 +234,9 @@ public class AbTable {
 	}
 
     /**
-     * ÃèÊö£ºÁĞ¿íÅäÖÃ(%) ³¬¹ı100% ¿ÉÒÔºáÏò»¬¶¯.
+     * æè¿°ï¼šåˆ—å®½é…ç½®(%) è¶…è¿‡100% å¯ä»¥æ¨ªå‘æ»‘åŠ¨.
      *
-     * @param cellWidth ÁĞ¿íµÄ°Ù·Ö±È
+     * @param cellWidth åˆ—å®½çš„ç™¾åˆ†æ¯”
      */
 	public void setCellWidth(int[] cellWidth) {
 		for(int i=0;i<cellWidth.length;i++){
@@ -254,9 +254,9 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃĞĞ¸ß£¨Ë÷Òı0£º±êÌâ¸ß£¬1£ºÄÚÈİÁĞ±í¸ß£©.
+	 * æè¿°ï¼šè®¾ç½®è¡Œé«˜ï¼ˆç´¢å¼•0ï¼šæ ‡é¢˜é«˜ï¼Œ1ï¼šå†…å®¹åˆ—è¡¨é«˜ï¼‰.
 	 *
-	 * @param rowHeight ĞĞ¸ß
+	 * @param rowHeight è¡Œé«˜
 	 */
 	public void setRowHeight(int[] rowHeight) {
 		for(int i=0;i<rowHeight.length;i++){
@@ -274,9 +274,9 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃĞĞÎÄ×ÖµÄ´óĞ¡£¨Ë÷Òı0±êÌâ£¬1ÄÚÈİÁĞ±í£©.
+	 * æè¿°ï¼šè®¾ç½®è¡Œæ–‡å­—çš„å¤§å°ï¼ˆç´¢å¼•0æ ‡é¢˜ï¼Œ1å†…å®¹åˆ—è¡¨ï¼‰.
 	 *
-	 * @param rowTextSize  ĞĞÎÄ×ÖµÄ´óĞ¡
+	 * @param rowTextSize  è¡Œæ–‡å­—çš„å¤§å°
 	 */
 	public void setRowTextSize(int[] rowTextSize) {
 		for(int i=0;i<rowTextSize.length;i++){
@@ -295,9 +295,9 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃĞĞÎÄ×ÖµÄÑÕÉ«.
+	 * æè¿°ï¼šè®¾ç½®è¡Œæ–‡å­—çš„é¢œè‰².
 	 *
-	 * @param rowTextColor  ĞĞÎÄ×ÖµÄÑÕÉ«
+	 * @param rowTextColor  è¡Œæ–‡å­—çš„é¢œè‰²
 	 */
 	public void setRowTextColor(int[] rowTextColor) {
 		for(int i=0;i<rowTextColor.length;i++){
@@ -316,7 +316,7 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£º±í¸ñµÄ±³¾°×ÊÔ´£¨Ë÷Òı0±êÌâĞĞ±³¾°£¬1±êÌâµ¥Ôª¸ñ±³¾°£¬2ÄÚÈİÁĞ±íĞĞ±³¾°¡£3±í¸ñÄÚÈİµ¥Ôª¸ñ±³¾°£©.
+	 * æè¿°ï¼šè¡¨æ ¼çš„èƒŒæ™¯èµ„æºï¼ˆç´¢å¼•0æ ‡é¢˜è¡ŒèƒŒæ™¯ï¼Œ1æ ‡é¢˜å•å…ƒæ ¼èƒŒæ™¯ï¼Œ2å†…å®¹åˆ—è¡¨è¡ŒèƒŒæ™¯ã€‚3è¡¨æ ¼å†…å®¹å•å…ƒæ ¼èƒŒæ™¯ï¼‰.
 	 *
 	 * @param tableResource the new table resource
 	 */
@@ -337,7 +337,7 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£ºÍ¼Æ¬cell£¬Ò»ĞĞÖĞµÄÄ³Ò»¸öcell±»µã»÷.
+	 * æè¿°ï¼šå›¾ç‰‡cellï¼Œä¸€è¡Œä¸­çš„æŸä¸€ä¸ªcellè¢«ç‚¹å‡».
 	 *
 	 * @param itemCellTouchListener the new item cell touch listener
 	 */
@@ -356,7 +356,7 @@ public class AbTable {
 	}
 
 	/**
-	 * ÃèÊö£º¸´Ñ¡¿òcell£¬Ò»ĞĞÖĞµÄÄ³Ò»¸öcell±»µã»÷.
+	 * æè¿°ï¼šå¤é€‰æ¡†cellï¼Œä¸€è¡Œä¸­çš„æŸä¸€ä¸ªcellè¢«ç‚¹å‡».
 	 *
 	 * @param itemCellCheckListener the new item cell check listener
 	 */

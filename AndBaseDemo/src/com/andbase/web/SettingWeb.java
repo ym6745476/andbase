@@ -30,19 +30,19 @@ public class SettingWeb {
 	public static String adSetting() throws AbAppException {
 		String mValue = null;
 		try {
-			// Ê¹ÓÃhttppost¶ÔÏóÌá½»Êı¾İ
+			// ä½¿ç”¨httppostå¯¹è±¡æäº¤æ•°æ®
 			HttpPost httpRequest = new HttpPost("");
-			// ³¬Ê±ÉèÖÃ
+			// è¶…æ—¶è®¾ç½®
 			HttpParams params = new BasicHttpParams();
-			// ´ÓÁ¬½Ó³ØÖĞÈ¡Á¬½ÓµÄ³¬Ê±Ê±¼ä£¬ÉèÖÃÎª1Ãë
+			// ä»è¿æ¥æ± ä¸­å–è¿æ¥çš„è¶…æ—¶æ—¶é—´ï¼Œè®¾ç½®ä¸º1ç§’
 			ConnManagerParams.setTimeout(params, Constant.timeOut);
-			// Í¨¹ıÍøÂçÓë·şÎñÆ÷½¨Á¢Á¬½ÓµÄ³¬Ê±Ê±¼ä
+			// é€šè¿‡ç½‘ç»œä¸æœåŠ¡å™¨å»ºç«‹è¿æ¥çš„è¶…æ—¶æ—¶é—´
 			HttpConnectionParams.setConnectionTimeout(params, Constant.connectOut);
-			// ¶ÁÏìÓ¦Êı¾İµÄ³¬Ê±Ê±¼ä
+			// è¯»å“åº”æ•°æ®çš„è¶…æ—¶æ—¶é—´
 			HttpConnectionParams.setSoTimeout(params, Constant.getOut);
-			// ÉèÖÃÇëÇó²ÎÊı
+			// è®¾ç½®è¯·æ±‚å‚æ•°
 			httpRequest.setParams(params);
-			// ´«µİÇëÇó²ÎÊı
+			// ä¼ é€’è¯·æ±‚å‚æ•°
 			List<BasicNameValuePair> paramsList = new ArrayList<BasicNameValuePair>();
 			paramsList.add(new BasicNameValuePair("key", "android_ad"));
 			UrlEncodedFormEntity mUrlEncodedFormEntity = new UrlEncodedFormEntity(paramsList, HTTP.UTF_8);
@@ -51,7 +51,7 @@ public class SettingWeb {
 			int ret = httpResponse.getStatusLine().getStatusCode();
 			if (ret == HttpStatus.SC_OK) {
 				mValue = EntityUtils.toString(httpResponse.getEntity(), HTTP.UTF_8);
-				if (D) Log.d(TAG, "¹ã¸æ¿ª¹Ø·µ»Ø:" + mValue);
+				if (D) Log.d(TAG, "å¹¿å‘Šå¼€å…³è¿”å›:" + mValue);
 			} else {
 				throw new ConnectException();
 			}

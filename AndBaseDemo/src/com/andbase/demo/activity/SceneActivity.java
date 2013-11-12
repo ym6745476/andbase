@@ -10,8 +10,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºSceneActivity
- * ÃèÊö£º³¡¾°»¯UI
+ * åç§°ï¼šSceneActivity
+ * æè¿°ï¼šåœºæ™¯åŒ–UI
  * @author zhaoqp
  * @date 2011-12-13
  * @version

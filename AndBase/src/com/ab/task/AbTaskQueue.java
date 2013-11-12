@@ -27,8 +27,8 @@ import com.ab.global.AbAppData;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º Ö´ĞĞÈÎÎñÏß³Ì£¨°´¶ÓÁĞÖ´ĞĞ£©.
- * Ã¿¸ö³ÌĞòÖ»ÓĞ1¸ö
+ * æè¿°ï¼š æ‰§è¡Œä»»åŠ¡çº¿ç¨‹ï¼ˆæŒ‰é˜Ÿåˆ—æ‰§è¡Œï¼‰.
+ * æ¯ä¸ªç¨‹åºåªæœ‰1ä¸ª
  * @author zhaoqp
  * @date 2011-11-10
  * @version v1.0
@@ -41,16 +41,16 @@ public class AbTaskQueue extends Thread {
 	/** The Constant D. */
 	private static final boolean D = AbAppData.DEBUG;
 	
-	/** µÈ´ıÖ´ĞĞµÄÈÎÎñ. */
+	/** ç­‰å¾…æ‰§è¡Œçš„ä»»åŠ¡. */
 	private static List<AbTaskItem> mAbTaskItemList = null;
     
-    /**µ¥Àı¶ÔÏó */
+    /**å•ä¾‹å¯¹è±¡ */
   	private static AbTaskQueue mAbTaskQueue = null; 
   	
-  	/** Í£Ö¹µÄ±ê¼Ç. */
+  	/** åœæ­¢çš„æ ‡è®°. */
 	private boolean mQuit = false;
 	
-	/** Ö´ĞĞÍê³ÉºóµÄÏûÏ¢¾ä±ú. */
+	/** æ‰§è¡Œå®Œæˆåçš„æ¶ˆæ¯å¥æŸ„. */
     private static Handler handler = new Handler() { 
         @Override 
         public void handleMessage(Message msg) { 
@@ -66,7 +66,7 @@ public class AbTaskQueue extends Thread {
     }; 
     
     /**
-	 * µ¥Àı¹¹Ôì.
+	 * å•ä¾‹æ„é€ .
 	 */
     public static AbTaskQueue getInstance() { 
         if (mAbTaskQueue == null) { 
@@ -76,24 +76,24 @@ public class AbTaskQueue extends Thread {
     } 
 	
 	/**
-	 * ¹¹ÔìÖ´ĞĞÏß³Ì¶ÓÁĞ.
+	 * æ„é€ æ‰§è¡Œçº¿ç¨‹é˜Ÿåˆ—.
 	 *
 	 * @param context the context
 	 */
     public AbTaskQueue() {
     	mQuit = false;
     	mAbTaskItemList = new ArrayList<AbTaskItem>();
-    	//ÉèÖÃÓÅÏÈ¼¶
+    	//è®¾ç½®ä¼˜å…ˆçº§
     	Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-    	//´ÓÏß³Ì³ØÖĞ»ñÈ¡
+    	//ä»çº¿ç¨‹æ± ä¸­è·å–
     	ExecutorService mExecutorService  = AbTaskPool.getExecutorService();
     	mExecutorService.submit(this); 
     }
     
     /**
-     * ¿ªÊ¼Ò»¸öÖ´ĞĞÈÎÎñ.
+     * å¼€å§‹ä¸€ä¸ªæ‰§è¡Œä»»åŠ¡.
      *
-     * @param item Ö´ĞĞµ¥Î»
+     * @param item æ‰§è¡Œå•ä½
      */
     public void execute(AbTaskItem item) { 
          addTaskItem(item); 
@@ -101,9 +101,9 @@ public class AbTaskQueue extends Thread {
     
     
     /**
-     * ¿ªÊ¼Ò»¸öÖ´ĞĞÈÎÎñ²¢Çå³ıÔ­À´¶ÓÁĞ.
-     * @param item Ö´ĞĞµ¥Î»
-     * @param clean Çå¿ÕÖ®Ç°µÄÈÎÎñ
+     * å¼€å§‹ä¸€ä¸ªæ‰§è¡Œä»»åŠ¡å¹¶æ¸…é™¤åŸæ¥é˜Ÿåˆ—.
+     * @param item æ‰§è¡Œå•ä½
+     * @param clean æ¸…ç©ºä¹‹å‰çš„ä»»åŠ¡
      */
     public void execute(AbTaskItem item,boolean clean) { 
 	    if(clean){
@@ -115,9 +115,9 @@ public class AbTaskQueue extends Thread {
     } 
      
     /**
-     * ÃèÊö£ºÌí¼Óµ½Ö´ĞĞÏß³Ì¶ÓÁĞ.
+     * æè¿°ï¼šæ·»åŠ åˆ°æ‰§è¡Œçº¿ç¨‹é˜Ÿåˆ—.
      *
-     * @param item Ö´ĞĞµ¥Î»
+     * @param item æ‰§è¡Œå•ä½
      */
     private synchronized void addTaskItem(AbTaskItem item) { 
     	if (mAbTaskQueue == null) { 
@@ -126,13 +126,13 @@ public class AbTaskQueue extends Thread {
         } else{
         	mAbTaskItemList.add(item);
         }
-    	//Ìí¼ÓÁËÖ´ĞĞÏî¾Í¼¤»î±¾Ïß³Ì 
+    	//æ·»åŠ äº†æ‰§è¡Œé¡¹å°±æ¿€æ´»æœ¬çº¿ç¨‹ 
         this.notify();
         
     } 
  
     /**
-     * ÃèÊö£ºÏß³ÌÔËĞĞ.
+     * æè¿°ï¼šçº¿ç¨‹è¿è¡Œ.
      *
      * @see java.lang.Thread#run()
      */
@@ -143,29 +143,29 @@ public class AbTaskQueue extends Thread {
         	    while(mAbTaskItemList.size() > 0){
             
 					AbTaskItem item  = mAbTaskItemList.remove(0);
-					//¶¨ÒåÁË»Øµ÷
+					//å®šä¹‰äº†å›è°ƒ
 				    if (item.callback != null) { 
 				    	item.callback.get();
-				    	//½»ÓÉUIÏß³Ì´¦Àí 
+				    	//äº¤ç”±UIçº¿ç¨‹å¤„ç† 
 				        Message msg = handler.obtainMessage(); 
 				        msg.obj = item; 
 				        handler.sendMessage(msg); 
 				    } 
 				    
-				    //Í£Ö¹ºóÇå¿Õ
+				    //åœæ­¢åæ¸…ç©º
 				    if(mQuit){
 				    	mAbTaskItemList.clear();
 				    	return;
 				    }
         	    }
         	    try {
-					//Ã»ÓĞÖ´ĞĞÏîÊ±µÈ´ı 
+					//æ²¡æœ‰æ‰§è¡Œé¡¹æ—¶ç­‰å¾… 
 					synchronized(this) { 
 					    this.wait();
 					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
-					//±»ÖĞ¶ÏµÄÊÇÍË³ö¾Í½áÊø£¬·ñÔò¼ÌĞø
+					//è¢«ä¸­æ–­çš„æ˜¯é€€å‡ºå°±ç»“æŸï¼Œå¦åˆ™ç»§ç»­
 					if (mQuit) {
 						mAbTaskItemList.clear();
 	                    return;
@@ -179,7 +179,7 @@ public class AbTaskQueue extends Thread {
     } 
     
     /**
-     * ÃèÊö£ºÖÕÖ¹¶ÓÁĞÊÍ·ÅÏß³Ì.
+     * æè¿°ï¼šç»ˆæ­¢é˜Ÿåˆ—é‡Šæ”¾çº¿ç¨‹.
      */
     public void quit(){
 		mQuit  = true;

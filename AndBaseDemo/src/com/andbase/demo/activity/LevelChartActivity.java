@@ -28,40 +28,40 @@ public class LevelChartActivity extends AbActivity {
         mAbTitleBar.setLogoLine(R.drawable.line);
         application = (MyApplication)abApplication;
         
-        //µÈ¼¶Í¼ĞÎ¿í
+        //ç­‰çº§å›¾å½¢å®½
         int width = 300;
-        //µÈ¼¶Í¼ĞÎ¸ß
+        //ç­‰çº§å›¾å½¢é«˜
         int height = 200;
-        //¸÷µÈ¼¶¶ÎµÄÑÕÉ«
+        //å„ç­‰çº§æ®µçš„é¢œè‰²
     	int [] color = new int[]{Color.rgb(71, 190, 222),Color.rgb(153, 234, 71),Color.rgb(153, 234, 71),Color.rgb(249, 135, 65),Color.rgb(249, 135, 65),Color.rgb(249, 135, 65)};
-    	//¼ÙÈç Ã¿¶ÎµÄ°Ù·Ö±È  2  3  2  1  1  1
+    	//å‡å¦‚ æ¯æ®µçš„ç™¾åˆ†æ¯”  2  3  2  1  1  1
     	float [] part = new float[]{2,3,2,1,1,1};
-    	//¸÷µÈ¼¶¶ÎµÄÖµ
+    	//å„ç­‰çº§æ®µçš„å€¼
     	float [] partValue = new float[]{12.1f,15.0f,20.0f,30.0f,50.0f,60.0f};
-    	//µ±Ç°Öµ
+    	//å½“å‰å€¼
     	String textValue = "126/76";
-    	//µ±Ç°ÖµÃèÊö
-    	String textDesc = "Õı³£";
-    	//µ±Ç°ÖµµÄµÈ¼¶
+    	//å½“å‰å€¼æè¿°
+    	String textDesc = "æ­£å¸¸";
+    	//å½“å‰å€¼çš„ç­‰çº§
     	int textlevelIndex = 2;
-    	//µ±Ç°ÖµÎÄ×Ö´óĞ¡
+    	//å½“å‰å€¼æ–‡å­—å¤§å°
     	int textLevelSize = 30;
-    	//µ±Ç°ÖµÎÄ×ÖÓë¶¥²¿µÄ¾àÀë
+    	//å½“å‰å€¼æ–‡å­—ä¸é¡¶éƒ¨çš„è·ç¦»
     	int marginTop = 30;
-    	//Ö¸Ê¾Èı½ÇĞÎµÄ¿í¶È
+    	//æŒ‡ç¤ºä¸‰è§’å½¢çš„å®½åº¦
     	int arrowWidth  = 20;
-    	//Ö¸Ê¾Èı½ÇĞÎµÄ¸ß¶È
+    	//æŒ‡ç¤ºä¸‰è§’å½¢çš„é«˜åº¦
     	int arrowHeight = 10;
-    	//µÈ¼¶ÌõµÄ¸ß¶È
+    	//ç­‰çº§æ¡çš„é«˜åº¦
     	int levelHeight = 20;
-    	//Ö¸Ê¾Èı½ÇĞÎÓëÆäËû¼ä¾à
+    	//æŒ‡ç¤ºä¸‰è§’å½¢ä¸å…¶ä»–é—´è·
     	int arrowMarginTop = 10;
-    	//µÈ¼¶×ø±êÎÄ×Ö´óĞ¡
+    	//ç­‰çº§åæ ‡æ–‡å­—å¤§å°
     	int partTextSize = 15;
-    	//µÈ¼¶ËµÃ÷ÎÄ×Ö´óĞ¡
+    	//ç­‰çº§è¯´æ˜æ–‡å­—å¤§å°
     	int textDescSize = 22;
         
-        //ÒªÏÔÊ¾Í¼ĞÎµÄView
+        //è¦æ˜¾ç¤ºå›¾å½¢çš„View
         LinearLayout chartLayout = (LinearLayout) findViewById(R.id.chartLayout);
         
         

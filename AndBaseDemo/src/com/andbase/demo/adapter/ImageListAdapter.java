@@ -21,8 +21,8 @@ import com.andbase.R;
 import com.andbase.global.Constant;
 /**
  * Copyright (c) 2011 All rights reserved
- * Ãû³Æ£ºMyListViewAdapter
- * ÃèÊö£ºÔÚAdapterÖĞÊÍ·ÅBitmap
+ * åç§°ï¼šMyListViewAdapter
+ * æè¿°ï¼šåœ¨Adapterä¸­é‡Šæ”¾Bitmap
  * @author zhaoqp
  * @date 2011-12-10
  * @version
@@ -33,26 +33,26 @@ public class ImageListAdapter extends BaseAdapter{
 	private static final boolean D = Constant.DEBUG;
   
 	private Context mContext;
-	//xml×ªView¶ÔÏó
+	//xmlè½¬Viewå¯¹è±¡
     private LayoutInflater mInflater;
-    //µ¥ĞĞµÄ²¼¾Ö
+    //å•è¡Œçš„å¸ƒå±€
     private int mResource;
-    //ÁĞ±íÕ¹ÏÖµÄÊı¾İ
+    //åˆ—è¡¨å±•ç°çš„æ•°æ®
     private List mData;
-    //MapÖĞµÄkey
+    //Mapä¸­çš„key
     private String[] mFrom;
-    //viewµÄid
+    //viewçš„id
     private int[] mTo;
-    //Í¼Æ¬ÏÂÔØÆ÷
+    //å›¾ç‰‡ä¸‹è½½å™¨
     private AbImageDownloader mAbImageDownloader = null;
     
    /**
-    * ¹¹Ôì·½·¨
+    * æ„é€ æ–¹æ³•
     * @param context
-    * @param data ÁĞ±íÕ¹ÏÖµÄÊı¾İ
-    * @param resource µ¥ĞĞµÄ²¼¾Ö
-    * @param from MapÖĞµÄkey
-    * @param to viewµÄid
+    * @param data åˆ—è¡¨å±•ç°çš„æ•°æ®
+    * @param resource å•è¡Œçš„å¸ƒå±€
+    * @param from Mapä¸­çš„key
+    * @param to viewçš„id
     */
     public ImageListAdapter(Context context, List data,
             int resource, String[] from, int[] to){
@@ -61,9 +61,9 @@ public class ImageListAdapter extends BaseAdapter{
     	this.mResource = resource;
     	this.mFrom = from;
     	this.mTo = to;
-        //ÓÃÓÚ½«xml×ªÎªView
+        //ç”¨äºå°†xmlè½¬ä¸ºView
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //Í¼Æ¬ÏÂÔØÆ÷
+        //å›¾ç‰‡ä¸‹è½½å™¨
         mAbImageDownloader = new AbImageDownloader(mContext);
         mAbImageDownloader.setWidth(100);
         mAbImageDownloader.setHeight(100);
@@ -93,11 +93,11 @@ public class ImageListAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent){
     	  final ViewHolder holder;
           if(convertView == null){
-	           //Ê¹ÓÃ×Ô¶¨ÒåµÄlist_items×÷ÎªLayout
+	           //ä½¿ç”¨è‡ªå®šä¹‰çš„list_itemsä½œä¸ºLayout
 	           convertView = mInflater.inflate(mResource, parent, false);
-	           //¼õÉÙfindViewµÄ´ÎÊı
+	           //å‡å°‘findViewçš„æ¬¡æ•°
 			   holder = new ViewHolder();
-	           //³õÊ¼»¯²¼¾ÖÖĞµÄÔªËØ
+	           //åˆå§‹åŒ–å¸ƒå±€ä¸­çš„å…ƒç´ 
 			   holder.itemsIcon = ((ImageView) convertView.findViewById(mTo[0])) ;
 			   holder.itemsTitle = ((TextView) convertView.findViewById(mTo[1]));
 			   holder.itemsText = ((TextView) convertView.findViewById(mTo[2]));
@@ -106,21 +106,21 @@ public class ImageListAdapter extends BaseAdapter{
         	   holder = (ViewHolder) convertView.getTag();
           }
           
-		  //»ñÈ¡¸ÃĞĞµÄÊı¾İ
+		  //è·å–è¯¥è¡Œçš„æ•°æ®
           final Map<String, Object>  obj = (Map<String, Object>)mData.get(position);
           String imageUrl = (String)obj.get("itemsIcon");
           holder.itemsTitle.setText((String)obj.get("itemsTitle"));
           holder.itemsText.setText((String)obj.get("itemsText"));
-          //ÉèÖÃ¼ÓÔØÖĞµÄView
+          //è®¾ç½®åŠ è½½ä¸­çš„View
           mAbImageDownloader.setLoadingView(convertView.findViewById(R.id.progressBar));
-          //Í¼Æ¬µÄÏÂÔØ
+          //å›¾ç‰‡çš„ä¸‹è½½
           mAbImageDownloader.display(holder.itemsIcon,imageUrl);
           
           return convertView;
     }
     
     /**
-	 * ViewÔªËØ
+	 * Viewå…ƒç´ 
 	 */
 	static class ViewHolder {
 		ImageView itemsIcon;

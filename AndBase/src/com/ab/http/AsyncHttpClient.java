@@ -1039,10 +1039,10 @@ public class AsyncHttpClient {
         }
 
         /**
-         * ÃèÊö£ºTODO
+         * æè¿°ï¼šTODO
          * @see org.apache.http.entity.HttpEntityWrapper#getContent()
          * @author: zhaoqp
-         * @date£º2013-10-22 ÏÂÎç4:23:15
+         * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
          * @version v1.0
          */
         @Override
@@ -1051,10 +1051,10 @@ public class AsyncHttpClient {
         }
 
         /**
-         * ÃèÊö£ºTODO
+         * æè¿°ï¼šTODO
          * @see org.apache.http.entity.HttpEntityWrapper#getContentLength()
          * @author: zhaoqp
-         * @date£º2013-10-22 ÏÂÎç4:23:15
+         * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
          * @version v1.0
          */
         @Override

@@ -10,7 +10,7 @@ import com.baidu.frontia.FrontiaApplication;
 
 public class MyApplication extends FrontiaApplication {
 
-	//µÇÂ¼ÓÃ»§
+	//ç™»å½•ç”¨æˆ·
     public User mUser = null;
     
     public String cityid = Constant.DEFAULTCITYID;
@@ -26,9 +26,9 @@ public class MyApplication extends FrontiaApplication {
 	}
 	
 	/**
-	 * ÉÏ´ÎµÇÂ¼²ÎÊı
+	 * ä¸Šæ¬¡ç™»å½•å‚æ•°
 	 * @throws 
-	 * @date£º2012-7-17 ÏÂÎç06:07:29
+	 * @dateï¼š2012-7-17 ä¸‹åˆ06:07:29
 	 * @version v1.0
 	 */
 	private void initLoginParams() {
@@ -45,7 +45,7 @@ public class MyApplication extends FrontiaApplication {
 	}
 	
 	/**
-	 * Çå¿ÕÉÏ´ÎµÇÂ¼²ÎÊı
+	 * æ¸…ç©ºä¸Šæ¬¡ç™»å½•å‚æ•°
 	 */
 	public void clearLoginParams() {
 		SharedPreferences  sp = getSharedPreferences(AbConstant.SHAREPATH, Context.MODE_PRIVATE);

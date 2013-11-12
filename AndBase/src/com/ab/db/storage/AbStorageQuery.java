@@ -24,33 +24,33 @@ import com.ab.util.AbStrUtil;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbStorageQuery.java 
- * ÃèÊö£ºÌõ¼ş¹ıÂËÊµÌå
+ * åç§°ï¼šAbStorageQuery.java 
+ * æè¿°ï¼šæ¡ä»¶è¿‡æ»¤å®ä½“
  * @author zhaoqp
- * @date£º2013-10-16 ÏÂÎç1:33:39
+ * @dateï¼š2013-10-16 ä¸‹åˆ1:33:39
  * @version v1.0
  */
 public class AbStorageQuery {
 	
-	/** where ×Ó¾ä. */
+	/** where å­å¥. */
 	private String whereClause = null;
 	
-	/** where ×Ó¾äµÄ°ó¶¨²ÎÊı. */
+	/** where å­å¥çš„ç»‘å®šå‚æ•°. */
 	private ArrayList<String> whereArgs = null;
 	
-	/** having ×Ó¾ä. */
+	/** having å­å¥. */
 	private String having = null;
 	
-	/** groupBy ×Ó¾ä. */
+	/** groupBy å­å¥. */
 	private String groupBy = null;
 	
-	/** orderBy ×Ó¾ä. */
+	/** orderBy å­å¥. */
 	private String orderBy = null;
 	
-	/** limit Öµ. */
+	/** limit å€¼. */
 	private int limit = -1;
 	
-	/** offset Öµ. */
+	/** offset å€¼. */
 	private int offset = -1;
 	
 	/**
@@ -63,7 +63,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£ºÏàµÈÓï¾ä.
+	 * æè¿°ï¼šç›¸ç­‰è¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -79,7 +79,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£º²»ÏàµÈÓï¾ä.
+	 * æè¿°ï¼šä¸ç›¸ç­‰è¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -95,7 +95,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£ºÏàËÆÓï¾ä.
+	 * æè¿°ï¼šç›¸ä¼¼è¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -111,7 +111,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£º´óÓÚÓï¾ä.
+	 * æè¿°ï¼šå¤§äºè¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -127,7 +127,7 @@ public class AbStorageQuery {
 	}
 
 	/**
-	 * ÃèÊö£ºĞ¡ÓÚÓï¾ä.
+	 * æè¿°ï¼šå°äºè¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -143,7 +143,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£º´óÓÚµÈÓÚÓï¾ä.
+	 * æè¿°ï¼šå¤§äºç­‰äºè¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -159,7 +159,7 @@ public class AbStorageQuery {
 	}
 
 	/**
-	 * ÃèÊö£ºĞ¡ÓÚµÈÓÚÓï¾ä.
+	 * æè¿°ï¼šå°äºç­‰äºè¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramObject the param object
@@ -175,7 +175,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£º°üº¬Óï¾ä.
+	 * æè¿°ï¼šåŒ…å«è¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramArrayOfObject the param array of object
@@ -207,7 +207,7 @@ public class AbStorageQuery {
 	}
 
 	/**
-	 * ÃèÊö£º²»°üº¬Óï¾ä.
+	 * æè¿°ï¼šä¸åŒ…å«è¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramArrayOfObject the param array of object
@@ -232,7 +232,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£ººÍandÓï¾ä.
+	 * æè¿°ï¼šå’Œandè¯­å¥.
 	 *
 	 * @param storageQuery the storage query
 	 * @return the ab storage query
@@ -246,7 +246,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£º»òÕßorÓï¾ä.
+	 * æè¿°ï¼šæˆ–è€…orè¯­å¥.
 	 *
 	 * @param storageQuery the storage query
 	 * @return the ab storage query
@@ -261,9 +261,9 @@ public class AbStorageQuery {
 	
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÒ»¸öÍêÕûµÄsqlÓï¾ä.
+	 * æè¿°ï¼šè®¾ç½®ä¸€ä¸ªå®Œæ•´çš„sqlè¯­å¥.
 	 *
-	 * @param whereClause Èç user_name = ?  »òÕß user_name = 'xiao'
+	 * @param whereClause å¦‚ user_name = ?  æˆ–è€… user_name = 'xiao'
 	 * @param whereArgs the where args
 	 */
 	public void setWhereClause(String whereClause,String[] whereArgs) {
@@ -274,7 +274,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡µ±Ç°µÄ²éÑ¯sqlÓï¾ä.
+	 * æè¿°ï¼šè·å–å½“å‰çš„æŸ¥è¯¢sqlè¯­å¥.
 	 *
 	 * @return the where clause
 	 */
@@ -283,7 +283,7 @@ public class AbStorageQuery {
 	}
 	
     /**
-     * ÃèÊö£º»ñµÃ°ó¶¨±äÁ¿µÄ²ÎÊı.
+     * æè¿°ï¼šè·å¾—ç»‘å®šå˜é‡çš„å‚æ•°.
      *
      * @return the where args
      */
@@ -297,7 +297,7 @@ public class AbStorageQuery {
 	}
 	
 	/**
-	 * ÃèÊö£ºÅÅĞòÓï¾ä.
+	 * æè¿°ï¼šæ’åºè¯­å¥.
 	 *
 	 * @param paramString the param string
 	 * @param paramSortOrder the param sort order
@@ -405,7 +405,7 @@ public class AbStorageQuery {
 	
 	
 	/**
-	 * ÃèÊö£ºÅÅĞò.
+	 * æè¿°ï¼šæ’åº.
 	 */
 	public static enum SortOrder{
 	    
@@ -428,7 +428,7 @@ public class AbStorageQuery {
 			System.out.println("order by "+mAbStorageQuery.getOrderBy());
 		}
 		
-		System.out.print("²ÎÊı:[");
+		System.out.print("å‚æ•°:[");
 		for(int i=0;i<mAbStorageQuery.getWhereArgs().length;i++){
 			if(i!=0){
 				System.out.print(",");
@@ -437,7 +437,7 @@ public class AbStorageQuery {
 		}
 		System.out.print("]");
 		System.out.println(" ");
-		System.out.println("£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­£­");
+		System.out.println("ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼");
 	}
 	
 	/**
@@ -447,24 +447,24 @@ public class AbStorageQuery {
 	 */
 	public static void main(String[] args) {
 		
-		//²âÊÔ1
+		//æµ‹è¯•1
 		AbStorageQuery mAbStorageQuery1 = new AbStorageQuery();
 		
-		//µÚÒ»×éÌõ¼ş
+		//ç¬¬ä¸€ç»„æ¡ä»¶
 		mAbStorageQuery1.equals("u_id","1");
 		mAbStorageQuery1.equals("face_u_id","2");
 		
-		//µÚ¶ş×éÌõ¼ş
+		//ç¬¬äºŒç»„æ¡ä»¶
 		AbStorageQuery mAbStorageQuery2 = new AbStorageQuery();
 		mAbStorageQuery2.equals("face_u_id","3");
 		mAbStorageQuery2.equals("u_id","4");
 		
-		//×éºÏ²éÑ¯
+		//ç»„åˆæŸ¥è¯¢
 		AbStorageQuery mAbStorageQuery = mAbStorageQuery1.or(mAbStorageQuery2);
 		
 		printLog(mAbStorageQuery);
 		
-		//²âÊÔ2
+		//æµ‹è¯•2
 		AbStorageQuery mAbStorageQuery3 = new AbStorageQuery();
 		AbStorageQuery mAbStorageQuery4 = new AbStorageQuery();
 		mAbStorageQuery3.equals("u_id","1");
@@ -472,7 +472,7 @@ public class AbStorageQuery {
 		AbStorageQuery mAbStorageQuery5 = mAbStorageQuery3.and(mAbStorageQuery4);
 		printLog(mAbStorageQuery5);
 		
-		//²âÊÔ3
+		//æµ‹è¯•3
 		AbStorageQuery mAbStorageQuery6 = new AbStorageQuery();
 		AbStorageQuery mAbStorageQuery7 = new AbStorageQuery();
 		mAbStorageQuery6.lessThan("u_id","1");
@@ -480,7 +480,7 @@ public class AbStorageQuery {
 		AbStorageQuery mAbStorageQuery8 = mAbStorageQuery6.and(mAbStorageQuery7);
 		printLog(mAbStorageQuery8);
 		
-		//²âÊÔ4
+		//æµ‹è¯•4
 		AbStorageQuery mAbStorageQuery9 = new AbStorageQuery();
 		mAbStorageQuery9.in("name", new String []{"1","2","3","4"});
 		mAbStorageQuery9.addSort("time", SortOrder.ASC);

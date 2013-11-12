@@ -18,10 +18,10 @@ import com.andbase.R;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºCarouselViewActivity.java 
- * ÃèÊö£ºViewÊÊÅäµÄĞı×ªÄ¾Âí
+ * åç§°ï¼šCarouselViewActivity.java 
+ * æè¿°ï¼šViewé€‚é…çš„æ—‹è½¬æœ¨é©¬
  * @author zhaoqp
- * @date£º2013-8-23 ÏÂÎç2:07:13
+ * @dateï¼š2013-8-23 ä¸‹åˆ2:07:13
  * @version v1.0
  */
 public class CarouselViewActivity extends AbActivity {
@@ -43,7 +43,7 @@ public class CarouselViewActivity extends AbActivity {
 				R.drawable.icon6,
 		};
 		
-		//²»Ö§³ÖµÄ¶¯Ì¬Ìí¼Óadapter.notifyDataSetChanged()ÔöÇ¿»¬¶¯µÄÁ÷³©
+		//ä¸æ”¯æŒçš„åŠ¨æ€æ·»åŠ adapter.notifyDataSetChanged()å¢å¼ºæ»‘åŠ¨çš„æµç•…
 		
 		List<View> mViews = new ArrayList<View>();
 		for(int i=0;i<6;i++){

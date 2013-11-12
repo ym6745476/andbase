@@ -25,7 +25,7 @@ import android.view.View;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºµÈ¼¶ÌõView.
+ * æè¿°ï¼šç­‰çº§æ¡View.
  * @author zhaoqp
  * @date 2011-11-28
  * @version
@@ -48,10 +48,10 @@ public class AbLevelView extends View {
 	/** The height. */
 	private int height; 
 	
-	/** ÆÁÄ»¿í¶È. */
+	/** å±å¹•å®½åº¦. */
 	private int screenWidth = 0;
 	
-	/** ÆÁÄ»¸ß¶È. */
+	/** å±å¹•é«˜åº¦. */
 	private int screenHeight = 0;
 
 
@@ -106,7 +106,7 @@ public class AbLevelView extends View {
 
 
 	/**
-	 * ÃèÊö£º»æÖÆ.
+	 * æè¿°ï¼šç»˜åˆ¶.
 	 *
 	 * @param canvas the canvas
 	 * @see android.view.View#onDraw(android.graphics.Canvas)

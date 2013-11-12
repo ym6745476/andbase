@@ -18,7 +18,7 @@ package com.ab.task;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÊı¾İÖ´ĞĞµÄ½Ó¿Ú.
+ * æè¿°ï¼šæ•°æ®æ‰§è¡Œçš„æ¥å£.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -27,8 +27,8 @@ package com.ab.task;
 public abstract class AbTaskObjectCallback extends AbTaskCallback{
 
 	/**
-	 * ÃèÊö£ºÖ´ĞĞ¿ªÊ¼ºóµ÷ÓÃ.
-	 * @param <T> ·µ»ØµÄ¶ÔÏó
+	 * æè¿°ï¼šæ‰§è¡Œå¼€å§‹åè°ƒç”¨.
+	 * @param <T> è¿”å›çš„å¯¹è±¡
 	 */
 	public abstract <T> void update(T entity); 
     

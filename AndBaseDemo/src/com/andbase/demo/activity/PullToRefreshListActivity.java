@@ -55,22 +55,22 @@ public class PullToRefreshListActivity extends AbActivity {
 		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i4/13215035563144015/T1Q.eyXsldXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
 		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg"); 
 		mAbTaskQueue = AbTaskQueue.getInstance();
-	    //»ñÈ¡ListView¶ÔÏó
+	    //è·å–ListViewå¯¹è±¡
         mAbPullListView = (AbPullListView)this.findViewById(R.id.mListView);
         
-        //´ò¿ª¹Ø±ÕÏÂÀ­Ë¢ĞÂ¼ÓÔØ¸ü¶à¹¦ÄÜ
+        //æ‰“å¼€å…³é—­ä¸‹æ‹‰åˆ·æ–°åŠ è½½æ›´å¤šåŠŸèƒ½
         mAbPullListView.setPullRefreshEnable(true); 
         mAbPullListView.setPullLoadEnable(true);
         
-        //ListViewÊı¾İ
+        //ListViewæ•°æ®
     	list = new ArrayList<Map<String, Object>>();
     	
-    	//Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+    	//ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
     	myListViewAdapter = new ImageListAdapter(this, list,R.layout.list_items,
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
 						R.id.itemsTitle,R.id.itemsText });
     	mAbPullListView.setAdapter(myListViewAdapter);
-    	//item±»µã»÷ÊÂ¼ş
+    	//itemè¢«ç‚¹å‡»äº‹ä»¶
     	mAbPullListView.setOnItemClickListener(new OnItemClickListener(){
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -80,7 +80,7 @@ public class PullToRefreshListActivity extends AbActivity {
     	
     	showProgressDialog();
 
-    	//¶¨ÒåÁ½ÖÖ²éÑ¯µÄÊÂ¼ş
+    	//å®šä¹‰ä¸¤ç§æŸ¥è¯¢çš„äº‹ä»¶
     	final AbTaskItem item1 = new AbTaskItem();
 		item1.callback = new AbTaskCallback() {
 
@@ -127,7 +127,7 @@ public class PullToRefreshListActivity extends AbActivity {
 					newList.clear();
 					mAbPullListView.stopLoadMore(true);
                 }else{
-                	//Ã»ÓĞĞÂÊı¾İÁË
+                	//æ²¡æœ‰æ–°æ•°æ®äº†
                 	mAbPullListView.stopLoadMore(false);
                 }
 				
@@ -144,8 +144,8 @@ public class PullToRefreshListActivity extends AbActivity {
 	   		    	for (int i = 0; i < 10; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "itemÉÏÀ­"+i);
-		   		    	map.put("itemsText", "itemÉÏÀ­..."+i);
+		   		    	map.put("itemsTitle", "itemä¸Šæ‹‰"+i);
+		   		    	map.put("itemsText", "itemä¸Šæ‹‰..."+i);
 		   		    	newList.add(map);
 	   				}
 	   		    	
@@ -171,7 +171,7 @@ public class PullToRefreshListActivity extends AbActivity {
 			
 		});
 		
-    	//µÚÒ»´ÎÏÂÔØÊı¾İ
+    	//ç¬¬ä¸€æ¬¡ä¸‹è½½æ•°æ®
 		mAbTaskQueue.execute(item1);
 		
     }

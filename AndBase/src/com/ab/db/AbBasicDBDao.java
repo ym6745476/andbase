@@ -25,7 +25,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class AbBasicDBDao {
 	
 	/**
-	 * µÃµ½ÁĞÖµ.
+	 * å¾—åˆ°åˆ—å€¼.
 	 * @param columnName the column name
 	 * @param cursor the cursor
 	 * @return the string column value
@@ -35,7 +35,7 @@ public class AbBasicDBDao {
 	}
 	
 	/**
-	 * µÃµ½ÁĞÖµ.
+	 * å¾—åˆ°åˆ—å€¼.
 	 * @param columnName the column name
 	 * @param cursor the cursor
 	 * @return the int column value
@@ -45,7 +45,7 @@ public class AbBasicDBDao {
 	}
 	
 	/**
-	 * ÃèÊö£º¹Ø±ÕÊı¾İ¿âÓëÓÎ±ê.
+	 * æè¿°ï¼šå…³é—­æ•°æ®åº“ä¸æ¸¸æ ‡.
 	 * @param cursor the cursor
 	 * @param db the db
 	 */
@@ -61,7 +61,7 @@ public class AbBasicDBDao {
 	}
 	
 	/**
-	 * ÃèÊö£º¹Ø±ÕÓÎ±ê.
+	 * æè¿°ï¼šå…³é—­æ¸¸æ ‡.
 	 * @param cursor the cursor
 	 */
 	public void closeCursor(Cursor cursor) {

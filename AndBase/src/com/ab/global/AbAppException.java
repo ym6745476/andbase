@@ -24,7 +24,7 @@ import android.text.TextUtils;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º ¹«¹²Òì³£Àà.
+ * æè¿°ï¼š å…¬å…±å¼‚å¸¸ç±».
  *
  * @author zhaoqp
  * @date 2012-2-10
@@ -49,17 +49,17 @@ public class AbAppException extends Exception {
 
 		try {
 			if (e instanceof ConnectException) {
-				msg = "ÎŞ·¨Á¬½ÓÍøÂç£¬Çë¼ì²éÍøÂçÅäÖÃ";
+				msg = "æ— æ³•è¿æ¥ç½‘ç»œï¼Œè¯·æ£€æŸ¥ç½‘ç»œé…ç½®";
 			} 
 			else if (e instanceof UnknownHostException) {
-				msg = "²»ÄÜ½âÎöµÄ·şÎñµØÖ·";
+				msg = "ä¸èƒ½è§£æçš„æœåŠ¡åœ°å€";
 			}else if (e instanceof SocketException) {
-				msg = "ÍøÂçÓĞ´íÎó£¬ÇëÖØÊÔ";
+				msg = "ç½‘ç»œæœ‰é”™è¯¯ï¼Œè¯·é‡è¯•";
 			}else if (e instanceof SocketTimeoutException) {
-				msg = "Á¬½Ó³¬Ê±£¬ÇëÖØÊÔ";
+				msg = "è¿æ¥è¶…æ—¶ï¼Œè¯·é‡è¯•";
 			} else {
 				if (e == null || TextUtils.isEmpty(e.getMessage())) {
-					msg = "±§Ç¸£¬³ÌĞò³ö´íÁË£¬ÇëÁªÏµÎÒÃÇ";
+					msg = "æŠ±æ­‰ï¼Œç¨‹åºå‡ºé”™äº†ï¼Œè¯·è”ç³»æˆ‘ä»¬";
 				}
 				msg = " " + e.getMessage();
 			}
@@ -79,7 +79,7 @@ public class AbAppException extends Exception {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡Òì³£ĞÅÏ¢.
+	 * æè¿°ï¼šè·å–å¼‚å¸¸ä¿¡æ¯.
 	 *
 	 * @return the message
 	 * @see java.lang.Throwable#getMessage()

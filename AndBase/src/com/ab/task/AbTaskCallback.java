@@ -18,7 +18,7 @@ package com.ab.task;
 
 // TODO: Auto-generated Javadoc
 /**
- * 描述：任务执行的控制父类.
+ * 鎻忚堪锛氫换鍔℃墽琛岀殑鎺у埗鐖剁被.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -27,12 +27,12 @@ package com.ab.task;
 public class AbTaskCallback {
 	
 	/**
-	 * 描述：执行开始后调用.
+	 * 鎻忚堪锛氭墽琛屽紑濮嬪悗璋冪敤.
 	 */
 	public void get(){}; 
 	
 	/**
-	 * 描述：执行开始后调用.
+	 * 鎻忚堪锛氭墽琛屽紑濮嬪悗璋冪敤.
 	 */
 	public void update(){}; 
 

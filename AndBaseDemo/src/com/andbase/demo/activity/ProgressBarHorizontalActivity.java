@@ -17,10 +17,10 @@ import com.andbase.global.MyApplication;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºProgressBarHorizontalActivity.java 
- * ÃèÊö£ºË®Æ½½ø¶ÈÌõ
+ * åç§°ï¼šProgressBarHorizontalActivity.java 
+ * æè¿°ï¼šæ°´å¹³è¿›åº¦æ¡
  * @author zhaoqp
- * @date£º2013-9-22 ÏÂÎç4:52:06
+ * @dateï¼š2013-9-22 ä¸‹åˆ4:52:06
  * @version v1.0
  */
 public class ProgressBarHorizontalActivity extends AbActivity {
@@ -29,9 +29,9 @@ public class ProgressBarHorizontalActivity extends AbActivity {
 	private static final boolean D = Constant.DEBUG;
 	private MyApplication application;
 
-	// ProgressBar½ø¶È¿ØÖÆ
+	// ProgressBarè¿›åº¦æ§åˆ¶
 	private AbHorizontalProgressBar mAbProgressBar;
-	// ×î´ó1000
+	// æœ€å¤§1000
 	private int max = 100;	
 	private int progress = 0;
 	private TextView numberText, maxText;
@@ -51,7 +51,7 @@ public class ProgressBarHorizontalActivity extends AbActivity {
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
 
-		// ProgressBar½ø¶È¿ØÖÆ
+		// ProgressBarè¿›åº¦æ§åˆ¶
 		mAbProgressBar = (AbHorizontalProgressBar) findViewById(R.id.horizontalProgressBar);
 		
 		numberText = (TextView) findViewById(R.id.numberText);
@@ -113,7 +113,7 @@ public class ProgressBarHorizontalActivity extends AbActivity {
 				message.what = 1;
 				mUpdateHandler.sendMessage(message);
 				try {
-					// ¸üĞÂ¼ä¸ôºÁÃëÊı
+					// æ›´æ–°é—´éš”æ¯«ç§’æ•°
 					Thread.sleep(200);
 				} catch (InterruptedException e) {
 					Thread.currentThread().interrupt();

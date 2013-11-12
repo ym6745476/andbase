@@ -25,15 +25,15 @@ import android.widget.ImageView;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbScaleImageView.java 
- * ÃèÊö£º¸ù¾İ¿í¶È»ò¸ß¶ÈÉèÖÃÍ¼Ïñ³ß´ç£¬Èç¹ûÎ´ÉèÖÃÈ¡¾öÓÚÍ¼Ïñ³ß´ç
+ * åç§°ï¼šAbScaleImageView.java 
+ * æè¿°ï¼šæ ¹æ®å®½åº¦æˆ–é«˜åº¦è®¾ç½®å›¾åƒå°ºå¯¸ï¼Œå¦‚æœæœªè®¾ç½®å–å†³äºå›¾åƒå°ºå¯¸
  * @author zhaoqp
- * @date£º2013-9-3 ÏÂÎç4:09:16
+ * @dateï¼š2013-9-3 ä¸‹åˆ4:09:16
  * @version v1.0
  */
 public class AbScaleImageView extends ImageView {
     
-    /** µ±Ç°µÄbitmap. */
+    /** å½“å‰çš„bitmap. */
     private Bitmap currentBitmap;
     
     /** The image width. */
@@ -43,7 +43,7 @@ public class AbScaleImageView extends ImageView {
     private int imageHeight;
 
     /**
-     * ¹¹Ôì·½·¨.
+     * æ„é€ æ–¹æ³•.
      *
      * @param context the context
      */
@@ -53,7 +53,7 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ¹¹Ôì·½·¨.
+     * æ„é€ æ–¹æ³•.
      *
      * @param context the context
      * @param attrs the attrs
@@ -65,7 +65,7 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ¹¹Ôì·½·¨.
+     * æ„é€ æ–¹æ³•.
      *
      * @param context the context
      * @param attrs the attrs
@@ -76,14 +76,14 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ³õÊ¼»¯Í¼Æ¬Ëõ·ÅÀàĞÍ.
+     * åˆå§‹åŒ–å›¾ç‰‡ç¼©æ”¾ç±»å‹.
      */
     private void init() {
         this.setScaleType(ScaleType.CENTER_INSIDE);
     }
 
     /**
-     * »ØÊÕ.
+     * å›æ”¶.
      */
     public void recycle() {
         setImageBitmap(null);
@@ -94,7 +94,7 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºÉèÖÃÍ¼Æ¬Bitmap
+     * æè¿°ï¼šè®¾ç½®å›¾ç‰‡Bitmap
      */
     @Override
     public void setImageBitmap(Bitmap bm) {
@@ -103,7 +103,7 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºÉèÖÃÍ¼Æ¬Drawable
+     * æè¿°ï¼šè®¾ç½®å›¾ç‰‡Drawable
      */
     @Override
     public void setImageDrawable(Drawable d) {
@@ -111,7 +111,7 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºÉèÖÃÍ¼Æ¬×ÊÔ´
+     * æè¿°ï¼šè®¾ç½®å›¾ç‰‡èµ„æº
      */
     @Override
     public void setImageResource(int id) {
@@ -120,14 +120,14 @@ public class AbScaleImageView extends ImageView {
 
     
     /**
-     * ÃèÊö£ºonMeasure
+     * æè¿°ï¼šonMeasure
      * @see android.widget.ImageView#onMeasure(int, int)
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
         if (imageWidth == 0) {
-            // °´Í¼Æ¬´óĞ¡
+            // æŒ‰å›¾ç‰‡å¤§å°
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
             return;
         } else {
@@ -137,7 +137,7 @@ public class AbScaleImageView extends ImageView {
     }
     
     /**
-     * ÉèÖÃViewµÄ¿í¶È.
+     * è®¾ç½®Viewçš„å®½åº¦.
      *
      * @param w the new image width
      */
@@ -146,7 +146,7 @@ public class AbScaleImageView extends ImageView {
     }
 
     /**
-     * ÉèÖÃViewµÄ¸ß¶È.
+     * è®¾ç½®Viewçš„é«˜åº¦.
      *
      * @param h the new image height
      */

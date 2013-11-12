@@ -41,8 +41,8 @@ import com.ab.global.AbAppData;
 
 // TODO: Auto-generated Javadoc
 /**
- * Ãû³Æ£ºAbSlidingTabView
- * ÃèÊö£º»¬¶¯µÄtab.
+ * åç§°ï¼šAbSlidingTabView
+ * æè¿°ï¼šæ»‘åŠ¨çš„tab.
  * @author zhaoqp
  * @date 2011-11-28
  * @version
@@ -58,19 +58,19 @@ public class AbSlidingTabView extends LinearLayout {
 	/** The context. */
 	private Context context;
 	
-	/** tabµÄÏßĞÔ²¼¾Ö. */
+	/** tabçš„çº¿æ€§å¸ƒå±€. */
 	private LinearLayout mTabLayout = null;
 	
 	/** The m view pager. */
 	private ViewPager mViewPager;
 	
-	/**tabµÄÁĞ±í*/
+	/**tabçš„åˆ—è¡¨*/
 	private ArrayList<TextView> tabItemList = null;
 	
-	/**ÄÚÈİµÄView*/
+	/**å†…å®¹çš„View*/
 	private ArrayList<Fragment> pagerItemList = null;
 	
-	/**tabµÄÎÄ×Ö*/
+	/**tabçš„æ–‡å­—*/
 	private List<String> tabItemTextList = null;
 	
 	/** The layout params ff. */
@@ -82,39 +82,39 @@ public class AbSlidingTabView extends LinearLayout {
 	/** The layout params ww. */
 	public LinearLayout.LayoutParams layoutParamsWW = null;
 	
-	/**»¬¿é¶¯»­Í¼Æ¬*/
+	/**æ»‘å—åŠ¨ç”»å›¾ç‰‡*/
 	private ImageView mTabImg;
 	
-	/**µ±Ç°Ò³¿¨±àºÅ*/
+	/**å½“å‰é¡µå¡ç¼–å·*/
 	private int currIndex = 0;
 	
-	/**ÆÁÄ»¿í¶È*/
+	/**å±å¹•å®½åº¦*/
 	private int displayWidth = 0;
 	
-	/**ÄÚÈİÇøÓòµÄÊÊÅäÆ÷*/
+	/**å†…å®¹åŒºåŸŸçš„é€‚é…å™¨*/
 	private AbFragmentPagerAdapter mFragmentPagerAdapter = null;
 
-	/**tabµÄÎÄ×Ö´óĞ¡*/
+	/**tabçš„æ–‡å­—å¤§å°*/
 	private int tabTextSize = 16;
 	
-	/**tabµÄÎÄ×ÖÑÕÉ«*/
+	/**tabçš„æ–‡å­—é¢œè‰²*/
 	private int tabColor = Color.BLACK;
 	
-	/**tabµÄÑ¡ÖĞÎÄ×ÖÑÕÉ«*/
+	/**tabçš„é€‰ä¸­æ–‡å­—é¢œè‰²*/
 	private int tabSelectColor = Color.BLACK;
 	
-	/**tab»¬¿éµÄ¸ß¶È*/
+	/**tabæ»‘å—çš„é«˜åº¦*/
 	private int tabSlidingHeight = 5;
 	
 	
-	/**µ±Ç°tabµÄÎ»ÖÃ*/
+	/**å½“å‰tabçš„ä½ç½®*/
 	private int startX = 0;
 	
 	public AbSlidingTabView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
 		
-		//»ñÈ¡ÆÁÄ»µÄ·Ö±æÂÊ£¬ÒÔ¼ÆËãÆ«ÒÆÁ¿
+		//è·å–å±å¹•çš„åˆ†è¾¨ç‡ï¼Œä»¥è®¡ç®—åç§»é‡
 		Display display = ((Activity)this.context).getWindowManager().getDefaultDisplay();
 		displayWidth = display.getWidth();
 		
@@ -128,26 +128,26 @@ public class AbSlidingTabView extends LinearLayout {
 		mTabLayout = new LinearLayout(context);
 		mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
 		mTabLayout.setGravity(Gravity.CENTER);
-		//¶¨ÒåTabÀ¸
+		//å®šä¹‰Tabæ 
 		tabItemList = new ArrayList<TextView>();
 		tabItemTextList = new ArrayList<String>();
 		this.addView(mTabLayout,layoutParamsFW);
 		
-		//Ò³¿¨»¬¶¯Í¼Æ¬
+		//é¡µå¡æ»‘åŠ¨å›¾ç‰‡
 		mTabImg  = new ImageView(context);
 		this.addView(mTabImg,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,tabSlidingHeight));
 		
-		//ÄÚÈİµÄViewµÄÊÊÅä
+		//å†…å®¹çš„Viewçš„é€‚é…
 		mViewPager = new ViewPager(context);
-		//ÊÖ¶¯´´½¨µÄViewPager,±ØĞëµ÷ÓÃsetId()·½·¨ÉèÖÃÒ»¸öid
+		//æ‰‹åŠ¨åˆ›å»ºçš„ViewPager,å¿…é¡»è°ƒç”¨setId()æ–¹æ³•è®¾ç½®ä¸€ä¸ªid
 		mViewPager.setId(1985);
 		pagerItemList = new ArrayList<Fragment>();
 		
 		this.addView(mViewPager,layoutParamsFF);
 		
-		//ÒªÇó±ØĞëÊÇFragmentActivityµÄÊµÀı
+		//è¦æ±‚å¿…é¡»æ˜¯FragmentActivityçš„å®ä¾‹
 		if(!(this.context instanceof FragmentActivity)){
-			Log.e(TAG, "¹¹ÔìAbSlidingTabViewµÄ²ÎÊıcontext,±ØĞëÊÇFragmentActivityµÄÊµÀı¡£");
+			Log.e(TAG, "æ„é€ AbSlidingTabViewçš„å‚æ•°context,å¿…é¡»æ˜¯FragmentActivityçš„å®ä¾‹ã€‚");
 		}
 		
 		FragmentManager mFragmentManager = ((FragmentActivity)this.context).getSupportFragmentManager();
@@ -176,7 +176,7 @@ public class AbSlidingTabView extends LinearLayout {
 
 		@Override
 		public void onPageSelected(int arg0) {
-			//¼ÆËã»¬¿éÆ«ÒÆ
+			//è®¡ç®—æ»‘å—åç§»
 			computeTabImg(arg0);
 			
 		}
@@ -200,7 +200,7 @@ public class AbSlidingTabView extends LinearLayout {
 			}
 		}
 		
-		//¼ÆËã»¬¿éÆ«ÒÆ
+		//è®¡ç®—æ»‘å—åç§»
 		int count = mFragmentPagerAdapter.getCount();
 		int width = displayWidth/count;
 		int toX = width * index;
@@ -213,7 +213,7 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÔö¼ÓÒ»×éÄÚÈİÓëtab
+	 * æè¿°ï¼šå¢åŠ ä¸€ç»„å†…å®¹ä¸tab
 	 * @throws 
 	 */
 	public void addItemViews(List<String> tabTexts,List<Fragment> fragments){
@@ -244,7 +244,7 @@ public class AbSlidingTabView extends LinearLayout {
 			});
 		}
 		
-		//ÖØĞÂ
+		//é‡æ–°
 		computeTabImg(0);
 		
 		mFragmentPagerAdapter.notifyDataSetChanged();
@@ -253,7 +253,7 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÔö¼ÓÒ»¸öÄÚÈİÓëtab
+	 * æè¿°ï¼šå¢åŠ ä¸€ä¸ªå†…å®¹ä¸tab
 	 * @throws 
 	 */
 	public void addItemView(String tabText,Fragment fragment){
@@ -284,7 +284,7 @@ public class AbSlidingTabView extends LinearLayout {
 			});
 		}
 		
-		//ÖØĞÂ
+		//é‡æ–°
 		computeTabImg(0);
 	
 		mFragmentPagerAdapter.notifyDataSetChanged();
@@ -294,7 +294,7 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉ¾³ıÄ³Ò»¸ö
+	 * æè¿°ï¼šåˆ é™¤æŸä¸€ä¸ª
 	 * @param index
 	 * @throws 
 	 */
@@ -310,7 +310,7 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉ¾³ıËùÓĞ
+	 * æè¿°ï¼šåˆ é™¤æ‰€æœ‰
 	 * @throws 
 	 */
 	public void removeAllItemView(int index){
@@ -324,7 +324,7 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Õâ¸öViewµÄViewPager
+	 * æè¿°ï¼šè·å–è¿™ä¸ªViewçš„ViewPager
 	 * @return
 	 * @throws 
 	 */
@@ -338,7 +338,7 @@ public class AbSlidingTabView extends LinearLayout {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃTabµÄ±³¾°
+	 * æè¿°ï¼šè®¾ç½®Tabçš„èƒŒæ™¯
 	 * @param res
 	 * @throws 
 	 */
@@ -352,7 +352,7 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃtabÎÄ×ÖºÍ»¬¿éµÄÑÕÉ«
+	 * æè¿°ï¼šè®¾ç½®tabæ–‡å­—å’Œæ»‘å—çš„é¢œè‰²
 	 * @param tabColor
 	 * @throws 
 	 */
@@ -363,7 +363,7 @@ public class AbSlidingTabView extends LinearLayout {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÑ¡ÖĞºÍ»¬¿éµÄÑÕÉ«
+	 * æè¿°ï¼šè®¾ç½®é€‰ä¸­å’Œæ»‘å—çš„é¢œè‰²
 	 * @param tabColor
 	 * @throws 
 	 */
@@ -386,7 +386,7 @@ public class AbSlidingTabView extends LinearLayout {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃ»¬¿éµÄ¸ß¶È
+	 * æè¿°ï¼šè®¾ç½®æ»‘å—çš„é«˜åº¦
 	 * @param tabSlidingHeight
 	 * @throws 
 	 */

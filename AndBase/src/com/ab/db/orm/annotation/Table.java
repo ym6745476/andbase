@@ -22,14 +22,14 @@ import java.lang.annotation.Target;
 // TODO: Auto-generated Javadoc
 /**
  * The Interface Table.
- * ±Ì æ±Ì
+ * Ë°®Á§∫Ë°®
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target( { java.lang.annotation.ElementType.TYPE })
 public @interface Table {
 	
 	/**
-	 * ±Ì√˚.
+	 * Ë°®Âêç.
 	 *
 	 * @return the string
 	 */

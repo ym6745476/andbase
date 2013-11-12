@@ -51,7 +51,7 @@ public class AbViewPagerAdapter extends PagerAdapter{
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡ÊıÁ¿.
+	 * æè¿°ï¼šè·å–æ•°é‡.
 	 *
 	 * @return the count
 	 * @see android.support.v4.view.PagerAdapter#getCount()
@@ -62,7 +62,7 @@ public class AbViewPagerAdapter extends PagerAdapter{
 	}
 
 	/**
-	 * ÃèÊö£ºObjectÊÇ·ñ¶ÔÓ¦Õâ¸öView.
+	 * æè¿°ï¼šObjectæ˜¯å¦å¯¹åº”è¿™ä¸ªView.
 	 *
 	 * @param arg0 the arg0
 	 * @param arg1 the arg1
@@ -75,7 +75,7 @@ public class AbViewPagerAdapter extends PagerAdapter{
 	}
 
 	/**
-	 * ÃèÊö£ºÏÔÊ¾View.
+	 * æè¿°ï¼šæ˜¾ç¤ºView.
 	 *
 	 * @param container the container
 	 * @param position the position
@@ -90,7 +90,7 @@ public class AbViewPagerAdapter extends PagerAdapter{
 	}
 
 	/**
-	 * ÃèÊö£ºÒÆ³ıView.
+	 * æè¿°ï¼šç§»é™¤View.
 	 *
 	 * @param container the container
 	 * @param position the position
@@ -103,7 +103,7 @@ public class AbViewPagerAdapter extends PagerAdapter{
 	}
 	
 	/**
-	 * ÃèÊö£ººÜÖØÒª£¬·ñÔò²»ÄÜnotifyDataSetChanged.
+	 * æè¿°ï¼šå¾ˆé‡è¦ï¼Œå¦åˆ™ä¸èƒ½notifyDataSetChanged.
 	 *
 	 * @param object the object
 	 * @return the item position

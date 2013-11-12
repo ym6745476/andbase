@@ -40,7 +40,7 @@ import com.ab.global.AbConstant;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÎÄ¼ş²Ù×÷Àà.
+ * æè¿°ï¼šæ–‡ä»¶æ“ä½œç±».
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -54,33 +54,33 @@ public class AbFileUtil {
 	/** The Constant D. */
 	private static final boolean D = AbAppData.DEBUG;
 	
-	/** Ä¬ÈÏÏÂÔØÎÄ¼şµØÖ·. */
+	/** é»˜è®¤ä¸‹è½½æ–‡ä»¶åœ°å€. */
 	private static  String downPathRootDir = File.separator + "download" + File.separator;
 	
-    /** Ä¬ÈÏÏÂÔØÍ¼Æ¬ÎÄ¼şµØÖ·. */
+    /** é»˜è®¤ä¸‹è½½å›¾ç‰‡æ–‡ä»¶åœ°å€. */
 	private static  String downPathImageDir = downPathRootDir + "cache_images" + File.separator;
     
-    /** Ä¬ÈÏÏÂÔØÎÄ¼şµØÖ·. */
+    /** é»˜è®¤ä¸‹è½½æ–‡ä»¶åœ°å€. */
 	private static  String downPathFileDir = downPathRootDir + "cache_files" + File.separator;
     
-	/**MB  µ¥Î»B*/
+	/**MB  å•ä½B*/
 	private static int MB = 1024*1024;
 	
-	/**»º´æÎÄ¼ş¼ĞµÄ´óĞ¡100M  µ¥Î»B*/
+	/**ç¼“å­˜æ–‡ä»¶å¤¹çš„å¤§å°100M  å•ä½B*/
 	private static int cacheSize = 100*MB;
 	
-    /**Ê£Óà¿Õ¼ä´óÓÚ200M²ÅÊ¹ÓÃ»º´æ*/
+    /**å‰©ä½™ç©ºé—´å¤§äº200Mæ‰ä½¿ç”¨ç¼“å­˜*/
 	private static int freeSdSpaceNeededToCache = 200*MB;
 	
-	/**»º´æ¿Õ¼äµ±Ç°µÄ´óĞ¡£¬ÁÙÊ±*/
+	/**ç¼“å­˜ç©ºé—´å½“å‰çš„å¤§å°ï¼Œä¸´æ—¶*/
 	private static int dirSize = -1;
 	
-	/**Í³¼Æ³ÌĞòÏÂÔØµÄÍ¼Æ¬Êı£¬³¬¹ı10ÕÅ¼ì²ésd¿¨*/
+	/**ç»Ÿè®¡ç¨‹åºä¸‹è½½çš„å›¾ç‰‡æ•°ï¼Œè¶…è¿‡10å¼ æ£€æŸ¥sdå¡*/
 	private static int downCount = 0;
 	/**
-	 * ÏÂÔØÍøÂçÎÄ¼şµ½SD¿¨ÖĞ.Èç¹ûSDÖĞ´æÔÚÍ¬ÃûÎÄ¼ş½«²»ÔÙÏÂÔØ
-	 * @param url ÒªÏÂÔØÎÄ¼şµÄÍøÂçµØÖ·
-	 * @return ÏÂÔØºÃµÄ±¾µØÎÄ¼şµØÖ·
+	 * ä¸‹è½½ç½‘ç»œæ–‡ä»¶åˆ°SDå¡ä¸­.å¦‚æœSDä¸­å­˜åœ¨åŒåæ–‡ä»¶å°†ä¸å†ä¸‹è½½
+	 * @param url è¦ä¸‹è½½æ–‡ä»¶çš„ç½‘ç»œåœ°å€
+	 * @return ä¸‹è½½å¥½çš„æœ¬åœ°æ–‡ä»¶åœ°å€
 	 */
 	 public static String downFileToSD(String url,String name){
 		 InputStream in = null;
@@ -102,7 +102,7 @@ public class AbFileUtil {
 			if(!file.exists()){
 				file.createNewFile();
 			}else{
-				//ÎÄ¼şÒÑ¾­´æÔÚ
+				//æ–‡ä»¶å·²ç»å­˜åœ¨
 				if(file.length()!=0){
 					return file.getPath();
 				}
@@ -145,14 +145,14 @@ public class AbFileUtil {
 			}
 			
 			try {
-				//¼ì²éÎÄ¼ş´óĞ¡,Èç¹ûÎÄ¼şÎª0BËµÃ÷ÍøÂç²»ºÃÃ»ÓĞÏÂÔØ³É¹¦£¬Òª½«½¨Á¢µÄ¿ÕÎÄ¼şÉ¾³ı
+				//æ£€æŸ¥æ–‡ä»¶å¤§å°,å¦‚æœæ–‡ä»¶ä¸º0Bè¯´æ˜ç½‘ç»œä¸å¥½æ²¡æœ‰ä¸‹è½½æˆåŠŸï¼Œè¦å°†å»ºç«‹çš„ç©ºæ–‡ä»¶åˆ é™¤
 				if(file.length() == 0){
 					file.delete();
 				}else{
 					downCount ++;
 				}
 				if(downCount >= 10){
-					//¼ì²é¿Õ¼ä½«ºÜ¾ÃÎ´Ê¹ÓÃµÄÎÄ¼şÉ¾³ı
+					//æ£€æŸ¥ç©ºé—´å°†å¾ˆä¹…æœªä½¿ç”¨çš„æ–‡ä»¶åˆ é™¤
 					removeCache();
 					downCount = 0;
 				}
@@ -165,13 +165,13 @@ public class AbFileUtil {
 	 }
 	 
 	 /**
-	  * ÃèÊö£ºÍ¨¹ıÎÄ¼şµÄÍøÂçµØÖ·´ÓSD¿¨ÖĞ¶ÁÈ¡Í¼Æ¬£¬Èç¹ûSDÖĞÃ»ÓĞÔò×Ô¶¯ÏÂÔØ²¢±£´æ.
-	  * @param url ÎÄ¼şµÄÍøÂçµØÖ·
-	  * @param type Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©
-	  * Èç¹ûÉèÖÃÎªÔ­Í¼£¬Ôòºó±ß²ÎÊıÎŞĞ§£¬µÃµ½Ô­Í¼
-	  * @param newWidth ĞÂÍ¼Æ¬µÄ¿í
-	  * @param newHeight ĞÂÍ¼Æ¬µÄ¸ß
-	  * @return Bitmap ĞÂÍ¼Æ¬
+	  * æè¿°ï¼šé€šè¿‡æ–‡ä»¶çš„ç½‘ç»œåœ°å€ä»SDå¡ä¸­è¯»å–å›¾ç‰‡ï¼Œå¦‚æœSDä¸­æ²¡æœ‰åˆ™è‡ªåŠ¨ä¸‹è½½å¹¶ä¿å­˜.
+	  * @param url æ–‡ä»¶çš„ç½‘ç»œåœ°å€
+	  * @param type å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰
+	  * å¦‚æœè®¾ç½®ä¸ºåŸå›¾ï¼Œåˆ™åè¾¹å‚æ•°æ— æ•ˆï¼Œå¾—åˆ°åŸå›¾
+	  * @param newWidth æ–°å›¾ç‰‡çš„å®½
+	  * @param newHeight æ–°å›¾ç‰‡çš„é«˜
+	  * @return Bitmap æ–°å›¾ç‰‡
 	  */
 	 public static Bitmap getBitmapFromSDCache(String url,int type,int newWidth, int newHeight){
 		 Bitmap bit = null;
@@ -180,31 +180,31 @@ public class AbFileUtil {
 		    	return null;
 		     }
 			 
-			 //SD¿¨²»´æÔÚ »òÕßÊ£Óà¿Õ¼ä²»×ãÁË¾Í²»»º´æµ½SD¿¨ÁË
+			 //SDå¡ä¸å­˜åœ¨ æˆ–è€…å‰©ä½™ç©ºé—´ä¸è¶³äº†å°±ä¸ç¼“å­˜åˆ°SDå¡äº†
 			 if(!isCanUseSD() || freeSdSpaceNeededToCache < freeSpaceOnSD()){
 				 bit = getBitmapFormURL(url,type,newWidth,newHeight);
 				 return bit;
 		     }
 			 
 			 if(type != AbConstant.ORIGINALIMG && ( newWidth<=0 || newHeight<=0)){
-				 throw new IllegalArgumentException("Ëõ·ÅºÍ²Ã¼ôÍ¼Æ¬µÄ¿í¸ßÉèÖÃ²»ÄÜĞ¡ÓÚ0");
+				 throw new IllegalArgumentException("ç¼©æ”¾å’Œè£å‰ªå›¾ç‰‡çš„å®½é«˜è®¾ç½®ä¸èƒ½å°äº0");
 			 }
 			 
-			 //ÎÄ¼şÊÇ·ñ´æÔÚ
+			 //æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			 File path = Environment.getExternalStorageDirectory();
 			 File fileDirectory = new File(path.getAbsolutePath() + downPathImageDir);
 			 
-			 //»ñÈ¡ºó×º
+			 //è·å–åç¼€
 			 String suffix = getSuffixFromUrl(url);
 			 
-			 //»º´æµÄÍ¼Æ¬ÎÄ¼şÃûµÄ×éºÏ
+			 //ç¼“å­˜çš„å›¾ç‰‡æ–‡ä»¶åçš„ç»„åˆ
 			 String fileName = getImageFileName(url,newWidth,newHeight,type);
 			 File file = new File(fileDirectory,fileName+suffix);
 			 if(!file.exists()){
 				 downFileToSD(url,file.getName());
 				 return getBitmapFromSD(file,type,newWidth,newHeight);
 			 }else{
-				 //ÎÄ¼ş´æÔÚ
+				 //æ–‡ä»¶å­˜åœ¨
 				 if(type == AbConstant.CUTIMG){
 			 		bit = AbImageUtil.cutImg(file,newWidth,newHeight);
 			 	 }else if(type == AbConstant.SCALEIMG){
@@ -222,27 +222,27 @@ public class AbFileUtil {
 	 }
 	 
 	 /**
-	  * ÃèÊö£ºÍ¨¹ıÎÄ¼şµÄÍøÂçµØÖ·´ÓSD¿¨ÖĞ¶ÁÈ¡Í¼Æ¬.
-	  * @param url ÎÄ¼şµÄÍøÂçµØÖ·
-	  * @param type Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©
-	  * Èç¹ûÉèÖÃÎªÔ­Í¼£¬Ôòºó±ß²ÎÊıÎŞĞ§£¬µÃµ½Ô­Í¼
-	  * @param newWidth ĞÂÍ¼Æ¬µÄ¿í
-	  * @param newHeight ĞÂÍ¼Æ¬µÄ¸ß
-	  * @return Bitmap ĞÂÍ¼Æ¬
+	  * æè¿°ï¼šé€šè¿‡æ–‡ä»¶çš„ç½‘ç»œåœ°å€ä»SDå¡ä¸­è¯»å–å›¾ç‰‡.
+	  * @param url æ–‡ä»¶çš„ç½‘ç»œåœ°å€
+	  * @param type å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰
+	  * å¦‚æœè®¾ç½®ä¸ºåŸå›¾ï¼Œåˆ™åè¾¹å‚æ•°æ— æ•ˆï¼Œå¾—åˆ°åŸå›¾
+	  * @param newWidth æ–°å›¾ç‰‡çš„å®½
+	  * @param newHeight æ–°å›¾ç‰‡çš„é«˜
+	  * @return Bitmap æ–°å›¾ç‰‡
 	  */
 	 public static Bitmap getBitmapFromSD(String url,int type,int newWidth, int newHeight){
 		 Bitmap bit = null;
 		 try {
-			 //SD¿¨ÊÇ·ñ´æÔÚ
+			 //SDå¡æ˜¯å¦å­˜åœ¨
 			 if(!isCanUseSD()){
 				 return null;
 		     }
 			 
 			 if(type != AbConstant.ORIGINALIMG && ( newWidth<=0 || newHeight<=0)){
-				 throw new IllegalArgumentException("Ëõ·ÅºÍ²Ã¼ôÍ¼Æ¬µÄ¿í¸ßÉèÖÃ²»ÄÜĞ¡ÓÚ0");
+				 throw new IllegalArgumentException("ç¼©æ”¾å’Œè£å‰ªå›¾ç‰‡çš„å®½é«˜è®¾ç½®ä¸èƒ½å°äº0");
 			 }
 			 
-			 //ÎÄ¼şÊÇ·ñ´æÔÚ
+			 //æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			 File path = Environment.getExternalStorageDirectory();
 			 File fileDirectory = new File(path.getAbsolutePath() + downPathImageDir);
 			 String fileName = getImageFileName(url,newWidth,newHeight,type);
@@ -250,7 +250,7 @@ public class AbFileUtil {
 			 if(!file.exists()){
 				 return null;
 			 }else{
-				 //ÎÄ¼ş´æÔÚ
+				 //æ–‡ä»¶å­˜åœ¨
 				 if(type == AbConstant.CUTIMG){
 			 		bit = AbImageUtil.cutImg(file,newWidth,newHeight);
 			 	 }else if(type == AbConstant.SCALEIMG){
@@ -267,32 +267,32 @@ public class AbFileUtil {
 	 }
 	 
 	 /**
- 	 * ÃèÊö£ºÍ¨¹ıÎÄ¼şµÄ±¾µØµØÖ·´ÓSD¿¨¶ÁÈ¡Í¼Æ¬.
+ 	 * æè¿°ï¼šé€šè¿‡æ–‡ä»¶çš„æœ¬åœ°åœ°å€ä»SDå¡è¯»å–å›¾ç‰‡.
  	 *
  	 * @param file the file
- 	 * @param type Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©
- 	 * Èç¹ûÉèÖÃÎªÔ­Í¼£¬Ôòºó±ß²ÎÊıÎŞĞ§£¬µÃµ½Ô­Í¼
- 	 * @param newWidth ĞÂÍ¼Æ¬µÄ¿í
- 	 * @param newHeight ĞÂÍ¼Æ¬µÄ¸ß
- 	 * @return Bitmap ĞÂÍ¼Æ¬
+ 	 * @param type å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰
+ 	 * å¦‚æœè®¾ç½®ä¸ºåŸå›¾ï¼Œåˆ™åè¾¹å‚æ•°æ— æ•ˆï¼Œå¾—åˆ°åŸå›¾
+ 	 * @param newWidth æ–°å›¾ç‰‡çš„å®½
+ 	 * @param newHeight æ–°å›¾ç‰‡çš„é«˜
+ 	 * @return Bitmap æ–°å›¾ç‰‡
  	 */
 	 public static Bitmap getBitmapFromSD(File file,int type,int newWidth, int newHeight){
 		 Bitmap bit = null;
 		 try {
-			 //SD¿¨ÊÇ·ñ´æÔÚ
+			 //SDå¡æ˜¯å¦å­˜åœ¨
 			 if(!isCanUseSD()){
 		    	return null;
 		     }
 			 
 			 if(type != AbConstant.ORIGINALIMG && ( newWidth<=0 || newHeight<=0)){
-				 throw new IllegalArgumentException("Ëõ·ÅºÍ²Ã¼ôÍ¼Æ¬µÄ¿í¸ßÉèÖÃ²»ÄÜĞ¡ÓÚ0");
+				 throw new IllegalArgumentException("ç¼©æ”¾å’Œè£å‰ªå›¾ç‰‡çš„å®½é«˜è®¾ç½®ä¸èƒ½å°äº0");
 			 }
 			 
-			 //ÎÄ¼şÊÇ·ñ´æÔÚ
+			 //æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			 if(!file.exists()){
 				 return null;
 			 }
-			 //ÎÄ¼ş´æÔÚ
+			 //æ–‡ä»¶å­˜åœ¨
 			 if(type==AbConstant.CUTIMG){
 		 		bit = AbImageUtil.cutImg(file,newWidth,newHeight);
 		 	 }else if(type == AbConstant.SCALEIMG){
@@ -307,23 +307,23 @@ public class AbFileUtil {
 	 }
 	 
 	 /**
- 	 * ÃèÊö£ºÍ¨¹ıÎÄ¼şµÄ±¾µØµØÖ·´ÓSD¿¨¶ÁÈ¡Í¼Æ¬.
+ 	 * æè¿°ï¼šé€šè¿‡æ–‡ä»¶çš„æœ¬åœ°åœ°å€ä»SDå¡è¯»å–å›¾ç‰‡.
  	 *
  	 * @param file the file
- 	 * @return Bitmap Í¼Æ¬
+ 	 * @return Bitmap å›¾ç‰‡
  	 */
 	 public static Bitmap getBitmapFromSD(File file){
 		 Bitmap bitmap = null;
 		 try {
-			 //SD¿¨ÊÇ·ñ´æÔÚ
+			 //SDå¡æ˜¯å¦å­˜åœ¨
 			 if(!isCanUseSD()){
 		    	return null;
 		     }
-			 //ÎÄ¼şÊÇ·ñ´æÔÚ
+			 //æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			 if(!file.exists()){
 				 return null;
 			 }
-			 //ÎÄ¼ş´æÔÚ
+			 //æ–‡ä»¶å­˜åœ¨
 			 bitmap = AbImageUtil.originalImg(file);
 			
 		} catch (Exception e) {
@@ -333,13 +333,13 @@ public class AbFileUtil {
 	 }
 	 
 	 /**
-	  * ÃèÊö£º½«Í¼Æ¬µÄbyte[]Ğ´Èë±¾µØÎÄ¼ş.
-	  * @param imgByte Í¼Æ¬µÄbyte[]ĞÎÊÆ
-	  * @param fileName ÎÄ¼şÃû³Æ£¬ĞèÒª°üº¬ºó×º£¬Èç.jpg
-	  * @param type Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©
-	  * @param newWidth ĞÂÍ¼Æ¬µÄ¿í
-	  * @param newHeight ĞÂÍ¼Æ¬µÄ¸ß
-	  * @return Bitmap ĞÂÍ¼Æ¬
+	  * æè¿°ï¼šå°†å›¾ç‰‡çš„byte[]å†™å…¥æœ¬åœ°æ–‡ä»¶.
+	  * @param imgByte å›¾ç‰‡çš„byte[]å½¢åŠ¿
+	  * @param fileName æ–‡ä»¶åç§°ï¼Œéœ€è¦åŒ…å«åç¼€ï¼Œå¦‚.jpg
+	  * @param type å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰
+	  * @param newWidth æ–°å›¾ç‰‡çš„å®½
+	  * @param newHeight æ–°å›¾ç‰‡çš„é«˜
+	  * @return Bitmap æ–°å›¾ç‰‡
 	  */
      public static Bitmap getBitmapFormByte(byte[] imgByte,String fileName,int type,int newWidth, int newHeight){
     	   FileOutputStream fos = null;
@@ -403,46 +403,46 @@ public class AbFileUtil {
      }
 	    
 	/**
-	 * ÃèÊö£º¸ù¾İURL´Ó»¥Á¬Íø»ñÈ¡Í¼Æ¬.
-	 * @param url ÒªÏÂÔØÎÄ¼şµÄÍøÂçµØÖ·
-	 * @param type Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©
-	 * @param newWidth ĞÂÍ¼Æ¬µÄ¿í
-	 * @param newHeight ĞÂÍ¼Æ¬µÄ¸ß
-	 * @return Bitmap ĞÂÍ¼Æ¬
+	 * æè¿°ï¼šæ ¹æ®URLä»äº’è¿ç½‘è·å–å›¾ç‰‡.
+	 * @param url è¦ä¸‹è½½æ–‡ä»¶çš„ç½‘ç»œåœ°å€
+	 * @param type å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰
+	 * @param newWidth æ–°å›¾ç‰‡çš„å®½
+	 * @param newHeight æ–°å›¾ç‰‡çš„é«˜
+	 * @return Bitmap æ–°å›¾ç‰‡
 	 */
 	public static Bitmap getBitmapFormURL(String url,int type,int newWidth, int newHeight){
 		Bitmap bit = null;
 		try {
 			bit = AbImageUtil.getBitmapFormURL(url, type, newWidth, newHeight);
 	    } catch (Exception e) {
-	    	 if(D)Log.d(TAG, "ÏÂÔØÍ¼Æ¬Òì³££º"+e.getMessage());
+	    	 if(D)Log.d(TAG, "ä¸‹è½½å›¾ç‰‡å¼‚å¸¸ï¼š"+e.getMessage());
 		}
-	    if(D)Log.d(TAG, "·µ»ØµÄBitmap£º"+bit);
+	    if(D)Log.d(TAG, "è¿”å›çš„Bitmapï¼š"+bit);
 		return bit;
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡srcÖĞµÄÍ¼Æ¬×ÊÔ´.
+	 * æè¿°ï¼šè·å–srcä¸­çš„å›¾ç‰‡èµ„æº.
 	 *
-	 * @param src Í¼Æ¬µÄsrcÂ·¾¶£¬Èç£¨¡°image/arrow.png¡±£©
-	 * @return Bitmap Í¼Æ¬
+	 * @param src å›¾ç‰‡çš„srcè·¯å¾„ï¼Œå¦‚ï¼ˆâ€œimage/arrow.pngâ€ï¼‰
+	 * @return Bitmap å›¾ç‰‡
 	 */
 	public static Bitmap getBitmapFormSrc(String src){
 		Bitmap bit = null;
 		try {
 			bit = BitmapFactory.decodeStream(AbFileUtil.class.getResourceAsStream(src));
 	    } catch (Exception e) {
-	    	 if(D)Log.d(TAG, "»ñÈ¡Í¼Æ¬Òì³££º"+e.getMessage());
+	    	 if(D)Log.d(TAG, "è·å–å›¾ç‰‡å¼‚å¸¸ï¼š"+e.getMessage());
 		}
-	    if(D)Log.d(TAG, "·µ»ØµÄBitmap£º"+bit);
+	    if(D)Log.d(TAG, "è¿”å›çš„Bitmapï¼š"+bit);
 		return bit;
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡ÍøÂçÎÄ¼şµÄ´óĞ¡.
+	 * æè¿°ï¼šè·å–ç½‘ç»œæ–‡ä»¶çš„å¤§å°.
 	 *
-	 * @param Url Í¼Æ¬µÄÍøÂçÂ·¾¶
-	 * @return int ÍøÂçÎÄ¼şµÄ´óĞ¡
+	 * @param Url å›¾ç‰‡çš„ç½‘ç»œè·¯å¾„
+	 * @return int ç½‘ç»œæ–‡ä»¶çš„å¤§å°
 	 */
 	public static int getContentLengthFormUrl(String Url){
 		int mContentLength = 0;
@@ -459,21 +459,21 @@ public class AbFileUtil {
 			 mHttpURLConnection.setRequestProperty("Connection", "Keep-Alive");
 			 mHttpURLConnection.connect();
 			 if (mHttpURLConnection.getResponseCode() == 200){
-				 // ¸ù¾İÏìÓ¦»ñÈ¡ÎÄ¼ş´óĞ¡
+				 // æ ¹æ®å“åº”è·å–æ–‡ä»¶å¤§å°
 				 mContentLength = mHttpURLConnection.getContentLength();
 			 }
 	    } catch (Exception e) {
 	    	 e.printStackTrace();
-	    	 if(D)Log.d(TAG, "»ñÈ¡³¤¶ÈÒì³££º"+e.getMessage());
+	    	 if(D)Log.d(TAG, "è·å–é•¿åº¦å¼‚å¸¸ï¼š"+e.getMessage());
 		}
 		return mContentLength;
 	}
 	
 	 
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬Í¨¹ıÍøÂç»ñÈ¡.
-	 * @param url ÎÄ¼şµØÖ·
-	 * @return ÎÄ¼şÃû
+	 * è·å–æ–‡ä»¶åï¼Œé€šè¿‡ç½‘ç»œè·å–.
+	 * @param url æ–‡ä»¶åœ°å€
+	 * @return æ–‡ä»¶å
 	 */
 	public static String getFileNameFromNetUrl(String url){
 		String name = null;
@@ -513,9 +513,9 @@ public class AbFileUtil {
     }
 	
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬Í¨¹ıÍøÂç»ñÈ¡.
-	 * @param url ÎÄ¼şµØÖ·
-	 * @return ÎÄ¼şÃû
+	 * è·å–æ–‡ä»¶åï¼Œé€šè¿‡ç½‘ç»œè·å–.
+	 * @param url æ–‡ä»¶åœ°å€
+	 * @return æ–‡ä»¶å
 	 */
 	public static String getFileNameFromUrl(String url){
 		if(AbStrUtil.isEmpty(url)){
@@ -531,10 +531,10 @@ public class AbFileUtil {
     }
 	
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬Í¨¹ıÍøÂç»ñÈ¡.
-	 * @param url ÎÄ¼şµØÖ·
+	 * è·å–æ–‡ä»¶åï¼Œé€šè¿‡ç½‘ç»œè·å–.
+	 * @param url æ–‡ä»¶åœ°å€
 	 * @param suffix .tmp
-	 * @return ÎÄ¼şÃû
+	 * @return æ–‡ä»¶å
 	 */
 	public static String getFileNameFromUrl(String url,String suffix){
 		if(AbStrUtil.isEmpty(url)){
@@ -550,10 +550,10 @@ public class AbFileUtil {
     }
 	
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬Í¨¹ıÍøÂç»ñÈ¡.
-	 * @param url ÎÄ¼şµØÖ·
+	 * è·å–æ–‡ä»¶åï¼Œé€šè¿‡ç½‘ç»œè·å–.
+	 * @param url æ–‡ä»¶åœ°å€
 	 * @param suffix .tmp
-	 * @return ÎÄ¼şÃû
+	 * @return æ–‡ä»¶å
 	 */
 	public static String getSuffixFromUrl(String url){
 		if(AbStrUtil.isEmpty(url)){
@@ -561,7 +561,7 @@ public class AbFileUtil {
 		}
 		String suffix = ".tmp";
 		try {
-			//»ñÈ¡ºó×º
+			//è·å–åç¼€
 			if(url.lastIndexOf(".")!=-1){
 				 suffix = url.substring(url.lastIndexOf("."));
 				 if(suffix.indexOf("/")!=-1){
@@ -575,9 +575,9 @@ public class AbFileUtil {
     }
 	
 	/**
-	 * ÃèÊö£º´Ósd¿¨ÖĞµÄÎÄ¼ş¶ÁÈ¡µ½byte[].
+	 * æè¿°ï¼šä»sdå¡ä¸­çš„æ–‡ä»¶è¯»å–åˆ°byte[].
 	 *
-	 * @param path sd¿¨ÖĞÎÄ¼şÂ·¾¶
+	 * @param path sdå¡ä¸­æ–‡ä»¶è·¯å¾„
 	 * @return byte[]
 	 */
 	public static byte[] getByteArrayFromSD(String path) {  
@@ -585,11 +585,11 @@ public class AbFileUtil {
 		ByteArrayOutputStream out = null;
 	    try {
 	    	File file = new File(path);  
-	    	//SD¿¨ÊÇ·ñ´æÔÚ
+	    	//SDå¡æ˜¯å¦å­˜åœ¨
 			if(!isCanUseSD()){
 				 return null;
 		    }
-			//ÎÄ¼şÊÇ·ñ´æÔÚ
+			//æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			if(!file.exists()){
 				 return null;
 			}
@@ -623,7 +623,7 @@ public class AbFileUtil {
     }  
 	
 	/**
-	 * ÃèÊö£º½«byteÊı×éĞ´ÈëÎÄ¼ş.
+	 * æè¿°ï¼šå°†byteæ•°ç»„å†™å…¥æ–‡ä»¶.
 	 *
 	 * @param path the path
 	 * @param content the content
@@ -634,11 +634,11 @@ public class AbFileUtil {
 		 FileOutputStream fos = null;
 		 try {
 	    	File file = new File(path);  
-	    	//SD¿¨ÊÇ·ñ´æÔÚ
+	    	//SDå¡æ˜¯å¦å­˜åœ¨
 			if(!isCanUseSD()){
 				 return;
 		    }
-			//ÎÄ¼şÊÇ·ñ´æÔÚ
+			//æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			if(!file.exists()){
 				if(create){
 					File parent = file.getParentFile();
@@ -666,9 +666,9 @@ public class AbFileUtil {
    }  
 	 
 	/**
-	 * ÃèÊö£ºSD¿¨ÊÇ·ñÄÜÓÃ.
+	 * æè¿°ï¼šSDå¡æ˜¯å¦èƒ½ç”¨.
 	 *
-	 * @return true ¿ÉÓÃ,false²»¿ÉÓÃ
+	 * @return true å¯ç”¨,falseä¸å¯ç”¨
 	 */
 	public static boolean isCanUseSD() { 
 	    try { 
@@ -680,16 +680,16 @@ public class AbFileUtil {
     } 
 
 	/**
-	 * ÃèÊö£º»ñµÃµ±Ç°ÏÂÔØµÄµØÖ·.
-	 * @return ÏÂÔØµÄµØÖ·£¨Ä¬ÈÏSD¿¨download£©
+	 * æè¿°ï¼šè·å¾—å½“å‰ä¸‹è½½çš„åœ°å€.
+	 * @return ä¸‹è½½çš„åœ°å€ï¼ˆé»˜è®¤SDå¡downloadï¼‰
 	 */
 	public static String getDownPathImageDir() {
 		return downPathImageDir;
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃÍ¼Æ¬ÎÄ¼şµÄÏÂÔØ±£´æÂ·¾¶£¨Ä¬ÈÏSD¿¨download/cache_images£©.
-	 * @param downPathImageDir Í¼Æ¬ÎÄ¼şµÄÏÂÔØ±£´æÂ·¾¶
+	 * æè¿°ï¼šè®¾ç½®å›¾ç‰‡æ–‡ä»¶çš„ä¸‹è½½ä¿å­˜è·¯å¾„ï¼ˆé»˜è®¤SDå¡download/cache_imagesï¼‰.
+	 * @param downPathImageDir å›¾ç‰‡æ–‡ä»¶çš„ä¸‹è½½ä¿å­˜è·¯å¾„
 	 */
 	public static void setDownPathImageDir(String downPathImageDir) {
 		AbFileUtil.downPathImageDir = downPathImageDir;
@@ -706,15 +706,15 @@ public class AbFileUtil {
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃÎÄ¼şµÄÏÂÔØ±£´æÂ·¾¶£¨Ä¬ÈÏSD¿¨download/cache_files£©.
-	 * @param downPathFileDir ÎÄ¼şµÄÏÂÔØ±£´æÂ·¾¶
+	 * æè¿°ï¼šè®¾ç½®æ–‡ä»¶çš„ä¸‹è½½ä¿å­˜è·¯å¾„ï¼ˆé»˜è®¤SDå¡download/cache_filesï¼‰.
+	 * @param downPathFileDir æ–‡ä»¶çš„ä¸‹è½½ä¿å­˜è·¯å¾„
 	 */
 	public static void setDownPathFileDir(String downPathFileDir) {
 		AbFileUtil.downPathFileDir = downPathFileDir;
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡Ä¬ÈÏµÄÍ¼Æ¬±£´æÈ«Â·¾¶.
+	 * æè¿°ï¼šè·å–é»˜è®¤çš„å›¾ç‰‡ä¿å­˜å…¨è·¯å¾„.
 	 *
 	 * @return the default image down path dir
 	 */
@@ -724,7 +724,7 @@ public class AbFileUtil {
 			if(!isCanUseSD()){
 				return null;
 			}
-			//³õÊ¼»¯Í¼Æ¬±£´æÂ·¾¶
+			//åˆå§‹åŒ–å›¾ç‰‡ä¿å­˜è·¯å¾„
 			File fileRoot = Environment.getExternalStorageDirectory();
 			File dirFile = new File(fileRoot.getAbsolutePath() + AbFileUtil.downPathImageDir);
 			if(!dirFile.exists()){
@@ -737,9 +737,9 @@ public class AbFileUtil {
 	}
 	
 	/**
-    * ¼ÆËã´æ´¢Ä¿Â¼ÏÂµÄÎÄ¼ş´óĞ¡£¬
-    * µ±ÎÄ¼ş×Ü´óĞ¡´óÓÚ¹æ¶¨µÄCACHE_SIZE»òÕßsdcardÊ£Óà¿Õ¼äĞ¡ÓÚFREE_SD_SPACE_NEEDED_TO_CACHEµÄ¹æ¶¨
-    * ÄÇÃ´É¾³ı40%×î½üÃ»ÓĞ±»Ê¹ÓÃµÄÎÄ¼ş
+    * è®¡ç®—å­˜å‚¨ç›®å½•ä¸‹çš„æ–‡ä»¶å¤§å°ï¼Œ
+    * å½“æ–‡ä»¶æ€»å¤§å°å¤§äºè§„å®šçš„CACHE_SIZEæˆ–è€…sdcardå‰©ä½™ç©ºé—´å°äºFREE_SD_SPACE_NEEDED_TO_CACHEçš„è§„å®š
+    * é‚£ä¹ˆåˆ é™¤40%æœ€è¿‘æ²¡æœ‰è¢«ä½¿ç”¨çš„æ–‡ä»¶
     */
     public static boolean removeCache() {
     	
@@ -761,7 +761,7 @@ public class AbFileUtil {
 		       }
 	       }
 	       
-	       //µ±Ç°´óĞ¡´óÓÚÔ¤¶¨»º´æ¿Õ¼ä
+	       //å½“å‰å¤§å°å¤§äºé¢„å®šç¼“å­˜ç©ºé—´
 	       if (dirSize > cacheSize) {
 	           int removeFactor = (int) ((0.4 * files.length) + 1);
 	           Arrays.sort(files, new FileLastModifSort());
@@ -781,7 +781,7 @@ public class AbFileUtil {
 	
     
     /**
-     * ¼ÆËãsdcardÉÏµÄÊ£Óà¿Õ¼ä
+     * è®¡ç®—sdcardä¸Šçš„å‰©ä½™ç©ºé—´
      */
     public static int freeSpaceOnSD() {
        StatFs stat = new StatFs(Environment.getExternalStorageDirectory().getPath());
@@ -790,7 +790,7 @@ public class AbFileUtil {
     }
 	
     /**
-     * ¸ù¾İÎÄ¼şµÄ×îºóĞŞ¸ÄÊ±¼ä½øĞĞÅÅĞò
+     * æ ¹æ®æ–‡ä»¶çš„æœ€åä¿®æ”¹æ—¶é—´è¿›è¡Œæ’åº
      */
     public static class FileLastModifSort implements Comparator<File> {
         public int compare(File arg0, File arg1) {
@@ -806,7 +806,7 @@ public class AbFileUtil {
 
     /**
      * 
-     * ÃèÊö£º»º´æÎÄ¼ş¼ĞµÄ´óĞ¡
+     * æè¿°ï¼šç¼“å­˜æ–‡ä»¶å¤¹çš„å¤§å°
      * @return
      * @throws 
      */
@@ -816,7 +816,7 @@ public class AbFileUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃ»º´æÎÄ¼ş¼ĞµÄ´óĞ¡
+	 * æè¿°ï¼šè®¾ç½®ç¼“å­˜æ–‡ä»¶å¤¹çš„å¤§å°
 	 * @param cacheSize   B
 	 * @throws 
 	 */
@@ -826,7 +826,7 @@ public class AbFileUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÊ£Óà¿Õ¼ä´óÓÚ¶àÉÙB²ÅÊ¹ÓÃ»º´æ
+	 * æè¿°ï¼šå‰©ä½™ç©ºé—´å¤§äºå¤šå°‘Bæ‰ä½¿ç”¨ç¼“å­˜
 	 * @return
 	 * @throws 
 	 */
@@ -836,7 +836,7 @@ public class AbFileUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÊ£Óà¿Õ¼ä´óÓÚ¶àÉÙB²ÅÊ¹ÓÃ»º´æ
+	 * æè¿°ï¼šå‰©ä½™ç©ºé—´å¤§äºå¤šå°‘Bæ‰ä½¿ç”¨ç¼“å­˜
 	 * @param freeSdSpaceNeededToCache
 	 * @throws 
 	 */
@@ -845,7 +845,7 @@ public class AbFileUtil {
 	}
 	
 	/**
-     * É¾³ıËùÓĞ»º´æÎÄ¼ş
+     * åˆ é™¤æ‰€æœ‰ç¼“å­˜æ–‡ä»¶
     */
     public static boolean removeAllFileCache() {
     	
@@ -871,11 +871,11 @@ public class AbFileUtil {
     }
     
     /**
-     * ¸ù¾İurl¼ÆËãÍ¼Æ¬ÎÄ¼şÃû³Æ.
-     * @param url Í¼Æ¬µØÖ·.
-     * @param width Í¼Æ¬¿í¶È.
-     * @param height Í¼Æ¬¸ß¶È.
-     * @param type ´¦ÀíÀàĞÍ.
+     * æ ¹æ®urlè®¡ç®—å›¾ç‰‡æ–‡ä»¶åç§°.
+     * @param url å›¾ç‰‡åœ°å€.
+     * @param width å›¾ç‰‡å®½åº¦.
+     * @param height å›¾ç‰‡é«˜åº¦.
+     * @param type å¤„ç†ç±»å‹.
      */
     public static String getImageFileName(String url, int width, int height,int type) {
         return AbMd5.MD5(new StringBuilder(url.length() + 12).append("#W").append(width)

@@ -17,29 +17,29 @@ package com.ab.view.table;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º±í¸ñµÄÒ»¸öµ¥Ôª¸ñ.
+ * æè¿°ï¼šè¡¨æ ¼çš„ä¸€ä¸ªå•å…ƒæ ¼.
  *
  * @author zhaoqp
- * @date£º2013-1-28 ÏÂÎç3:56:18
+ * @dateï¼š2013-1-28 ä¸‹åˆ3:56:18
  * @version v1.0
  */
 public class AbTableCell {
 	
-	/** °´ÁĞÀàĞÍÈ¡Öµ. */
+	/** æŒ‰åˆ—ç±»å‹å–å€¼. */
 	public Object value;
 	
-	/** ÁĞ¿í. */
+	/** åˆ—å®½. */
 	public int width;
 	
-	/** µ¥Ôª¸ñÀàĞÍ. */
+	/** å•å…ƒæ ¼ç±»å‹. */
 	public int type;
 
 	/**
-	 * Ò»¸öµ¥Ôª¸ñ.
+	 * ä¸€ä¸ªå•å…ƒæ ¼.
 	 *
-	 * @param value µ¥Ôª¸ñµÄÖµ
-	 * @param width ÁĞ¿í
-	 * @param type µ¥Ôª¸ñÀàĞÍ
+	 * @param value å•å…ƒæ ¼çš„å€¼
+	 * @param width åˆ—å®½
+	 * @param type å•å…ƒæ ¼ç±»å‹
 	 */
 	public AbTableCell(Object value, int width,int type) {
 		this.value = value;

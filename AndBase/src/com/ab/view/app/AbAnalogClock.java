@@ -19,10 +19,10 @@ import com.ab.global.AbAppData;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbAnalogClock.java 
- * ÃèÊö£º×Ô¶¨ÒåÄ£ÄâÊ±ÖÓ
+ * åç§°ï¼šAbAnalogClock.java 
+ * æè¿°ï¼šè‡ªå®šä¹‰æ¨¡æ‹Ÿæ—¶é’Ÿ
  * @author zhaoqp
- * @date£º2013-11-6 ÉÏÎç9:13:49
+ * @dateï¼š2013-11-6 ä¸Šåˆ9:13:49
  * @version v1.0
  */
 public class AbAnalogClock extends View {
@@ -35,25 +35,25 @@ public class AbAnalogClock extends View {
 	
 	private Time mCalendar;
 
-	//Ê±ÕëÍ¼±ê
+	//æ—¶é’ˆå›¾æ ‡
 	private Drawable mHourHand;
 	
-	//·ÖÕëÍ¼±ê
+	//åˆ†é’ˆå›¾æ ‡
 	private Drawable mMinuteHand;
 	
-	//ÃëÕëÍ¼±ê
+	//ç§’é’ˆå›¾æ ‡
 	private Drawable mSecondHand;
 		
-	//±íÅÌÍ¼±ê
+	//è¡¨ç›˜å›¾æ ‡
 	private Drawable mDial;
 
-	//±íÅÌÍ¼Æ¬µÄ´óĞ¡
+	//è¡¨ç›˜å›¾ç‰‡çš„å¤§å°
 	private int mDialWidth;
 	private int mDialHeight;
 
 	private boolean mAttached;
 	
-	//µ±Ç°Ê±¼ä
+	//å½“å‰æ—¶é—´
 	private float mMinutes;
 	private float mHour;
 	private float mSecond;
@@ -100,7 +100,7 @@ public class AbAnalogClock extends View {
 		// so update the Time
 		mCalendar = new Time();
 
-		// ¸üĞÂµ±Ç°Ê±¼äÃ¿Ãëµ÷ÓÃÒ»´Î
+		// æ›´æ–°å½“å‰æ—¶é—´æ¯ç§’è°ƒç”¨ä¸€æ¬¡
 		onTimeChanged();
 		
 	}
@@ -178,7 +178,7 @@ public class AbAnalogClock extends View {
 		}
 		dial.draw(canvas);
 
-		//Ê±Õë
+		//æ—¶é’ˆ
 		canvas.save();
 		canvas.rotate(mHour / 12.0f * 360.0f, x, y);
 		final Drawable hourHand = mHourHand;
@@ -191,7 +191,7 @@ public class AbAnalogClock extends View {
 		hourHand.draw(canvas);
 		canvas.restore();
 
-		//·ÖÕë
+		//åˆ†é’ˆ
 		canvas.save();
 		canvas.rotate(mMinutes / 60.0f * 360.0f, x, y);
 
@@ -205,7 +205,7 @@ public class AbAnalogClock extends View {
 		minuteHand.draw(canvas);
 		canvas.restore();
 		
-		//ÃëÕë
+		//ç§’é’ˆ
 		canvas.save();
 		canvas.rotate(mSecond / 60.0f * 360.0f, x, y);
 
@@ -234,7 +234,7 @@ public class AbAnalogClock extends View {
 		mMinutes = minute + second / 60.0f;
 		mHour = hour + mMinutes / 60.0f;
 		mChanged = true;
-		if(D)Log.d(TAG, "Ê±¼ä¸Ä±ä:mHour:"+mHour+",mMinutes:"+mMinutes+",mSecond:"+mSecond);
+		if(D)Log.d(TAG, "æ—¶é—´æ”¹å˜:mHour:"+mHour+",mMinutes:"+mMinutes+",mSecond:"+mSecond);
 		updateContentDescription(mCalendar);
         new Handler().postDelayed(new Runnable() {
 			

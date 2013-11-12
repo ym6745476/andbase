@@ -45,13 +45,13 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	/** The m scroller. */
 	private Scroller mScroller;
 	
-	/** Í·²¿Ë¢ĞÂView. */
+	/** å¤´éƒ¨åˆ·æ–°View. */
 	private AbListViewHeader mHeaderView;
 	
 	/** The m footer view. */
 	private AbListViewFooter mFooterView;
 	
-	/** Í·²¿ViewµÄ¸ß¶È. */
+	/** å¤´éƒ¨Viewçš„é«˜åº¦. */
 	private int mHeaderViewHeight; 
 	
 	/** The m enable pull refresh. */
@@ -86,10 +86,10 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	
 	private AbLoadingView loadingView = null;
 	
-	/** Êı¾İÏà¹Ø. */
+	/** æ•°æ®ç›¸å…³. */
 	private BaseAdapter mAdapter = null;
 	
-	/** Íâ²ãÊÇ·ñ¿É¹ö¶¯. */
+	/** å¤–å±‚æ˜¯å¦å¯æ»šåŠ¨. */
 	private boolean childScrollState = false;
 	
 	/**
@@ -131,7 +131,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		
 		mGridView = this.getGridView();
 		mGridView.setCacheColorHint(context.getResources().getColor(android.R.color.transparent));
-		//Ä¬ÈÏÖµ ×Ô¶¨Òå¿ÉÒÔµ½ActivityÖĞĞŞ¸Ä
+		//é»˜è®¤å€¼ è‡ªå®šä¹‰å¯ä»¥åˆ°Activityä¸­ä¿®æ”¹
 		mGridView.setColumnWidth(100);
 		mGridView.setGravity(Gravity.CENTER);
 		mGridView.setHorizontalSpacing(5);
@@ -143,7 +143,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		mGridView.setOnScrollListener(this);
 		mGridView.setOnTouchListener(this);
 		
-		//¼ÓÔØÊ±µÄView
+		//åŠ è½½æ—¶çš„View
 		//loadingView = new AbLoadingView(context);
 		
 		/*LinearLayout.LayoutParams layoutParamsFW1 = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT);
@@ -156,16 +156,16 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		
 		addFooterView(mFooterView);
 		mFooterView.hide();
-		//Ä¬ÈÏÊÇ´ò¿ªË¢ĞÂÓë¸ü¶à
+		//é»˜è®¤æ˜¯æ‰“å¼€åˆ·æ–°ä¸æ›´å¤š
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
 		
 	}
 
 	/**
-	 * ´ò¿ª»òÕß¹Ø±ÕÏÂÀ­Ë¢ĞÂ¹¦ÄÜ.
+	 * æ‰“å¼€æˆ–è€…å…³é—­ä¸‹æ‹‰åˆ·æ–°åŠŸèƒ½.
 	 *
-	 * @param enable ¿ª¹Ø±ê¼Ç
+	 * @param enable å¼€å…³æ ‡è®°
 	 */
 	public void setPullRefreshEnable(boolean enable) {
 		mEnablePullRefresh = enable;
@@ -177,9 +177,9 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 	
 	/**
-	 * ´ò¿ª»òÕß¹Ø±Õ¼ÓÔØ¸ü¶à¹¦ÄÜ.
+	 * æ‰“å¼€æˆ–è€…å…³é—­åŠ è½½æ›´å¤šåŠŸèƒ½.
 	 *
-	 * @param enable ¿ª¹Ø±ê¼Ç
+	 * @param enable å¼€å…³æ ‡è®°
 	 */
 	public void setPullLoadEnable(boolean enable) {
 		mEnablePullLoad = enable;
@@ -188,7 +188,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		} else {
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
-			//load moreµã»÷ÊÂ¼ş.
+			//load moreç‚¹å‡»äº‹ä»¶.
 			mFooterView.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -216,7 +216,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		mPullLoading = true;
 		mFooterView.setState(AbListViewFooter.STATE_LOADING);
 		if (mListViewListener != null) {
-			//¿ªÊ¼ÏÂÔØÊı¾İ
+			//å¼€å§‹ä¸‹è½½æ•°æ®
 			mListViewListener.onLoadMore();
 		}
 	}
@@ -232,7 +232,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}
-		//ÅĞ¶ÏÓĞÃ»ÓĞ¸ü¶àÊı¾İÁË
+		//åˆ¤æ–­æœ‰æ²¡æœ‰æ›´å¤šæ•°æ®äº†
 		if(more){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
@@ -241,9 +241,9 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 
 	/**
-	 * ¸üĞÂheaderµÄ¸ß¶È.
+	 * æ›´æ–°headerçš„é«˜åº¦.
 	 *
-	 * @param ĞÂÔöµÄ¸ß¶È
+	 * @param æ–°å¢çš„é«˜åº¦
 	 */
 	private void updateHeaderHeight(float delta) {
 		int newHeight = (int) delta + mHeaderView.getVisiableHeight();
@@ -258,35 +258,35 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 
 	/**
-	 * ¸ù¾İ×´Ì¬ÉèÖÃHeaderµÄÎ»ÖÃ.
+	 * æ ¹æ®çŠ¶æ€è®¾ç½®Headerçš„ä½ç½®.
 	 */
 	private void resetHeaderHeight() {
-		//µ±Ç°ÏÂÀ­µ½µÄ¸ß¶È
+		//å½“å‰ä¸‹æ‹‰åˆ°çš„é«˜åº¦
 		int height = mHeaderView.getVisiableHeight();
 		if (height < mHeaderViewHeight || !mPullRefreshing) {
-			//¾àÀë¶Ì  Òş²Ø
+			//è·ç¦»çŸ­  éšè—
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -1*height, SCROLL_DURATION);
 		}else if(height > mHeaderViewHeight || !mPullRefreshing){
-			//¾àÀë¶àµÄ  µ¯»Øµ½mHeaderViewHeight
+			//è·ç¦»å¤šçš„  å¼¹å›åˆ°mHeaderViewHeight
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -(height-mHeaderViewHeight), SCROLL_DURATION);
 		}
 		
-		//Ëø¶¨ÊÂ¼ş
+		//é”å®šäº‹ä»¶
 		childScrollState = true;
 		
 		invalidate();
 	}
 	
 	/**
-	 * ÃèÊö£ºÊÂ¼ş
+	 * æè¿°ï¼šäº‹ä»¶
 	 * @see android.widget.ScrollView#onTouchEvent(android.view.MotionEvent)
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
 		
-		//GridView½ÓÊÜÊÂ¼ş£¬×Ô¼ºµÄÌø¹ı
+		//GridViewæ¥å—äº‹ä»¶ï¼Œè‡ªå·±çš„è·³è¿‡
 		if(childScrollState){
 			return false;
 		}
@@ -307,7 +307,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 				final float deltaY = ev.getRawY() - mLastY;
 				mLastY = ev.getRawY();
 				if (mEnablePullRefresh && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
-					//ÏÂÀ­¸üĞÂ¸ß¶È
+					//ä¸‹æ‹‰æ›´æ–°é«˜åº¦
 					updateHeaderHeight(deltaY / OFFSET_RADIO);
 					
 				}
@@ -315,18 +315,18 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 			case MotionEvent.ACTION_UP:
 				//Log.i("TAG", "--ACTION_UP--");
 				mLastY = -1;
-				//ĞèÒªË¢ĞÂµÄÌõ¼ş
+				//éœ€è¦åˆ·æ–°çš„æ¡ä»¶
 				if (mEnablePullRefresh && mHeaderView.getVisiableHeight() >= mHeaderViewHeight) {
 					mPullRefreshing = true;
 					mHeaderView.setState(AbListViewHeader.STATE_REFRESHING);
 					if (mListViewListener != null) {
-						//Ë¢ĞÂ
+						//åˆ·æ–°
 						mListViewListener.onRefresh();
 					}
 				}
 				if(mEnablePullRefresh){
-					//Log.i("TAG", "--µ¯»Ø--");
-					//µ¯»Ø
+					//Log.i("TAG", "--å¼¹å›--");
+					//å¼¹å›
 					resetHeaderHeight();
 				}
 				
@@ -349,7 +349,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃListViewµÄ¼àÌıÆ÷.
+	 * æè¿°ï¼šè®¾ç½®ListViewçš„ç›‘å¬å™¨.
 	 *
 	 * @param listViewListener the new ab on list view listener
 	 */
@@ -358,7 +358,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃÊı¾İÁĞ±íµÄÊÊÅäÆ÷.
+	 * æè¿°ï¼šè®¾ç½®æ•°æ®åˆ—è¡¨çš„é€‚é…å™¨.
 	 * @param adapter the new adapter
 	 */
 	public void setAdapter(BaseAdapter adapter) {
@@ -381,15 +381,15 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	public void onScrollStateChanged(AbsListView view, int scrollState) {
 		
 		switch (scrollState) {
-	    // µ±¹ö¶¯Ê±
+	    // å½“æ»šåŠ¨æ—¶
 	    case OnScrollListener.SCROLL_STATE_IDLE:
 	    	Log.i("TAG", "SCROLL_STATE_IDLE");
 	    	if(view.getFirstVisiblePosition() == 0){
-	    		Log.i("TAG", "¹ö¶¯µ½¶¥²¿");
+	    		Log.i("TAG", "æ»šåŠ¨åˆ°é¡¶éƒ¨");
 	    		childScrollState = false;
 	    		
 	    	}else if (view.getLastVisiblePosition() == (view.getCount() - 1)) {
-	    		Log.i("TAG", "¹ö¶¯µ½µ×²¿");
+	    		Log.i("TAG", "æ»šåŠ¨åˆ°åº•éƒ¨");
 	    		startLoadMore();
 	    	}else{
 	    		mFooterView.hide();

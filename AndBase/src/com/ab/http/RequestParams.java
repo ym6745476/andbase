@@ -273,10 +273,10 @@ public class RequestParams {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see java.lang.Object#toString()
      * @author: zhaoqp
-     * @date£º2013-10-22 ÏÂÎç4:23:14
+     * @dateï¼š2013-10-22 ä¸‹åˆ4:23:14
      * @version v1.0
      */
     @Override

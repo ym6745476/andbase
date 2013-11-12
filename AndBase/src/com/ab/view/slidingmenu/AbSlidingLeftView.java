@@ -21,10 +21,10 @@ import android.view.View;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º²à±ßÀ¸×ó±ßÊµÏÖ.
+ * æè¿°ï¼šä¾§è¾¹æ å·¦è¾¹å®ç°.
  *
  * @author zhaoqp
- * @date£º2013-4-24 ÏÂÎç3:46:47
+ * @dateï¼š2013-4-24 ä¸‹åˆ3:46:47
  * @version v1.0
  */
 public class AbSlidingLeftView {

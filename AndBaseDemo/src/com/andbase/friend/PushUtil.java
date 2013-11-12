@@ -24,13 +24,13 @@ public class PushUtil {
 	
 	  private static final String TAG = "PushUtil";
 	  private static final boolean D = Constant.DEBUG;
-	  //Ó¦ÓÃÊı¾İ´æ´¢
+	  //åº”ç”¨æ•°æ®å­˜å‚¨
 	  private static FrontiaStorage mCloudStorage = Frontia.getStorage();
 	  private static MyApplication application = null;
 	
 	  /**
 	    * 
-	    * ÃèÊö£ºÍÆËÍ·şÎñ
+	    * æè¿°ï¼šæ¨é€æœåŠ¡
 	    * @throws 
 	    */
 	   public static void startPushService(final FrontiaPush mPush,final AbActivity activity){
@@ -39,7 +39,7 @@ public class PushUtil {
 			   return;
 		   }
 	       if(!mPush.isPushWorking()){
-	    	   Log.d(TAG, "ÍÆËÍ·şÎñÆô¶¯");
+	    	   Log.d(TAG, "æ¨é€æœåŠ¡å¯åŠ¨");
 	    	   mPush.start(application.mUser.getAccessToken());
 	       }
 	       
@@ -56,7 +56,7 @@ public class PushUtil {
 	   
 	   /**
 	    * 
-	    * ÃèÊö£º±£´æÍ¨µÀ²ÅÄÜ±»ÆäËûÓÃ»§²éÑ¯
+	    * æè¿°ï¼šä¿å­˜é€šé“æ‰èƒ½è¢«å…¶ä»–ç”¨æˆ·æŸ¥è¯¢
 	    * @param mPushAppId
 	    * @param mUserId
 	    * @param mPushUserId
@@ -72,7 +72,7 @@ public class PushUtil {
 		   acl.setAccountWritable(user, true);
 		   acl.setPublicReadable(true);*/
 	        
-		   //¶ÔËùÓĞFrontiaÕË»§¿É¶ÁĞ´
+		   //å¯¹æ‰€æœ‰Frontiaè´¦æˆ·å¯è¯»å†™
 	       FrontiaACL acl = new FrontiaACL();
 	       acl.setPublicReadable(true);
 	       acl.setAccountWritable(user,true);
@@ -82,26 +82,26 @@ public class PushUtil {
 	    	    data.put("push_user_id",userId);
 	    	    data.put("push_app_id",appid);
 	        	data.put("push_local_user_id",application.mUser.getuId());
-	        	//ÔÚÍÆËÍ·şÎñÆô¶¯ºóĞèÒªÉèÖÃ½øÈ¥£¬ÓÃÓÚ·¢ÏûÏ¢,×Ô¼º²¢²»ĞèÒªÆäËûÈË²ÅĞèÒª
+	        	//åœ¨æ¨é€æœåŠ¡å¯åŠ¨åéœ€è¦è®¾ç½®è¿›å»ï¼Œç”¨äºå‘æ¶ˆæ¯,è‡ªå·±å¹¶ä¸éœ€è¦å…¶ä»–äººæ‰éœ€è¦
 	        	data.put("push_channel_id",channelId);
 	        } catch (JSONException e) {
 	            e.printStackTrace();
 	        }
 	   		FrontiaData newData = new FrontiaData(data);
 	   		newData.setACL(acl);
-	   		Log.d(TAG, "¿ªÊ¼±£´æchannelÊı¾İ£º"+data.toString());
-	   		//´æ´¢Êı¾İ
+	   		Log.d(TAG, "å¼€å§‹ä¿å­˜channelæ•°æ®ï¼š"+data.toString());
+	   		//å­˜å‚¨æ•°æ®
 	   		mCloudStorage.insertData(newData,new DataInsertListener() {
 	   		    @Override
 	   		    public void onSuccess() {
-	   		        Log.d(TAG, "channelÊı¾İÒÑ±£´æ");
+	   		        Log.d(TAG, "channelæ•°æ®å·²ä¿å­˜");
 	   		        //queryAll();
 	   		        
 	   		    }
 
 	   		    @Override
 	   		    public void onFailure(int errCode, String errMsg) {
-	   		    	Log.d(TAG, "channelÊı¾İ±£´æ´íÎóÎª"+errCode+errMsg);
+	   		    	Log.d(TAG, "channelæ•°æ®ä¿å­˜é”™è¯¯ä¸º"+errCode+errMsg);
 	   		    }
 	     	});
 	   		
@@ -113,7 +113,7 @@ public class PushUtil {
            mCloudStorage.findData(query, new DataInfoListener() {
                @Override
                public void onSuccess(List<FrontiaData> dataList) {
-               	   Log.d(TAG, "²éÑ¯ÔÆ¶ËËùÓĞÊı¾İ£º"+dataList);
+               	   Log.d(TAG, "æŸ¥è¯¢äº‘ç«¯æ‰€æœ‰æ•°æ®ï¼š"+dataList);
                }
 
                @Override
@@ -125,11 +125,11 @@ public class PushUtil {
 	   
 	   public static void queryByUserId(final String appid,final String userId,final String channelId,final String requestId){
 		   
-		   Log.d(TAG, "¿ªÊ¼²éÑ¯channelÊı¾İ...");
+		   Log.d(TAG, "å¼€å§‹æŸ¥è¯¢channelæ•°æ®...");
 		   
-		   //Çë´ó¼Ò²»ÒªÓÃÎÒµÄkeyµ÷ÓÃÉ¾³ı·½·¨£¬Ğ»Ğ»ÁË£¬Ç§ÍòĞ¡ĞÄ£¬¾¡Á¿»»³É×Ô¼ºµÄkey
+		   //è¯·å¤§å®¶ä¸è¦ç”¨æˆ‘çš„keyè°ƒç”¨åˆ é™¤æ–¹æ³•ï¼Œè°¢è°¢äº†ï¼Œåƒä¸‡å°å¿ƒï¼Œå°½é‡æ¢æˆè‡ªå·±çš„key
 		   /*FrontiaQuery query1 = new FrontiaQuery();
-		   Log.d(TAG, "É¾³ıËùÓĞÊı¾İ");
+		   Log.d(TAG, "åˆ é™¤æ‰€æœ‰æ•°æ®");
 		   mCloudStorage.deleteData(query1, null);*/
 		   
 		   FrontiaQuery query = new FrontiaQuery();
@@ -137,10 +137,10 @@ public class PushUtil {
            mCloudStorage.findData(query, new DataInfoListener() {
                @Override
                public void onSuccess(List<FrontiaData> dataList) {
-	               	Log.d(TAG, "²éÑ¯channelÊı¾İ(push_user_id="+userId+")£º"+dataList);
+	               	Log.d(TAG, "æŸ¥è¯¢channelæ•°æ®(push_user_id="+userId+")ï¼š"+dataList);
 	               	
 	               	if(dataList!=null && dataList.size()>0){
-	               		Log.d(TAG, "´æÔÚchannelÊı¾İ£¬²»ĞèÒª±£´æ");
+	               		Log.d(TAG, "å­˜åœ¨channelæ•°æ®ï¼Œä¸éœ€è¦ä¿å­˜");
 		               	
 	               	}else{
 	               		saveData(appid,userId,channelId,requestId);
@@ -149,22 +149,22 @@ public class PushUtil {
 
                @Override
                public void onFailure(int errCode, String errMsg) {
-               	    Log.d(TAG, "²éÑ¯channelÊı¾İerrCode: " + errCode+ ", errMsg: " + errMsg);
+               	    Log.d(TAG, "æŸ¥è¯¢channelæ•°æ®errCode: " + errCode+ ", errMsg: " + errMsg);
                }
            });
 	   }
 	   
 	   /**
 	    * 
-	    * ÃèÊö£ºÉ¾³ıchannelÊı¾İ
+	    * æè¿°ï¼šåˆ é™¤channelæ•°æ®
 	    * @param mUserId
 	    * @throws 
 	    */
 	   public static void deleteByUserId(String mUserId){
-		   //ÏÈÉ¾³ıÒÔÇ°µÄ
+		   //å…ˆåˆ é™¤ä»¥å‰çš„
 		   FrontiaQuery query = new FrontiaQuery();
 		   query = query.equals("push_user_id", mUserId);
-		   Log.d(TAG, "É¾³ıchannelÊı¾İ£ºpush_user_id£½"+mUserId);
+		   Log.d(TAG, "åˆ é™¤channelæ•°æ®ï¼špush_user_idï¼"+mUserId);
 		   mCloudStorage.deleteData(query, null);
 	   }
 	   

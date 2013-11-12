@@ -142,10 +142,10 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#setAdapter(android.widget.ListAdapter)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -205,7 +205,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 			mPullRefreshing = false;
 			resetHeaderHeight();
 		}
-		//ÅĞ¶ÏÓĞÃ»ÓĞÊı¾İ
+		//åˆ¤æ–­æœ‰æ²¡æœ‰æ•°æ®
 		if(mAdapter.getCount()>0){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
@@ -223,7 +223,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}
-		//ÅĞ¶ÏÓĞÃ»ÓĞ¸ü¶àÊı¾İÁË
+		//åˆ¤æ–­æœ‰æ²¡æœ‰æ›´å¤šæ•°æ®äº†
 		if(more){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
@@ -250,17 +250,17 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * ¸ù¾İ×´Ì¬ÉèÖÃHeaderµÄÎ»ÖÃ.
+	 * æ ¹æ®çŠ¶æ€è®¾ç½®Headerçš„ä½ç½®.
 	 */
 	private void resetHeaderHeight() {
-		//µ±Ç°ÏÂÀ­µ½µÄ¸ß¶È
+		//å½“å‰ä¸‹æ‹‰åˆ°çš„é«˜åº¦
 		int height = mHeaderView.getVisiableHeight();
 		if (height < mHeaderViewHeight || !mPullRefreshing) {
-			//¾àÀë¶Ì  Òş²Ø
+			//è·ç¦»çŸ­  éšè—
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -1*height, SCROLL_DURATION);
 		}else if(height > mHeaderViewHeight || !mPullRefreshing){
-			//¾àÀë¶àµÄ  µ¯»Øµ½mHeaderViewHeight
+			//è·ç¦»å¤šçš„  å¼¹å›åˆ°mHeaderViewHeight
 			mScrollBack = SCROLLBACK_HEADER;
 			mScroller.startScroll(0, height, 0, -(height-mHeaderViewHeight), SCROLL_DURATION);
 		}
@@ -269,8 +269,8 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * ¸üĞÂ footerµÄÏÔÊ¾.
-	 * @param delta Ôö¼ÓÖµ
+	 * æ›´æ–° footerçš„æ˜¾ç¤º.
+	 * @param delta å¢åŠ å€¼
 	 */
 	private void updateFooterHeight(float delta) {
 		int newHeight = mFooterView.getVisiableHeight() + (int) delta;
@@ -293,16 +293,16 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 		mPullLoading = true;
 		mFooterView.setState(AbListViewFooter.STATE_LOADING);
 		if (mListViewListener != null) {
-			//¿ªÊ¼ÏÂÔØÊı¾İ
+			//å¼€å§‹ä¸‹è½½æ•°æ®
 			mListViewListener.onLoadMore();
 		}
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#onTouchEvent(android.view.MotionEvent)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -327,16 +327,16 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 		case MotionEvent.ACTION_UP:
 			mLastY = -1;
 			if (getFirstVisiblePosition() == 0) {
-				//ĞèÒªË¢ĞÂµÄÌõ¼ş
+				//éœ€è¦åˆ·æ–°çš„æ¡ä»¶
 				if (mEnablePullRefresh && mHeaderView.getVisiableHeight() >= mHeaderViewHeight) {
 					mPullRefreshing = true;
 					mHeaderView.setState(AbListViewHeader.STATE_REFRESHING);
 					if (mListViewListener != null) {
-						//Ë¢ĞÂ
+						//åˆ·æ–°
 						mListViewListener.onRefresh();
 					}
 				}
-				//¸ù¾İmPullRefreshingÅĞ¶ÏÏÔÊ¾µÄheader
+				//æ ¹æ®mPullRefreshingåˆ¤æ–­æ˜¾ç¤ºçš„header
 				resetHeaderHeight();
 			} else if (getLastVisiblePosition() == mTotalItemCount - 1) {
 				// invoke load more.
@@ -352,7 +352,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.view.View#computeScroll()
 	 */
 	@Override
@@ -367,7 +367,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * ÃèÊö£ºÉèÖÃListViewµÄ¼àÌıÆ÷.
+	 * æè¿°ï¼šè®¾ç½®ListViewçš„ç›‘å¬å™¨.
 	 *
 	 * @param abOnListViewListener the new ab on list view listener
 	 */
@@ -377,10 +377,10 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView.OnScrollListener#onScrollStateChanged(com.ab.view.pullview.AbMultiColumnBaseAbsListView, int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override
@@ -391,10 +391,10 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView.OnScrollListener#onScroll(com.ab.view.pullview.AbMultiColumnBaseAbsListView, int, int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:32
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:32
 	 * @version v1.0
 	 */
 	@Override

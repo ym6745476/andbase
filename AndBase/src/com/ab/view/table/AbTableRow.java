@@ -17,37 +17,37 @@ package com.ab.view.table;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º±í¸ñµÄÒ»ÐÐ.
+ * æè¿°ï¼šè¡¨æ ¼çš„ä¸€è¡Œ.
  *
  * @author zhaoqp
- * @date£º2013-1-28 ÏÂÎç3:57:44
+ * @dateï¼š2013-1-28 ä¸‹åˆ3:57:44
  * @version v1.0
  */
 public class AbTableRow {
 	
-	/** ÐÐµÄËùÓÐÁÐ. */
+	/** è¡Œçš„æ‰€æœ‰åˆ—. */
 	public AbTableCell[] cells;
 	
-	/** ÐÐ¸ß. */
+	/** è¡Œé«˜. */
 	public int height;
 	
-	/** ¸ÃÐÐµ¥Ôª¸ñµÄ±³¾°. */
+	/** è¯¥è¡Œå•å…ƒæ ¼çš„èƒŒæ™¯. */
 	public int backgroundResource;
 	
-	/** ×ÖÌå´óÐ¡. */
+	/** å­—ä½“å¤§å°. */
 	public int textSize;
 	
-	/** ×ÖÌåÑÕÉ«. */
+	/** å­—ä½“é¢œè‰². */
 	public int textColor;
 
 	/**
-	 * ±í¸ñµÄÒ»ÐÐ¹¹Ôì.
+	 * è¡¨æ ¼çš„ä¸€è¡Œæž„é€ .
 	 *
-	 * @param cells   ÐÐµÄËùÓÐÁÐ
-	 * @param height  ÐÐ¸ß
-	 * @param textSize ×ÖÌå´óÐ¡
-	 * @param textColor ×ÖÌåÑÕÉ«
-	 * @param backgroundResource ¸ÃÐÐµ¥Ôª¸ñµÄ±³¾°
+	 * @param cells   è¡Œçš„æ‰€æœ‰åˆ—
+	 * @param height  è¡Œé«˜
+	 * @param textSize å­—ä½“å¤§å°
+	 * @param textColor å­—ä½“é¢œè‰²
+	 * @param backgroundResource è¯¥è¡Œå•å…ƒæ ¼çš„èƒŒæ™¯
 	 */
 	public AbTableRow(AbTableCell[] cells,int height,int textSize,int textColor,int backgroundResource) {
 	  this.cells = cells;
@@ -58,7 +58,7 @@ public class AbTableRow {
 	}
 
 	/**
-	 * ÐÐÖÐµÄµ¥Ôª¸ñÊý.
+	 * è¡Œä¸­çš„å•å…ƒæ ¼æ•°.
 	 *
 	 * @return the cell size
 	 */
@@ -67,10 +67,10 @@ public class AbTableRow {
 	}
 
 	/**
-	 * ¸ù¾ÝÁÐË÷Òý»ØÈ¥ÁÐµÄÖµ.
+	 * æ ¹æ®åˆ—ç´¢å¼•å›žåŽ»åˆ—çš„å€¼.
 	 *
-	 * @param index ´Ó0¿ªÊ¼
-	 * @return µ¥Ôª¸ñ¶ÔÏó
+	 * @param index ä»Ž0å¼€å§‹
+	 * @return å•å…ƒæ ¼å¯¹è±¡
 	 */
 	public AbTableCell getCellValue(int index) {
 	   if (index >= cells.length)

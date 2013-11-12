@@ -24,7 +24,7 @@ import com.andbase.global.Constant;
 
 
 /**
- * ²Ã¼ô½çÃæ
+ * è£å‰ªç•Œé¢
  *
  */
 public class CropImageActivity extends Activity implements OnClickListener{
@@ -70,7 +70,7 @@ public class CropImageActivity extends Activity implements OnClickListener{
     private void init(){
     	getWindowWH();
     	mPath = getIntent().getStringExtra("PATH");
-    	if(D)Log.d(TAG, "½«Òª½øĞĞ²Ã¼ôµÄÍ¼Æ¬µÄÂ·¾¶ÊÇ = " + mPath);
+    	if(D)Log.d(TAG, "å°†è¦è¿›è¡Œè£å‰ªçš„å›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + mPath);
         mImageView = (CropImageView) findViewById(R.id.crop_image);
         mSave = (Button) this.findViewById(R.id.okBtn);
         mCancel = (Button) this.findViewById(R.id.cancelBtn);
@@ -80,23 +80,23 @@ public class CropImageActivity extends Activity implements OnClickListener{
         mCancel.setOnClickListener(this);
         rotateLeft.setOnClickListener(this);
         rotateRight.setOnClickListener(this);
-        //Ïà²áÖĞÔ­À´µÄÍ¼Æ¬
+        //ç›¸å†Œä¸­åŸæ¥çš„å›¾ç‰‡
         File mFile = new File(mPath);
         try{
         	mBitmap = AbFileUtil.getBitmapFromSD(mFile,AbConstant.SCALEIMG,500,500);
             if(mBitmap==null){
-            	Toast.makeText(CropImageActivity.this, "Ã»ÓĞÕÒµ½Í¼Æ¬", 0).show();
+            	Toast.makeText(CropImageActivity.this, "æ²¡æœ‰æ‰¾åˆ°å›¾ç‰‡", 0).show();
     			finish();
             }else{
             	resetImageView(mBitmap);
             }
         }catch (Exception e) {
-        	Toast.makeText(CropImageActivity.this, "Ã»ÓĞÕÒµ½Í¼Æ¬", 0).show();
+        	Toast.makeText(CropImageActivity.this, "æ²¡æœ‰æ‰¾åˆ°å›¾ç‰‡", 0).show();
 			finish();
 		}
     }
     /**
-     * »ñÈ¡ÆÁÄ»µÄ¸ßºÍ¿í
+     * è·å–å±å¹•çš„é«˜å’Œå®½
      */
     private void getWindowWH(){
 		DisplayMetrics dm=new DisplayMetrics();
@@ -119,7 +119,7 @@ public class CropImageActivity extends Activity implements OnClickListener{
     		break;
     	case R.id.okBtn:
     		String path = mCrop.saveToLocal(mCrop.cropAndSave());
-    		if(D) Log.i(TAG, "²Ã¼ôºóÍ¼Æ¬µÄÂ·¾¶ÊÇ = " + path);
+    		if(D) Log.i(TAG, "è£å‰ªåå›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + path);
     		Intent intent = new Intent();
     		intent.putExtra("PATH", path);
     		setResult(RESULT_OK, intent);

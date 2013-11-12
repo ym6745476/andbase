@@ -10,10 +10,10 @@ import android.widget.ListView;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbOuterListView.java 
- * ÃèÊö£ºÕâ¸öListView²»»áÓëËüÀïÃæÓĞ¿É»¬¶¯viewµÄÊÂ¼ş²úÉú³åÍ»
+ * åç§°ï¼šAbOuterListView.java 
+ * æè¿°ï¼šè¿™ä¸ªListViewä¸ä¼šä¸å®ƒé‡Œé¢æœ‰å¯æ»‘åŠ¨viewçš„äº‹ä»¶äº§ç”Ÿå†²çª
  * @author zhaoqp
- * @date£º2013-10-24 ÉÏÎç11:17:45
+ * @dateï¼š2013-10-24 ä¸Šåˆ11:17:45
  * @version v1.0
  */
 public class AbOuterListView extends ListView {

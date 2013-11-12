@@ -105,11 +105,11 @@ public class WheelActivity extends AbActivity {
     public void initWheelData1(View mDataView1){
     	final AbWheelView mWheelView1 = (AbWheelView)mDataView1.findViewById(R.id.wheelView1);
 		mWheelView1.setAdapter(new AbNumericWheelAdapter(40, 190));
-		// ¿ÉÑ­»·¹ö¶¯
+		// å¯å¾ªç¯æ»šåŠ¨
 		mWheelView1.setCyclic(true);
-		// Ìí¼ÓÎÄ×Ö
+		// æ·»åŠ æ–‡å­—
 		mWheelView1.setLabel(getResources().getString(R.string.data1_unit));
-		// ³õÊ¼»¯Ê±ÏÔÊ¾µÄÊı¾İ
+		// åˆå§‹åŒ–æ—¶æ˜¾ç¤ºçš„æ•°æ®
 		mWheelView1.setCurrentItem(40);
 		mWheelView1.setValueTextSize(35);
 		mWheelView1.setLabelTextSize(35);
@@ -166,7 +166,7 @@ public class WheelActivity extends AbActivity {
     }
     
     public void initWheelDate(View mDateView,TextView mText){
-    	//ÄêÔÂÈÕÊ±¼äÑ¡ÔñÆ÷
+    	//å¹´æœˆæ—¥æ—¶é—´é€‰æ‹©å™¨
         Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR);
 		int month = calendar.get(Calendar.MONTH)+1;

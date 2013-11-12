@@ -14,7 +14,7 @@ import com.andbase.R;
 import com.andbase.global.MyApplication;
 
 /**
- * Ãû³Æ£ºDemoAbActivity ÃèÊö£ºAbActivity»ù±¾ÓÃ·¨
+ * åç§°ï¼šDemoAbActivity æè¿°ï¼šAbActivityåŸºæœ¬ç”¨æ³•
  * 
  * @author zhaoqp
  * @date 2011-12-13
@@ -53,7 +53,7 @@ public class DemoAbActivity extends AbActivity {
 			public void onClick(View v) {
 				Intent intent = new Intent(DemoAbActivity.this,
 						TitleTransparentActivity.class);
-				// ÉèÖÃ±êÌâÀ¸Í¸Ã÷
+				// è®¾ç½®æ ‡é¢˜æ é€æ˜
 				intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG,
 						AbConstant.TITLE_TRANSPARENT);
 				startActivity(intent);
@@ -73,7 +73,7 @@ public class DemoAbActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showToast("ToastÌáÊ¾¿ò");
+				showToast("Toastæç¤ºæ¡†");
 			}
 		});
 
@@ -108,11 +108,11 @@ public class DemoAbActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showDialog("±êÌâ", "ÃèÊö", new OnClickListener() {
+				showDialog("æ ‡é¢˜", "æè¿°", new OnClickListener() {
 
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						showToast("µã»÷ÁËÈ·ÈÏ");
+						showToast("ç‚¹å‡»äº†ç¡®è®¤");
 					}
 
 				});

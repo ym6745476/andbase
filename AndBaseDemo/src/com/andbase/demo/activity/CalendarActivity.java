@@ -58,15 +58,15 @@ public class CalendarActivity extends AbActivity {
 			@Override
 			public void onClick(int position) {
 				String date = mCalendarView.getStrDateAtPosition(position);
-				showToast("µã»÷ÁË"+position+"Öµ£º"+date);
+				showToast("ç‚¹å‡»äº†"+position+"å€¼ï¼š"+date);
 			}
 		});
 		
 		Calendar calendar = Calendar.getInstance();
 		monthList = new ArrayList<String>();
 		//
-		int curYear = calendar.get(Calendar.YEAR); // µÃµ½ÏµÍ³Äê·Ý
-		int curMonth = calendar.get(Calendar.MONTH) + 1; // µÃµ½ÏµÍ³ÔÂ·Ý
+		int curYear = calendar.get(Calendar.YEAR); // å¾—åˆ°ç³»ç»Ÿå¹´ä»½
+		int curMonth = calendar.get(Calendar.MONTH) + 1; // å¾—åˆ°ç³»ç»Ÿæœˆä»½
 		
 		int preYear = curYear-1;
 		for (int i = 1; i < 12; i++) {
@@ -103,7 +103,7 @@ public class CalendarActivity extends AbActivity {
 					ArrayList<CalendarCell> mCalendarCell = mCalendarView.getCalendarCells();
 					for(int i=0;i<5;i++){
 					  CalendarCell cc = mCalendarCell.get(new Random().nextInt(mCalendarCell.size()));
-					  //ÓÐÊý¾Ý
+					  //æœ‰æ•°æ®
 					  cc.setHasRecord(true);
 					}
 					//showProgressDialog();
@@ -131,7 +131,7 @@ public class CalendarActivity extends AbActivity {
 					ArrayList<CalendarCell> mCalendarCell = mCalendarView.getCalendarCells();
 					for(int i=0;i<5;i++){
 						  CalendarCell cc = mCalendarCell.get(new Random().nextInt(mCalendarCell.size()));
-						  //ÓÐÊý¾Ý
+						  //æœ‰æ•°æ®
 						  cc.setHasRecord(true);
 					}
 					//mActivity.showProgressDialog();
@@ -145,7 +145,7 @@ public class CalendarActivity extends AbActivity {
 		ArrayList<CalendarCell> mCalendarCell = mCalendarView.getCalendarCells();
 		for(int i=0;i<5;i++){
 			CalendarCell cc = mCalendarCell.get(new Random().nextInt(mCalendarCell.size()));
-			//ÓÐÊý¾Ý
+			//æœ‰æ•°æ®
 			cc.setHasRecord(true);
 		}
         

@@ -62,15 +62,15 @@ public class PHashActivity extends AbActivity {
 	private ImageShowAdapter mImagePathAdapter = null;
 	private ArrayList<String> mPhotoList = new ArrayList<String>();
 	private View mAvatarView = null;
-	/* ÓÃÀ´±êÊ¶ÇëÇóÕÕÏà¹¦ÄÜµÄactivity */
+	/* ç”¨æ¥æ ‡è¯†è¯·æ±‚ç…§ç›¸åŠŸèƒ½çš„activity */
 	private static final int CAMERA_WITH_DATA = 3023;
-	/* ÓÃÀ´±êÊ¶ÇëÇógalleryµÄactivity */
+	/* ç”¨æ¥æ ‡è¯†è¯·æ±‚galleryçš„activity */
 	private static final int PHOTO_PICKED_WITH_DATA = 3021;
-	/* ÓÃÀ´±êÊ¶ÇëÇó²Ã¼ôÍ¼Æ¬ºóµÄactivity */
+	/* ç”¨æ¥æ ‡è¯†è¯·æ±‚è£å‰ªå›¾ç‰‡åçš„activity */
 	private static final int CAMERA_CROP_DATA = 3022;
-	/* ÅÄÕÕµÄÕÕÆ¬´æ´¢Î»ÖÃ */
+	/* æ‹ç…§çš„ç…§ç‰‡å­˜å‚¨ä½ç½® */
 	private  File PHOTO_DIR = null;
-	// ÕÕÏà»úÅÄÕÕµÃµ½µÄÍ¼Æ¬
+	// ç…§ç›¸æœºæ‹ç…§å¾—åˆ°çš„å›¾ç‰‡
 	private File mCurrentPhotoFile;
 	private String mFileName;
 	
@@ -107,12 +107,12 @@ public class PHashActivity extends AbActivity {
 		mImagePathAdapter = new ImageShowAdapter(this, mPhotoList,116,116);
 		mGridView.setAdapter(mImagePathAdapter);
 	    mAvatarView = mInflater.inflate(R.layout.choose_avatar, null);
-	    //ÒªÏÔÊ¾Í¼ĞÎµÄView
+	    //è¦æ˜¾ç¤ºå›¾å½¢çš„View
 	    mChartLinearLayout = (LinearLayout) findViewById(R.id.chart01);
-	    //³õÊ¼»¯Í¼Æ¬±£´æÂ·¾¶
+	    //åˆå§‹åŒ–å›¾ç‰‡ä¿å­˜è·¯å¾„
 	    String photo_dir = AbFileUtil.getDefaultImageDownPathDir();
 	    if(AbStrUtil.isEmpty(photo_dir)){
-	    	showToast("´æ´¢¿¨²»´æÔÚ");
+	    	showToast("å­˜å‚¨å¡ä¸å­˜åœ¨");
 	    }else{
 	    	PHOTO_DIR = new File(photo_dir);
 	    }
@@ -126,13 +126,13 @@ public class PHashActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				removeDialog(AbConstant.DIALOGBOTTOM);
-				// ´ÓÏà²áÖĞÈ¥»ñÈ¡
+				// ä»ç›¸å†Œä¸­å»è·å–
 				try {
 					Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
 					intent.setType("image/*");
 					startActivityForResult(intent, PHOTO_PICKED_WITH_DATA);
 				} catch (ActivityNotFoundException e) {
-					showToast("Ã»ÓĞÕÒµ½ÕÕÆ¬");
+					showToast("æ²¡æœ‰æ‰¾åˆ°ç…§ç‰‡");
 				}
 			}
 			
@@ -165,7 +165,7 @@ public class PHashActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				if(filePathAll==null){
-					showToast("ÇëÏÈ´´½¨Í¼Æ¬Ë÷Òı!");
+					showToast("è¯·å…ˆåˆ›å»ºå›¾ç‰‡ç´¢å¼•!");
 				}else{
 					showDialog(1,mAvatarView);
 				}
@@ -185,7 +185,7 @@ public class PHashActivity extends AbActivity {
 					@Override
 					public void update() {
 						removeProgressDialog();
-						showToast("´´½¨Í¼Æ¬Ë÷ÒıÍê³É!");
+						showToast("åˆ›å»ºå›¾ç‰‡ç´¢å¼•å®Œæˆ!");
 					}
 
 					@Override
@@ -197,17 +197,17 @@ public class PHashActivity extends AbActivity {
 			   		    	files.clear();
 			   		    	colorHistogram.clear();
 							AbAppUtil.prepareStartTime();
-							//²éÑ¯ÊÖ»úÖĞËùÓĞÍ¼Æ¬
+							//æŸ¥è¯¢æ‰‹æœºä¸­æ‰€æœ‰å›¾ç‰‡
 							if(!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
-							   //ÎŞsd¿¨
+							   //æ— sdå¡
 							}else{
-								 //ÓĞsd¿¨
+								 //æœ‰sdå¡
 								 File pathSD = Environment.getExternalStorageDirectory();
 					        	 File fileDirectory = new File(pathSD.getAbsolutePath()
 					        				+ File.separator + "DCIM" + File.separator);
 					        	 listFile(fileDirectory);
 					    	}
-							//Ñ­»·ËùÓĞÍ¼Æ¬¼ì²éÏàËÆ¶È
+							//å¾ªç¯æ‰€æœ‰å›¾ç‰‡æ£€æŸ¥ç›¸ä¼¼åº¦
 							String fileStrs = filePathAll.toString();
 							if(!AbStrUtil.isEmpty(fileStrs)){
 								if(fileStrs.indexOf(",")!=-1){
@@ -221,29 +221,29 @@ public class PHashActivity extends AbActivity {
 								}
 							}
 							
-							//¼ÆËãÍ¼Æ¬µÄhash
+							//è®¡ç®—å›¾ç‰‡çš„hash
 							for(int i=0;i<files.size();i++){
 								File f = files.get(i);
-								if(D)Log.d(TAG, "Í¼Æ¬µÄÂ·¾¶ÊÇ = " + f.getPath());
+								if(D)Log.d(TAG, "å›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + f.getPath());
 								Bitmap bitmap = AbFileUtil.getBitmapFromSD(f);
 								if(bitmap==null){
-									//Í¼Æ¬ÓĞÎÊÌâ
+									//å›¾ç‰‡æœ‰é—®é¢˜
 									files.remove(i);
 									i--;
 									break;
 								}else{
-									//¼ÆËãhash
+									//è®¡ç®—hash
 									String hashCode = AbImageUtil.getDCTHashCode(bitmap);
 									hashCodes.add(hashCode);
 									Log.d(TAG,"hashCodes add:"+i+":"+hashCode);
-									//ÑÕÉ«·Ö²¼
+									//é¢œè‰²åˆ†å¸ƒ
 									Bitmap bitmapT = AbImageUtil.cutImg(bitmap,360,360);
 									int [] colors = AbImageUtil.getColorHistogram(bitmapT);
 									colorHistogram.add(colors);
 									AbImageUtil.releaseBitmap(bitmap);
 								}
 							}
-							AbAppUtil.logEndTime(D, TAG, "´´½¨Ë÷Òı");
+							AbAppUtil.logEndTime(D, TAG, "åˆ›å»ºç´¢å¼•");
 			   		    } catch (Exception e) {
 			   		    	showToastInThread(e.getMessage());
 			   		    }
@@ -262,20 +262,20 @@ public class PHashActivity extends AbActivity {
 	}
 	
 	/**
-	 * ÃèÊö£º´ÓÕÕÏà»ú»ñÈ¡
+	 * æè¿°ï¼šä»ç…§ç›¸æœºè·å–
 	 */
 	private void doPickPhotoAction() {
 		String status = Environment.getExternalStorageState();
-		//ÅĞ¶ÏÊÇ·ñÓĞSD¿¨,Èç¹ûÓĞsd¿¨´æÈësd¿¨ÔÚËµ£¬Ã»ÓĞsd¿¨Ö±½Ó×ª»»ÎªÍ¼Æ¬
+		//åˆ¤æ–­æ˜¯å¦æœ‰SDå¡,å¦‚æœæœ‰sdå¡å­˜å…¥sdå¡åœ¨è¯´ï¼Œæ²¡æœ‰sdå¡ç›´æ¥è½¬æ¢ä¸ºå›¾ç‰‡
 		if (status.equals(Environment.MEDIA_MOUNTED)) {
 			doTakePhoto();
 		} else {
-			showToast("Ã»ÓĞ¿ÉÓÃµÄ´æ´¢¿¨");
+			showToast("æ²¡æœ‰å¯ç”¨çš„å­˜å‚¨å¡");
 		}
 	}
 
 	/**
-	 * ÅÄÕÕ»ñÈ¡Í¼Æ¬
+	 * æ‹ç…§è·å–å›¾ç‰‡
 	 */
 	protected void doTakePhoto() {
 		try {
@@ -285,13 +285,13 @@ public class PHashActivity extends AbActivity {
 			intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mCurrentPhotoFile));
 			startActivityForResult(intent, CAMERA_WITH_DATA);
 		} catch (Exception e) {
-			showToast("Î´ÕÒµ½ÏµÍ³Ïà»ú³ÌĞò");
+			showToast("æœªæ‰¾åˆ°ç³»ç»Ÿç›¸æœºç¨‹åº");
 		}
 	}
 	
 	/**
-	 * ÃèÊö£ºÒòÎªµ÷ÓÃÁËCameraºÍGallyËùÒÔÒªÅĞ¶ÏËûÃÇ¸÷×ÔµÄ·µ»ØÇé¿ö,
-	 * ËûÃÇÆô¶¯Ê±ÊÇÕâÑùµÄstartActivityForResult
+	 * æè¿°ï¼šå› ä¸ºè°ƒç”¨äº†Cameraå’ŒGallyæ‰€ä»¥è¦åˆ¤æ–­ä»–ä»¬å„è‡ªçš„è¿”å›æƒ…å†µ,
+	 * ä»–ä»¬å¯åŠ¨æ—¶æ˜¯è¿™æ ·çš„startActivityForResult
 	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent mIntent) {
 		if (resultCode != RESULT_OK){
@@ -306,11 +306,11 @@ public class PHashActivity extends AbActivity {
 					intent1.putExtra("PATH", currentFilePath);
 					startActivityForResult(intent1, CAMERA_CROP_DATA);
 		        }else{
-		        	showToast("Î´ÔÚ´æ´¢¿¨ÖĞÕÒµ½Õâ¸öÎÄ¼ş");
+		        	showToast("æœªåœ¨å­˜å‚¨å¡ä¸­æ‰¾åˆ°è¿™ä¸ªæ–‡ä»¶");
 		        }
 				break;
 			case CAMERA_WITH_DATA:
-				if(D)Log.d(TAG, "½«Òª½øĞĞ²Ã¼ôµÄÍ¼Æ¬µÄÂ·¾¶ÊÇ = " + mCurrentPhotoFile.getPath());
+				if(D)Log.d(TAG, "å°†è¦è¿›è¡Œè£å‰ªçš„å›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + mCurrentPhotoFile.getPath());
 				String currentFilePath2 = mCurrentPhotoFile.getPath();
 				Intent intent2 = new Intent(this, CropImageActivity.class);
 				intent2.putExtra("PATH",currentFilePath2);
@@ -319,7 +319,7 @@ public class PHashActivity extends AbActivity {
 			case CAMERA_CROP_DATA:
 				mChartLinearLayout.removeAllViews();
 				String path = mIntent.getStringExtra("PATH");
-		    	if(D)Log.d(TAG, "²Ã¼ôºóµÃµ½µÄÍ¼Æ¬µÄÂ·¾¶ÊÇ = " + path);
+		    	if(D)Log.d(TAG, "è£å‰ªåå¾—åˆ°çš„å›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + path);
 		    	
 		    	Bitmap bitmap = AbFileUtil.getBitmapFromSD(new File(path));
 		    	myImage.setImageBitmap(bitmap);
@@ -329,14 +329,14 @@ public class PHashActivity extends AbActivity {
 		    	mImagePathAdapter.notifyDataSetChanged();
 		    	AbViewUtil.setAbsListViewHeight(mGridView,3,25);
 		    	
-		    	//ÏÈ¹ıÂËÑÕÉ«ÏàËÆ
-		    	//ÑÕÉ«·Ö²¼
+		    	//å…ˆè¿‡æ»¤é¢œè‰²ç›¸ä¼¼
+		    	//é¢œè‰²åˆ†å¸ƒ
 				int [] sourceColors = AbImageUtil.getColorHistogram(bitmap);
 		    	
-		    	//»ñÈ¡Õâ¸öÍ¼µÄhashcode
+		    	//è·å–è¿™ä¸ªå›¾çš„hashcode
 		    	String sourceHashCode = AbImageUtil.getDCTHashCode(bitmap);
 		    	Log.d(TAG,"this image sourceHashCode:"+sourceHashCode);
-		    	//¼ÆËã¾àÀë
+		    	//è®¡ç®—è·ç¦»
 		    	for(int i = 0;i<hashCodes.size();i++){ 
 		    		String hashCode = hashCodes.get(i);
 		    		int distanceNew = AbImageUtil.hammingDistance(sourceHashCode, hashCode);
@@ -345,7 +345,7 @@ public class PHashActivity extends AbActivity {
 		    		}
 		    	}
 		    	
-		    	//ÅÅĞò°´¾àÀëÉıĞò
+		    	//æ’åºæŒ‰è·ç¦»å‡åº
 		    	Set set = hashCodesAndDis.entrySet();
                 Map.Entry[] hashCodesAndDisNew = (Map.Entry[]) set.toArray(new Map.Entry[set.size()]);
                 Arrays.sort(hashCodesAndDisNew, new Comparator() {
@@ -356,10 +356,10 @@ public class PHashActivity extends AbActivity {
     	           }
                 });
 		    	
-                //ÏÔÊ¾
+                //æ˜¾ç¤º
                 for(int i=0;i<hashCodesAndDisNew.length;i++){
             	   String pathNew = files.get((Integer)hashCodesAndDisNew[i].getKey()).getPath();
-            	   Log.d(TAG,"Æ¥Åä½á¹û:"+pathNew+":"+hashCodesAndDisNew[i].getValue());
+            	   Log.d(TAG,"åŒ¹é…ç»“æœ:"+pathNew+":"+hashCodesAndDisNew[i].getValue());
             	   mImagePathAdapter.addItem(mImagePathAdapter.getCount(),pathNew);
             	   
             	   
@@ -367,7 +367,7 @@ public class PHashActivity extends AbActivity {
        			   for(int j = 0;j<sourceColors1.length;j++){ 
        		    		sourceColors1[j] = sourceColors[j]-sourceColors1[j];
        		       }
-       			   createChart(sourceColors1,"Í¼Æ¬"+i);
+       			   createChart(sourceColors1,"å›¾ç‰‡"+i);
             	   
             	   AbViewUtil.setAbsListViewHeight(mGridView,3,25);
                 }
@@ -378,7 +378,7 @@ public class PHashActivity extends AbActivity {
 	}
 
 	/**
-	 * ´ÓÏà²áµÃµ½µÄurl×ª»»ÎªSD¿¨ÖĞÍ¼Æ¬Â·¾¶
+	 * ä»ç›¸å†Œå¾—åˆ°çš„urlè½¬æ¢ä¸ºSDå¡ä¸­å›¾ç‰‡è·¯å¾„
 	 */
 	public String getPath(Uri uri) {
 		if(AbStrUtil.isEmpty(uri.getAuthority())){
@@ -416,19 +416,19 @@ public class PHashActivity extends AbActivity {
 		
 		LinearLayout chartView = (LinearLayout)mInflater.inflate(R.layout.chart_view_item, null);
 		
-		//ËµÃ÷ÎÄ×Ö
-		String[] titles = new String[] { "ÑÕÉ«²î"};
-		//Êı¾İ
+		//è¯´æ˜æ–‡å­—
+		String[] titles = new String[] { "é¢œè‰²å·®"};
+		//æ•°æ®
 	    List<double[]> values = new ArrayList<double[]>();
-	    //Ã¿¸öÊı¾İµãµÄÑÕÉ«
+	    //æ¯ä¸ªæ•°æ®ç‚¹çš„é¢œè‰²
 	    List<int[]> colors = new ArrayList<int[]>();
-	    //Ã¿¸öÊı¾İµãµÄ¼òÒª ËµÃ÷
+	    //æ¯ä¸ªæ•°æ®ç‚¹çš„ç®€è¦ è¯´æ˜
 	    List<String[]> explains = new ArrayList<String[]>();
 	    
 	    values.add(AbMathUtil.intToDoubleArray(colorsArea));
 	    
 	    int [] colorsPoint =  new int[colorsArea.length];
-	    //ºìÂÌÀ¶4¸öÇø
+	    //çº¢ç»¿è“4ä¸ªåŒº
 	    for(int i=0;i<colorsArea.length;i++){
 	    	if(i/16>3){
 	    		colorsPoint[i] = Color.rgb(255, 63, 63);
@@ -444,16 +444,16 @@ public class PHashActivity extends AbActivity {
 	    colors.add(colorsPoint);
 	    explains.add(new String[colorsArea.length]);
 	    
-	    //ÖùÌå»òÕßÏßÌõÑÕÉ«
+	    //æŸ±ä½“æˆ–è€…çº¿æ¡é¢œè‰²
 	    int[] mSeriescolors = new int[] { Color.rgb(153, 204, 0)};
-	    //´´½¨äÖÈ¾Æ÷
+	    //åˆ›å»ºæ¸²æŸ“å™¨
 	    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
 	    int length = mSeriescolors.length;
 	    for (int i = 0; i < length; i++) {
-	      //´´½¨SimpleSeriesRendererµ¥Ò»äÖÈ¾Æ÷
+	      //åˆ›å»ºSimpleSeriesRendererå•ä¸€æ¸²æŸ“å™¨
 	      XYSeriesRenderer r = new XYSeriesRenderer();
 	      //SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-	      //ÉèÖÃäÖÈ¾Æ÷ÑÕÉ«
+	      //è®¾ç½®æ¸²æŸ“å™¨é¢œè‰²
 	      r.setColor(mSeriescolors[i]);
 	      r.setFillBelowLine(true);
 	      r.setFillBelowLineColor(mSeriescolors[i]);
@@ -461,48 +461,48 @@ public class PHashActivity extends AbActivity {
 		  r.setPointStyle(PointStyle.CIRCLE);
 		  r.setLineWidth(1);
 		  r.setChartValuesTextSize(16);
-	      //¼ÓÈëµ½¼¯ºÏÖĞ
+	      //åŠ å…¥åˆ°é›†åˆä¸­
 	      renderer.addSeriesRenderer(r);
 	    }
-	    //×ø±êÖá±êÌâÎÄ×Ö´óĞ¡
+	    //åæ ‡è½´æ ‡é¢˜æ–‡å­—å¤§å°
 		renderer.setAxisTitleTextSize(16);
-		//Í¼ĞÎ±êÌâÎÄ×Ö´óĞ¡
+		//å›¾å½¢æ ‡é¢˜æ–‡å­—å¤§å°
 		renderer.setChartTitleTextSize(25);
-		//ÖáÏßÉÏ±êÇ©ÎÄ×Ö´óĞ¡
+		//è½´çº¿ä¸Šæ ‡ç­¾æ–‡å­—å¤§å°
 		renderer.setLabelsTextSize(15);
-		//ËµÃ÷ÎÄ×Ö´óĞ¡
+		//è¯´æ˜æ–‡å­—å¤§å°
 		renderer.setLegendTextSize(15);
-		//Í¼±í±êÌâ
+		//å›¾è¡¨æ ‡é¢˜
 	    renderer.setChartTitle(title);
-	    //XÖá±êÌâ
-	    renderer.setXTitle("Çø¼ä");
-	    //YÖá±êÌâ
-	    renderer.setYTitle("ÊıÁ¿");
-	    //XÖá×îĞ¡×ø±êµã
+	    //Xè½´æ ‡é¢˜
+	    renderer.setXTitle("åŒºé—´");
+	    //Yè½´æ ‡é¢˜
+	    renderer.setYTitle("æ•°é‡");
+	    //Xè½´æœ€å°åæ ‡ç‚¹
 	    renderer.setXAxisMin(-2);
-	    //XÖá×î´ó×ø±êµã
+	    //Xè½´æœ€å¤§åæ ‡ç‚¹
 	    renderer.setXAxisMax(64);
-	    //YÖá×îĞ¡×ø±êµã
+	    //Yè½´æœ€å°åæ ‡ç‚¹
 	    renderer.setYAxisMin(-20000);
-	    //YÖá×î´ó×ø±êµã
+	    //Yè½´æœ€å¤§åæ ‡ç‚¹
 	    renderer.setYAxisMax(20000);
-	    //×ø±êÖáÑÕÉ«
+	    //åæ ‡è½´é¢œè‰²
 	    renderer.setAxesColor(Color.rgb(51, 181, 229));
 	    renderer.setXLabelsColor(Color.rgb(51, 181, 229));
 	    renderer.setYLabelsColor(0,Color.rgb(51, 181, 229));
-	    //ÉèÖÃÍ¼±íÉÏ±êÌâÓëXÖáÓëYÖáµÄËµÃ÷ÎÄ×ÖÑÕÉ«
+	    //è®¾ç½®å›¾è¡¨ä¸Šæ ‡é¢˜ä¸Xè½´ä¸Yè½´çš„è¯´æ˜æ–‡å­—é¢œè‰²
 	    renderer.setLabelsColor(Color.GRAY);
 	    //renderer.setGridColor(Color.GRAY);
-	    //ÉèÖÃ×ÖÌå¼Ó´Ö
+	    //è®¾ç½®å­—ä½“åŠ ç²—
 		renderer.setTextTypeface("sans_serif", Typeface.BOLD);
-		//ÉèÖÃÔÚÍ¼±íÉÏÊÇ·ñÏÔÊ¾Öµ±êÇ©
+		//è®¾ç½®åœ¨å›¾è¡¨ä¸Šæ˜¯å¦æ˜¾ç¤ºå€¼æ ‡ç­¾
 	    renderer.getSeriesRendererAt(0).setDisplayChartValues(false);
-	    //ÏÔÊ¾ÆÁÄ»¿É¼ûÈ¡ÇøµÄXY·Ö¸îÊı
+	    //æ˜¾ç¤ºå±å¹•å¯è§å–åŒºçš„XYåˆ†å‰²æ•°
 	    renderer.setXLabels(10);
 	    renderer.setYLabels(10);
-	    //X¿Ì¶È±êÇ©Ïà¶ÔXÖáÎ»ÖÃ
+	    //Xåˆ»åº¦æ ‡ç­¾ç›¸å¯¹Xè½´ä½ç½®
 	    renderer.setXLabelsAlign(Align.CENTER);
-	    //Y¿Ì¶È±êÇ©Ïà¶ÔYÖáÎ»ÖÃ
+	    //Yåˆ»åº¦æ ‡ç­¾ç›¸å¯¹Yè½´ä½ç½®
 	    renderer.setYLabelsAlign(Align.LEFT);
 	    renderer.setPanEnabled(false, false);
 	    renderer.setZoomEnabled(false);
@@ -510,32 +510,32 @@ public class PHashActivity extends AbActivity {
 	    renderer.setZoomRate(1.1f);
 	    renderer.setBarSpacing(0.5f);
 	    
-	    //±ê³ß¿ªÆô
+	    //æ ‡å°ºå¼€å¯
 	    renderer.setScaleLineEnabled(false);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò¸ß
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†é«˜
 	    renderer.setScaleRectHeight(10);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò¿í
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†å®½
 	    renderer.setScaleRectWidth(150);
-	    //ÉèÖÃ±ê³ßÌáÊ¾¿ò±³¾°É«
+	    //è®¾ç½®æ ‡å°ºæç¤ºæ¡†èƒŒæ™¯è‰²
 	    renderer.setScaleRectColor(Color.argb(150, 52, 182, 232));
 	    renderer.setScaleLineColor(Color.argb(175, 150, 150, 150));
 	    renderer.setScaleCircleRadius(35);
-	    //µÚÒ»ĞĞÎÄ×ÖµÄ´óĞ¡
+	    //ç¬¬ä¸€è¡Œæ–‡å­—çš„å¤§å°
 	    renderer.setExplainTextSize1(20);
-	    //µÚ¶şĞĞÎÄ×ÖµÄ´óĞ¡
+	    //ç¬¬äºŒè¡Œæ–‡å­—çš„å¤§å°
 	    renderer.setExplainTextSize2(20);
 	    
-	    //ÁÙ½çÏß
+	    //ä¸´ç•Œçº¿
 	    //double[] limit = new double[]{15000,12000,4000,9000};
 	    //renderer.setmYLimitsLine(limit);
 	    //int[] colorsLimit = new int[] { Color.rgb(100, 255,255),Color.rgb(100, 255,255),Color.rgb(0, 255, 255),Color.rgb(0, 255, 255) };
 	    //renderer.setmYLimitsLineColor(colorsLimit);
 	    
-	    //ÏÔÊ¾±í¸ñÏß
+	    //æ˜¾ç¤ºè¡¨æ ¼çº¿
 	    renderer.setShowGrid(true);
-	    //Èç¹ûÖµÊÇ0ÊÇ·ñÒªÏÔÊ¾
+	    //å¦‚æœå€¼æ˜¯0æ˜¯å¦è¦æ˜¾ç¤º
 	    renderer.setDisplayValue0(true);
-	    //´´½¨äÖÈ¾Æ÷Êı¾İÌî³äÆ÷
+	    //åˆ›å»ºæ¸²æŸ“å™¨æ•°æ®å¡«å……å™¨
 	    XYMultipleSeriesDataset mXYMultipleSeriesDataset = new XYMultipleSeriesDataset();
 	    for (int i = 0; i < length; i++) {
 	      CategorySeries series = new CategorySeries(titles[i]);
@@ -544,17 +544,17 @@ public class PHashActivity extends AbActivity {
 	      String[] e = explains.get(i);
 	      int seriesLength = v.length;
 	      for (int k = 0; k < seriesLength; k++) {
-	    	  //ÉèÖÃÃ¿¸öµãµÄÑÕÉ«
+	    	  //è®¾ç½®æ¯ä¸ªç‚¹çš„é¢œè‰²
 	          series.add(v[k],c[k],e[k]);
 	      }
 	      mXYMultipleSeriesDataset.addSeries(series.toXYSeries());
 	    }
-	    //±³¾°
+	    //èƒŒæ™¯
 	    renderer.setApplyBackgroundColor(true);
 	    renderer.setBackgroundColor(Color.rgb(235, 235, 235));
 	    renderer.setMarginsColor(Color.rgb(235, 235, 235));
 	    
-	    //ÏßÍ¼
+	    //çº¿å›¾
 	    View chart = ChartFactory.getAreaChartView(this,mXYMultipleSeriesDataset,renderer,0.2f);
 	    chartView.addView(chart);
 	    chartView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, 250));

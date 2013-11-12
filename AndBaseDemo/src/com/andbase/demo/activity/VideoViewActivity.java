@@ -20,17 +20,17 @@ import com.andbase.R;
 
 public class VideoViewActivity extends Activity {
 	
-	//ÔÚÏßÊÓÆµ
+	//åœ¨çº¿è§†é¢‘
 	private String path = "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8";
-	//²»Ö§³ÖÓÅ¿á http://player.youku.com/player.php/sid/XMjg1MTcyNDQ0/v.swf
+	//ä¸æ”¯æŒä¼˜é…· http://player.youku.com/player.php/sid/XMjg1MTcyNDQ0/v.swf
 	private VideoView mVideoView;
 
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-		// ÉèÖÃºáÆÁ
+		// è®¾ç½®æ¨ªå±
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-		// ±êÌâÀ¸
+		// æ ‡é¢˜æ 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this))
 			return;
@@ -39,9 +39,9 @@ public class VideoViewActivity extends Activity {
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
 		String pathTemp = null;
 		if(!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
-		   //ÎŞsd¿¨
+		   //æ— sdå¡
 		}else{
-			 //ÓĞsd¿¨
+			 //æœ‰sdå¡
 			 File path1 = Environment.getExternalStorageDirectory();
         	 File fileDirectory = new File(path1.getAbsolutePath());
         	 pathTemp  = listFile(fileDirectory);

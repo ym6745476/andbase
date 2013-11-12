@@ -10,8 +10,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * 名称：DBActivity
- * 描述：本地数据库相关
+ * 鍚嶇О锛欴BActivity
+ * 鎻忚堪锛氭湰鍦版暟鎹簱鐩稿叧
  * @author zhaoqp
  * @date 2011-12-13
  * @version

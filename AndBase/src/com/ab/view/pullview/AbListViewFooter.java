@@ -93,19 +93,19 @@ public class AbListViewFooter extends LinearLayout {
 		if (state == STATE_READY) {
 			footerTextView.setVisibility(View.VISIBLE);
 			footerProgressBar.setVisibility(View.GONE);
-			footerTextView.setText("ÔØÈë¸ü¶à");
+			footerTextView.setText("è½½å…¥æ›´å¤š");
 		} else if (state == STATE_LOADING) {
 			footerTextView.setVisibility(View.VISIBLE);
 			footerProgressBar.setVisibility(View.VISIBLE);
-			footerTextView.setText("ÕıÔÚ¼ÓÔØ...");
+			footerTextView.setText("æ­£åœ¨åŠ è½½...");
 		}else if(state == STATE_NO){
 			footerTextView.setVisibility(View.VISIBLE);
 			footerProgressBar.setVisibility(View.GONE);
-			footerTextView.setText("ÒÑÊÇÈ«²¿");
+			footerTextView.setText("å·²æ˜¯å…¨éƒ¨");
 		}else if(state == STATE_EMPTY){
 			footerTextView.setVisibility(View.GONE);
 			footerProgressBar.setVisibility(View.GONE);
-			footerTextView.setText("Ã»ÓĞÊı¾İ");
+			footerTextView.setText("æ²¡æœ‰æ•°æ®");
 		}
 	}
 	
@@ -144,9 +144,9 @@ public class AbListViewFooter extends LinearLayout {
 	private void initView(Context context) {
 		mContext = context;
 		
-		//µ×²¿Ë¢ĞÂ
+		//åº•éƒ¨åˆ·æ–°
 		footerView  = new LinearLayout(context);  
-		//ÉèÖÃ²¼¾Ö Ë®Æ½·½Ïò  
+		//è®¾ç½®å¸ƒå±€ æ°´å¹³æ–¹å‘  
 		footerView.setOrientation(LinearLayout.HORIZONTAL);
 		footerView.setGravity(Gravity.CENTER); 
 		setBackgroundColor(Color.rgb(225, 225,225));
@@ -174,7 +174,7 @@ public class AbListViewFooter extends LinearLayout {
 		LinearLayout.LayoutParams layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 		addView(footerView,layoutParamsFW);
 		
-		//»ñÈ¡ViewµÄ¸ß¶È
+		//è·å–Viewçš„é«˜åº¦
 		AbViewUtil.measureView(this);
 		footerHeight = this.getMeasuredHeight();
 
@@ -182,7 +182,7 @@ public class AbListViewFooter extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃ×ÖÌåÑÕÉ«
+	 * æè¿°ï¼šè®¾ç½®å­—ä½“é¢œè‰²
 	 * @param color
 	 * @throws 
 	 */
@@ -192,7 +192,7 @@ public class AbListViewFooter extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃ±³¾°ÑÕÉ«
+	 * æè¿°ï¼šè®¾ç½®èƒŒæ™¯é¢œè‰²
 	 * @param color
 	 * @throws 
 	 */
@@ -202,7 +202,7 @@ public class AbListViewFooter extends LinearLayout {
 
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Footer ProgressBar£¬ÓÃÓÚÉèÖÃ×Ô¶¨ÒåÑùÊ½
+	 * æè¿°ï¼šè·å–Footer ProgressBarï¼Œç”¨äºè®¾ç½®è‡ªå®šä¹‰æ ·å¼
 	 * @return
 	 * @throws 
 	 */

@@ -40,7 +40,7 @@ public class ChartFactory {
   }
 
   /**
-   * ÕÛÏßÍ¼.
+   * æŠ˜çº¿å›¾.
    *
    * @param context the context
    * @param dataset the multiple series dataset (cannot be null)
@@ -55,7 +55,7 @@ public class ChartFactory {
   }
   
   /**
-   * Öù×´Í¼.
+   * æŸ±çŠ¶å›¾.
    *
    * @param context the context
    * @param dataset the multiple series dataset (cannot be null)
@@ -71,7 +71,7 @@ public class ChartFactory {
   }
   
   /**
-   * ±ıÍ¼
+   * é¥¼å›¾
    * @param context the context
    * @param dataset the category series dataset (cannot be null)
    * @param renderer the series renderer (cannot be null)
@@ -85,7 +85,7 @@ public class ChartFactory {
   }
   
   /**
-   * Ê±¼äÖáÍ¼±í.
+   * æ—¶é—´è½´å›¾è¡¨.
    *
    * @param context the context
    * @param dataset the multiple series dataset (cannot be null)
@@ -104,12 +104,12 @@ public class ChartFactory {
   }
   
   /**
-   * ÃèÊö£ºÇøÓòÍ¼±í.
+   * æè¿°ï¼šåŒºåŸŸå›¾è¡¨.
    *
    * @param context the context
    * @param dataset the dataset
    * @param renderer the renderer
-   * @param smoothness Æ½»¬¶È
+   * @param smoothness å¹³æ»‘åº¦
    * @return the area chart view
    */
   public static final GraphicalView getAreaChartView(Context context,
@@ -120,7 +120,7 @@ public class ChartFactory {
 	  }
 
   /**
-   * ¼ì²é²ÎÊı.
+   * æ£€æŸ¥å‚æ•°.
    *
    * @param dataset the multiple series dataset (cannot be null)
    * @param renderer the multiple series renderer (cannot be null)

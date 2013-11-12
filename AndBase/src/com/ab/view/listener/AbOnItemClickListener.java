@@ -17,18 +17,18 @@ package com.ab.view.listener;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÌõÄ¿µã»÷½Ó¿Ú.
+ * æè¿°ï¼šæ¡ç›®ç‚¹å‡»æ¥å£.
  *
  * @author zhaoqp
- * @date£º2013-1-15 ÏÂÎç2:51:16
+ * @dateï¼š2013-1-15 ä¸‹åˆ2:51:16
  * @version v1.0
  */
 public interface AbOnItemClickListener {
 	
 	/**
-	 * ÃèÊö£ºµã»÷ÊÂ¼ş.
+	 * æè¿°ï¼šç‚¹å‡»äº‹ä»¶.
 	 *
-	 * @param position Ë÷Òı
+	 * @param position ç´¢å¼•
 	 */
     public void onClick(int position); 
 }

@@ -56,12 +56,12 @@ public class AbScrollTextView extends TextView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @return true, if is focused
 	 * @see android.view.View#isFocused()
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:47
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:47
 	 * @version v1.0
 	 */
 	@Override

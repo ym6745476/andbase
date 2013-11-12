@@ -19,7 +19,7 @@ import android.graphics.Bitmap;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÍ¼Æ¬ÏÂÔØµ¥Î».
+ * æè¿°ï¼šå›¾ç‰‡ä¸‹è½½å•ä½.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -27,22 +27,22 @@ import android.graphics.Bitmap;
  */
 public class AbImageDownloadItem {
 	
-	/** ĞèÒªÏÂÔØµÄÍ¼Æ¬µÄ»¥ÁªÍøµØÖ·. */
+	/** éœ€è¦ä¸‹è½½çš„å›¾ç‰‡çš„äº’è”ç½‘åœ°å€. */
 	public String imageUrl;
 	
-	/** ÏÔÊ¾µÄÍ¼Æ¬µÄ¿í. */
+	/** æ˜¾ç¤ºçš„å›¾ç‰‡çš„å®½. */
 	public int width;
 	
-	/** ÏÔÊ¾µÄÍ¼Æ¬µÄ¸ß. */
+	/** æ˜¾ç¤ºçš„å›¾ç‰‡çš„é«˜. */
 	public int height;
 	
-	/** Í¼Æ¬µÄ´¦ÀíÀàĞÍ£¨¼ôÇĞ»òÕßËõ·Åµ½Ö¸¶¨´óĞ¡£¬²Î¿¼AbConstantÀà£©. */
+	/** å›¾ç‰‡çš„å¤„ç†ç±»å‹ï¼ˆå‰ªåˆ‡æˆ–è€…ç¼©æ”¾åˆ°æŒ‡å®šå¤§å°ï¼Œå‚è€ƒAbConstantç±»ï¼‰. */
 	public int type;
 	
-	/** ÏÂÔØÍê³ÉµÄµ½µÄBitmap¶ÔÏó. */
+	/** ä¸‹è½½å®Œæˆçš„åˆ°çš„Bitmapå¯¹è±¡. */
 	public Bitmap bitmap;
 	
-	/** ÏÂÔØÍê³ÉµÄ»Øµ÷½Ó¿Ú. */
+	/** ä¸‹è½½å®Œæˆçš„å›è°ƒæ¥å£. */
 	public AbImageDownloadCallback callback;
 
 	public String getImageUrl() {

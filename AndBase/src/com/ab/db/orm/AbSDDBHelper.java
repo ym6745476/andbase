@@ -28,14 +28,14 @@ public class AbSDDBHelper extends AbSDSQLiteOpenHelper {
 	private Class<?>[] modelClasses;
 
 	/**
-	 * ³õÊ¼»¯Ò»¸öAbSDDBHelper.
+	 * åˆå§‹åŒ–ä¸€ä¸ªAbSDDBHelper.
 	 *
-	 * @param context Ó¦ÓÃcontext
-	 * @param path Òª·Åµ½SDCardÏÂµÄÎÄ¼ş¼ĞÂ·¾¶
-	 * @param databaseName Êı¾İ¿âÎÄ¼şÃû
-	 * @param factory Êı¾İ¿â²éÑ¯µÄÓÎ±ê¹¤³§
-	 * @param databaseVersion Êı¾İ¿âµÄĞÂ°æ±¾ºÅ
-	 * @param modelClasses Òª³õÊ¼»¯µÄ±íµÄ¶ÔÏó
+	 * @param context åº”ç”¨context
+	 * @param path è¦æ”¾åˆ°SDCardä¸‹çš„æ–‡ä»¶å¤¹è·¯å¾„
+	 * @param databaseName æ•°æ®åº“æ–‡ä»¶å
+	 * @param factory æ•°æ®åº“æŸ¥è¯¢çš„æ¸¸æ ‡å·¥å‚
+	 * @param databaseVersion æ•°æ®åº“çš„æ–°ç‰ˆæœ¬å·
+	 * @param modelClasses è¦åˆå§‹åŒ–çš„è¡¨çš„å¯¹è±¡
 	 */
 	public AbSDDBHelper(Context context, String path,String databaseName,
 			SQLiteDatabase.CursorFactory factory, int databaseVersion,
@@ -46,9 +46,9 @@ public class AbSDDBHelper extends AbSDSQLiteOpenHelper {
 	}
 
     /**
-     * ÃèÊö£º±íµÄ´´½¨.
+     * æè¿°ï¼šè¡¨çš„åˆ›å»º.
      *
-     * @param db Êı¾İ¿â¶ÔÏó
+     * @param db æ•°æ®åº“å¯¹è±¡
      * @see com.ab.db.orm.AbSDSQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
      */
     public void onCreate(SQLiteDatabase db) {
@@ -56,11 +56,11 @@ public class AbSDDBHelper extends AbSDSQLiteOpenHelper {
 	}
 
 	/**
-	 * ÃèÊö£º±íµÄÖØ½¨.
+	 * æè¿°ï¼šè¡¨çš„é‡å»º.
 	 *
-	 * @param db Êı¾İ¿â¶ÔÏó
-	 * @param oldVersion ¾É°æ±¾ºÅ
-	 * @param newVersion ĞÂ°æ±¾ºÅ
+	 * @param db æ•°æ®åº“å¯¹è±¡
+	 * @param oldVersion æ—§ç‰ˆæœ¬å·
+	 * @param newVersion æ–°ç‰ˆæœ¬å·
 	 * @see com.ab.db.orm.AbSDSQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
 	 */
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

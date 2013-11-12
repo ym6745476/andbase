@@ -40,15 +40,15 @@ public class AddPhotoActivity extends AbActivity {
 	private int selectIndex = 0;
 	private int camIndex = 0;
 	private View mAvatarView = null;
-	/* ÓÃÀ´±êÊ¶ÇëÇóÕÕÏà¹¦ÄÜµÄactivity */
+	/* ç”¨æ¥æ ‡è¯†è¯·æ±‚ç…§ç›¸åŠŸèƒ½çš„activity */
 	private static final int CAMERA_WITH_DATA = 3023;
-	/* ÓÃÀ´±êÊ¶ÇëÇógalleryµÄactivity */
+	/* ç”¨æ¥æ ‡è¯†è¯·æ±‚galleryçš„activity */
 	private static final int PHOTO_PICKED_WITH_DATA = 3021;
-	/* ÓÃÀ´±êÊ¶ÇëÇó²Ã¼ôÍ¼Æ¬ºóµÄactivity */
+	/* ç”¨æ¥æ ‡è¯†è¯·æ±‚è£å‰ªå›¾ç‰‡åçš„activity */
 	private static final int CAMERA_CROP_DATA = 3022;
-	/* ÅÄÕÕµÄÕÕÆ¬´æ´¢Î»ÖÃ */
+	/* æ‹ç…§çš„ç…§ç‰‡å­˜å‚¨ä½ç½® */
 	private  File PHOTO_DIR = null;
-	// ÕÕÏà»úÅÄÕÕµÃµ½µÄÍ¼Æ¬
+	// ç…§ç›¸æœºæ‹ç…§å¾—åˆ°çš„å›¾ç‰‡
 	private File mCurrentPhotoFile;
 	private String mFileName;
 
@@ -73,10 +73,10 @@ public class AddPhotoActivity extends AbActivity {
 		mGridView.setAdapter(mImagePathAdapter);
 	    mAvatarView = mInflater.inflate(R.layout.choose_avatar, null);
 		
-		//³õÊ¼»¯Í¼Æ¬±£´æÂ·¾¶
+		//åˆå§‹åŒ–å›¾ç‰‡ä¿å­˜è·¯å¾„
 	    String photo_dir = AbFileUtil.getDefaultImageDownPathDir();
 	    if(AbStrUtil.isEmpty(photo_dir)){
-	    	showToast("´æ´¢¿¨²»´æÔÚ");
+	    	showToast("å­˜å‚¨å¡ä¸å­˜åœ¨");
 	    }else{
 	    	PHOTO_DIR = new File(photo_dir);
 	    }
@@ -90,13 +90,13 @@ public class AddPhotoActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				removeDialog(AbConstant.DIALOGBOTTOM);
-				// ´ÓÏà²áÖĞÈ¥»ñÈ¡
+				// ä»ç›¸å†Œä¸­å»è·å–
 				try {
 					Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
 					intent.setType("image/*");
 					startActivityForResult(intent, PHOTO_PICKED_WITH_DATA);
 				} catch (ActivityNotFoundException e) {
-					showToast("Ã»ÓĞÕÒµ½ÕÕÆ¬");
+					showToast("æ²¡æœ‰æ‰¾åˆ°ç…§ç‰‡");
 				}
 			}
 			
@@ -152,20 +152,20 @@ public class AddPhotoActivity extends AbActivity {
 	}
 	
 	/**
-	 * ÃèÊö£º´ÓÕÕÏà»ú»ñÈ¡
+	 * æè¿°ï¼šä»ç…§ç›¸æœºè·å–
 	 */
 	private void doPickPhotoAction() {
 		String status = Environment.getExternalStorageState();
-		//ÅĞ¶ÏÊÇ·ñÓĞSD¿¨,Èç¹ûÓĞsd¿¨´æÈësd¿¨ÔÚËµ£¬Ã»ÓĞsd¿¨Ö±½Ó×ª»»ÎªÍ¼Æ¬
+		//åˆ¤æ–­æ˜¯å¦æœ‰SDå¡,å¦‚æœæœ‰sdå¡å­˜å…¥sdå¡åœ¨è¯´ï¼Œæ²¡æœ‰sdå¡ç›´æ¥è½¬æ¢ä¸ºå›¾ç‰‡
 		if (status.equals(Environment.MEDIA_MOUNTED)) {
 			doTakePhoto();
 		} else {
-			showToast("Ã»ÓĞ¿ÉÓÃµÄ´æ´¢¿¨");
+			showToast("æ²¡æœ‰å¯ç”¨çš„å­˜å‚¨å¡");
 		}
 	}
 
 	/**
-	 * ÅÄÕÕ»ñÈ¡Í¼Æ¬
+	 * æ‹ç…§è·å–å›¾ç‰‡
 	 */
 	protected void doTakePhoto() {
 		try {
@@ -175,13 +175,13 @@ public class AddPhotoActivity extends AbActivity {
 			intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mCurrentPhotoFile));
 			startActivityForResult(intent, CAMERA_WITH_DATA);
 		} catch (Exception e) {
-			showToast("Î´ÕÒµ½ÏµÍ³Ïà»ú³ÌĞò");
+			showToast("æœªæ‰¾åˆ°ç³»ç»Ÿç›¸æœºç¨‹åº");
 		}
 	}
 	
 	/**
-	 * ÃèÊö£ºÒòÎªµ÷ÓÃÁËCameraºÍGallyËùÒÔÒªÅĞ¶ÏËûÃÇ¸÷×ÔµÄ·µ»ØÇé¿ö,
-	 * ËûÃÇÆô¶¯Ê±ÊÇÕâÑùµÄstartActivityForResult
+	 * æè¿°ï¼šå› ä¸ºè°ƒç”¨äº†Cameraå’ŒGallyæ‰€ä»¥è¦åˆ¤æ–­ä»–ä»¬å„è‡ªçš„è¿”å›æƒ…å†µ,
+	 * ä»–ä»¬å¯åŠ¨æ—¶æ˜¯è¿™æ ·çš„startActivityForResult
 	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent mIntent) {
 		if (resultCode != RESULT_OK){
@@ -196,11 +196,11 @@ public class AddPhotoActivity extends AbActivity {
 					intent1.putExtra("PATH", currentFilePath);
 					startActivityForResult(intent1, CAMERA_CROP_DATA);
 		        }else{
-		        	showToast("Î´ÔÚ´æ´¢¿¨ÖĞÕÒµ½Õâ¸öÎÄ¼ş");
+		        	showToast("æœªåœ¨å­˜å‚¨å¡ä¸­æ‰¾åˆ°è¿™ä¸ªæ–‡ä»¶");
 		        }
 				break;
 			case CAMERA_WITH_DATA:
-				if(D)Log.d(TAG, "½«Òª½øĞĞ²Ã¼ôµÄÍ¼Æ¬µÄÂ·¾¶ÊÇ = " + mCurrentPhotoFile.getPath());
+				if(D)Log.d(TAG, "å°†è¦è¿›è¡Œè£å‰ªçš„å›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + mCurrentPhotoFile.getPath());
 				String currentFilePath2 = mCurrentPhotoFile.getPath();
 				Intent intent2 = new Intent(this, CropImageActivity.class);
 				intent2.putExtra("PATH",currentFilePath2);
@@ -208,7 +208,7 @@ public class AddPhotoActivity extends AbActivity {
 				break;
 			case CAMERA_CROP_DATA:
 				String path = mIntent.getStringExtra("PATH");
-		    	if(D)Log.d(TAG, "²Ã¼ôºóµÃµ½µÄÍ¼Æ¬µÄÂ·¾¶ÊÇ = " + path);
+		    	if(D)Log.d(TAG, "è£å‰ªåå¾—åˆ°çš„å›¾ç‰‡çš„è·¯å¾„æ˜¯ = " + path);
 		    	mImagePathAdapter.addItem(mImagePathAdapter.getCount()-1,path);
 		     	camIndex++;
 		    	AbViewUtil.setAbsListViewHeight(mGridView,3,25);
@@ -217,7 +217,7 @@ public class AddPhotoActivity extends AbActivity {
 	}
 
 	/**
-	 * ´ÓÏà²áµÃµ½µÄurl×ª»»ÎªSD¿¨ÖĞÍ¼Æ¬Â·¾¶
+	 * ä»ç›¸å†Œå¾—åˆ°çš„urlè½¬æ¢ä¸ºSDå¡ä¸­å›¾ç‰‡è·¯å¾„
 	 */
 	public String getPath(Uri uri) {
 		if(AbStrUtil.isEmpty(uri.getAuthority())){

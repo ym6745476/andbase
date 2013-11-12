@@ -33,18 +33,18 @@ import com.ab.util.AbStrUtil;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbHttpUtil.java 
- * ÃèÊö£ºHttpÖ´ĞĞ¹¤¾ßÀà£¬¿É´¦Àíget£¬post£¬ÒÔ¼°Òì²½´¦ÀíÎÄ¼şµÄÉÏ´«ÏÂÔØ
+ * åç§°ï¼šAbHttpUtil.java 
+ * æè¿°ï¼šHttpæ‰§è¡Œå·¥å…·ç±»ï¼Œå¯å¤„ç†getï¼Œpostï¼Œä»¥åŠå¼‚æ­¥å¤„ç†æ–‡ä»¶çš„ä¸Šä¼ ä¸‹è½½
  * @author zhaoqp
- * @date£º2013-10-22 ÏÂÎç4:15:52
+ * @dateï¼š2013-10-22 ä¸‹åˆ4:15:52
  * @version v1.0
  */
 public class AbHttpUtil {
 
-	/**ÊµÀı»°¶ÔÏó*/
+	/**å®ä¾‹è¯å¯¹è±¡*/
 	private static AsyncHttpClient client = new AsyncHttpClient();
 	
-	/**³¬Ê±Ê±¼ä*/
+	/**è¶…æ—¶æ—¶é—´*/
 	private static int timeout = 5000;
 	
 	static{
@@ -52,7 +52,7 @@ public class AbHttpUtil {
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡AsyncHttpClient.
+	 * æè¿°ï¼šè·å–AsyncHttpClient.
 	 *
 	 * @return the http client
 	 */
@@ -67,7 +67,7 @@ public class AbHttpUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÁ´½Ó³¬Ê±£¬Èç¹û²»ÉèÖÃ£¬Ä¬ÈÏÎª5s
+	 * æè¿°ï¼šè®¾ç½®é“¾æ¥è¶…æ—¶ï¼Œå¦‚æœä¸è®¾ç½®ï¼Œé»˜è®¤ä¸º5s
 	 * @param timeout
 	 * @throws 
 	 */
@@ -79,7 +79,7 @@ public class AbHttpUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÎŞ²ÎÊıµÄgetÇëÇó
+	 * æè¿°ï¼šæ— å‚æ•°çš„getè¯·æ±‚
 	 * @param url
 	 * @param responseHandler
 	 * @throws 
@@ -90,7 +90,7 @@ public class AbHttpUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£º´ø²ÎÊıµÄgetÇëÇó
+	 * æè¿°ï¼šå¸¦å‚æ•°çš„getè¯·æ±‚
 	 * @param url
 	 * @param params
 	 * @param responseHandler
@@ -103,7 +103,7 @@ public class AbHttpUtil {
 	
 	/**
 	 *  
-	 * ÃèÊö£ºÏÂÔØÊı¾İÊ¹ÓÃ£¬»á·µ»ØbyteÊı¾İ(ÏÂÔØÎÄ¼ş»òÍ¼Æ¬)
+	 * æè¿°ï¼šä¸‹è½½æ•°æ®ä½¿ç”¨ï¼Œä¼šè¿”å›byteæ•°æ®(ä¸‹è½½æ–‡ä»¶æˆ–å›¾ç‰‡)
 	 * @param url
 	 * @param responseHandler
 	 * @throws 
@@ -114,7 +114,7 @@ public class AbHttpUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÎÄ¼şÏÂÔØµÄget
+	 * æè¿°ï¼šæ–‡ä»¶ä¸‹è½½çš„get
 	 * @param url
 	 * @param params
 	 * @param responseHandler
@@ -128,7 +128,7 @@ public class AbHttpUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÎŞ²ÎÊıµÄpostÇëÇó
+	 * æè¿°ï¼šæ— å‚æ•°çš„postè¯·æ±‚
 	 * @param url
 	 * @param responseHandler
 	 * @throws 
@@ -140,7 +140,7 @@ public class AbHttpUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£º´ø²ÎÊıµÄpostÇëÇó
+	 * æè¿°ï¼šå¸¦å‚æ•°çš„postè¯·æ±‚
 	 * @param url
 	 * @param params
 	 * @param responseHandler
@@ -155,7 +155,7 @@ public class AbHttpUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÎÄ¼şÏÂÔØµÄpost
+	 * æè¿°ï¼šæ–‡ä»¶ä¸‹è½½çš„post
 	 * @param url
 	 * @param params
 	 * @param responseHandler
@@ -168,11 +168,11 @@ public class AbHttpUtil {
 	
 	
 	/**
-	 * HTTPÒ»¸ö/¶à¸öÎÄ¼şÉÏ´«.
+	 * HTTPä¸€ä¸ª/å¤šä¸ªæ–‡ä»¶ä¸Šä¼ .
 	 *
-	 * @param url ÒªÊ¹ÓÃµÄURL
-	 * @param params ±íµ¥²ÎÊı
-	 * @param files ÒªÉÏ´«µÄÎÄ¼şÁĞ±í£¨key:ÎÄ¼şÃû£¬value£ºFile¶ÔÏó£©
+	 * @param url è¦ä½¿ç”¨çš„URL
+	 * @param params è¡¨å•å‚æ•°
+	 * @param files è¦ä¸Šä¼ çš„æ–‡ä»¶åˆ—è¡¨ï¼ˆkey:æ–‡ä»¶åï¼Œvalueï¼šFileå¯¹è±¡ï¼‰
 	 */
 	public static void post(final String url, final HashMap<String, String> params,
 			final HashMap<String, File> files,final AsyncHttpResponseHandler responseHandler) {
@@ -182,7 +182,7 @@ public class AbHttpUtil {
 			
 			@Override
 			public void update() {
-				//·¢ËÍÍê³ÉÏûÏ¢
+				//å‘é€å®Œæˆæ¶ˆæ¯
 				if (responseHandler != null) {
 					 responseHandler.sendFinishMessage();
 				}
@@ -190,7 +190,7 @@ public class AbHttpUtil {
 			
 			@Override
 			public void get() {
-				//±êÊ¶Ã¿¸öÎÄ¼şµÄ±ß½ç
+				//æ ‡è¯†æ¯ä¸ªæ–‡ä»¶çš„è¾¹ç•Œ
 				String BOUNDARY = java.util.UUID.randomUUID().toString();
 				String PREFIX = "--";
 				String LINEND = "\r\n";
@@ -199,25 +199,25 @@ public class AbHttpUtil {
 				HttpURLConnection conn = null;
 				DataOutputStream outStream = null;
 				try {
-					//·¢ËÍ¿ªÊ¼Ö´ĞĞ
+					//å‘é€å¼€å§‹æ‰§è¡Œ
 					if (responseHandler != null) {
 					   responseHandler.sendStartMessage();
 					}
 					URL uri = new URL(url);
 					conn = (HttpURLConnection) uri.openConnection();
-					//ÔÊĞíÊäÈë
+					//å…è®¸è¾“å…¥
 					conn.setDoInput(true);
-					//ÔÊĞíÊä³ö
+					//å…è®¸è¾“å‡º
 					conn.setDoOutput(true);
 					conn.setUseCaches(false);
-					// Post·½Ê½
+					// Postæ–¹å¼
 					conn.setRequestMethod("POST");
-					//ÉèÖÃrequest header ÊôĞÔ
+					//è®¾ç½®request header å±æ€§
 					conn.setRequestProperty("connection", "keep-alive");
 					conn.setRequestProperty("Charsert", "UTF-8");
 					conn.setRequestProperty("Content-Type", MULTIPART_FROM_DATA
 							+ ";boundary=" + BOUNDARY);
-					//×é×°±íµ¥²ÎÊıÊı¾İ
+					//ç»„è£…è¡¨å•å‚æ•°æ•°æ®
 					StringBuilder sb = new StringBuilder();
 					for (Map.Entry<String, String> entry : params.entrySet()) {
 						sb.append(PREFIX);
@@ -231,10 +231,10 @@ public class AbHttpUtil {
 						sb.append(entry.getValue());
 						sb.append(LINEND);
 					}
-					//»ñÈ¡Á¬½Ó·¢ËÍ²ÎÊıÊı¾İ
+					//è·å–è¿æ¥å‘é€å‚æ•°æ•°æ®
 					outStream = new DataOutputStream(conn.getOutputStream());
 					outStream.write(sb.toString().getBytes());
-					// ·¢ËÍÎÄ¼şÊı¾İ
+					// å‘é€æ–‡ä»¶æ•°æ®
 					if (files != null)
 						for (Map.Entry<String, File> file : files.entrySet()) {
 							StringBuilder sb1 = new StringBuilder();
@@ -246,7 +246,7 @@ public class AbHttpUtil {
 							sb1.append("Content-Type: application/octet-stream; charset="
 									+ CHARSET + LINEND);
 							sb1.append(LINEND);
-							//ÇëÇóÍ·½áÊøÖÁÉÙÓĞÒ»¸ö¿ÕĞĞ£¨¼´ÓĞÁ½¶Ô\r\n£©±íÊ¾ÇëÇóÍ·½áÊøÁË
+							//è¯·æ±‚å¤´ç»“æŸè‡³å°‘æœ‰ä¸€ä¸ªç©ºè¡Œï¼ˆå³æœ‰ä¸¤å¯¹\r\nï¼‰è¡¨ç¤ºè¯·æ±‚å¤´ç»“æŸäº†
 							Log.d("TAG", "request start:"+sb1.toString());
 							outStream.write(sb1.toString().getBytes());
 							InputStream is = new FileInputStream(file.getValue());
@@ -256,19 +256,19 @@ public class AbHttpUtil {
 								outStream.write(buffer, 0, len);
 							}
 							is.close();
-							//Ò»¸öÎÄ¼ş½áÊøÒ»¸ö¿ÕĞĞ
+							//ä¸€ä¸ªæ–‡ä»¶ç»“æŸä¸€ä¸ªç©ºè¡Œ
 							outStream.write(LINEND.getBytes());
 						}
-						//ÇëÇó½áÊøµÄ±ß½ç´òÓ¡
+						//è¯·æ±‚ç»“æŸçš„è¾¹ç•Œæ‰“å°
 						byte[] end_data = (PREFIX + BOUNDARY + PREFIX + LINEND).getBytes();
 						Log.d("TAG","request end:"+ new String(end_data).toString());
 						outStream.write(end_data);
 						outStream.flush();
 						outStream.close();
-						// »ñÈ¡ÏìÓ¦Âë
+						// è·å–å“åº”ç 
 						int statusCode = conn.getResponseCode();
 						String result = AbStrUtil.convertStreamToString(conn.getInputStream());
-						//·¢ËÍ½á¹ûÏûÏ¢
+						//å‘é€ç»“æœæ¶ˆæ¯
 						if (responseHandler != null) {
 							if(statusCode == 200){
 								responseHandler.sendSuccessMessage(statusCode, null, result.getBytes());
@@ -279,7 +279,7 @@ public class AbHttpUtil {
 						
 				} catch (Exception e) {
 					e.printStackTrace();
-					//·¢ËÍÊ§°ÜÏûÏ¢
+					//å‘é€å¤±è´¥æ¶ˆæ¯
 					if (responseHandler != null) {
 		                responseHandler.sendFailureMessage(0, null, null, e);
 		            }
@@ -292,7 +292,7 @@ public class AbHttpUtil {
 			}
 		};
 
-		//¸ºÔğµ÷¶ÈÓëÏß³ÌµÄÀà
+		//è´Ÿè´£è°ƒåº¦ä¸çº¿ç¨‹çš„ç±»
 		AbTaskPool mAbTaskPool = AbTaskPool.getInstance();
 		mAbTaskPool.execute(item);
 		

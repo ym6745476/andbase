@@ -10,8 +10,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºPullToRefreshActivity
- * ÃèÊö£ºÏÂÀ­Ë¢ĞÂ·ÖÒ³
+ * åç§°ï¼šPullToRefreshActivity
+ * æè¿°ï¼šä¸‹æ‹‰åˆ·æ–°åˆ†é¡µ
  * @author zhaoqp
  * @date 2011-12-13
  * @version

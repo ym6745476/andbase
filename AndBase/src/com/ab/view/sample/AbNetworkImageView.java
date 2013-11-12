@@ -28,18 +28,18 @@ import com.ab.bitmap.AbImageDownloader;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbNetworkImageView.java 
- * ÃèÊö£º¸ù¾İurlÏÂÔØÍ¼Æ¬µÄÍøÂçImageView
+ * åç§°ï¼šAbNetworkImageView.java 
+ * æè¿°ï¼šæ ¹æ®urlä¸‹è½½å›¾ç‰‡çš„ç½‘ç»œImageView
  * @author zhaoqp
- * @date£º2013-11-12 ÉÏÎç10:09:55
+ * @dateï¼š2013-11-12 ä¸Šåˆ10:09:55
  * @version v1.0
  */
 public class AbNetworkImageView extends ImageView {
 	
-    /** Í¼Æ¬µÄurl. */
+    /** å›¾ç‰‡çš„url. */
     private String mUrl;
 
-    /** Í¼Æ¬ÏÂÔØÆ÷. */
+    /** å›¾ç‰‡ä¸‹è½½å™¨. */
     private AbImageDownloader mAbImageDownloader = null;
 
 
@@ -74,7 +74,7 @@ public class AbNetworkImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºÉèÖÃÍ¼Æ¬µÄURL.
+     * æè¿°ï¼šè®¾ç½®å›¾ç‰‡çš„URL.
      *
      * @param url the url
      * @param abImageDownloader the ab image downloader
@@ -86,7 +86,7 @@ public class AbNetworkImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºÈç¹ûÎ´¼ÓÔØ¾Í¼ÓÔØ.
+     * æè¿°ï¼šå¦‚æœæœªåŠ è½½å°±åŠ è½½.
      *
      * @param isInLayoutPass the is in layout pass
      */
@@ -107,16 +107,16 @@ public class AbNetworkImageView extends ImageView {
             return;
         }
         
-        //Í¼Æ¬µÄÏÂÔØ
+        //å›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader.display(this,mUrl);
         
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see android.view.View#onLayout(boolean, int, int, int, int)
      * @author: zhaoqp
-     * @date£º2013-11-12 ÏÂÎç3:12:06
+     * @dateï¼š2013-11-12 ä¸‹åˆ3:12:06
      * @version v1.0
      */
     @Override
@@ -126,10 +126,10 @@ public class AbNetworkImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see android.view.View#onDetachedFromWindow()
      * @author: zhaoqp
-     * @date£º2013-11-12 ÏÂÎç3:12:06
+     * @dateï¼š2013-11-12 ä¸‹åˆ3:12:06
      * @version v1.0
      */
     @Override
@@ -138,10 +138,10 @@ public class AbNetworkImageView extends ImageView {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see android.widget.ImageView#drawableStateChanged()
      * @author: zhaoqp
-     * @date£º2013-11-12 ÏÂÎç3:12:06
+     * @dateï¼š2013-11-12 ä¸‹åˆ3:12:06
      * @version v1.0
      */
     @Override

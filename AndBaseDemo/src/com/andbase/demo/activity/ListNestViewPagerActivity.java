@@ -64,21 +64,21 @@ public class ListNestViewPagerActivity extends AbActivity {
 		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i4/13215035563144015/T1Q.eyXsldXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
 		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg"); 
 		mAbTaskQueue = AbTaskQueue.getInstance();
-	    //»ñÈ¡ListView¶ÔÏó
+	    //è·å–ListViewå¯¹è±¡
         mAbPullListView = (AbPullListView)this.findViewById(R.id.mListView);
-        //¿ª¹ØÄ¬ÈÏ´ò¿ª
+        //å¼€å…³é»˜è®¤æ‰“å¼€
         mAbPullListView.setPullLoadEnable(true);
         mAbPullListView.setPullRefreshEnable(true); 
         
-        //ListViewÊı¾İ
+        //ListViewæ•°æ®
     	list = new ArrayList<Map<String, Object>>();
     	
-    	//Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+    	//ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
     	myListViewAdapter = new ImageListAdapter(this, list,R.layout.list_items,
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
 						R.id.itemsTitle,R.id.itemsText });
     	mAbPullListView.setAdapter(myListViewAdapter);
-    	//item±»µã»÷ÊÂ¼ş
+    	//itemè¢«ç‚¹å‡»äº‹ä»¶
     	mAbPullListView.setOnItemClickListener(new OnItemClickListener(){
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -88,7 +88,7 @@ public class ListNestViewPagerActivity extends AbActivity {
     	
     	showProgressDialog();
 
-    	//¶¨ÒåÁ½ÖÖ²éÑ¯µÄÊÂ¼ş
+    	//å®šä¹‰ä¸¤ç§æŸ¥è¯¢çš„äº‹ä»¶
     	final AbTaskItem item1 = new AbTaskItem();
 		item1.callback = new AbTaskCallback() {
 
@@ -135,7 +135,7 @@ public class ListNestViewPagerActivity extends AbActivity {
 					newList.clear();
 					mAbPullListView.stopLoadMore(true);
                 }else{
-                	//Ã»ÓĞĞÂÊı¾İÁË
+                	//æ²¡æœ‰æ–°æ•°æ®äº†
                 	mAbPullListView.stopLoadMore(false);
                 }
 				
@@ -152,8 +152,8 @@ public class ListNestViewPagerActivity extends AbActivity {
 	   		    	for (int i = 0; i < 10; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "itemÉÏÀ­"+i);
-		   		    	map.put("itemsText", "itemÉÏÀ­..."+i);
+		   		    	map.put("itemsTitle", "itemä¸Šæ‹‰"+i);
+		   		    	map.put("itemsText", "itemä¸Šæ‹‰..."+i);
 		   		    	newList.add(map);
 	   				}
 	   		    	
@@ -179,11 +179,11 @@ public class ListNestViewPagerActivity extends AbActivity {
 			
 		});
 		
-    	//µÚÒ»´ÎÏÂÔØÊı¾İ
+    	//ç¬¬ä¸€æ¬¡ä¸‹è½½æ•°æ®
 		mAbTaskQueue.execute(item1);
 		
 		
-		//×éºÍ¸öAbSlidingPlayView
+		//ç»„å’Œä¸ªAbSlidingPlayView
         mSlidingPlayView = new AbSlidingPlayView(this);
         
 	    final View mPlayView = mInflater.inflate(R.layout.play_view_item, null);
@@ -209,16 +209,16 @@ public class ListNestViewPagerActivity extends AbActivity {
 		mSlidingPlayView.addView(mPlayView1);
 		mSlidingPlayView.addView(mPlayView2);
 		mSlidingPlayView.startPlay();
-		//ÉèÖÃ¸ß¶È
+		//è®¾ç½®é«˜åº¦
 		mSlidingPlayView.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.FILL_PARENT,150));
 		mAbPullListView.addHeaderView(mSlidingPlayView);
-		//½â¾ö³åÍ»ÎÊÌâ
+		//è§£å†³å†²çªé—®é¢˜
 		mSlidingPlayView.setParentListView(mAbPullListView);
 		mSlidingPlayView.setOnItemClickListener(new AbOnItemClickListener() {
 			
 			@Override
 			public void onClick(int position) {
-				showToast("µã»÷"+position);
+				showToast("ç‚¹å‡»"+position);
 			}
 		});
 	    
@@ -226,7 +226,7 @@ public class ListNestViewPagerActivity extends AbActivity {
 			
 			@Override
 			public void onChange(int position) {
-				showToast("¸Ä±ä"+position);
+				showToast("æ”¹å˜"+position);
 			}
 		});
     }

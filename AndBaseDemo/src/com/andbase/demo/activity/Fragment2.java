@@ -52,19 +52,19 @@ public class Fragment2 extends Fragment {
 		 mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i4/13215035563144015/T1Q.eyXsldXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
 		 mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg"); 
 		 mAbTaskPool = AbTaskPool.getInstance();
-	     //»ñÈ¡ListView¶ÔÏó
+	     //è·å–ListViewå¯¹è±¡
          mAbPullListView = (AbPullListView)view.findViewById(R.id.mListView);
-         //¹Ø±Õ¼ÓÔØ¸ü¶à¹¦ÄÜ
+         //å…³é—­åŠ è½½æ›´å¤šåŠŸèƒ½
          mAbPullListView.setPullLoadEnable(false);
-         //ListViewÊı¾İ
+         //ListViewæ•°æ®
     	 list = new ArrayList<Map<String, Object>>();
     	
-    	 //Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+    	 //ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
     	 myListViewAdapter = new ImageListAdapter(mActivity, list,R.layout.list_items,
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
 						R.id.itemsTitle,R.id.itemsText });
     	 mAbPullListView.setAdapter(myListViewAdapter);
-    	 //item±»µã»÷ÊÂ¼ş
+    	 //itemè¢«ç‚¹å‡»äº‹ä»¶
     	 mAbPullListView.setOnItemClickListener(new OnItemClickListener(){
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -72,7 +72,7 @@ public class Fragment2 extends Fragment {
 			}
     	 });
 
-    	 //¶¨ÒåÁ½ÖÖ²éÑ¯µÄÊÂ¼ş
+    	 //å®šä¹‰ä¸¤ç§æŸ¥è¯¢çš„äº‹ä»¶
     	 final AbTaskItem item1 = new AbTaskItem();
 		 item1.callback = new AbTaskCallback() {
 
@@ -122,7 +122,7 @@ public class Fragment2 extends Fragment {
 			
 		});
 		
-    	//µÚÒ»´ÎÏÂÔØÊı¾İ
+    	//ç¬¬ä¸€æ¬¡ä¸‹è½½æ•°æ®
 		mAbTaskPool.execute(item1);
 	    
 		return view;

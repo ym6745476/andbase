@@ -31,7 +31,7 @@ public interface ITouchHandler {
   boolean handleTouch(MotionEvent event);
   
   /**
-   * 控制器的滑动事件.
+   * 鎺у埗鍣ㄧ殑婊戝姩浜嬩欢.
    *
    * @param event the touch event
    * @return true if the event was handled

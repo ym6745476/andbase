@@ -55,7 +55,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	/** The db helper. */
 	private SQLiteOpenHelper dbHelper;
 	
-	/** Ğ´Ëø*/
+	/** å†™é”*/
 	private final static byte[] writeLock = new byte[0];
 	
 	/** The table name. */
@@ -82,14 +82,14 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	/** The Constant TYPE_INCREMENT. */
 	private static final int TYPE_INCREMENT = 1;
 	
-	/**Õâ¸öDaoµÄÊı¾İ¿â¶ÔÏó*/
+	/**è¿™ä¸ªDaoçš„æ•°æ®åº“å¯¹è±¡*/
 	private SQLiteDatabase db = null;
 
 	/**
-	 * ÓÃÒ»¸ö¶ÔÏóÊµÌå³õÊ¼»¯Õâ¸öÊı¾İ¿â²Ù×÷ÊµÏÖÀà.
+	 * ç”¨ä¸€ä¸ªå¯¹è±¡å®ä½“åˆå§‹åŒ–è¿™ä¸ªæ•°æ®åº“æ“ä½œå®ç°ç±».
 	 *
-	 * @param dbHelper Êı¾İ¿â²Ù×÷ÊµÏÖÀà
-	 * @param clazz Ó³Éä¶ÔÏóÊµÌå
+	 * @param dbHelper æ•°æ®åº“æ“ä½œå®ç°ç±»
+	 * @param clazz æ˜ å°„å¯¹è±¡å®ä½“
 	 */
 	public AbDBDaoImpl(SQLiteOpenHelper dbHelper, Class<T> clazz) {
 		this.dbHelper = dbHelper;
@@ -106,11 +106,11 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			this.tableName = table.name();
 		}
 
-		// ¼ÓÔØËùÓĞ×Ö¶Î
+		// åŠ è½½æ‰€æœ‰å­—æ®µ
 		this.allFields = AbTableHelper.joinFields(this.clazz.getDeclaredFields(),
 				this.clazz.getSuperclass().getDeclaredFields());
 
-		// ÕÒµ½Ö÷¼ü
+		// æ‰¾åˆ°ä¸»é”®
 		for (Field field : this.allFields) {
 			if (field.isAnnotationPresent(Id.class)) {
 				Column column = (Column) field.getAnnotation(Column.class);
@@ -124,9 +124,9 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ³õÊ¼»¯Õâ¸öÊı¾İ¿â²Ù×÷ÊµÏÖÀà.
+	 * åˆå§‹åŒ–è¿™ä¸ªæ•°æ®åº“æ“ä½œå®ç°ç±».
 	 *
-	 * @param dbHelper Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+	 * @param dbHelper æ•°æ®åº“æ“ä½œå®ç°ç±»
 	 */
 	public AbDBDaoImpl(SQLiteOpenHelper dbHelper) {
 		this(dbHelper, null);
@@ -134,7 +134,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 
 	
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @return the db helper
 	 * @see com.ab.db.orm.dao.AbDBDao#getDbHelper()
@@ -146,7 +146,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 
 	
 	/**
-	 * ÃèÊö£º²éÑ¯Ò»Ìõ.
+	 * æè¿°ï¼šæŸ¥è¯¢ä¸€æ¡.
 	 *
 	 * @param id the id
 	 * @return the t
@@ -169,11 +169,11 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£ºÒ»ÖÖ¸üÁé»îµÄ·½Ê½²éÑ¯£¬²»Ö§³Ö¶ÔÏó¹ØÁª£¬¿ÉÒÔĞ´ÍêÕûµÄsql.
+	 * æè¿°ï¼šä¸€ç§æ›´çµæ´»çš„æ–¹å¼æŸ¥è¯¢ï¼Œä¸æ”¯æŒå¯¹è±¡å…³è”ï¼Œå¯ä»¥å†™å®Œæ•´çš„sql.
 	 *
-	 * @param sql ÍêÕûµÄsqlÈç£ºselect * from a ,b where a.id=b.id and a.id = ?
-	 * @param selectionArgs °ó¶¨±äÁ¿Öµ
-	 * @param clazz  ·µ»ØµÄ¶ÔÏóÀàĞÍ
+	 * @param sql å®Œæ•´çš„sqlå¦‚ï¼šselect * from a ,b where a.id=b.id and a.id = ?
+	 * @param selectionArgs ç»‘å®šå˜é‡å€¼
+	 * @param clazz  è¿”å›çš„å¯¹è±¡ç±»å‹
 	 * @return the list
 	 * @see com.ab.db.orm.dao.AbDBDao#rawQuery(java.lang.String, java.lang.String[])
 	 */
@@ -200,7 +200,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£ºÊÇ·ñ´æÔÚ.
+	 * æè¿°ï¼šæ˜¯å¦å­˜åœ¨.
 	 *
 	 * @param sql the sql
 	 * @param selectionArgs the selection args
@@ -228,7 +228,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º²éÑ¯ËùÓĞÊı¾İ.
+	 * æè¿°ï¼šæŸ¥è¯¢æ‰€æœ‰æ•°æ®.
 	 *
 	 * @return the list
 	 * @see com.ab.db.orm.dao.AbDBDao#queryList()
@@ -239,7 +239,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º²éÑ¯ÁĞ±í.
+	 * æè¿°ï¼šæŸ¥è¯¢åˆ—è¡¨.
 	 *
 	 * @param columns the columns
 	 * @param selection the selection
@@ -268,36 +268,36 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				
 				closeCursor(cursor);
 				
-				//»ñÈ¡¹ØÁªÓòµÄ²Ù×÷ÀàĞÍºÍ¹ØÏµÀàĞÍ
+				//è·å–å…³è”åŸŸçš„æ“ä½œç±»å‹å’Œå…³ç³»ç±»å‹
 				String foreignKey = null;
 				String type = null;
 				String action = null;
-				//ĞèÒªÅĞ¶ÏÊÇ·ñÓĞ¹ØÁª±í
+				//éœ€è¦åˆ¤æ–­æ˜¯å¦æœ‰å…³è”è¡¨
 				for (Field relationsField : allFields) {
 					if (!relationsField.isAnnotationPresent(Relations.class)) {
 						continue;
 					}
 					
 					Relations relations = (Relations) relationsField.getAnnotation(Relations.class);
-					//»ñÈ¡Íâ¼üÁĞÃû
+					//è·å–å¤–é”®åˆ—å
 					foreignKey = relations.foreignKey();
-					//¹ØÁªÀàĞÍ
+					//å…³è”ç±»å‹
 					type = relations.type();
-					//²Ù×÷ÀàĞÍ
+					//æ“ä½œç±»å‹
 					action = relations.action();
-					//ÉèÖÃ¿É·ÃÎÊ
+					//è®¾ç½®å¯è®¿é—®
 					relationsField.setAccessible(true);
 					
 					if(!(action.indexOf(ActionType.query)!=-1)){
 						return list;
 					}
 					
-					//µÃµ½¹ØÁª±íµÄ±íÃû²éÑ¯
+					//å¾—åˆ°å…³è”è¡¨çš„è¡¨åæŸ¥è¯¢
 					for(T entity:list){
 							
 							if(RelationsType.one2one.equals(type)){
-								//Ò»¶ÔÒ»¹ØÏµ
-								//»ñÈ¡Õâ¸öÊµÌåµÄ±íÃû
+								//ä¸€å¯¹ä¸€å…³ç³»
+								//è·å–è¿™ä¸ªå®ä½“çš„è¡¨å
 								String relationsTableName = "";
 								if (relationsField.getType().isAnnotationPresent(Table.class)) {
 									Table table = (Table) relationsField.getType().getAnnotation(Table.class);
@@ -308,13 +308,13 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								Field[] relationsEntityFields = relationsField.getType().getDeclaredFields();
 								for (Field relationsEntityField : relationsEntityFields) {
 									Column relationsEntityColumn = (Column) relationsEntityField.getAnnotation(Column.class);
-									//»ñÈ¡Íâ¼üµÄÖµ×÷Îª¹ØÁª±íµÄ²éÑ¯Ìõ¼ş
+									//è·å–å¤–é”®çš„å€¼ä½œä¸ºå…³è”è¡¨çš„æŸ¥è¯¢æ¡ä»¶
 									if (relationsEntityColumn.name().equals(foreignKey)) {
 										
-										//Ö÷±íµÄÓÃÓÚ¹ØÁª±íµÄforeignKeyÖµ
+										//ä¸»è¡¨çš„ç”¨äºå…³è”è¡¨çš„foreignKeyå€¼
 										String value = "-1";
 										for (Field entityField : allFields) {
-											//ÉèÖÃ¿É·ÃÎÊ
+											//è®¾ç½®å¯è®¿é—®
 											entityField.setAccessible(true);
 											Column entityForeignKeyColumn = (Column) entityField.getAnnotation(Column.class);
 											if(entityForeignKeyColumn==null){
@@ -325,11 +325,11 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 												break;
 											}
 										}
-										//²éÑ¯Êı¾İÉèÖÃ¸øÕâ¸öÓò
+										//æŸ¥è¯¢æ•°æ®è®¾ç½®ç»™è¿™ä¸ªåŸŸ
 										cursor = db.query(relationsTableName, null, foreignKey+" = ?",new String[]{value}, null, null, null, null);
 										getListFromCursor(relationsField.getType(),relationsList, cursor);
 										if(relationsList.size()>0){
-											//»ñÈ¡¹ØÁª±íµÄ¶ÔÏóÉèÖÃÖµ
+											//è·å–å…³è”è¡¨çš„å¯¹è±¡è®¾ç½®å€¼
 											relationsField.set(entity, relationsList.get(0));
 										}
 										
@@ -338,9 +338,9 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								}
 								
 							}else if(RelationsType.one2many.equals(type) || RelationsType.many2many.equals(type)){
-								//Ò»¶Ô¶à¹ØÏµ
+								//ä¸€å¯¹å¤šå…³ç³»
 								
-								//µÃµ½·ºĞÍÀïµÄclassÀàĞÍ¶ÔÏó
+								//å¾—åˆ°æ³›å‹é‡Œçš„classç±»å‹å¯¹è±¡
 								Class listEntityClazz = null;
 								Class<?> fieldClass = relationsField.getType();
 								if(fieldClass.isAssignableFrom(List.class)){
@@ -354,11 +354,11 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								}
 								
 								if(listEntityClazz==null){
-									Log.e(TAG, "¶ÔÏóÄ£ĞÍĞèÒªÉèÖÃListµÄ·ºĞÍ");
+									Log.e(TAG, "å¯¹è±¡æ¨¡å‹éœ€è¦è®¾ç½®Listçš„æ³›å‹");
 									return null;
 								}
 								
-								//µÃµ½±íÃû
+								//å¾—åˆ°è¡¨å
 								String relationsTableName = "";
 								if (listEntityClazz.isAnnotationPresent(Table.class)) {
 									Table table = (Table) listEntityClazz.getAnnotation(Table.class);
@@ -369,13 +369,13 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								Field[] relationsEntityFields = listEntityClazz.getDeclaredFields();
 								for (Field relationsEntityField : relationsEntityFields) {
 									Column relationsEntityColumn = (Column) relationsEntityField.getAnnotation(Column.class);
-									//»ñÈ¡Íâ¼üµÄÖµ×÷Îª¹ØÁª±íµÄ²éÑ¯Ìõ¼ş
+									//è·å–å¤–é”®çš„å€¼ä½œä¸ºå…³è”è¡¨çš„æŸ¥è¯¢æ¡ä»¶
 									if (relationsEntityColumn.name().equals(foreignKey)) {
 										
-										//Ö÷±íµÄÓÃÓÚ¹ØÁª±íµÄforeignKeyÖµ
+										//ä¸»è¡¨çš„ç”¨äºå…³è”è¡¨çš„foreignKeyå€¼
 										String value = "-1";
 										for (Field entityField : allFields) {
-											//ÉèÖÃ¿É·ÃÎÊ
+											//è®¾ç½®å¯è®¿é—®
 											entityField.setAccessible(true);
 											Column entityForeignKeyColumn = (Column) entityField.getAnnotation(Column.class);
 											if (entityForeignKeyColumn.name().equals(foreignKey)) {
@@ -383,11 +383,11 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 												break;
 											}
 										}
-										//²éÑ¯Êı¾İÉèÖÃ¸øÕâ¸öÓò
+										//æŸ¥è¯¢æ•°æ®è®¾ç½®ç»™è¿™ä¸ªåŸŸ
 										cursor = db.query(relationsTableName, null, foreignKey+" = ?",new String[]{value}, null, null, null, null);
 										getListFromCursor(listEntityClazz,relationsList, cursor);
 										if(relationsList.size()>0){
-											//»ñÈ¡¹ØÁª±íµÄ¶ÔÏóÉèÖÃÖµ
+											//è·å–å…³è”è¡¨çš„å¯¹è±¡è®¾ç½®å€¼
 											relationsField.set(entity, relationsList);
 										}
 										
@@ -412,7 +412,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	
     /**
-     * ÃèÊö£º¼òµ¥Ò»Ğ©µÄ²éÑ¯.
+     * æè¿°ï¼šç®€å•ä¸€äº›çš„æŸ¥è¯¢.
      *
      * @param selection the selection
      * @param selectionArgs the selection args
@@ -426,10 +426,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ´ÓÓÎ±êÖĞ»ñµÃÓ³Éä¶ÔÏóÁĞ±í.
+	 * ä»æ¸¸æ ‡ä¸­è·å¾—æ˜ å°„å¯¹è±¡åˆ—è¡¨.
 	 *
-	 * @param list ·µ»ØµÄÓ³Éä¶ÔÏóÁĞ±í
-	 * @param cursor µ±Ç°ÓÎ±ê
+	 * @param list è¿”å›çš„æ˜ å°„å¯¹è±¡åˆ—è¡¨
+	 * @param cursor å½“å‰æ¸¸æ ‡
 	 * @return the list from cursor
 	 * @throws IllegalAccessException the illegal access exception
 	 * @throws InstantiationException the instantiation exception
@@ -438,7 +438,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			throws IllegalAccessException, InstantiationException {
 		while (cursor.moveToNext()) {
 			Object entity = clazz.newInstance();
-			// ¼ÓÔØËùÓĞ×Ö¶Î
+			// åŠ è½½æ‰€æœ‰å­—æ®µ
 			List<Field> allFields = AbTableHelper.joinFields(entity.getClass().getDeclaredFields(),
 					entity.getClass().getSuperclass().getDeclaredFields());
 			
@@ -453,7 +453,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 
 					int c = cursor.getColumnIndex(column.name());
 					if (c < 0) {
-						continue; // Èç¹û²»´æÔòÑ­»·ÏÂ¸öÊôĞÔÖµ
+						continue; // å¦‚æœä¸å­˜åˆ™å¾ªç¯ä¸‹ä¸ªå±æ€§å€¼
 					} else if ((Integer.TYPE == fieldType)
 							|| (Integer.class == fieldType)) {
 						field.set(entity, cursor.getInt(c));
@@ -471,7 +471,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					} else if ((Double.TYPE == fieldType)
 							|| (Double.class == fieldType)) {
 						field.set(entity, Double.valueOf(cursor.getDouble(c)));
-					} else if (Date.class == fieldType) {// ´¦Àíjava.util.DateÀàĞÍ,update2012-06-10
+					} else if (Date.class == fieldType) {// å¤„ç†java.util.Dateç±»å‹,update2012-06-10
 						Date date = new Date();
 						date.setTime(cursor.getLong(c));
 						field.set(entity, date);
@@ -499,7 +499,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º²åÈëÊµÌå.
+	 * æè¿°ï¼šæ’å…¥å®ä½“.
 	 *
 	 * @param entity the entity
 	 * @return the long
@@ -511,7 +511,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 	
 	/**
-	 * ÃèÊö£º²åÈëÊµÌå.
+	 * æè¿°ï¼šæ’å…¥å®ä½“.
 	 * @param entity the entity
 	 * @param flag the flag
 	 * @return the long
@@ -525,33 +525,33 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			try {
 				ContentValues cv = new ContentValues();
 				if (flag) {
-					// id×ÔÔö
+					// idè‡ªå¢
 					sql = setContentValues(entity, cv, TYPE_INCREMENT,METHOD_INSERT);
 				} else {
-					// idĞèÖ¸¶¨
+					// idéœ€æŒ‡å®š
 					sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 				}
 				Log.d(TAG, "[insert]: insert into " + this.tableName + " " + sql);
 				row = db.insert(this.tableName, null, cv);
 				
-				//»ñÈ¡¹ØÁªÓòµÄ²Ù×÷ÀàĞÍºÍ¹ØÏµÀàĞÍ
+				//è·å–å…³è”åŸŸçš„æ“ä½œç±»å‹å’Œå…³ç³»ç±»å‹
 				String foreignKey = null;
 				String type = null;
 				String action = null;
-				//ĞèÒªÅĞ¶ÏÊÇ·ñÓĞ¹ØÁª±í
+				//éœ€è¦åˆ¤æ–­æ˜¯å¦æœ‰å…³è”è¡¨
 				for (Field relationsField : allFields) {
 					if (!relationsField.isAnnotationPresent(Relations.class)) {
 						continue;
 					}
 					
 					Relations relations = (Relations) relationsField.getAnnotation(Relations.class);
-					//»ñÈ¡Íâ¼üÁĞÃû
+					//è·å–å¤–é”®åˆ—å
 					foreignKey = relations.foreignKey();
-					//¹ØÁªÀàĞÍ
+					//å…³è”ç±»å‹
 					type = relations.type();
-					//²Ù×÷ÀàĞÍ
+					//æ“ä½œç±»å‹
 					action = relations.action();
-					//ÉèÖÃ¿É·ÃÎÊ
+					//è®¾ç½®å¯è®¿é—®
 					relationsField.setAccessible(true);
 					
 					if(!(action.indexOf(ActionType.insert)!=-1)){
@@ -559,16 +559,16 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					}
 					
 					if(RelationsType.one2one.equals(type)){
-						//Ò»¶ÔÒ»¹ØÏµ
-						//»ñÈ¡¹ØÁª±íµÄ¶ÔÏó
+						//ä¸€å¯¹ä¸€å…³ç³»
+						//è·å–å…³è”è¡¨çš„å¯¹è±¡
 						T relationsEntity = (T)relationsField.get(entity);
 						if(relationsEntity != null){
 							ContentValues relationsCv = new ContentValues();
 							if (flag) {
-								// id×ÔÔö
+								// idè‡ªå¢
 								sql = setContentValues(relationsEntity, relationsCv, TYPE_INCREMENT,METHOD_INSERT);
 							} else {
-								// idĞèÖ¸¶¨
+								// idéœ€æŒ‡å®š
 								sql = setContentValues(relationsEntity, relationsCv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 							}
 							String relationsTableName = "";
@@ -582,18 +582,18 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 						}
 						
 					}else if(RelationsType.one2many.equals(type) || RelationsType.many2many.equals(type)){
-						//Ò»¶Ô¶à¹ØÏµ
-						//»ñÈ¡¹ØÁª±íµÄ¶ÔÏó
+						//ä¸€å¯¹å¤šå…³ç³»
+						//è·å–å…³è”è¡¨çš„å¯¹è±¡
 						List<T> list = (List<T>)relationsField.get(entity);
 						
 						if(list!=null && list.size()>0){
 							for(T relationsEntity:list){
 								ContentValues relationsCv = new ContentValues();
 								if (flag) {
-									// id×ÔÔö
+									// idè‡ªå¢
 									sql = setContentValues(relationsEntity, relationsCv, TYPE_INCREMENT,METHOD_INSERT);
 								} else {
-									// idĞèÖ¸¶¨
+									// idéœ€æŒ‡å®š
 									sql = setContentValues(relationsEntity, relationsCv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 								}
 								String relationsTableName = "";
@@ -622,7 +622,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	
 	/**
-	 * ÃèÊö£º²åÈëÁĞ±í
+	 * æè¿°ï¼šæ’å…¥åˆ—è¡¨
 	 * @see com.ab.db.orm.dao.AbDBDao#insertList(java.util.List)
 	 */
 	@Override
@@ -631,7 +631,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º²åÈëÁĞ±í
+	 * æè¿°ï¼šæ’å…¥åˆ—è¡¨
 	 * @see com.ab.db.orm.dao.AbDBDao#insertList(java.util.List, boolean)
 	 */
 	@Override
@@ -643,10 +643,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				for(T entity : entityList){
 					ContentValues cv = new ContentValues();
 					if (flag) {
-						// id×ÔÔö
+						// idè‡ªå¢
 						sql = setContentValues(entity, cv, TYPE_INCREMENT,METHOD_INSERT);
 					} else {
-						// idĞèÖ¸¶¨
+						// idéœ€æŒ‡å®š
 						sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 					}
 					
@@ -654,25 +654,25 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					rows += db.insert(this.tableName, null, cv);
 					
 					
-					//»ñÈ¡¹ØÁªÓòµÄ²Ù×÷ÀàĞÍºÍ¹ØÏµÀàĞÍ
+					//è·å–å…³è”åŸŸçš„æ“ä½œç±»å‹å’Œå…³ç³»ç±»å‹
 					String foreignKey = null;
 					String type = null;
 					String action = null;
 					Field field  = null;
-					//ĞèÒªÅĞ¶ÏÊÇ·ñÓĞ¹ØÁª±í
+					//éœ€è¦åˆ¤æ–­æ˜¯å¦æœ‰å…³è”è¡¨
 					for (Field relationsField : allFields) {
 						if (!relationsField.isAnnotationPresent(Relations.class)) {
 							continue;
 						}
 						
 						Relations relations = (Relations) relationsField.getAnnotation(Relations.class);
-						//»ñÈ¡Íâ¼üÁĞÃû
+						//è·å–å¤–é”®åˆ—å
 						foreignKey = relations.foreignKey();
-						//¹ØÁªÀàĞÍ
+						//å…³è”ç±»å‹
 						type = relations.type();
-						//²Ù×÷ÀàĞÍ
+						//æ“ä½œç±»å‹
 						action = relations.action();
-						//ÉèÖÃ¿É·ÃÎÊ
+						//è®¾ç½®å¯è®¿é—®
 						relationsField.setAccessible(true);
 						field =  relationsField;
 					}
@@ -686,16 +686,16 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					}
 					
 					if(RelationsType.one2one.equals(type)){
-						//Ò»¶ÔÒ»¹ØÏµ
-						//»ñÈ¡¹ØÁª±íµÄ¶ÔÏó
+						//ä¸€å¯¹ä¸€å…³ç³»
+						//è·å–å…³è”è¡¨çš„å¯¹è±¡
 						T relationsEntity = (T)field.get(entity);
 						if(relationsEntity != null){
 							ContentValues relationsCv = new ContentValues();
 							if (flag) {
-								// id×ÔÔö
+								// idè‡ªå¢
 								sql = setContentValues(relationsEntity, relationsCv, TYPE_INCREMENT,METHOD_INSERT);
 							} else {
-								// idĞèÖ¸¶¨
+								// idéœ€æŒ‡å®š
 								sql = setContentValues(relationsEntity, relationsCv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 							}
 							String relationsTableName = "";
@@ -709,17 +709,17 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 						}
 						
 					}else if(RelationsType.one2many.equals(type) || RelationsType.many2many.equals(type)){
-						//Ò»¶Ô¶à¹ØÏµ
-						//»ñÈ¡¹ØÁª±íµÄ¶ÔÏó
+						//ä¸€å¯¹å¤šå…³ç³»
+						//è·å–å…³è”è¡¨çš„å¯¹è±¡
 						List<T> list = (List<T>)field.get(entity);
 						if(list!=null && list.size()>0){
 							for(T relationsEntity:list){
 								ContentValues relationsCv = new ContentValues();
 								if (flag) {
-									// id×ÔÔö
+									// idè‡ªå¢
 									sql = setContentValues(relationsEntity, relationsCv, TYPE_INCREMENT,METHOD_INSERT);
 								} else {
-									// idĞèÖ¸¶¨
+									// idéœ€æŒ‡å®š
 									sql = setContentValues(relationsEntity, relationsCv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 								}
 								String relationsTableName = "";
@@ -748,7 +748,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 
 	/**
-	 * ÃèÊö£º°´idÉ¾³ı.
+	 * æè¿°ï¼šæŒ‰idåˆ é™¤.
 	 *
 	 * @param id the id
 	 * @see com.ab.db.orm.dao.AbDBDao#delete(int)
@@ -766,7 +766,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º°´idÉ¾³ı.
+	 * æè¿°ï¼šæŒ‰idåˆ é™¤.
 	 *
 	 * @param ids the ids
 	 * @see com.ab.db.orm.dao.AbDBDao#delete(java.lang.Integer[])
@@ -784,7 +784,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 
 	/**
-	 * ÃèÊö£º°´Ìõ¼şÉ¾³ıÊı¾İ
+	 * æè¿°ï¼šæŒ‰æ¡ä»¶åˆ é™¤æ•°æ®
 	 * @see com.ab.db.orm.dao.AbDBDao#delete(java.lang.String, java.lang.String[])
 	 */
 	@Override
@@ -802,7 +802,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£ºÇå¿ÕÊı¾İ
+	 * æè¿°ï¼šæ¸…ç©ºæ•°æ®
 	 * @see com.ab.db.orm.dao.AbDBDao#deleteAll()
 	 */
 	@Override
@@ -815,7 +815,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º¸üĞÂÊµÌå.
+	 * æè¿°ï¼šæ›´æ–°å®ä½“.
 	 * @param entity the entity
 	 * @return the long
 	 * @see com.ab.db.orm.dao.AbDBDao#update(java.lang.Object)
@@ -827,12 +827,12 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			try {
 				ContentValues cv = new ContentValues();
 	
-				//×¢Òâ·µ»ØµÄsqlÖĞ°üº¬Ö÷¼üÁĞ
+				//æ³¨æ„è¿”å›çš„sqlä¸­åŒ…å«ä¸»é”®åˆ—
 				String sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_UPDATE);
 	
 				String where = this.idColumn + " = ?";
 				int id = Integer.parseInt(cv.get(this.idColumn).toString());
-				//set sqlÖĞ²»ÄÜ°üº¬Ö÷¼üÁĞ
+				//set sqlä¸­ä¸èƒ½åŒ…å«ä¸»é”®åˆ—
 				cv.remove(this.idColumn);
 				
 				Log.d(TAG, "[update]: update " + this.tableName + " set " + sql
@@ -851,7 +851,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 
 	/**
-	 * ÃèÊö£º¸üĞÂÁĞ±í
+	 * æè¿°ï¼šæ›´æ–°åˆ—è¡¨
 	 * @see com.ab.db.orm.dao.AbDBDao#updateList(java.util.List)
 	 */
 	@Override
@@ -887,13 +887,13 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÉèÖÃÕâ¸öContentValues.
+	 * è®¾ç½®è¿™ä¸ªContentValues.
 	 *
-	 * @param entity Ó³ÉäÊµÌå
+	 * @param entity æ˜ å°„å®ä½“
 	 * @param cv the cv
-	 * @param type idÀàµÄÀàĞÍ£¬ÊÇ·ñ×ÔÔö
-	 * @param method Ô¤Ö´ĞĞµÄ²Ù×÷
-	 * @return sqlµÄ×Ö·û´®
+	 * @param type idç±»çš„ç±»å‹ï¼Œæ˜¯å¦è‡ªå¢
+	 * @param method é¢„æ‰§è¡Œçš„æ“ä½œ
+	 * @return sqlçš„å­—ç¬¦ä¸²
 	 * @throws IllegalAccessException the illegal access exception
 	 */
 	private String setContentValues(T entity, ContentValues cv, int type,
@@ -902,7 +902,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 		StringBuffer strValue = new StringBuffer(" values(");
 		StringBuffer strUpdate = new StringBuffer(" ");
 		
-		// ¼ÓÔØËùÓĞ×Ö¶Î
+		// åŠ è½½æ‰€æœ‰å­—æ®µ
 		List<Field> allFields = AbTableHelper.joinFields(entity.getClass().getDeclaredFields(),
 				entity.getClass().getSuperclass().getDeclaredFields());
 		for (Field field : allFields) {
@@ -918,7 +918,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			if ((type == TYPE_INCREMENT) && (field.isAnnotationPresent(Id.class))) {
 				continue;
 			}
-			// ´¦Àíjava.util.DateÀàĞÍ,update
+			// å¤„ç†java.util.Dateç±»å‹,update
 			if (Date.class == field.getType()) {
 				// 2012-06-10
 				cv.put(column.name(), ((Date) fieldValue).getTime());
@@ -945,7 +945,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£º²éÑ¯ÎªmapÁĞ±í.
+	 * æè¿°ï¼šæŸ¥è¯¢ä¸ºmapåˆ—è¡¨.
 	 *
 	 * @param sql the sql
 	 * @param selectionArgs the selection args
@@ -966,7 +966,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					for (String columnName : cursor.getColumnNames()) {
 						int c = cursor.getColumnIndex(columnName);
 						if (c < 0) {
-							continue; // Èç¹û²»´æÔÚÑ­»·ÏÂ¸öÊôĞÔÖµ
+							continue; // å¦‚æœä¸å­˜åœ¨å¾ªç¯ä¸‹ä¸ªå±æ€§å€¼
 						} else {
 							map.put(columnName.toLowerCase(), cursor.getString(c));
 						}
@@ -986,7 +986,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	
 	/**
-	 * ÃèÊö£º²éÑ¯ÊıÁ¿.
+	 * æè¿°ï¼šæŸ¥è¯¢æ•°é‡.
 	 * @param sql the sql
 	 * @param selectionArgs the selection args
 	 * @return the int
@@ -1014,7 +1014,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * ÃèÊö£ºÖ´ĞĞÌØ¶¨µÄsql.
+	 * æè¿°ï¼šæ‰§è¡Œç‰¹å®šçš„sql.
 	 *
 	 * @param sql the sql
 	 * @param selectionArgs the selection args
@@ -1040,8 +1040,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Ğ´Êı¾İ¿â£¬Êı¾İ²Ù×÷Ç°±ØĞëµ÷ÓÃ
-	 * @param transaction ÊÇ·ñ¿ªÆôÊÂÎñ
+	 * æè¿°ï¼šè·å–å†™æ•°æ®åº“ï¼Œæ•°æ®æ“ä½œå‰å¿…é¡»è°ƒç”¨
+	 * @param transaction æ˜¯å¦å¼€å¯äº‹åŠ¡
 	 * @throws 
 	 */
 	public void startWritableDatabase(boolean transaction){
@@ -1058,8 +1058,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡¶ÁÊı¾İ¿â£¬Êı¾İ²Ù×÷Ç°±ØĞëµ÷ÓÃ
-	 * @param transaction ÊÇ·ñ¿ªÆôÊÂÎñ
+	 * æè¿°ï¼šè·å–è¯»æ•°æ®åº“ï¼Œæ•°æ®æ“ä½œå‰å¿…é¡»è°ƒç”¨
+	 * @param transaction æ˜¯å¦å¼€å¯äº‹åŠ¡
 	 * @throws 
 	 */
 	public void startReadableDatabase(boolean transaction){
@@ -1078,7 +1078,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	/**
 	 * 
-	 * ÃèÊö£º²Ù×÷Íê³ÉºóÉèÖÃÊÂÎñ³É¹¦ºó²ÅÄÜµ÷ÓÃcloseDatabase(true);
+	 * æè¿°ï¼šæ“ä½œå®Œæˆåè®¾ç½®äº‹åŠ¡æˆåŠŸåæ‰èƒ½è°ƒç”¨closeDatabase(true);
 	 * @throws 
 	 */
 	public void setTransactionSuccessful(){
@@ -1092,8 +1092,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 	/**
 	 * 
-	 * ÃèÊö£º¹Ø±ÕÊı¾İ¿â£¬Êı¾İ²Ù×÷ºó±ØĞëµ÷ÓÃ
-	 * @param transaction  ¹Ø±ÕÊÂÎñ
+	 * æè¿°ï¼šå…³é—­æ•°æ®åº“ï¼Œæ•°æ®æ“ä½œåå¿…é¡»è°ƒç”¨
+	 * @param transaction  å…³é—­äº‹åŠ¡
 	 * @throws 
 	 */
 	public void closeDatabase(boolean transaction){
@@ -1116,11 +1116,11 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 
 	/**
-	 * ´òÓ¡µ±Ç°sqlÓï¾ä.
+	 * æ‰“å°å½“å‰sqlè¯­å¥.
 	 *
-	 * @param sql sqlÓï¾ä£¬´ø£¿
-	 * @param args °ó¶¨±äÁ¿
-	 * @return ÍêÕûµÄsql
+	 * @param sql sqlè¯­å¥ï¼Œå¸¦ï¼Ÿ
+	 * @param args ç»‘å®šå˜é‡
+	 * @return å®Œæ•´çš„sql
 	 */
 	private String getLogSql(String sql, Object[] args) {
 		if (args == null || args.length == 0) {

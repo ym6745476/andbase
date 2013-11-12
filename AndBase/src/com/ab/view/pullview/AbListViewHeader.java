@@ -78,7 +78,7 @@ public class AbListViewHeader extends LinearLayout {
 	/** The Constant STATE_REFRESHING. */
 	public final static int STATE_REFRESHING = 2;
 	
-	/** ±£´æÉÏÒ»´ÎµÄË¢ĞÂÊ±¼ä. */
+	/** ä¿å­˜ä¸Šä¸€æ¬¡çš„åˆ·æ–°æ—¶é—´. */
 	private String lastRefreshTime = null;
 	
 	/** The head content height. */
@@ -112,17 +112,17 @@ public class AbListViewHeader extends LinearLayout {
 	 */
 	private void initView(Context context) {
 		
-		//¶¥²¿Ë¢ĞÂÀ¸ÕûÌåÄÚÈİ
+		//é¡¶éƒ¨åˆ·æ–°æ æ•´ä½“å†…å®¹
 		headerView = new LinearLayout(context);
 		headerView.setOrientation(LinearLayout.HORIZONTAL);
 		setBackgroundColor(Color.rgb(225, 225,225));
 		headerView.setGravity(Gravity.CENTER); 
 		headerView.setPadding(0, 5, 0, 5);
 		
-		//ÏÔÊ¾¼ıÍ·Óë½ø¶È
+		//æ˜¾ç¤ºç®­å¤´ä¸è¿›åº¦
 		FrameLayout headImage =  new FrameLayout(context);
 		arrowImageView = new ImageView(context);
-		//´Ó°üÀï»ñÈ¡µÄ¼ıÍ·Í¼Æ¬
+		//ä»åŒ…é‡Œè·å–çš„ç®­å¤´å›¾ç‰‡
 		arrowImage = AbFileUtil.getBitmapFormSrc("image/arrow.png");
 		arrowImageView.setImageBitmap(arrowImage);
 		
@@ -137,7 +137,7 @@ public class AbListViewHeader extends LinearLayout {
 		headImage.addView(arrowImageView,layoutParamsWW);
 		headImage.addView(headerProgressBar,layoutParamsWW);
 		
-		//¶¥²¿Ë¢ĞÂÀ¸ÎÄ±¾ÄÚÈİ
+		//é¡¶éƒ¨åˆ·æ–°æ æ–‡æœ¬å†…å®¹
 		LinearLayout headTextLayout  = new LinearLayout(context);
 		tipsTextview = new TextView(context);
 		headerTimeView = new TextView(context);
@@ -166,14 +166,14 @@ public class AbListViewHeader extends LinearLayout {
 		
 		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 		lp.gravity = Gravity.BOTTOM;
-		//Ìí¼Ó´ó²¼¾Ö
+		//æ·»åŠ å¤§å¸ƒå±€
 		headerView.addView(headerLayout,lp);
 		
 		this.addView(headerView,lp);
-		//»ñÈ¡ViewµÄ¸ß¶È
+		//è·å–Viewçš„é«˜åº¦
 		AbViewUtil.measureView(this);
 		headerHeight = this.getMeasuredHeight();
-		//ÏòÉÏÆ«ÒÆÒş²ØÆğÀ´
+		//å‘ä¸Šåç§»éšè—èµ·æ¥
 		headerView.setPadding(0, -1 * headerHeight, 0, 0);
 		
 		mRotateUpAnim = new RotateAnimation(0.0f, -180.0f,
@@ -215,13 +215,13 @@ public class AbListViewHeader extends LinearLayout {
 				if (mState == STATE_REFRESHING) {
 					arrowImageView.clearAnimation();
 				}
-				tipsTextview.setText("ÏÂÀ­Ë¢ĞÂ");
+				tipsTextview.setText("ä¸‹æ‹‰åˆ·æ–°");
 				
 				if(lastRefreshTime==null){
 					lastRefreshTime = AbDateUtil.getCurrentDate(AbDateUtil.dateFormatHMS);
-					headerTimeView.setText("Ë¢ĞÂÊ±¼ä£º" + lastRefreshTime);
+					headerTimeView.setText("åˆ·æ–°æ—¶é—´ï¼š" + lastRefreshTime);
 				}else{
-					headerTimeView.setText("ÉÏ´ÎË¢ĞÂÊ±¼ä£º" + lastRefreshTime);
+					headerTimeView.setText("ä¸Šæ¬¡åˆ·æ–°æ—¶é—´ï¼š" + lastRefreshTime);
 				}
 				
 				break;
@@ -229,15 +229,15 @@ public class AbListViewHeader extends LinearLayout {
 				if (mState != STATE_READY) {
 					arrowImageView.clearAnimation();
 					arrowImageView.startAnimation(mRotateUpAnim);
-					tipsTextview.setText("ËÉ¿ªË¢ĞÂ");
-					headerTimeView.setText("ÉÏ´ÎË¢ĞÂÊ±¼ä£º" + lastRefreshTime);
+					tipsTextview.setText("æ¾å¼€åˆ·æ–°");
+					headerTimeView.setText("ä¸Šæ¬¡åˆ·æ–°æ—¶é—´ï¼š" + lastRefreshTime);
 					lastRefreshTime = AbDateUtil.getCurrentDate(AbDateUtil.dateFormatHMS);
 					
 				}
 				break;
 			case STATE_REFRESHING:
-				tipsTextview.setText("ÕıÔÚË¢ĞÂ...");
-				headerTimeView.setText("±¾´ÎË¢ĞÂÊ±¼ä£º" + lastRefreshTime);
+				tipsTextview.setText("æ­£åœ¨åˆ·æ–°...");
+				headerTimeView.setText("æœ¬æ¬¡åˆ·æ–°æ—¶é—´ï¼š" + lastRefreshTime);
 				break;
 				default:
 			}
@@ -268,7 +268,7 @@ public class AbListViewHeader extends LinearLayout {
 	}
 
 	/**
-	 * ÃèÊö£º»ñÈ¡HeaderView.
+	 * æè¿°ï¼šè·å–HeaderView.
 	 *
 	 * @return the header view
 	 */
@@ -296,7 +296,7 @@ public class AbListViewHeader extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃ×ÖÌåÑÕÉ«
+	 * æè¿°ï¼šè®¾ç½®å­—ä½“é¢œè‰²
 	 * @param color
 	 * @throws 
 	 */
@@ -307,7 +307,7 @@ public class AbListViewHeader extends LinearLayout {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃ±³¾°ÑÕÉ«
+	 * æè¿°ï¼šè®¾ç½®èƒŒæ™¯é¢œè‰²
 	 * @param color
 	 * @throws 
 	 */
@@ -317,7 +317,7 @@ public class AbListViewHeader extends LinearLayout {
 
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Header ProgressBar£¬ÓÃÓÚÉèÖÃ×Ô¶¨ÒåÑùÊ½
+	 * æè¿°ï¼šè·å–Header ProgressBarï¼Œç”¨äºè®¾ç½®è‡ªå®šä¹‰æ ·å¼
 	 * @return
 	 * @throws 
 	 */

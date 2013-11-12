@@ -9,14 +9,14 @@ import com.andbase.friend.ChatMsg;
 import com.andbase.model.User;
 
 public class DBSDHelper extends AbSDDBHelper {
-	// Êı¾İ¿âÃû
+	// æ•°æ®åº“å
 	private static final String DBNAME = "andbasedemo.db";
-	// Êı¾İ¿â ´æ·ÅÂ·¾¶
+	// æ•°æ®åº“ å­˜æ”¾è·¯å¾„
     private static final String DBPATH = "AndBaseDemoDB";
     
-    // µ±Ç°Êı¾İ¿âµÄ°æ±¾
+    // å½“å‰æ•°æ®åº“çš„ç‰ˆæœ¬
 	private static final int DBVERSION = 1;
-	// Òª³õÊ¼»¯µÄ±í
+	// è¦åˆå§‹åŒ–çš„è¡¨
 	private static final Class<?>[] clazz = { User.class,LocalUser.class,Stock.class,ChatMsg.class};
 
 	public DBSDHelper(Context context) {

@@ -10,8 +10,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºProgressBarActivity
- * ÃèÊö£º2ÖÖÆ¯ÁÁµÄ½ø¶ÈÌõ
+ * åç§°ï¼šProgressBarActivity
+ * æè¿°ï¼š2ç§æ¼‚äº®çš„è¿›åº¦æ¡
  * @author zhaoqp
  * @date 2011-12-13
  * @version

@@ -20,10 +20,10 @@ import android.view.View;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbCalendar.java 
- * ÃèÊö£º×Ô¶¨ÒåÏÔÊ¾ÈÕÆÚµÄview
+ * åç§°ï¼šAbCalendar.java 
+ * æè¿°ï¼šè‡ªå®šä¹‰æ˜¾ç¤ºæ—¥æœŸçš„view
  * @author zhaoqp
- * @date£º2013-11-7 ÏÂÎç2:35:05
+ * @dateï¼š2013-11-7 ä¸‹åˆ2:35:05
  * @version v1.0
  */
 public class AbCalendar extends View {

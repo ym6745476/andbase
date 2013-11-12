@@ -7,7 +7,7 @@ import com.ab.db.orm.annotation.Table;
 @Table(name = "stock")
 public class Stock {
 
-	// ID @IdÖ÷¼ü,intÀàĞÍ,Êı¾İ¿â½¨±íÊ±´Ë×Ö¶Î»áÉèÎª×ÔÔö³¤
+	// ID @Idä¸»é”®,intç±»å‹,æ•°æ®åº“å»ºè¡¨æ—¶æ­¤å­—æ®µä¼šè®¾ä¸ºè‡ªå¢é•¿
 	@Id
 	@Column(name = "_id")
 	public int _id;

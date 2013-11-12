@@ -10,8 +10,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºCarouselActivity
- * ÃèÊö£ºĞı×ªÄ¾Âí
+ * åç§°ï¼šCarouselActivity
+ * æè¿°ï¼šæ—‹è½¬æœ¨é©¬
  * @author zhaoqp
  * @date 2011-12-13
  * @version

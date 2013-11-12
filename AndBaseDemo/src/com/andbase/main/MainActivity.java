@@ -47,11 +47,11 @@ public class MainActivity extends AbActivity {
 	private Zhaoqm pSa;
 	private AbTitleBar mAbTitleBar = null;
 	private MyApplication application;
-	//Êı¾İ¿â²Ù×÷Àà
+	//æ•°æ®åº“æ“ä½œç±»
 	public AbSqliteStorage mAbSqliteStorage = null;
 	public UserDao mUserDao = null;
 	private MainMenuFragment mMainMenuFragment = null;
-	//ÍÆËÍ·şÎñ
+	//æ¨é€æœåŠ¡
 	private FrontiaPush mPush = null;
 	
 
@@ -67,7 +67,7 @@ public class MainActivity extends AbActivity {
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		
-        //Ö÷ÊÓÍ¼µÄFragmentÌí¼Ó
+        //ä¸»è§†å›¾çš„Fragmentæ·»åŠ 
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, new MainContentFragment())
@@ -75,7 +75,7 @@ public class MainActivity extends AbActivity {
 		
 		mMainMenuFragment = new MainMenuFragment();
 
-		//SlidingMenuµÄÅäÖÃ
+		//SlidingMenuçš„é…ç½®
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
@@ -85,7 +85,7 @@ public class MainActivity extends AbActivity {
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
-		//menuÊÓÍ¼µÄFragmentÌí¼Ó
+		//menuè§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()
@@ -107,16 +107,16 @@ public class MainActivity extends AbActivity {
 		
 		initTitleRightLayout();
 		
-		//³õÊ¼»¯AbSqliteStorage
+		//åˆå§‹åŒ–AbSqliteStorage
 	    mAbSqliteStorage = AbSqliteStorage.getInstance(this);
 	    
-	    //³õÊ¼»¯Êı¾İ¿â²Ù×÷ÊµÏÖÀà
+	    //åˆå§‹åŒ–æ•°æ®åº“æ“ä½œå®ç°ç±»
 	    mUserDao  = new UserDao(this);
 	    
-	    //Êı¾İ´æ´¢³õÊ¼»¯
+	    //æ•°æ®å­˜å‚¨åˆå§‹åŒ–
       	Frontia.init(this.getApplicationContext(), Constant.APIKEY);
         
-		//×Ô¶¯µÇÂ¼
+		//è‡ªåŠ¨ç™»å½•
 	    queryUserData();
 	    
 		pSa = Zhaoqm.getInstance(getApplicationContext(),"2da6ed47775fc5b7715fa5853f32f199");
@@ -153,12 +153,12 @@ public class MainActivity extends AbActivity {
 		}
 	}
 	
-	//ÏÔÊ¾app
+	//æ˜¾ç¤ºapp
 	public void showApp(){
 		dad.showlist(MainActivity.this);
 	}
 	
-	//ÏÔÊ¾²åÆÁ
+	//æ˜¾ç¤ºæ’å±
 	public void showChaping(){
 		pSa.spo(MainActivity.this);
 	}
@@ -176,7 +176,7 @@ public class MainActivity extends AbActivity {
 
  			@Override
  			public void onClick(View v) {
- 				//Ó¦ÓÃÓÎÏ·
+ 				//åº”ç”¨æ¸¸æˆ
  				showApp();
  			}
          });
@@ -222,7 +222,7 @@ public class MainActivity extends AbActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {  
             if(isExit == false ) {  
                 isExit = true;  
-                showToast("ÔÙ°´Ò»´ÎÍË³ö³ÌĞò");  
+                showToast("å†æŒ‰ä¸€æ¬¡é€€å‡ºç¨‹åº");  
                 if(!hasTask) {  
                     tExit.schedule(task, 2000);  
                 }  
@@ -236,7 +236,7 @@ public class MainActivity extends AbActivity {
     } 
 	
 	/**
-    * ÃèÊö£ºµã»÷²Ëµ¥ºó
+    * æè¿°ï¼šç‚¹å‡»èœå•å
     * @throws 
     */
    public void loginAuthorization(final int toActivity){
@@ -264,28 +264,28 @@ public class MainActivity extends AbActivity {
                         }
                     });*/
                     
-                    //²éÑ¯±£´æÓÃ»§ĞÅÏ¢
+                    //æŸ¥è¯¢ä¿å­˜ç”¨æˆ·ä¿¡æ¯
                     findQQInfo(toActivity,mAccessToken);
                }
 
                @Override
                public void onFailure(final int errCode, final String errMsg) {
-            	    showToast("ÊÚÈ¨´íÎó: " + errMsg);
+            	    showToast("æˆæƒé”™è¯¯: " + errMsg);
                }
 
                @Override
                public void onCancel() {
-            		showToast("ÊÚÈ¨È¡Ïû");  
+            		showToast("æˆæƒå–æ¶ˆ");  
                }
            });
    }
    
    
    public void queryUserData(){
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao, new AbDataInfoListener(){
 
 			@Override
@@ -306,26 +306,26 @@ public class MainActivity extends AbActivity {
    
    /**
     * 
-    * ÃèÊö£ºµÇÂ¼²¢Æô¶¯ÍÆËÍ·şÎñ
+    * æè¿°ï¼šç™»å½•å¹¶å¯åŠ¨æ¨é€æœåŠ¡
     * @param u
     * @throws  
     */   
    public void login(User u){
 	    application.mUser = u;
-	    //²à±ßÀ¸Ë¢ĞÂ
+	    //ä¾§è¾¹æ åˆ·æ–°
 		mMainMenuFragment.initMenu();
-		Log.d("TAG", "----Æô¶¯ÍÆËÍ·şÎñ----");
+		Log.d("TAG", "----å¯åŠ¨æ¨é€æœåŠ¡----");
 		mPush = Frontia.getPush();
-		//Æô¶¯ÍÆËÍ·şÎñ
+		//å¯åŠ¨æ¨é€æœåŠ¡
 	    PushUtil.startPushService(mPush,MainActivity.this);
    }
    
    /**
-    * ÃèÊö£ºQQµÇÂ¼
+    * æè¿°ï¼šQQç™»å½•
     * @throws 
     */
    public void findQQInfo(final int toActivity,final String accessToken){
-	   showProgressDialog("²éÑ¯QQÓÃ»§ĞÅÏ¢...");
+	   showProgressDialog("æŸ¥è¯¢QQç”¨æˆ·ä¿¡æ¯...");
 	   FrontiaAccount mFrontiaAccount =  Frontia.getCurrentAccount();
        FrontiaUserQuery query = new FrontiaUserQuery();
        query = query.nameEqual(mFrontiaAccount.getName());
@@ -339,8 +339,8 @@ public class MainActivity extends AbActivity {
                 	   user = userList.get(0);
                    }
                    if(user!=null){
-                       Log.d("TAG", "Í·Ïñ:"+user.getHeadUrl());
-                       //µÇÂ¼³É¹¦±£´æ
+                       Log.d("TAG", "å¤´åƒ:"+user.getHeadUrl());
+                       //ç™»å½•æˆåŠŸä¿å­˜
                        loginUser = new User();
                        loginUser.setuId(user.getId());
                        loginUser.setName(user.getName());
@@ -359,7 +359,7 @@ public class MainActivity extends AbActivity {
     					   startActivity(intent);
                        }
                    }else{
-                	   showToast("Î´ÕÒµ½µÇÂ¼ÓÃ»§");
+                	   showToast("æœªæ‰¾åˆ°ç™»å½•ç”¨æˆ·");
                    }
                    
                    
@@ -373,14 +373,14 @@ public class MainActivity extends AbActivity {
        });
    }
    
-   //±£´æµÇÂ¼Êı¾İ
+   //ä¿å­˜ç™»å½•æ•°æ®
    public void saveUserData(final User user){
-		//²éÑ¯Êı¾İ
+		//æŸ¥è¯¢æ•°æ®
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
 		mAbStorageQuery.equals("u_id",user.getuId());
 		mAbStorageQuery.equals("is_login_user", true);
 		
-		//ÎŞsql´æ´¢µÄ²éÑ¯
+		//æ— sqlå­˜å‚¨çš„æŸ¥è¯¢
 		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao, new AbDataInfoListener(){
 
 			@Override

@@ -27,10 +27,10 @@ import android.view.View;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbMultiColumnBaseListView.java 
- * ÃèÊö£ºThe Class AbMultiColumnBaseListView.
+ * åç§°ï¼šAbMultiColumnBaseListView.java 
+ * æè¿°ï¼šThe Class AbMultiColumnBaseListView.
  * @author zhaoqp
- * @date£º2013-10-28 ÉÏÎç9:30:50
+ * @dateï¼š2013-10-28 ä¸Šåˆ9:30:50
  * @version v1.0
  */
 public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
@@ -86,7 +86,7 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	private Rect mFrameRect = new Rect();
 
 	/**
-	 * ³õÊ¼»¯.
+	 * åˆå§‹åŒ–.
 	 *
 	 * @param attrs the attrs
 	 */
@@ -125,10 +125,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	// /////////////////////////////////////////////////////////////////////
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#onLayout(boolean, int, int, int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -150,10 +150,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#onMeasure(int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -174,10 +174,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#onMeasureChild(android.view.View, int, int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -191,10 +191,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#modifyFlingInitialVelocity(int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -203,10 +203,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#onItemAddedToList(int, boolean)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -220,10 +220,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#onLayoutSync(int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -234,10 +234,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#onLayoutSyncFinished(int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -248,10 +248,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#onAdjustChildViews(boolean)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -270,10 +270,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#getFillChildBottom()
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -289,10 +289,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#getFillChildTop()
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -307,10 +307,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#getScrollChildBottom()
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -326,10 +326,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView#getScrollChildTop()
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -344,10 +344,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#getItemLeft(int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -360,10 +360,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#getItemTop(int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -381,10 +381,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#getItemBottom(int)
 	 * @author: zhaoqp
-	 * @date£º2013-9-4 ÏÂÎç4:06:33
+	 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:33
 	 * @version v1.0
 	 */
 	@Override
@@ -676,10 +676,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 		}
 
 		/**
-		 * ÃèÊö£ºTODO
+		 * æè¿°ï¼šTODO
 		 * @see com.ab.view.pullview.AbMultiColumnBaseListView.Column#getBottom()
 		 * @author: zhaoqp
-		 * @date£º2013-9-4 ÏÂÎç4:06:34
+		 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:34
 		 * @version v1.0
 		 */
 		@Override
@@ -688,10 +688,10 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 		}
 
 		/**
-		 * ÃèÊö£ºTODO
+		 * æè¿°ï¼šTODO
 		 * @see com.ab.view.pullview.AbMultiColumnBaseListView.Column#getTop()
 		 * @author: zhaoqp
-		 * @date£º2013-9-4 ÏÂÎç4:06:34
+		 * @dateï¼š2013-9-4 ä¸‹åˆ4:06:34
 		 * @version v1.0
 		 */
 		@Override

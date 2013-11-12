@@ -75,7 +75,7 @@ public class AreaChart extends LineChart {
   }
 
   /**
-   * ÃèÊö£ºTODO
+   * æè¿°ï¼šTODO
    * @see com.ab.view.chart.AbstractChart#drawPath(android.graphics.Canvas, float[], android.graphics.Paint, boolean)
    */
   @Override

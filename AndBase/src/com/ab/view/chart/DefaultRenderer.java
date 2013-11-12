@@ -262,7 +262,7 @@ public class DefaultRenderer implements Serializable {
 
   /**
    * Returns the labels color.
-   * 获取图表上标题与X轴与Y轴的说明文字颜色
+   * 鑾峰彇鍥捐〃涓婃爣棰樹笌X杞翠笌Y杞寸殑璇存槑鏂囧瓧棰滆壊
    * @return the labels color
    */
   public int getLabelsColor() {
@@ -271,7 +271,7 @@ public class DefaultRenderer implements Serializable {
 
   /**
    * Sets the labels color.
-   * 设置图表上标题与X轴与Y轴的说明文字颜色
+   * 璁剧疆鍥捐〃涓婃爣棰樹笌X杞翠笌Y杞寸殑璇存槑鏂囧瓧棰滆壊
    * @param color the labels color
    */
   public void setLabelsColor(int color) {
@@ -536,7 +536,7 @@ public class DefaultRenderer implements Serializable {
 
   /**
    * Sets the enabled state of the zoom.
-   * 缩放打开默认拖动也打开
+   * 缂╂斁鎵撳紑榛樿鎷栧姩涔熸墦寮�
    * @param enabled zoom enabled
    */
   public void setZoomEnabled(boolean enabled) {

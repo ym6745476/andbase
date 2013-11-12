@@ -4,10 +4,10 @@ import android.os.AsyncTask;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbAsyncTask.java 
- * ÃèÊö£ºÏÂÔØÊı¾İµÄÈÎÎñÊµÏÖ£¬µ¥´ÎÏÂÔØ
+ * åç§°ï¼šAbAsyncTask.java 
+ * æè¿°ï¼šä¸‹è½½æ•°æ®çš„ä»»åŠ¡å®ç°ï¼Œå•æ¬¡ä¸‹è½½
  * @author zhaoqp
- * @date£º2013-9-2 ÏÂÎç12:52:13
+ * @dateï¼š2013-9-2 ä¸‹åˆ12:52:13
  * @version v1.0
  */
 public class AbAsyncTask extends AsyncTask<AbTaskItem, Integer, AbTaskItem> {

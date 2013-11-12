@@ -31,10 +31,10 @@ import com.ab.util.AbGraphical;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º×èÈû²âÊÔView(ÏÔÊ¾Ò³ÃæÍ£ÁôÊ±¼ä£¬²âÊÔÖ÷½çÃæ×èÈûÇé¿ö).
+ * æè¿°ï¼šé˜»å¡æµ‹è¯•View(æ˜¾ç¤ºé¡µé¢åœç•™æ—¶é—´ï¼Œæµ‹è¯•ä¸»ç•Œé¢é˜»å¡æƒ…å†µ).
  * 
  * @author zhaoqp
- * @date£º2013-1-15 ÏÂÎç2:50:44
+ * @dateï¼š2013-1-15 ä¸‹åˆ2:50:44
  * @version v1.0
  */
 public class AbMonitorView extends View  {
@@ -58,7 +58,7 @@ public class AbMonitorView extends View  {
 	private final Paint mPaint; 
 
 	/**
-	 * ¹¹Ôì×èÈû²âÊÔView.
+	 * æ„é€ é˜»å¡æµ‹è¯•View.
 	 *
 	 * @param context the context
 	 */
@@ -67,7 +67,7 @@ public class AbMonitorView extends View  {
 	}
 
 	/**
-	 * ¹¹Ôì×èÈû²âÊÔView.
+	 * æ„é€ é˜»å¡æµ‹è¯•View.
 	 *
 	 * @param context the context
 	 * @param attributeset the attributeset
@@ -82,12 +82,12 @@ public class AbMonitorView extends View  {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param canvas the canvas
 	 * @see android.view.View#onDraw(android.graphics.Canvas)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:49
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:49
 	 * @version v1.0
 	 */
 	@Override
@@ -104,17 +104,17 @@ public class AbMonitorView extends View  {
 		long delay = now - mStartTime;
 		
 		if(delay!=0){
-			// ¼ÆËãÖ¡ËÙÂÊ
+			// è®¡ç®—å¸§é€Ÿç‡
 	        mFps = (int)(mCounter * 1000 / delay);
 		}
       
         String text = mFps + " fps";
-        //»ñÈ¡ÖµµÄÎÄ±¾µÄ¸ß¶È
+        //è·å–å€¼çš„æ–‡æœ¬çš„é«˜åº¦
         TextPaint mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setTypeface(Typeface.DEFAULT);
         mTextPaint.setTextSize(16);
         FontMetrics fm  = mTextPaint.getFontMetrics();
-        //µÃµ½ĞĞ¸ß
+        //å¾—åˆ°è¡Œé«˜
         int textHeight = (int)Math.ceil(fm.descent - fm.ascent)+2;
         int textWidth = (int)AbGraphical.getStringWidth(text,mTextPaint);
         

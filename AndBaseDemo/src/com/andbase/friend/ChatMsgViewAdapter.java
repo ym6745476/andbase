@@ -25,7 +25,7 @@ public class ChatMsgViewAdapter extends BaseAdapter {
 	private MyApplication application = null;
 	private UserDao mUserDao = null;
 	private AbSqliteStorage mAbSqliteStorage = null;
-	//Í¼Æ¬ÏÂÔØÆ÷
+	//å›¾ç‰‡ä¸‹è½½å™¨
     private AbImageDownloader mAbImageDownloader = null;
 
 	public static interface IMsgViewType {
@@ -43,10 +43,10 @@ public class ChatMsgViewAdapter extends BaseAdapter {
 		activity = (ChatActivity)context;
 		application = (MyApplication)activity.getApplication();
 		mUserDao = activity.mUserDao;
-		//³õÊ¼»¯AbSqliteStorage
+		//åˆå§‹åŒ–AbSqliteStorage
 	    mAbSqliteStorage = activity.mAbSqliteStorage;
 	    
-	    //Í¼Æ¬ÏÂÔØÆ÷
+	    //å›¾ç‰‡ä¸‹è½½å™¨
         mAbImageDownloader = new AbImageDownloader(mContext);
         mAbImageDownloader.setWidth(100);
         mAbImageDownloader.setHeight(100);
@@ -115,13 +115,13 @@ public class ChatMsgViewAdapter extends BaseAdapter {
 	    viewHolder.userHead.setFocusable(false);
         viewHolder.chatAttach.setFocusable(false);
         if(mChatMsg.getSendState()==0){
-        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" ÕıÔÚ·¢ËÍ...");
+        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" æ­£åœ¨å‘é€...");
         }else if(mChatMsg.getSendState()==-1){
-        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" ·¢ËÍÊ§°Ü");
+        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" å‘é€å¤±è´¥");
         }else if(mChatMsg.getSendState()==1){
-        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" ÒÑ·¢ËÍ");
+        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" å·²å‘é€");
         }else if(mChatMsg.getSendState()==2){
-        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" ÒÑ½ÓÊÕ");
+        	viewHolder.sendTime.setText(mChatMsg.getCreateTime()+" å·²æ¥æ”¶");
         }
 	    
 	    viewHolder.chatContent.setText(mChatMsg.getContent());
@@ -132,11 +132,11 @@ public class ChatMsgViewAdapter extends BaseAdapter {
 	    	 viewHolder.userName.setText(u.getName());
 	    	 imageUrl = u.getPhotoUrl();
 	    }else{
-	    	 viewHolder.userName.setText("¼ÓÔØÖĞ...");
+	    	 viewHolder.userName.setText("åŠ è½½ä¸­...");
 	    	 //activity.queryUserById(mChatMsg.getuId(),position);
 	    }
 	    
-	    //Í¼Æ¬µÄÏÂÔØ
+	    //å›¾ç‰‡çš„ä¸‹è½½
         mAbImageDownloader.setType(AbConstant.SCALEIMG);
         mAbImageDownloader.display(viewHolder.userHead,imageUrl);
         

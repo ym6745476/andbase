@@ -25,10 +25,10 @@ import android.widget.ScrollView;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbInnerListView.java 
- * ÃèÊö£ºÕâ¸öListView²»»áÓë¸¸Ç×ÊÇ¸öScrollViewÓëListµÄ²úÉúÊÂ¼ş³åÍ»
+ * åç§°ï¼šAbInnerListView.java 
+ * æè¿°ï¼šè¿™ä¸ªListViewä¸ä¼šä¸çˆ¶äº²æ˜¯ä¸ªScrollViewä¸Listçš„äº§ç”Ÿäº‹ä»¶å†²çª
  * @author zhaoqp
- * @date£º2013-10-24 ÏÂÎç1:39:31
+ * @dateï¼š2013-10-24 ä¸‹åˆ1:39:31
  * @version v1.0
  */
 public class AbInnerListView extends ListView {
@@ -86,13 +86,13 @@ public class AbInnerListView extends ListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param widthMeasureSpec the width measure spec
 	 * @param heightMeasureSpec the height measure spec
 	 * @see android.widget.ListView#onMeasure(int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:48
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:48
 	 * @version v1.0
 	 */
 	@Override
@@ -106,13 +106,13 @@ public class AbInnerListView extends ListView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param ev the ev
 	 * @return true, if successful
 	 * @see android.widget.AbsListView#onInterceptTouchEvent(android.view.MotionEvent)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:48
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:48
 	 * @version v1.0
 	 */
 	@Override

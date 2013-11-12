@@ -29,7 +29,7 @@ import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÍ¼Æ¬ÏÂÔØÏß³Ì£¬°´¶ÓÁĞÏÂÔØ£¨ÏÈ¼ì²éSD¿¨ÊÇ·ñ´æÔÚÏàÍ¬ÎÄ¼ş£¬²»´æÔÚÔòÏÂÔØ£¬×îºóÔÙ´ÓSD¿¨ÖĞ¶ÁÈ¡£©.
+ * æè¿°ï¼šå›¾ç‰‡ä¸‹è½½çº¿ç¨‹ï¼ŒæŒ‰é˜Ÿåˆ—ä¸‹è½½ï¼ˆå…ˆæ£€æŸ¥SDå¡æ˜¯å¦å­˜åœ¨ç›¸åŒæ–‡ä»¶ï¼Œä¸å­˜åœ¨åˆ™ä¸‹è½½ï¼Œæœ€åå†ä»SDå¡ä¸­è¯»å–ï¼‰.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -43,20 +43,20 @@ public class AbImageDownloadQueue extends Thread {
 	/** The Constant D. */
 	private static final boolean D = AbAppData.DEBUG;
 	
-	/** ÏÂÔØ¶ÓÁĞ. */
+	/** ä¸‹è½½é˜Ÿåˆ—. */
 	private List<AbImageDownloadItem> queue;
 	
-	/** Í¼Æ¬ÏÂÔØÏß³Ìµ¥ÀıÀà. */
+	/** å›¾ç‰‡ä¸‹è½½çº¿ç¨‹å•ä¾‹ç±». */
     private static AbImageDownloadQueue imageDownloadThread = null; 
     
-    /** ¿ØÖÆÊÍ·Å. */
+    /** æ§åˆ¶é‡Šæ”¾. */
     private static boolean stop = false;
     
-    /** ÏÂÔØÍê³ÉºóµÄÏûÏ¢¾ä±ú. */
+    /** ä¸‹è½½å®Œæˆåçš„æ¶ˆæ¯å¥æŸ„. */
     private static Handler handler = new Handler() { 
         @Override 
         public void handleMessage(Message msg) { 
-        	//if(D)Log.d(TAG, "ÈÎÎñcallback handleMessage...");
+        	//if(D)Log.d(TAG, "ä»»åŠ¡callback handleMessage...");
             AbImageDownloadItem item = (AbImageDownloadItem)msg.obj; 
             item.callback.update(item.bitmap, item.imageUrl); 
         } 
@@ -64,7 +64,7 @@ public class AbImageDownloadQueue extends Thread {
     
     
     /**
-     * ¹¹ÔìÍ¼Æ¬ÏÂÔØÏß³Ì¶ÓÁĞ.
+     * æ„é€ å›¾ç‰‡ä¸‹è½½çº¿ç¨‹é˜Ÿåˆ—.
      */
     private AbImageDownloadQueue() {
     	stop = false;
@@ -72,34 +72,34 @@ public class AbImageDownloadQueue extends Thread {
     } 
     
     /**
-     * µ¥Àı¹¹ÔìÍ¼Æ¬ÏÂÔØÏß³Ì.
+     * å•ä¾‹æ„é€ å›¾ç‰‡ä¸‹è½½çº¿ç¨‹.
      *
      * @return single instance of AbImageDownloadQueue
      */
     public static AbImageDownloadQueue getInstance() { 
         if (imageDownloadThread == null) { 
             imageDownloadThread = new AbImageDownloadQueue(); 
-            //´´½¨ºóÁ¢¿ÌÔËĞĞ
+            //åˆ›å»ºåç«‹åˆ»è¿è¡Œ
             imageDownloadThread.start(); 
         } 
         return imageDownloadThread; 
     } 
      
     /**
-     * ¿ªÊ¼Ò»¸öÏÂÔØÈÎÎñ.
+     * å¼€å§‹ä¸€ä¸ªä¸‹è½½ä»»åŠ¡.
      *
-     * @param item Í¼Æ¬ÏÂÔØµ¥Î»
-     * @return Bitmap ÏÂÔØÍê³ÉºóµÃµ½µÄBitmap
+     * @param item å›¾ç‰‡ä¸‹è½½å•ä½
+     * @return Bitmap ä¸‹è½½å®Œæˆåå¾—åˆ°çš„Bitmap
      */
     public void download(AbImageDownloadItem item) { 
-    	//¼ì²éÍ¼Æ¬Â·¾¶
+    	//æ£€æŸ¥å›¾ç‰‡è·¯å¾„
     	String url = item.imageUrl;
     	if(AbStrUtil.isEmpty(url)){
-    		if(D)Log.d(TAG, "Í¼Æ¬URLÎª¿Õ£¬ÇëÏÈÅĞ¶Ï");
+    		if(D)Log.d(TAG, "å›¾ç‰‡URLä¸ºç©ºï¼Œè¯·å…ˆåˆ¤æ–­");
     	}else{
     		url = url.trim();
     	}
-		//´Ó»º´æÖĞ»ñÈ¡Õâ¸öBitmap.
+		//ä»ç¼“å­˜ä¸­è·å–è¿™ä¸ªBitmap.
     	String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
 		item.bitmap =  AbImageCache.getBitmapFromMemCache(cacheKey);
     	if(item.bitmap == null){
@@ -114,20 +114,20 @@ public class AbImageDownloadQueue extends Thread {
     } 
     
     /**
-     * ÃèÊö£ºÌí¼Óµ½Í¼Æ¬ÏÂÔØÏß³Ì¶ÓÁĞ.
+     * æè¿°ï¼šæ·»åŠ åˆ°å›¾ç‰‡ä¸‹è½½çº¿ç¨‹é˜Ÿåˆ—.
      *
-     * @param item Í¼Æ¬ÏÂÔØµ¥Î»
+     * @param item å›¾ç‰‡ä¸‹è½½å•ä½
      */
     private synchronized void addDownloadItem(AbImageDownloadItem item) { 
         queue.add(item); 
-        //Ìí¼ÓÁËÏÂÔØÏî¾Í¼¤»î±¾Ïß³Ì 
+        //æ·»åŠ äº†ä¸‹è½½é¡¹å°±æ¿€æ´»æœ¬çº¿ç¨‹ 
         this.notify();
     } 
     
     /**
-     * ¿ªÊ¼Ò»¸öÏÂÔØÈÎÎñ²¢Çå³ıÔ­À´¶ÓÁĞ.
+     * å¼€å§‹ä¸€ä¸ªä¸‹è½½ä»»åŠ¡å¹¶æ¸…é™¤åŸæ¥é˜Ÿåˆ—.
      *
-     * @param item ÏÂÔØµ¥Î»
+     * @param item ä¸‹è½½å•ä½
      */
     public void downloadBeforeClean(AbImageDownloadItem item) { 
     	queue.clear();
@@ -135,38 +135,38 @@ public class AbImageDownloadQueue extends Thread {
     } 
  
     /**
-     * ÃèÊö£ºÏß³ÌÔËĞĞ.
+     * æè¿°ï¼šçº¿ç¨‹è¿è¡Œ.
      *
      * @see java.lang.Thread#run()
      */
     @Override 
     public void run() { 
         while(!stop) { 
-        	//if(D)Log.d(TAG, "ÈÎÎñ´óĞ¡£º"+queue.size());
+        	//if(D)Log.d(TAG, "ä»»åŠ¡å¤§å°ï¼š"+queue.size());
             while(queue.size() > 0) { 
                 AbImageDownloadItem item = queue.remove(0); 
-                //¿ªÊ¼ÏÂÔØ
+                //å¼€å§‹ä¸‹è½½
                 item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
-                //»º´æÍ¼Æ¬Â·¾¶
+                //ç¼“å­˜å›¾ç‰‡è·¯å¾„
                 String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
                 AbImageCache.addBitmapToMemoryCache(cacheKey,item.bitmap);                                           
-                //ĞèÒªÖ´ĞĞ»Øµ÷À´ÏÔÊ¾Í¼Æ¬
+                //éœ€è¦æ‰§è¡Œå›è°ƒæ¥æ˜¾ç¤ºå›¾ç‰‡
                 if (item.callback != null) { 
-                	//if(D)Log.d(TAG, "ÈÎÎñcallback...");
-                    //½»ÓÉUIÏß³Ì´¦Àí 
+                	//if(D)Log.d(TAG, "ä»»åŠ¡callback...");
+                    //äº¤ç”±UIçº¿ç¨‹å¤„ç† 
                     Message msg = handler.obtainMessage(); 
                     msg.obj = item; 
                     handler.sendMessage(msg); 
                 } 
                 
-                //Í£Ö¹
+                //åœæ­¢
                 if(stop){
                 	queue.clear();
                 	return;
                 }
             } 
             try { 
-            	//Ã»ÓĞÏÂÔØÏîÊ±µÈ´ı 
+            	//æ²¡æœ‰ä¸‹è½½é¡¹æ—¶ç­‰å¾… 
                 synchronized(this) { 
                     this.wait();
                 } 
@@ -178,7 +178,7 @@ public class AbImageDownloadQueue extends Thread {
 
     /**
      * 
-     * ÃèÊö£ºÖÕÖ¹¶ÓÁĞÊÍ·ÅÏß³Ì
+     * æè¿°ï¼šç»ˆæ­¢é˜Ÿåˆ—é‡Šæ”¾çº¿ç¨‹
      * @throws 
      */
     public void stopQueue(){

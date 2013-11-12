@@ -26,13 +26,13 @@ public class SlidingMenuLeftActivity extends AbActivity {
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
-        //Ö÷ÊÓÍ¼µÄFragmentÌí¼Ó
+        //ä¸»è§†å›¾çš„Fragmentæ·»åŠ 
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, new Fragment1())
 		.commit();
 
-		//SlidingMenuµÄÅäÖÃ
+		//SlidingMenuçš„é…ç½®
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
@@ -42,7 +42,7 @@ public class SlidingMenuLeftActivity extends AbActivity {
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
-		//menuÊÓÍ¼µÄFragmentÌí¼Ó
+		//menuè§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()

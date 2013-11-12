@@ -21,9 +21,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÊı¾İ¿â²Ù×÷Àà.
+ * æè¿°ï¼šæ•°æ®åº“æ“ä½œç±».
  * @author zhaoqp
- * @date£º2013-3-13 ÏÂÎç4:30:10
+ * @dateï¼š2013-3-13 ä¸‹åˆ4:30:10
  * @version v1.0
  */
 public class MyDBHelper extends SQLiteOpenHelper {
@@ -35,7 +35,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
 	private static final int VERSION = 1;
 	
 	/**
-	 * ¹¹ÔìÆ÷.
+	 * æ„é€ å™¨.
 	 *
 	 * @param context the context
 	 */
@@ -44,7 +44,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
 	}
 	
 	/**
-	 * ÃèÊö£º±íµÄ´´½¨.
+	 * æè¿°ï¼šè¡¨çš„åˆ›å»º.
 	 *
 	 * @param db the db
 	 * @see android.database.sqlite.SQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
@@ -55,7 +55,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
 	}
 
 	/**
-	 * ÃèÊö£º±íµÄÖØ½¨.
+	 * æè¿°ï¼šè¡¨çš„é‡å»º.
 	 *
 	 * @param db the db
 	 * @param oldVersion the old version

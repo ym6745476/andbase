@@ -59,164 +59,164 @@ public class MainContentFragment extends Fragment {
 		 application = (MyApplication) mActivity.getApplication();
 		 
 		 View view = inflater.inflate(R.layout.main, null);
-		 //»ñÈ¡ListView¶ÔÏó
+		 //è·å–ListViewå¯¹è±¡
 	     mListView = (ListView)view.findViewById(R.id.mListView);
-	     //ListViewÊı¾İ
+	     //ListViewæ•°æ®
 	     list = new ArrayList<Map<String, Object>>();
 	     Map<String, Object> map = new HashMap<String, Object>();
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "1.AbActivity»ù±¾ÓÃ·¨");
-	    	map.put("itemsText", "AbActivityÊ¹ÓÃÊ¾Àı");
+	    	map.put("itemsTitle", "1.AbActivityåŸºæœ¬ç”¨æ³•");
+	    	map.put("itemsText", "AbActivityä½¿ç”¨ç¤ºä¾‹");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "2.Êı¾İ¿âORM");
-	    	map.put("itemsText", "×¢½â£¬Êı¾İ¿â¶ÔÏóÓ³Éä");
+	    	map.put("itemsTitle", "2.æ•°æ®åº“ORM");
+	    	map.put("itemsText", "æ³¨è§£ï¼Œæ•°æ®åº“å¯¹è±¡æ˜ å°„");
 	    	list.add(map);
 
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "3.IOC ÊÊÅäView");
-	    	map.put("itemsText", "ÏñfindViewByIdËµno");
+	    	map.put("itemsTitle", "3.IOC é€‚é…View");
+	    	map.put("itemsText", "åƒfindViewByIdè¯´no");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "4.Http¹¤¾ßÀà");
-	    	map.put("itemsText", "ÍøÂçÍ¨ĞÅÊ×Ñ¡");
+	    	map.put("itemsTitle", "4.Httpå·¥å…·ç±»");
+	    	map.put("itemsText", "ç½‘ç»œé€šä¿¡é¦–é€‰");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "5.Ïß³Ì³ØÓëÏß³Ì¶ÓÁĞ");
-	    	map.put("itemsText", "ÊÊÓ¦ÓÚHttp¹¤¾ßÀà¹ÜÀí·¶Î§Íâ£¬¸üÁé»îµÄÓ¦ÓÃ");
+	    	map.put("itemsTitle", "5.çº¿ç¨‹æ± ä¸çº¿ç¨‹é˜Ÿåˆ—");
+	    	map.put("itemsText", "é€‚åº”äºHttpå·¥å…·ç±»ç®¡ç†èŒƒå›´å¤–ï¼Œæ›´çµæ´»çš„åº”ç”¨");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "6.Í¼Æ¬ÏÂÔØÓë´¦Àí");
-	    	map.put("itemsText", "Í¼Æ¬ÏÂÔØ,²Ã¼ô,Ëõ·Å");
+	    	map.put("itemsTitle", "6.å›¾ç‰‡ä¸‹è½½ä¸å¤„ç†");
+	    	map.put("itemsText", "å›¾ç‰‡ä¸‹è½½,è£å‰ª,ç¼©æ”¾");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "7.ÏÂÀ­Ë¢ĞÂÓë·ÖÒ³²éÑ¯");
-	    	map.put("itemsText", "Ö§³ÖÏÂÀ­Ë¢ĞÂ£¬ÉÏÀ­¼ÓÔØÏÂÒ»Ò³");
+	    	map.put("itemsTitle", "7.ä¸‹æ‹‰åˆ·æ–°ä¸åˆ†é¡µæŸ¥è¯¢");
+	    	map.put("itemsText", "æ”¯æŒä¸‹æ‹‰åˆ·æ–°ï¼Œä¸Šæ‹‰åŠ è½½ä¸‹ä¸€é¡µ");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "8.³£¹æ±í¸ñ");
-	    	map.put("itemsText", "¶àÄÜÊÊÅäµÄ±í¸ñ£¨Ö§³ÖÎÄ±¾£¬Í¼Æ¬£¬¸´Ñ¡¿ò£©");
+	    	map.put("itemsTitle", "8.å¸¸è§„è¡¨æ ¼");
+	    	map.put("itemsText", "å¤šèƒ½é€‚é…çš„è¡¨æ ¼ï¼ˆæ”¯æŒæ–‡æœ¬ï¼Œå›¾ç‰‡ï¼Œå¤é€‰æ¡†ï¼‰");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "9.»¬¶¯°´Å¥");
-	    	map.put("itemsText", "»¬¶¯°´Å¥");
+	    	map.put("itemsTitle", "9.æ»‘åŠ¨æŒ‰é’®");
+	    	map.put("itemsText", "æ»‘åŠ¨æŒ‰é’®");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "10.Í¼Æ¬Áª²¥");
-	    	map.put("itemsText", "Í¼Æ¬Áª²¥,View²¥·Å");
+	    	map.put("itemsTitle", "10.å›¾ç‰‡è”æ’­");
+	    	map.put("itemsText", "å›¾ç‰‡è”æ’­,Viewæ’­æ”¾");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "11.ÏÂÔØÆ÷");
-	    	map.put("itemsText", "¶àÏß³Ì£¬¶ÏµãĞø´«");
+	    	map.put("itemsTitle", "11.ä¸‹è½½å™¨");
+	    	map.put("itemsText", "å¤šçº¿ç¨‹ï¼Œæ–­ç‚¹ç»­ä¼ ");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "12.¶¯»­»¶Ó­Ò³Ãæ");
-	    	map.put("itemsText", "´ÓÔ¶µ½½üµÄÏÔÊ¾µÄÍ¼Æ¬ÇĞ»»");
+	    	map.put("itemsTitle", "12.åŠ¨ç”»æ¬¢è¿é¡µé¢");
+	    	map.put("itemsText", "ä»è¿œåˆ°è¿‘çš„æ˜¾ç¤ºçš„å›¾ç‰‡åˆ‡æ¢");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "13.²à±ßÀ¸");
-	    	map.put("itemsText", "×óÓÒ²à±ßÀ¸");
+	    	map.put("itemsTitle", "13.ä¾§è¾¹æ ");
+	    	map.put("itemsText", "å·¦å³ä¾§è¾¹æ ");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
 	    	map.put("itemsTitle", "14.sliding Tab");
-	    	map.put("itemsText", "¿É»¬¶¯µÄtab±êÇ©");
+	    	map.put("itemsText", "å¯æ»‘åŠ¨çš„tabæ ‡ç­¾");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "15.·ÂIphoneÂÖ×ÓÑ¡Ôñ¿Ø¼ş");
-	    	map.put("itemsText", "·ÂIphoneÂÖ×ÓÑ¡Ôñ¿Ø¼ş");
+	    	map.put("itemsTitle", "15.ä»¿Iphoneè½®å­é€‰æ‹©æ§ä»¶");
+	    	map.put("itemsText", "ä»¿Iphoneè½®å­é€‰æ‹©æ§ä»¶");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "16.ÅÄÕÕºÍÏà²áÑ¡È¡Í¼Æ¬");
-	    	map.put("itemsText", "ÅÄÕÕºÍÏà²áÑ¡È¡Í¼Æ¬");
+	    	map.put("itemsTitle", "16.æ‹ç…§å’Œç›¸å†Œé€‰å–å›¾ç‰‡");
+	    	map.put("itemsText", "æ‹ç…§å’Œç›¸å†Œé€‰å–å›¾ç‰‡");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "17.Í¼±í");
-	    	map.put("itemsText", "Ïß×´Í¼£¬Öù×´Í¼£¬±ı×´Í¼£¬µÈ¼¶ÌõÍ¼");
+	    	map.put("itemsTitle", "17.å›¾è¡¨");
+	    	map.put("itemsText", "çº¿çŠ¶å›¾ï¼ŒæŸ±çŠ¶å›¾ï¼Œé¥¼çŠ¶å›¾ï¼Œç­‰çº§æ¡å›¾");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "18.ÈÕÀúÑ¡ÔñÆ÷");
-	    	map.put("itemsText", "ÈÕÀúÑ¡ÔñÆ÷Å¶");
+	    	map.put("itemsTitle", "18.æ—¥å†é€‰æ‹©å™¨");
+	    	map.put("itemsText", "æ—¥å†é€‰æ‹©å™¨å“¦");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "19.Í¼Æ¬Ïà½üËÑË÷");
-	    	map.put("itemsText", "phashËã·¨");
+	    	map.put("itemsTitle", "19.å›¾ç‰‡ç›¸è¿‘æœç´¢");
+	    	map.put("itemsText", "phashç®—æ³•");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "20.Ğı×ªÄ¾Âí");
-	    	map.put("itemsText", "Ğı×ªÄ¾Âí");
+	    	map.put("itemsTitle", "20.æ—‹è½¬æœ¨é©¬");
+	    	map.put("itemsText", "æ—‹è½¬æœ¨é©¬");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "21.Ë®Æ½£¬»·ĞÎ½ø¶ÈÌõ");
-	    	map.put("itemsText", "Æ¯ÁÁµÄË®Æ½£¬»·ĞÎ½ø¶ÈÌõ¿Ø¼ş");
+	    	map.put("itemsTitle", "21.æ°´å¹³ï¼Œç¯å½¢è¿›åº¦æ¡");
+	    	map.put("itemsText", "æ¼‚äº®çš„æ°´å¹³ï¼Œç¯å½¢è¿›åº¦æ¡æ§ä»¶");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "22.3D·­×ªĞ§¹û");
-	    	map.put("itemsText", "2013¼ÍÄî±Ò");
+	    	map.put("itemsTitle", "22.3Dç¿»è½¬æ•ˆæœ");
+	    	map.put("itemsText", "2013çºªå¿µå¸");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "23.¸÷ÖÖ»¬¶¯Ç¶Ì×ÎÊÌâ");
-	    	map.put("itemsText", "¸÷ÖÖ»¬¶¯Ç¶Ì×ÎÊÌâµÄ½â¾öÀı×Ó");
+	    	map.put("itemsTitle", "23.å„ç§æ»‘åŠ¨åµŒå¥—é—®é¢˜");
+	    	map.put("itemsText", "å„ç§æ»‘åŠ¨åµŒå¥—é—®é¢˜çš„è§£å†³ä¾‹å­");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
-	    	map.put("itemsTitle", "24.³¡¾°»¯UI");
-	    	map.put("itemsText", "ÕâÍæÒâºÜÁ÷ĞĞ");
+	    	map.put("itemsTitle", "24.åœºæ™¯åŒ–UI");
+	    	map.put("itemsText", "è¿™ç©æ„å¾ˆæµè¡Œ");
 	    	list.add(map);
 	    	
 	    	
 	    	
-	     //Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+	     //ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
 	     myListViewAdapter = new MyListViewAdapter(mActivity, list,R.layout.list_items,
 					new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
 							R.id.itemsTitle,R.id.itemsText });
 	     mListView.setAdapter(myListViewAdapter);
-	     //item±»µã»÷ÊÂ¼ş
+	     //itemè¢«ç‚¹å‡»äº‹ä»¶
 	     mListView.setOnItemClickListener(new OnItemClickListener(){
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view,

@@ -19,10 +19,10 @@ import android.view.View;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbNumberClock.java 
- * ÃèÊö£º×Ô¶¨ÒåÊı×ÖÊ±ÖÓµÄview
+ * åç§°ï¼šAbNumberClock.java 
+ * æè¿°ï¼šè‡ªå®šä¹‰æ•°å­—æ—¶é’Ÿçš„view
  * @author zhaoqp
- * @date£º2013-11-6 ÉÏÎç10:19:42
+ * @dateï¼š2013-11-6 ä¸Šåˆ10:19:42
  * @version v1.0
  */
 public class AbNumberClock extends View {

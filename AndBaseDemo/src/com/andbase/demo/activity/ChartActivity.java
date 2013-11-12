@@ -10,8 +10,8 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Ãû³Æ£ºChartActivity
- * ÃèÊö£ºÍ¼±í
+ * åç§°ï¼šChartActivity
+ * æè¿°ï¼šå›¾è¡¨
  * @author zhaoqp
  * @date 2011-12-13
  * @version

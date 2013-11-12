@@ -37,31 +37,31 @@ import com.ab.util.AbStrUtil;
 public class AbWheelUtil {
 	
 	/**
-	 * ÃèÊö£ºÄ¬ÈÏµÄÄêÔÂÈÕµÄÈÕÆÚÑ¡ÔñÆ÷.
+	 * æè¿°ï¼šé»˜è®¤çš„å¹´æœˆæ—¥çš„æ—¥æœŸé€‰æ‹©å™¨.
 	 *
-	 * @param activity     AbActivity¶ÔÏó
+	 * @param activity     AbActivityå¯¹è±¡
 	 * @param mText the m text
-	 * @param mWheelViewY  Ñ¡ÔñÄêµÄÂÖ×Ó
-	 * @param mWheelViewM  Ñ¡ÔñÔÂµÄÂÖ×Ó
-	 * @param mWheelViewD  Ñ¡ÔñÈÕµÄÂÖ×Ó
-	 * @param okBtn È·¶¨°´Å¥
-	 * @param cancelBtn È¡Ïû°´Å¥
-	 * @param defaultYear  Ä¬ÈÏÏÔÊ¾µÄÄê
+	 * @param mWheelViewY  é€‰æ‹©å¹´çš„è½®å­
+	 * @param mWheelViewM  é€‰æ‹©æœˆçš„è½®å­
+	 * @param mWheelViewD  é€‰æ‹©æ—¥çš„è½®å­
+	 * @param okBtn ç¡®å®šæŒ‰é’®
+	 * @param cancelBtn å–æ¶ˆæŒ‰é’®
+	 * @param defaultYear  é»˜è®¤æ˜¾ç¤ºçš„å¹´
 	 * @param defaultMonth the default month
 	 * @param defaultDay the default day
-	 * @param startYear    ¿ªÊ¼µÄÄê
-	 * @param endYearOffset ½áÊøµÄÄêÓë¿ªÊ¼µÄÄêµÄÆ«ÒÆ
-	 * @param initStart  ÂÖ×ÓÊÇ·ñ³õÊ¼»¯Ä¬ÈÏÊ±¼äÎªµ±Ç°Ê±¼ä
+	 * @param startYear    å¼€å§‹çš„å¹´
+	 * @param endYearOffset ç»“æŸçš„å¹´ä¸å¼€å§‹çš„å¹´çš„åç§»
+	 * @param initStart  è½®å­æ˜¯å¦åˆå§‹åŒ–é»˜è®¤æ—¶é—´ä¸ºå½“å‰æ—¶é—´
 	 */
 	public static void initWheelDatePicker(final AbActivity activity,final TextView mText,final AbWheelView mWheelViewY,final AbWheelView mWheelViewM,final AbWheelView mWheelViewD,
 			 Button okBtn,Button cancelBtn,
 			 int defaultYear,int defaultMonth,int defaultDay,final int startYear,int endYearOffset,boolean initStart){
 		
 		int endYear = startYear+endYearOffset;
-		// Ìí¼Ó´óĞ¡ÔÂÔÂ·İ²¢½«Æä×ª»»Îªlist,·½±ãÖ®ºóµÄÅĞ¶Ï
+		// æ·»åŠ å¤§å°æœˆæœˆä»½å¹¶å°†å…¶è½¬æ¢ä¸ºlist,æ–¹ä¾¿ä¹‹åçš„åˆ¤æ–­
 		String[] months_big = { "1", "3", "5", "7", "8", "10", "12" };
 		String[] months_little = { "4", "6", "9", "11" };
-		//Ê±¼äÑ¡Ôñ¿ÉÒÔÕâÑùÊµÏÖ
+		//æ—¶é—´é€‰æ‹©å¯ä»¥è¿™æ ·å®ç°
 		Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR);
 		int month = calendar.get(Calendar.MONTH)+1;
@@ -77,34 +77,34 @@ public class AbWheelUtil {
 		final List<String> list_big = Arrays.asList(months_big);
 		final List<String> list_little = Arrays.asList(months_little);
 		
-		//ÉèÖÃ"Äê"µÄÏÔÊ¾Êı¾İ
+		//è®¾ç½®"å¹´"çš„æ˜¾ç¤ºæ•°æ®
 		mWheelViewY.setAdapter(new AbNumericWheelAdapter(startYear, endYear));
-		mWheelViewY.setCyclic(true);// ¿ÉÑ­»·¹ö¶¯
-		mWheelViewY.setLabel("Äê");  // Ìí¼ÓÎÄ×Ö
-		mWheelViewY.setCurrentItem(defaultYear - startYear);// ³õÊ¼»¯Ê±ÏÔÊ¾µÄÊı¾İ
+		mWheelViewY.setCyclic(true);// å¯å¾ªç¯æ»šåŠ¨
+		mWheelViewY.setLabel("å¹´");  // æ·»åŠ æ–‡å­—
+		mWheelViewY.setCurrentItem(defaultYear - startYear);// åˆå§‹åŒ–æ—¶æ˜¾ç¤ºçš„æ•°æ®
 		mWheelViewY.setValueTextSize(32);
 		mWheelViewY.setLabelTextSize(30);
 		mWheelViewY.setLabelTextColor(0x80000000);
 		//mWheelViewY.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
-		// ÔÂ
+		// æœˆ
 		mWheelViewM.setAdapter(new AbNumericWheelAdapter(1, 12));
 		mWheelViewM.setCyclic(true);
-		mWheelViewM.setLabel("ÔÂ");
+		mWheelViewM.setLabel("æœˆ");
 		mWheelViewM.setCurrentItem(defaultMonth-1);
 		mWheelViewM.setValueTextSize(32);
 		mWheelViewM.setLabelTextSize(30);
 		mWheelViewM.setLabelTextColor(0x80000000);
 		//mWheelViewM.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
-		// ÈÕ
-		// ÅĞ¶Ï´óĞ¡ÔÂ¼°ÊÇ·ñÈòÄê,ÓÃÀ´È·¶¨"ÈÕ"µÄÊı¾İ
+		// æ—¥
+		// åˆ¤æ–­å¤§å°æœˆåŠæ˜¯å¦é—°å¹´,ç”¨æ¥ç¡®å®š"æ—¥"çš„æ•°æ®
 		if (list_big.contains(String.valueOf(month + 1))) {
 			mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 31));
 		} else if (list_little.contains(String.valueOf(month + 1))) {
 			mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 30));
 		} else {
-			// ÈòÄê
+			// é—°å¹´
 			if (AbDateUtil.isLeapYear(year)){
 				mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 29));
 			}else{
@@ -112,20 +112,20 @@ public class AbWheelUtil {
 			}
 		}
 		mWheelViewD.setCyclic(true);
-		mWheelViewD.setLabel("ÈÕ");
+		mWheelViewD.setLabel("æ—¥");
 		mWheelViewD.setCurrentItem(defaultDay - 1);
 		mWheelViewD.setValueTextSize(32);
 		mWheelViewD.setLabelTextSize(30);
 		mWheelViewD.setLabelTextColor(0x80000000);
 		//mWheelViewD.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
-		// Ìí¼Ó"Äê"¼àÌı
+		// æ·»åŠ "å¹´"ç›‘å¬
 		AbOnWheelChangedListener wheelListener_year = new AbOnWheelChangedListener() {
 
 			public void onChanged(AbWheelView wheel, int oldValue, int newValue) {
 				int year_num = newValue + startYear;
 				int mDIndex = mWheelViewM.getCurrentItem();
-				// ÅĞ¶Ï´óĞ¡ÔÂ¼°ÊÇ·ñÈòÄê,ÓÃÀ´È·¶¨"ÈÕ"µÄÊı¾İ
+				// åˆ¤æ–­å¤§å°æœˆåŠæ˜¯å¦é—°å¹´,ç”¨æ¥ç¡®å®š"æ—¥"çš„æ•°æ®
 				if (list_big.contains(String.valueOf(mWheelViewM.getCurrentItem() + 1))) {
 					mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 31));
 				} else if (list_little.contains(String.valueOf(mWheelViewM.getCurrentItem() + 1))) {
@@ -140,12 +140,12 @@ public class AbWheelUtil {
 				
 			}
 		};
-		// Ìí¼Ó"ÔÂ"¼àÌı
+		// æ·»åŠ "æœˆ"ç›‘å¬
 		AbOnWheelChangedListener wheelListener_month = new AbOnWheelChangedListener() {
 
 			public void onChanged(AbWheelView wheel, int oldValue, int newValue) {
 				int month_num = newValue + 1;
-				// ÅĞ¶Ï´óĞ¡ÔÂ¼°ÊÇ·ñÈòÄê,ÓÃÀ´È·¶¨"ÈÕ"µÄÊı¾İ
+				// åˆ¤æ–­å¤§å°æœˆåŠæ˜¯å¦é—°å¹´,ç”¨æ¥ç¡®å®š"æ—¥"çš„æ•°æ®
 				if (list_big.contains(String.valueOf(month_num))) {
 					mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 31));
 				} else if (list_little.contains(String.valueOf(month_num))) {
@@ -194,22 +194,22 @@ public class AbWheelUtil {
     }
 	
 	/**
-	 * ÃèÊö£ºÄ¬ÈÏµÄÔÂÈÕÊ±·ÖµÄÊ±¼äÑ¡ÔñÆ÷.
+	 * æè¿°ï¼šé»˜è®¤çš„æœˆæ—¥æ—¶åˆ†çš„æ—¶é—´é€‰æ‹©å™¨.
 	 *
-	 * @param activity     AbActivity¶ÔÏó
+	 * @param activity     AbActivityå¯¹è±¡
 	 * @param mText the m text
-	 * @param mWheelViewMD  Ñ¡ÔñÔÂÈÕµÄÂÖ×Ó
+	 * @param mWheelViewMD  é€‰æ‹©æœˆæ—¥çš„è½®å­
 	 * @param mWheelViewHH the m wheel view hh
-	 * @param mWheelViewMM  Ñ¡Ôñ·ÖµÄÂÖ×Ó
-	 * @param okBtn È·¶¨°´Å¥
-	 * @param cancelBtn È¡Ïû°´Å¥
+	 * @param mWheelViewMM  é€‰æ‹©åˆ†çš„è½®å­
+	 * @param okBtn ç¡®å®šæŒ‰é’®
+	 * @param cancelBtn å–æ¶ˆæŒ‰é’®
 	 * @param defaultYear the default year
 	 * @param defaultMonth the default month
 	 * @param defaultDay the default day
 	 * @param defaultHour the default hour
 	 * @param defaultMinute the default minute
 	 * @param initStart the init start
-	 * @date£º2013-7-16 ÉÏÎç10:19:01
+	 * @dateï¼š2013-7-16 ä¸Šåˆ10:19:01
 	 * @version v1.0
 	 */
 	public static void initWheelTimePicker(final AbActivity activity,final TextView mText,final AbWheelView mWheelViewMD,final AbWheelView mWheelViewHH,final AbWheelView mWheelViewMM,
@@ -233,7 +233,7 @@ public class AbWheelUtil {
 		
 		String val = AbStrUtil.dateTimeFormat(defaultYear+"-"+defaultMonth+"-"+defaultDay+" "+defaultHour+":"+defaultMinute+":"+second) ;
 		mText.setText(val);
-		// Ìí¼Ó´óĞ¡ÔÂÔÂ·İ²¢½«Æä×ª»»Îªlist,·½±ãÖ®ºóµÄÅĞ¶Ï
+		// æ·»åŠ å¤§å°æœˆæœˆä»½å¹¶å°†å…¶è½¬æ¢ä¸ºlist,æ–¹ä¾¿ä¹‹åçš„åˆ¤æ–­
 		String[] months_big = { "1", "3", "5", "7", "8", "10", "12" };
 		String[] months_little = { "4", "6", "9", "11" };
 		final List<String> list_big = Arrays.asList(months_big);
@@ -244,36 +244,36 @@ public class AbWheelUtil {
 		for(int i=1;i<13;i++){
 			if(list_big.contains(String.valueOf(i))){
 				for(int j=1;j<32;j++){
-					textDMList.add(i+"ÔÂ"+" "+j+"ÈÕ");
+					textDMList.add(i+"æœˆ"+" "+j+"æ—¥");
 					textDMDateList.add(defaultYear+"-"+i+"-"+j);
 				}
 			}else{
 				if(i==2){
 					if(AbDateUtil.isLeapYear(defaultYear)){
 						for(int j=1;j<28;j++){
-							textDMList.add(i+"ÔÂ"+" "+j+"ÈÕ");
+							textDMList.add(i+"æœˆ"+" "+j+"æ—¥");
 							textDMDateList.add(defaultYear+"-"+i+"-"+j);
 						}
 					}else{
 						for(int j=1;j<29;j++){
-							textDMList.add(i+"ÔÂ"+" "+j+"ÈÕ");
+							textDMList.add(i+"æœˆ"+" "+j+"æ—¥");
 							textDMDateList.add(defaultYear+"-"+i+"-"+j);
 						}
 					}
 				}else{
 					for(int j=1;j<29;j++){
-						textDMList.add(i+"ÔÂ"+" "+j+"ÈÕ");
+						textDMList.add(i+"æœˆ"+" "+j+"æ—¥");
 						textDMDateList.add(defaultYear+"-"+i+"-"+j);
 					}
 				}
 			}
 			
 		}
-		String currentDay = defaultMonth+"ÔÂ"+" "+defaultDay+"ÈÕ";
+		String currentDay = defaultMonth+"æœˆ"+" "+defaultDay+"æ—¥";
 		int currentDayIndex = textDMList.indexOf(currentDay);
 		
-		// ÔÂÈÕ
-		mWheelViewMD.setAdapter(new AbStringWheelAdapter(textDMList,AbStrUtil.strLength("12ÔÂ"+" "+"12ÈÕ")));
+		// æœˆæ—¥
+		mWheelViewMD.setAdapter(new AbStringWheelAdapter(textDMList,AbStrUtil.strLength("12æœˆ"+" "+"12æ—¥")));
 		mWheelViewMD.setCyclic(true);
 		mWheelViewMD.setLabel(""); 
 		mWheelViewMD.setCurrentItem(currentDayIndex);
@@ -282,20 +282,20 @@ public class AbWheelUtil {
 		mWheelViewMD.setLabelTextColor(0x80000000);
 		//mWheelViewMD.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
-		// Ê±
+		// æ—¶
 		mWheelViewHH.setAdapter(new AbNumericWheelAdapter(0, 23));
 		mWheelViewHH.setCyclic(true);
-		mWheelViewHH.setLabel("µã");
+		mWheelViewHH.setLabel("ç‚¹");
 		mWheelViewHH.setCurrentItem(defaultHour);
 		mWheelViewHH.setValueTextSize(32);
 		mWheelViewHH.setLabelTextSize(30);
 		mWheelViewHH.setLabelTextColor(0x80000000);
 		//mWheelViewH.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
-		// ·Ö
+		// åˆ†
 		mWheelViewMM.setAdapter(new AbNumericWheelAdapter(0, 59));
 		mWheelViewMM.setCyclic(true);
-		mWheelViewMM.setLabel("·Ö");
+		mWheelViewMM.setLabel("åˆ†");
 		mWheelViewMM.setCurrentItem(defaultMinute);
 		mWheelViewMM.setValueTextSize(32);
 		mWheelViewMM.setLabelTextSize(30);
@@ -333,14 +333,14 @@ public class AbWheelUtil {
 	
 	
 	/**
-	 * ÃèÊö£ºÄ¬ÈÏµÄÊ±·ÖµÄÊ±¼äÑ¡ÔñÆ÷.
+	 * æè¿°ï¼šé»˜è®¤çš„æ—¶åˆ†çš„æ—¶é—´é€‰æ‹©å™¨.
 	 *
-	 * @param activity     AbActivity¶ÔÏó
+	 * @param activity     AbActivityå¯¹è±¡
 	 * @param mText the m text
 	 * @param mWheelViewHH the m wheel view hh
-	 * @param mWheelViewMM  Ñ¡Ôñ·ÖµÄÂÖ×Ó
-	 * @param okBtn È·¶¨°´Å¥
-	 * @param cancelBtn È¡Ïû°´Å¥
+	 * @param mWheelViewMM  é€‰æ‹©åˆ†çš„è½®å­
+	 * @param okBtn ç¡®å®šæŒ‰é’®
+	 * @param cancelBtn å–æ¶ˆæŒ‰é’®
 	 * @param defaultHour the default hour
 	 * @param defaultMinute the default minute
 	 * @param initStart the init start
@@ -360,20 +360,20 @@ public class AbWheelUtil {
 		String val = AbStrUtil.dateTimeFormat(defaultHour+":"+defaultMinute) ;
 		mText.setText(val);
 		
-		// Ê±
+		// æ—¶
 		mWheelViewHH.setAdapter(new AbNumericWheelAdapter(0, 23));
 		mWheelViewHH.setCyclic(true);
-		mWheelViewHH.setLabel("µã");
+		mWheelViewHH.setLabel("ç‚¹");
 		mWheelViewHH.setCurrentItem(defaultHour);
 		mWheelViewHH.setValueTextSize(32);
 		mWheelViewHH.setLabelTextSize(30);
 		mWheelViewHH.setLabelTextColor(0x80000000);
 		//mWheelViewH.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
-		// ·Ö
+		// åˆ†
 		mWheelViewMM.setAdapter(new AbNumericWheelAdapter(0, 59));
 		mWheelViewMM.setCyclic(true);
-		mWheelViewMM.setLabel("·Ö");
+		mWheelViewMM.setLabel("åˆ†");
 		mWheelViewMM.setCurrentItem(defaultMinute);
 		mWheelViewMM.setValueTextSize(32);
 		mWheelViewMM.setLabelTextSize(30);

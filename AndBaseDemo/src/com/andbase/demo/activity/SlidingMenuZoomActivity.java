@@ -28,13 +28,13 @@ public class SlidingMenuZoomActivity extends AbActivity {
         mAbTitleBar.setLogoLine(R.drawable.line);
         mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
-        //Ö÷ÊÓÍ¼µÄFragmentÌí¼Ó
+        //ä¸»è§†å›¾çš„Fragmentæ·»åŠ 
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, new Fragment1())
 		.commit();
 
-		//SlidingMenuµÄÅäÖÃ
+		//SlidingMenuçš„é…ç½®
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
@@ -44,18 +44,18 @@ public class SlidingMenuZoomActivity extends AbActivity {
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
-		//menuÊÓÍ¼µÄFragmentÌí¼Ó
+		//menuè§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.menu_frame, new SampleListFragment())
 		.commit();
 		
-		//¶¯»­ÅäÖÃ
+		//åŠ¨ç”»é…ç½®
 		menu.setBehindCanvasTransformer(new CanvasTransformer() {
 			@Override
 			public void transformCanvas(Canvas canvas, float percentOpen) {
-				//½«»­²¼Ä¬ÈÏµÄºÚ±³¾°Ìæ»»µô
+				//å°†ç”»å¸ƒé»˜è®¤çš„é»‘èƒŒæ™¯æ›¿æ¢æ‰
 				canvas.drawColor(SlidingMenuZoomActivity.this.getResources().getColor(R.color.gray_white));
 				float scale = (float) (percentOpen*0.25 + 0.75);
 				canvas.scale(scale, scale, canvas.getWidth()/2, canvas.getHeight()/2);

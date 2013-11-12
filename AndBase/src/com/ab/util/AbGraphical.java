@@ -27,10 +27,10 @@ import android.util.FloatMath;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÍ¼ĞÎ´¦ÀíÀà.
+ * æè¿°ï¼šå›¾å½¢å¤„ç†ç±».
  *
  * @author zhaoqp
- * @date£º2013-1-17 ÉÏÎç10:07:09
+ * @dateï¼š2013-1-17 ä¸Šåˆ10:07:09
  * @version v1.0
  */
 public final class AbGraphical {
@@ -38,12 +38,12 @@ public final class AbGraphical {
    
 
      /**
-      * ÃèÊö£º»ñÈ¡×Ö·ûµÄËùÔÚÎ»ÖÃ£¨°´ÏñËØ»ñÈ¡×î´óÄÜÈİÄÉµÄ£©.
+      * æè¿°ï¼šè·å–å­—ç¬¦çš„æ‰€åœ¨ä½ç½®ï¼ˆæŒ‰åƒç´ è·å–æœ€å¤§èƒ½å®¹çº³çš„ï¼‰.
       *
-      * @param str Ö¸¶¨µÄ×Ö·û´®
-      * @param maxPix ÒªÈ¡µ½µÄÎ»ÖÃ£¨ÏñËØ£©
+      * @param str æŒ‡å®šçš„å­—ç¬¦ä¸²
+      * @param maxPix è¦å–åˆ°çš„ä½ç½®ï¼ˆåƒç´ ï¼‰
       * @param paint the paint
-      * @return ×Ö·ûµÄËùÔÚÎ»ÖÃ
+      * @return å­—ç¬¦çš„æ‰€åœ¨ä½ç½®
       */
      public static int subStringLength(String str,int maxPix,TextPaint paint) {
     	 if(AbStrUtil.isEmpty(str)){
@@ -51,7 +51,7 @@ public final class AbGraphical {
     	 }
     	 int currentIndex = 0;
          for (int i = 0; i < str.length(); i++) {
-             //»ñÈ¡Ò»¸ö×Ö·û 
+             //è·å–ä¸€ä¸ªå­—ç¬¦ 
              String temp = str.substring(0, i + 1);
              float valueLength  = paint.measureText(temp);
              if(valueLength > maxPix){
@@ -62,7 +62,7 @@ public final class AbGraphical {
             	 break;
              }
          }
-         //¶ÌÓÚ×î´óÏñËØ·µ»Ø×îºóÒ»¸ö×Ö·ûÎ»ÖÃ
+         //çŸ­äºæœ€å¤§åƒç´ è¿”å›æœ€åä¸€ä¸ªå­—ç¬¦ä½ç½®
          if(currentIndex==0){
         	 currentIndex = str.length()-1 ;
          }
@@ -70,7 +70,7 @@ public final class AbGraphical {
      }
      
      /**
-      * ÃèÊö£º»ñÈ¡ÎÄ×ÖµÄÏñËØ¿í.
+      * æè¿°ï¼šè·å–æ–‡å­—çš„åƒç´ å®½.
       *
       * @param str the str
       * @param paint the paint
@@ -108,14 +108,14 @@ public final class AbGraphical {
      		 texts  = new String [1];
      		 texts[0] = text;
      	}
-     	//¹²¶àÉÙĞĞ
+     	//å…±å¤šå°‘è¡Œ
      	List<String> mStrList  = new ArrayList<String>();
      	
      	for(int i=0;i<texts.length;i++){
    		    String textLine = texts[i];
-   		    //¼ÆËãÕâ¸öÎÄ±¾ÏÔÊ¾Îª¼¸ĞĞ
+   		    //è®¡ç®—è¿™ä¸ªæ–‡æœ¬æ˜¾ç¤ºä¸ºå‡ è¡Œ
             while(true){
-	           	 //¿ÉÈİÄÉµÄ×îºóÒ»¸ö×ÖµÄÎ»ÖÃ
+	           	 //å¯å®¹çº³çš„æœ€åä¸€ä¸ªå­—çš„ä½ç½®
 	           	 int endIndex = subStringLength(textLine,maxWPix,paint);
 	           	 if(endIndex<=0){
 	           		mStrList.add(textLine);
@@ -127,9 +127,9 @@ public final class AbGraphical {
 	           		}
 	           		 
 	           	 }
-	           	 //»ñÈ¡Ê£ÏÂµÄ
+	           	 //è·å–å‰©ä¸‹çš„
 	           	 if(textLine.length()>endIndex+1){
-	           		 //»¹ÓĞÊ£ÏÂµÄ
+	           		 //è¿˜æœ‰å‰©ä¸‹çš„
 	           		 textLine = textLine.substring(endIndex+1);
 	           	 }else{
 	           		 break;
@@ -155,14 +155,14 @@ public final class AbGraphical {
      		 texts  = new String [1];
      		 texts[0] = text;
      	}
-     	//¹²¶àÉÙĞĞ
+     	//å…±å¤šå°‘è¡Œ
      	List<String> mStrList  = new ArrayList<String>();
      	
      	for(int i=0;i<texts.length;i++){
    		    String textLine = texts[i];
-   		    //¼ÆËãÕâ¸öÎÄ±¾ÏÔÊ¾Îª¼¸ĞĞ
+   		    //è®¡ç®—è¿™ä¸ªæ–‡æœ¬æ˜¾ç¤ºä¸ºå‡ è¡Œ
             while(true){
-	           	 //¿ÉÈİÄÉµÄ×îºóÒ»¸ö×ÖµÄÎ»ÖÃ
+	           	 //å¯å®¹çº³çš„æœ€åä¸€ä¸ªå­—çš„ä½ç½®
 	           	 int endIndex = subStringLength(textLine,maxWPix,paint);
 	           	 if(endIndex<=0){
 	           		mStrList.add(textLine);
@@ -174,9 +174,9 @@ public final class AbGraphical {
 	           		}
 	           		 
 	           	 }
-	           	 //»ñÈ¡Ê£ÏÂµÄ
+	           	 //è·å–å‰©ä¸‹çš„
 	           	 if(textLine.length()>endIndex+1){
-	           		 //»¹ÓĞÊ£ÏÂµÄ
+	           		 //è¿˜æœ‰å‰©ä¸‹çš„
 	           		 textLine = textLine.substring(endIndex+1);
 	           	 }else{
 	           		 break;
@@ -188,7 +188,7 @@ public final class AbGraphical {
      }
      
      /**
-      * ÃèÊö£º»æÖÆÎÄ±¾£¬Ö§³Ö»»ĞĞ.
+      * æè¿°ï¼šç»˜åˆ¶æ–‡æœ¬ï¼Œæ”¯æŒæ¢è¡Œ.
       *
       * @param canvas the canvas
       * @param text the text
@@ -202,15 +202,15 @@ public final class AbGraphical {
     	if(AbStrUtil.isEmpty(text)){
     		return 1;
     	}
-    	//ĞèÒª¸ù¾İÎÄ×Ö³¤¶È¿ØÖÆ»»ĞĞ
-        //²âÁ¿ÎÄ×ÖµÄ³¤¶È
+    	//éœ€è¦æ ¹æ®æ–‡å­—é•¿åº¦æ§åˆ¶æ¢è¡Œ
+        //æµ‹é‡æ–‡å­—çš„é•¿åº¦
     	List<String> mStrList  = getDrawRowStr(text,maxWPix,paint);
          
          FontMetrics fm  = paint.getFontMetrics();
          int hSize = (int)Math.ceil(fm.descent - fm.ascent)+2;
          
          for(int i=0;i<mStrList.size();i++){
-        	 //¼ÆËã×ø±ê
+        	 //è®¡ç®—åæ ‡
         	 int x = left;
              int y = top+hSize/2+hSize*i;
     		 String textLine = mStrList.get(i);

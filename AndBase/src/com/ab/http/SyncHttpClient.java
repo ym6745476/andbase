@@ -74,10 +74,10 @@ public class SyncHttpClient extends AsyncHttpClient {
     }
 
     /**
-     * ÃèÊö£ºTODO
+     * æè¿°ï¼šTODO
      * @see com.ab.http.AsyncHttpClient#sendRequest(org.apache.http.impl.client.DefaultHttpClient, org.apache.http.protocol.HttpContext, org.apache.http.client.methods.HttpUriRequest, java.lang.String, com.ab.http.AsyncHttpResponseHandler, android.content.Context)
      * @author: zhaoqp
-     * @date£º2013-10-22 ÏÂÎç4:23:15
+     * @dateï¼š2013-10-22 ä¸‹åˆ4:23:15
      * @version v1.0
      */
     @Override

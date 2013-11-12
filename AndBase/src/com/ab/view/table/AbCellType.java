@@ -17,23 +17,23 @@ package com.ab.view.table;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºµ¥Ôª¸ñÖ§³ÖµÄÀàĞÍ.
+ * æè¿°ï¼šå•å…ƒæ ¼æ”¯æŒçš„ç±»å‹.
  *
  * @author zhaoqp
- * @date£º2013-1-28 ÏÂÎç3:54:26
+ * @dateï¼š2013-1-28 ä¸‹åˆ3:54:26
  * @version v1.0
  */
 public class AbCellType {
      
-	/** ×Ö·û´®. */
+	/** å­—ç¬¦ä¸². */
 	 public static final int STRING = 0;
 	 
-	 /** Í¼Æ¬. */
+	 /** å›¾ç‰‡. */
 	 public static final int IMAGE = 1;
 	 
-	 /** °´Å¥. */
+	 /** æŒ‰é’®. */
 	 public static final int BUTTON = 2;
 	 
-	 /** ¸´Ñ¡¿ò. */
+	 /** å¤é€‰æ¡†. */
 	 public static final int CHECKBOX = 3;
 }

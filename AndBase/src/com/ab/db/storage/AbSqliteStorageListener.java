@@ -32,7 +32,7 @@ import java.util.List;
 public class AbSqliteStorageListener {
 
 	/**
-	 * 描述：插入数据的监听.
+	 * 鎻忚堪锛氭彃鍏ユ暟鎹殑鐩戝惉.
 	 *
 	 * @see AbDataInsertEvent
 	 */
@@ -55,7 +55,7 @@ public class AbSqliteStorageListener {
 	}
 
 	/**
-	 * 描述：查询数据的监听.
+	 * 鎻忚堪锛氭煡璇㈡暟鎹殑鐩戝惉.
 	 *
 	 * @see AbDataInfoEvent
 	 */
@@ -78,7 +78,7 @@ public class AbSqliteStorageListener {
 	}
 
 	/**
-	 * 描述：修改数据的监听.
+	 * 鎻忚堪锛氫慨鏀规暟鎹殑鐩戝惉.
 	 *
 	 * @see AbDataOperationEvent
 	 */

@@ -32,10 +32,10 @@ import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£º±êÌâÀ¸ÊµÏÖ.
+ * æè¿°ï¼šæ ‡é¢˜æ å®ç°.
  *
  * @author zhaoqp
- * @date£º2013-4-24 ÏÂÎç3:46:47
+ * @dateï¼š2013-4-24 ä¸‹åˆ3:46:47
  * @version v1.0
  */
 public class AbTitleBar extends LinearLayout {
@@ -43,50 +43,50 @@ public class AbTitleBar extends LinearLayout {
 	/** The m context. */
 	private Activity mActivity;
 	
-	/** ±êÌâ²¼¾Ö. */
+	/** æ ‡é¢˜å¸ƒå±€. */
 	protected LinearLayout titleTextLayout = null;
 	
-	/** ÏÔÊ¾±êÌâÎÄ×ÖµÄView. */
+	/** æ˜¾ç¤ºæ ‡é¢˜æ–‡å­—çš„View. */
 	protected Button titleTextBtn = null;
 	
-	/** ×ó²àµÄLogoÍ¼±êView. */
+	/** å·¦ä¾§çš„Logoå›¾æ ‡View. */
 	protected ImageView logoView = null;
 	
-	/** ×ó²àµÄLogoÍ¼±êÓÒ±ßµÄ·Ö¸îÏßView. */
+	/** å·¦ä¾§çš„Logoå›¾æ ‡å³è¾¹çš„åˆ†å‰²çº¿View. */
 	protected ImageView logoLineView = null;
 	
-	/** ±êÌâÎÄ±¾µÄ¶ÔÆë²ÎÊı. */
+	/** æ ‡é¢˜æ–‡æœ¬çš„å¯¹é½å‚æ•°. */
 	private LinearLayout.LayoutParams titleTextLayoutParams = null;
 	
-	/** ÓÒ±ß²¼¾ÖµÄµÄ¶ÔÆë²ÎÊı. */
+	/** å³è¾¹å¸ƒå±€çš„çš„å¯¹é½å‚æ•°. */
 	private LinearLayout.LayoutParams rightViewLayoutParams = null;
 	
-	/** ÓÒ±ßµÄView£¬¿ÉÒÔ×Ô¶¨ÒåÏÔÊ¾Ê²Ã´. */
+	/** å³è¾¹çš„Viewï¼Œå¯ä»¥è‡ªå®šä¹‰æ˜¾ç¤ºä»€ä¹ˆ. */
 	protected LinearLayout rightLayout = null;
 	
-	/** ±êÌâÀ¸²¼¾ÖID. */
+	/** æ ‡é¢˜æ å¸ƒå±€ID. */
 	public int mAbTitlebarID = 1;
 	
-	/** È«¾ÖµÄLayoutInflater¶ÔÏó£¬ÒÑ¾­Íê³É³õÊ¼»¯. */
+	/** å…¨å±€çš„LayoutInflaterå¯¹è±¡ï¼Œå·²ç»å®Œæˆåˆå§‹åŒ–. */
 	public LayoutInflater mInflater;
 	
 	/**
-	 * LinearLayout.LayoutParams£¬ÒÑ¾­³õÊ¼»¯ÎªFILL_PARENT, FILL_PARENT
+	 * LinearLayout.LayoutParamsï¼Œå·²ç»åˆå§‹åŒ–ä¸ºFILL_PARENT, FILL_PARENT
 	 */
 	public LinearLayout.LayoutParams layoutParamsFF = null;
 	
 	/**
-	 * LinearLayout.LayoutParams£¬ÒÑ¾­³õÊ¼»¯ÎªFILL_PARENT, WRAP_CONTENT
+	 * LinearLayout.LayoutParamsï¼Œå·²ç»åˆå§‹åŒ–ä¸ºFILL_PARENT, WRAP_CONTENT
 	 */
 	public LinearLayout.LayoutParams layoutParamsFW = null;
 	
 	/**
-	 * LinearLayout.LayoutParams£¬ÒÑ¾­³õÊ¼»¯ÎªWRAP_CONTENT, FILL_PARENT
+	 * LinearLayout.LayoutParamsï¼Œå·²ç»åˆå§‹åŒ–ä¸ºWRAP_CONTENT, FILL_PARENT
 	 */
 	public LinearLayout.LayoutParams layoutParamsWF = null;
 	
 	/**
-	 * LinearLayout.LayoutParams£¬ÒÑ¾­³õÊ¼»¯ÎªWRAP_CONTENT, WRAP_CONTENT
+	 * LinearLayout.LayoutParamsï¼Œå·²ç»åˆå§‹åŒ–ä¸ºWRAP_CONTENT, WRAP_CONTENT
 	 */
 	public LinearLayout.LayoutParams layoutParamsWW = null;
 
@@ -104,7 +104,7 @@ public class AbTitleBar extends LinearLayout {
 	public void ininTitleBar(Context context){
 		
 		mActivity  = (Activity)context;
-		//Ë®Æ½ÅÅÁĞ
+		//æ°´å¹³æ’åˆ—
 		this.setOrientation(LinearLayout.HORIZONTAL);
 		this.setId(mAbTitlebarID);
 		
@@ -145,7 +145,7 @@ public class AbTitleBar extends LinearLayout {
 		this.addView(titleTextLayout,titleTextLayoutParams);
 		
 		
-		// ¼ÓÓÒ±ßµÄ²¼¾Ö
+		// åŠ å³è¾¹çš„å¸ƒå±€
 		rightLayout = new LinearLayout(context);
 		rightLayout.setOrientation(LinearLayout.HORIZONTAL);
 		rightLayout.setGravity(Gravity.RIGHT);
@@ -166,15 +166,15 @@ public class AbTitleBar extends LinearLayout {
 	
 
 	/**
-	 * ÃèÊö£º±êÌâÀ¸µÄ±³¾°Í¼.
-	 * @param res  ±³¾°Í¼×ÊÔ´ID
+	 * æè¿°ï¼šæ ‡é¢˜æ çš„èƒŒæ™¯å›¾.
+	 * @param res  èƒŒæ™¯å›¾èµ„æºID
 	 */
 	public void setTitleLayoutBackground(int res) {
 		this.setBackgroundResource(res);
 	}
 	
 	/**
-	 * ÃèÊö£º±êÌâÎÄ×ÖµÄ¶ÔÆë.
+	 * æè¿°ï¼šæ ‡é¢˜æ–‡å­—çš„å¯¹é½.
 	 * @param left the left
 	 * @param top the top
 	 * @param right the right
@@ -186,41 +186,41 @@ public class AbTitleBar extends LinearLayout {
 	
 	
 	/**
-	 * ÃèÊö£º±êÌâÀ¸µÄ±³¾°Í¼.
-	 * @param color  ±³¾°ÑÕÉ«Öµ
+	 * æè¿°ï¼šæ ‡é¢˜æ çš„èƒŒæ™¯å›¾.
+	 * @param color  èƒŒæ™¯é¢œè‰²å€¼
 	 */
 	public void setTitleLayoutBackgroundColor(int color) {
 		this.setBackgroundColor(color);
 	}
 
 	/**
-	 * ÃèÊö£º±êÌâÎÄ×Ö×ÖºÅ.
-	 * @param titleTextSize  ÎÄ×Ö×ÖºÅ
+	 * æè¿°ï¼šæ ‡é¢˜æ–‡å­—å­—å·.
+	 * @param titleTextSize  æ–‡å­—å­—å·
 	 */
 	public void setTitleTextSize(int titleTextSize) {
 		this.titleTextBtn.setTextSize(titleTextSize);
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃ±êÌâÎÄ×Ö¶ÔÆë·½Ê½
-	 * ¸ù¾İÓÒ±ßµÄ¾ßÌåÇé¿öÅĞ¶¨·½Ïò£º
-	 * £¨1£©ÖĞ¼ä¿¿½ü Gravity.CENTER,Gravity.CENTER
-	 * £¨2£©×ó±ß¾Ó×ó ÓÒ±ß¾ÓÓÒGravity.LEFT,Gravity.RIGHT
-	 * £¨3£©×ó±ß¾ÓÖĞ£¬ÓÒ±ß¾ÓÓÒGravity.CENTER,Gravity.RIGHT
-	 * £¨4£©×ó±ß¾ÓÓÒ£¬ÓÒ±ß¾ÓÓÒGravity.RIGHT,Gravity.RIGHT
-	 * ±ØĞëÔÚaddRightView(view)·½·¨ºóÉèÖÃ
-	 * @param gravity1  ±êÌâ¶ÔÆë·½Ê½
-	 * @param gravity2  ÓÒ±ß²¼¾Ö¶ÔÆë·½Ê½
+	 * æè¿°ï¼šè®¾ç½®æ ‡é¢˜æ–‡å­—å¯¹é½æ–¹å¼
+	 * æ ¹æ®å³è¾¹çš„å…·ä½“æƒ…å†µåˆ¤å®šæ–¹å‘ï¼š
+	 * ï¼ˆ1ï¼‰ä¸­é—´é è¿‘ Gravity.CENTER,Gravity.CENTER
+	 * ï¼ˆ2ï¼‰å·¦è¾¹å±…å·¦ å³è¾¹å±…å³Gravity.LEFT,Gravity.RIGHT
+	 * ï¼ˆ3ï¼‰å·¦è¾¹å±…ä¸­ï¼Œå³è¾¹å±…å³Gravity.CENTER,Gravity.RIGHT
+	 * ï¼ˆ4ï¼‰å·¦è¾¹å±…å³ï¼Œå³è¾¹å±…å³Gravity.RIGHT,Gravity.RIGHT
+	 * å¿…é¡»åœ¨addRightView(view)æ–¹æ³•åè®¾ç½®
+	 * @param gravity1  æ ‡é¢˜å¯¹é½æ–¹å¼
+	 * @param gravity2  å³è¾¹å¸ƒå±€å¯¹é½æ–¹å¼
 	 */
 	public void setTitleLayoutGravity(int gravity1,int gravity2) {
 		AbViewUtil.measureView(this.rightLayout);
 		AbViewUtil.measureView(this.logoView);
 		int leftWidth = this.logoView.getMeasuredWidth();
 		int rightWidth = this.rightLayout.getMeasuredWidth();
-		//if(D)Log.d(TAG, "²âÁ¿²¼¾ÖµÄ¿í¶È£º"+leftWidth+","+rightWidth);
+		//if(D)Log.d(TAG, "æµ‹é‡å¸ƒå±€çš„å®½åº¦ï¼š"+leftWidth+","+rightWidth);
 		this.titleTextLayoutParams.rightMargin = 0;
 		this.titleTextLayoutParams.leftMargin = 0;
-		//È«²¿ÖĞ¼ä¿¿
+		//å…¨éƒ¨ä¸­é—´é 
 		if((gravity1 == Gravity.CENTER_HORIZONTAL || gravity1 == Gravity.CENTER) ){
             if(leftWidth==0 && rightWidth==0){
             	this.titleTextLayout.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -244,11 +244,11 @@ public class AbTitleBar extends LinearLayout {
 					}
 				}
 			}
-		//×óÓÒ
+		//å·¦å³
 		}else if(gravity1 == Gravity.LEFT && gravity2 == Gravity.RIGHT){
 			this.titleTextLayout.setGravity(Gravity.LEFT);
 			this.rightLayout.setHorizontalGravity(Gravity.RIGHT);
-		//È«²¿ÓÒ¿¿
+		//å…¨éƒ¨å³é 
 		}else if(gravity1 == Gravity.RIGHT && gravity2 == Gravity.RIGHT){
 			this.titleTextLayout.setGravity(Gravity.RIGHT);
 			this.rightLayout.setHorizontalGravity(Gravity.RIGHT);
@@ -260,7 +260,7 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡±êÌâÎÄ±¾µÄButton.
+	 * æè¿°ï¼šè·å–æ ‡é¢˜æ–‡æœ¬çš„Button.
 	 * @return the title Button view
 	 */
 	public Button getTitleTextButton() {
@@ -268,7 +268,7 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡±êÌâLogoµÄView.
+	 * æè¿°ï¼šè·å–æ ‡é¢˜Logoçš„View.
 	 * @return the logo view
 	 */
 	public ImageView getLogoView() {
@@ -276,14 +276,14 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃ±êÌâ×ÖÌå´ÖÌå.
+	 * æè¿°ï¼šè®¾ç½®æ ‡é¢˜å­—ä½“ç²—ä½“.
 	 *
 	 * @param bold the new title text bold
 	 */
 	public void setTitleTextBold(boolean bold){
 		TextPaint paint = titleTextBtn.getPaint();  
 		if(bold){
-			//´ÖÌå
+			//ç²—ä½“
 			paint.setFakeBoldText(true); 
 		}else{
 			paint.setFakeBoldText(false); 
@@ -292,7 +292,7 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃ±êÌâ±³¾°.
+	 * æè¿°ï¼šè®¾ç½®æ ‡é¢˜èƒŒæ™¯.
 	 *
 	 * @param resId the new title text background resource
 	 */
@@ -301,15 +301,15 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃ±êÌâ±³¾°.
-	 * @param d  ±³¾°Í¼
+	 * æè¿°ï¼šè®¾ç½®æ ‡é¢˜èƒŒæ™¯.
+	 * @param d  èƒŒæ™¯å›¾
 	 */
 	public void setTitleLayoutBackgroundDrawable(Drawable d) {
 		this.setBackgroundDrawable(d);
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃ±êÌâ±³¾°.
+	 * æè¿°ï¼šè®¾ç½®æ ‡é¢˜èƒŒæ™¯.
 	 *
 	 * @param drawable the new title text background drawable
 	 */
@@ -318,24 +318,24 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-     * ÃèÊö£ºÉèÖÃ±êÌâÎÄ±¾.
-     * @param text  ÎÄ±¾
+     * æè¿°ï¼šè®¾ç½®æ ‡é¢˜æ–‡æœ¬.
+     * @param text  æ–‡æœ¬
      */
 	public void setTitleText(String text) {
 		titleTextBtn.setText(text);
 	}
 	
 	/**
-     * ÃèÊö£ºÉèÖÃ±êÌâÎÄ±¾.
-     * @param resId  ÎÄ±¾µÄ×ÊÔ´ID
+     * æè¿°ï¼šè®¾ç½®æ ‡é¢˜æ–‡æœ¬.
+     * @param resId  æ–‡æœ¬çš„èµ„æºID
      */
 	public void setTitleText(int resId) {
 		titleTextBtn.setText(resId);
 	}
 	
 	/**
-     * ÃèÊö£ºÉèÖÃLogoµÄ±³¾°Í¼.
-     * @param drawable  Logo×ÊÔ´Drawable
+     * æè¿°ï¼šè®¾ç½®Logoçš„èƒŒæ™¯å›¾.
+     * @param drawable  Logoèµ„æºDrawable
      */
 	public void setLogo(Drawable drawable) {
 		logoView.setVisibility(View.VISIBLE);
@@ -343,8 +343,8 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-     * ÃèÊö£ºÉèÖÃLogoµÄ±³¾°×ÊÔ´.
-     * @param resId  Logo×ÊÔ´ID
+     * æè¿°ï¼šè®¾ç½®Logoçš„èƒŒæ™¯èµ„æº.
+     * @param resId  Logoèµ„æºID
      */
 	public void setLogo(int resId) {
 		logoView.setVisibility(View.VISIBLE);
@@ -352,8 +352,8 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-     * ÃèÊö£ºÉèÖÃLogo·Ö¸ôÏßµÄ±³¾°×ÊÔ´.
-     * @param resId  Logo×ÊÔ´ID
+     * æè¿°ï¼šè®¾ç½®Logoåˆ†éš”çº¿çš„èƒŒæ™¯èµ„æº.
+     * @param resId  Logoèµ„æºID
      */
 	public void setLogoLine(int resId) {
 		logoLineView.setVisibility(View.VISIBLE);
@@ -361,8 +361,8 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-     * ÃèÊö£ºÉèÖÃLogo·Ö¸ôÏßµÄ±³¾°Í¼.
-     * @param drawable  Logo×ÊÔ´Drawable
+     * æè¿°ï¼šè®¾ç½®Logoåˆ†éš”çº¿çš„èƒŒæ™¯å›¾.
+     * @param drawable  Logoèµ„æºDrawable
      */
 	public void setLogoLine(Drawable drawable) {
 		logoLineView.setVisibility(View.VISIBLE);
@@ -371,8 +371,8 @@ public class AbTitleBar extends LinearLayout {
 	
 	
 	/**
-     * ÃèÊö£º°ÑÖ¸¶¨µÄViewÌî¼Óµ½±êÌâÀ¸ÓÒ±ß.
-     * @param rightView  Ö¸¶¨µÄView
+     * æè¿°ï¼šæŠŠæŒ‡å®šçš„Viewå¡«åŠ åˆ°æ ‡é¢˜æ å³è¾¹.
+     * @param rightView  æŒ‡å®šçš„View
      */
 	public void addRightView(View rightView) {
 		rightLayout.setVisibility(View.VISIBLE);
@@ -380,8 +380,8 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-     * ÃèÊö£º°ÑÖ¸¶¨×ÊÔ´ID±íÊ¾µÄViewÌî¼Óµ½±êÌâÀ¸ÓÒ±ß.
-     * @param resId  Ö¸¶¨µÄViewµÄ×ÊÔ´ID
+     * æè¿°ï¼šæŠŠæŒ‡å®šèµ„æºIDè¡¨ç¤ºçš„Viewå¡«åŠ åˆ°æ ‡é¢˜æ å³è¾¹.
+     * @param resId  æŒ‡å®šçš„Viewçš„èµ„æºID
      */
 	public void addRightView(int resId) {
 		rightLayout.setVisibility(View.VISIBLE);
@@ -389,15 +389,15 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-     * ÃèÊö£ºÇå³ı±êÌâÀ¸ÓÒ±ßµÄView.
+     * æè¿°ï¼šæ¸…é™¤æ ‡é¢˜æ å³è¾¹çš„View.
      */
 	public void clearRightView() {
 		rightLayout.removeAllViews();
 	}
 	
 	/**
-	 * ÃèÊö£ºÉèÖÃLogo°´Å¥µÄ·µ»ØÊÂ¼ş.
-	 * @param mOnClickListener  Ö¸¶¨µÄ·µ»ØÊÂ¼ş
+	 * æè¿°ï¼šè®¾ç½®LogoæŒ‰é’®çš„è¿”å›äº‹ä»¶.
+	 * @param mOnClickListener  æŒ‡å®šçš„è¿”å›äº‹ä»¶
 	 */
 	public void setLogoBackOnClickListener(View.OnClickListener mOnClickListener) {
 		 logoView.setOnClickListener(mOnClickListener);

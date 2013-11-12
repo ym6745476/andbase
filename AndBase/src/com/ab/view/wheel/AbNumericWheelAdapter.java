@@ -70,13 +70,13 @@ public class AbNumericWheelAdapter implements AbWheelAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param index the index
 	 * @return the item
 	 * @see com.ab.view.wheel.AbWheelAdapter#getItem(int)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:51
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
 	 * @version v1.0
 	 */
 	@Override
@@ -89,12 +89,12 @@ public class AbNumericWheelAdapter implements AbWheelAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @return the items count
 	 * @see com.ab.view.wheel.AbWheelAdapter#getItemsCount()
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:51
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
 	 * @version v1.0
 	 */
 	@Override
@@ -103,12 +103,12 @@ public class AbNumericWheelAdapter implements AbWheelAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @return the maximum length
 	 * @see com.ab.view.wheel.AbWheelAdapter#getMaximumLength()
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:51
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:51
 	 * @version v1.0
 	 */
 	@Override

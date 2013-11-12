@@ -19,27 +19,27 @@ import java.math.BigDecimal;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÊıÑ§´¦ÀíÀà.
+ * æè¿°ï¼šæ•°å­¦å¤„ç†ç±».
  *
  * @author zhaoqp
- * @date£º2013-1-18 ÉÏÎç10:14:44
+ * @dateï¼š2013-1-18 ä¸Šåˆ10:14:44
  * @version v1.0
  */
 public class AbMathUtil{
 
   /**
-   * ËÄÉáÎåÈë.
+   * å››èˆäº”å…¥.
    *
-   * @param number  Ô­Êı
-   * @param decimal ±£Áô¼¸Î»Ğ¡Êı
-   * @return ËÄÉáÎåÈëºóµÄÖµ
+   * @param number  åŸæ•°
+   * @param decimal ä¿ç•™å‡ ä½å°æ•°
+   * @return å››èˆäº”å…¥åçš„å€¼
    */
   public static BigDecimal round(double number, int decimal){
     return new BigDecimal(number).setScale(decimal, BigDecimal.ROUND_HALF_UP);
   }
   
   /**
-   * ÃèÊö£º×Ö½ÚÊı×é×ª»»³É16½øÖÆ´®.
+   * æè¿°ï¼šå­—èŠ‚æ•°ç»„è½¬æ¢æˆ16è¿›åˆ¶ä¸².
    *
    * @param b the b
    * @param length the length
@@ -61,7 +61,7 @@ public class AbMathUtil{
   } 
   
   /**
-	* ¶ş½øÖÆ×ªÎªÊ®Áù½øÖÆ
+	* äºŒè¿›åˆ¶è½¬ä¸ºåå…­è¿›åˆ¶
 	* @param int binary
     * @return char hex
 	*/
@@ -124,7 +124,7 @@ public class AbMathUtil{
 	
 	
 	/** 
-     * Ò»Î¬Êı×é×ªÎª¶şÎ¬Êı×é 
+     * ä¸€ç»´æ•°ç»„è½¬ä¸ºäºŒç»´æ•°ç»„ 
      *  
      * @param m 
      * @param width 
@@ -144,7 +144,7 @@ public class AbMathUtil{
 
 	
 	/** 
-     * ¶şÎ¬Êı×é×ªÎªÒ»Î¬Êı×é 
+     * äºŒç»´æ•°ç»„è½¬ä¸ºä¸€ç»´æ•°ç»„ 
      *  
      * @param m 
      * @return 
@@ -162,7 +162,7 @@ public class AbMathUtil{
     }  
 
     /**
-     * ÃèÊö£ºintÊı×é×ª»»ÎªdoubleÊı×é
+     * æè¿°ï¼šintæ•°ç»„è½¬æ¢ä¸ºdoubleæ•°ç»„
      * @param input
      * @return
      */
@@ -176,7 +176,7 @@ public class AbMathUtil{
     }  
     
     /**
-     * ÃèÊö£ºint¶şÎ¬Êı×é×ª»»Îªdouble¶şÎ¬Êı×é
+     * æè¿°ï¼šintäºŒç»´æ•°ç»„è½¬æ¢ä¸ºdoubleäºŒç»´æ•°ç»„
      * @param input
      * @return
      */
@@ -185,9 +185,9 @@ public class AbMathUtil{
         int width = input[0].length;  
         double[][] output = new double[height][width];  
         for (int i = 0; i < height; i++) {  
-            // ÁĞ   
+            // åˆ—   
             for (int j = 0; j < width; j++) {  
-                // ĞĞ   
+                // è¡Œ   
                 output[i][j] = Double.valueOf(String.valueOf(input[i][j]));  
             }  
         }  
@@ -195,9 +195,9 @@ public class AbMathUtil{
     }  
 
     /**
-	 * ¼ÆËãÊı×éµÄÆ½¾ùÖµ
-	 * @param pixels Êı×é
-	 * @return int Æ½¾ùÖµ
+	 * è®¡ç®—æ•°ç»„çš„å¹³å‡å€¼
+	 * @param pixels æ•°ç»„
+	 * @return int å¹³å‡å€¼
 	 */
     public static int average(int[] pixels) {
 		float m = 0;
@@ -209,9 +209,9 @@ public class AbMathUtil{
 	}
     
     /**
-	 * ¼ÆËãÊı×éµÄÆ½¾ùÖµ
-	 * @param pixels Êı×é
-	 * @return int Æ½¾ùÖµ
+	 * è®¡ç®—æ•°ç»„çš„å¹³å‡å€¼
+	 * @param pixels æ•°ç»„
+	 * @return int å¹³å‡å€¼
 	 */
     public static int average(double[] pixels) {
 		float m = 0;

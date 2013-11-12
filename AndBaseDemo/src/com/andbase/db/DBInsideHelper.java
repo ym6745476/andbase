@@ -10,19 +10,19 @@ import com.andbase.model.User;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºDBInsideHelper.java 
- * ÃèÊö£ºÊÖ»údata/dataÏÂÃæµÄÊı¾İ¿â
+ * åç§°ï¼šDBInsideHelper.java 
+ * æè¿°ï¼šæ‰‹æœºdata/dataä¸‹é¢çš„æ•°æ®åº“
  * @author zhaoqp
- * @date£º2013-7-31 ÏÂÎç3:50:18
+ * @dateï¼š2013-7-31 ä¸‹åˆ3:50:18
  * @version v1.0
  */
 public class DBInsideHelper extends AbDBHelper {
-	// Êı¾İ¿âÃû
+	// æ•°æ®åº“å
 	private static final String DBNAME = "andbasedemo.db";
     
-    // µ±Ç°Êı¾İ¿âµÄ°æ±¾
+    // å½“å‰æ•°æ®åº“çš„ç‰ˆæœ¬
 	private static final int DBVERSION = 1;
-	// Òª³õÊ¼»¯µÄ±í
+	// è¦åˆå§‹åŒ–çš„è¡¨
 	private static final Class<?>[] clazz = { User.class,LocalUser.class,Stock.class,ChatMsg.class};
 
 	public DBInsideHelper(Context context) {

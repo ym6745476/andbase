@@ -8,10 +8,10 @@ import com.andbase.demo.model.LocalUser;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºUserInsideDao.java 
- * ÃèÊö£º±¾µØÊı¾İ¿â ÔÚdataÏÂÃæ
+ * åç§°ï¼šUserInsideDao.java 
+ * æè¿°ï¼šæœ¬åœ°æ•°æ®åº“ åœ¨dataä¸‹é¢
  * @author zhaoqp
- * @date£º2013-7-31 ÏÂÎç4:12:36
+ * @dateï¼š2013-7-31 ä¸‹åˆ4:12:36
  * @version v1.0
  */
 public class UserInsideDao extends AbDBDaoImpl<LocalUser> {

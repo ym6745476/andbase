@@ -19,7 +19,7 @@ import android.graphics.Bitmap;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÍ¼Æ¬ÏÂÔØµÄ»Øµ÷½Ó¿Ú.
+ * æè¿°ï¼šå›¾ç‰‡ä¸‹è½½çš„å›è°ƒæ¥å£.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -28,10 +28,10 @@ import android.graphics.Bitmap;
 public interface AbImageDownloadCallback {
 	
 	/**
-	 * ÃèÊö£º¸üĞÂÊÓÍ¼.
+	 * æè¿°ï¼šæ›´æ–°è§†å›¾.
 	 *
-	 * @param bitmap ÏÂÔØ·µ»ØµÄBitmap
-	 * @param imageUrl Ô­»¥ÁªÍøÏÂÔØµØÖ·
+	 * @param bitmap ä¸‹è½½è¿”å›çš„Bitmap
+	 * @param imageUrl åŸäº’è”ç½‘ä¸‹è½½åœ°å€
 	 */
     public void update(Bitmap bitmap, String imageUrl); 
 

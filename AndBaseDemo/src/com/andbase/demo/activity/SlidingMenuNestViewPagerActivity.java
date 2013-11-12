@@ -11,10 +11,10 @@ import com.andbase.R;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºSlidingMenuNestViewPagerActivity.java 
- * ÃèÊö£ºSlidingMenu+ViewPager³åÍ»½â¾öµÄÑİÊ¾
+ * åç§°ï¼šSlidingMenuNestViewPagerActivity.java 
+ * æè¿°ï¼šSlidingMenu+ViewPagerå†²çªè§£å†³çš„æ¼”ç¤º
  * @author zhaoqp
- * @date£º2013-10-25 ÉÏÎç9:15:58
+ * @dateï¼š2013-10-25 ä¸Šåˆ9:15:58
  * @version v1.0
  */
 public class SlidingMenuNestViewPagerActivity extends AbActivity {
@@ -34,18 +34,18 @@ public class SlidingMenuNestViewPagerActivity extends AbActivity {
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
-        //Ö÷ÊÓÍ¼µÄFragmentÌí¼Ó
+        //ä¸»è§†å›¾çš„Fragmentæ·»åŠ 
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, new Fragment3())
 		.commit();
 
-		//SlidingMenuµÄÅäÖÃ
+		//SlidingMenuçš„é…ç½®
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
 		
-		//slidingmenuµÄÊÂ¼şÄ£Ê½£¬Èç¹ûÀïÃæÓĞ¿ÉÒÔ»¬¶¯µÄÇëÓÃTOUCHMODE_MARGIN
-		//¿É½â¾öÊÂ¼ş³åÍ»ÎÊÌâ
+		//slidingmenuçš„äº‹ä»¶æ¨¡å¼ï¼Œå¦‚æœé‡Œé¢æœ‰å¯ä»¥æ»‘åŠ¨çš„è¯·ç”¨TOUCHMODE_MARGIN
+		//å¯è§£å†³äº‹ä»¶å†²çªé—®é¢˜
 		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
 		
 		menu.setShadowWidthRes(R.dimen.shadow_width);
@@ -54,7 +54,7 @@ public class SlidingMenuNestViewPagerActivity extends AbActivity {
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
-		//menuÊÓÍ¼µÄFragmentÌí¼Ó
+		//menuè§†å›¾çš„Fragmentæ·»åŠ 
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()

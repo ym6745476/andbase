@@ -14,9 +14,9 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
- * Copyright (c) 2011 All rights reserved¡£
- * Ãû³Æ£ºPieChartActivity
- * ÃèÊö£º±ıÍ¼
+ * Copyright (c) 2011 All rights reservedã€‚
+ * åç§°ï¼šPieChartActivity
+ * æè¿°ï¼šé¥¼å›¾
  * @author zhaoqp
  * @date 2011-12-13
  * @version
@@ -40,44 +40,44 @@ public class PieChartActivity extends AbActivity {
 	    
         application = (MyApplication)abApplication;
         
-    	//ÒªÏÔÊ¾Í¼ĞÎµÄView
+    	//è¦æ˜¾ç¤ºå›¾å½¢çš„View
 		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.chart01);
 		
-		//Ã¿¸ö¿éµÄÑÕÉ«
+		//æ¯ä¸ªå—çš„é¢œè‰²
 		int[] colors = new int[] { Color.BLUE, Color.GREEN, Color.MAGENTA, Color.YELLOW, Color.CYAN };
-		//äÖÈ¾Æ÷
+		//æ¸²æŸ“å™¨
 		DefaultRenderer renderer = new DefaultRenderer();
-		//Í¼±í±êÌâ
-	    renderer.setChartTitle("ÎÒÊÇÍ¼±íµÄ±êÌâ");
-	    //Í¼ĞÎ±êÌâÎÄ×Ö´óĞ¡
+		//å›¾è¡¨æ ‡é¢˜
+	    renderer.setChartTitle("æˆ‘æ˜¯å›¾è¡¨çš„æ ‡é¢˜");
+	    //å›¾å½¢æ ‡é¢˜æ–‡å­—å¤§å°
   		renderer.setChartTitleTextSize(25);
-  		//ÖáÏßÉÏ±êÇ©ÎÄ×Ö´óĞ¡
+  		//è½´çº¿ä¸Šæ ‡ç­¾æ–‡å­—å¤§å°
   		renderer.setLabelsTextSize(15);
-  		//ËµÃ÷ÎÄ×Ö´óĞ¡
+  		//è¯´æ˜æ–‡å­—å¤§å°
   		renderer.setLegendTextSize(15);
-  	    //ÉèÖÃÍ¼±íÉÏ±êÌâÓëXÖáÓëYÖáµÄËµÃ÷ÎÄ×ÖÑÕÉ«
+  	    //è®¾ç½®å›¾è¡¨ä¸Šæ ‡é¢˜ä¸Xè½´ä¸Yè½´çš„è¯´æ˜æ–‡å­—é¢œè‰²
 	    renderer.setLabelsColor(Color.GRAY);
-		//ËµÃ÷ÎÄ×Ö´óĞ¡
+		//è¯´æ˜æ–‡å­—å¤§å°
 		renderer.setLegendTextSize(15);
 		for (int color : colors) {
-			  //´´½¨SimpleSeriesRenderer¶ÔÏó
+			  //åˆ›å»ºSimpleSeriesRendererå¯¹è±¡
 		      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
 		      r.setColor(color);
 		      renderer.addSeriesRenderer(r);
 		}
-		//´´½¨Êı¾İÌî³äÆ÷
-		CategorySeries series = new CategorySeries("Ö§³öÇé¿ö");
-		series.add("×¡·¿", 28);
-		series.add("Ê³Îï", 25);
-		series.add("Ë®µç", 2);
-		series.add("ÓéÀÖ", 20);
-		series.add("·ş×°", 25);
+		//åˆ›å»ºæ•°æ®å¡«å……å™¨
+		CategorySeries series = new CategorySeries("æ”¯å‡ºæƒ…å†µ");
+		series.add("ä½æˆ¿", 28);
+		series.add("é£Ÿç‰©", 25);
+		series.add("æ°´ç”µ", 2);
+		series.add("å¨±ä¹", 20);
+		series.add("æœè£…", 25);
 		
-		//ÉèÖÃÍ¼±íµÄ±³¾°ÑÕÉ«
+		//è®¾ç½®å›¾è¡¨çš„èƒŒæ™¯é¢œè‰²
 	    renderer.setApplyBackgroundColor(true);
 	    renderer.setBackgroundColor(Color.rgb(222, 222, 200));
 	    //renderer.setMargins(new int[]{5,5,5,5});
-		//»ñÈ¡Í¼±íView
+		//è·å–å›¾è¡¨View
 	    View chart = ChartFactory.getPieChartView(this,series,renderer);
         linearLayout.addView(chart);
 		

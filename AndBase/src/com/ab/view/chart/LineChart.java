@@ -47,7 +47,7 @@ public class LineChart extends XYChart {
    */
   public LineChart(XYMultipleSeriesDataset dataset, XYMultipleSeriesRenderer renderer) {
     super(dataset, renderer);
-    Log.d("LineChart", "µ÷ÓÃ¸¸ÀàXYChartµÄXYMultipleSeriesDataset ÉèÖÃ1");
+    Log.d("LineChart", "è°ƒç”¨çˆ¶ç±»XYChartçš„XYMultipleSeriesDataset è®¾ç½®1");
     pointsChart = new ScatterChart(dataset, renderer);
   }
 
@@ -69,7 +69,7 @@ public class LineChart extends XYChart {
    * @param canvas the canvas to paint to
    * @param paint the paint to be used for drawing
    * @param points the array of points to be used for drawing the series
-   * @param colors Ã¿¸öµãµÄÑÕÉ«
+   * @param colors æ¯ä¸ªç‚¹çš„é¢œè‰²
    * @param seriesRenderer the series renderer
    * @param yAxisValue the minimum value of the y axis
    * @param seriesIndex the index of the series currently being drawn
@@ -106,7 +106,7 @@ public class LineChart extends XYChart {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param points the points
    * @param values the values
@@ -116,7 +116,7 @@ public class LineChart extends XYChart {
    * @return the clickable area[]
    * @see com.ab.view.chart.XYChart#clickableAreasForPoints(float[], double[], float, int, int)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:47
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:47
    * @version v1.0
    */
   @Override

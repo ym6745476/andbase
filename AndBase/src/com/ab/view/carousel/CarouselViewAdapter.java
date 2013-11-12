@@ -36,10 +36,10 @@ import com.ab.util.AbViewUtil;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºCarouselViewAdapter.java 
- * ÃèÊö£º×Ô¶¨ÒåViewÊÊÅäµÄCarousel
+ * åç§°ï¼šCarouselViewAdapter.java 
+ * æè¿°ï¼šè‡ªå®šä¹‰Viewé€‚é…çš„Carousel
  * @author zhaoqp
- * @date£º2013-8-22 ÏÂÎç4:05:09
+ * @dateï¼š2013-8-22 ä¸‹åˆ4:05:09
  * @version v1.0
  */
 public class CarouselViewAdapter extends BaseAdapter {
@@ -61,7 +61,7 @@ public class CarouselViewAdapter extends BaseAdapter {
 	 *
 	 * @param c the c
 	 * @param views the views
-	 * @param reflected ·´Éä¾µÃæĞ§¹û
+	 * @param reflected åå°„é•œé¢æ•ˆæœ
 	 */
 	public CarouselViewAdapter(Context c,List<View> views,boolean reflected) {
 		mContext = c;
@@ -71,10 +71,10 @@ public class CarouselViewAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getCount()
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public int getCount() {
@@ -86,10 +86,10 @@ public class CarouselViewAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getItem(int)
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public Object getItem(int position) {
@@ -97,10 +97,10 @@ public class CarouselViewAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getItemId(int)
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public long getItemId(int position) {
@@ -108,10 +108,10 @@ public class CarouselViewAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getView(int, android.view.View, android.view.ViewGroup)
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -143,7 +143,7 @@ public class CarouselViewAdapter extends BaseAdapter {
 					
 					@Override
 					public void onClick(View arg0) {
-						//((AbActivity)mContext).showToast("µã»÷ÁË:"+index);
+						//((AbActivity)mContext).showToast("ç‚¹å‡»äº†:"+index);
 					}
 				});
 				
@@ -156,7 +156,7 @@ public class CarouselViewAdapter extends BaseAdapter {
 					
 					@Override
 					public void onClick(View arg0) {
-						//((AbActivity)mContext).showToast("µã»÷ÁË:"+index);
+						//((AbActivity)mContext).showToast("ç‚¹å‡»äº†:"+index);
 					}
 				});
 			}

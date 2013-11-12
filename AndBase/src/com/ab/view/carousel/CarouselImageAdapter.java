@@ -30,10 +30,10 @@ import com.ab.util.AbImageUtil;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºCarouselImageAdapter.java 
- * ÃèÊö£ºÖ»ÓĞÍ¼Æ¬ÊÊÅäµÄCarousel
+ * åç§°ï¼šCarouselImageAdapter.java 
+ * æè¿°ï¼šåªæœ‰å›¾ç‰‡é€‚é…çš„Carousel
  * @author zhaoqp
- * @date£º2013-8-22 ÏÂÎç4:04:42
+ * @dateï¼š2013-8-22 ä¸‹åˆ4:04:42
  * @version v1.0
  */
 public class CarouselImageAdapter extends BaseAdapter {
@@ -55,7 +55,7 @@ public class CarouselImageAdapter extends BaseAdapter {
 	 *
 	 * @param c the c
 	 * @param drawables the drawables
-	 * @param reflected ·´Éä¾µÃæĞ§¹û
+	 * @param reflected åå°„é•œé¢æ•ˆæœ
 	 */
 	public CarouselImageAdapter(Context c,List<Drawable> drawables,boolean reflected) {
 		mContext = c;
@@ -65,10 +65,10 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getCount()
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public int getCount() {
@@ -80,10 +80,10 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getItem(int)
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public Object getItem(int position) {
@@ -91,10 +91,10 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getItemId(int)
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public long getItemId(int position) {
@@ -102,10 +102,10 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO
+	 * æè¿°ï¼šTODO
 	 * @see android.widget.Adapter#getView(int, android.view.View, android.view.ViewGroup)
 	 * @author: zhaoqp
-	 * @date£º2013-8-22 ÏÂÎç4:07:39
+	 * @dateï¼š2013-8-22 ä¸‹åˆ4:07:39
 	 * @version v1.0
 	 */
 	public View getView(int position, View convertView, ViewGroup parent) {

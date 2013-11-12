@@ -20,8 +20,8 @@ import com.andbase.demo.model.ImageInfo;
 import com.andbase.global.Constant;
 /**
  * Copyright (c) 2011 All rights reserved
- * Ãû³Æ£ºMyListViewAdapter
- * ÃèÊö£ºÔÚAdapterÖĞÊÍ·ÅBitmap
+ * åç§°ï¼šMyListViewAdapter
+ * æè¿°ï¼šåœ¨Adapterä¸­é‡Šæ”¾Bitmap
  * @author zhaoqp
  * @date 2011-12-10
  * @version
@@ -32,24 +32,24 @@ public class MultiColumnImageListAdapter extends BaseAdapter{
 	private static final boolean D = Constant.DEBUG;
   
 	private Context mContext;
-    //ÁĞ±íÕ¹ÏÖµÄÊı¾İ
+    //åˆ—è¡¨å±•ç°çš„æ•°æ®
     private LinkedList<ImageInfo> mImageList;
-    //Í¼Æ¬ÏÂÔØÆ÷
+    //å›¾ç‰‡ä¸‹è½½å™¨
     private AbImageDownloader mAbImageDownloader = null;
     
     
    /**
-    * ¹¹Ôì·½·¨
+    * æ„é€ æ–¹æ³•
     * @param context
-    * @param data ÁĞ±íÕ¹ÏÖµÄÊı¾İ
-    * @param resource µ¥ĞĞµÄ²¼¾Ö
-    * @param from MapÖĞµÄkey
-    * @param to viewµÄid
+    * @param data åˆ—è¡¨å±•ç°çš„æ•°æ®
+    * @param resource å•è¡Œçš„å¸ƒå±€
+    * @param from Mapä¸­çš„key
+    * @param to viewçš„id
     */
     public MultiColumnImageListAdapter(Context context, LinkedList<ImageInfo> imageList){
     	this.mContext = context;
     	this.mImageList = imageList;
-    	//Í¼Æ¬ÏÂÔØÆ÷
+    	//å›¾ç‰‡ä¸‹è½½å™¨
         mAbImageDownloader = new AbImageDownloader(mContext);
         mAbImageDownloader.setType(AbConstant.SCALEIMG);
 	    //mAbImageDownloader.setAnimation(true);
@@ -74,12 +74,12 @@ public class MultiColumnImageListAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent){
     	  final ViewHolder holder;
           if(convertView == null){
-	           //Ê¹ÓÃ×Ô¶¨ÒåµÄlist_items×÷ÎªLayout
+	           //ä½¿ç”¨è‡ªå®šä¹‰çš„list_itemsä½œä¸ºLayout
         	   LayoutInflater layoutInflator = LayoutInflater.from(parent.getContext());
 	           convertView = layoutInflator.inflate(R.layout.multi_list_items, null);
-	           //¼õÉÙfindViewµÄ´ÎÊı
+	           //å‡å°‘findViewçš„æ¬¡æ•°
 			   holder = new ViewHolder();
-	           //³õÊ¼»¯²¼¾ÖÖĞµÄÔªËØ
+	           //åˆå§‹åŒ–å¸ƒå±€ä¸­çš„å…ƒç´ 
 			   holder.itemsIcon = ((AbScaleImageView) convertView.findViewById(R.id.itemsIcon)) ;
 			   convertView.setTag(holder);
 			   
@@ -88,16 +88,16 @@ public class MultiColumnImageListAdapter extends BaseAdapter{
         	   holder = (ViewHolder) convertView.getTag();
           }
           
-          //»ñÈ¡¸ÃĞĞµÄÊı¾İ
+          //è·å–è¯¥è¡Œçš„æ•°æ®
           final ImageInfo  mImageInfo = mImageList.get(position);
           holder.itemsIcon.setImageWidth(mImageInfo.getWidth());
 		  holder.itemsIcon.setImageHeight(mImageInfo.getHeight());
-		  //Í¼Æ¬ÏÂÔØµÄ×î´ó¿í¸ß
+		  //å›¾ç‰‡ä¸‹è½½çš„æœ€å¤§å®½é«˜
 		  mAbImageDownloader.setWidth(mImageInfo.getWidth());
 		  mAbImageDownloader.setHeight(mImageInfo.getHeight());
 		  String url = mImageInfo.getUrl();
 		  
-		  //ÉèÖÃ¼ÓÔØÖĞµÄView
+		  //è®¾ç½®åŠ è½½ä¸­çš„View
           mAbImageDownloader.setLoadingView(convertView.findViewById(R.id.progressBar));
           mAbImageDownloader.display(holder.itemsIcon,url);
           
@@ -106,7 +106,7 @@ public class MultiColumnImageListAdapter extends BaseAdapter{
     
     /**
      * 
-     * ÃèÊö£ºÍùµ×²¿Ìí¼Ó
+     * æè¿°ï¼šå¾€åº•éƒ¨æ·»åŠ 
      * @param datas
      * @throws 
      */
@@ -116,7 +116,7 @@ public class MultiColumnImageListAdapter extends BaseAdapter{
 
     /**
      * 
-     * ÃèÊö£ºÍù¶¥²¿Ìí¼Ó
+     * æè¿°ï¼šå¾€é¡¶éƒ¨æ·»åŠ 
      * @param datas
      * @throws 
      */
@@ -127,7 +127,7 @@ public class MultiColumnImageListAdapter extends BaseAdapter{
 	}
     
     /**
-	 * ViewÔªËØ
+	 * Viewå…ƒç´ 
 	 */
 	static class ViewHolder {
 		AbScaleImageView itemsIcon;

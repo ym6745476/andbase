@@ -9,7 +9,7 @@ public class FDCT implements DCT {
 				blk[i][j] = ablk[i][j];
 			}
 		}
-		// 对行变换
+		// 瀵硅鍙樻崲
 		for (int i = 0; i <= 7; i++) {
 			double S07, S16, S25, S34, S0734, S1625;
 			double D07, D16, D25, D34, D0734, D1625;
@@ -34,7 +34,7 @@ public class FDCT implements DCT {
 			blk[i][6] = 0.5 * (C6 * D0734 - C2 * D1625);
 			blk[i][7] = 0.5 * (C7 * D07 - C5 * D16 + C3 * D25 - C1 * D34);
 		}
-		// 对列变换
+		// 瀵瑰垪鍙樻崲
 		for (int j = 0; j <= 7; j++) {
 			double S07, S16, S25, S34, S0734, S1625;
 			double D07, D16, D25, D34, D0734, D1625;

@@ -12,10 +12,10 @@ import android.widget.TextView;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºCarouselItemView.java 
- * ÃèÊö£ºĞı×ªÄ¾ÂíµÄÈÎÒâView
+ * åç§°ï¼šCarouselItemView.java 
+ * æè¿°ï¼šæ—‹è½¬æœ¨é©¬çš„ä»»æ„View
  * @author zhaoqp
- * @date£º2013-8-23 ÏÂÎç2:02:31
+ * @dateï¼š2013-8-23 ä¸‹åˆ2:02:31
  * @version v1.0
  */
 public class CarouselItemView extends LinearLayout 

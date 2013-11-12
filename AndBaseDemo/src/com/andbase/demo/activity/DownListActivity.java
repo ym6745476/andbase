@@ -52,11 +52,11 @@ public class DownListActivity extends AbActivity{
         
         String[] mDownFileGroupTitle = new String[]{this.getResources().getString(R.string.download_complete_title),this.getResources().getString(R.string.undownLoad_title)};
         
-        //´´½¨Ò»¸öBaseExpandableListAdapter¶ÔÏó
+        //åˆ›å»ºä¸€ä¸ªBaseExpandableListAdapterå¯¹è±¡
       	mExpandableListAdapter = new MyExpandableListAdapter(this,mGroupDownFileList,mDownFileGroupTitle);
       	ExpandableListView mExpandListView = (ExpandableListView)findViewById(R.id.mExpandableListView);
       	mExpandListView.setAdapter(mExpandableListAdapter);
-        //Indicator¿¿ÓÒ
+        //Indicatoré å³
         int width = getWindowManager().getDefaultDisplay().getWidth();
         mExpandListView.setIndicatorBounds(width-40, width-25);
         mExpandListView.setChildIndicatorBounds(5, 53);
@@ -67,7 +67,7 @@ public class DownListActivity extends AbActivity{
 	
 	
 	/**
-	 * ³õÊ¼»¯ËùÓĞÎÄ¼ş
+	 * åˆå§‹åŒ–æ‰€æœ‰æ–‡ä»¶
 	 */
 	private void initDownFileList() {
 		
@@ -75,8 +75,8 @@ public class DownListActivity extends AbActivity{
 		List<DownFile> mDownFileList = new ArrayList<DownFile>();
 		
 		DownFile mDownFile1 = new DownFile();
-		mDownFile1.setName("·ßÅ­µÄĞ¡Äñ");
-		mDownFile1.setDescription("ÒÔĞÇÇò´óÕ½µçÓ°Ç°´«Îª±³¾°");
+		mDownFile1.setName("æ„¤æ€’çš„å°é¸Ÿ");
+		mDownFile1.setDescription("ä»¥æ˜Ÿçƒå¤§æˆ˜ç”µå½±å‰ä¼ ä¸ºèƒŒæ™¯");
 		mDownFile1.setPakageName("");
 		mDownFile1.setState(Constant.undownLoad);
 		mDownFile1.setIcon(String.valueOf(R.drawable.image_bg));
@@ -85,9 +85,9 @@ public class DownListActivity extends AbActivity{
 		mDownFileList.add(mDownFile1); 
 		
 		DownFile mDownFile2 = new DownFile();
-		mDownFile2.setName("½Ú×à´óÊ¦");
+		mDownFile2.setName("èŠ‚å¥å¤§å¸ˆ");
 		mDownFile2.setPakageName("");
-		mDownFile2.setDescription("Ò»¿îÀÏÉÙ½ÔÒËµÄÂÌÉ«ÒôÀÖÓÎÏ·");
+		mDownFile2.setDescription("ä¸€æ¬¾è€å°‘çš†å®œçš„ç»¿è‰²éŸ³ä¹æ¸¸æˆ");
 		mDownFile2.setState(Constant.undownLoad);
 		mDownFile2.setIcon(String.valueOf(R.drawable.image_bg));
 		mDownFile2.setDownUrl("http://down.mumayi.com/292416/mbaidu");
@@ -95,23 +95,23 @@ public class DownListActivity extends AbActivity{
 		mDownFileList.add(mDownFile2); 
 		
 		DownFile mDownFile3 = new DownFile();
-		mDownFile3.setName("ÌìÌì¿áÅÜ");
+		mDownFile3.setName("å¤©å¤©é…·è·‘");
 		mDownFile3.setPakageName("");
-		mDownFile3.setDescription("ÌÚÑ¶ÒÆ¶¯ÓÎÏ·Æ½Ì¨Ê×Åú²úÆ·");
+		mDownFile3.setDescription("è…¾è®¯ç§»åŠ¨æ¸¸æˆå¹³å°é¦–æ‰¹äº§å“");
 		mDownFile3.setState(Constant.undownLoad);
 		mDownFile3.setIcon(String.valueOf(R.drawable.image_bg));
 		mDownFile3.setDownUrl("http://down.mumayi.com/407098/mbaidu");
 		mDownFile3.setSuffix(".apk");
 		mDownFileList.add(mDownFile3); 
 		
-		//²âÊÔ
+		//æµ‹è¯•
 		//mDownFileDao.delete("http://down.apk.hiapk.com/down?aid=1832508&em=13");
 		//mDownFileDao.delete("http://down.mumayi.com/292416/mbaidu");
 		//mDownFileDao.delete("http://down.mumayi.com/407098/mbaidu");
 		
-		//³õÊ¼»¯ÎÄ¼şÒÑ¾­ÏÂÔØµÄ³¤¶È£¬¼ÆËãÒÑÏÂÔØµÄ½ø¶È
+		//åˆå§‹åŒ–æ–‡ä»¶å·²ç»ä¸‹è½½çš„é•¿åº¦ï¼Œè®¡ç®—å·²ä¸‹è½½çš„è¿›åº¦
 		for(DownFile mDownFile:mDownFileList){
-			  //±¾µØÊı¾İ
+			  //æœ¬åœ°æ•°æ®
 			  DownFile mDownFileT = mDownFileDao.getDownFile(mDownFile.getDownUrl());
 	          if(mDownFileT != null){
 	        	  mDownFile = mDownFileT;
@@ -120,7 +120,7 @@ public class DownListActivity extends AbActivity{
 	    	    	  mDownFileList1.add(mDownFile);
 	    	    	  mExpandableListAdapter.notifyDataSetChanged();
 				  }else{
-					  //ÏÔÊ¾ÎªÔİÍ£×´Ì¬
+					  //æ˜¾ç¤ºä¸ºæš‚åœçŠ¶æ€
 		        	  mDownFile.setState(Constant.downLoadPause);
 	        	      mDownFileList2.add(mDownFile);
 	        	      mExpandableListAdapter.notifyDataSetChanged();
@@ -138,7 +138,7 @@ public class DownListActivity extends AbActivity{
 	public void finish() {
 		super.finish();
 		
-		//ÊÍ·ÅËùÓĞµÄÏÂÔØÏß³Ì
+		//é‡Šæ”¾æ‰€æœ‰çš„ä¸‹è½½çº¿ç¨‹
 		mExpandableListAdapter.releaseThread();
 
 		

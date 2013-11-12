@@ -35,14 +35,14 @@ public class SlidingTabActivity extends AbActivity {
 
 		mAbSlidingTabView = (AbSlidingTabView) findViewById(R.id.mAbSlidingTabView);
 		
-		//Èç¹ûÀïÃæµÄÒ³ÃæÁĞ±í²»ÄÜÏÂÔØÔ­Òò£º
-		//FragmentÀïÃæÓÃµÄAbHttpQueue,ÓÉÓÚÓĞ¶à¸ötab£¬Ë³ĞòÏÂÔØÓĞÑÓ³Ù£¬»¹Ã»ÏÂÔØºÃ¾Í±»»º´æÁË¡£¸Ä³ÉÓÃAbHttpPool£¬¾ÍokÁË¡£
-		//»òÕßsetOffscreenPageLimit(0)
+		//å¦‚æœé‡Œé¢çš„é¡µé¢åˆ—è¡¨ä¸èƒ½ä¸‹è½½åŸå› ï¼š
+		//Fragmenté‡Œé¢ç”¨çš„AbHttpQueue,ç”±äºæœ‰å¤šä¸ªtabï¼Œé¡ºåºä¸‹è½½æœ‰å»¶è¿Ÿï¼Œè¿˜æ²¡ä¸‹è½½å¥½å°±è¢«ç¼“å­˜äº†ã€‚æ”¹æˆç”¨AbHttpPoolï¼Œå°±okäº†ã€‚
+		//æˆ–è€…setOffscreenPageLimit(0)
 		
-		//»º´æÊıÁ¿
+		//ç¼“å­˜æ•°é‡
 		mAbSlidingTabView.getViewPager().setOffscreenPageLimit(5);
 		
-		//½ûÖ¹»¬¶¯
+		//ç¦æ­¢æ»‘åŠ¨
 		/*mAbSlidingTabView.getViewPager().setOnTouchListener(new OnTouchListener(){
 
 			@Override
@@ -65,19 +65,19 @@ public class SlidingTabActivity extends AbActivity {
 		mFragments.add(page4);
 		
 		List<String> tabTexts = new ArrayList<String>();
-		tabTexts.add("µÚÒ»¸ö");
-		tabTexts.add("µÚ¶ş¸ö");
-		tabTexts.add("µÚÈı¸ö");
-		tabTexts.add("µÚËÄ¸ö");
+		tabTexts.add("ç¬¬ä¸€ä¸ª");
+		tabTexts.add("ç¬¬äºŒä¸ª");
+		tabTexts.add("ç¬¬ä¸‰ä¸ª");
+		tabTexts.add("ç¬¬å››ä¸ª");
 		
 		mAbSlidingTabView.setTabColor(Color.BLACK);
 		mAbSlidingTabView.setTabSelectColor(Color.rgb(86, 186, 70));
 		
-		//ÑİÊ¾Ôö¼ÓÒ»×é
+		//æ¼”ç¤ºå¢åŠ ä¸€ç»„
 		mAbSlidingTabView.addItemViews(tabTexts, mFragments);
 		
-		//ÑİÊ¾Ôö¼ÓÒ»¸ö
-		mAbSlidingTabView.addItemView("µÚÎå¸ö", page5);
+		//æ¼”ç¤ºå¢åŠ ä¸€ä¸ª
+		mAbSlidingTabView.addItemView("ç¬¬äº”ä¸ª", page5);
 		
 		mAbSlidingTabView.setTabLayoutBackground(R.drawable.slide_top);
 		

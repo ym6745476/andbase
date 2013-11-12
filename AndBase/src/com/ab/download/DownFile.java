@@ -18,45 +18,45 @@ package com.ab.download;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÏÂÔØÎÄ¼ş.
+ * æè¿°ï¼šä¸‹è½½æ–‡ä»¶.
  *
  * @author zhaoqp
- * @date£º2012-6-25 ÏÂÎç4:20:55
+ * @dateï¼š2012-6-25 ä¸‹åˆ4:20:55
  * @version v1.0
  */
 public class DownFile {
 	
-	/** Î¨Ò»±êÊ¶. */
+	/** å”¯ä¸€æ ‡è¯†. */
 	private int _ID;
 	
-	/** Í¼±ê. */
+	/** å›¾æ ‡. */
 	private String icon;
 	
-	/** ÎÄ¼şÃû³Æ. */
+	/** æ–‡ä»¶åç§°. */
 	private String name;
 	
-	/** ÎÄ¼ş¼ò½é. */
+	/** æ–‡ä»¶ç®€ä»‹. */
 	private String description;
 	
-	/** Èç¹ûÊÇapkÎÄ¼ş±íÊ¾°üÃû. */
+	/** å¦‚æœæ˜¯apkæ–‡ä»¶è¡¨ç¤ºåŒ…å. */
 	private String pakageName;
 	
-	/** 1±íÊ¾ÒÑÏÂÔØÍê³É 0±íÊ¾Î´¿ªÊ¼ÏÂÔØ 2±íÊ¾ÒÑ¿ªÊ¼ÏÂÔØ. */
+	/** 1è¡¨ç¤ºå·²ä¸‹è½½å®Œæˆ 0è¡¨ç¤ºæœªå¼€å§‹ä¸‹è½½ 2è¡¨ç¤ºå·²å¼€å§‹ä¸‹è½½. */
 	private int state;
 	
-	/** ÎÄ¼şÏÂÔØÂ·¾¶. */
+	/** æ–‡ä»¶ä¸‹è½½è·¯å¾„. */
 	private String downUrl;
 	
-	/** ÎÄ¼ş±£´æÂ·¾¶. */
+	/** æ–‡ä»¶ä¿å­˜è·¯å¾„. */
 	private String downPath;
 	
-	/** ÎÄ¼şµ±Ç°ÏÂÔØ´óĞ¡. */
+	/** æ–‡ä»¶å½“å‰ä¸‹è½½å¤§å°. */
 	private int downLength;
 	
-	/** ÎÄ¼ş×Ü´óĞ¡. */
+	/** æ–‡ä»¶æ€»å¤§å°. */
 	private int totalLength;
 	
-	/** ÎÄ¼şÀàĞÍºó×º.tmp. */
+	/** æ–‡ä»¶ç±»å‹åç¼€.tmp. */
 	private String suffix;
 
 	/**

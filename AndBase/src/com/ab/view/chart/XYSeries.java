@@ -31,10 +31,10 @@ public class XYSeries implements Serializable {
   /** A map to contain values for X and Y axes and index for each bundle. */
   private final IndexXYMap<Double, Double> mXY = new IndexXYMap<Double, Double>();
   
-  /** Ã¿¸öÊı¾İµãµÄÑÕÉ«Öµ. */
+  /** æ¯ä¸ªæ•°æ®ç‚¹çš„é¢œè‰²å€¼. */
   private final IndexXYMap<Double, Integer> mXC = new IndexXYMap<Double, Integer>();
   
-  /** Ã¿¸öÊı¾İµãµÄ¼òÒª ËµÃ÷. */
+  /** æ¯ä¸ªæ•°æ®ç‚¹çš„ç®€è¦ è¯´æ˜. */
   private final IndexXYMap<Double, String> mXE = new IndexXYMap<Double, String>();
   
   
@@ -151,7 +151,7 @@ public class XYSeries implements Serializable {
   }
   
   /**
-   * ÃèÊö£ºÌí¼Ó×ø±ê£¬ÑÕÉ«£¬ÃèÊö.
+   * æè¿°ï¼šæ·»åŠ åæ ‡ï¼Œé¢œè‰²ï¼Œæè¿°.
    *
    * @param x the x
    * @param y the y
@@ -300,7 +300,7 @@ public class XYSeries implements Serializable {
   }
 
   /**
-   * ÃèÊö£º»ñÈ¡ÑÕÉ«Öµ.
+   * æè¿°ï¼šè·å–é¢œè‰²å€¼.
    *
    * @return the m xc
    */
@@ -309,7 +309,7 @@ public class XYSeries implements Serializable {
   }
   
   /**
-   * ÃèÊö£º»ñÈ¡Õâ¸öµãµÄÑÕÉ«Öµ.
+   * æè¿°ï¼šè·å–è¿™ä¸ªç‚¹çš„é¢œè‰²å€¼.
    *
    * @param key the key
    * @return the m xc value
@@ -323,7 +323,7 @@ public class XYSeries implements Serializable {
   }
   
   /**
-   * ÃèÊö£º»ñÈ¡Õâ¸öµãµÄËµÃ÷.
+   * æè¿°ï¼šè·å–è¿™ä¸ªç‚¹çš„è¯´æ˜.
    *
    * @return the m xe
    */
@@ -332,7 +332,7 @@ public class XYSeries implements Serializable {
   }
   
   /**
-   * ÃèÊö£º»ñÈ¡ÖµµÄËµÃ÷.
+   * æè¿°ï¼šè·å–å€¼çš„è¯´æ˜.
    *
    * @param key the key
    * @return the m xe value

@@ -38,7 +38,7 @@ import com.ab.util.AbFileUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * ²Ã¼ô´¦Àí.
+ * è£å‰ªå¤„ç†.
  */
 public class CropImage{
 	
@@ -78,7 +78,7 @@ public class CropImage{
 		mImageView = imageView;
 		mImageView.setCropImage(this);
 		mHandler = handler;
-		//³õÊ¼»¯Í¼Æ¬±£´æÂ·¾¶
+		//åˆå§‹åŒ–å›¾ç‰‡ä¿å­˜è·¯å¾„
 		FILE_LOCAL = new File(AbFileUtil.getDefaultImageDownPathDir());
 		if(!FILE_LOCAL.exists()){
 			FILE_LOCAL.mkdirs();
@@ -86,7 +86,7 @@ public class CropImage{
 	}
 	
 	/**
-	 * Í¼Æ¬²Ã¼ô.
+	 * å›¾ç‰‡è£å‰ª.
 	 *
 	 * @param bm the bm
 	 */
@@ -172,7 +172,7 @@ public class CropImage{
     }
 
 	/**
-	 * ²Ã¼ô²¢±£´æ.
+	 * è£å‰ªå¹¶ä¿å­˜.
 	 *
 	 * @return the bitmap
 	 */
@@ -183,7 +183,7 @@ public class CropImage{
 	}
 	
 	/**
-	 * ²Ã¼ô²¢±£´æ.
+	 * è£å‰ªå¹¶ä¿å­˜.
 	 *
 	 * @param bm the bm
 	 * @return the bitmap
@@ -195,7 +195,7 @@ public class CropImage{
 	}
 	
 	/**
-	 * È¡Ïû²Ã¼ô.
+	 * å–æ¶ˆè£å‰ª.
 	 */
 	public void cropCancel(){
 		mImageView.mHighlightViews.clear();
@@ -235,7 +235,7 @@ public class CropImage{
      * @return the string
      */
     public String saveToLocal(Bitmap bitmap){
-    	//ĞèÒª²Ã¼ôºó±£´æÎªĞÂÍ¼Æ¬
+    	//éœ€è¦è£å‰ªåä¿å­˜ä¸ºæ–°å›¾ç‰‡
         String mFileName = System.currentTimeMillis() + ".jpg";
     	String path = FILE_LOCAL+File.separator+mFileName;
     	try{
@@ -397,11 +397,11 @@ public class CropImage{
     	}
     	
 	    /**
-    	 * ÃèÊö£ºTODO.
+    	 * æè¿°ï¼šTODO.
     	 *
     	 * @see java.lang.Runnable#run()
     	 * @author: zhaoqp
-    	 * @date£º2013-6-17 ÉÏÎç9:04:47
+    	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:47
     	 * @version v1.0
     	 */
 	    public void run(){

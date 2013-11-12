@@ -24,13 +24,13 @@ public class WelcomeActivity extends AbActivity {
 	private Button mWhoIKnow;
 	private Button mLogin;
 	/**
-	 * Èı¸öÇĞ»»µÄ¶¯»­
+	 * ä¸‰ä¸ªåˆ‡æ¢çš„åŠ¨ç”»
 	 */
 	private Animation mFadeIn;
 	private Animation mFadeInScale;
 	private Animation mFadeOut;
 	/**
-	 * Èı¸öÍ¼Æ¬
+	 * ä¸‰ä¸ªå›¾ç‰‡
 	 */
 	private Drawable mPicture_1;
 	private Drawable mPicture_2;
@@ -58,12 +58,12 @@ public class WelcomeActivity extends AbActivity {
     }
     
     /**
-	 * ¼àÌıÊÂ¼ş
+	 * ç›‘å¬äº‹ä»¶
 	 */
 	private void setListener() {
 		/**
-		 * ¶¯»­ÇĞ»»Ô­Àí:¿ªÊ¼Ê±ÊÇÓÃµÚÒ»¸ö½¥ÏÖ¶¯»­,µ±µÚÒ»¸ö¶¯»­½áÊøÊ±¿ªÊ¼µÚ¶ş¸ö·Å´ó¶¯»­,µ±µÚ¶ş¸ö¶¯»­½áÊøÊ±µ÷ÓÃµÚÈı¸ö½¥Òş¶¯»­,
-		 * µÚÈı¸ö¶¯»­½áÊøÊ±ĞŞ¸ÄÏÔÊ¾µÄÄÚÈİ²¢ÇÒÖØĞÂµ÷ÓÃµÚÒ»¸ö¶¯»­,´Ó¶ø´ïµ½Ñ­»·Ğ§¹û
+		 * åŠ¨ç”»åˆ‡æ¢åŸç†:å¼€å§‹æ—¶æ˜¯ç”¨ç¬¬ä¸€ä¸ªæ¸ç°åŠ¨ç”»,å½“ç¬¬ä¸€ä¸ªåŠ¨ç”»ç»“æŸæ—¶å¼€å§‹ç¬¬äºŒä¸ªæ”¾å¤§åŠ¨ç”»,å½“ç¬¬äºŒä¸ªåŠ¨ç”»ç»“æŸæ—¶è°ƒç”¨ç¬¬ä¸‰ä¸ªæ¸éšåŠ¨ç”»,
+		 * ç¬¬ä¸‰ä¸ªåŠ¨ç”»ç»“æŸæ—¶ä¿®æ”¹æ˜¾ç¤ºçš„å†…å®¹å¹¶ä¸”é‡æ–°è°ƒç”¨ç¬¬ä¸€ä¸ªåŠ¨ç”»,ä»è€Œè¾¾åˆ°å¾ªç¯æ•ˆæœ
 		 */
 		mFadeIn.setAnimationListener(new AnimationListener() {
 
@@ -105,17 +105,17 @@ public class WelcomeActivity extends AbActivity {
 
 			public void onAnimationEnd(Animation animation) {
 				/**
-				 * ÕâÀïÆäÊµÓĞĞ©Ğ´µÄ²»ºÃ,»¹¿ÉÒÔ²ÉÓÃ¸ü¶àµÄ·½Ê½À´ÅĞ¶Ïµ±Ç°ÏÔÊ¾µÄÊÇµÚ¼¸¸ö,´Ó¶øĞŞ¸ÄÊı¾İ,
-				 * ÎÒÕâÀïÖ»ÊÇ¼òµ¥µÄ²ÉÓÃ»ñÈ¡µ±Ç°ÏÔÊ¾µÄÍ¼Æ¬À´½øĞĞÅĞ¶Ï¡£
+				 * è¿™é‡Œå…¶å®æœ‰äº›å†™çš„ä¸å¥½,è¿˜å¯ä»¥é‡‡ç”¨æ›´å¤šçš„æ–¹å¼æ¥åˆ¤æ–­å½“å‰æ˜¾ç¤ºçš„æ˜¯ç¬¬å‡ ä¸ª,ä»è€Œä¿®æ”¹æ•°æ®,
+				 * æˆ‘è¿™é‡Œåªæ˜¯ç®€å•çš„é‡‡ç”¨è·å–å½“å‰æ˜¾ç¤ºçš„å›¾ç‰‡æ¥è¿›è¡Œåˆ¤æ–­ã€‚
 				 */
 				if (mShowPicture.getDrawable().equals(mPicture_1)) {
-					mShowText.setText("Í¬Ñ§Çé,ÇëÕä²Ø");
+					mShowText.setText("åŒå­¦æƒ…,è¯·çè—");
 					mShowPicture.setImageDrawable(mPicture_2);
 				} else if (mShowPicture.getDrawable().equals(mPicture_2)) {
-					mShowText.setText("¹²·Ü¶·,Í¬·ÖÏí");
+					mShowText.setText("å…±å¥‹æ–—,åŒåˆ†äº«");
 					mShowPicture.setImageDrawable(mPicture_3);
 				} else if (mShowPicture.getDrawable().equals(mPicture_3)) {
-					mShowText.setText("¶ùÊ±ÓÑ,ÄªÏàÍü");
+					mShowText.setText("å„¿æ—¶å‹,è«ç›¸å¿˜");
 					mShowPicture.setImageDrawable(mPicture_1);
 				}
 				mShowPicture.startAnimation(mFadeIn);
@@ -125,21 +125,21 @@ public class WelcomeActivity extends AbActivity {
 	}
 
 	/**
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 */
 	private void init() {
 		initAnim();
 		initPicture();
 		/**
-		 * ½çÃæ¸Õ¿ªÊ¼ÏÔÊ¾µÄÄÚÈİ
+		 * ç•Œé¢åˆšå¼€å§‹æ˜¾ç¤ºçš„å†…å®¹
 		 */
 		mShowPicture.setImageDrawable(mPicture_1);
-		mShowText.setText("¶ùÊ±ÓÑ,ÄªÏàÍü");
+		mShowText.setText("å„¿æ—¶å‹,è«ç›¸å¿˜");
 		mShowPicture.startAnimation(mFadeIn);
 	}
 
 	/**
-	 * ³õÊ¼»¯¶¯»­
+	 * åˆå§‹åŒ–åŠ¨ç”»
 	 */
 	private void initAnim() {
 		mFadeIn = AnimationUtils.loadAnimation(WelcomeActivity.this,R.anim.welcome_fade_in);
@@ -151,7 +151,7 @@ public class WelcomeActivity extends AbActivity {
 	}
 
 	/**
-	 * ³õÊ¼»¯Í¼Æ¬
+	 * åˆå§‹åŒ–å›¾ç‰‡
 	 */
 	private void initPicture() {
 		mPicture_1 = getResources().getDrawable(R.drawable.guide_pic1);

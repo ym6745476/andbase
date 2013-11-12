@@ -49,7 +49,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ö¸¶¨×éÎ»ÖÃ¡¢Ö¸¶¨×ÓÁĞ±íÏî´¦µÄ×ÓÁĞ±íÏîÊı¾İ
+	 * è·å–æŒ‡å®šç»„ä½ç½®ã€æŒ‡å®šå­åˆ—è¡¨é¡¹å¤„çš„å­åˆ—è¡¨é¡¹æ•°æ®
 	 */
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
@@ -67,7 +67,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * ¸Ã·½·¨¾ö¶¨Ã¿¸ö×ÓÑ¡ÏîµÄÍâ¹Û
+	 * è¯¥æ–¹æ³•å†³å®šæ¯ä¸ªå­é€‰é¡¹çš„å¤–è§‚
 	 */
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
@@ -113,7 +113,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 		          }
 	          }else if(mDownFile.getState() == Constant.downLoadPause){
 	        	  holder.operateBtn.setBackgroundResource(R.drawable.down_load);
-	        	  //ÏÂÔØÁË¶àÉÙ
+	        	  //ä¸‹è½½äº†å¤šå°‘
 	        	  if(mDownFile.getDownLength()!=0 && mDownFile.getTotalLength()!=0){
 		        	  int c = mDownFile.getDownLength()*100/mDownFile.getTotalLength();
 		        	  holder.itemsDesc.setVisibility(View.GONE);
@@ -135,7 +135,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	          }
 	          
 	          final AbDownloadProgressListener mDownloadProgressListener = new AbDownloadProgressListener() {
-					//ÊµÊ±»ñÖªÎÄ¼şÒÑ¾­ÏÂÔØµÄÊı¾İ³¤¶È
+					//å®æ—¶è·çŸ¥æ–‡ä»¶å·²ç»ä¸‹è½½çš„æ•°æ®é•¿åº¦
 					@Override
 					public void onDownloadSize(final int size) {
 						if(mDownFile.getTotalLength()==0){
@@ -153,9 +153,9 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 		        			});
 		        		}
 						if(mDownFile.getTotalLength() == size){
-							if(D)Log.d(TAG, "ÏÂÔØÍê³É:"+size);
+							if(D)Log.d(TAG, "ä¸‹è½½å®Œæˆ:"+size);
 							mDownFile.setState(Constant.downloadComplete);
-			        		//ÏÂÔØÍê³É
+			        		//ä¸‹è½½å®Œæˆ
 							mDownFileGroupList.get(1).remove(mDownFile);
 							mDownFileGroupList.get(0).add(mDownFile);
 							holder.progress.post(new Runnable(){
@@ -169,19 +169,19 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 					}
 			  };
 	          
-	          //´¦Àí°´Å¥ÊÂ¼ş
+	          //å¤„ç†æŒ‰é’®äº‹ä»¶
 	          holder.operateBtn.setOnClickListener(new View.OnClickListener() {
 					
 					@Override
 					public void onClick(View v) {
 						if(!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
-							//ÎŞsd¿¨
-							((AbActivity)mContext).showToast("Ã»ÕÒµ½´æ´¢¿¨");
+							//æ— sdå¡
+							((AbActivity)mContext).showToast("æ²¡æ‰¾åˆ°å­˜å‚¨å¡");
 							return;
 						}
 						
 						if(mDownFile.getState() == Constant.undownLoad || mDownFile.getState() == Constant.downLoadPause){
-				            //ÏÂÔØ
+				            //ä¸‹è½½
 							
 							holder.itemsDesc.setVisibility(View.GONE);
 				        	holder.received_progressBar.setVisibility(View.VISIBLE);
@@ -198,10 +198,10 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 								@Override
 								public void get() {
 									try {
-										//¼ì²éÎÄ¼ş×Ü³¤¶È
+										//æ£€æŸ¥æ–‡ä»¶æ€»é•¿åº¦
 										int totalLength = AbFileUtil.getContentLengthFormUrl(mDownFile.getDownUrl());
 										mDownFile.setTotalLength(totalLength);
-										//¿ªÊ¼ÏÂÔØÎÄ¼ş
+										//å¼€å§‹ä¸‹è½½æ–‡ä»¶
 										AbFileDownloader loader = new AbFileDownloader(mContext,mDownFile,mDownFile.getSuffix(),1);
 										mFileDownloaders.put(mDownFile.getDownUrl(), loader);
 										loader.download(mDownloadProgressListener);
@@ -214,11 +214,11 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 							
 				        	
 						}else if(mDownFile.getState()==Constant.downInProgress){
-							//ÔİÍ£
+							//æš‚åœ
 							holder.operateBtn.setBackgroundResource(R.drawable.down_load);
 							mDownFile.setState(Constant.undownLoad);
 							AbFileDownloader mFileDownloader = mFileDownloaders.get(mDownFile.getDownUrl());
-							//ÊÍ·ÅÔ­À´µÄÏß³Ì
+							//é‡Šæ”¾åŸæ¥çš„çº¿ç¨‹
 							if(mFileDownloader!=null){
 								mFileDownloader.setFlag(false);
 								AbDownloadThread mDownloadThread = mFileDownloader.getThreads();
@@ -230,7 +230,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 								mFileDownloader = null;
 							}
 						}else if(mDownFile.getState()==Constant.downloadComplete){
-							//É¾³ı
+							//åˆ é™¤
 							mDownFileGroupList.get(0).remove(mDownFile);
 							mDownFile.setState(Constant.undownLoad);
 							mDownFileGroupList.get(1).add(mDownFile);
@@ -246,7 +246,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ö¸¶¨×éÎ»ÖÃ´¦µÄ×éÊı¾İ
+	 * è·å–æŒ‡å®šç»„ä½ç½®å¤„çš„ç»„æ•°æ®
 	 */
 	@Override
 	public Object getGroup(int groupPosition) {
@@ -264,7 +264,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * ¸Ã·½·¨¾ö¶¨Ã¿¸ö×éÑ¡ÏîµÄÍâ¹Û
+	 * è¯¥æ–¹æ³•å†³å®šæ¯ä¸ªç»„é€‰é¡¹çš„å¤–è§‚
 	 */
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
@@ -288,7 +288,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 	
 	/**
-	 * ÃèÊö£ºÊÍ·ÅÏß³Ì
+	 * æè¿°ï¼šé‡Šæ”¾çº¿ç¨‹
 	 */
 	public void releaseThread() {
 		 Iterator it = mFileDownloaders.entrySet().iterator();   

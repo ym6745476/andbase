@@ -1,22 +1,58 @@
-/*package com.andbase.util;
-import java.io.File;import java.io.UnsupportedEncodingException;import java.util.ArrayList;import java.util.Calendar;import java.util.HashMap;import java.util.Iterator;import java.util.List;import java.util.Map;import java.util.TreeMap;import javax.servlet.http.HttpServletRequest;import org.apache.commons.fileupload.FileItem;import org.apache.commons.fileupload.FileUpload;import org.apache.commons.fileupload.FileUploadException;import org.apache.commons.fileupload.disk.DiskFileItemFactory;import org.apache.commons.fileupload.servlet.ServletFileUpload;import com.ab.util.AbDateUtil;import com.my.global.Constant;public class FileUploadUtil {
+/*
+package com.andbase.util;
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUpload;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+import com.ab.util.AbDateUtil;
+import com.my.global.Constant;
+public class FileUploadUtil {
 	private Map fileField = new TreeMap(); 
-	private Map formField = new TreeMap(); 	//ÎÄ¼şµÄ±£´æºóµÄ¿ÉÍøÂç·ÃÎÊµÄµØÖ·£¬ÎÄ¼şÃûºÍÂ·¾¶	private HashMap<String,String> filePaths = null; 
+	private Map formField = new TreeMap(); 
+	//æ–‡ä»¶çš„ä¿å­˜åçš„å¯ç½‘ç»œè®¿é—®çš„åœ°å€ï¼Œæ–‡ä»¶åå’Œè·¯å¾„
+	private HashMap<String,String> filePaths = null; 
 	private int memoryBlock = 2048; 
 	private File saveFolder = null; 
 	private boolean multipart = false; 
 	private HttpServletRequest request = null; 
-	private final int maxSize = Constant.UPLOAD_MAX_FILESIZE; 	private int fileCount = 0;
-		public FileUploadUtil(File saveFolder) {
-		this.saveFolder = saveFolder;		filePaths = new HashMap<String,String>(); 		if(!saveFolder.exists()){			saveFolder.mkdirs();		}	}
-		public FileUploadUtil() {		filePaths = new HashMap<String,String>(); 		
-	}	
+	private final int maxSize = Constant.UPLOAD_MAX_FILESIZE; 
+	private int fileCount = 0;
+	
+	public FileUploadUtil(File saveFolder) {
+		this.saveFolder = saveFolder;
+		filePaths = new HashMap<String,String>(); 
+		if(!saveFolder.exists()){
+			saveFolder.mkdirs();
+		}
+	}
+	
+	public FileUploadUtil() {
+		filePaths = new HashMap<String,String>(); 
+		
+	}
+	
 	public HashMap<String,String> download(HttpServletRequest request, String charset) throws FileUploadException {
-		this.request = request;		filePaths.clear();
+		this.request = request;
+		filePaths.clear();
 		multipart = FileUpload.isMultipartContent(request);
 		if (multipart) {
 			DiskFileItemFactory factory = new DiskFileItemFactory();
-			factory.setSizeThreshold(memoryBlock);			//»º³åÇø
+			factory.setSizeThreshold(memoryBlock);
+			//ç¼“å†²åŒº
 			factory.setRepository(saveFolder);
 			ServletFileUpload upload = new ServletFileUpload(factory);
 			upload.setSizeMax(maxSize);
@@ -30,8 +66,10 @@ import java.io.File;import java.io.UnsupportedEncodingException;import java.ut
 					processUploadedFile(item);
 				}
 			}
-		}		return filePaths;
-	}	
+		}
+		return filePaths;
+	}
+	
 	private void processFormField(FileItem item, String charset) {
 		try {
 			String name = item.getFieldName();
@@ -55,25 +93,61 @@ import java.io.File;import java.io.UnsupportedEncodingException;import java.ut
 		} catch (Exception e) {
 			throw new IllegalArgumentException("the argument \"charset\" missing!");
 		}
-	}		*//**	 * ÃèÊö£ºÉÏ´«ÎÄ¼ş	 * @param item	 * @date£º2012-9-4 ÉÏÎç8:42:17	 * @version v1.0	 *//*
+	}
+	
+	*//**
+	 * æè¿°ï¼šä¸Šä¼ æ–‡ä»¶
+	 * @param item
+	 * @dateï¼š2012-9-4 ä¸Šåˆ8:42:17
+	 * @version v1.0
+	 *//*
 	private String processUploadedFile(FileItem item) {
-		String fieldName = item.getFieldName();		String fileName = item.getName();
-		fileField.put(fieldName, item);		fileCount++;		try {						//Òª±£Ö¤Ãû×ÖÎ¨Ò»,¼ÓÒ»Ãë			String str = AbDateUtil.getCurrentDateByFormat("yyyyMMddHHmmss", Calendar.SECOND, fileCount);			int start = fileName.lastIndexOf(".");			if(start!=-1){				String fileNewName = str+fileName.substring(start);				String newFilePath = saveFolder +Constant.SEPARATOR+ fileNewName;				File newFile = new File(newFilePath);								if (!newFile.exists()) {					newFile.createNewFile();				}				String newFilePathRet =  write2file(item,newFile);				//±£´æÎÄ¼şµÄÍøÂçµØÖ·				filePaths.put(fileNewName, newFilePathRet);				return newFilePathRet;			}		} catch (Exception e) {			e.printStackTrace();		}		return null;
-	}	
-	public static String write2file(FileItem item, File file) {
+		String fieldName = item.getFieldName();
+		String fileName = item.getName();
+		fileField.put(fieldName, item);
+		fileCount++;
 		try {
-			item.write(file);			return file.getPath();
-		} catch (Exception e) {			e.printStackTrace();
+			
+			//è¦ä¿è¯åå­—å”¯ä¸€,åŠ ä¸€ç§’
+			String str = AbDateUtil.getCurrentDateByFormat("yyyyMMddHHmmss", Calendar.SECOND, fileCount);
+			int start = fileName.lastIndexOf(".");
+			if(start!=-1){
+				String fileNewName = str+fileName.substring(start);
+				String newFilePath = saveFolder +Constant.SEPARATOR+ fileNewName;
+				File newFile = new File(newFilePath);
+				
+				if (!newFile.exists()) {
+					newFile.createNewFile();
+				}
+				String newFilePathRet =  write2file(item,newFile);
+				//ä¿å­˜æ–‡ä»¶çš„ç½‘ç»œåœ°å€
+				filePaths.put(fileNewName, newFilePathRet);
+				return newFilePathRet;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return null;
-	}	
+	}
+	
+	public static String write2file(FileItem item, File file) {
+		try {
+			item.write(file);
+			return file.getPath();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public FileItem getFileItem(String fieldName) {
 		if (multipart) {
 			return (FileItem) fileField.get(fieldName);
 		} else {
 			return null;
 		}
-	}	
+	}
+	
 	public String getParameter(String fieldName) {
 		String value = null;
 		if (multipart) {
@@ -85,7 +159,8 @@ import java.io.File;import java.io.UnsupportedEncodingException;import java.ut
 			value = request.getParameter(fieldName);
 		}
 		return value;
-	}	
+	}
+	
 	public String[] getParameterValues(String fieldName) {
 		String[] values = null;
 		if (multipart) {
@@ -101,16 +176,20 @@ import java.io.File;import java.io.UnsupportedEncodingException;import java.ut
 			values = request.getParameterValues(fieldName);
 		}
 		return values;
-	}	
+	}
+	
 	public File getRepository() {
 		return this.saveFolder;
-	}	
+	}
+	
 	public int getSizeThreshold() {
 		return this.memoryBlock;
-	}	
+	}
+	
 	public boolean isMultipart() {
 		return this.multipart;
-	}	
+	}
+	
 	public int getMaxSize() {
 		return maxSize;
 	}

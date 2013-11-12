@@ -47,19 +47,19 @@ public class AbSqliteStorage {
 	private int errorCode100 = 100;
 	
 	/** The error message100. */
-	private String errorMessage100 = "²ÎÊı´íÎó";
+	private String errorMessage100 = "å‚æ•°é”™è¯¯";
 	
 	/** The error code101. */
 	private int errorCode101 = 101;
 	
 	/** The error message101. */
-	private String errorMessage101 = "Ö´ĞĞÊ±´íÎó";
+	private String errorMessage101 = "æ‰§è¡Œæ—¶é”™è¯¯";
 	
 	/** The ret value. */
 	private long retValue = -1;
 	
 	/**
-	 * ÃèÊö£º»ñÈ¡´æ´¢ÊµÀı.
+	 * æè¿°ï¼šè·å–å­˜å‚¨å®ä¾‹.
 	 *
 	 * @param context the context
 	 * @return single instance of AbSqliteStorage
@@ -69,7 +69,7 @@ public class AbSqliteStorage {
 	    if (null == mSqliteStorage){
 	    	mSqliteStorage = new AbSqliteStorage(context);
 	    }
-	    //ÓÃ¶ÓÁĞ±ÜÃâ²¢·¢·ÃÎÊÊı¾İ¿âÎÊÌâ
+	    //ç”¨é˜Ÿåˆ—é¿å…å¹¶å‘è®¿é—®æ•°æ®åº“é—®é¢˜
 	    mAbTaskQueue = AbTaskQueue.getInstance();
 	    return mSqliteStorage;
 	}
@@ -84,12 +84,12 @@ public class AbSqliteStorage {
 	}
 	
 	/**
-	 * ÃèÊö£º²åÈëÊı¾İ.
+	 * æè¿°ï¼šæ’å…¥æ•°æ®.
 	 *
 	 * @param <T> the generic type
-	 * @param entity  ÊµÌåÀà ÉèÖÃÁË¶ÔÏó¹ØÏµÓ³Éä
-	 * @param dao     ÊµÏÖAbDBDaoImplµÄDao
-	 * @param paramDataInsertListener ·µ»Ø¼àÌıÆ÷
+	 * @param entity  å®ä½“ç±» è®¾ç½®äº†å¯¹è±¡å…³ç³»æ˜ å°„
+	 * @param dao     å®ç°AbDBDaoImplçš„Dao
+	 * @param paramDataInsertListener è¿”å›ç›‘å¬å™¨
 	 */
 	public <T> void insertData(final T entity,final AbDBDaoImpl<T> dao, final AbDataInsertListener paramDataInsertListener){
 		 
@@ -113,12 +113,12 @@ public class AbSqliteStorage {
 				
 				@Override
 				public void get() {
-					//Ö´ĞĞ²åÈë 
-					//(1)»ñÈ¡Êı¾İ¿â 
+					//æ‰§è¡Œæ’å…¥ 
+					//(1)è·å–æ•°æ®åº“ 
 					dao.startWritableDatabase(false);
-				  	//(2)Ö´ĞĞ
+				  	//(2)æ‰§è¡Œ
 					retValue = dao.insert(entity);
-				    //(3)¹Ø±ÕÊı¾İ¿â
+				    //(3)å…³é—­æ•°æ®åº“
 				  	dao.closeDatabase(false);
 				}
 			};
@@ -133,12 +133,12 @@ public class AbSqliteStorage {
 	}
 	
 	/**
-	 * ÃèÊö£º²åÈëÊı¾İ.
+	 * æè¿°ï¼šæ’å…¥æ•°æ®.
 	 *
 	 * @param <T> the generic type
-	 * @param entityList  ÊµÌåÀà ÉèÖÃÁË¶ÔÏó¹ØÏµÓ³Éä
-	 * @param dao     ÊµÏÖAbDBDaoImplµÄDao
-	 * @param paramDataInsertListener ·µ»Ø¼àÌıÆ÷
+	 * @param entityList  å®ä½“ç±» è®¾ç½®äº†å¯¹è±¡å…³ç³»æ˜ å°„
+	 * @param dao     å®ç°AbDBDaoImplçš„Dao
+	 * @param paramDataInsertListener è¿”å›ç›‘å¬å™¨
 	 */
 	public <T> void insertData(final List<T> entityList,final AbDBDaoImpl<T> dao, final AbDataInsertListener paramDataInsertListener){
 		 
@@ -162,12 +162,12 @@ public class AbSqliteStorage {
 				
 				@Override
 				public void get() {
-					//Ö´ĞĞ²åÈë 
-					//(1)»ñÈ¡Êı¾İ¿â 
+					//æ‰§è¡Œæ’å…¥ 
+					//(1)è·å–æ•°æ®åº“ 
 					dao.startWritableDatabase(false);
-				  	//(2)Ö´ĞĞ
+				  	//(2)æ‰§è¡Œ
 					retValue = dao.insertList(entityList);
-				    //(3)¹Ø±ÕÊı¾İ¿â
+				    //(3)å…³é—­æ•°æ®åº“
 				  	dao.closeDatabase(false);
 			    	
 				}
@@ -186,10 +186,10 @@ public class AbSqliteStorage {
 	/**
 	 * Find data.
 	 *
-	 * @param <T> ÃèÊö£º²éÑ¯Êı¾İ
+	 * @param <T> æè¿°ï¼šæŸ¥è¯¢æ•°æ®
 	 * @param storageQuery the storage query
-	 * @param dao     ÊµÏÖAbDBDaoImplµÄDao
-	 * @param paramDataInsertListener ·µ»Ø¼àÌıÆ÷
+	 * @param dao     å®ç°AbDBDaoImplçš„Dao
+	 * @param paramDataInsertListener è¿”å›ç›‘å¬å™¨
 	 */
 	public <T> void findData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataInfoListener paramDataInsertListener){
 		     
@@ -206,19 +206,19 @@ public class AbSqliteStorage {
 				@Override
 				public void get() {
 					List<?> list = null;   
-					//Ö´ĞĞ²åÈë 
-					//(1)»ñÈ¡Êı¾İ¿â 
+					//æ‰§è¡Œæ’å…¥ 
+					//(1)è·å–æ•°æ®åº“ 
 					dao.startReadableDatabase(false);
-				  	//(2)Ö´ĞĞ
+				  	//(2)æ‰§è¡Œ
 					if(storageQuery.getLimit()!=-1 && storageQuery.getOffset()!=-1){
 						list = dao.queryList(null, storageQuery.getWhereClause(),storageQuery.getWhereArgs(), storageQuery.getGroupBy(), storageQuery.getHaving(), storageQuery.getOrderBy()+" limit "+storageQuery.getLimit()+ " offset " +storageQuery.getOffset(), null);
 					}else{
 						list = dao.queryList(null, storageQuery.getWhereClause(),storageQuery.getWhereArgs(), storageQuery.getGroupBy(), storageQuery.getHaving(), storageQuery.getOrderBy(), null);
 					}
-				    //(3)¹Ø±ÕÊı¾İ¿â
+				    //(3)å…³é—­æ•°æ®åº“
 				  	dao.closeDatabase(false);
 				  	
-				  	//ÉèÖÃ·µ»Ø½á¹û
+				  	//è®¾ç½®è¿”å›ç»“æœ
 				  	item.setResult(list);
 			    	
 				}
@@ -228,12 +228,12 @@ public class AbSqliteStorage {
 	  }
 	
 	/**
-	 * ÃèÊö£ºĞŞ¸ÄÊı¾İ.
+	 * æè¿°ï¼šä¿®æ”¹æ•°æ®.
 	 *
 	 * @param <T> the generic type
-	 * @param entity  ÊµÌåÀà ÉèÖÃÁË¶ÔÏó¹ØÏµÓ³Éä
-	 * @param dao     ÊµÏÖAbDBDaoImplµÄDao
-	 * @param paramDataInsertListener ·µ»Ø¼àÌıÆ÷
+	 * @param entity  å®ä½“ç±» è®¾ç½®äº†å¯¹è±¡å…³ç³»æ˜ å°„
+	 * @param dao     å®ç°AbDBDaoImplçš„Dao
+	 * @param paramDataInsertListener è¿”å›ç›‘å¬å™¨
 	 */
 	public <T> void updateData(final T entity,final AbDBDaoImpl<T> dao, final AbDataOperationListener paramDataInsertListener){
 		 
@@ -257,12 +257,12 @@ public class AbSqliteStorage {
 				
 				@Override
 				public void get() {
-					//Ö´ĞĞ²åÈë 
-					//(1)»ñÈ¡Êı¾İ¿â 
+					//æ‰§è¡Œæ’å…¥ 
+					//(1)è·å–æ•°æ®åº“ 
 					dao.startWritableDatabase(false);
-				  	//(2)Ö´ĞĞ
+				  	//(2)æ‰§è¡Œ
 					retValue = dao.update(entity);
-				    //(3)¹Ø±ÕÊı¾İ¿â
+				    //(3)å…³é—­æ•°æ®åº“
 				  	dao.closeDatabase(false);
 			    	
 				}
@@ -278,12 +278,12 @@ public class AbSqliteStorage {
 	  }
 	
 	/**
-	 * ÃèÊö£ºĞŞ¸ÄÊı¾İ.
+	 * æè¿°ï¼šä¿®æ”¹æ•°æ®.
 	 *
 	 * @param <T> the generic type
-	 * @param entityList  ÊµÌåÀà ÉèÖÃÁË¶ÔÏó¹ØÏµÓ³Éä
-	 * @param dao     ÊµÏÖAbDBDaoImplµÄDao
-	 * @param paramDataInsertListener ·µ»Ø¼àÌıÆ÷
+	 * @param entityList  å®ä½“ç±» è®¾ç½®äº†å¯¹è±¡å…³ç³»æ˜ å°„
+	 * @param dao     å®ç°AbDBDaoImplçš„Dao
+	 * @param paramDataInsertListener è¿”å›ç›‘å¬å™¨
 	 */
 	public <T> void updateData(final List<T> entityList,final AbDBDaoImpl<T> dao, final AbDataOperationListener paramDataInsertListener){
 		 
@@ -307,12 +307,12 @@ public class AbSqliteStorage {
 				
 				@Override
 				public void get() {
-					//Ö´ĞĞ²åÈë 
-					//(1)»ñÈ¡Êı¾İ¿â 
+					//æ‰§è¡Œæ’å…¥ 
+					//(1)è·å–æ•°æ®åº“ 
 					dao.startWritableDatabase(false);
-				  	//(2)Ö´ĞĞ
+				  	//(2)æ‰§è¡Œ
 					retValue = dao.updateList(entityList);
-				    //(3)¹Ø±ÕÊı¾İ¿â
+				    //(3)å…³é—­æ•°æ®åº“
 				  	dao.closeDatabase(false);
 			    	
 				}
@@ -328,12 +328,12 @@ public class AbSqliteStorage {
 	  }
 	
 	/**
-	 * ÃèÊö£ºĞŞ¸ÄÊı¾İ.
+	 * æè¿°ï¼šä¿®æ”¹æ•°æ®.
 	 *
 	 * @param <T> the generic type
-	 * @param storageQuery  Ìõ¼şÊµÌå
-	 * @param dao     ÊµÏÖAbDBDaoImplµÄDao
-	 * @param paramDataInsertListener ·µ»Ø¼àÌıÆ÷
+	 * @param storageQuery  æ¡ä»¶å®ä½“
+	 * @param dao     å®ç°AbDBDaoImplçš„Dao
+	 * @param paramDataInsertListener è¿”å›ç›‘å¬å™¨
 	 */
 	public <T> void deleteData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataOperationListener paramDataInsertListener){
 		 
@@ -356,12 +356,12 @@ public class AbSqliteStorage {
 				
 				@Override
 				public void get() {
-					//Ö´ĞĞ²åÈë 
-					//(1)»ñÈ¡Êı¾İ¿â 
+					//æ‰§è¡Œæ’å…¥ 
+					//(1)è·å–æ•°æ®åº“ 
 					dao.startWritableDatabase(false);
-				  	//(2)Ö´ĞĞ
+				  	//(2)æ‰§è¡Œ
 					retValue = dao.delete(storageQuery.getWhereClause(),storageQuery.getWhereArgs());
-				    //(3)¹Ø±ÕÊı¾İ¿â
+				    //(3)å…³é—­æ•°æ®åº“
 				  	dao.closeDatabase(false);
 			    	
 				}
@@ -370,7 +370,7 @@ public class AbSqliteStorage {
 	}
 	
 	/**
-	 * ÃèÊö£ºÊÍ·Å´æ´¢ÊµÀı.
+	 * æè¿°ï¼šé‡Šæ”¾å­˜å‚¨å®ä¾‹.
 	 */
 	public void release(){
 		if(mAbTaskQueue!=null){

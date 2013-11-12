@@ -43,7 +43,7 @@ public class IocViewActivity extends AbActivity {
     }
     
     public void btnClick(View v){
-		mTextView.setText("ÎÒ±äÁË");
+		mTextView.setText("æˆ‘å˜äº†");
 	}
 }
 

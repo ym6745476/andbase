@@ -8,10 +8,10 @@ import android.view.View;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbCompassView.java 
- * ÃèÊö£ºÖ¸ÄÏÕë
+ * åç§°ï¼šAbCompassView.java 
+ * æè¿°ï¼šæŒ‡å—é’ˆ
  * @author zhaoqp
- * @date£º2013-8-23 ÏÂÎç2:03:29
+ * @dateï¼š2013-8-23 ä¸‹åˆ2:03:29
  * @version v1.0
  */
 public class AbCompassView extends View {
@@ -42,14 +42,14 @@ public class AbCompassView extends View {
 	
 	private void drawPictures(Canvas canvas) {
 		if (mCompassDrawable != null) {
-			// Í¼Æ¬×ÊÔ´ÔÚviewµÄÎ»ÖÃ£¬´Ë´¦Ïàµ±ÓÚ³äÂúview
+			// å›¾ç‰‡èµ„æºåœ¨viewçš„ä½ç½®ï¼Œæ­¤å¤„ç›¸å½“äºå……æ»¡view
 			mCompassDrawable.setBounds(0, 0, w, h);
 			canvas.save();
-			// ÈÆÍ¼Æ¬ÖĞĞÄµãĞı×ª
+			// ç»•å›¾ç‰‡ä¸­å¿ƒç‚¹æ—‹è½¬
 			canvas.rotate(mDirection, posCompassX, posCompassY);
-			// °ÑĞı×ªºóµÄÍ¼Æ¬»­ÔÚviewÉÏ£¬¼´±£³ÖĞı×ªºóµÄÑù×Ó
+			// æŠŠæ—‹è½¬åçš„å›¾ç‰‡ç”»åœ¨viewä¸Šï¼Œå³ä¿æŒæ—‹è½¬åçš„æ ·å­
 			mCompassDrawable.draw(canvas);
-			// ±£´æÒ»ÏÂ
+			// ä¿å­˜ä¸€ä¸‹
 			canvas.restore();
 		}
 
@@ -84,8 +84,8 @@ public class AbCompassView extends View {
 
 	/**
 	 * 
-	 * ÃèÊö£ºÉèÖÃÖ¸ÄÏÕëÍ¼Æ¬
-	 * @param drawable ±ØĞëÉèÖÃ²ÅÄÜÏÔÊ¾
+	 * æè¿°ï¼šè®¾ç½®æŒ‡å—é’ˆå›¾ç‰‡
+	 * @param drawable å¿…é¡»è®¾ç½®æ‰èƒ½æ˜¾ç¤º
 	 * @throws 
 	 */
 	public void setCompassDrawable(Drawable drawable) {

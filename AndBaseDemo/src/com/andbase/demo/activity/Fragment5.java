@@ -16,7 +16,7 @@ public class Fragment5 extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.text1, null);
 		TextView tv = (TextView)view.findViewById(R.id.textView1);
-		tv.setText("“≥√Ê5");
+		tv.setText("È°µÈù¢5");
 		return view;
 	}
 

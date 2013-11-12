@@ -18,15 +18,15 @@ import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
  * Copyright (c) 2011 All rights reserved 
- * Ãû³Æ£ºWebActivity 
- * ÃèÊö£ºÍøÕ¾Wap
+ * åç§°ï¼šWebActivity 
+ * æè¿°ï¼šç½‘ç«™Wap
  * @author zhaoqp
  * @date 2011-11-8
  * @version 
  */
 public class WebActivity extends AbActivity {
 	
-	//Ö÷½çÃæ
+	//ä¸»ç•Œé¢
 	private WebView mWebView = null;
 	private ProgressBar mProgressBar = null;
 	private MyApplication application;
@@ -35,7 +35,7 @@ public class WebActivity extends AbActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //ÉèÖÃ²¼¾Ö
+        //è®¾ç½®å¸ƒå±€
         setAbContentView(R.layout.web);
         
         application = (MyApplication)abApplication;
@@ -50,51 +50,51 @@ public class WebActivity extends AbActivity {
 		
         mWebView = (WebView)findViewById(R.id.webView);
         mProgressBar = (ProgressBar)findViewById(R.id.progress_bar);
-        //ÉèÖÃÖ§³ÖJavaScript½Å±¾
+        //è®¾ç½®æ”¯æŒJavaScriptè„šæœ¬
 		WebSettings webSettings = mWebView.getSettings();  
 		webSettings.setJavaScriptEnabled(true);
-		//ÉèÖÃ¿ÉÒÔ·ÃÎÊÎÄ¼ş
+		//è®¾ç½®å¯ä»¥è®¿é—®æ–‡ä»¶
 		webSettings.setAllowFileAccess(true);
-		//ÉèÖÃ¿ÉÒÔÖ§³ÖËõ·Å
+		//è®¾ç½®å¯ä»¥æ”¯æŒç¼©æ”¾
 		webSettings.setSupportZoom(true);
-		//ÉèÖÃÄ¬ÈÏËõ·Å·½Ê½³ß´çÊÇfar
+		//è®¾ç½®é»˜è®¤ç¼©æ”¾æ–¹å¼å°ºå¯¸æ˜¯far
 		webSettings.setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
-		//ÉèÖÃ³öÏÖËõ·Å¹¤¾ß
+		//è®¾ç½®å‡ºç°ç¼©æ”¾å·¥å…·
 		webSettings .setBuiltInZoomControls(true);
 		webSettings.setDefaultFontSize(20);
 		
-        //·ÃÎÊassetsÄ¿Â¼ÏÂµÄÎÄ¼ş
+        //è®¿é—®assetsç›®å½•ä¸‹çš„æ–‡ä»¶
         String url = "http://www.418log.org/m";
         mWebView.loadUrl(url);
         
 		
-        // ÉèÖÃWebViewClient
+        // è®¾ç½®WebViewClient
 		mWebView.setWebViewClient(new WebViewClient() {
-			// urlÀ¹½Ø
+			// urlæ‹¦æˆª
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				// Ê¹ÓÃ×Ô¼ºµÄWebView×é¼şÀ´ÏìÓ¦Url¼ÓÔØÊÂ¼ş£¬¶ø²»ÊÇÊ¹ÓÃÄ¬ÈÏä¯ÀÀÆ÷Æ÷¼ÓÔØÒ³Ãæ
+				// ä½¿ç”¨è‡ªå·±çš„WebViewç»„ä»¶æ¥å“åº”UrlåŠ è½½äº‹ä»¶ï¼Œè€Œä¸æ˜¯ä½¿ç”¨é»˜è®¤æµè§ˆå™¨å™¨åŠ è½½é¡µé¢
 				view.loadUrl(url);
-				// ÏàÓ¦Íê³É·µ»Øtrue
+				// ç›¸åº”å®Œæˆè¿”å›true
 				return true;
 				//return super.shouldOverrideUrlLoading(view, url);
 			}
 
-			// Ò³Ãæ¿ªÊ¼¼ÓÔØ
+			// é¡µé¢å¼€å§‹åŠ è½½
 			@Override
 			public void onPageStarted(WebView view, String url, Bitmap favicon) {
 				mProgressBar.setVisibility(View.VISIBLE);
 				super.onPageStarted(view, url, favicon);
 			}
 
-			// Ò³Ãæ¼ÓÔØÍê³É
+			// é¡µé¢åŠ è½½å®Œæˆ
 			@Override
 			public void onPageFinished(WebView view, String url) {
 				mProgressBar.setVisibility(View.GONE);
 				super.onPageFinished(view, url);
 			}
 
-			// WebView¼ÓÔØµÄËùÓĞ×ÊÔ´url
+			// WebViewåŠ è½½çš„æ‰€æœ‰èµ„æºurl
 			@Override
 			public void onLoadResource(WebView view, String url) {
 				super.onLoadResource(view, url);
@@ -108,37 +108,37 @@ public class WebActivity extends AbActivity {
 
 		});
 
-		// ÉèÖÃWebChromeClient
+		// è®¾ç½®WebChromeClient
 		mWebView.setWebChromeClient(new WebChromeClient() {
 			@Override
-			// ´¦ÀíjavascriptÖĞµÄalert
+			// å¤„ç†javascriptä¸­çš„alert
 			public boolean onJsAlert(WebView view, String url, String message,
 					final JsResult result) {
 				return super.onJsAlert(view, url, message, result);
 			};
 
 			@Override
-			// ´¦ÀíjavascriptÖĞµÄconfirm
+			// å¤„ç†javascriptä¸­çš„confirm
 			public boolean onJsConfirm(WebView view, String url,
 					String message, final JsResult result) {
 				return super.onJsConfirm(view, url, message, result);
 			};
 
 			@Override
-			// ´¦ÀíjavascriptÖĞµÄprompt
+			// å¤„ç†javascriptä¸­çš„prompt
 			public boolean onJsPrompt(WebView view, String url, String message,
 					String defaultValue, final JsPromptResult result) {
 				return super.onJsPrompt(view, url, message, defaultValue, result);
 			};
 			
-			//ÉèÖÃÍøÒ³¼ÓÔØµÄ½ø¶ÈÌõ
+			//è®¾ç½®ç½‘é¡µåŠ è½½çš„è¿›åº¦æ¡
 			@Override
 			public void onProgressChanged(WebView view, int newProgress) {
 				mProgressBar.setProgress(newProgress);
 				super.onProgressChanged(view, newProgress);
 			}
 			
-			//ÉèÖÃ³ÌĞòµÄTitle
+			//è®¾ç½®ç¨‹åºçš„Title
 			@Override
 			public void onReceivedTitle(WebView view, String title) {
 				setTitle(title);
@@ -157,15 +157,15 @@ public class WebActivity extends AbActivity {
 	}
     
     /**
-	 * À¹½Ø·µ»Ø¼ü
+	 * æ‹¦æˆªè¿”å›é”®
 	 */
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// ÊÇ·ñ´¥·¢°´¼üÎªback¼ü
+		// æ˜¯å¦è§¦å‘æŒ‰é”®ä¸ºbacké”®
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			back();
 			return true;
-			// Èç¹û²»ÊÇback¼üÕı³£ÏìÓ¦
+			// å¦‚æœä¸æ˜¯backé”®æ­£å¸¸å“åº”
 		} else {
 			return super.onKeyDown(keyCode, event);
 		}

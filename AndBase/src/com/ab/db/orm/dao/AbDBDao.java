@@ -29,170 +29,170 @@ import android.database.sqlite.SQLiteOpenHelper;
 public interface AbDBDao<T> {
 
 	/**
-	 * »ñÈ¡Êı¾İ¿â.
+	 * è·å–æ•°æ®åº“.
 	 *
 	 * @return the db helper
 	 */
 	public SQLiteOpenHelper getDbHelper();
 
 	/**
-	 * ²åÈëÊµÌåÀà,Ä¬ÈÏÖ÷¼ü×ÔÔö,µ÷ÓÃinsert(T,true);.
+	 * æ’å…¥å®ä½“ç±»,é»˜è®¤ä¸»é”®è‡ªå¢,è°ƒç”¨insert(T,true);.
 	 *
-	 * @param entity Ó³ÉäÊµÌå
-	 * @return ²åÈë³É¹¦µÄÊı¾İID
+	 * @param entity æ˜ å°„å®ä½“
+	 * @return æ’å…¥æˆåŠŸçš„æ•°æ®ID
 	 */
 	public abstract long insert(T entity);
 
 	/**
-	 * ²åÈëÊµÌåÀà.
+	 * æ’å…¥å®ä½“ç±».
 	 *
-	 * @param entity Ó³ÉäÊµÌå
-	 * @param flag flagÎªtrueÊÇ×Ô¶¯Éú³ÉÖ÷¼ü,flagÎªfalseÊ±ĞèÊÖ¹¤Ö¸¶¨Ö÷¼üµÄÖµ.
-	 * @return ²åÈë³É¹¦µÄÊı¾İĞĞºÅ
+	 * @param entity æ˜ å°„å®ä½“
+	 * @param flag flagä¸ºtrueæ˜¯è‡ªåŠ¨ç”Ÿæˆä¸»é”®,flagä¸ºfalseæ—¶éœ€æ‰‹å·¥æŒ‡å®šä¸»é”®çš„å€¼.
+	 * @return æ’å…¥æˆåŠŸçš„æ•°æ®è¡Œå·
 	 */
 	public abstract long insert(T entity, boolean flag);
 	
 	/**
-	 * ²åÈëÊµÌåÀàÁĞ±í£¬Ä¬ÈÏÖ÷¼ü×ÔÔö,µ÷ÓÃinsertList(List<T>,true);.
+	 * æ’å…¥å®ä½“ç±»åˆ—è¡¨ï¼Œé»˜è®¤ä¸»é”®è‡ªå¢,è°ƒç”¨insertList(List<T>,true);.
 	 *
-	 * @param entityList Ó³ÉäÊµÌåÁĞ±í
-	 * @return ²åÈë³É¹¦µÄÊı¾İĞĞºÅµÄºÍ
+	 * @param entityList æ˜ å°„å®ä½“åˆ—è¡¨
+	 * @return æ’å…¥æˆåŠŸçš„æ•°æ®è¡Œå·çš„å’Œ
 	 */
 	public abstract long insertList(List<T> entityList);
 	
 	/**
-	 * ²åÈëÊµÌåÀàÁĞ±í.
+	 * æ’å…¥å®ä½“ç±»åˆ—è¡¨.
 	 *
-	 * @param entityList Ó³ÉäÊµÌåÁĞ±í
-	 * @param flag flagÎªtrueÊÇ×Ô¶¯Éú³ÉÖ÷¼ü,flagÎªfalseÊ±ĞèÊÖ¹¤Ö¸¶¨Ö÷¼üµÄÖµ
-	 * @return ²åÈë³É¹¦µÄÊı¾İĞĞºÅµÄºÍ
+	 * @param entityList æ˜ å°„å®ä½“åˆ—è¡¨
+	 * @param flag flagä¸ºtrueæ˜¯è‡ªåŠ¨ç”Ÿæˆä¸»é”®,flagä¸ºfalseæ—¶éœ€æ‰‹å·¥æŒ‡å®šä¸»é”®çš„å€¼
+	 * @return æ’å…¥æˆåŠŸçš„æ•°æ®è¡Œå·çš„å’Œ
 	 */
 	public abstract long insertList(List<T> entityList, boolean flag);
 	
 	
 
 	/**
-	 * ¸ù¾İIDÉ¾³ıÊı¾İ.
+	 * æ ¹æ®IDåˆ é™¤æ•°æ®.
 	 *
-	 * @param id Êı¾İIDÖ÷¼ü
+	 * @param id æ•°æ®IDä¸»é”®
 	 */
 	public abstract long delete(int id);
 
 	/**
-	 * ¸ù¾İIDÉ¾³ıÊı¾İ£¨¶à¸ö£©.
+	 * æ ¹æ®IDåˆ é™¤æ•°æ®ï¼ˆå¤šä¸ªï¼‰.
 	 *
-	 * @param ids Êı¾İIDÖ÷¼ü
+	 * @param ids æ•°æ®IDä¸»é”®
 	 */
 	public abstract long delete(Integer... ids);
 	
 	/**
-	 * ¸ù¾İwhereÉ¾³ıÊı¾İ.
-	 * @param whereClause whereÓï¾ä
-	 * @param whereArgs  where²ÎÊı
+	 * æ ¹æ®whereåˆ é™¤æ•°æ®.
+	 * @param whereClause whereè¯­å¥
+	 * @param whereArgs  whereå‚æ•°
 	 */
 	public abstract long delete(String whereClause, String[] whereArgs);
 
 	/**
-	 * É¾³ıËùÓĞÊı¾İ.
+	 * åˆ é™¤æ‰€æœ‰æ•°æ®.
 	 */
 	public abstract long deleteAll();
 	
 	/**
-	 * ¸üĞÂÊı¾İ.
+	 * æ›´æ–°æ•°æ®.
 	 *
-	 * @param entity Êı¾İ,IDÖ÷¼ü
-	 * @return ĞŞ¸Ä³É¹¦µÄÊı¾İĞĞºÅ
+	 * @param entity æ•°æ®,IDä¸»é”®
+	 * @return ä¿®æ”¹æˆåŠŸçš„æ•°æ®è¡Œå·
 	 */
 	public abstract long update(T entity);
 	
 	/**
-	 * ¸üĞÂÊı¾İ.
+	 * æ›´æ–°æ•°æ®.
 	 *
-	 * @param entityList Êı¾İÁĞ±í,IDÖ÷¼ü
-	 * @return ĞŞ¸Ä³É¹¦µÄÊı¾İĞĞºÅºÍ
+	 * @param entityList æ•°æ®åˆ—è¡¨,IDä¸»é”®
+	 * @return ä¿®æ”¹æˆåŠŸçš„æ•°æ®è¡Œå·å’Œ
 	 */
 	public abstract long updateList(List<T> entityList);
 
 	/**
-	 * ¸ù¾İ»ñÈ¡Ò»ÌõÊı¾İ.
+	 * æ ¹æ®è·å–ä¸€æ¡æ•°æ®.
 	 *
-	 * @param id Êı¾İIDÖ÷¼ü
-	 * @return Ò»ÌõÊı¾İÓ³ÉäÊµÌå
+	 * @param id æ•°æ®IDä¸»é”®
+	 * @return ä¸€æ¡æ•°æ®æ˜ å°„å®ä½“
 	 */
 	public abstract T queryOne(int id);
 
 	/**
-	 * Ö´ĞĞ²éÑ¯Óï¾ä.
+	 * æ‰§è¡ŒæŸ¥è¯¢è¯­å¥.
 	 *
-	 * @param sql sqlÓï¾ä
-	 * @param selectionArgs °ó¶¨±äÁ¿µÄ²ÎÊıÖµ
-	 * @param clazz  ·µ»ØµÄ¶ÔÏóÀàĞÍ
-	 * @return Ó³ÉäÊµÌåÁĞ±í
+	 * @param sql sqlè¯­å¥
+	 * @param selectionArgs ç»‘å®šå˜é‡çš„å‚æ•°å€¼
+	 * @param clazz  è¿”å›çš„å¯¹è±¡ç±»å‹
+	 * @return æ˜ å°„å®ä½“åˆ—è¡¨
 	 */
 	public abstract List<T> rawQuery(String sql, String[] selectionArgs,Class<T> clazz);
 
 	/**
-	 * ²éÑ¯ÁĞ±í.
+	 * æŸ¥è¯¢åˆ—è¡¨.
 	 *
-	 * @return Ó³ÉäÊµÌåÁĞ±í
+	 * @return æ˜ å°„å®ä½“åˆ—è¡¨
 	 */
 	public abstract List<T> queryList();
 
 	/**
-	 * Ó³ÉäÊµÌåÁĞ±í.
+	 * æ˜ å°„å®ä½“åˆ—è¡¨.
 	 *
-	 * @param columns ²éÑ¯µÄÁĞ
-	 * @param selection whereÓï¾äµÄsql
-	 * @param selectionArgs whereÓï¾äµÄsqlµÄ°ó¶¨±äÁ¿µÄ²ÎÊı
-	 * @param groupBy ·Ö×éÓï¾ä
-	 * @param having ·Ö×éºóµÄ¹ıÂËÓï¾ä
-	 * @param orderBy ÅÅĞò
-	 * @param limit limitÓï¾ä
-	 * @return Ó³ÉäÊµÌåÁĞ±í
+	 * @param columns æŸ¥è¯¢çš„åˆ—
+	 * @param selection whereè¯­å¥çš„sql
+	 * @param selectionArgs whereè¯­å¥çš„sqlçš„ç»‘å®šå˜é‡çš„å‚æ•°
+	 * @param groupBy åˆ†ç»„è¯­å¥
+	 * @param having åˆ†ç»„åçš„è¿‡æ»¤è¯­å¥
+	 * @param orderBy æ’åº
+	 * @param limit limitè¯­å¥
+	 * @return æ˜ å°„å®ä½“åˆ—è¡¨
 	 */
 	public abstract List<T> queryList(String[] columns, String selection,
 			String[] selectionArgs, String groupBy, String having,
 			String orderBy, String limit);
 	
 	/**
-	 * Ó³ÉäÊµÌåÁĞ±í.
-	 * @param selection whereÓï¾äµÄsql
-	 * @param selectionArgs whereÓï¾äµÄsqlµÄ°ó¶¨±äÁ¿µÄ²ÎÊı
-	 * @return Ó³ÉäÊµÌåÁĞ±í
+	 * æ˜ å°„å®ä½“åˆ—è¡¨.
+	 * @param selection whereè¯­å¥çš„sql
+	 * @param selectionArgs whereè¯­å¥çš„sqlçš„ç»‘å®šå˜é‡çš„å‚æ•°
+	 * @return æ˜ å°„å®ä½“åˆ—è¡¨
 	 */
 	public abstract List<T> queryList(String selection,String[] selectionArgs);
 
 	/**
-	 * ¼ì²éÊÇ·ñ´æÔÚÊı¾İ.
+	 * æ£€æŸ¥æ˜¯å¦å­˜åœ¨æ•°æ®.
 	 *
-	 * @param sql sqlÓï¾ä
-	 * @param selectionArgs °ó¶¨±äÁ¿µÄ²ÎÊıÖµ
-	 * @return Èç¹û´æÔÚ·µ»Øtrue, ²»´æÔÚÎªfalse
+	 * @param sql sqlè¯­å¥
+	 * @param selectionArgs ç»‘å®šå˜é‡çš„å‚æ•°å€¼
+	 * @return å¦‚æœå­˜åœ¨è¿”å›true, ä¸å­˜åœ¨ä¸ºfalse
 	 */
 	public abstract boolean isExist(String sql, String[] selectionArgs);
 
 	/**
-	 * ½«²éÑ¯µÄ½á¹û±£´æÎªÃûÖµ¶Ômap.
+	 * å°†æŸ¥è¯¢çš„ç»“æœä¿å­˜ä¸ºåå€¼å¯¹map.
 	 * 
-	 * @param sql ²éÑ¯sql
-	 * @param selectionArgs °ó¶¨±äÁ¿µÄ²ÎÊıÖµ
-	 * @return ·µ»ØµÄMapÖĞµÄkeyÈ«²¿ÊÇĞ¡Ğ´ĞÎÊ½.
+	 * @param sql æŸ¥è¯¢sql
+	 * @param selectionArgs ç»‘å®šå˜é‡çš„å‚æ•°å€¼
+	 * @return è¿”å›çš„Mapä¸­çš„keyå…¨éƒ¨æ˜¯å°å†™å½¢å¼.
 	 */
 	public List<Map<String, String>> queryMapList(String sql,String[] selectionArgs);
 	
 	/**
-	 * ·µ»ØÒ»¸ö²éÑ¯µÄ½á¹ûÌõÊı.
-	 * @param sql ²éÑ¯sql
-	 * @param selectionArgs °ó¶¨±äÁ¿µÄ²ÎÊıÖµ
-	 * @return ×ÜÌõÊı.
+	 * è¿”å›ä¸€ä¸ªæŸ¥è¯¢çš„ç»“æœæ¡æ•°.
+	 * @param sql æŸ¥è¯¢sql
+	 * @param selectionArgs ç»‘å®šå˜é‡çš„å‚æ•°å€¼
+	 * @return æ€»æ¡æ•°.
 	 */
 	public int queryCount(String sql,String[] selectionArgs);
 
 	/**
-	 * ·â×°Ö´ĞĞsql´úÂë.
+	 * å°è£…æ‰§è¡Œsqlä»£ç .
 	 *
-	 * @param sql sqlÓï¾ä
-	 * @param selectionArgs °ó¶¨±äÁ¿µÄ²ÎÊıÖµ
+	 * @param sql sqlè¯­å¥
+	 * @param selectionArgs ç»‘å®šå˜é‡çš„å‚æ•°å€¼
 	 */
 	public void execSql(String sql, Object[] selectionArgs);
 

@@ -9,10 +9,10 @@ import android.widget.ImageView;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºCarouselItemImage.java 
- * ÃèÊö£ºĞı×ªÄ¾ÂíµÄÍ¼Æ¬View
+ * åç§°ï¼šCarouselItemImage.java 
+ * æè¿°ï¼šæ—‹è½¬æœ¨é©¬çš„å›¾ç‰‡View
  * @author zhaoqp
- * @date£º2013-8-23 ÏÂÎç2:01:42
+ * @dateï¼š2013-8-23 ä¸‹åˆ2:01:42
  * @version v1.0
  */
 public class CarouselItemImage extends ImageView 

@@ -28,10 +28,10 @@ import com.ab.global.AbAppData;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÏÂÔØÏß³ÌÀà.
+ * æè¿°ï¼šä¸‹è½½çº¿ç¨‹ç±».
  *
  * @author zhaoqp
- * @date£º2013-3-14 ÏÂÎç5:01:31
+ * @dateï¼š2013-3-14 ä¸‹åˆ5:01:31
  * @version v1.0
  */
 public class AbDownloadThread extends Thread {
@@ -71,7 +71,7 @@ public class AbDownloadThread extends Thread {
 	}
 	
 	/**
-	 * ÃèÊö£ºÔËĞĞ.
+	 * æè¿°ï¼šè¿è¡Œ.
 	 *
 	 * @see java.lang.Thread#run()
 	 */
@@ -80,10 +80,10 @@ public class AbDownloadThread extends Thread {
 		flag = true;
 		InputStream inStream = null;
 		RandomAccessFile threadfile = null;
-		//Î´ÏÂÔØÍê³É
+		//æœªä¸‹è½½å®Œæˆ
 		if(mDownFile.getDownLength() < mDownFile.getTotalLength()){
 			try {
-				//Ê¹ÓÃGet·½Ê½ÏÂÔØ
+				//ä½¿ç”¨Getæ–¹å¼ä¸‹è½½
 				URL mUrl = new URL(mDownFile.getDownUrl());
 				HttpURLConnection http = (HttpURLConnection) mUrl.openConnection();
 				http.setConnectTimeout(5 * 1000);
@@ -92,7 +92,7 @@ public class AbDownloadThread extends Thread {
 				http.setRequestProperty("Accept-Language", "zh-CN");
 				http.setRequestProperty("Referer", mDownFile.getDownUrl()); 
 				http.setRequestProperty("Charset", "UTF-8");
-				//ÉèÖÃ»ñÈ¡ÊµÌåÊı¾İµÄ·¶Î§
+				//è®¾ç½®è·å–å®ä½“æ•°æ®çš„èŒƒå›´
 				http.setRequestProperty("Range", "bytes=" + mDownFile.getDownLength() + "-"+ mDownFile.getTotalLength());
 				http.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)");
 				http.setRequestProperty("Connection", "Keep-Alive");
@@ -138,7 +138,7 @@ public class AbDownloadThread extends Thread {
 	
 	
 	/**
-	 * ÏÂÔØÊÇ·ñÍê³É.
+	 * ä¸‹è½½æ˜¯å¦å®Œæˆ.
 	 *
 	 * @return true, if is finish
 	 */

@@ -2,10 +2,10 @@ package com.ab.db.orm.annotation;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºRelationsType.java 
- * ÃèÊö£º¹ØÁª¹ØÏµÀàĞÍ
+ * åç§°ï¼šRelationsType.java 
+ * æè¿°ï¼šå…³è”å…³ç³»ç±»å‹
  * @author zhaoqp
- * @date£º2013-10-15 ÉÏÎç9:55:13
+ * @dateï¼š2013-10-15 ä¸Šåˆ9:55:13
  * @version v1.0
  */
 public class RelationsType {

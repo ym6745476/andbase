@@ -394,7 +394,7 @@ public class RegisterActivity extends AbActivity {
 			
 			
 			//showProgressDialog();
-			showToast("演示界面,没什么用");
+			showToast("婕旂ず鐣岄潰,娌′粈涔堢敤");
 			
 		}
 	}

@@ -74,7 +74,7 @@ public class BarChart extends XYChart {
   }
 
   /**
-   * ÃèÊö£ºTODO.
+   * æè¿°ï¼šTODO.
    *
    * @param points the points
    * @param values the values
@@ -84,7 +84,7 @@ public class BarChart extends XYChart {
    * @return the clickable area[]
    * @see com.ab.view.chart.XYChart#clickableAreasForPoints(float[], double[], float, int, int)
    * @author: zhaoqp
-   * @date£º2013-6-17 ÉÏÎç9:04:48
+   * @dateï¼š2013-6-17 ä¸Šåˆ9:04:48
    * @version v1.0
    */
   @Override
@@ -115,7 +115,7 @@ public class BarChart extends XYChart {
    * @param canvas the canvas to paint to
    * @param paint the paint to be used for drawing
    * @param points the array of points to be used for drawing the series
-   * @param colors Ã¿¸öµãµÄÑÕÉ«
+   * @param colors æ¯ä¸ªç‚¹çš„é¢œè‰²
    * @param seriesRenderer the series renderer
    * @param yAxisValue the minimum value of the y axis
    * @param seriesIndex the index of the series currently being drawn

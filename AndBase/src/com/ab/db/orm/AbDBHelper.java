@@ -24,10 +24,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * 
  * Copyright (c) 2012 All rights reserved
- * Ãû³Æ£ºAbDBHelper.java 
- * ÃèÊö£ºÊÖ»údata/dataÏÂÃæµÄÊı¾İ¿â
+ * åç§°ï¼šAbDBHelper.java 
+ * æè¿°ï¼šæ‰‹æœºdata/dataä¸‹é¢çš„æ•°æ®åº“
  * @author zhaoqp
- * @date£º2013-7-23 ÉÏÎç9:47:10
+ * @dateï¼š2013-7-23 ä¸Šåˆ9:47:10
  * @version v1.0
  */
 public class AbDBHelper extends SQLiteOpenHelper{
@@ -37,13 +37,13 @@ public class AbDBHelper extends SQLiteOpenHelper{
 	
 	
 	/**
-	 * ³õÊ¼»¯Ò»¸öAbSDDBHelper.
+	 * åˆå§‹åŒ–ä¸€ä¸ªAbSDDBHelper.
 	 *
-	 * @param context Ó¦ÓÃcontext
-	 * @param name Êı¾İ¿âÃû
-	 * @param factory Êı¾İ¿â²éÑ¯µÄÓÎ±ê¹¤³§
-	 * @param version Êı¾İ¿âµÄĞÂ°æ±¾ºÅ
-	 * @param modelClasses Òª³õÊ¼»¯µÄ±íµÄ¶ÔÏó
+	 * @param context åº”ç”¨context
+	 * @param name æ•°æ®åº“å
+	 * @param factory æ•°æ®åº“æŸ¥è¯¢çš„æ¸¸æ ‡å·¥å‚
+	 * @param version æ•°æ®åº“çš„æ–°ç‰ˆæœ¬å·
+	 * @param modelClasses è¦åˆå§‹åŒ–çš„è¡¨çš„å¯¹è±¡
 	 */
 	public AbDBHelper(Context context, String name,
 			CursorFactory factory, int version,Class<?>[] modelClasses) {
@@ -53,9 +53,9 @@ public class AbDBHelper extends SQLiteOpenHelper{
 	
 	
 	/**
-     * ÃèÊö£º±íµÄ´´½¨.
+     * æè¿°ï¼šè¡¨çš„åˆ›å»º.
      *
-     * @param db Êı¾İ¿â¶ÔÏó
+     * @param db æ•°æ®åº“å¯¹è±¡
      * @see com.ab.db.orm.AbSDSQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
      */
     public void onCreate(SQLiteDatabase db) {
@@ -63,11 +63,11 @@ public class AbDBHelper extends SQLiteOpenHelper{
 	}
 
 	/**
-	 * ÃèÊö£º±íµÄÖØ½¨.
+	 * æè¿°ï¼šè¡¨çš„é‡å»º.
 	 *
-	 * @param db Êı¾İ¿â¶ÔÏó
-	 * @param oldVersion ¾É°æ±¾ºÅ
-	 * @param newVersion ĞÂ°æ±¾ºÅ
+	 * @param db æ•°æ®åº“å¯¹è±¡
+	 * @param oldVersion æ—§ç‰ˆæœ¬å·
+	 * @param newVersion æ–°ç‰ˆæœ¬å·
 	 * @see com.ab.db.orm.AbSDSQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
 	 */
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

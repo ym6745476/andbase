@@ -42,14 +42,14 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         
-	    //»ñÈ¡ListView¶ÔÏó
+	    //è·å–ListViewå¯¹è±¡
         mListView = (AbMultiColumnListView)this.findViewById(R.id.mListView);
         
-        //ListViewÊı¾İ
+        //ListViewæ•°æ®
         LinkedList<ImageInfo> list = new LinkedList<ImageInfo>();
         mNewImageList = new ArrayList<ImageInfo>();
     	
-    	//Ê¹ÓÃ×Ô¶¨ÒåµÄAdapter
+    	//ä½¿ç”¨è‡ªå®šä¹‰çš„Adapter
     	myListViewAdapter = new MultiColumnImageListAdapter(this, list);
     	mListView.setAdapter(myListViewAdapter);
     	
@@ -79,7 +79,7 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 					+ currentPage + "/24/";
 		AbHttpUtil.get(url, new AsyncHttpResponseHandler() {
         	
-        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
             public void onSuccess(String content) {
             	removeProgressDialog();
             	mNewImageList = parseJSON(content);
@@ -91,12 +91,12 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
             	
             };
             
-            // Ê§°Ü£¬µ÷ÓÃ
+            // å¤±è´¥ï¼Œè°ƒç”¨
             public void onFailure(Throwable arg0) { 
             	showToast("onFailure");
             };
             
-            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
             public void onFinish() { 
             };
             
@@ -111,7 +111,7 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 						+ currentPage + "/24/";
 		AbHttpUtil.get(url, new AsyncHttpResponseHandler() {
         	
-        	// »ñÈ¡Êı¾İ³É¹¦»áµ÷ÓÃÕâÀï
+        	// è·å–æ•°æ®æˆåŠŸä¼šè°ƒç”¨è¿™é‡Œ
             public void onSuccess(String content) {
             	mNewImageList = parseJSON(content);
             	
@@ -125,12 +125,12 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
             	
             };
             
-            // Ê§°Ü£¬µ÷ÓÃ
+            // å¤±è´¥ï¼Œè°ƒç”¨
             public void onFailure(Throwable arg0) { 
             	showToast("onFailure");
             };
             
-            // Íê³Éºóµ÷ÓÃ£¬Ê§°Ü£¬³É¹¦£¬¶¼Òªµô
+            // å®Œæˆåè°ƒç”¨ï¼Œå¤±è´¥ï¼ŒæˆåŠŸï¼Œéƒ½è¦æ‰
             public void onFinish() { 
             };
             
@@ -139,7 +139,7 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÊı¾İÀ´Ô´
+	 * æè¿°ï¼šæ•°æ®æ¥æº
 	 * @param json
 	 * @return
 	 * @throws 

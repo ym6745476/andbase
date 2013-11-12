@@ -71,13 +71,13 @@ public abstract class CropViewBase extends ImageView {
 	/** The m max zoom. */
 	float mMaxZoom;
 
-	/** ¸ßÁÁ×´Ì¬. */
+	/** é«˜äº®çŠ¶æ€. */
 	public static final int STATE_HIGHLIGHT = 0x0;
 
-	/** Í¿Ñ»×´Ì¬. */
+	/** æ¶‚é¸¦çŠ¶æ€. */
 	public static final int STATE_DOODLE = STATE_HIGHLIGHT + 1;
 
-	/** Ã»ÓĞÈÎºÎ²Ù×÷. */
+	/** æ²¡æœ‰ä»»ä½•æ“ä½œ. */
 	public static final int STATE_NONE = STATE_HIGHLIGHT + 2;
 	
 	/** The m state. */
@@ -111,7 +111,7 @@ public abstract class CropViewBase extends ImageView {
 	private Recycler mRecycler;
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param changed the changed
 	 * @param left the left
@@ -120,7 +120,7 @@ public abstract class CropViewBase extends ImageView {
 	 * @param bottom the bottom
 	 * @see android.view.View#onLayout(boolean, int, int, int, int)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:50
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:50
 	 * @version v1.0
 	 */
 	@Override
@@ -141,14 +141,14 @@ public abstract class CropViewBase extends ImageView {
 	}
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param keyCode the key code
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.view.View#onKeyDown(int, android.view.KeyEvent)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:50
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:50
 	 * @version v1.0
 	 */
 	@Override
@@ -172,12 +172,12 @@ public abstract class CropViewBase extends ImageView {
 	protected int mLastYTouchPos;
 
 	/**
-	 * ÃèÊö£ºTODO.
+	 * æè¿°ï¼šTODO.
 	 *
 	 * @param bitmap the new image bitmap
 	 * @see android.widget.ImageView#setImageBitmap(android.graphics.Bitmap)
 	 * @author: zhaoqp
-	 * @date£º2013-6-17 ÉÏÎç9:04:50
+	 * @dateï¼š2013-6-17 ä¸Šåˆ9:04:50
 	 * @version v1.0
 	 */
 	@Override

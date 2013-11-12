@@ -19,7 +19,7 @@ import java.util.List;
 
 // TODO: Auto-generated Javadoc
 /**
- * 描述：数据执行的接口.
+ * 鎻忚堪锛氭暟鎹墽琛岀殑鎺ュ彛.
  *
  * @author zhaoqp
  * @date 2011-12-10
@@ -28,9 +28,9 @@ import java.util.List;
 public abstract class AbTaskListCallback extends AbTaskCallback{
 
     /**
-	 * 描述：执行完成后回调.
-	 * 不管成功与否都会执行
-	 * @param paramList 返回的List
+	 * 鎻忚堪锛氭墽琛屽畬鎴愬悗鍥炶皟.
+	 * 涓嶇鎴愬姛涓庡惁閮戒細鎵ц
+	 * @param paramList 杩斿洖鐨凩ist
 	 */
     public abstract void update(List<?> paramList);
 	

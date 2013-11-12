@@ -20,13 +20,13 @@ public class AbHorizontalProgressBar extends View {
 	private int progress = 0;
 	private int max = 100;
 	
-	//»æÖÆ¹ì¼£
+	//ç»˜åˆ¶è½¨è¿¹
 	private Paint pathPaint = null;
 	
-	//»æÖÆÌî³ä
+	//ç»˜åˆ¶å¡«å……
 	private Paint fillPaint = null;
 	
-	//Â·¾¶¿í¶È
+	//è·¯å¾„å®½åº¦
 	private int pathWidth = 35;
 	
 	/** The width. */
@@ -35,31 +35,31 @@ public class AbHorizontalProgressBar extends View {
 	/** The height. */
 	private int height; 
 	
-	//»ÒÉ«¹ì¼£
+	//ç°è‰²è½¨è¿¹
 	private int pathColor = 0xFFF0EEDF;
 	private int pathBorderColor = 0xFFD2D1C4;
 	
-	//Ìİ¶È½¥±äµÄÌî³äÑÕÉ«
+	//æ¢¯åº¦æ¸å˜çš„å¡«å……é¢œè‰²
 	private int[] fillColors = new int[] {0xFF3DF346,0xFF02C016};
 	
-	// Ö¸¶¨ÁË¹âÔ´µÄ·½ÏòºÍ»·¾³¹âÇ¿¶ÈÀ´Ìí¼Ó¸¡µñĞ§¹û
+	// æŒ‡å®šäº†å…‰æºçš„æ–¹å‘å’Œç¯å¢ƒå…‰å¼ºåº¦æ¥æ·»åŠ æµ®é›•æ•ˆæœ
 	private EmbossMaskFilter emboss = null;
-	// ÉèÖÃ¹âÔ´µÄ·½Ïò  
+	// è®¾ç½®å…‰æºçš„æ–¹å‘  
 	float[] direction = new float[]{1,1,1};
-	//ÉèÖÃ»·¾³¹âÁÁ¶È  
+	//è®¾ç½®ç¯å¢ƒå…‰äº®åº¦  
 	float light = 0.4f;  
-	// Ñ¡ÔñÒªÓ¦ÓÃµÄ·´ÉäµÈ¼¶  
+	// é€‰æ‹©è¦åº”ç”¨çš„åå°„ç­‰çº§  
 	float specular = 6;  
-	// Ïò maskÓ¦ÓÃÒ»¶¨¼¶±ğµÄÄ£ºı  
+	// å‘ maskåº”ç”¨ä¸€å®šçº§åˆ«çš„æ¨¡ç³Š  
 	float blur = 3.5f;  
 	
-	//Ö¸¶¨ÁËÒ»¸öÄ£ºıµÄÑùÊ½ºÍ°ë¾¶À´´¦Àí Paint µÄ±ßÔµ
+	//æŒ‡å®šäº†ä¸€ä¸ªæ¨¡ç³Šçš„æ ·å¼å’ŒåŠå¾„æ¥å¤„ç† Paint çš„è¾¹ç¼˜
 	private BlurMaskFilter mBlur = null;
 	
-	//¼àÌıÆ÷
+	//ç›‘å¬å™¨
 	private AbOnProgressListener mAbOnProgressListener = null;
 
-	//viewÖØ»æµÄ±ê¼Ç
+	//viewé‡ç»˜çš„æ ‡è®°
 	private boolean reset = false;
 
 	public int getProgress() {
@@ -89,21 +89,21 @@ public class AbHorizontalProgressBar extends View {
 	public AbHorizontalProgressBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		pathPaint  = new Paint();
-		// ÉèÖÃÊÇ·ñ¿¹¾â³İ
+		// è®¾ç½®æ˜¯å¦æŠ—é”¯é½¿
 		pathPaint.setAntiAlias(true);
-		// °ïÖúÏû³ı¾â³İ
+		// å¸®åŠ©æ¶ˆé™¤é”¯é½¿
 		pathPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
-		// ÉèÖÃÖĞ¿ÕµÄÑùÊ½
+		// è®¾ç½®ä¸­ç©ºçš„æ ·å¼
 		pathPaint.setStyle(Paint.Style.FILL);
 		pathPaint.setDither(true);
 		//pathPaint.setStrokeJoin(Paint.Join.ROUND);
 		
 		fillPaint = new Paint();
-		// ÉèÖÃÊÇ·ñ¿¹¾â³İ
+		// è®¾ç½®æ˜¯å¦æŠ—é”¯é½¿
 		fillPaint.setAntiAlias(true);
-		// °ïÖúÏû³ı¾â³İ
+		// å¸®åŠ©æ¶ˆé™¤é”¯é½¿
 		fillPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
-		// ÉèÖÃÖĞ¿ÕµÄÑùÊ½
+		// è®¾ç½®ä¸­ç©ºçš„æ ·å¼
 		fillPaint.setStyle(Paint.Style.FILL);
 		fillPaint.setDither(true);
 		//fillPaint.setStrokeJoin(Paint.Join.ROUND);
@@ -122,12 +122,12 @@ public class AbHorizontalProgressBar extends View {
 		this.width = getMeasuredWidth();
 		this.height = getMeasuredHeight();
 		
-		// ÉèÖÃ»­±ÊÑÕÉ«
+		// è®¾ç½®ç”»ç¬”é¢œè‰²
 		pathPaint.setColor(pathColor);
-		// ÉèÖÃ»­±Ê¿í¶È
+		// è®¾ç½®ç”»ç¬”å®½åº¦
 		pathPaint.setStrokeWidth(pathWidth);
 				
-		//Ìí¼Ó¸¡µñĞ§¹û
+		//æ·»åŠ æµ®é›•æ•ˆæœ
 		pathPaint.setMaskFilter(emboss); 
 		canvas.drawRect(0, 0, this.width, this.height, pathPaint);
 		pathPaint.setColor(pathBorderColor);
@@ -138,10 +138,10 @@ public class AbHorizontalProgressBar extends View {
 				fillColors[0], fillColors[1], TileMode.CLAMP); 
 		fillPaint.setShader(linearGradient);
 		
-		//Ä£ºıĞ§¹û
+		//æ¨¡ç³Šæ•ˆæœ
 		fillPaint.setMaskFilter(mBlur);
 		
-		//ÉèÖÃÏßµÄÀàĞÍ,±ßÊÇÔ²µÄ
+		//è®¾ç½®çº¿çš„ç±»å‹,è¾¹æ˜¯åœ†çš„
 		fillPaint.setStrokeCap(Paint.Cap.ROUND);
 		
 		fillPaint.setStrokeWidth(pathWidth);
@@ -159,7 +159,7 @@ public class AbHorizontalProgressBar extends View {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÖØÖÃ½ø¶È
+	 * æè¿°ï¼šé‡ç½®è¿›åº¦
 	 * @throws 
 	 */
 	public void reset(){

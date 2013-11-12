@@ -24,10 +24,10 @@ import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÃèÊö£ºÍ¼Æ¬»º´æ.
+ * æè¿°ï¼šå›¾ç‰‡ç¼“å­˜.
  *
  * @author zhaoqp
- * @date£º2013-5-23 ÉÏÎç10:10:53
+ * @dateï¼š2013-5-23 ä¸Šåˆ10:10:53
  * @version v1.0
  */
 
@@ -36,7 +36,7 @@ public class AbImageCache {
 	/** 4MB. */
 	public static int cacheSize = 10 * 1024 * 1024; 
 	
-	/** ÎªÁË¼Ó¿ìËÙ¶È£¬ÔÚÄÚ´æÖĞ¿ªÆô»º´æ,×îĞÂµÄLruCache. */
+	/** ä¸ºäº†åŠ å¿«é€Ÿåº¦ï¼Œåœ¨å†…å­˜ä¸­å¼€å¯ç¼“å­˜,æœ€æ–°çš„LruCache. */
 	private static LruCache<String, Bitmap> bitmapCache = new LruCache<String, Bitmap>(cacheSize) {      
 		protected int sizeOf(String key, Bitmap bitmap) { 
 			return bitmap.getRowBytes() * bitmap.getHeight();        
@@ -44,7 +44,7 @@ public class AbImageCache {
 	
 	
 	/**
-	 * ÃèÊö£º´Ó»º´æÖĞ»ñÈ¡Õâ¸öBitmap.
+	 * æè¿°ï¼šä»ç¼“å­˜ä¸­è·å–è¿™ä¸ªBitmap.
 	 *
 	 * @param key the key
 	 * @return the bitmap from mem cache
@@ -54,9 +54,9 @@ public class AbImageCache {
 	} 
 	
 	/**
-	 * ÃèÊö£ºÔö¼ÓÒ»¸öÍ¼Æ¬µ½»º´æ.
+	 * æè¿°ï¼šå¢åŠ ä¸€ä¸ªå›¾ç‰‡åˆ°ç¼“å­˜.
 	 *
-	 * @param key  Ò»°ãÎªÒ»¸öÍøÂçÎÄ¼şµÄurl
+	 * @param key  ä¸€èˆ¬ä¸ºä¸€ä¸ªç½‘ç»œæ–‡ä»¶çš„url
 	 * @param bitmap the bitmap
 	 */
 	public static void addBitmapToMemoryCache(String key,Bitmap bitmap){
@@ -69,18 +69,18 @@ public class AbImageCache {
 	}
 	
 	/**
-	 * ÃèÊö£ºÇå¿Õ»º´æµÄBitmap.
+	 * æè¿°ï¼šæ¸…ç©ºç¼“å­˜çš„Bitmap.
 	 */
 	public static void removeAllBitmapFromCache() { 
 		  bitmapCache.evictAll();  
 	}
 	
 	/**
-     * ¸ù¾İurl¼ÆËã»º´ækey.
-     * @param url Í¼Æ¬µØÖ·.
-     * @param width Í¼Æ¬¿í¶È.
-     * @param height Í¼Æ¬¸ß¶È.
-     * @param type ´¦ÀíÀàĞÍ.
+     * æ ¹æ®urlè®¡ç®—ç¼“å­˜key.
+     * @param url å›¾ç‰‡åœ°å€.
+     * @param width å›¾ç‰‡å®½åº¦.
+     * @param height å›¾ç‰‡é«˜åº¦.
+     * @param type å¤„ç†ç±»å‹.
      */
     public static String getCacheKey(String url, int width, int height,int type) {
         return AbMd5.MD5(new StringBuilder(url.length() + 12).append("#W").append(width)
