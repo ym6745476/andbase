@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <array name="pinterest_color">
+        <item>#fafafa</item>
+        <item>#987f70</item>
+        <item>#6e6f5e</item>
+        <item>#6c6e6e</item>
+        <item>#6c6151</item>
+        <item>#2c2a29</item>
+        <item>#495e34</item>
+        <item>#6d646b</item>
+        <item>#5d7067</item>
+        <item>#cad6e6</item>
+        <item>#c3c3c5</item>
+        <item>#a29792</item>
+        <item>#7daa89</item>
+        <item>#79605f</item>
+        <item>#716560</item>
+        <item>#3a1f2e</item>
+        <item>#89804b</item>
+        <item>#c2d3b5</item>
+        <item>#e2e2e2</item>
+    </array>
+</resources>

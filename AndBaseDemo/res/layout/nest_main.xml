@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="20dip">
+    
+    <Button
+        android:id="@+id/listPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="ListView+ViewPager"/>
+    
+    <Button
+        android:id="@+id/slidingMenuPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="SlidingMenu+ViewPager"/>
+
+    <Button
+        android:id="@+id/scrollList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="ScrollView+ListView"/>
+    
+    <Button
+        android:id="@+id/scrollPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="ScrollView+ViewPager"/>
+    
+</LinearLayout>

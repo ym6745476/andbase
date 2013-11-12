@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/itemsIcon"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dip"
+        android:background="@drawable/image_bg" />
+
+    <TextView
+        android:id="@+id/itemsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/itemsIcon"
+        android:paddingLeft="5dip"
+        android:paddingTop="3dip"
+        android:textColor="@color/gray_black"
+        android:textSize="18dip" />
+
+    <TextView
+        android:id="@+id/itemsDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemsTitle"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/itemsIcon"
+        android:paddingLeft="5dip"
+        android:paddingTop="5dip"
+        android:textColor="@color/gray"
+        android:textSize="15dip" />
+
+    <RelativeLayout
+        android:id="@+id/received_progressBar"
+        android:layout_width="150dip"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/itemsTitle"
+        android:layout_toRightOf="@+id/itemsIcon" >
+
+        <ProgressBar
+            android:id="@+id/received_progress"
+            style="@style/mProgressBarHorizontal"
+            android:layout_width="150dip"
+            android:layout_height="5dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/received_progress_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/received_progress"
+            android:layout_marginLeft="10dip"
+            android:paddingBottom="2dip" />
+
+        <TextView
+            android:id="@+id/received_progress_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/received_progress"
+            android:layout_marginRight="15dip"
+            android:paddingBottom="2dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/operateBtn"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:background="@drawable/down_load" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

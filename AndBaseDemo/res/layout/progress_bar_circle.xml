@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_white"
+    android:gravity="center" 
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_white"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="210dip"
+            android:layout_height="210dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/progress_circle_bg"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/stepText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="当前"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/numberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stepText"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/maxText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numberText"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+
+        <com.ab.view.progress.AbCircleProgressBar
+            android:id="@+id/circleProgressBar"
+            android:layout_width="210dip"
+            android:layout_height="210dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</LinearLayout>

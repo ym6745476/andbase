@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dip" >
+
+    <Button
+        android:id="@+id/getBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="get请求" />
+
+    <Button
+        android:id="@+id/postBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="post请求" />
+
+    <Button
+        android:id="@+id/byteBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="返回byte[]" />
+    
+    <Button
+        android:id="@+id/fileBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="下载File " />
+    
+    <Button
+        android:id="@+id/fileUploadBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="多File上传" />
+
+</LinearLayout>

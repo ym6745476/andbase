@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingTop="2dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip">
+
+    <TextView
+        android:id="@+id/itemsTitle"
+        android:layout_width="20dip"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="15dip"/>
+
+    <EditText
+        android:id="@+id/itemsText"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dip"
+        android:textColor="@android:color/black"
+        android:textSize="15dip" />
+
+    <Button
+        android:id="@+id/modBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:text="修改" />
+
+    <Button
+        android:id="@+id/delBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:text="删除" />
+
+</LinearLayout>

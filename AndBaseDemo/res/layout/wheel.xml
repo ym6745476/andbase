@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/space_view_title" />
+
+        <LinearLayout
+            android:id="@+id/layout01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/edit_text_n"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date_picker"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="5dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/measureTimeText1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/list_divider"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/time_picker1"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="5dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/measureTimeText2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/list_divider"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/time_picker2"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="5dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/measureTimeText3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/edit_text_n"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/data1_desc"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="5dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/gray_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/dataTextView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:gravity="center_vertical|right"
+                    android:maxLength="20"
+                    android:paddingRight="80dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="70dip"
+                    android:layout_height="45dip"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/line"
+                    android:drawablePadding="5dip"
+                    android:paddingBottom="8dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="10dip"
+                    android:text="@string/data1_unit"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

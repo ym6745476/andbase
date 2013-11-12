@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="20dip">
+    
+    <Button
+        android:id="@+id/levelChart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="等级条图表"/>
+
+    <Button
+        android:id="@+id/xyLineChart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="XY线图"/>
+    
+    <Button
+        android:id="@+id/xyBarChart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="XY柱图"/>
+    
+    <Button
+        android:id="@+id/pieChart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="饼图"/>
+    
+    <Button
+        android:id="@+id/timeChart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="时间轴图"/>
+    
+     <Button
+        android:id="@+id/areaChart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="XY域图"/>
+
+</LinearLayout>

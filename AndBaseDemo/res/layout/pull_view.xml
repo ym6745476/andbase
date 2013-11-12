@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_white"
+    android:orientation="vertical" >
+
+    <com.ab.view.pullview.AbPullView
+        android:id="@+id/mPullView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </com.ab.view.pullview.AbPullView>
+
+</LinearLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_white"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/space_view_title" />
+
+    <ListView
+        android:id="@+id/mListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="1dip" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/chatFooterLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_footer_gray"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/voiceBtn"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleType="fitCenter"
+                android:background="@drawable/button_selector_chat_voice" />
+
+            <ImageButton
+                android:id="@+id/addBtn"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:gravity="center_horizontal|center_vertical"
+                android:scaleType="fitCenter"
+                android:background="@drawable/button_selector_chat_add" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip">
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="42dip"
+                android:singleLine="false"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:background="@drawable/edit_selector_chat" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="50dip"
+            android:layout_height="42dip"
+            android:layout_marginRight="3dip"
+            android:layout_marginLeft="3dip"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selector_gray"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="发送"
+            android:textColor="@color/gray_black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatAppPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_app_panel"
+        android:orientation="vertical"
+        android:paddingTop="10dip" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_panel_shade_n"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/app_panel_expression"
+                    android:textColor="@color/gray_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="表情"
+                    android:textColor="@color/gray_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_panel_shade_n"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/app_panel_pic"
+                    android:textColor="@color/gray_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="图片"
+                    android:textColor="@color/gray_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_panel_shade_n"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/app_panel_video"
+                    android:textColor="@color/gray_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="视频"
+                    android:textColor="@color/gray_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_panel_shade_n"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/app_panel_location"
+                    android:textColor="@color/gray_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="位置"
+                    android:textColor="@color/gray_black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:gravity="left">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="8dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:src="@drawable/app_panel_add_n"
+                    android:textColor="@color/gray_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="添加"
+                    android:textColor="@color/gray_black" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

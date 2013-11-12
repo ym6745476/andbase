@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dip" >
+
+    <Button
+        android:id="@+id/threadBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="单线程" />
+
+    <Button
+        android:id="@+id/queueBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="线程队列" />
+
+    <Button
+        android:id="@+id/poolBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="线程池" />
+
+    <Button
+        android:id="@+id/taskBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="异步任务" />
+
+</LinearLayout>

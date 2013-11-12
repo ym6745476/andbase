@@ -1,0 +1,187 @@
+<resources>
+
+    <string name="app_name">Android开发宝</string>
+    
+    <string name="demo_name">AbActivity用法</string>
+    <string name="down_image_name">下载图片与裁剪缩放</string>
+    <string name="pull_list_name">下拉刷新分页</string>
+    <string name="multi_column_name">瀑布流</string>
+    <string name="table_list_name">表格List</string>
+    <string name="slider_button_name">滑动按钮</string>
+    <string name="view_play_name">图片联播</string>
+    <string name="down_list">下载器</string>
+    <string name="welcome_name">欢迎页面</string>
+    <string name="level_name">等级条</string>
+    <string name="sliding_tab_name">Sliding Tab</string>
+    <string name="wheel_name">轮子选择</string>
+    <string name="photo_add_name">拍照相册选择</string>
+    <string name="chart_name">图表</string>
+    <string name="chart_line">XY线图</string>
+    <string name="chart_bar">XY柱图</string>
+    <string name="chart_pie">饼图</string>
+    <string name="area_bar">XY区域图</string>
+    <string name="undownLoad_title">未下载</string>
+    <string name="download_complete_title">下载完成</string>
+    <string name="calendar_name">日历选择器</string>
+    <string name="table_name">常规表格</string>
+    <string name="db_name">数据库操作</string>
+    <string name="db_inside_name">数据库内置存储</string>
+    <string name="db_one2one_name">一对一关联</string>
+    <string name="db_one2many_name">一对多关联</string>
+    <string name="db_many2many_name">多对多关联</string>
+    <string name="db_object_name">对象化存储</string>
+    <string name="db_sd_name">数据库SD卡</string>
+    <string name="phash_name">图片相近查询</string>
+    <string name="sliding_menu_name">侧边栏</string>
+    <string name="carousel_name">旋转木马</string>
+    <string name="progressbar_name">进度条</string>
+    <string name="progressbar_circle_name">环形进度条</string>
+    <string name="progressbar_horizontal_name">水平进度条</string>
+    <string name="ioc_name">ioc示例</string>
+    <string name="rotate3d_name">3D翻转</string>
+    <string name="http_name">Http</string>
+    <string name="thread_name">线程管理</string>
+    <string name="nest_name">嵌套问题</string>
+    <string name="list_pager_name">ListView与ViewPager组合</string>
+    <string name="sliding_menu_pager_name">侧边栏与ViewPager组合</string>
+    <string name="scene_name">场景化UI</string>
+    <string name="analog_clock_name">圆形挂钟</string>
+    <string name="number_clock_name">数字时钟</string>
+    <string name="desk_calendar_name">台历</string>
+    
+    
+    
+    <string name="register_name">新用户注册</string>
+    <string name="blog_name">博客空间</string>
+    <string name="friend_name">朋友圈</string>
+    
+    <string name="total">总条数:0</string> 
+    <string name="current">当前页:1</string>
+    
+    <string name="okBtn">确定</string>
+    <string name="cancelBtn">取消</string>
+    <string name="see">查看</string>
+    <string name="about">关于</string>
+    <string name="version_lable">程序版本：</string>
+    <string name="copyright">版权所有  CopyRight 2012 418log.org</string>
+    <string name="about_desc">\t\tAndroid开发宝(AndBase开发框架)
+      \n\t\tandbase是为Android开发者量身打造的一款开源类库产品，
+               您可以在本站中获取到最新的代码，示例以及开发文档。
+      \n\t\tandbase中包含了大量的开发常用手段，如网络下载数据的方法，Http请求,线程与线程池的管理，
+	      图片缓存管理LruCache，图片文件下载上传，简单轻量支持注解自动建表的ORM框架，
+	      并对常用工具类入字符串，日期，文件处理，图片处理等进行了进一步的封装，
+	      能够使您的应用在团队开发中减少冗余代码，很大的提高了代码的维护性与开发高效行，
+	      能很好的规避由于开发疏忽而导致常犯的错误。 
+	  \n\t\t同时andbase封装了大量的常用且系统本身没有的控件。功能很多，
+	      但不会使你的程序包变大，却能大幅度缩小您的程序。
+	      而这一切都是免费的。 
+	   \n
+       \n\t\t官方主页：www.418log.org
+       \n\t\tQQ群：38535812
+    </string>
+    
+    <string name="title_transparent_desc">
+                设置标题栏透明,
+                在启动Activity时添加参数：
+      intent.putExtra(
+         AbConstant.TITLE_TRANSPARENT_FLAG
+       , AbConstant.TITLE_TRANSPARENT);
+                同时布局使用ScrollView，
+                并向下偏移标题栏的高度
+                \n^\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|
+                \n|\n|\n|\n|\n|\n|\n|\n|\n|
+    </string>
+    
+    <string name="date_picker">年月日：</string>
+    <string name="time_picker1">月日时分：</string>
+    <string name="time_picker2">时分：</string>
+    <string name="data1_desc">选择：</string>
+    <string name="data1_unit">单位</string>
+    
+    
+    
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="userName">用户名</string>
+    <string name="userPwd">密码</string>
+    <string name="rem_pwd">记住密码</string>
+    <string name="firm_pwd">确认密码</string>
+    <string name="agreement">同意注册协议</string>
+    <string name="email">邮箱,用于找回密码</string>
+    <string name="find_pwd">找回密码</string>
+    
+    <string name="share_desc">分享什么呢</string>
+    
+    <string name="agreement_name">用户注册协议</string>
+    <string name="error_agreement">请阅读用户协议条款并同意!</string>
+    
+    <string name="setting_user_info">个人信息</string>
+    
+    <string name="setting_pwd">修改密码</string>
+    <string name="modify_pwd_name">修改密码</string>
+    <string name="user_pwd">旧密码</string>
+    <string name="user_newpwd">新密码</string>
+    <string name="user_newpwd2">确认新密码</string>
+    <string name="user_email">邮箱</string>
+    
+    <string name="error_name">请输入用户名！</string>
+    <string name="error_name_length1">用户名长度不能少于3个字符</string>
+    <string name="error_name_length2">用户名长度不能超过20个字符</string>
+    <string name="error_name_expr">用户名只能是字母和数字</string>
+    
+    <string name="error_pwd">请输入密码！</string>
+    <string name="error_pwd_match">两次密码输入不一致！</string>
+    <string name="error_pwd_length1">密码长度不能少于6个字符</string>
+    <string name="error_pwd_length2">密码长度不能超过20个字符</string>
+    <string name="error_pwd_expr">密码只能是字母和数字</string>
+    
+    <string name="error_pwd_old">请输入旧密码！</string>
+    <string name="error_pwd_new">请输入新密码！</string>
+    
+    <string name="error_email">请输入邮箱！</string>
+    <string name="error_email_expr">邮箱格式不正确!</string>
+    <string name="error_email_expr2">邮箱不能输入中文!</string>
+    
+    <string name="error_nickname">请输入昵称！</string>
+    <string name="error_nickname_length1">昵称长度不能少于3个字符</string>
+    <string name="error_nickname_length2">昵称长度不能超过20个字符</string>
+    <string name="error_nickname_expr">昵称格式不正确</string>
+    
+    <string name="error_city">请输入城市！</string>
+    <string name="error_city_length1">城市长度不能少于2个字符</string>
+    <string name="error_city_length2">城市长度不能超过20个字符</string>
+    <string name="error_city_expr">城市格式不正确</string>
+    
+    <string name="error_intro_length1">个人说明长度不能少于2个字符</string>
+    <string name="error_intro_length2">个人说明长度不能超过80个字符</string>
+    
+    <string name="error_age">请输入年龄！</string>
+    <string name="error_age_length1">年龄不能小于0</string>
+    <string name="error_age_length2">年龄不能大于100个字符</string>
+    <string name="error_age_expr">年龄必须为数字</string>
+    
+    <string name="error_params_expr">包含不支持的文字格式!</string>
+    
+    
+    <string name="agreement_desc">
+                    提醒：本程序是一款Android学习产品，使用本程序即同意如下条款。
+        \n1、服务修订
+		\n本程序所有者保留随时修改或中断服务而不需通知用户的权利。 
+		\n2、用户隐私制度
+		\n尊重用户个人隐私是本公司的一项基本政策。本公司一定不会在用户不允许的情况下公开、或透露用户的注册资料。 
+		\n3、用户的帐号、密码和安全性
+		\n如果您未保管好自己的帐号和密码而对您或第三方造成的损害，责任由用户个人承担。 
+		\n4、拒绝提供担保和免责声明
+		\n用户明确同意使用本项服务的风险由用户个人承担。服务提供是建立在免费的基础上。本公司不提供任何类型的担保。 
+		\n5、用户管理
+		\n用户单独承担发布内容的责任。用户对服务的使用是根据所有适用于服务的地方法律、国家法律和国际法律标准的。
+		\n6、通告
+		\n所有发给用户的通告都可通过电子邮件或常规的信件传送。  
+    </string>
+    <string name="read_desc">请仔细阅读如下条款</string>
+    <string name="register_protocol">同意注册协议</string>
+    
+    <string name="clear_cache">清空缓存</string>
+    
+</resources>
+

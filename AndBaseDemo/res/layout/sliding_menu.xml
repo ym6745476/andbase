@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dip" >
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="侧边1" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="左边的" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="右边的" />
+    
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="左右的" />
+    
+     <Button
+        android:id="@+id/btn5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="标题栏不动" />
+     
+     <Button
+        android:id="@+id/btn6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Scale动画" />
+     
+     <Button
+        android:id="@+id/btn7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Slide Up动画" />
+     
+     <Button
+        android:id="@+id/btn8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Zoom动画" />
+
+</LinearLayout>

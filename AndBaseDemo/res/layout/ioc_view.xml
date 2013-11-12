@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/mText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="看我,再看我"
+        android:padding="20dip"
+        android:textSize="22dip" />
+
+    <Button
+        android:id="@+id/mBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_below="@id/mText"
+        android:layout_centerHorizontal="true"
+        android:text="点击测试" />
+
+</RelativeLayout>

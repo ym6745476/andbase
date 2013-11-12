@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- slidingmenu配置 -->
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="shadow_width">16dp</dimen>
+
+</resources>

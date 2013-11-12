@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <declare-styleable name="RotateView"> 
+        <attr name="pointX" format="integer" />
+        <attr name="pointY" format="integer" />
+        <attr name="radius" format="integer" />
+        <attr name="layout_center" format="boolean" /> 
+    </declare-styleable> 
+    
+     <declare-styleable name="PlayView">
+        <attr name="displayDrawable" format="reference|color" />
+        <attr name="hideDrawable" format="reference|color" />
+        <attr name="viewCount" format="integer" />
+        <attr name="progressPoint" format="reference|color" />
+        <attr name="progressBar" format="reference|color" />
+        <attr name="progressBg" format="reference|color" />
+        <attr name="offsetTop" format="integer" />
+        <attr name="background" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="com.baidu.mobads.AdView">
+		<attr name="adSize" format="integer" />
+	</declare-styleable> 
+    
+</resources>   

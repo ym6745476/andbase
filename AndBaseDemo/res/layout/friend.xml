@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <View
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <com.ab.view.sliding.AbSlidingPlayView
+        android:id="@+id/mAbSlidingPlayView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/blank" >
+    </com.ab.view.sliding.AbSlidingPlayView>
+
+</RelativeLayout>

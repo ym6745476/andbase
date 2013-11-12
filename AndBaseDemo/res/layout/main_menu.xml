@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/left_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/user_photo"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_margin="10dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo01" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_toRightOf="@+id/user_photo"
+            android:drawablePadding="3dip"
+            android:paddingTop="10dip"
+            android:text="加载中..."
+            android:textColor="@color/gray_white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/user_photo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/sunshineView"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sunshine" />
+
+            <TextView
+                android:id="@+id/user_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dip"
+                android:text="0"
+                android:textColor="@color/gray_white"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/menu_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@drawable/list_divider"
+        android:childIndicator="@null"
+        android:groupIndicator="@null"
+        android:listSelector="@drawable/left_list_item_bg"
+        android:scrollbars="none" >
+    </ExpandableListView>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="20dip"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/cacheClearBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector_green"
+            android:text="@string/clear_cache"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="20dip">
+    
+    <Button
+        android:id="@+id/insideSample"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="单表操作(内置存储)"/>
+    
+    <Button
+        android:id="@+id/sdSample"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="单表操作(SD卡)"/>
+
+    <Button
+        android:id="@+id/one2one"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="一对一关联"/>
+    
+    <Button
+        android:id="@+id/one2many"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="一对多，多对多"/>
+    
+     <Button
+        android:id="@+id/object"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="对象化存储"/>
+    
+
+</LinearLayout>
