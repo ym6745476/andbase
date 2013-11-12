@@ -86,7 +86,7 @@ public class AbMultiColumnBaseListView extends AbMultiColumnAbsListView {
 	private Rect mFrameRect = new Rect();
 
 	/**
-	 * Inits the.
+	 * ≥ı ºªØ.
 	 *
 	 * @param attrs the attrs
 	 */
