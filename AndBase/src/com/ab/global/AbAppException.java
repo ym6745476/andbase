@@ -20,6 +20,7 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.conn.HttpHostConnectException;
 
 import com.ab.util.AbStrUtil;
@@ -62,15 +63,18 @@ public class AbAppException extends Exception {
 				msg = AbConstant.SOCKETTIMEOUTEXCEPTION;
 			}else if( e instanceof NullPointerException) {  
 				msg = AbConstant.NULLPOINTEREXCEPTION;
+			}else if( e instanceof ClientProtocolException) {  
+				msg = AbConstant.CLIENTPROTOCOLEXCEPTION;
 			}else {
 				if (e == null || AbStrUtil.isEmpty(e.getMessage())) {
 					msg = AbConstant.NULLMESSAGEEXCEPTION;
+				}else{
+				    msg = e.getMessage();
 				}
-				msg = e.getMessage();
 			}
 		} catch (Exception e1) {
 		}
-
+		
 	}
 
 	/**

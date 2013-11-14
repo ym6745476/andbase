@@ -27,22 +27,7 @@ public class AbConstant {
 	
 	/** SharePreferences文件名. */
 	public static final String SHAREPATH = "app_share";
-    
-	/** 数据状态：可用. */
-    public static final int STATEYES = 1;
-    
-    /** 数据状态：不可用. */
-    public static final int STATENO = 0;
-    
-    /** 数据状态：全部. */
-    public static final int STATEALL = 9;
-    
-    /** 数据状态：有. */
-    public static final int HAVE = 1;
-    
-    /** 数据状态：没有. */
-    public static final int NOTHAVE = 0;
-    
+	
     /** 图片处理：裁剪. */
 	public static final int CUTIMG = 0;
 	
@@ -114,12 +99,13 @@ public class AbConstant {
 	/** 未处理的HTTP返回码. */
 	public static final int UNTREATED_CODE = 700;
 	
-	public static final String CONNECTEXCEPTION = "无法连接网络，请检查网络配置";
-	public static final String UNKNOWNHOSTEXCEPTION = "无法连接远程服务";
-	public static final String SOCKETEXCEPTION = "网络有错误，请重试";
+	public static final String CONNECTEXCEPTION = "无法连接到网络";
+	public static final String UNKNOWNHOSTEXCEPTION = "连接远程地址失败";
+	public static final String SOCKETEXCEPTION = "网络连接出错，请重试";
 	public static final String SOCKETTIMEOUTEXCEPTION = "连接超时，请重试";
 	public static final String NULLPOINTEREXCEPTION = "抱歉，远程服务出错了";
 	public static final String NULLMESSAGEEXCEPTION = "抱歉，程序出错了";
+	public static final String CLIENTPROTOCOLEXCEPTION = "Http请求参数错误";
 	
 	/** 参数个数不够. */
 	public static final String MISSINGPARAMETERS = "参数没有包含足够的值";

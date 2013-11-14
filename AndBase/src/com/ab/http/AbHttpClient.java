@@ -214,12 +214,12 @@ public class AbHttpClient {
 				  }
 			  }else{
 				  String content = EntityUtils.toString(mHttpEntity);
-				  responseListener.sendFailureMessage(statusCode, content, null);
+				  responseListener.sendFailureMessage(statusCode, content, new AbAppException(AbConstant.UNKNOWNHOSTEXCEPTION));
 			  }
 		} catch (Exception e) {
 			e.printStackTrace();
 			//发送失败消息
-			responseListener.sendFailureMessage(AbConstant.UNTREATED_CODE,e.getMessage(),e);
+			responseListener.sendFailureMessage(AbConstant.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
 		}finally{
 			responseListener.sendFinishMessage();
 		}
@@ -287,13 +287,13 @@ public class AbHttpClient {
 				  }
 			  }else{
 				  String content = EntityUtils.toString(mHttpEntity);
-				  responseListener.sendFailureMessage(statusCode, content, null);
+				  responseListener.sendFailureMessage(statusCode, content, new AbAppException(AbConstant.UNKNOWNHOSTEXCEPTION));
 			  }
 			  
 		} catch (Exception e) {
 			e.printStackTrace();
 			//发送失败消息
-			responseListener.sendFailureMessage(AbConstant.UNTREATED_CODE,e.getMessage(),e);
+			responseListener.sendFailureMessage(AbConstant.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
 		}finally{
 			responseListener.sendFinishMessage();
 		}

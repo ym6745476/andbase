@@ -279,7 +279,7 @@ public class HttpActivity extends AbActivity {
 		            	numberText = (TextView) v.findViewById(R.id.numberText);
 		        		maxText = (TextView) v.findViewById(R.id.maxText);
 		        		
-		        		maxText.setText("/"+String.valueOf(max));
+		        		maxText.setText(progress+"/"+String.valueOf(max));
 		        		mAbProgressBar.setMax(max);
 		        		mAbProgressBar.setProgress(progress);
 		            	
@@ -339,11 +339,11 @@ public class HttpActivity extends AbActivity {
 					e.printStackTrace();
 				}
 				
-				mAbHttpUtil.post(url, params, new AbFileHttpResponseListener() {
+				mAbHttpUtil.post(url, params, new AbStringHttpResponseListener() {
 
 					
 					@Override
-					public void onSuccess(int statusCode, File file) {
+					public void onSuccess(int statusCode, String content) {
 						showToast("onSuccess");
 					}
 
@@ -357,7 +357,7 @@ public class HttpActivity extends AbActivity {
 		            	numberText = (TextView) v.findViewById(R.id.numberText);
 		        		maxText = (TextView) v.findViewById(R.id.maxText);
 		        		
-		        		maxText.setText("/"+String.valueOf(max));
+		        		maxText.setText(progress+"/"+String.valueOf(max));
 		        		mAbProgressBar.setMax(max);
 		        		mAbProgressBar.setProgress(progress);
 		            	
