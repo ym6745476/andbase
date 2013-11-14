@@ -28,9 +28,9 @@ import android.widget.TextView;
 import com.ab.bitmap.AbImageCache;
 import com.ab.bitmap.AbImageDownloader;
 import com.ab.global.AbConstant;
-import com.ab.task.AbAsyncTask;
-import com.ab.task.AbTaskCallback;
+import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.util.AbFileUtil;
 import com.andbase.R;
 import com.andbase.blog.WebActivity;
@@ -88,10 +88,10 @@ public class MainMenuFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				mActivity.showProgressDialog("正在清空缓存...");
-				AbAsyncTask task = new AbAsyncTask();
+				AbTask task = new AbTask();
 				//定义异步执行的对象
 		    	final AbTaskItem item = new AbTaskItem();
-				item.callback = new AbTaskCallback() {
+				item.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {

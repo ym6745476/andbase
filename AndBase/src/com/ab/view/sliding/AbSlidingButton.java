@@ -37,7 +37,13 @@ import com.ab.view.listener.AbOnChangeListener;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbSliderButton.
+ * 
+ * Copyright (c) 2012 All rights reserved
+ * 名称：AbSlidingButton.java 
+ * 描述：滑动按钮
+ * @author zhaoqp
+ * @date：2013-11-14 上午11:31:21
+ * @version v1.0
  */
 public class AbSlidingButton extends ViewGroup implements OnGestureListener{
 	
@@ -64,8 +70,8 @@ public class AbSlidingButton extends ViewGroup implements OnGestureListener{
 	
 	/** The is aimation moving. */
 	private boolean isAimationMoving = false;
-	//0关  1开  2关中  3开中  
-	/** The state. */
+	
+	/** 0关  1开  2关中  3开中  . */
 	private int state = 0;
 	
 	/** The a. */
@@ -76,20 +82,20 @@ public class AbSlidingButton extends ViewGroup implements OnGestureListener{
 	
 	/** The btn height. */
 	int btnHeight = 40;
-	//移动的距离
-	/** The move width. */
+	
+	/** 移动的距离. */
 	int moveWidth = 45;
-	//每次移动的距离
-	/** The move p dis. */
+	
+	/** 每次移动的距离. */
 	int movePDis = 5;
-	//覆盖按钮的宽
-	/** The Width offset. */
+	
+	/** 覆盖按钮的宽. */
 	int WidthOffset = 5;
 	
 	/** The detector. */
 	private GestureDetector detector;
-	//改变事件
-	/** The m switcher change listener. */
+	
+	/** 改变事件. */
 	private AbOnChangeListener mSwitcherChangeListener;
 	
 	/** The m handler. */

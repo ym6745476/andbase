@@ -55,12 +55,12 @@ public class AbTaskQueue extends Thread {
         @Override 
         public void handleMessage(Message msg) { 
         	AbTaskItem item = (AbTaskItem)msg.obj; 
-        	if(item.getCallback() instanceof AbTaskListCallback){
-        		((AbTaskListCallback)item.callback).update((List<?>)item.getResult()); 
-        	}else if(item.getCallback() instanceof AbTaskObjectCallback){
-        		((AbTaskObjectCallback)item.callback).update(item.getResult()); 
+        	if(item.getListener() instanceof AbTaskListListener){
+        		((AbTaskListListener)item.listener).update((List<?>)item.getResult()); 
+        	}else if(item.getListener() instanceof AbTaskObjectListener){
+        		((AbTaskObjectListener)item.listener).update(item.getResult()); 
         	}else{
-        		item.callback.update(); 
+        		item.listener.update(); 
         	}
         } 
     }; 
@@ -144,8 +144,8 @@ public class AbTaskQueue extends Thread {
             
 					AbTaskItem item  = mAbTaskItemList.remove(0);
 					//定义了回调
-				    if (item.callback != null) { 
-				    	item.callback.get();
+				    if (item.listener != null) { 
+				    	item.listener.get();
 				    	//交由UI线程处理 
 				        Message msg = handler.obtainMessage(); 
 				        msg.obj = item; 

@@ -284,7 +284,7 @@ public class MainActivity extends AbActivity {
    public void queryUserData(){
 		//查询数据
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
-		
+		mAbStorageQuery.equals("is_login_user", true);
 		//无sql存储的查询
 		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao, new AbDataInfoListener(){
 

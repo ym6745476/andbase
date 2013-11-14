@@ -43,7 +43,7 @@ public class AbImageDownloadItem {
 	public Bitmap bitmap;
 	
 	/** 下载完成的回调接口. */
-	public AbImageDownloadCallback callback;
+	public AbImageDownloadListener listener;
 
 	public String getImageUrl() {
 		return imageUrl;
@@ -85,14 +85,13 @@ public class AbImageDownloadItem {
 		this.bitmap = bitmap;
 	}
 
-	public AbImageDownloadCallback getCallback() {
-		return callback;
+	public AbImageDownloadListener getListener() {
+		return listener;
 	}
 
-	public void setCallback(AbImageDownloadCallback callback) {
-		this.callback = callback;
+	public void setListener(AbImageDownloadListener listener) {
+		this.listener = listener;
 	}
-	
 	
 
 }

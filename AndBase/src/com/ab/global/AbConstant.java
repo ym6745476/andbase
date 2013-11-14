@@ -109,13 +109,19 @@ public class AbConstant {
 	/** The Constant DIALOGTOP. */
 	public static final int DIALOGTOP = 3;
 	
-	/** 缓存的几张默认的图片. */
-	public static final String IMAGEERRORURL = "image/image_error.png";
+	/** 连接失败的HTTP返回码. */
+	public static final int CONNECT_FAILURE_CODE = 600;
+	/** 未处理的HTTP返回码. */
+	public static final int UNTREATED_CODE = 700;
 	
-	/** The Constant IMAGELOADINGURL. */
-	public static final String IMAGELOADINGURL = "image/image_loading.png";
+	public static final String CONNECTEXCEPTION = "无法连接网络，请检查网络配置";
+	public static final String UNKNOWNHOSTEXCEPTION = "无法连接远程服务";
+	public static final String SOCKETEXCEPTION = "网络有错误，请重试";
+	public static final String SOCKETTIMEOUTEXCEPTION = "连接超时，请重试";
+	public static final String NULLPOINTEREXCEPTION = "抱歉，远程服务出错了";
+	public static final String NULLMESSAGEEXCEPTION = "抱歉，程序出错了";
 	
-	/** The Constant IMAGENOURL. */
-	public static final String IMAGENOURL = "image/image_no.png";
+	/** 参数个数不够. */
+	public static final String MISSINGPARAMETERS = "参数没有包含足够的值";
    
 }

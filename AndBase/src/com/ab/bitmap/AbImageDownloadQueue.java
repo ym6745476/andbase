@@ -58,7 +58,7 @@ public class AbImageDownloadQueue extends Thread {
         public void handleMessage(Message msg) { 
         	//if(D)Log.d(TAG, "任务callback handleMessage...");
             AbImageDownloadItem item = (AbImageDownloadItem)msg.obj; 
-            item.callback.update(item.bitmap, item.imageUrl); 
+            item.listener.update(item.bitmap, item.imageUrl); 
         } 
     }; 
     
@@ -105,7 +105,7 @@ public class AbImageDownloadQueue extends Thread {
     	if(item.bitmap == null){
     			addDownloadItem(item); 
 		}else{
-    		if (item.callback != null) {
+    		if (item.listener != null) {
                 Message msg = handler.obtainMessage(); 
                 msg.obj = item; 
                 handler.sendMessage(msg); 
@@ -151,8 +151,7 @@ public class AbImageDownloadQueue extends Thread {
                 String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
                 AbImageCache.addBitmapToMemoryCache(cacheKey,item.bitmap);                                           
                 //需要执行回调来显示图片
-                if (item.callback != null) { 
-                	//if(D)Log.d(TAG, "任务callback...");
+                if (item.listener != null) { 
                     //交由UI线程处理 
                     Message msg = handler.obtainMessage(); 
                     msg.obj = item; 

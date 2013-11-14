@@ -51,7 +51,7 @@ public class AbTaskPool{
 	/** 固定5个线程来执行任务. */
 	private static int nThreads  = 5;
 	
-	/** The executor service. */
+	/** 线程执行器. */
 	private static ExecutorService executorService = null; 
 	
 	/** 下载完成后的消息句柄. */
@@ -59,12 +59,12 @@ public class AbTaskPool{
         @Override 
         public void handleMessage(Message msg) { 
         	AbTaskItem item = (AbTaskItem)msg.obj; 
-        	if(item.getCallback() instanceof AbTaskListCallback){
-        		((AbTaskListCallback)item.callback).update((List<?>)item.getResult()); 
-        	}else if(item.getCallback() instanceof AbTaskObjectCallback){
-        		((AbTaskObjectCallback)item.callback).update(item.getResult()); 
+        	if(item.getListener() instanceof AbTaskListListener){
+        		((AbTaskListListener)item.listener).update((List<?>)item.getResult()); 
+        	}else if(item.getListener() instanceof AbTaskObjectListener){
+        		((AbTaskObjectListener)item.listener).update(item.getResult()); 
         	}else{
-        		item.callback.update(); 
+        		item.listener.update(); 
         	}
         } 
     }; 
@@ -104,15 +104,15 @@ public class AbTaskPool{
     		public void run() {
     			try {
     				//定义了回调
-                    if (item.callback != null) { 
-                    	item.callback.get();
+                    if (item.listener != null) { 
+                    	item.listener.get();
                     	//交由UI线程处理 
                         Message msg = handler.obtainMessage(); 
                         msg.obj = item; 
                         handler.sendMessage(msg); 
                     }                              
     			} catch (Exception e) { 
-    				throw new RuntimeException(e);
+    				e.printStackTrace();
     			}                         
     		}                 
     	});                 

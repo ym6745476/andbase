@@ -5,12 +5,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ab.activity.AbActivity;
-import com.ab.task.AbAsyncTask;
-import com.ab.task.AbAsyncThread;
-import com.ab.task.AbTaskCallback;
+import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskPool;
 import com.ab.task.AbTaskQueue;
+import com.ab.task.AbThread;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
@@ -47,10 +47,10 @@ public class ThreadControlActivity extends AbActivity {
 			public void onClick(View arg0) {
 				//显示进度框
 				showProgressDialog();
-				AbAsyncThread mAbTaskThread = new AbAsyncThread();
+				AbThread mAbTaskThread = new AbThread();
 				//定义异步执行的对象
 		    	final AbTaskItem item = new AbTaskItem();
-				item.callback = new AbTaskCallback() {
+				item.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {
@@ -85,7 +85,7 @@ public class ThreadControlActivity extends AbActivity {
 				AbTaskQueue mAbTaskQueue = AbTaskQueue.getInstance();
 				//定义异步执行的对象
 		    	AbTaskItem item1 = new AbTaskItem();
-				item1.callback = new AbTaskCallback() {
+				item1.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {
@@ -104,7 +104,7 @@ public class ThreadControlActivity extends AbActivity {
 				};
 				
 				AbTaskItem item2 = new AbTaskItem();
-				item2.callback = new AbTaskCallback() {
+				item2.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {
@@ -147,7 +147,7 @@ public class ThreadControlActivity extends AbActivity {
 				AbTaskPool mAbTaskPool = AbTaskPool.getInstance();
 				//定义异步执行的对象
 		    	final AbTaskItem item = new AbTaskItem();
-				item.callback = new AbTaskCallback() {
+				item.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {
@@ -177,10 +177,10 @@ public class ThreadControlActivity extends AbActivity {
 			@Override
 			public void onClick(View arg0) {
 				showProgressDialog();
-				AbAsyncTask task = new AbAsyncTask();
+				AbTask task = new AbTask();
 				//定义异步执行的对象
 		    	final AbTaskItem item = new AbTaskItem();
-				item.callback = new AbTaskCallback() {
+				item.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {

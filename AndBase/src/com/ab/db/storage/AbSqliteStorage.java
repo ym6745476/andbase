@@ -23,9 +23,9 @@ import com.ab.db.orm.dao.AbDBDaoImpl;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataInfoListener;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataInsertListener;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataOperationListener;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
-import com.ab.task.AbTaskListCallback;
+import com.ab.task.AbTaskListListener;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskQueue;
 
 // TODO: Auto-generated Javadoc
@@ -96,7 +96,7 @@ public class AbSqliteStorage {
 		 if (entity != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.callback = new AbTaskCallback() {
+	    	item.listener = new AbTaskListener() {
 				
 				@Override
 				public void update() {
@@ -145,7 +145,7 @@ public class AbSqliteStorage {
 		 if (entityList != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.callback = new AbTaskCallback() {
+	    	item.listener = new AbTaskListener() {
 				
 				@Override
 				public void update() {
@@ -194,7 +194,7 @@ public class AbSqliteStorage {
 	public <T> void findData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataInfoListener paramDataInsertListener){
 		     
 	    	final AbTaskItem item = new AbTaskItem();
-	    	item.callback = new AbTaskListCallback() {
+	    	item.listener = new AbTaskListListener() {
 				
 				@Override
 				public void update(List<?> paramList) {
@@ -240,7 +240,7 @@ public class AbSqliteStorage {
 		 if (entity != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.callback = new AbTaskListCallback() {
+	    	item.listener = new AbTaskListListener() {
 				
 				@Override
 				public void update(List<?> paramList) {
@@ -290,7 +290,7 @@ public class AbSqliteStorage {
 		 if (entityList != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.callback = new AbTaskCallback() {
+	    	item.listener = new AbTaskListener() {
 				
 				@Override
 				public void update() {
@@ -339,7 +339,7 @@ public class AbSqliteStorage {
 		 
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.callback = new AbTaskCallback() {
+	    	item.listener = new AbTaskListener() {
 				
 				@Override
 				public void update() {

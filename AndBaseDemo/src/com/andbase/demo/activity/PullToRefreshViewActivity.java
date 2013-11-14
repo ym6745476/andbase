@@ -7,8 +7,8 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskQueue;
 import com.ab.view.listener.AbOnRefreshListener;
 import com.ab.view.pullview.AbPullView;
@@ -50,7 +50,7 @@ public class PullToRefreshViewActivity extends AbActivity {
 
     	//定义查询的事件
     	final AbTaskItem item = new AbTaskItem();
-		item.callback = new AbTaskCallback() {
+		item.listener = new AbTaskListener() {
 
 			@Override
 			public void update() {

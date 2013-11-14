@@ -23,9 +23,9 @@ import com.ab.download.AbDownloadProgressListener;
 import com.ab.download.AbDownloadThread;
 import com.ab.download.AbFileDownloader;
 import com.ab.download.DownFile;
-import com.ab.task.AbAsyncThread;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
+import com.ab.task.AbThread;
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbStrUtil;
 import com.andbase.R;
@@ -187,9 +187,9 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 				        	holder.received_progressBar.setVisibility(View.VISIBLE);
 				        	holder.operateBtn.setBackgroundResource(R.drawable.down_pause);
 				        	mDownFile.setState(Constant.downInProgress);
-				        	AbAsyncThread mAbHttpThread = new AbAsyncThread();
+				        	AbThread mAbHttpThread = new AbThread();
 							final AbTaskItem item = new AbTaskItem();
-							item.callback = new AbTaskCallback() {
+							item.listener = new AbTaskListener() {
 
 								@Override
 								public void update() {

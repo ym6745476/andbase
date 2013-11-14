@@ -17,8 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskQueue;
 import com.ab.view.listener.AbOnChangeListener;
 import com.ab.view.listener.AbOnItemClickListener;
@@ -90,7 +90,7 @@ public class ListNestViewPagerActivity extends AbActivity {
 
     	//定义两种查询的事件
     	final AbTaskItem item1 = new AbTaskItem();
-		item1.callback = new AbTaskCallback() {
+		item1.listener = new AbTaskListener() {
 
 			@Override
 			public void update() {
@@ -125,7 +125,7 @@ public class ListNestViewPagerActivity extends AbActivity {
 		};
 		
 		final AbTaskItem item2 = new AbTaskItem();
-		item2.callback = new AbTaskCallback() {
+		item2.listener = new AbTaskListener() {
 
 			@Override
 			public void update() {

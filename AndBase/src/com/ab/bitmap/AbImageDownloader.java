@@ -131,7 +131,7 @@ public class AbImageDownloader {
     		}
     		
     		//下载完成后更新界面
-            item.callback = new AbImageDownloadCallback() { 
+            item.listener = new AbImageDownloadListener() { 
                 @Override 
                 public void update(Bitmap bitmap, String imageUrl) { 
                 	//未设置加载中的图片，并且设置了隐藏的View

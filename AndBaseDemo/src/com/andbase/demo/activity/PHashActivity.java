@@ -32,8 +32,8 @@ import android.widget.LinearLayout;
 import com.ab.activity.AbActivity;
 import com.ab.global.AbConstant;
 import com.ab.global.AbResult;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskPool;
 import com.ab.util.AbAppUtil;
 import com.ab.util.AbFileUtil;
@@ -180,7 +180,7 @@ public class PHashActivity extends AbActivity {
 			public void onClick(View v) {
 				showProgressDialog();
 				final AbTaskItem item = new AbTaskItem();
-				item.callback = new AbTaskCallback() {
+				item.listener = new AbTaskListener() {
 
 					@Override
 					public void update() {

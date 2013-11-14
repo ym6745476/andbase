@@ -12,8 +12,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.ab.activity.AbActivity;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskPool;
 import com.ab.view.listener.AbOnItemClickListener;
 import com.ab.view.table.AbCellType;
@@ -132,7 +132,7 @@ public class TableDataListActivity1 extends AbActivity {
 		//查询数据
 		showProgressDialog();
 		final AbTaskItem item = new AbTaskItem();
-		item.callback = new AbTaskCallback() {
+		item.listener = new AbTaskListener() {
 
 			@Override
 			public void update() {

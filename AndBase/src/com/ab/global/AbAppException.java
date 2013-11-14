@@ -20,7 +20,9 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
-import android.text.TextUtils;
+import org.apache.http.conn.HttpHostConnectException;
+
+import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -36,32 +38,35 @@ public class AbAppException extends Exception {
 	private static final long serialVersionUID = 1;
 
 	
-	/** The msg. */
+	/** 异常消息. */
 	private String msg = null;
 
 	/**
-	 * Instantiates a new ab app exception.
+	 * 构造异常类.
 	 *
-	 * @param e the e
+	 * @param e 异常
 	 */
 	public AbAppException(Exception e) {
 		super();
 
 		try {
-			if (e instanceof ConnectException) {
-				msg = "无法连接网络，请检查网络配置";
-			} 
-			else if (e instanceof UnknownHostException) {
-				msg = "不能解析的服务地址";
+			if( e instanceof HttpHostConnectException) {  
+				msg = AbConstant.UNKNOWNHOSTEXCEPTION;
+			}else if (e instanceof ConnectException) {
+				msg = AbConstant.CONNECTEXCEPTION;
+			}else if (e instanceof UnknownHostException) {
+				msg = AbConstant.UNKNOWNHOSTEXCEPTION;
 			}else if (e instanceof SocketException) {
-				msg = "网络有错误，请重试";
+				msg = AbConstant.SOCKETEXCEPTION;
 			}else if (e instanceof SocketTimeoutException) {
-				msg = "连接超时，请重试";
-			} else {
-				if (e == null || TextUtils.isEmpty(e.getMessage())) {
-					msg = "抱歉，程序出错了，请联系我们";
+				msg = AbConstant.SOCKETTIMEOUTEXCEPTION;
+			}else if( e instanceof NullPointerException) {  
+				msg = AbConstant.NULLPOINTEREXCEPTION;
+			}else {
+				if (e == null || AbStrUtil.isEmpty(e.getMessage())) {
+					msg = AbConstant.NULLMESSAGEEXCEPTION;
 				}
-				msg = " " + e.getMessage();
+				msg = e.getMessage();
 			}
 		} catch (Exception e1) {
 		}
@@ -69,20 +74,19 @@ public class AbAppException extends Exception {
 	}
 
 	/**
-	 * Instantiates a new ab app exception.
+	 * 用一个消息构造异常类.
 	 *
-	 * @param detailMessage the detail message
+	 * @param message 异常的消息
 	 */
-	public AbAppException(String detailMessage) {
-		super(detailMessage);
-		msg = detailMessage;
+	public AbAppException(String message) {
+		super(message);
+		msg = message;
 	}
 
 	/**
 	 * 描述：获取异常信息.
 	 *
 	 * @return the message
-	 * @see java.lang.Throwable#getMessage()
 	 */
 	@Override
 	public String getMessage() {

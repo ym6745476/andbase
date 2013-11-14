@@ -11,7 +11,7 @@ import android.os.Bundle;
 
 import com.ab.activity.AbActivity;
 import com.ab.http.AbHttpUtil;
-import com.ab.http.AsyncHttpResponseHandler;
+import com.ab.http.AbStringHttpResponseListener;
 import com.ab.view.listener.AbOnListViewListener;
 import com.ab.view.pullview.AbMultiColumnListView;
 import com.ab.view.titlebar.AbTitleBar;
@@ -28,6 +28,7 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 	private MultiColumnImageListAdapter myListViewAdapter = null;
 	private int currentPage = 1;
 	private AbTitleBar mAbTitleBar = null;
+	private AbHttpUtil mAbHttpUtil = null;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,9 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
         mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
+        
+        //获取Http工具类
+        mAbHttpUtil = AbHttpUtil.getInstance(this);
         
 	    //获取ListView对象
         mListView = (AbMultiColumnListView)this.findViewById(R.id.mListView);
@@ -77,27 +81,26 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 		currentPage = 1;
 	    String url = "http://www.duitang.com/album/1733789/masn/p/"
 					+ currentPage + "/24/";
-		AbHttpUtil.get(url, new AsyncHttpResponseHandler() {
+	    mAbHttpUtil.get(url, new AbStringHttpResponseListener() {
+	    	
         	
-        	// 获取数据成功会调用这里
-            public void onSuccess(String content) {
-            	removeProgressDialog();
-            	mNewImageList = parseJSON(content);
+        	@Override
+			public void onSuccess(int statusCode, String content) {
+        		mNewImageList = parseJSON(content);
             	if(mNewImageList!=null && mNewImageList.size()>0){
 					myListViewAdapter.addItemTop(mNewImageList);
 	                myListViewAdapter.notifyDataSetChanged();
 	                mListView.stopRefresh();
    		    	}
-            	
-            };
+			}
+
+			@Override
+			public void onFailure(int statusCode, String content,
+					Throwable error) {
+			}
             
-            // 失败，调用
-            public void onFailure(Throwable arg0) { 
-            	showToast("onFailure");
-            };
-            
-            // 完成后调用，失败，成功，都要掉
             public void onFinish() { 
+            	removeProgressDialog();
             };
             
         });
@@ -109,11 +112,11 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 		currentPage++;
 		String url = "http://www.duitang.com/album/1733789/masn/p/"
 						+ currentPage + "/24/";
-		AbHttpUtil.get(url, new AsyncHttpResponseHandler() {
-        	
-        	// 获取数据成功会调用这里
-            public void onSuccess(String content) {
-            	mNewImageList = parseJSON(content);
+		mAbHttpUtil.get(url, new AbStringHttpResponseListener() {
+            
+            @Override
+			public void onSuccess(int statusCode, String content) {
+                mNewImageList = parseJSON(content);
             	
             	if(mNewImageList!=null && mNewImageList.size()>0){
 					myListViewAdapter.addItemLast(mNewImageList);
@@ -122,16 +125,15 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
    		    	}else{
    		    		mListView.stopLoadMore(false);
    		    	}
-            	
-            };
+			}
+
+			@Override
+			public void onFailure(int statusCode, String content,
+					Throwable error) {
+			}
             
-            // 失败，调用
-            public void onFailure(Throwable arg0) { 
-            	showToast("onFailure");
-            };
-            
-            // 完成后调用，失败，成功，都要掉
             public void onFinish() { 
+            	removeProgressDialog();
             };
             
         });

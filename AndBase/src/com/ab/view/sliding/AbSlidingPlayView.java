@@ -163,7 +163,8 @@ public class AbSlidingPlayView extends LinearLayout {
 		mPageLineLayoutParent = new LinearLayout(context);
 		mPageLineLayoutParent.setPadding(0,5, 0, 5);
 		pageLineLayout = new LinearLayout(context);
-		pageLineLayout.setPadding(15, 2, 15, 2);
+		pageLineLayout.setPadding(15, 1, 15, 1);
+		pageLineLayout.setVisibility(View.INVISIBLE);
 		mPageLineLayoutParent.addView(pageLineLayout,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 		
 		RelativeLayout.LayoutParams lp1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -213,6 +214,7 @@ public class AbSlidingPlayView extends LinearLayout {
 		pageLineLayout.removeAllViews();
 		mPageLineLayoutParent.setHorizontalGravity(pageLineHorizontalGravity);
 		pageLineLayout.setGravity(Gravity.CENTER);
+		pageLineLayout.setVisibility(View.VISIBLE);
 		count = mListViews.size();
 		for (int j = 0; j < count; j++) {
 			ImageView imageView = new ImageView(context);

@@ -13,8 +13,8 @@ import android.widget.ImageButton;
 import com.ab.activity.AbActivity;
 import com.ab.global.AbConstant;
 import com.ab.global.AbResult;
-import com.ab.task.AbTaskCallback;
 import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskPool;
 import com.ab.util.AbStrUtil;
 import com.ab.view.titlebar.AbTitleBar;
@@ -200,7 +200,7 @@ public class FindPwdActivity extends AbActivity {
 			
 			showProgressDialog();
 			final AbTaskItem item = new AbTaskItem();
-			item.callback = new AbTaskCallback() {
+			item.listener = new AbTaskListener() {
 
 				@Override
 				public void update() {

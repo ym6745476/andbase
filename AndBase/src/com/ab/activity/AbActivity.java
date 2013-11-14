@@ -335,7 +335,7 @@ public abstract class AbActivity extends FragmentActivity {
 			mProgressMessage = message;
 		}
 		if (mProgressDialog == null) {
-			mProgressDialog = new ProgressDialog(this);  
+			mProgressDialog = new ProgressDialog(this);
 			// 设置点击屏幕Dialog不消失    
 			mProgressDialog.setCanceledOnTouchOutside(false);
 		}
@@ -407,7 +407,7 @@ public abstract class AbActivity extends FragmentActivity {
 	 * @param view  对话框提示内容
 	 * @param mOkOnClickListener  点击确认按钮的事件监听
 	 */
-	public void showDialog(String title,View view,DialogInterface.OnClickListener mOkOnClickListener) {
+	public AlertDialog showDialog(String title,View view,DialogInterface.OnClickListener mOkOnClickListener) {
 		 AlertDialog.Builder builder = new Builder(this);
 		 builder.setTitle(title);
 		 builder.setView(view);
@@ -418,7 +418,9 @@ public abstract class AbActivity extends FragmentActivity {
 				   dialog.dismiss();
 			   }
 		 });
-		 builder.create().show();
+		 AlertDialog mAlertDialog  = builder.create();
+		 mAlertDialog.show();
+		 return mAlertDialog;
 	}
 	
 	/**
@@ -426,11 +428,14 @@ public abstract class AbActivity extends FragmentActivity {
 	 * @param title 对话框标题内容
 	 * @param msg  对话框提示内容
 	 */
-	public void showDialog(String title,String msg) {
+	public AlertDialog showDialog(String title,String msg) {
 		 AlertDialog.Builder builder = new Builder(this);
 		 builder.setMessage(msg);
 		 builder.setTitle(title);
-		 builder.create().show();
+		 builder.create();
+		 AlertDialog mAlertDialog  = builder.create();
+		 mAlertDialog.show();
+		 return mAlertDialog;
 	}
 	
 	/**
@@ -438,11 +443,14 @@ public abstract class AbActivity extends FragmentActivity {
 	 * @param title 对话框标题内容
 	 * @param view  对话框提示内容
 	 */
-	public void showDialog(String title,View view) {
+	public AlertDialog showDialog(String title,View view) {
 		 AlertDialog.Builder builder = new Builder(this);
 		 builder.setTitle(title);
 		 builder.setView(view);
-		 builder.create().show();
+		 builder.create();
+		 AlertDialog mAlertDialog  = builder.create();
+		 mAlertDialog.show();
+		 return mAlertDialog;
 	}
 	
 	/**
@@ -514,7 +522,7 @@ public abstract class AbActivity extends FragmentActivity {
 	 * 描述：移除进度框.
 	 */
 	public void removeProgressDialog() {
-		removeDialog(0);
+		removeDialog(AbConstant.DIALOGPROGRESS);
     }
 	
 	/**

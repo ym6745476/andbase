@@ -62,7 +62,7 @@ public class AbImageDownloadPool{
         @Override 
         public void handleMessage(Message msg) { 
             AbImageDownloadItem item = (AbImageDownloadItem)msg.obj; 
-            item.callback.update(item.bitmap, item.imageUrl); 
+            item.listener.update(item.bitmap, item.imageUrl); 
         } 
     }; 
 	
@@ -118,7 +118,7 @@ public class AbImageDownloadPool{
 	    			} catch (Exception e) { 
 	    				e.printStackTrace();
 	    			} finally{ 
-		    			if (item.callback != null) { 
+		    			if (item.listener != null) { 
 	    	                Message msg = handler.obtainMessage(); 
 	    	                msg.obj = item; 
 	    	                handler.sendMessage(msg); 
@@ -127,7 +127,7 @@ public class AbImageDownloadPool{
 	    		}                 
 	    	});  
     	}else{
-    		if (item.callback != null) { 
+    		if (item.listener != null) { 
                 Message msg = handler.obtainMessage(); 
                 msg.obj = item; 
                 handler.sendMessage(msg); 

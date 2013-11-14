@@ -29,7 +29,7 @@ public class AbTaskItem {
 	public int position;
 	 
  	/** 执行完成的回调接口. */
-    public AbTaskCallback callback; 
+    public AbTaskListener listener; 
     
     /** 执行完成的结果. */
     private Object result;
@@ -42,12 +42,12 @@ public class AbTaskItem {
 		this.position = position;
 	}
 
-	public AbTaskCallback getCallback() {
-		return callback;
+	public AbTaskListener getListener() {
+		return listener;
 	}
 
-	public void setCallback(AbTaskCallback callback) {
-		this.callback = callback;
+	public void setListener(AbTaskListener listener) {
+		this.listener = listener;
 	}
 
 	public Object getResult() {
