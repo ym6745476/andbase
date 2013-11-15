@@ -15,13 +15,16 @@
  */
 package com.ab.util;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Arrays;
@@ -29,6 +32,7 @@ import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
@@ -716,9 +720,9 @@ public class AbFileUtil {
 	/**
 	 * 描述：获取默认的图片保存全路径.
 	 *
-	 * @return the default image down path dir
+	 * @return 完成的存储目录
 	 */
-	public static String getDefaultImageDownPathDir(){
+	public static String getFullImageDownPathDir(){
 		String pathDir = null;
 	    try {
 			if(!isCanUseSD()){
@@ -880,6 +884,82 @@ public class AbFileUtil {
     public static String getImageFileName(String url, int width, int height,int type) {
         return AbMd5.MD5(new StringBuilder(url.length() + 12).append("#W").append(width)
         .append("#H").append(height).append("#T").append(type).append(url).toString());
+    }
+    
+    /**
+     * 
+     * 描述：读取Assets目录的文件内容
+     * @param context
+     * @param name
+     * @return
+     * @throws 
+     */
+    public static String readAssetsByName(Context context,String name,String encoding){
+    	String text = null;
+    	InputStreamReader inputReader = null;
+    	BufferedReader bufReader = null;
+    	try {  
+    		 inputReader = new InputStreamReader(context.getAssets().open(name));
+    		 bufReader = new BufferedReader(inputReader);
+    		 String line = null;
+    		 StringBuffer buffer = new StringBuffer();
+    		 while((line = bufReader.readLine()) != null){
+    			 buffer.append(line);
+    		 }
+    		 text = new String(buffer.toString().getBytes(), encoding);
+         } catch (Exception e) {  
+        	 e.printStackTrace();
+         } finally{
+			try {
+				if(bufReader!=null){
+					bufReader.close();
+				}
+				if(inputReader!=null){
+					inputReader.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+    	return text;
+    }
+    
+    /**
+     * 
+     * 描述：读取Raw目录的文件内容
+     * @param context
+     * @param id
+     * @return
+     * @throws 
+     */
+    public static String readRawByName(Context context,int id,String encoding){
+    	String text = null;
+    	InputStreamReader inputReader = null;
+    	BufferedReader bufReader = null;
+        try {
+			inputReader = new InputStreamReader(context.getResources().openRawResource(id));
+			bufReader = new BufferedReader(inputReader);
+			String line = null;
+			StringBuffer buffer = new StringBuffer();
+			while((line = bufReader.readLine()) != null){
+				 buffer.append(line);
+			}
+            text = new String(buffer.toString().getBytes(),encoding);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				if(bufReader!=null){
+					bufReader.close();
+				}
+				if(inputReader!=null){
+					inputReader.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+        return text;
     }
     
 }

@@ -110,7 +110,7 @@ public class PHashActivity extends AbActivity {
 	    //要显示图形的View
 	    mChartLinearLayout = (LinearLayout) findViewById(R.id.chart01);
 	    //初始化图片保存路径
-	    String photo_dir = AbFileUtil.getDefaultImageDownPathDir();
+	    String photo_dir = AbFileUtil.getFullImageDownPathDir();
 	    if(AbStrUtil.isEmpty(photo_dir)){
 	    	showToast("存储卡不存在");
 	    }else{
