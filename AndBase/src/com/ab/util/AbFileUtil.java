@@ -106,10 +106,7 @@ public class AbFileUtil {
 			if(!file.exists()){
 				file.createNewFile();
 			}else{
-				//文件已经存在
-				if(file.length()!=0){
-					return file.getPath();
-				}
+				return file.getPath();
 			}
 			downFilePath = file.getPath();
 			URL mUrl = new URL(url);
@@ -123,7 +120,7 @@ public class AbFileUtil {
 				fileOutputStream.write(b, 0, temp);
 			}
 		}catch(Exception e){
-			if(D)Log.d(TAG, ""+e.getMessage());
+			e.printStackTrace();
 			return null;
 		}finally{
 			try {
@@ -151,6 +148,7 @@ public class AbFileUtil {
 			try {
 				//检查文件大小,如果文件为0B说明网络不好没有下载成功，要将建立的空文件删除
 				if(file.length() == 0){
+					Log.d(TAG, "下载出错了，文件大小为0");
 					file.delete();
 				}else{
 					downCount ++;
