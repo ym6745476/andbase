@@ -57,12 +57,12 @@ public class AbImageDownloadTask extends AsyncTask<AbImageDownloadItem, Integer,
     		url = url.trim();
     	}
 		//如果SD卡有这个图片, 先到SD中找这个图片
-		item.bitmap =  AbImageCache.getBitmapFromMemCache(AbMd5.MD5(url+"_"+item.width+"x"+item.height+"t"+item.type));
+		item.bitmap =  AbImageCache.getBitmapFromCache(AbMd5.MD5(url+"_"+item.width+"x"+item.height+"t"+item.type));
     	if(item.bitmap == null){
     		//开始下载
             item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
             //缓存图片路径
-            AbImageCache.addBitmapToMemoryCache(AbMd5.MD5(item.imageUrl+"_"+item.width+"x"+item.height+"t"+item.type),item.bitmap);                                           
+            AbImageCache.addBitmapToCache(AbMd5.MD5(item.imageUrl+"_"+item.width+"x"+item.height+"t"+item.type),item.bitmap);                                           
             //需要执行回调来显示图片
             if (item.listener != null) {
                 Message msg = handler.obtainMessage(); 

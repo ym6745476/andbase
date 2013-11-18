@@ -79,6 +79,7 @@ public class AbImageDownloadQueue extends Thread {
     public static AbImageDownloadQueue getInstance() { 
         if (imageDownloadThread == null) { 
             imageDownloadThread = new AbImageDownloadQueue(); 
+            imageDownloadThread.setName("AbImageDownloadQueue-1");
             //创建后立刻运行
             imageDownloadThread.start(); 
         } 
@@ -93,17 +94,17 @@ public class AbImageDownloadQueue extends Thread {
      */
     public void download(AbImageDownloadItem item) { 
     	//检查图片路径
-    	String url = item.imageUrl;
-    	if(AbStrUtil.isEmpty(url)){
+    	String imageUrl = item.imageUrl;
+    	if(AbStrUtil.isEmpty(imageUrl)){
     		if(D)Log.d(TAG, "图片URL为空，请先判断");
     	}else{
-    		url = url.trim();
+    		imageUrl = imageUrl.trim();
     	}
 		//从缓存中获取这个Bitmap.
-    	String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
-		item.bitmap =  AbImageCache.getBitmapFromMemCache(cacheKey);
+    	String cacheKey = AbImageCache.getCacheKey(imageUrl, item.width, item.height, item.type);
+		item.bitmap =  AbImageCache.getBitmapFromCache(cacheKey);
     	if(item.bitmap == null){
-    			addDownloadItem(item); 
+    		addDownloadItem(item); 
 		}else{
     		if (item.listener != null) {
                 Message msg = handler.obtainMessage(); 
@@ -141,38 +142,61 @@ public class AbImageDownloadQueue extends Thread {
      */
     @Override 
     public void run() { 
-        while(!stop) { 
-        	//if(D)Log.d(TAG, "任务大小："+queue.size());
-            while(queue.size() > 0) { 
-                AbImageDownloadItem item = queue.remove(0); 
-                //开始下载
-                item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
-                //缓存图片路径
-                String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
-                AbImageCache.addBitmapToMemoryCache(cacheKey,item.bitmap);                                           
-                //需要执行回调来显示图片
-                if (item.listener != null) { 
-                    //交由UI线程处理 
-                    Message msg = handler.obtainMessage(); 
-                    msg.obj = item; 
-                    handler.sendMessage(msg); 
-                } 
-                
-                //停止
-                if(stop){
-                	queue.clear();
-                	return;
-                }
-            } 
-            try { 
-            	//没有下载项时等待 
-                synchronized(this) { 
-                    this.wait();
-                } 
-            } catch (InterruptedException e) { 
-                e.printStackTrace(); 
-            } 
-        } 
+    	while(!stop) { 
+            try {
+            	
+				if(D)Log.d(TAG, "图片下载队列大小："+queue.size());
+			    while(queue.size() > 0) { 
+			        AbImageDownloadItem item = queue.remove(0); 
+			        //缓存图片路径
+			        String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
+			        //逻辑：判断这个任务是否有其他线程再执行，如果有等待，直到下载完成唤醒显示
+					Runnable runnable = AbImageCache.getRunRunnableFromCache(cacheKey);
+					if(runnable != null){
+			        	//线程等待通知后显示
+						if(D) Log.d(TAG, "等待:"+cacheKey+","+item.imageUrl);
+						AbImageCache.addToWaitRunnableCache(cacheKey, this);
+						synchronized(this){
+						   this.wait();
+						}
+						if(D) Log.d(TAG, "我醒了:"+item.imageUrl);
+						//直接获取
+						item.bitmap =  AbImageCache.getBitmapFromCache(cacheKey);
+					}else{
+						//增加下载中的线程记录
+						if(D) Log.d(TAG, "增加图片下载中:"+cacheKey+","+item.imageUrl);
+						AbImageCache.addToRunRunnableCache(cacheKey, this);
+						item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
+						//增加到下载完成的缓存，删除下载中的记录和等待的记录，同时唤醒所有等待列表中key与其key相同的线程
+						AbImageCache.addBitmapToCache(cacheKey,item.bitmap);
+					}
+					
+			        //需要执行回调来显示图片
+			        if (item.listener != null) {
+			            //交由UI线程处理 
+			            Message msg = handler.obtainMessage(); 
+			            msg.obj = item; 
+			            handler.sendMessage(msg); 
+			        } 
+			        
+			    }
+			    
+			    //停止
+			    if(stop){
+			    	queue.clear();
+			    	return;
+			    }
+			    
+		    	//没有下载项时等待 
+		        synchronized(this) {
+		            this.wait();
+		        } 
+			
+		   } catch (Exception e) { 
+			   e.printStackTrace();
+		   }finally{
+		   }
+    	}
     } 
 
     /**

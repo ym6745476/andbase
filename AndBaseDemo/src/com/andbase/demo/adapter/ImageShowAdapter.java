@@ -157,7 +157,7 @@ public class ImageShowAdapter extends BaseAdapter {
 		
 		if(!AbStrUtil.isEmpty(imagePath)){
 		  //从缓存中获取图片，很重要否则会导致页面闪动
-      	  Bitmap bitmap = AbImageCache.getBitmapFromMemCache(imagePath);
+      	  Bitmap bitmap = AbImageCache.getBitmapFromCache(imagePath);
       	  //缓存中没有则从网络和SD卡获取
       	  if(bitmap == null){
       		    holder.mImageView1.setImageResource(R.drawable.image_loading);

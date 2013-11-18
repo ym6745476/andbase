@@ -111,8 +111,8 @@ public class AbImageDownloader {
         item.type = type;
         item.imageUrl = url;
         String cacheKey = AbImageCache.getCacheKey(item.imageUrl, item.width, item.height, item.type);
-        item.bitmap =  AbImageCache.getBitmapFromMemCache(cacheKey);
-		if(D) Log.d(TAG, "缓存中获取的"+cacheKey+":"+item.bitmap);
+        item.bitmap =  AbImageCache.getBitmapFromCache(cacheKey);
+		//if(D) Log.d(TAG, "缓存中获取的"+cacheKey+":"+item.bitmap);
 		
     	if(item.bitmap == null){
     		

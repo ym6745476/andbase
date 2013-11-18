@@ -18,6 +18,7 @@ package com.ab.bitmap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 import android.os.Handler;
 import android.os.Message;
@@ -26,7 +27,6 @@ import android.util.Log;
 import com.ab.global.AbAppData;
 import com.ab.util.AbAppUtil;
 import com.ab.util.AbFileUtil;
-import com.ab.util.AbMd5;
 import com.ab.util.AbStrUtil;
 // TODO: Auto-generated Javadoc
 /**
@@ -94,28 +94,45 @@ public class AbImageDownloadPool{
      * @param item the item
      */
     public void download(final AbImageDownloadItem item) {    
-    	String urlImage = item.imageUrl;
-    	if(AbStrUtil.isEmpty(urlImage)){
+    	String imageUrl = item.imageUrl;
+    	if(AbStrUtil.isEmpty(imageUrl)){
     		if(D)Log.d(TAG, "图片URL为空，请先判断");
     	}else{
-    		urlImage = urlImage.trim();
+    		imageUrl = imageUrl.trim();
     	}
-    	final String url = urlImage;
-		// 如果缓存过就从缓存中取出数据
-    	String cacheKey = AbImageCache.getCacheKey(url, item.width, item.height, item.type);
-		item.bitmap =  AbImageCache.getBitmapFromMemCache(cacheKey);
-		if(D) Log.d(TAG, "缓存中获取的"+cacheKey+":"+item.bitmap);
+		//从缓存中获取图片
+    	final String cacheKey = AbImageCache.getCacheKey(imageUrl, item.width, item.height, item.type);
+		item.bitmap =  AbImageCache.getBitmapFromCache(cacheKey);
     	
     	if(item.bitmap == null){
-    		// 缓存中没有图像，则从网络上取出数据，并将取出的数据缓存到内存中
+			// 缓存中没有图像，则从网络上取出数据，并将取出的数据缓存到内存中
 	    	executorService.submit(new Runnable() { 
 	    		public void run() {
 	    			try {
-	    				item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
-	    				if(D) Log.d(TAG, "下载从SD卡得到的:"+item.bitmap);
-	    				String cacheKey = AbImageCache.getCacheKey(url, item.width, item.height, item.type);
-	    				AbImageCache.addBitmapToMemoryCache(cacheKey,item.bitmap);                                           
+	    				//逻辑：判断这个任务是否有其他线程再执行，如果有等待，直到下载完成唤醒显示
+	    	    		Runnable runnable = AbImageCache.getRunRunnableFromCache(cacheKey);
+	    				if(runnable != null){
+	    					
+	    	            	//线程等待通知后显示
+    	                	if(D) Log.d(TAG, "等待:"+cacheKey+","+item.imageUrl);
+    	                	AbImageCache.addToWaitRunnableCache(cacheKey, this);
+    	                	synchronized(this){
+    	                		this.wait();
+    	                	}
+    	                	if(D) Log.d(TAG, "我醒了:"+item.imageUrl);
+    	    				//直接获取
+    	    				item.bitmap =  AbImageCache.getBitmapFromCache(cacheKey);
+	    				}else{
+	    					//增加下载中的线程记录
+	    					if(D) Log.d(TAG, "增加图片下载中:"+cacheKey+","+item.imageUrl);
+    	    				AbImageCache.addToRunRunnableCache(cacheKey, this);
+    	    				item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
+    	    				//增加到下载完成的缓存，删除下载中的记录和等待的记录，同时唤醒所有等待列表中key与其key相同的线程
+    	    				AbImageCache.addBitmapToCache(cacheKey,item.bitmap);     
+	    				}
+	    				
 	    			} catch (Exception e) { 
+	    				if(D) Log.d(TAG, "error:"+item.imageUrl);
 	    				e.printStackTrace();
 	    			} finally{ 
 		    			if (item.listener != null) { 
@@ -126,6 +143,7 @@ public class AbImageDownloadPool{
 	    			}
 	    		}                 
 	    	});  
+    		
     	}else{
     		if (item.listener != null) { 
                 Message msg = handler.obtainMessage(); 

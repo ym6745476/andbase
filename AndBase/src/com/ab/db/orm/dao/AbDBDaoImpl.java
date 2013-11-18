@@ -24,6 +24,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -55,8 +56,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	/** The db helper. */
 	private SQLiteOpenHelper dbHelper;
 	
-	/** 写锁*/
-	private final static byte[] writeLock = new byte[0];
+	/**锁对象*/
+    private final ReentrantLock lock = new ReentrantLock();
 	
 	/** The table name. */
 	private String tableName;
@@ -154,10 +155,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public T queryOne(int id) {
-		synchronized (writeLock) {
+		synchronized (lock) {
 			String selection = this.idColumn + " = ?";
 			String[] selectionArgs = { Integer.toString(id) };
-			Log.d(TAG, "[get]: select * from " + this.tableName + " where "
+			Log.d(TAG, "[queryOne]: select * from " + this.tableName + " where "
 					+ this.idColumn + " = '" + id + "'");
 			List<T> list = queryList(null, selection, selectionArgs, null, null, null,
 					null);
@@ -179,24 +180,23 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public List<T> rawQuery(String sql, String[] selectionArgs,Class<T> clazz) {
-		
-		synchronized (writeLock) {
+
+		List<T> list = new ArrayList<T>();
+		Cursor cursor = null;
+		try {
+			lock.lock();
 			Log.d(TAG, "[rawQuery]: " + getLogSql(sql, selectionArgs));
-	
-			List<T> list = new ArrayList<T>();
-			Cursor cursor = null;
-			try {
-				cursor = db.rawQuery(sql, selectionArgs);
-				getListFromCursor(clazz,list, cursor);
-			} catch (Exception e) {
-				Log.e(this.TAG, "[rawQuery] from DB Exception.");
-				e.printStackTrace();
-			} finally {
-				closeCursor(cursor);
-			}
-			
-			return list;
+			cursor = db.rawQuery(sql, selectionArgs);
+			getListFromCursor(clazz,list, cursor);
+		} catch (Exception e) {
+			Log.e(this.TAG, "[rawQuery] from DB Exception.");
+			e.printStackTrace();
+		} finally {
+			closeCursor(cursor);
+			lock.unlock();
 		}
+		
+		return list;
 	}
 
 	/**
@@ -209,22 +209,22 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public boolean isExist(String sql, String[] selectionArgs) {
-		synchronized (writeLock) {
+		Cursor cursor = null;
+		try {
+			lock.lock();
 			Log.d(TAG, "[isExist]: " + getLogSql(sql, selectionArgs));
-			Cursor cursor = null;
-			try {
-				cursor = db.rawQuery(sql, selectionArgs);
-				if (cursor.getCount() > 0) {
-					return true;
-				}
-			} catch (Exception e) {
-				Log.e(this.TAG, "[isExist] from DB Exception.");
-				e.printStackTrace();
-			} finally {
-				closeCursor(cursor);
+			cursor = db.rawQuery(sql, selectionArgs);
+			if (cursor.getCount() > 0) {
+				return true;
 			}
-			return false;
+		} catch (Exception e) {
+			Log.e(this.TAG, "[isExist] from DB Exception.");
+			e.printStackTrace();
+		} finally {
+			closeCursor(cursor);
+			lock.unlock();
 		}
+		return false;
 	}
 
 	/**
@@ -255,12 +255,12 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	public List<T> queryList(String[] columns, String selection,
 			String[] selectionArgs, String groupBy, String having,
 			String orderBy, String limit) {
-	    synchronized (writeLock) {
-			Log.d(TAG, "[queryList]");
 	
 			List<T> list = new ArrayList<T>();
 			Cursor cursor = null;
 			try {
+				lock.lock();
+				Log.d(TAG, "[queryList] from"+this.tableName+" where "+selection+"("+selectionArgs+")"+" group by "+groupBy+" having "+having+" order by "+orderBy+" limit "+limit);
 				cursor = db.query(this.tableName, columns, selection,
 						selectionArgs, groupBy, having, orderBy, limit);
 	
@@ -404,10 +404,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				e.printStackTrace();
 			} finally {
 				closeCursor(cursor);
+				lock.unlock();
 			}
 	
 			return list;
-		}
 	}
 	
 	
@@ -519,10 +519,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long insert(T entity, boolean flag) {
-		synchronized (writeLock) {
 			String sql = null;
 			long row = 0L;
 			try {
+				lock.lock();
 				ContentValues cv = new ContentValues();
 				if (flag) {
 					// id自增
@@ -615,9 +615,9 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				e.printStackTrace();
 				row = -1;
 			}finally {
+				lock.unlock();
 			}
 			return row;
-		}
 	}
 	
 	
@@ -636,10 +636,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long insertList(List<T> entityList,boolean flag) {
-		synchronized (writeLock) {
 			String sql = null;
 			long rows = 0;
 			try {
+				lock.lock();
 				for(T entity : entityList){
 					ContentValues cv = new ContentValues();
 					if (flag) {
@@ -739,10 +739,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				Log.d(this.TAG, "[insertList] into DB Exception.");
 				e.printStackTrace();
 			} finally {
+				lock.unlock();
 			}
 	
 			return rows;
-		}
 	}
 
 	
@@ -755,14 +755,20 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long delete(int id) {
-		synchronized (writeLock) {
+	    long rows = -1;
+		try {
+			lock.lock();
 			String where = this.idColumn + " = ?";
-			String[] whereValue = { Integer.toString(id) };
+		    String[] whereValue = { Integer.toString(id) };
 			Log.d(TAG, "[delete]: delelte from " + this.tableName + " where "
 					+ where.replace("?", String.valueOf(id)));
-			long rows =  db.delete(this.tableName, where, whereValue);
-			return rows;
-		}
+			rows =  db.delete(this.tableName, where, whereValue);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
+	    }
+		return rows;
 	}
 
 	/**
@@ -789,16 +795,21 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long delete(String whereClause, String[] whereArgs) {
-		synchronized (writeLock) {
+		long rows = -1;
+		try {
+			lock.lock();
 			String mLogSql = getLogSql(whereClause,whereArgs);
 			if(!AbStrUtil.isEmpty(mLogSql)){
 				mLogSql +=" where ";
 			}
 			Log.d(TAG, "[delete]: delete from " + this.tableName + mLogSql);
-			long rows = db.delete(this.tableName, whereClause, whereArgs);
-			return rows;
+		    rows = db.delete(this.tableName, whereClause, whereArgs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
-	
+		return rows;
 	}
 
 	/**
@@ -807,11 +818,17 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long deleteAll() {
-		synchronized (writeLock) {
+		long rows = -1;
+		try {
+			lock.lock();
 			Log.d(TAG, "[delete]: delete from " + this.tableName );
-			long rows = db.delete(this.tableName,null,null);
-			return rows;
+			rows = db.delete(this.tableName,null,null);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
+		return rows;
 	}
 
 	/**
@@ -822,9 +839,9 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long update(T entity) {
-		synchronized (writeLock) {
 			long row = 0;
 			try {
+				lock.lock();
 				ContentValues cv = new ContentValues();
 	
 				//注意返回的sql中包含主键列
@@ -844,9 +861,9 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				Log.d(this.TAG, "[update] DB Exception.");
 				e.printStackTrace();
 			} finally {
+				lock.unlock();
 			}
 		    return row;
-		}
 	}
 	
 
@@ -856,10 +873,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public long updateList(List<T> entityList) {
-		synchronized (writeLock) {
 			String sql = null;
 			long row = 0;
 			try {
+				lock.lock();
 				for(T entity:entityList){
 					ContentValues cv = new ContentValues();
 	
@@ -880,10 +897,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				Log.d(this.TAG, "[update] DB Exception.");
 				e.printStackTrace();
 			} finally {
+				lock.unlock();
 			}
 	
 			return row;
-		}
 	}
 
 	/**
@@ -953,35 +970,34 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * @see com.ab.db.orm.dao.AbDBDao#queryMapList(java.lang.String, java.lang.String[])
 	 */
 	@Override
-	public List<Map<String, String>> queryMapList(String sql,
-			String[] selectionArgs) {
-		synchronized (writeLock) {
+	public List<Map<String, String>> queryMapList(String sql,String[] selectionArgs) {
+		Cursor cursor = null;
+		List<Map<String, String>> retList = new ArrayList<Map<String, String>>();
+		try {
+			lock.lock();
 			Log.d(TAG, "[queryMapList]: " + getLogSql(sql, selectionArgs));
-			Cursor cursor = null;
-			List<Map<String, String>> retList = new ArrayList<Map<String, String>>();
-			try {
-				cursor = db.rawQuery(sql, selectionArgs);
-				while (cursor.moveToNext()) {
-					Map<String, String> map = new HashMap<String, String>();
-					for (String columnName : cursor.getColumnNames()) {
-						int c = cursor.getColumnIndex(columnName);
-						if (c < 0) {
-							continue; // 如果不存在循环下个属性值
-						} else {
-							map.put(columnName.toLowerCase(), cursor.getString(c));
-						}
+			cursor = db.rawQuery(sql, selectionArgs);
+			while (cursor.moveToNext()) {
+				Map<String, String> map = new HashMap<String, String>();
+				for (String columnName : cursor.getColumnNames()) {
+					int c = cursor.getColumnIndex(columnName);
+					if (c < 0) {
+						continue; // 如果不存在循环下个属性值
+					} else {
+						map.put(columnName.toLowerCase(), cursor.getString(c));
 					}
-					retList.add(map);
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
-				Log.e(TAG, "[queryMapList] from DB exception");
-			} finally {
-				closeCursor(cursor);
+				retList.add(map);
 			}
-	
-			return retList;
+		} catch (Exception e) {
+			e.printStackTrace();
+			Log.e(TAG, "[queryMapList] from DB exception");
+		} finally {
+			closeCursor(cursor);
+			lock.unlock();
 		}
+
+		return retList;
 	}
 	
 	
@@ -994,23 +1010,23 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public int queryCount(String sql, String[] selectionArgs) {
-		synchronized (writeLock) {
-		   Log.d(TAG, "[queryCount]: " + getLogSql(sql, selectionArgs));
-		   Cursor cursor = null;
-	       int count = 0;
-	       try{
-	           cursor = db.query(this.tableName, null, sql, selectionArgs, null, null,null);
-	           if(cursor != null){
-	        	   count = cursor.getCount();
-	           }
-	       }catch (Exception e){
-	    	   Log.e(TAG, "[queryCount] from DB exception");
-	           e.printStackTrace();
-	       }finally{
-	    	   closeCursor(cursor);
-	       }
-	       return count;
-		}
+	   Cursor cursor = null;
+       int count = 0;
+       try{
+    	   lock.lock();
+    	   Log.d(TAG, "[queryCount]: " + getLogSql(sql, selectionArgs));
+           cursor = db.query(this.tableName, null, sql, selectionArgs, null, null,null);
+           if(cursor != null){
+        	   count = cursor.getCount();
+           }
+       }catch (Exception e){
+    	   Log.e(TAG, "[queryCount] from DB exception");
+           e.printStackTrace();
+       }finally{
+    	   closeCursor(cursor);
+    	   lock.unlock();
+       }
+       return count;
 	}
 
 	/**
@@ -1022,19 +1038,19 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 */
 	@Override
 	public void execSql(String sql, Object[] selectionArgs) {
-		synchronized (writeLock) {
+		try {
+			lock.lock();
 			Log.d(TAG, "[execSql]: " + getLogSql(sql, selectionArgs));
-			try {
-				if (selectionArgs == null) {
-					db.execSQL(sql);
-				} else {
-					db.execSQL(sql, selectionArgs);
-				}
-			} catch (Exception e) {
-				Log.e(TAG, "[execSql] DB exception.");
-				e.printStackTrace();
-			} finally {
+			if (selectionArgs == null) {
+				db.execSQL(sql);
+			} else {
+				db.execSQL(sql, selectionArgs);
 			}
+		} catch (Exception e) {
+			Log.e(TAG, "[execSql] DB exception.");
+			e.printStackTrace();
+		} finally {
+			lock.unlock();
 		}
 	}
 	
@@ -1045,13 +1061,18 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * @throws 
 	 */
 	public void startWritableDatabase(boolean transaction){
-		synchronized (writeLock) {
+		try {
+			lock.lock();
 			if(db == null || !db.isOpen()){
 			    db = this.dbHelper.getWritableDatabase();
 			}
 			if(db!=null && transaction){
 				db.beginTransaction();
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
 		
 	}
@@ -1063,7 +1084,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * @throws 
 	 */
 	public void startReadableDatabase(boolean transaction){
-		synchronized (writeLock) {
+		try {
+			lock.lock();
 			if(db == null || !db.isOpen()){
 				db = this.dbHelper.getReadableDatabase();
 			}
@@ -1071,6 +1093,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			if(db!=null && transaction){
 				db.beginTransaction();
 			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
 		
 	}
@@ -1082,10 +1108,15 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * @throws 
 	 */
 	public void setTransactionSuccessful(){
-		synchronized (writeLock) {
+		try {
+			lock.lock();
 			if(db!=null){
 				db.setTransactionSuccessful();
 			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
 		
 	}
@@ -1097,20 +1128,21 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * @throws 
 	 */
 	public void closeDatabase(boolean transaction){
-		synchronized (writeLock) {
-			try {
-				if(db!=null){
-					if(transaction){
-						db.endTransaction();
-					}
-					if(db.isOpen()){
-						db.close();
-					}
-					
+		try {
+			lock.lock();
+			if(db!=null){
+				if(transaction){
+					db.endTransaction();
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
+				if(db.isOpen()){
+					db.close();
+				}
+				
 			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
 	}
 	
