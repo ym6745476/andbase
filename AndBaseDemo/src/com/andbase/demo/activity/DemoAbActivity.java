@@ -52,7 +52,7 @@ public class DemoAbActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(DemoAbActivity.this,
-						TitleTransparentActivity.class);
+						TitleBarActivity.class);
 				// 设置标题栏透明
 				intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG,
 						AbConstant.TITLE_TRANSPARENT);

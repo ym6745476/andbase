@@ -15,8 +15,6 @@
  */
 package com.ab.http;
 
-import com.ab.db.storage.AbSqliteStorage;
-
 import android.content.Context;
 
 /**
@@ -156,6 +154,16 @@ public class AbHttpUtil {
 	 */
 	public void setTimeout(int timeout) {
 		client.setTimeout(timeout);
+	}
+	
+	/**
+	 * 
+	 * 描述：设置调试模式
+	 * @param debug 开关
+	 * @throws 
+	 */
+	public void setDebug(boolean debug) {
+		client.setDebug(debug);
 	}
 	
 }

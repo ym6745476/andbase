@@ -62,6 +62,12 @@ public class PullToRefreshListActivity extends AbActivity {
         mAbPullListView.setPullRefreshEnable(true); 
         mAbPullListView.setPullLoadEnable(true);
         
+        //设置进度条的样式
+        mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+        mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+        //mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular2));
+        //mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular2));
+         
         //ListView数据
     	list = new ArrayList<Map<String, Object>>();
     	

@@ -61,6 +61,10 @@ public class PullToRefreshGridActivity extends AbActivity {
 		//开关默认打开
         mAbPullGridView.setPullRefreshEnable(true); 
         mAbPullGridView.setPullLoadEnable(true);
+        
+        //设置进度条的样式
+        mAbPullGridView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+        mAbPullGridView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
 		
 		mGridView = mAbPullGridView.getGridView();
 		mGridView.setColumnWidth(150);

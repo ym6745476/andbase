@@ -18,6 +18,7 @@ package com.ab.view.pullview;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -38,6 +39,9 @@ import com.ab.util.AbViewUtil;
  * The Class AbListViewHeader.
  */
 public class AbListViewHeader extends LinearLayout {
+	
+	/** The mContext. */
+	private Context mContext;
 	
 	/** The header view. */
 	private LinearLayout headerView;
@@ -112,6 +116,8 @@ public class AbListViewHeader extends LinearLayout {
 	 */
 	private void initView(Context context) {
 		
+		mContext  = context;
+		
 		//顶部刷新栏整体内容
 		headerView = new LinearLayout(context);
 		headerView.setOrientation(LinearLayout.HORIZONTAL);
@@ -126,7 +132,7 @@ public class AbListViewHeader extends LinearLayout {
 		arrowImage = AbFileUtil.getBitmapFormSrc("image/arrow.png");
 		arrowImageView.setImageBitmap(arrowImage);
 		
-		//style="?android:attr/progressBarStyleSmall"
+		//style="?android:attr/progressBarStyleSmall" 默认的样式
 		headerProgressBar = new ProgressBar(context,null,android.R.attr.progressBarStyle);
 		headerProgressBar.setVisibility(View.GONE);
 		
@@ -325,8 +331,14 @@ public class AbListViewHeader extends LinearLayout {
 		return headerProgressBar;
 	}
 
-	public void setHeaderProgressBar(ProgressBar headerProgressBar) {
-		this.headerProgressBar = headerProgressBar;
+	/**
+	 * 
+	 * 描述：设置Header ProgressBar样式
+	 * @return
+	 * @throws 
+	 */
+	public void setHeaderProgressBarDrawable(Drawable indeterminateDrawable) {
+		headerProgressBar.setIndeterminateDrawable(indeterminateDrawable);
 	}
 	
 

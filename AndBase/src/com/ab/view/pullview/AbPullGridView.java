@@ -28,6 +28,7 @@ import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.Scroller;
 
 import com.ab.view.listener.AbOnListViewListener;
@@ -155,7 +156,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		mFooterView = new AbListViewFooter(context);
 		
 		addFooterView(mFooterView);
-		mFooterView.hide();
+		
 		//默认是打开刷新与更多
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
@@ -184,6 +185,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	public void setPullLoadEnable(boolean enable) {
 		mEnablePullLoad = enable;
 		if (!mEnablePullLoad) {
+			mFooterView.hide();
 			mFooterView.setOnClickListener(null);
 		} else {
 			mPullLoading = false;
@@ -407,8 +409,46 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	
 	}
 	
-	
-	
+	/**
+	 * 
+	 * 描述：获取Header View
+	 * @return
+	 * @throws 
+	 */
+	public AbListViewHeader getHeaderView() {
+		return mHeaderView;
+	}
 
+	/**
+	 * 
+	 * 描述：获取Footer View
+	 * @return
+	 * @throws 
+	 */
+	public AbListViewFooter getFooterView() {
+		return mFooterView;
+	}
+	
+	/**
+	 * 
+	 * 描述：获取Header ProgressBar，用于设置自定义样式
+	 * @return
+	 * @throws 
+	 */
+	public ProgressBar getHeaderProgressBar() {
+		return mHeaderView.getHeaderProgressBar();
+	}
+	
+	
+	/**
+	 * 
+	 * 描述：获取Footer ProgressBar，用于设置自定义样式
+	 * @return
+	 * @throws 
+	 */
+	public ProgressBar getFooterProgressBar() {
+		return mFooterView.getFooterProgressBar();
+	}
+	
 	
 }

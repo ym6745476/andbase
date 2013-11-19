@@ -81,7 +81,7 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.TitleTransparentActivity"
+            android:name=".demo.activity.TitleBarActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -367,6 +367,11 @@
         
         <activity
             android:name=".demo.activity.DeskCalendarActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.PopoverActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         

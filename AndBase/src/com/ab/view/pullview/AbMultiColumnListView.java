@@ -22,6 +22,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ListAdapter;
+import android.widget.ProgressBar;
 import android.widget.Scroller;
 
 import com.ab.view.listener.AbOnListViewListener;
@@ -404,6 +405,47 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 		if (mScrollListener != null) {
 			mScrollListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
 		}	
+	}
+	
+	/**
+	 * 
+	 * 描述：获取Header View
+	 * @return
+	 * @throws 
+	 */
+	public AbListViewHeader getHeaderView() {
+		return mHeaderView;
+	}
+
+	/**
+	 * 
+	 * 描述：获取Footer View
+	 * @return
+	 * @throws 
+	 */
+	public AbListViewFooter getFooterView() {
+		return mFooterView;
+	}
+	
+	/**
+	 * 
+	 * 描述：获取Header ProgressBar，用于设置自定义样式
+	 * @return
+	 * @throws 
+	 */
+	public ProgressBar getHeaderProgressBar() {
+		return mHeaderView.getHeaderProgressBar();
+	}
+	
+	
+	/**
+	 * 
+	 * 描述：获取Footer ProgressBar，用于设置自定义样式
+	 * @return
+	 * @throws 
+	 */
+	public ProgressBar getFooterProgressBar() {
+		return mFooterView.getFooterProgressBar();
 	}
 	
 }

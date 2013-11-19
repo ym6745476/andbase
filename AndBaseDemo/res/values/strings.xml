@@ -48,6 +48,7 @@
     <string name="analog_clock_name">圆形挂钟</string>
     <string name="number_clock_name">数字时钟</string>
     <string name="desk_calendar_name">台历</string>
+    <string name="popview_name">提示框</string>
     
     
     
@@ -80,24 +81,12 @@
        \n\t\tQQ群：38535812
     </string>
     
-    <string name="title_transparent_desc">
-                设置标题栏透明,
-                在启动Activity时添加参数：
-      intent.putExtra(
-         AbConstant.TITLE_TRANSPARENT_FLAG
-       , AbConstant.TITLE_TRANSPARENT);
-                同时布局使用ScrollView，
-                并向下偏移标题栏的高度
-                \n^\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|
-                \n|\n|\n|\n|\n|\n|\n|\n|\n|
-    </string>
     
     <string name="date_picker">年月日：</string>
     <string name="time_picker1">月日时分：</string>
     <string name="time_picker2">时分：</string>
     <string name="data1_desc">选择：</string>
     <string name="data1_unit">单位</string>
-    
     
     
     <string name="login">登录</string>

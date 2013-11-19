@@ -8,7 +8,13 @@
         <item name="android:windowTitleSize">48dip</item>
 	    <item name="android:windowTitleBackgroundStyle">@style/mCustomWindowTitleBackground</item>
 	    <item name="android:expandableListViewStyle">@style/mExpandableListView</item>
+	    
+	    
 	    <item name="android:progressBarStyleHorizontal">@style/mProgressBarHorizontal</item>
+	    
+	    <item name="android:scrollbarSize">15dip</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_vertical</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_vertical</item>
 	</style>
 
 </resources>

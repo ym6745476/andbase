@@ -142,7 +142,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		mFooterView = new AbListViewFooter(context);
 		
 		mFooterViewHeight= mFooterView.getFooterHeight();
-		mFooterView.hide();
+		
 		//默认是打开刷新与更多
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
@@ -325,9 +325,9 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		case MotionEvent.ACTION_MOVE:
 			final float deltaY = ev.getRawY() - mLastY;
 			mLastY = ev.getRawY();
-			if (getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
+			if (mEnablePullRefresh && getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 				updateHeaderHeight(deltaY / OFFSET_RADIO);
-			} else if (getLastVisiblePosition() == mTotalItemCount - 1 && mFooterView.getVisiableHeight() < mFooterViewHeight) {
+			} else if (mEnablePullRefresh && getLastVisiblePosition() == mTotalItemCount - 1 && mFooterView.getVisiableHeight() < mFooterViewHeight) {
 				updateFooterHeight(-deltaY / OFFSET_RADIO);
 			}
 			break;

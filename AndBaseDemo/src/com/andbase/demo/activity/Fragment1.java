@@ -54,7 +54,9 @@ public class Fragment1 extends Fragment {
 		 mAbTaskQueue = AbTaskQueue.getInstance();
 	     //获取ListView对象
          mAbPullListView = (AbPullListView)view.findViewById(R.id.mListView);
-         
+         //设置进度条的样式
+         mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+         mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
          //ListView数据
     	 list = new ArrayList<Map<String, Object>>();
     	

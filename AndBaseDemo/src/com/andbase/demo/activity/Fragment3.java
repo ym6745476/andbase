@@ -66,7 +66,9 @@ public class Fragment3 extends Fragment {
          
          //ListView数据
     	 list = new ArrayList<Map<String, Object>>();
-    	
+    	 //设置进度条的样式
+         mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+         mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
     	 //使用自定义的Adapter
     	 myListViewAdapter = new ImageListAdapter(mActivity, list,R.layout.list_items,
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,

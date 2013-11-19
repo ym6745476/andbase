@@ -36,7 +36,7 @@ public class SlidingTabActivity extends AbActivity {
 		mAbSlidingTabView = (AbSlidingTabView) findViewById(R.id.mAbSlidingTabView);
 		
 		//如果里面的页面列表不能下载原因：
-		//Fragment里面用的AbHttpQueue,由于有多个tab，顺序下载有延迟，还没下载好就被缓存了。改成用AbHttpPool，就ok了。
+		//Fragment里面用的AbTaskQueue,由于有多个tab，顺序下载有延迟，还没下载好就被缓存了。改成用AbTaskPool，就ok了。
 		//或者setOffscreenPageLimit(0)
 		
 		//缓存数量
@@ -71,7 +71,7 @@ public class SlidingTabActivity extends AbActivity {
 		tabTexts.add("第四个");
 		
 		mAbSlidingTabView.setTabColor(Color.BLACK);
-		mAbSlidingTabView.setTabSelectColor(Color.rgb(86, 186, 70));
+		mAbSlidingTabView.setTabSelectColor(Color.rgb(30, 168, 131));
 		
 		//演示增加一组
 		mAbSlidingTabView.addItemViews(tabTexts, mFragments);

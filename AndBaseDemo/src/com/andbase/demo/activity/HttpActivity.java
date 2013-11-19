@@ -76,7 +76,7 @@ public class HttpActivity extends AbActivity {
         
         //获取Http工具类
         mAbHttpUtil = AbHttpUtil.getInstance(this);
-        
+        mAbHttpUtil.setDebug(true);
         //get请求
         getBtn.setOnClickListener(new View.OnClickListener() {
 			

@@ -76,7 +76,10 @@ public class AbHttpClient {
     protected static final int RETRY_MESSAGE = 5;
     
     /**超时时间*/
-	private static int timeout = DEFAULT_SOCKET_TIMEOUT;
+	private int timeout = DEFAULT_SOCKET_TIMEOUT;
+	
+	/**debug true表示是内网*/
+	private boolean debug = false;
     
 	
 	public AbHttpClient(Context context) {
@@ -167,7 +170,7 @@ public class AbHttpClient {
 			  
 			  responseListener.sendStartMessage();
 			  
-			  if(!AbAppUtil.isNetworkAvailable(mContext)){
+			  if(!debug && !AbAppUtil.isNetworkAvailable(mContext)){
 					responseListener.sendFailureMessage(AbConstant.CONNECT_FAILURE_CODE,AbConstant.CONNECTEXCEPTION, new AbAppException(AbConstant.CONNECTEXCEPTION));
 			        return;
 			  }
@@ -237,7 +240,7 @@ public class AbHttpClient {
 		  try {
 			  responseListener.sendStartMessage();
 			  
-			  if(!AbAppUtil.isNetworkAvailable(mContext)){
+			  if(!debug && !AbAppUtil.isNetworkAvailable(mContext)){
 					responseListener.sendFailureMessage(AbConstant.CONNECT_FAILURE_CODE,AbConstant.CONNECTEXCEPTION, new AbAppException(AbConstant.CONNECTEXCEPTION));
 			        return;
 			  }
@@ -405,7 +408,25 @@ public class AbHttpClient {
     	this.timeout = timeout;
 	}
     
+    
     /**
+	 * 
+	 * 描述：调试模式
+	 */
+    public boolean isDebug() {
+		return debug;
+	}
+
+    /**
+	 * 
+	 * 描述：是否为调试模式
+	 * @param debug
+	 */
+	public void setDebug(boolean debug) {
+		this.debug = debug;
+	}
+
+	/**
      * 
      * Copyright (c) 2012 All rights reserved
      * 名称：ResponderHandler.java 

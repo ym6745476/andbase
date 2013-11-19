@@ -22,6 +22,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.Scroller;
 
@@ -266,6 +267,26 @@ public class AbPullView extends ScrollView{
 	public void addChildView(View child) {
 		mScrollLayout.addView(child);
 	}
-
 	
+	/**
+	 * 
+	 * 描述：获取Header View
+	 * @return
+	 * @throws 
+	 */
+	public AbListViewHeader getHeaderView() {
+		return mHeaderView;
+	}
+
+	/**
+	 * 
+	 * 描述：获取Header ProgressBar，用于设置自定义样式
+	 * @return
+	 * @throws 
+	 */
+	public ProgressBar getHeaderProgressBar() {
+		return mHeaderView.getHeaderProgressBar();
+	}
+	
+
 }

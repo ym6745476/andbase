@@ -29,6 +29,7 @@ import com.andbase.demo.activity.ImageDownActivity;
 import com.andbase.demo.activity.IocViewActivity;
 import com.andbase.demo.activity.NestScrollActivity;
 import com.andbase.demo.activity.PHashActivity;
+import com.andbase.demo.activity.PopoverActivity;
 import com.andbase.demo.activity.ProgressBarActivity;
 import com.andbase.demo.activity.PullToRefreshActivity;
 import com.andbase.demo.activity.Rotate3DActivity;
@@ -209,6 +210,12 @@ public class MainContentFragment extends Fragment {
 	    	map.put("itemsText", "这玩意很流行");
 	    	list.add(map);
 	    	
+	    	map = new HashMap<String, Object>();
+	    	map.put("itemsIcon",R.drawable.image_bg);
+	    	map.put("itemsTitle", "25.Pop提示框");
+	    	map.put("itemsText", "挺实用，小提示");
+	    	list.add(map);
+	    	
 	    	
 	    	
 	     //使用自定义的Adapter
@@ -317,6 +324,10 @@ public class MainContentFragment extends Fragment {
 						break;
 					case 23:
 						intent = new Intent(mActivity,SceneActivity.class);
+						startActivity(intent);
+						break;
+					case 24:
+						intent = new Intent(mActivity,PopoverActivity.class);
 						startActivity(intent);
 						break;
 					default:

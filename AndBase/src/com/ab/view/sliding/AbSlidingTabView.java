@@ -106,7 +106,6 @@ public class AbSlidingTabView extends LinearLayout {
 	/**tab滑块的高度*/
 	private int tabSlidingHeight = 5;
 	
-	
 	/**当前tab的位置*/
 	private int startX = 0;
 	
@@ -205,7 +204,9 @@ public class AbSlidingTabView extends LinearLayout {
 		int width = displayWidth/count;
 		int toX = width * index;
 		currIndex = index;
-		mTabImg.setLayoutParams(new LayoutParams(width,tabSlidingHeight));
+		LayoutParams mParams  = new LayoutParams(width,tabSlidingHeight);
+		mParams.topMargin = -tabSlidingHeight;
+		mTabImg.setLayoutParams(mParams);
 		imageSlide(mTabImg,startX,toX,0,0);
 		startX  = toX;
 	}

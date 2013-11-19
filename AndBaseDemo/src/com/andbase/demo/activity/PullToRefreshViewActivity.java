@@ -46,6 +46,9 @@ public class PullToRefreshViewActivity extends AbActivity {
         textView.setPadding(0, 100, 0, 100);
         mAbPullView.addChildView(textView);
         
+        //设置进度条的样式
+        mAbPullView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+        
     	showProgressDialog();
 
     	//定义查询的事件

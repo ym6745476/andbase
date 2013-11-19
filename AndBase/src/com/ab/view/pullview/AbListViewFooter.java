@@ -19,6 +19,7 @@ import com.ab.util.AbViewUtil;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -119,21 +120,23 @@ public class AbListViewFooter extends LinearLayout {
 	}
 
 	/**
-	 * hide footer when disable pull load more.
+	 * 隐藏footerView.
 	 */
 	public void hide() {
 		LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) footerView.getLayoutParams();
 		lp.height = 0;
 		footerView.setLayoutParams(lp);
+		footerView.setVisibility(View.GONE);
 	}
 
 	/**
-	 * show footer.
+	 * 显示footerView.
 	 */
 	public void show() {
 		LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) footerView.getLayoutParams();
 		lp.height = LayoutParams.WRAP_CONTENT;
 		footerView.setLayoutParams(lp);
+		footerView.setVisibility(View.INVISIBLE);
 	}
 
 	/**
@@ -155,7 +158,7 @@ public class AbListViewFooter extends LinearLayout {
 		footerTextView.setGravity(Gravity.CENTER_VERTICAL);
 		setTextColor(Color.rgb(107, 107, 107));
 		footerTextView.setTextSize(15);
-		footerTextView.setMinimumHeight(60);
+		footerTextView.setMinimumHeight(50);
 		footerView.setPadding(0, 10, 0, 10);
 		
 		footerProgressBar = new ProgressBar(context,null,android.R.attr.progressBarStyle);
@@ -210,18 +213,30 @@ public class AbListViewFooter extends LinearLayout {
 		return footerProgressBar;
 	}
 
-	public void setFooterProgressBar(ProgressBar footerProgressBar) {
-		this.footerProgressBar = footerProgressBar;
+	/**
+	 * 
+	 * 描述：设置Footer ProgressBar样式
+	 * @return
+	 * @throws 
+	 */
+	public void setFooterProgressBarDrawable(Drawable indeterminateDrawable) {
+		footerProgressBar.setIndeterminateDrawable(indeterminateDrawable);
 	}
 
+	/**
+	 * 
+	 * 描述：获取高度
+	 * @return
+	 * @throws 
+	 */
 	public int getFooterHeight() {
 		return footerHeight;
 	}
 	
 	/**
-	 * Sets the visiable height.
+	 * 设置高度.
 	 *
-	 * @param height the new visiable height
+	 * @param height 新的高度
 	 */
 	public void setVisiableHeight(int height) {
 		if (height < 0) height = 0;
@@ -229,5 +244,6 @@ public class AbListViewFooter extends LinearLayout {
 		lp.height = height;
 		footerView.setLayoutParams(lp);
 	}
+	
 
 }

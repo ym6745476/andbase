@@ -49,6 +49,11 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
 	    //获取ListView对象
         mListView = (AbMultiColumnListView)this.findViewById(R.id.mListView);
         
+        //设置进度条的样式
+        mListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+        mListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+        
+        
         //ListView数据
         LinkedList<ImageInfo> list = new LinkedList<ImageInfo>();
         mNewImageList = new ArrayList<ImageInfo>();
