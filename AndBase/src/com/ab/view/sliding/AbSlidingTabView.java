@@ -30,14 +30,19 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.MeasureSpec;
 import android.view.animation.TranslateAnimation;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ab.adapter.AbFragmentPagerAdapter;
 import com.ab.global.AbAppData;
+import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -60,6 +65,9 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/** tab的线性布局. */
 	private LinearLayout mTabLayout = null;
+	
+	/** tab的线性布局父. */
+	private HorizontalScrollView mTabScrollView  = null;
 	
 	/** The m view pager. */
 	private ViewPager mViewPager;
@@ -86,7 +94,7 @@ public class AbSlidingTabView extends LinearLayout {
 	private ImageView mTabImg;
 	
 	/**当前页卡编号*/
-	private int currIndex = 0;
+	private int mSelectedTabIndex = 0;
 	
 	/**屏幕宽度*/
 	private int displayWidth = 0;
@@ -109,6 +117,12 @@ public class AbSlidingTabView extends LinearLayout {
 	/**当前tab的位置*/
 	private int startX = 0;
 	
+	/**当前tab的位置*/
+	private int startX2 = 0;
+	
+	/**当前移动的距离*/
+	private int scrollX  = 0;
+	
 	public AbSlidingTabView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
@@ -124,13 +138,19 @@ public class AbSlidingTabView extends LinearLayout {
 		this.setOrientation(LinearLayout.VERTICAL);
 		this.setBackgroundColor(Color.rgb(255, 255, 255));
 		
+		mTabScrollView  = new HorizontalScrollView(context);
+		mTabScrollView.setHorizontalScrollBarEnabled(false);
 		mTabLayout = new LinearLayout(context);
 		mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
 		mTabLayout.setGravity(Gravity.CENTER);
+		mTabScrollView.addView(mTabLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.FILL_PARENT));
+		
+		
 		//定义Tab栏
 		tabItemList = new ArrayList<TextView>();
 		tabItemTextList = new ArrayList<String>();
-		this.addView(mTabLayout,layoutParamsFW);
+		
+		this.addView(mTabScrollView,layoutParamsFW);
 		
 		//页卡滑动图片
 		mTabImg  = new ImageView(context);
@@ -155,8 +175,39 @@ public class AbSlidingTabView extends LinearLayout {
 		mViewPager.setAdapter(mFragmentPagerAdapter);
 		mViewPager.setOnPageChangeListener(new MyOnPageChangeListener());
 		mViewPager.setOffscreenPageLimit(3);
-		mViewPager.setCurrentItem(0);
 		
+		mTabScrollView.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View v, MotionEvent ev) {
+				switch (ev.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					Log.d(TAG, "ACTION_DOWN");
+					break;
+				case MotionEvent.ACTION_MOVE:
+					View view = ((HorizontalScrollView) v).getChildAt(0); 
+					scrollX = v.getScrollX();
+					Log.d(TAG, "滑动X"+startX2+"to"+(int)(startX-scrollX));
+					imageSlide(mTabImg,startX2,(int)(startX-scrollX),0,0);
+					startX2 = (int)(startX-scrollX);
+					
+					if(view.getMeasuredWidth() == v.getWidth()+v.getScrollX()){
+						Log.d(TAG, "滑动到底了");
+					}else if(v.getScrollX()==0){
+						Log.d(TAG, "滑动到顶了");
+					}else {
+						
+					}
+					break;
+				case MotionEvent.ACTION_UP:
+					Log.d(TAG, "ACTION_UP");
+					break;
+				default:
+					break;
+				}
+				return false;
+			}
+		});
 	}
 
 	
@@ -177,11 +228,20 @@ public class AbSlidingTabView extends LinearLayout {
 		public void onPageSelected(int arg0) {
 			//计算滑块偏移
 			computeTabImg(arg0);
-			
 		}
 		
 	}
 	
+	/**
+	 * 
+	 * 描述：滑动动画
+	 * @param v
+	 * @param startX
+	 * @param toX
+	 * @param startY
+	 * @param toY
+	 * @throws 
+	 */
 	public void imageSlide(View v, int startX, int toX, int startY, int toY) {
 		TranslateAnimation anim = new TranslateAnimation(startX, toX, startY, toY);
 		anim.setDuration(100);
@@ -189,7 +249,14 @@ public class AbSlidingTabView extends LinearLayout {
 		v.startAnimation(anim);
 	}
 	
+	/**
+	 * 
+	 * 描述：滑动条
+	 * @param index
+	 * @throws 
+	 */
 	public void computeTabImg(int index){
+		
 		
 		for(int i = 0;i<tabItemList.size();i++){
 			TextView tv = tabItemList.get(i);
@@ -199,16 +266,26 @@ public class AbSlidingTabView extends LinearLayout {
 			}
 		}
 		
+		final View tabView = mTabLayout.getChildAt(index);
+		AbViewUtil.measureView(tabView);
 		//计算滑块偏移
-		int count = mFragmentPagerAdapter.getCount();
-		int width = displayWidth/count;
-		int toX = width * index;
-		currIndex = index;
-		LayoutParams mParams  = new LayoutParams(width,tabSlidingHeight);
+		int toX = tabView.getLeft();
+		mSelectedTabIndex = index;
+		Log.d(TAG, "computeTabImg:width"+tabView.getMeasuredWidth());
+		LayoutParams mParams  = new LayoutParams(tabView.getMeasuredWidth(),tabSlidingHeight);
 		mParams.topMargin = -tabSlidingHeight;
 		mTabImg.setLayoutParams(mParams);
-		imageSlide(mTabImg,startX,toX,0,0);
+		imageSlide(mTabImg,startX2,toX-scrollX,0,0);
 		startX  = toX;
+		startX2 = startX;
+		
+		/*//被屏幕遮挡的
+		if(tabView.getRight() >= mTabScrollView.getWidth()+scrollX){
+			mTabScrollView.scrollBy(tabView.getMeasuredWidth(), 0);
+		}*/
+		
+		
+		
 	}
 	
 	
@@ -233,7 +310,9 @@ public class AbSlidingTabView extends LinearLayout {
 			tv.setTextSize(tabTextSize);
 			tv.setText(text);
 			tv.setGravity(Gravity.CENTER);
-			tv.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.FILL_PARENT,1));
+			tv.setLayoutParams(new LayoutParams(0,LayoutParams.FILL_PARENT,1));
+			tv.setPadding(12, 5, 12, 5);
+			tv.setFocusable(false);
 			tabItemList.add(tv);
 			mTabLayout.addView(tv);
             tv.setOnClickListener(new OnClickListener() {
@@ -246,9 +325,9 @@ public class AbSlidingTabView extends LinearLayout {
 		}
 		
 		//重新
-		computeTabImg(0);
-		
 		mFragmentPagerAdapter.notifyDataSetChanged();
+		mViewPager.setCurrentItem(0);
+		computeTabImg(0);
 		
 	}
 	
@@ -273,7 +352,9 @@ public class AbSlidingTabView extends LinearLayout {
 			tv.setTextSize(tabTextSize);
 			tv.setText(text);
 			tv.setGravity(Gravity.CENTER);
-			tv.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,1));
+			tv.setLayoutParams(new LayoutParams(0,LayoutParams.FILL_PARENT,1));
+			tv.setPadding(12, 5, 12, 5);
+			tv.setFocusable(false);
 			tabItemList.add(tv);
 			mTabLayout.addView(tv);
 			tv.setOnClickListener(new OnClickListener() {
@@ -286,10 +367,10 @@ public class AbSlidingTabView extends LinearLayout {
 		}
 		
 		//重新
-		computeTabImg(0);
-	
+		Log.d(TAG, "addItemView finish");
 		mFragmentPagerAdapter.notifyDataSetChanged();
-		
+		mViewPager.setCurrentItem(0);
+		computeTabImg(0);
 	}
 	
 	
@@ -306,7 +387,6 @@ public class AbSlidingTabView extends LinearLayout {
 		pagerItemList.remove(index);
 		
 		mFragmentPagerAdapter.notifyDataSetChanged();
-		
 	}
 	
 	/**
@@ -319,7 +399,6 @@ public class AbSlidingTabView extends LinearLayout {
 		mTabLayout.removeAllViews();
 		pagerItemList.clear();
 		mFragmentPagerAdapter.notifyDataSetChanged();
-		
 	}
 
 	
@@ -380,6 +459,22 @@ public class AbSlidingTabView extends LinearLayout {
 	public void setTabTextSize(int tabTextSize) {
 		this.tabTextSize = tabTextSize;
 	}
+	
+	/**
+	 * 
+	 * 描述：设置每个tab的边距
+	 * @param left
+	 * @param top
+	 * @param right
+	 * @param bottom
+	 * @throws 
+	 */
+	public void setTabPadding(int left, int top, int right, int bottom) {
+		for(int i = 0;i<tabItemList.size();i++){
+			TextView tv = tabItemList.get(i);
+			tv.setPadding(left, top, right, bottom);
+		}
+	}
 
 	public int getTabSlidingHeight() {
 		return tabSlidingHeight;
@@ -395,5 +490,10 @@ public class AbSlidingTabView extends LinearLayout {
 		this.tabSlidingHeight = tabSlidingHeight;
 	}
 	
+	
+	@Override
+    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
 	
 }

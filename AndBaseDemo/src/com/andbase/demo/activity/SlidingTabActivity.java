@@ -65,10 +65,10 @@ public class SlidingTabActivity extends AbActivity {
 		mFragments.add(page4);
 		
 		List<String> tabTexts = new ArrayList<String>();
-		tabTexts.add("第一个");
-		tabTexts.add("第二个");
-		tabTexts.add("第三个");
-		tabTexts.add("第四个");
+		tabTexts.add("推荐");
+		tabTexts.add("排行");
+		tabTexts.add("游戏中心");
+		tabTexts.add("专题栏目");
 		
 		mAbSlidingTabView.setTabColor(Color.BLACK);
 		mAbSlidingTabView.setTabSelectColor(Color.rgb(30, 168, 131));
@@ -77,11 +77,11 @@ public class SlidingTabActivity extends AbActivity {
 		mAbSlidingTabView.addItemViews(tabTexts, mFragments);
 		
 		//演示增加一个
-		mAbSlidingTabView.addItemView("第五个", page5);
+		mAbSlidingTabView.addItemView("咖啡屋", page5);
 		
 		mAbSlidingTabView.setTabLayoutBackground(R.drawable.slide_top);
 		
-		
+		mAbSlidingTabView.setTabPadding(20, 8, 20, 8);
 		
 	}
 	

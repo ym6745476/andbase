@@ -705,6 +705,12 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 		return popoverContentView;
 	}
 
+	/**
+	 * 
+	 * 描述：设置显示的View
+	 * @param popoverContentView
+	 * @throws 
+	 */
 	public void setPopoverContentView(View popoverContentView) {
 		this.popoverContentView = popoverContentView;
 		popoverView.removeAllViews();

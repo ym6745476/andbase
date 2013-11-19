@@ -108,8 +108,8 @@ public class Fragment1 extends Fragment {
 	   		    	for (int i = 0; i < 10; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "item"+i);
-		   		    	map.put("itemsText", "item..."+i);
+		   		    	map.put("itemsTitle", "于禁"+i);
+		   		    	map.put("itemsText", "于禁..."+i);
 		   		    	newList.add(map);
 	   				}
 	   		    } catch (Exception e) {

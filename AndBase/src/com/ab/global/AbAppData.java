@@ -23,7 +23,7 @@ package com.ab.global;
 public class AbAppData {
 	
 	/** 日志开关. */
-	public static  boolean DEBUG = false;
+	public static  boolean DEBUG = true;
 	
 	/** 性能测试. */
 	public static boolean mMonitorOpened = false;
