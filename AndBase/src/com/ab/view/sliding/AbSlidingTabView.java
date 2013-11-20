@@ -18,7 +18,6 @@ package com.ab.view.sliding;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
@@ -28,14 +27,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.Display;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.MeasureSpec;
 import android.view.animation.TranslateAnimation;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -43,6 +38,8 @@ import android.widget.TextView;
 import com.ab.adapter.AbFragmentPagerAdapter;
 import com.ab.global.AbAppData;
 import com.ab.util.AbViewUtil;
+import com.ab.view.listener.AbOnScrollListener;
+import com.ab.view.sample.AbHorizontalScrollView;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -67,7 +64,7 @@ public class AbSlidingTabView extends LinearLayout {
 	private LinearLayout mTabLayout = null;
 	
 	/** tab的线性布局父. */
-	private HorizontalScrollView mTabScrollView  = null;
+	private AbHorizontalScrollView mTabScrollView  = null;
 	
 	/** The m view pager. */
 	private ViewPager mViewPager;
@@ -96,9 +93,6 @@ public class AbSlidingTabView extends LinearLayout {
 	/**当前页卡编号*/
 	private int mSelectedTabIndex = 0;
 	
-	/**屏幕宽度*/
-	private int displayWidth = 0;
-	
 	/**内容区域的适配器*/
 	private AbFragmentPagerAdapter mFragmentPagerAdapter = null;
 
@@ -117,19 +111,12 @@ public class AbSlidingTabView extends LinearLayout {
 	/**当前tab的位置*/
 	private int startX = 0;
 	
-	/**当前tab的位置*/
-	private int startX2 = 0;
-	
 	/**当前移动的距离*/
 	private int scrollX  = 0;
 	
 	public AbSlidingTabView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
-		
-		//获取屏幕的分辨率，以计算偏移量
-		Display display = ((Activity)this.context).getWindowManager().getDefaultDisplay();
-		displayWidth = display.getWidth();
 		
 		layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 		layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
@@ -138,11 +125,12 @@ public class AbSlidingTabView extends LinearLayout {
 		this.setOrientation(LinearLayout.VERTICAL);
 		this.setBackgroundColor(Color.rgb(255, 255, 255));
 		
-		mTabScrollView  = new HorizontalScrollView(context);
+		mTabScrollView  = new AbHorizontalScrollView(context);
 		mTabScrollView.setHorizontalScrollBarEnabled(false);
 		mTabLayout = new LinearLayout(context);
 		mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
 		mTabLayout.setGravity(Gravity.CENTER);
+		//mTabLayout是内容宽度
 		mTabScrollView.addView(mTabLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.FILL_PARENT));
 		
 		
@@ -176,36 +164,34 @@ public class AbSlidingTabView extends LinearLayout {
 		mViewPager.setOnPageChangeListener(new MyOnPageChangeListener());
 		mViewPager.setOffscreenPageLimit(3);
 		
-		mTabScrollView.setOnTouchListener(new OnTouchListener() {
+		mTabScrollView.setSmoothScrollingEnabled(true);
+		
+		mTabScrollView.setOnScrollListener(new AbOnScrollListener() {
 			
 			@Override
-			public boolean onTouch(View v, MotionEvent ev) {
-				switch (ev.getAction()) {
-				case MotionEvent.ACTION_DOWN:
-					Log.d(TAG, "ACTION_DOWN");
-					break;
-				case MotionEvent.ACTION_MOVE:
-					View view = ((HorizontalScrollView) v).getChildAt(0); 
-					scrollX = v.getScrollX();
-					Log.d(TAG, "滑动X"+startX2+"to"+(int)(startX-scrollX));
-					imageSlide(mTabImg,startX2,(int)(startX-scrollX),0,0);
-					startX2 = (int)(startX-scrollX);
-					
-					if(view.getMeasuredWidth() == v.getWidth()+v.getScrollX()){
-						Log.d(TAG, "滑动到底了");
-					}else if(v.getScrollX()==0){
-						Log.d(TAG, "滑动到顶了");
-					}else {
-						
-					}
-					break;
-				case MotionEvent.ACTION_UP:
-					Log.d(TAG, "ACTION_UP");
-					break;
-				default:
-					break;
-				}
-				return false;
+			public void onScrollToRight() {
+				if(D) Log.d(TAG, "onScrollToRight");
+			}
+			
+			@Override
+			public void onScrollToLeft() {
+				if(D) Log.d(TAG, "onScrollToLeft");
+			}
+			
+			@Override
+			public void onScrollStoped() {
+				if(D) Log.d(TAG, "onScrollStoped");
+			}
+			
+			@Override
+			public void onScroll(int arg1) {
+				scrollX = arg1;
+				View view = mTabLayout.getChildAt(mSelectedTabIndex);
+				int toX = view.getLeft()-scrollX;
+				
+				if(D) Log.d(TAG, "滑动X"+startX+"to"+toX);
+				imageSlide(mTabImg,startX,toX,0,0);
+				startX = toX;
 			}
 		});
 	}
@@ -268,24 +254,68 @@ public class AbSlidingTabView extends LinearLayout {
 		
 		final View tabView = mTabLayout.getChildAt(index);
 		AbViewUtil.measureView(tabView);
-		//计算滑块偏移
-		int toX = tabView.getLeft();
-		mSelectedTabIndex = index;
-		Log.d(TAG, "computeTabImg:width"+tabView.getMeasuredWidth());
+		
 		LayoutParams mParams  = new LayoutParams(tabView.getMeasuredWidth(),tabSlidingHeight);
 		mParams.topMargin = -tabSlidingHeight;
 		mTabImg.setLayoutParams(mParams);
-		imageSlide(mTabImg,startX2,toX-scrollX,0,0);
-		startX  = toX;
-		startX2 = startX;
 		
-		/*//被屏幕遮挡的
-		if(tabView.getRight() >= mTabScrollView.getWidth()+scrollX){
-			mTabScrollView.scrollBy(tabView.getMeasuredWidth(), 0);
-		}*/
+		if(D) Log.d(TAG, "old--startX:"+startX);
+		//判断当前显示的是否被被屏幕遮挡，如果遮挡就移动（如果是第一个和最后一个移动遮挡的宽度否则移动tab的宽度）
+		if(D) Log.d(TAG, "view宽度"+index+":"+tabView.getMeasuredWidth());
+		if(D) Log.d(TAG, "ScrollView宽度:"+mTabScrollView.getWidth());
+		if(D) Log.d(TAG, "scrollX:"+scrollX);
+		if(D) Log.d(TAG, "tabView right:"+tabView.getRight());
+		if(D) Log.d(TAG, "tabView left:"+tabView.getLeft());
 		
+		if(mSelectedTabIndex<index && tabView.getRight()-scrollX > mTabScrollView.getWidth()){
+			if(D) Log.d(TAG, "右边被遮挡");
+			int offsetX = 0;
+			//右边被遮挡
+			if(index == mTabLayout.getChildCount()-1){
+				offsetX = tabView.getRight()-mTabScrollView.getWidth()-scrollX;
+				mTabScrollView.smoothScrollBy(offsetX, 0);
+				scrollX = scrollX+offsetX;
+				if(D) Log.d(TAG, "startX:"+startX+",offsetX:"+offsetX);
+				imageSlide(mTabImg,startX,mTabScrollView.getWidth()-tabView.getMeasuredWidth(),0,0);
+				startX = mTabScrollView.getWidth()-tabView.getMeasuredWidth();
+			}else{
+				offsetX = tabView.getMeasuredWidth();
+				mTabScrollView.smoothScrollBy(offsetX, 0);
+				scrollX = scrollX+offsetX;
+				if(D) Log.d(TAG, "startX:"+startX+",offsetX:"+offsetX);
+				int toX = tabView.getLeft()-scrollX;
+				imageSlide(mTabImg,startX,toX,0,0);
+				startX = toX;
+			}
+			
+			
+		}else if(mSelectedTabIndex>index && tabView.getLeft() < scrollX){
+			if(D) Log.d(TAG, "左边被遮挡");
+			//左边被遮挡  offsetX是负值
+			int offsetX = 0;
+            if(index == 0){
+            	offsetX = -scrollX;
+            	mTabScrollView.smoothScrollBy(offsetX, 0);
+            	scrollX = scrollX+offsetX;
+    			imageSlide(mTabImg,startX,0,0,0);
+    			startX = 0;
+			}else{
+				offsetX = -tabView.getMeasuredWidth();
+				mTabScrollView.smoothScrollBy(offsetX, 0);
+				scrollX = scrollX+offsetX;
+				if(D) Log.d(TAG, "startX2:"+startX+",offsetX:"+offsetX);
+				int toX = tabView.getLeft()-scrollX;
+				imageSlide(mTabImg,startX,toX,0,0);
+				startX = toX;
+			}
+            
+		}else{
+			int toX = tabView.getLeft()-scrollX;
+			imageSlide(mTabImg,startX,toX,0,0);
+			startX  = toX;
+		}
 		
-		
+		mSelectedTabIndex = index;
 	}
 	
 	

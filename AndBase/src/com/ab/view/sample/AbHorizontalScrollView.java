@@ -17,110 +17,82 @@ package com.ab.view.sample;
 
 import android.content.Context;
 import android.graphics.Rect;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.widget.HorizontalScrollView;
 
+import com.ab.view.listener.AbOnScrollListener;
+
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbHorizontalScrollView.
+ * 
+ * Copyright (c) 2012 All rights reserved
+ * 名称：AbHorizontalScrollView1.java 
+ * 描述：有滚动事件监听的HorizontalScrollView
+ * @author zhaoqp
+ * @date：2013-11-20 下午3:00:53
+ * @version v1.0
  */
 public class AbHorizontalScrollView extends HorizontalScrollView {
-	
-	/** The scroller task. */
-	private Runnable scrollerTask;
-	
-	/** The intit position. */
+
 	private int intitPosition;
-	
-	/** The new check. */
-	private int newCheck = 100;
-	
-	/** The child width. */
 	private int childWidth = 0;
-
-	/**
-	 * The Interface OnScrollStopListner.
-	 */
-	public interface OnScrollStopListner {
-		
-		/**
-		 * scroll have stoped.
-		 */
-		void onScrollStoped();
-
-		/**
-		 * scroll have stoped, and is at left edge.
-		 */
-		void onScrollToLeftEdge();
-
-		/**
-		 * scroll have stoped, and is at right edge.
-		 */
-		void onScrollToRightEdge();
-
-		/**
-		 * scroll have stoped, and is at middle.
-		 */
-		void onScrollToMiddle();
+	private AbOnScrollListener onScrollListner;
+	
+	public AbHorizontalScrollView(Context context) {
+		super(context);
 	}
-
-	/** The on scrollstop listner. */
-	private OnScrollStopListner onScrollstopListner;
-
-	/**
-	 * Instantiates a new ab horizontal scroll view.
-	 *
-	 * @param context the context
-	 * @param attrs the attrs
-	 */
+	
 	public AbHorizontalScrollView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		scrollerTask = new Runnable() {
-			@Override
-			public void run() {
-				int newPosition = getScrollX();
-				if (intitPosition - newPosition == 0) {
-					if (onScrollstopListner == null) {
-						return;
-					}
-					onScrollstopListner.onScrollStoped();
+	}
+
+	@Override
+	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+		
+		int newPosition = getScrollX();
+		if (intitPosition - newPosition == 0) {
+			if (onScrollListner == null) {
+				return;
+			}
+			onScrollListner.onScrollStoped();
+			new Handler().postDelayed(new Runnable(){
+				@Override
+				public void run(){
 					Rect outRect = new Rect();
 					getDrawingRect(outRect);
 					if (getScrollX() == 0) {
-						onScrollstopListner.onScrollToLeftEdge();
+						onScrollListner.onScroll(0);
+						onScrollListner.onScrollToLeft();
 					} else if (childWidth + getPaddingLeft() + getPaddingRight() == outRect.right) {
-						onScrollstopListner.onScrollToRightEdge();
+						onScrollListner.onScroll(getScrollX());
+						onScrollListner.onScrollToRight();
 					} else {
-						onScrollstopListner.onScrollToMiddle();
+						onScrollListner.onScroll(getScrollX());
 					}
-				} else {
-					intitPosition = getScrollX();
-					postDelayed(scrollerTask, newCheck);
 				}
-			}
-		};
+			},200);
+			
+		} else {
+			intitPosition = getScrollX();
+			checkTotalWidth();
+		}
+		super.onScrollChanged(l, t, oldl, oldt);
 	}
 
+	
 	/**
-	 * Sets the on scroll stop listner.
-	 *
-	 * @param listner the new on scroll stop listner
+	 * 
+	 * 描述：设置监听器
+	 * @param listner
+	 * @throws 
 	 */
-	public void setOnScrollStopListner(OnScrollStopListner listner) {
-		onScrollstopListner = listner;
+	public void setOnScrollListener(AbOnScrollListener listner) {
+		onScrollListner = listner;
 	}
-
+	
 	/**
-	 * Start scroller task.
-	 */
-	public void startScrollerTask() {
-		intitPosition = getScrollX();
-		postDelayed(scrollerTask, newCheck);
-		checkTotalWidth();
-	}
-
-	/**
-	 * Check total width.
+	 * 计算总宽.
 	 */
 	private void checkTotalWidth() {
 		if (childWidth > 0) {
@@ -130,4 +102,5 @@ public class AbHorizontalScrollView extends HorizontalScrollView {
 			childWidth += getChildAt(i).getWidth();
 		}
 	}
+	
 }

@@ -57,6 +57,9 @@ public class SlidingTabActivity extends AbActivity {
 		Fragment1 page3 = new Fragment1();
 		Fragment2 page4 = new Fragment2();
 		Fragment1 page5 = new Fragment1();
+		Fragment3 page6 = new Fragment3();
+		Fragment4 page7 = new Fragment4();
+		Fragment5 page8 = new Fragment5();
 		
 		List<Fragment> mFragments = new ArrayList<Fragment>();
 		mFragments.add(page1);
@@ -78,6 +81,9 @@ public class SlidingTabActivity extends AbActivity {
 		
 		//演示增加一个
 		mAbSlidingTabView.addItemView("咖啡屋", page5);
+		mAbSlidingTabView.addItemView("英雄三国", page6);
+		mAbSlidingTabView.addItemView("今日新闻", page7);
+		mAbSlidingTabView.addItemView("朋友圈", page8);
 		
 		mAbSlidingTabView.setTabLayoutBackground(R.drawable.slide_top);
 		

@@ -74,7 +74,7 @@ public class AbViewUtil {
 				View listItem = mListAdapter.getView(0, null, absListView);
 				listItem.measure(w, h);
 				int line = count/lineNumber + remain;
-				params.height = line*listItem.getMeasuredHeight()+(line+1)*verticalSpace;
+				params.height = line*listItem.getMeasuredHeight()+(line-1)*verticalSpace;
 			}
 			
 		}

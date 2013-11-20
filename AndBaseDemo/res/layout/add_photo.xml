@@ -35,7 +35,8 @@
                 android:horizontalSpacing="0dp"
                 android:numColumns="auto_fit"
                 android:stretchMode="columnWidth"
-                android:verticalSpacing="10dp" />
+                android:verticalSpacing="10dp"
+                android:listSelector="@android:color/transparent"/>
         </LinearLayout>
     </LinearLayout>
 

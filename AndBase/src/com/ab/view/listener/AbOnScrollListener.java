@@ -18,23 +18,35 @@ package com.ab.view.listener;
 
 // TODO: Auto-generated Javadoc
 /**
- * The listener interface for receiving abOnScrolled events.
- * The class that is interested in processing a abOnScrolled
- * event implements this interface, and the object created
- * with that class is registered with a component using the
- * component's <code>addAbOnScrolledListener<code> method. When
- * the abOnScrolled event occurs, that object's appropriate
- * method is invoked.
- *
- * @see AbOnScrolledEvent
+ * 
+ * Copyright (c) 2012 All rights reserved
+ * 名称：AbOnScrollListener.java 
+ * 描述：滚动监听器
+ * @author zhaoqp
+ * @date：2013-11-20 下午3:11:11
+ * @version v1.0
  */
 public interface AbOnScrollListener {
     
     /**
-     * On scroll.
-     *
-     * @param position the position
+     * 滚动.
+     * @param arg1 返回参数
      */
-    public void onScroll(int position); 
+    public void onScroll(int arg1); 
+    
+    /**
+	 * 滚动停止.
+	 */
+    public void onScrollStoped();
+
+	/**
+	 * 滚到了最左边.
+	 */
+    public void onScrollToLeft();
+
+	/**
+	 * 滚到了最右边.
+	 */
+    public void onScrollToRight();
 
 }
