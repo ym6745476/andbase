@@ -39,7 +39,6 @@ public class ProgressBarHorizontalActivity extends AbActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		this.getIntent().putExtra(AbConstant.TITLE_TRANSPARENT_FLAG,AbConstant.TITLE_TRANSPARENT);
 		super.onCreate(savedInstanceState);
 		setAbContentView(R.layout.progress_bar_horizontal);
 

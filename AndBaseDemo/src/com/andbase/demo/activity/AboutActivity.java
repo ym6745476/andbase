@@ -28,7 +28,8 @@ public class AboutActivity extends AbActivity {
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         //mAbTitleBar.setVisibility(View.GONE);
-	    
+        //设置AbTitleBar在最上
+	    this.setTitleBarAbove(true);
         application = (MyApplication)abApplication;
         mAbTitleBar.getLogoView().setOnClickListener(new View.OnClickListener() {
 			

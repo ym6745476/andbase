@@ -1,13 +1,25 @@
 package com.andbase.demo.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 
 import com.ab.activity.AbActivity;
+import com.ab.global.AbMenuItem;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
+import com.andbase.demo.adapter.ListPopAdapter;
 import com.andbase.global.MyApplication;
 
 public class TitleBarActivity extends AbActivity {
@@ -16,6 +28,8 @@ public class TitleBarActivity extends AbActivity {
 	
 	//标题栏
 	private AbTitleBar mAbTitleBar = null;
+	
+	private PopupWindow popupWindow;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,18 +44,8 @@ public class TitleBarActivity extends AbActivity {
         mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
-       
-	    
-        mAbTitleBar.getTitleTextButton().setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				showToast("点了标题哦");
-				
-			}
-		});
         
-        mAbTitleBar.getLogoView().setOnClickListener(new View.OnClickListener() {
+        mAbTitleBar.setLogoOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -57,6 +61,8 @@ public class TitleBarActivity extends AbActivity {
 		Button btn5 = (Button) this.findViewById(R.id.btn5);
 		Button btn6 = (Button) this.findViewById(R.id.btn6);
 		Button btn7 = (Button) this.findViewById(R.id.btn7);
+		Button btn8 = (Button) this.findViewById(R.id.btn8);
+		Button btn9 = (Button) this.findViewById(R.id.btn9);
 		
 		//显示标题栏
 		btn1.setOnClickListener(new OnClickListener() {
@@ -121,7 +127,9 @@ public class TitleBarActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showDialog("2种设置", "在onCreate调用super之前设置参数this.getIntent().putExtra(AbConstant.TITLE_TRANSPARENT_FLAG,AbConstant.TITLE_TRANSPARENT);", null);
+				//关于界面
+				Intent intent = new Intent(TitleBarActivity.this,AboutActivity.class); 
+				startActivity(intent);
 			}
 		});
 		
@@ -131,6 +139,17 @@ public class TitleBarActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				 mAbTitleBar.setTitleTextBackgroundResource(R.drawable.drop_down_title_btn);
+				 View view = mInflater.inflate(R.layout.list_pop, null);
+				 ListView popListView = (ListView) view.findViewById(R.id.pop_list);
+				 List<AbMenuItem> list = new ArrayList<AbMenuItem>();
+				 list.add(new AbMenuItem("蔡文姬"));
+				 list.add(new AbMenuItem("貂蝉"));
+				 list.add(new AbMenuItem("紫罂粟"));
+				 list.add(new AbMenuItem("孙尚香"));
+				 ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list);
+				 popListView.setAdapter(mListPopAdapter);
+				 
+				 mAbTitleBar.setTitleTextDropDown(view);
 			}
 		});
 		
@@ -139,9 +158,29 @@ public class TitleBarActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				 mAbTitleBar.setTitleTextBackgroundDrawable(null);
+				 mAbTitleBar.setTitleTextOnClickListener(null);
 			}
 		});
-    }    
+		
+		btn8.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				bottomLayout.setVisibility(View.VISIBLE);
+				
+				setBottomView(R.layout.bottom_bar);
+			}
+		});
+		
+		btn9.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				bottomLayout.setVisibility(View.GONE);
+			}
+		});
+    }   
+    
 }
 
 

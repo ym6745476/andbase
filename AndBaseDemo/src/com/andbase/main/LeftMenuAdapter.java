@@ -10,16 +10,17 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ab.global.AbMenuItem;
 import com.andbase.R;
 
 public class LeftMenuAdapter extends BaseExpandableListAdapter {
 
 	private Context mContext = null;
 	private ArrayList<String> mGroupName;
-	private ArrayList<ArrayList<MenuItem>> mChilds;
+	private ArrayList<ArrayList<AbMenuItem>> mChilds;
 	private LayoutInflater mInflater = null;
 
-	public LeftMenuAdapter(Context context, ArrayList<String> groupName,ArrayList<ArrayList<MenuItem>> childs ) {
+	public LeftMenuAdapter(Context context, ArrayList<String> groupName,ArrayList<ArrayList<AbMenuItem>> childs ) {
 		mContext = context;
 		mGroupName = groupName;
 		mChilds = childs;
@@ -46,7 +47,7 @@ public class LeftMenuAdapter extends BaseExpandableListAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		MenuItem m = mChilds.get(groupPosition).get(childPosition);
+		AbMenuItem m = mChilds.get(groupPosition).get(childPosition);
 		holder.mChildIcon.setImageResource(m.getIconId());
 		holder.mChildName.setText(m.getText());
 		return convertView;

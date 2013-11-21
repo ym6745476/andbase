@@ -122,7 +122,7 @@ public class AbTableHelper {
 
 		String sql = sb.toString();
 
-		Log.d(TAG, "crate table [" + tableName + "]: " + sql);
+		Log.d(TAG, "create table [" + tableName + "]: " + sql);
 
 		db.execSQL(sql);
 	}

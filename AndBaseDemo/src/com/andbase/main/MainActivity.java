@@ -133,7 +133,6 @@ public class MainActivity extends AbActivity {
         String to = intent.getStringExtra("TO");
         if("chat".equals(to)){
         	Intent mIntent  = new Intent(this, ChatActivity.class);
-	        mIntent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 	        mIntent.putExtra("ID",id);
 	        mIntent.putExtra("NAME",name);
 	        mIntent.putExtra("HEADURL",headUrl);
@@ -186,7 +185,6 @@ public class MainActivity extends AbActivity {
  			@Override
  			public void onClick(View v) {
  				Intent intent = new Intent(MainActivity.this,AboutActivity.class); 
- 				intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
  				startActivity(intent);
  			}
          	
@@ -355,7 +353,6 @@ public class MainActivity extends AbActivity {
        					   //startActivityForResult(intent,1);
                        }else if(toActivity==1){
                        	   Intent intent = new Intent(MainActivity.this,FriendActivity.class);
-    					   intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
     					   startActivity(intent);
                        }
                    }else{

@@ -70,7 +70,6 @@ public class RegisterActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(RegisterActivity.this, AgreementActivity.class);
-				intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 				startActivity(intent);
 			}
 		});

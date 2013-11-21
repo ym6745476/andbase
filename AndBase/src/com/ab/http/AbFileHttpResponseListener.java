@@ -16,6 +16,7 @@
 package com.ab.http;
 
 import java.io.File;
+import java.io.IOException;
 
 import android.os.Environment;
 
@@ -47,13 +48,6 @@ public class AbFileHttpResponseListener extends AbHttpResponseListener{
      */
 	public AbFileHttpResponseListener(String url) {
 		super();
-		//生成缓存文件
-        if(AbFileUtil.isCanUseSD()){
-	        File path = Environment.getExternalStorageDirectory();
-			String fileName = AbFileUtil.getFileNameFromUrl(url);
-	    	File file = new File(path.getAbsolutePath() + AbFileUtil.getDownPathFileDir()+fileName);
-	    	this.mFile = file;
-        }
 	}
 	
 	/**
@@ -82,14 +76,9 @@ public class AbFileHttpResponseListener extends AbHttpResponseListener{
 	 */
     public void onSuccess(int statusCode) {};
     
-    /**
-	 * 描述：下载文件失败，调用.
-	 */
-    public void onFailure(int statusCode, File file,Throwable error) {}
-    
     
     /**
-	 * 描述：多文件上传成功失败调用.
+	 * 描述：文件上传下载失败调用.
 	 */
     public void onFailure(int statusCode, String content,Throwable error) {}
    
@@ -114,6 +103,25 @@ public class AbFileHttpResponseListener extends AbHttpResponseListener{
 
 	public void setFile(File file) {
 		this.mFile = file;
+		try {
+			if(!file.getParentFile().exists()){
+			      file.getParentFile().mkdirs();
+			}
+			if(!file.exists()){
+			      file.createNewFile();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void setFile(String name) {
+		//生成缓存文件
+        if(AbFileUtil.isCanUseSD()){
+	        File path = Environment.getExternalStorageDirectory();
+	    	File file = new File(path.getAbsolutePath() + AbFileUtil.getDownPathFileDir()+name);
+	    	setFile(file);
+        }
 	}
     
 }

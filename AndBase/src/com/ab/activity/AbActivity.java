@@ -24,10 +24,10 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -39,6 +39,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -46,6 +47,7 @@ import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -139,8 +141,14 @@ public abstract class AbActivity extends FragmentActivity {
 	/** 标题栏布局ID. */
 	public int mAbTitlebarID = 1;
 	
+	/** 副标题栏布局ID. */
+	public int mBottombarID = 2;
+	
 	/** 主内容布局. */
 	protected RelativeLayout contentLayout = null;
+	
+	/** 副标题栏布局. */
+	protected RelativeLayout bottomLayout = null;
 	
 	/** 屏幕宽度. */
 	public int diaplayWidth  = 320;
@@ -224,20 +232,22 @@ public abstract class AbActivity extends FragmentActivity {
 		contentLayout = new RelativeLayout(this);
 		contentLayout.setPadding(0, 0, 0, 0);
 		
-		Intent intent = this.getIntent();
-		int titleTransparentFlag = intent.getIntExtra(AbConstant.TITLE_TRANSPARENT_FLAG,AbConstant.TITLE_NOTRANSPARENT);
+		//副标题栏
+		bottomLayout = new RelativeLayout(this);
+		bottomLayout.setPadding(0, 0, 0, 0);
+		bottomLayout.setId(mBottombarID);
 		
-		if(titleTransparentFlag == AbConstant.TITLE_TRANSPARENT){
-			ab_base.addView(contentLayout,layoutParamsFW);
-			RelativeLayout.LayoutParams layoutParamsFW2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-			layoutParamsFW2.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
-			ab_base.addView(mAbTitlebar,layoutParamsFW2);
-		}else{
-			ab_base.addView(mAbTitlebar,layoutParamsFW);
-			RelativeLayout.LayoutParams layoutParamsFW1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-			layoutParamsFW1.addRule(RelativeLayout.BELOW, mAbTitlebarID);
-			ab_base.addView(contentLayout, layoutParamsFW1);
-		}
+        //填入View
+		ab_base.addView(mAbTitlebar,layoutParamsFW);
+		
+		RelativeLayout.LayoutParams layoutParamsFW2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+		layoutParamsFW2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+		ab_base.addView(bottomLayout, layoutParamsFW2);
+		
+		RelativeLayout.LayoutParams layoutParamsFW1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+		layoutParamsFW1.addRule(RelativeLayout.BELOW, mAbTitlebarID);
+		layoutParamsFW1.addRule(RelativeLayout.ABOVE, mBottombarID);
+		ab_base.addView(contentLayout, layoutParamsFW1);
 		
 		abApplication = getApplication();
 		abSharedPreferences = getSharedPreferences(AbConstant.SHAREPATH, Context.MODE_PRIVATE);
@@ -268,8 +278,6 @@ public abstract class AbActivity extends FragmentActivity {
 		Toast.makeText(this,""+this.getResources().getText(resId), Toast.LENGTH_SHORT).show();
 	}
 	
-	
-	
 	/**
 	 * 描述：用指定的View填充主界面.
 	 * @param contentView  指定的View
@@ -286,13 +294,8 @@ public abstract class AbActivity extends FragmentActivity {
 	 * @param resId  指定的View的资源ID
 	 */
 	public void setAbContentView(int resId) {
-		contentLayout.removeAllViews();
-		contentLayout.addView(mInflater.inflate(resId, null),layoutParamsFF);
-		//ioc
-		initIocView();
+		setAbContentView(mInflater.inflate(resId, null));
 	}
-	
-	
 
 	/**
 	 * 描述：在线程中提示文本信息.
@@ -698,7 +701,7 @@ public abstract class AbActivity extends FragmentActivity {
 
 
 	/**
-	 * Gets the center dialog.
+	 * 获取显示在中间的Dialog.
 	 *
 	 * @return the center dialog
 	 */
@@ -716,8 +719,61 @@ public abstract class AbActivity extends FragmentActivity {
 		return mTopDialog;
 	}
 	
-
-
+	/**
+	 * 
+	 * 描述：设置绝对定位的主标题栏覆盖到内容的上边
+	 * @param above
+	 * @throws 
+	 */
+	public void setTitleBarAbove(boolean above) {
+		ab_base.removeAllViews();
+		if(above){
+			RelativeLayout.LayoutParams layoutParamsFW1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+			layoutParamsFW1.addRule(RelativeLayout.ABOVE, mBottombarID);
+			ab_base.addView(contentLayout,layoutParamsFW1);
+			RelativeLayout.LayoutParams layoutParamsFW2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+			layoutParamsFW2.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
+			ab_base.addView(mAbTitlebar,layoutParamsFW2);
+			
+			RelativeLayout.LayoutParams layoutParamsFW3 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+			layoutParamsFW3.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+			ab_base.addView(bottomLayout, layoutParamsFW3);
+			
+		}else{
+			ab_base.addView(mAbTitlebar,layoutParamsFW);
+			
+			RelativeLayout.LayoutParams layoutParamsFW2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+			layoutParamsFW2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+			ab_base.addView(bottomLayout, layoutParamsFW2);
+			
+			RelativeLayout.LayoutParams layoutParamsFW1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+			layoutParamsFW1.addRule(RelativeLayout.BELOW, mAbTitlebarID);
+			layoutParamsFW1.addRule(RelativeLayout.ABOVE, mBottombarID);
+			ab_base.addView(contentLayout, layoutParamsFW1);
+		}
+	}
+	
+	
+	
+	/**
+	 * 
+	 * 描述：设置副标题栏界面显示
+	 * @param view
+	 * @throws 
+	 */
+	public void setBottomView(View view) {
+		bottomLayout.removeAllViews();
+		bottomLayout.addView(view,layoutParamsFW);
+	}
+	
+	/**
+	 * 描述：用指定资源ID表示的View填充主界面.
+	 * @param resId  指定的View的资源ID
+	 */
+	public void setBottomView(int resId) {
+		setBottomView(mInflater.inflate(resId, null));
+	}
+	
 	/**
 	 * 描述：设置界面显示（忽略标题栏）
 	 * @see android.app.Activity#setContentView(int)

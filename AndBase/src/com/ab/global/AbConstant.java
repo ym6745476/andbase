@@ -61,15 +61,6 @@ public class AbConstant {
 	/** 删除顶部进度框. */
 	public static final int REMOVE_DIALOGTOP = 5;
 	
-	/** 标题栏透明标记. */
-	public static final String TITLE_TRANSPARENT_FLAG = "TITLE_TRANSPARENT_FLAG";
-	
-	/** 标题栏透明. */
-	public static final int TITLE_TRANSPARENT = 0;
-	
-	/** 标题栏不透明. */
-	public static final int TITLE_NOTRANSPARENT = 1;
-	
 	/** View的类型. */
 	public static final int LISTVIEW = 1;
 	
@@ -96,8 +87,12 @@ public class AbConstant {
 	
 	/** 连接失败的HTTP返回码. */
 	public static final int CONNECT_FAILURE_CODE = 600;
+	/** 连接失败的HTTP返回码. */
+	public static final int CONNECT_TIMEOUT_CODE = 601;
+	/** 响应失败的HTTP返回码. */
+	public static final int RESPONSE_TIMEOUT_CODE = 602;
 	/** 未处理的HTTP返回码. */
-	public static final int UNTREATED_CODE = 700;
+	public static final int UNTREATED_CODE = 900;
 	
 	public static final String CONNECTEXCEPTION = "无法连接到网络";
 	public static final String UNKNOWNHOSTEXCEPTION = "连接远程地址失败";

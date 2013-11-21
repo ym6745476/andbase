@@ -26,11 +26,10 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
 		//自定义的标题栏
 		AbTitleBar mAbTitleBar = new AbTitleBar(this);
 		mAbTitleBar.setTitleText(R.string.sliding_menu_name);
-		mAbTitleBar.setLogo(R.drawable.button_selector_back);
+		mAbTitleBar.setLogo(R.drawable.button_selector_menu);
 		mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
-		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
 		//加到系统标题栏位置上
 		LinearLayout titleBarLinearLayout = (LinearLayout)this.findViewById(R.id.titleBar);

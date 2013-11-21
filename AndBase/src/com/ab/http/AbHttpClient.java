@@ -5,7 +5,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.ExecutorService;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -30,6 +33,7 @@ import com.ab.global.AbAppException;
 import com.ab.global.AbConstant;
 import com.ab.task.AbTaskPool;
 import com.ab.util.AbAppUtil;
+import com.ab.util.AbFileUtil;
 
 public class AbHttpClient {
 	
@@ -204,6 +208,7 @@ public class AbHttpClient {
 			  HttpResponse httpResponse = httpClient.execute(httpRequest);  
 			  //请求成功  
 			  int statusCode = httpResponse.getStatusLine().getStatusCode();
+			  
 			  //取得返回的字符串  
 			  HttpEntity  mHttpEntity = httpResponse.getEntity();
 			  if (statusCode == HttpStatus.SC_OK){  
@@ -213,7 +218,9 @@ public class AbHttpClient {
 				  }else if(responseListener instanceof AbBinaryHttpResponseListener){
 					  readResponseData(mHttpEntity,((AbBinaryHttpResponseListener)responseListener));
 				  }else if(responseListener instanceof AbFileHttpResponseListener){
-					  writeResponseData(mHttpEntity,((AbFileHttpResponseListener)responseListener));
+					  //获取文件名
+					  String fileName = AbFileUtil.getFileNameFromUrl(url, httpResponse);
+					  writeResponseData(mHttpEntity,fileName,((AbFileHttpResponseListener)responseListener));
 				  }
 			  }else{
 				  String content = EntityUtils.toString(mHttpEntity);
@@ -286,7 +293,9 @@ public class AbHttpClient {
 				  }else if(responseListener instanceof AbBinaryHttpResponseListener){
 					  readResponseData(mHttpEntity,((AbBinaryHttpResponseListener)responseListener));
 				  }else if(responseListener instanceof AbFileHttpResponseListener){
-					  writeResponseData(mHttpEntity,((AbFileHttpResponseListener)responseListener));
+					  //获取文件名
+					  String fileName = AbFileUtil.getFileNameFromUrl(url, httpResponse);
+					  writeResponseData(mHttpEntity,fileName,((AbFileHttpResponseListener)responseListener));
 				  }
 			  }else{
 				  String content = EntityUtils.toString(mHttpEntity);
@@ -306,10 +315,15 @@ public class AbHttpClient {
 	/**
      * 描述：写入文件并回调进度
      */
-    public void writeResponseData(HttpEntity entity,AbFileHttpResponseListener responseListener){
+    public void writeResponseData(HttpEntity entity,String name,AbFileHttpResponseListener responseListener){
         
-    	if(responseListener.getFile() == null || entity == null){
+    	if(entity == null){
         	return;
+        }
+    	
+    	if(responseListener.getFile() == null){
+    		//创建缓存文件
+    		responseListener.setFile(name);
         }
     	
     	InputStream inStream = null;
@@ -328,10 +342,11 @@ public class AbHttpClient {
 	                  responseListener.sendProgressMessage(count, (int) contentLength);
 	              }
 	        }
+	        responseListener.sendSuccessMessage(200);
 	    }catch(Exception e){
 	        e.printStackTrace();
 	        //发送失败消息
-			responseListener.sendFailureMessage(AbConstant.UNTREATED_CODE,e.getMessage(),e);
+			responseListener.sendFailureMessage(AbConstant.RESPONSE_TIMEOUT_CODE,AbConstant.SOCKETTIMEOUTEXCEPTION,e);
 	    } finally {
         	try {
         		if(inStream!=null){
@@ -344,9 +359,8 @@ public class AbHttpClient {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-            
         }
-        responseListener.sendSuccessMessage(200);
+        
         
     }
     
@@ -376,10 +390,11 @@ public class AbHttpClient {
 
 			     } 
 			  }
+			 responseListener.sendSuccessMessage(200,outSteam.toByteArray());
 		} catch (Exception e) {
 			e.printStackTrace();
 			//发送失败消息
-			responseListener.sendFailureMessage(AbConstant.UNTREATED_CODE,e.getMessage(),e);
+			responseListener.sendFailureMessage(AbConstant.RESPONSE_TIMEOUT_CODE,AbConstant.SOCKETTIMEOUTEXCEPTION,e);
 		}finally{
 			try {
 				if(inStream!=null){
@@ -392,7 +407,7 @@ public class AbHttpClient {
 				e.printStackTrace();
 			}
 		}
-    	responseListener.sendSuccessMessage(200,outSteam.toByteArray());
+    	
         
     }
 

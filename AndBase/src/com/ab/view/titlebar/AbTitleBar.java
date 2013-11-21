@@ -18,15 +18,19 @@ package com.ab.view.titlebar;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.LinearLayout.LayoutParams;
 
 import com.ab.util.AbViewUtil;
 
@@ -89,6 +93,9 @@ public class AbTitleBar extends LinearLayout {
 	 * LinearLayout.LayoutParams，已经初始化为WRAP_CONTENT, WRAP_CONTENT
 	 */
 	public LinearLayout.LayoutParams layoutParamsWW = null;
+	
+	/** 下拉选择. */
+	private PopupWindow popupWindow;
 
 	public AbTitleBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -396,10 +403,59 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
-	 * 描述：设置Logo按钮的返回事件.
+	 * 描述：设置Logo按钮的点击事件.
 	 * @param mOnClickListener  指定的返回事件
 	 */
-	public void setLogoBackOnClickListener(View.OnClickListener mOnClickListener) {
+	public void setLogoOnClickListener(View.OnClickListener mOnClickListener) {
 		 logoView.setOnClickListener(mOnClickListener);
 	}
+	
+	/**
+	 * 描述：设置标题的点击事件.
+	 * @param mOnClickListener  指定的返回事件
+	 */
+	public void setTitleTextOnClickListener(View.OnClickListener mOnClickListener) {
+		titleTextBtn.setOnClickListener(mOnClickListener);
+	}
+	
+	/**
+	 * 描述：下拉菜单的的实现方法
+	 * @param parent
+	 * @param view 要显示的View
+	 */
+	private void showWindow(View parent,View view) {
+		
+		if (popupWindow == null) {
+			popupWindow = new PopupWindow(view, parent.getMeasuredWidth(), LayoutParams.WRAP_CONTENT, true);
+		}
+
+		// 使其聚集
+		popupWindow.setFocusable(true);
+		// 设置允许在外点击消失
+		popupWindow.setOutsideTouchable(true);
+		// 这个是为了点击“返回Back”也能使其消失，并且并不会影响你的背景
+		popupWindow.setBackgroundDrawable(new BitmapDrawable());
+		popupWindow.showAsDropDown(parent,0, 10);
+	}
+	
+	/**
+	 * 
+	 * 描述：设置标题下拉的View
+	 * @param view
+	 * @throws 
+	 */
+	public void setTitleTextDropDown(final View view){
+		 if(view == null){
+			   return;
+		 }
+		 setTitleTextOnClickListener(new OnClickListener() {
+				
+			 @Override
+			 public void onClick(View v) {
+				 showWindow(titleTextBtn,view);
+			 }
+		 });
+	}
+	
+	
 }

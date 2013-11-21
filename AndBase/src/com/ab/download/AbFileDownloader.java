@@ -81,14 +81,14 @@ public class AbFileDownloader {
 	 * @param suffix 文件类型后缀
 	 * @param threadNum 下载线程数
 	 */
-	public AbFileDownloader(Context context,DownFile downFile,String suffix,int threadNum) {
+	public AbFileDownloader(Context context,DownFile downFile,int threadNum) {
 		try {
 			this.context = context;
 			this.mDownFile = downFile;
 			this.mThreadNum = threadNum;
 			mDownFileDao = new DownFileDao(context);
 			// 构建保存文件
-			String fileName = AbFileUtil.getFileNameFromUrl(mDownFile.getDownUrl(),suffix);
+			String fileName = AbFileUtil.getFileNameFromUrl(mDownFile.getDownUrl());
 			saveFile = new File(Environment.getExternalStorageDirectory().getPath()+File.separator+AbFileUtil.getDownPathFileDir()+fileName);
 			if (!saveFile.getParentFile().exists()){
 				saveFile.getParentFile().mkdirs();

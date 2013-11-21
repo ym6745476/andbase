@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="搜索"/>
+    <item
+        android:id="@+id/add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="增加"/>
+    <item
+        android:id="@+id/edit"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="编辑">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="分享"/>
+        </menu>
+    </item>
+
+</menu>

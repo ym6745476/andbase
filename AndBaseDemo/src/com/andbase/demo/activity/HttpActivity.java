@@ -247,7 +247,7 @@ public class HttpActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				String url = "http://www.418log.org/content/uploadfile/201311/37ef1383801664.png";
+				String url = "http://dldx.csdn.net/fd.php?i=569841705427009&s=69709ef2fa98dd2cb245dacab384395c";
 				
 				mAbHttpUtil.get(url, new AbFileHttpResponseListener(url) {
 		        	
@@ -287,9 +287,10 @@ public class HttpActivity extends AbActivity {
 					}
 
 		        	// 失败，调用
-					@Override
-					public void onFailure(int statusCode, File file,
+		            @Override
+					public void onFailure(int statusCode, String content,
 							Throwable error) {
+						Log.d(TAG, "onFailure");
 						showToast(error.getMessage());
 					}
 					
@@ -303,8 +304,11 @@ public class HttpActivity extends AbActivity {
 					// 完成后调用，失败，成功
 		            public void onFinish() { 
 		            	//下载完成取消进度框
-		            	mAlertDialog.cancel();
-		            	mAlertDialog  = null;
+		            	if(mAlertDialog!=null){
+		            		mAlertDialog.cancel();
+			            	mAlertDialog  = null;
+		            	}
+		            	
 		            	Log.d(TAG, "onFinish");
 		            };
 		            
@@ -381,8 +385,10 @@ public class HttpActivity extends AbActivity {
 		            public void onFinish() { 
 		            	Log.d(TAG, "onFinish");
 		            	//下载完成取消进度框
-		            	mAlertDialog.cancel();
-		            	mAlertDialog  = null;
+		            	if(mAlertDialog!=null){
+		            	    mAlertDialog.cancel();
+		            	    mAlertDialog  = null;
+		            	}
 		            };
 					
 		            

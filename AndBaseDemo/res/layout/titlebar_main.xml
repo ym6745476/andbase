@@ -10,11 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <include
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/space_view_title" />
-        
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -24,13 +19,13 @@
                 android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="显示标题栏" />
+                android:text="显示主操作栏" />
 
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="隐藏标题栏" />
+                android:text="隐藏主操作栏" />
         </LinearLayout>
 
         <LinearLayout
@@ -50,8 +45,8 @@
                 android:layout_height="wrap_content"
                 android:text="隐藏右边" />
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
@@ -67,12 +62,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="标题下拉" />
-            
+
             <Button
                 android:id="@+id/btn7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="标题下拉关闭" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示副标题栏" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="隐藏副标题栏" />
         </LinearLayout>
     </LinearLayout>
 

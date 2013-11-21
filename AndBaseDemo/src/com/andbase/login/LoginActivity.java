@@ -78,7 +78,6 @@ public class LoginActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(LoginActivity.this, FindPwdActivity.class);
-				intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 				startActivity(intent);
 			}
 		});
@@ -96,7 +95,6 @@ public class LoginActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-				intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 				startActivity(intent);
 				finish();
 			}

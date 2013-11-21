@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ import android.widget.TextView;
 import com.ab.bitmap.AbImageCache;
 import com.ab.bitmap.AbImageDownloader;
 import com.ab.global.AbConstant;
+import com.ab.global.AbMenuItem;
 import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
@@ -53,9 +55,9 @@ public class MainMenuFragment extends Fragment {
 	private MainActivity mActivity = null;
 	private ExpandableListView mMenuListView;
 	private ArrayList<String> mGroupName = null;
-	private ArrayList<ArrayList<MenuItem>> mChilds = null;
-	private ArrayList<MenuItem> mChild1 = null;
-	private ArrayList<MenuItem> mChild2 = null;
+	private ArrayList<ArrayList<AbMenuItem>> mChilds = null;
+	private ArrayList<AbMenuItem> mChild1 = null;
+	private ArrayList<AbMenuItem> mChild2 = null;
 	private LeftMenuAdapter mAdapter;
 	private OnChangeViewListener mOnChangeViewListener;
 	private TextView mNameText;
@@ -116,10 +118,10 @@ public class MainMenuFragment extends Fragment {
 		});
 		 
 		 mGroupName = new ArrayList<String>();
-		 mChild1 = new ArrayList<MenuItem>();
-		 mChild2 = new ArrayList<MenuItem>();
+		 mChild1 = new ArrayList<AbMenuItem>();
+		 mChild2 = new ArrayList<AbMenuItem>();
 			
-		 ArrayList<ArrayList<MenuItem>> mChilds = new ArrayList<ArrayList<MenuItem>>();
+		 ArrayList<ArrayList<AbMenuItem>> mChilds = new ArrayList<ArrayList<AbMenuItem>>();
 		 mChilds.add(mChild1);
 		 mChilds.add(mChild2);
 		 
@@ -201,40 +203,40 @@ public class MainMenuFragment extends Fragment {
 		mGroupName.add("常用");
 		mGroupName.add("操作");
 		
-		MenuItem m0 = new MenuItem();
+		AbMenuItem m0 = new AbMenuItem();
 		m0.setIconId(R.drawable.square);
 		m0.setText("朋友圈");
 		mChild1.add(m0);
 		
-		MenuItem m1 = new MenuItem();
+		AbMenuItem m1 = new AbMenuItem();
 		m1.setIconId(R.drawable.share);
 		m1.setText("博客");
 		mChild1.add(m1);
 		
-		MenuItem m2 = new MenuItem();
+		AbMenuItem m2 = new AbMenuItem();
 		m2.setIconId(R.drawable.app);
 		m2.setText("应用游戏");
 		mChild1.add(m2);
 		
-		MenuItem m3 = new MenuItem();
+		AbMenuItem m3 = new AbMenuItem();
 		m3.setIconId(R.drawable.set);
 		m3.setText("选项");
 		mChild2.add(m3);
 		
-		MenuItem m4 = new MenuItem();
+		AbMenuItem m4 = new AbMenuItem();
 		m4.setIconId(R.drawable.recommend);
 		m4.setText("推荐给好友");
 		mChild2.add(m4);
 		
 		mUser = application.mUser;
 		if(mUser!=null){
-			MenuItem m5 = new MenuItem();
+			AbMenuItem m5 = new AbMenuItem();
 			m5.setIconId(R.drawable.quit);
 			m5.setText("注销");
 			mChild2.add(m5);
 		}
 		
-		MenuItem m6 = new MenuItem();
+		AbMenuItem m6 = new AbMenuItem();
 		m6.setIconId(R.drawable.about);
 		m6.setText("关于");
 		mChild2.add(m6);
@@ -298,13 +300,11 @@ public class MainMenuFragment extends Fragment {
 							((MainActivity)mActivity).loginAuthorization(1);
 						}else{
 							Intent intent = new Intent(mActivity,FriendActivity.class);
-    						intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
     						startActivity(intent);
 						}
 					}else if(childPosition==1){
 						//博客
 						Intent intent = new Intent(mActivity,WebActivity.class);
-						intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 						startActivity(intent); 
 					}else if(childPosition==2){
 						//应用游戏
@@ -332,14 +332,12 @@ public class MainMenuFragment extends Fragment {
 						}else{
 							//关于
 							Intent intent = new Intent(mActivity,AboutActivity.class); 
-							intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 							startActivity(intent);
 						}
 					}else if(childPosition==3){
 						if(application.mUser!=null){
 							//关于
 							Intent intent = new Intent(mActivity,AboutActivity.class); 
-							intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 							startActivity(intent);
 						}else{
 							//无

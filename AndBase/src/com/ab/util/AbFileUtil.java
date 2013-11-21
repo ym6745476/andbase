@@ -22,7 +22,6 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -31,6 +30,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -197,7 +199,7 @@ public class AbFileUtil {
 			 File fileDirectory = new File(path.getAbsolutePath() + downPathImageDir);
 			 
 			 //获取后缀
-			 String suffix = getSuffixFromUrl(url);
+			 String suffix = getSuffixFromNetUrl(url);
 			 
 			 //缓存的图片文件名的组合
 			 String fileName = getImageFileName(url,newWidth,newHeight,type);
@@ -477,7 +479,7 @@ public class AbFileUtil {
 	 * @param url 文件地址
 	 * @return 文件名
 	 */
-	public static String getFileNameFromNetUrl(String url){
+	public static String getRealFileNameFromUrl(String url){
 		String name = null;
 		try {
 			if(AbStrUtil.isEmpty(url)){
@@ -514,8 +516,49 @@ public class AbFileUtil {
 		return name;
     }
 	
+	
 	/**
-	 * 获取文件名，通过网络获取.
+	 * 获取文件名，外链模式和通过网络获取.
+	 * @param url 文件地址
+	 * @return 文件名
+	 */
+	public static String getFileNameFromUrl(String url,HttpResponse response){
+		if(AbStrUtil.isEmpty(url)){
+			return null;
+		}
+		String name = null;
+		try {
+			String suffix = null;
+			//获取后缀
+			if(url.lastIndexOf(".")!=-1){
+				 suffix = url.substring(url.lastIndexOf("."));
+				 if(suffix.indexOf("/")!=-1 || suffix.indexOf("?")!=-1 || suffix.indexOf("&")!=-1){
+					 suffix = null;
+				 }
+			}
+			if(suffix == null){
+				 //获取文件名
+				 String fileName = "unknow.tmp";
+				 Header[] headers = response.getHeaders("content-disposition");
+				 for(int i=0;i<headers.length;i++){
+					  Matcher m = Pattern.compile(".*filename=(.*)").matcher(headers[i].getValue());
+					  if (m.find()){
+						  fileName =  m.group(1).replace("\"", "");
+					  }
+				 }
+				 if(fileName!=null && fileName.lastIndexOf(".")!=-1){
+					 suffix = fileName.substring(fileName.lastIndexOf("."));
+				 }
+			}
+			name = AbMd5.MD5(url)+suffix;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return name;
+    }
+	
+	/**
+	 * 获取文件名，外链模式和通过网络获取.
 	 * @param url 文件地址
 	 * @return 文件名
 	 */
@@ -525,25 +568,18 @@ public class AbFileUtil {
 		}
 		String name = null;
 		try {
-			name = AbMd5.MD5(url)+getSuffixFromUrl(url);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return name;
-    }
-	
-	/**
-	 * 获取文件名，通过网络获取.
-	 * @param url 文件地址
-	 * @param suffix .tmp
-	 * @return 文件名
-	 */
-	public static String getFileNameFromUrl(String url,String suffix){
-		if(AbStrUtil.isEmpty(url)){
-			return null;
-		}
-		String name = null;
-		try {
+			String suffix = null;
+			//获取后缀
+			if(url.lastIndexOf(".")!=-1){
+				 suffix = url.substring(url.lastIndexOf("."));
+				 if(suffix.indexOf("/")!=-1){
+					 suffix = null;
+				 }
+			}
+			if(suffix == null){
+				 //获取后缀
+				 suffix = getSuffixFromNetUrl(url);
+			}
 			name = AbMd5.MD5(url)+suffix;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -552,12 +588,12 @@ public class AbFileUtil {
     }
 	
 	/**
-	 * 获取文件名，通过网络获取.
+	 * 获取文件后缀.
 	 * @param url 文件地址
-	 * @param suffix .tmp
-	 * @return 文件名
+	 * @return 文件后缀
 	 */
-	public static String getSuffixFromUrl(String url){
+	public static String getSuffixFromNetUrl(String url){
+		
 		if(AbStrUtil.isEmpty(url)){
 			return null;
 		}
@@ -566,8 +602,15 @@ public class AbFileUtil {
 			//获取后缀
 			if(url.lastIndexOf(".")!=-1){
 				 suffix = url.substring(url.lastIndexOf("."));
-				 if(suffix.indexOf("/")!=-1){
-					 suffix = ".tmp";
+				 if(suffix.indexOf("/")!=-1 || suffix.indexOf("?")!=-1 || suffix.indexOf("&")!=-1){
+					 suffix = null;
+				 }
+			}
+			if(suffix == null){
+				 //获取文件名
+				 String fileName = getRealFileNameFromUrl(url);
+				 if(fileName!=null && fileName.lastIndexOf(".")!=-1){
+					 suffix = fileName.substring(fileName.lastIndexOf("."));
 				 }
 			}
 		} catch (Exception e) {

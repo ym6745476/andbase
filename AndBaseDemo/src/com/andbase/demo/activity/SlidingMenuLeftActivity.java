@@ -20,11 +20,10 @@ public class SlidingMenuLeftActivity extends AbActivity {
 		
 		AbTitleBar mAbTitleBar = this.getTitleBar();
 		mAbTitleBar.setTitleText(R.string.sliding_menu_name);
-		mAbTitleBar.setLogo(R.drawable.button_selector_back);
+		mAbTitleBar.setLogo(R.drawable.button_selector_menu);
 		mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
-		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
         //主视图的Fragment添加
 		getSupportFragmentManager()

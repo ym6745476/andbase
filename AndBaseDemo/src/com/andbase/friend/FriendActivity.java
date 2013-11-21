@@ -86,7 +86,6 @@ public class FriendActivity extends AbActivity {
 								//跳转到聊天界面
 								//朋友圈
 								Intent intent = new Intent(FriendActivity.this,ChatActivity.class);
-								intent.putExtra(AbConstant.TITLE_TRANSPARENT_FLAG, AbConstant.TITLE_TRANSPARENT);
 								intent.putExtra("ID", mFrontiaUserDetail.getId());
 								intent.putExtra("NAME", mFrontiaUserDetail.getName());
 								intent.putExtra("HEADURL", mFrontiaUserDetail.getHeadUrl());
