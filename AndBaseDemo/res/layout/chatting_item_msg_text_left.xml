@@ -79,7 +79,6 @@
                 android:layout_width="60dip"
                 android:layout_height="60dip"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/photo_bg"
                 android:clickable="true"
                 android:visibility="gone"/>
         </LinearLayout>

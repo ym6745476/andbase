@@ -52,7 +52,7 @@ public class ListNestViewPagerActivity extends AbActivity {
         AbTitleBar mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText(R.string.list_pager_name);
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
-        mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
+        mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         
@@ -190,19 +190,19 @@ public class ListNestViewPagerActivity extends AbActivity {
 		ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
 		TextView mPlayText = (TextView) mPlayView.findViewById(R.id.mPlayText);
 		mPlayText.setText("1111111111111");
-		mPlayImage.setBackgroundResource(R.drawable.guide_pic1);
+		mPlayImage.setBackgroundResource(R.drawable.pic1);
 		
 		final View mPlayView1 = mInflater.inflate(R.layout.play_view_item, null);
 		ImageView mPlayImage1 = (ImageView) mPlayView1.findViewById(R.id.mPlayImage);
 		TextView mPlayText1 = (TextView) mPlayView1.findViewById(R.id.mPlayText);
 		mPlayText1.setText("2222222222222");
-		mPlayImage1.setBackgroundResource(R.drawable.guide_pic2);
+		mPlayImage1.setBackgroundResource(R.drawable.pic2);
 		
 		final View mPlayView2 = mInflater.inflate(R.layout.play_view_item, null);
 		ImageView mPlayImage2 = (ImageView) mPlayView2.findViewById(R.id.mPlayImage);
 		TextView mPlayText2 = (TextView) mPlayView2.findViewById(R.id.mPlayText);
 		mPlayText2.setText("33333333333333333");
-		mPlayImage2.setBackgroundResource(R.drawable.guide_pic2);
+		mPlayImage2.setBackgroundResource(R.drawable.pic3);
 
 		mSlidingPlayView.setPageLineHorizontalGravity(Gravity.RIGHT);
 		mSlidingPlayView.addView(mPlayView);

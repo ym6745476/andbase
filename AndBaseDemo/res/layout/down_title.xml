@@ -7,11 +7,10 @@
     <TextView
         android:id="@+id/title_text"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dip"
         android:background="@drawable/list_top"
-        android:gravity="left"
+        android:gravity="left|center_vertical"
         android:paddingLeft="15dip"
-        android:paddingTop="10dip"
         android:textStyle="bold" />
 
 </LinearLayout>

@@ -44,7 +44,7 @@ public class WelcomeActivity extends AbActivity {
         AbTitleBar mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText(R.string.welcome_name);
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
-        mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
+        mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         
@@ -109,13 +109,13 @@ public class WelcomeActivity extends AbActivity {
 				 * 我这里只是简单的采用获取当前显示的图片来进行判断。
 				 */
 				if (mShowPicture.getDrawable().equals(mPicture_1)) {
-					mShowText.setText("同学情,请珍藏");
+					mShowText.setText("图片1");
 					mShowPicture.setImageDrawable(mPicture_2);
 				} else if (mShowPicture.getDrawable().equals(mPicture_2)) {
-					mShowText.setText("共奋斗,同分享");
+					mShowText.setText("图片2");
 					mShowPicture.setImageDrawable(mPicture_3);
 				} else if (mShowPicture.getDrawable().equals(mPicture_3)) {
-					mShowText.setText("儿时友,莫相忘");
+					mShowText.setText("图片3");
 					mShowPicture.setImageDrawable(mPicture_1);
 				}
 				mShowPicture.startAnimation(mFadeIn);
@@ -134,7 +134,7 @@ public class WelcomeActivity extends AbActivity {
 		 * 界面刚开始显示的内容
 		 */
 		mShowPicture.setImageDrawable(mPicture_1);
-		mShowText.setText("儿时友,莫相忘");
+		mShowText.setText("图片1");
 		mShowPicture.startAnimation(mFadeIn);
 	}
 
@@ -154,9 +154,9 @@ public class WelcomeActivity extends AbActivity {
 	 * 初始化图片
 	 */
 	private void initPicture() {
-		mPicture_1 = getResources().getDrawable(R.drawable.guide_pic1);
-		mPicture_2 = getResources().getDrawable(R.drawable.guide_pic2);
-		mPicture_3 = getResources().getDrawable(R.drawable.guide_pic3);
+		mPicture_1 = getResources().getDrawable(R.drawable.pic1);
+		mPicture_2 = getResources().getDrawable(R.drawable.pic2);
+		mPicture_3 = getResources().getDrawable(R.drawable.pic3);
 	}
     
 }

@@ -3,14 +3,11 @@ package com.andbase.demo.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -41,8 +38,8 @@ public class TitleBarActivity extends AbActivity {
         mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText("多功能标题栏");
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
-        mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
-        mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
+        mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
+        mAbTitleBar.setTitleTextMargin(20, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         
         mAbTitleBar.setLogoOnClickListener(new View.OnClickListener() {
@@ -63,6 +60,7 @@ public class TitleBarActivity extends AbActivity {
 		Button btn7 = (Button) this.findViewById(R.id.btn7);
 		Button btn8 = (Button) this.findViewById(R.id.btn8);
 		Button btn9 = (Button) this.findViewById(R.id.btn9);
+		Button btn10 = (Button) this.findViewById(R.id.btn10);
 		
 		//显示标题栏
 		btn1.setOnClickListener(new OnClickListener() {
@@ -123,7 +121,37 @@ public class TitleBarActivity extends AbActivity {
 			}
 		});
 		
+		//操作栏变换
 		btn5.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mAbTitleBar.setLogo(R.drawable.button_selector_delete);
+				mAbTitleBar.setLogo2(R.drawable.button_selector_app);
+				mAbTitleBar.clearRightView();
+				View rightViewOk = mInflater.inflate(R.layout.ok_btn, null);
+		    	mAbTitleBar.addRightView(rightViewOk);
+		    	mAbTitleBar.setTitleText("正在修改");
+		    	mAbTitleBar.setTitleBarBackground(R.drawable.top_bg2);
+		    	mAbTitleBar.setTitleBarGravity(Gravity.CENTER,Gravity.CENTER);
+		    	mAbTitleBar.setTitleTextMargin(0, 0, 0, 0);
+		    	mAbTitleBar.setLogoOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
+						mAbTitleBar.setTitleText("多功能标题栏");
+						mAbTitleBar.clearRightView();
+						mAbTitleBar.setLogo(R.drawable.button_selector_back);
+						mAbTitleBar.setTitleBarGravity(Gravity.LEFT,Gravity.RIGHT);
+						mAbTitleBar.setTitleTextMargin(20, 0, 0, 0);
+						mAbTitleBar.getLogoView2().setVisibility(View.GONE);
+					}
+				});
+			}
+		});
+		
+		btn6.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -134,26 +162,26 @@ public class TitleBarActivity extends AbActivity {
 		});
 		
 		
-		btn6.setOnClickListener(new View.OnClickListener() {
+		btn7.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				 mAbTitleBar.setTitleTextBackgroundResource(R.drawable.drop_down_title_btn);
-				 View view = mInflater.inflate(R.layout.list_pop, null);
-				 ListView popListView = (ListView) view.findViewById(R.id.pop_list);
+				 View popView = mInflater.inflate(R.layout.list_pop, null);
+				 ListView popListView = (ListView) popView.findViewById(R.id.pop_list);
 				 List<AbMenuItem> list = new ArrayList<AbMenuItem>();
 				 list.add(new AbMenuItem("蔡文姬"));
 				 list.add(new AbMenuItem("貂蝉"));
 				 list.add(new AbMenuItem("紫罂粟"));
 				 list.add(new AbMenuItem("孙尚香"));
-				 ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list);
+				 ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list,R.layout.list_pop_item);
 				 popListView.setAdapter(mListPopAdapter);
 				 
-				 mAbTitleBar.setTitleTextDropDown(view);
+				 mAbTitleBar.setTitleTextDropDown(popView);
 			}
 		});
 		
-		btn7.setOnClickListener(new View.OnClickListener() {
+		btn8.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -162,21 +190,36 @@ public class TitleBarActivity extends AbActivity {
 			}
 		});
 		
-		btn8.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				bottomLayout.setVisibility(View.VISIBLE);
-				
-				setBottomView(R.layout.bottom_bar);
-			}
-		});
-		
 		btn9.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				bottomLayout.setVisibility(View.GONE);
+				mAbBottomBar.setVisibility(View.VISIBLE);
+				View view = mInflater.inflate(R.layout.bottom_bar, null);
+				Button searchBtn = (Button)view.findViewById(R.id.tab_1);
+				Button moreBtn = (Button)view.findViewById(R.id.tab_5);
+				Button selectBtn = (Button)view.findViewById(R.id.tab_4);
+				mAbBottomBar.setBottomView(view);
+				View popView = mInflater.inflate(R.layout.list_pop, null);
+				ListView popListView = (ListView) popView.findViewById(R.id.pop_list);
+				List<AbMenuItem> list = new ArrayList<AbMenuItem>();
+				list.add(new AbMenuItem("分享"));
+				list.add(new AbMenuItem("收藏"));
+				list.add(new AbMenuItem("好评"));
+				list.add(new AbMenuItem("搜索"));
+				ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list,R.layout.list_pop_item2);
+				popListView.setAdapter(mListPopAdapter);
+				mAbBottomBar.setDropDown(moreBtn,popView);
+				mAbBottomBar.setDropDown(selectBtn,popView);
+				mAbBottomBar.setDropDown(searchBtn,popView);
+			}
+		});
+		
+		btn10.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mAbBottomBar.setVisibility(View.GONE);
 			}
 		});
     }   

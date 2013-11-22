@@ -139,7 +139,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dip"
-                android:background="@drawable/button_selector_blue"
+                android:background="@drawable/button_selector_yellow"
                 android:text="@string/register"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

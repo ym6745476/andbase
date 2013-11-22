@@ -44,6 +44,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="隐藏右边" />
+            
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作栏变换" />
         </LinearLayout>
 
         <LinearLayout
@@ -52,19 +58,19 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/btn5"
+                android:id="@+id/btn6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="透明背景" />
 
             <Button
-                android:id="@+id/btn6"
+                android:id="@+id/btn7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="标题下拉" />
 
             <Button
-                android:id="@+id/btn7"
+                android:id="@+id/btn8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="标题下拉关闭" />
@@ -76,13 +82,13 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/btn8"
+                android:id="@+id/btn9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="显示副标题栏" />
 
             <Button
-                android:id="@+id/btn9"
+                android:id="@+id/btn10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="隐藏副标题栏" />

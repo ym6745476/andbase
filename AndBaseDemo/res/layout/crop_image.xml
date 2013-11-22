@@ -41,8 +41,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/button_selector_cancel"
-            android:text="@string/cancelBtn" />
+            android:background="@drawable/button_selector_gray"
+            android:text="@string/cancelBtn" 
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/okBtn"
@@ -51,8 +52,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/button_selector_ok"
-            android:text="@string/okBtn" />
+            android:background="@drawable/button_selector_green"
+            android:text="@string/okBtn" 
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/rotateRight"

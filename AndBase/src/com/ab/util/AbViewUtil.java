@@ -39,18 +39,30 @@ public class AbViewUtil {
 	 */
 	public static void setAbsListViewHeight(AbsListView absListView,int lineNumber,int verticalSpace) {
 		
-		if (lineNumber == 0) {
-			return;
-		}
+		int totalHeight = getAbsListViewHeight(absListView,lineNumber,verticalSpace);
+		ViewGroup.LayoutParams params = absListView.getLayoutParams();
+		params.height = totalHeight;
+		((MarginLayoutParams) params).setMargins(0, 0, 0, 0);
+		absListView.setLayoutParams(params);
+	}
+	
+	/**
+	 * 描述：获取AbsListView的高度.
+	 * @param absListView the abs list view
+	 * @param lineNumber 每行几个  ListView一行一个item
+	 * @param verticalSpace the vertical space
+	 */
+	public static int getAbsListViewHeight(AbsListView absListView,int lineNumber,int verticalSpace) {
+		int totalHeight = 0;
 		int w = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED); 
 	    int h = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
-		ListAdapter mListAdapter = absListView.getAdapter();
+	    absListView.measure(w, h);
+	    ListAdapter mListAdapter = absListView.getAdapter();
 		if (mListAdapter == null) {
-			return;
+			return totalHeight;
 		}
-		int totalHeight = 0;
+		
 		int count = mListAdapter.getCount();
-		ViewGroup.LayoutParams params = absListView.getLayoutParams();
 		if(absListView instanceof ListView){
 			for (int i = 0; i < count; i++) {
 				View listItem = mListAdapter.getView(i, null, absListView);
@@ -58,9 +70,9 @@ public class AbViewUtil {
 				totalHeight += listItem.getMeasuredHeight();
 			}
 			if (count == 0) {
-				params.height = verticalSpace;
+				totalHeight = verticalSpace;
 			} else {
-				params.height = totalHeight + (((ListView)absListView).getDividerHeight() * (count - 1));
+				totalHeight = totalHeight + (((ListView)absListView).getDividerHeight() * (count - 1));
 			}
 			
 		}else if(absListView instanceof GridView){
@@ -69,18 +81,16 @@ public class AbViewUtil {
 				remain = 1;
 			}
 			if(mListAdapter.getCount()==0){
-				params.height = verticalSpace;
+				totalHeight = verticalSpace;
 			}else{
 				View listItem = mListAdapter.getView(0, null, absListView);
 				listItem.measure(w, h);
 				int line = count/lineNumber + remain;
-				params.height = line*listItem.getMeasuredHeight()+(line-1)*verticalSpace;
+				totalHeight = line*listItem.getMeasuredHeight()+(line-1)*verticalSpace;
 			}
 			
 		}
-		
-		((MarginLayoutParams) params).setMargins(0, 0, 0, 0);
-		absListView.setLayoutParams(params);
+		return totalHeight;
 
 	}
 	

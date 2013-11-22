@@ -27,7 +27,7 @@ public class SlidingMenuTitleHoldActivity extends FragmentActivity {
 		AbTitleBar mAbTitleBar = new AbTitleBar(this);
 		mAbTitleBar.setTitleText(R.string.sliding_menu_name);
 		mAbTitleBar.setLogo(R.drawable.button_selector_back);
-		mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
+		mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);

@@ -7,7 +7,7 @@
     <com.ab.view.sliding.AbSlidingPlayView
         android:id="@+id/mAbSlidingPlayView"
         android:layout_width="fill_parent"
-        android:layout_height="100dip" >
+        android:layout_height="150dip" >
     </com.ab.view.sliding.AbSlidingPlayView>
 
     <LinearLayout

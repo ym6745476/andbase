@@ -19,6 +19,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -56,6 +57,9 @@ public class AbTitleBar extends LinearLayout {
 	/** 左侧的Logo图标View. */
 	protected ImageView logoView = null;
 	
+	/** 左侧的Logo图标View. */
+	protected ImageView logoView2 = null;
+	
 	/** 左侧的Logo图标右边的分割线View. */
 	protected ImageView logoLineView = null;
 	
@@ -69,7 +73,7 @@ public class AbTitleBar extends LinearLayout {
 	protected LinearLayout rightLayout = null;
 	
 	/** 标题栏布局ID. */
-	public int mAbTitlebarID = 1;
+	public int mAbTitleBarID = 1;
 	
 	/** 全局的LayoutInflater对象，已经完成初始化. */
 	public LayoutInflater mInflater;
@@ -113,7 +117,7 @@ public class AbTitleBar extends LinearLayout {
 		mActivity  = (Activity)context;
 		//水平排列
 		this.setOrientation(LinearLayout.HORIZONTAL);
-		this.setId(mAbTitlebarID);
+		this.setId(mAbTitleBarID);
 		
 		mInflater = LayoutInflater.from(context);
 		
@@ -147,8 +151,12 @@ public class AbTitleBar extends LinearLayout {
 		logoLineView = new ImageView(context);
 		logoLineView.setVisibility(View.GONE);
 		
+		logoView2 = new ImageView(context);
+		logoView2.setVisibility(View.GONE);
+		
 		this.addView(logoView,layoutParamsWW);
 		this.addView(logoLineView,layoutParamsWW);
+		this.addView(logoView2,layoutParamsWW);
 		this.addView(titleTextLayout,titleTextLayoutParams);
 		
 		
@@ -175,13 +183,29 @@ public class AbTitleBar extends LinearLayout {
 	/**
 	 * 描述：标题栏的背景图.
 	 * @param res  背景图资源ID
-	 */
-	public void setTitleLayoutBackground(int res) {
+	 */         
+	public void setTitleBarBackground(int res) {
 		this.setBackgroundResource(res);
 	}
 	
 	/**
-	 * 描述：标题文字的对齐.
+	 * 描述：设置标题背景.
+	 * @param d  背景图
+	 */
+	public void setTitleBarBackgroundDrawable(Drawable d) {
+		this.setBackgroundDrawable(d);
+	}
+	
+	/**
+	 * 描述：标题栏的背景图.
+	 * @param color  背景颜色值
+	 */
+	public void setTitleBarBackgroundColor(int color) {
+		this.setBackgroundColor(color);
+	}
+	
+	/**
+	 * 描述：标题文字的对齐,需要在setTitleBarGravity之后设置才生效.
 	 * @param left the left
 	 * @param top the top
 	 * @param right the right
@@ -191,14 +215,6 @@ public class AbTitleBar extends LinearLayout {
 		titleTextLayoutParams.setMargins(left, top, right, bottom);
 	}
 	
-	
-	/**
-	 * 描述：标题栏的背景图.
-	 * @param color  背景颜色值
-	 */
-	public void setTitleLayoutBackgroundColor(int color) {
-		this.setBackgroundColor(color);
-	}
 
 	/**
 	 * 描述：标题文字字号.
@@ -219,7 +235,7 @@ public class AbTitleBar extends LinearLayout {
 	 * @param gravity1  标题对齐方式
 	 * @param gravity2  右边布局对齐方式
 	 */
-	public void setTitleLayoutGravity(int gravity1,int gravity2) {
+	public void setTitleBarGravity(int gravity1,int gravity2) {
 		AbViewUtil.measureView(this.rightLayout);
 		AbViewUtil.measureView(this.logoView);
 		int leftWidth = this.logoView.getMeasuredWidth();
@@ -283,6 +299,14 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
+	 * 描述：获取标题Logo的View.
+	 * @return the logo view
+	 */
+	public ImageView getLogoView2() {
+		return logoView2;
+	}
+	
+	/**
 	 * 描述：设置标题字体粗体.
 	 *
 	 * @param bold the new title text bold
@@ -307,13 +331,6 @@ public class AbTitleBar extends LinearLayout {
 		titleTextBtn.setBackgroundResource(resId);
 	}
 	
-	/**
-	 * 描述：设置标题背景.
-	 * @param d  背景图
-	 */
-	public void setTitleLayoutBackgroundDrawable(Drawable d) {
-		this.setBackgroundDrawable(d);
-	}
 	
 	/**
 	 * 描述：设置标题背景.
@@ -356,6 +373,24 @@ public class AbTitleBar extends LinearLayout {
 	public void setLogo(int resId) {
 		logoView.setVisibility(View.VISIBLE);
 		logoView.setBackgroundResource(resId);
+	}
+	
+	/**
+     * 描述：设置Logo的背景图.
+     * @param drawable  Logo资源Drawable
+     */
+	public void setLogo2(Drawable drawable) {
+		logoView2.setVisibility(View.VISIBLE);
+		logoView2.setBackgroundDrawable(drawable);
+	}
+	
+	/**
+     * 描述：设置Logo的背景资源.
+     * @param resId  Logo资源ID
+     */
+	public void setLogo2(int resId) {
+		logoView2.setVisibility(View.VISIBLE);
+		logoView2.setBackgroundResource(resId);
 	}
 	
 	/**
@@ -411,6 +446,14 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
+	 * 描述：设置Logo按钮的点击事件.
+	 * @param mOnClickListener  指定的返回事件
+	 */
+	public void setLogo2OnClickListener(View.OnClickListener mOnClickListener) {
+		 logoView2.setOnClickListener(mOnClickListener);
+	}
+	
+	/**
 	 * 描述：设置标题的点击事件.
 	 * @param mOnClickListener  指定的返回事件
 	 */
@@ -424,9 +467,14 @@ public class AbTitleBar extends LinearLayout {
 	 * @param view 要显示的View
 	 */
 	private void showWindow(View parent,View view) {
-		
+		AbViewUtil.measureView(view);
+		int popWidth = parent.getMeasuredWidth();
+		int popMargin = (this.getMeasuredHeight()-parent.getMeasuredHeight())/2;
+		if(view.getMeasuredWidth()>parent.getMeasuredWidth()){
+			popWidth = view.getMeasuredWidth();
+		}
 		if (popupWindow == null) {
-			popupWindow = new PopupWindow(view, parent.getMeasuredWidth(), LayoutParams.WRAP_CONTENT, true);
+			popupWindow = new PopupWindow(view, popWidth, LayoutParams.WRAP_CONTENT, true);
 		}
 
 		// 使其聚集
@@ -434,8 +482,8 @@ public class AbTitleBar extends LinearLayout {
 		// 设置允许在外点击消失
 		popupWindow.setOutsideTouchable(true);
 		// 这个是为了点击“返回Back”也能使其消失，并且并不会影响你的背景
-		popupWindow.setBackgroundDrawable(new BitmapDrawable());
-		popupWindow.showAsDropDown(parent,0, 10);
+		popupWindow.setBackgroundDrawable(new ColorDrawable(android.R.color.transparent));
+		popupWindow.showAsDropDown(parent,0, popMargin+2);
 	}
 	
 	/**

@@ -8,7 +8,7 @@ package com.ab;
 
 public final class R {
 	public static final class drawable {
-		public static final int ic_launcher = 0x7f020076;
+		public static final int ic_launcher = 0x7f020079;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f050000;

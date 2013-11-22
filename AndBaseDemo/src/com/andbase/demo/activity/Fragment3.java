@@ -89,19 +89,19 @@ public class Fragment3 extends Fragment {
  		ImageView mPlayImage = (ImageView) mPlayView.findViewById(R.id.mPlayImage);
  		TextView mPlayText = (TextView) mPlayView.findViewById(R.id.mPlayText);
  		mPlayText.setText("1111111111111");
- 		mPlayImage.setBackgroundResource(R.drawable.guide_pic1);
+ 		mPlayImage.setBackgroundResource(R.drawable.pic1);
  		
  		final View mPlayView1 = inflater.inflate(R.layout.play_view_item, null);
  		ImageView mPlayImage1 = (ImageView) mPlayView1.findViewById(R.id.mPlayImage);
  		TextView mPlayText1 = (TextView) mPlayView1.findViewById(R.id.mPlayText);
  		mPlayText1.setText("2222222222222");
- 		mPlayImage1.setBackgroundResource(R.drawable.guide_pic2);
+ 		mPlayImage1.setBackgroundResource(R.drawable.pic2);
  		
  		final View mPlayView2 = inflater.inflate(R.layout.play_view_item, null);
  		ImageView mPlayImage2 = (ImageView) mPlayView2.findViewById(R.id.mPlayImage);
  		TextView mPlayText2 = (TextView) mPlayView2.findViewById(R.id.mPlayText);
  		mPlayText2.setText("33333333333333333");
- 		mPlayImage2.setBackgroundResource(R.drawable.guide_pic2);
+ 		mPlayImage2.setBackgroundResource(R.drawable.pic3);
 
  		mSlidingPlayView.setPageLineHorizontalGravity(Gravity.RIGHT);
  		mSlidingPlayView.addView(mPlayView);
@@ -109,7 +109,7 @@ public class Fragment3 extends Fragment {
  		mSlidingPlayView.addView(mPlayView2);
  		mSlidingPlayView.startPlay();
  		//设置高度
- 		mSlidingPlayView.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.FILL_PARENT,150));
+ 		mSlidingPlayView.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.FILL_PARENT,300));
  		mAbPullListView.addHeaderView(mSlidingPlayView);
  		//解决冲突问题
  		mSlidingPlayView.setParentListView(mAbPullListView);

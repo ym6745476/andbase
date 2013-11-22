@@ -24,7 +24,7 @@ public class AboutActivity extends AbActivity {
         AbTitleBar mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText(R.string.about);
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
-        mAbTitleBar.setTitleLayoutBackground(R.drawable.top_bg);
+        mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         //mAbTitleBar.setVisibility(View.GONE);
