@@ -134,7 +134,6 @@ public class TitleBarActivity extends AbActivity {
 		    	mAbTitleBar.setTitleText("正在修改");
 		    	mAbTitleBar.setTitleBarBackground(R.drawable.top_bg2);
 		    	mAbTitleBar.setTitleBarGravity(Gravity.CENTER,Gravity.CENTER);
-		    	mAbTitleBar.setTitleTextMargin(0, 0, 0, 0);
 		    	mAbTitleBar.setLogoOnClickListener(new OnClickListener() {
 					
 					@Override
