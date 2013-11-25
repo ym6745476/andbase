@@ -40,7 +40,7 @@ public class PullToRefreshListActivity extends AbActivity {
         setAbContentView(R.layout.pull_list);
         application = (MyApplication)abApplication;
         
-        AbTitleBar mAbTitleBar = this.getTitleBar();
+        mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText(R.string.pull_list_name);
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
         mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);

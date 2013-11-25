@@ -58,7 +58,7 @@ public class SlidingMenuNestTabActivity extends AbActivity {
 		menu.setMenu(R.layout.sliding_menu_menu);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame, new Fragment1())
+		.replace(R.id.menu_frame, new Fragment2())
 		.commit();
 		
 		mAbTitleBar.getLogoView().setOnClickListener(new OnClickListener() {

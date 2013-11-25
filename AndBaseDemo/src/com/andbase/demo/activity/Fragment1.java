@@ -73,7 +73,6 @@ public class Fragment1 extends Fragment {
 			}
     	 });
 
-	    
 		 return view;
 	} 
 	
@@ -108,8 +107,8 @@ public class Fragment1 extends Fragment {
 	   		    	for (int i = 0; i < 10; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "于禁"+i);
-		   		    	map.put("itemsText", "于禁..."+i);
+		   		    	map.put("itemsTitle", "[Fragment1]"+i);
+		   		    	map.put("itemsText", "[Fragment1]..."+i);
 		   		    	newList.add(map);
 	   				}
 	   		    } catch (Exception e) {
@@ -179,7 +178,6 @@ public class Fragment1 extends Fragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 	}
-
 
 }
 

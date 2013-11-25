@@ -54,10 +54,10 @@ public class SlidingTabActivity extends AbActivity {
 
 		Fragment1 page1 = new Fragment1();
 		Fragment2 page2 = new Fragment2();
-		Fragment3 page3 = new Fragment3();
-		Fragment1 page4 = new Fragment1();
-		Fragment2 page5 = new Fragment2();
-		Fragment3 page6 = new Fragment3();
+		Fragment4 page3 = new Fragment4();
+		Fragment5 page4 = new Fragment5();
+		Fragment1 page5 = new Fragment1();
+		Fragment2 page6 = new Fragment2();
 		Fragment4 page7 = new Fragment4();
 		Fragment5 page8 = new Fragment5();
 		

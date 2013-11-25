@@ -18,7 +18,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
-import com.ab.task.AbTaskPool;
+import com.ab.task.AbTaskQueue;
 import com.ab.view.listener.AbOnListViewListener;
 import com.ab.view.pullview.AbPullListView;
 import com.andbase.R;
@@ -34,7 +34,7 @@ public class Fragment2 extends Fragment {
 	private List<Map<String, Object>> newList = null;
 	private AbPullListView mAbPullListView = null;
 	private int currentPage = 1;
-	private AbTaskPool mAbTaskPool = null;
+	private com.ab.task.AbTaskQueue mAbTaskQueue = null;
 	private ArrayList<String> mPhotoList = new ArrayList<String>();
 	private ImageListAdapter myListViewAdapter = null;
 
@@ -51,17 +51,15 @@ public class Fragment2 extends Fragment {
 		 mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023521330093/T1BWuzXrhcXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
 		 mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i4/13215035563144015/T1Q.eyXsldXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
 		 mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg"); 
-		 mAbTaskPool = AbTaskPool.getInstance();
+		 mAbTaskQueue = AbTaskQueue.getInstance();
 	     //获取ListView对象
          mAbPullListView = (AbPullListView)view.findViewById(R.id.mListView);
-         //关闭加载更多功能
-         mAbPullListView.setPullRefreshEnable(false);
-         mAbPullListView.setPullLoadEnable(false);
+         //设置进度条的样式
+         mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+         mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
          //ListView数据
     	 list = new ArrayList<Map<String, Object>>();
-    	 //设置进度条的样式
-         //mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
-         //mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular));
+    	
     	 //使用自定义的Adapter
     	 myListViewAdapter = new ImageListAdapter(mActivity, list,R.layout.list_items,
 				new String[] { "itemsIcon", "itemsTitle","itemsText" }, new int[] { R.id.itemsIcon,
@@ -75,9 +73,17 @@ public class Fragment2 extends Fragment {
 			}
     	 });
 
-    	 //定义两种查询的事件
-    	 final AbTaskItem item1 = new AbTaskItem();
-		 item1.listener = new AbTaskListener() {
+		 return view;
+	} 
+	
+	
+
+	@Override
+	public void onStart() {
+		super.onStart();
+		//定义两种查询的事件
+    	final AbTaskItem item1 = new AbTaskItem();
+		item1.listener = new AbTaskListener() {
 
 			@Override
 			public void update() {
@@ -101,8 +107,8 @@ public class Fragment2 extends Fragment {
 	   		    	for (int i = 0; i < 10; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "关羽"+i);
-		   		    	map.put("itemsText", "关羽..."+i);
+		   		    	map.put("itemsTitle", "[Fragment2]"+i);
+		   		    	map.put("itemsText", "[Fragment2]..."+i);
 		   		    	newList.add(map);
 	   				}
 	   		    } catch (Exception e) {
@@ -110,26 +116,64 @@ public class Fragment2 extends Fragment {
 		  };
 		};
 		
-		
+		final AbTaskItem item2 = new AbTaskItem();
+		item2.listener = new AbTaskListener() {
+
+			@Override
+			public void update() {
+				if(newList!=null && newList.size()>0){
+					list.addAll(newList);
+					myListViewAdapter.notifyDataSetChanged();
+					newList.clear();
+					mAbPullListView.stopLoadMore(true);
+                }else{
+                	//没有新数据了
+                	mAbPullListView.stopLoadMore(false);
+                }
+				
+			}
+
+			@Override
+			public void get() {
+	   		    try {
+	   		    	currentPage++;
+	   		    	Thread.sleep(1000);
+	   		    	newList = new ArrayList<Map<String, Object>>();
+                    Map<String, Object> map = null;
+	   		    	
+	   		    	for (int i = 0; i < 10; i++) {
+	   		    		map = new HashMap<String, Object>();
+	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
+		   		    	map.put("itemsTitle", "item上拉"+i);
+		   		    	map.put("itemsText", "item上拉..."+i);
+		   		    	newList.add(map);
+	   				}
+	   		    } catch (Exception e) {
+	   		    	currentPage--;
+	   		    	newList.clear();
+	   		    }
+		  };
+		};
 		
 		mAbPullListView.setAbOnListViewListener(new AbOnListViewListener(){
 
 			@Override
 			public void onRefresh() {
-				mAbTaskPool.execute(item1);
+				mAbTaskQueue.execute(item1);
 			}
 
 			@Override
 			public void onLoadMore() {
+				mAbTaskQueue.execute(item2);
 			}
 			
 		});
 		
     	//第一次下载数据
-		mAbTaskPool.execute(item1);
-	    
-		return view;
-	} 
+		mAbTaskQueue.execute(item1);
+	}
+
+
 
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);

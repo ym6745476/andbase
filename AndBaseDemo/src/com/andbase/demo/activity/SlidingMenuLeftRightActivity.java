@@ -80,7 +80,7 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
 		menu.setSecondaryShadowDrawable(R.drawable.shadow_right);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame_two, new Fragment1())
+		.replace(R.id.menu_frame_two, new Fragment4())
 		.commit();
         
 	}

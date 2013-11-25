@@ -17,7 +17,6 @@ import com.ab.db.storage.AbSqliteStorage;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataInfoListener;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataInsertListener;
 import com.ab.db.storage.AbStorageQuery;
-import com.ab.global.AbConstant;
 import com.ab.view.slidingmenu.SlidingMenu;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
