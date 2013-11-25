@@ -32,7 +32,8 @@ public class SlidingTabActivity extends AbActivity {
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		initTitleRightLayout();
-
+		
+        //AbSlidingTabView2这个类包含了另外的一种效果，和AbSlidingTabView是不同的
 		mAbSlidingTabView = (AbSlidingTabView) findViewById(R.id.mAbSlidingTabView);
 		
 		//如果里面的页面列表不能下载原因：
@@ -73,9 +74,11 @@ public class SlidingTabActivity extends AbActivity {
 		tabTexts.add("游戏中心");
 		tabTexts.add("专题栏目");
 		
-		mAbSlidingTabView.setTabColor(Color.BLACK);
+		//设置样式
+		mAbSlidingTabView.setTabTextColor(Color.BLACK);
 		mAbSlidingTabView.setTabSelectColor(Color.rgb(30, 168, 131));
-		
+		mAbSlidingTabView.setTabBackgroundResource(R.drawable.tab_bg);
+		mAbSlidingTabView.setTabLayoutBackgroundResource(R.drawable.slide_top);
 		//演示增加一组
 		mAbSlidingTabView.addItemViews(tabTexts, mFragments);
 		
@@ -84,8 +87,6 @@ public class SlidingTabActivity extends AbActivity {
 		mAbSlidingTabView.addItemView("英雄三国", page6);
 		mAbSlidingTabView.addItemView("今日新闻", page7);
 		mAbSlidingTabView.addItemView("朋友圈", page8);
-		
-		mAbSlidingTabView.setTabLayoutBackground(R.drawable.slide_top);
 		
 		mAbSlidingTabView.setTabPadding(20, 8, 20, 8);
 		

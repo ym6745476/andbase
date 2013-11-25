@@ -59,10 +59,11 @@ public class SlidingTabFragment extends Fragment {
 		tabTexts.add("排行");
 		tabTexts.add("游戏中心");
 		tabTexts.add("专题栏目");
-		
-		mAbSlidingTabView.setTabColor(Color.BLACK);
+		//设置样式
+		mAbSlidingTabView.setTabTextColor(Color.BLACK);
 		mAbSlidingTabView.setTabSelectColor(Color.rgb(30, 168, 131));
-		
+		mAbSlidingTabView.setTabBackgroundResource(R.drawable.tab_bg);
+		mAbSlidingTabView.setTabLayoutBackgroundResource(R.drawable.slide_top);
 		//演示增加一组
 		mAbSlidingTabView.addItemViews(tabTexts, mFragments);
 		
@@ -71,8 +72,6 @@ public class SlidingTabFragment extends Fragment {
 		mAbSlidingTabView.addItemView("英雄三国", page6);
 		mAbSlidingTabView.addItemView("今日新闻", page7);
 		mAbSlidingTabView.addItemView("朋友圈", page8);
-		
-		mAbSlidingTabView.setTabLayoutBackground(R.drawable.slide_top);
 		
 		mAbSlidingTabView.setTabPadding(20, 8, 20, 8);
 		return view;
