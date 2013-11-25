@@ -6,34 +6,21 @@ import java.util.List;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-import com.ab.activity.AbActivity;
 import com.ab.view.sliding.AbSlidingTabView;
-import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
-import com.andbase.global.MyApplication;
 
-public class SlidingTabActivity extends AbActivity {
-	
-	private MyApplication application;
-	private AbSlidingTabView mAbSlidingTabView;
-	
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setAbContentView(R.layout.sliding_tab);
-		application = (MyApplication) abApplication;
-		
-		AbTitleBar mAbTitleBar = this.getTitleBar();
-		mAbTitleBar.setTitleText(R.string.sliding_tab_name);
-		mAbTitleBar.setLogo(R.drawable.button_selector_back);
-		mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
-		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
-		mAbTitleBar.setLogoLine(R.drawable.line);
-		initTitleRightLayout();
+public class SlidingTabFragment extends Fragment {
 
-		mAbSlidingTabView = (AbSlidingTabView) findViewById(R.id.mAbSlidingTabView);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.sliding_tab, null);
+		AbSlidingTabView mAbSlidingTabView = (AbSlidingTabView)view.findViewById(R.id.mAbSlidingTabView);
 		
 		//如果里面的页面列表不能下载原因：
 		//Fragment里面用的AbTaskQueue,由于有多个tab，顺序下载有延迟，还没下载好就被缓存了。改成用AbTaskPool，就ok了。
@@ -54,10 +41,10 @@ public class SlidingTabActivity extends AbActivity {
 
 		Fragment1 page1 = new Fragment1();
 		Fragment2 page2 = new Fragment2();
-		Fragment3 page3 = new Fragment3();
-		Fragment1 page4 = new Fragment1();
-		Fragment2 page5 = new Fragment2();
-		Fragment3 page6 = new Fragment3();
+		Fragment1 page3 = new Fragment1();
+		Fragment2 page4 = new Fragment2();
+		Fragment1 page5 = new Fragment1();
+		Fragment2 page6 = new Fragment2();
 		Fragment4 page7 = new Fragment4();
 		Fragment5 page8 = new Fragment5();
 		
@@ -88,22 +75,12 @@ public class SlidingTabActivity extends AbActivity {
 		mAbSlidingTabView.setTabLayoutBackground(R.drawable.slide_top);
 		
 		mAbSlidingTabView.setTabPadding(20, 8, 20, 8);
-		
-	}
-	
-	
-	
-
-	@Override
-	protected void onStart() {
-		super.onStart();
-		
+		return view;
 	}
 
-
-
-
-	private void initTitleRightLayout() {
-
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
 	}
+
 }
+

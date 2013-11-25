@@ -49,7 +49,7 @@ public class ListNestViewPagerActivity extends AbActivity {
         setAbContentView(R.layout.pull_list);
         application = (MyApplication)abApplication;
         
-        AbTitleBar mAbTitleBar = this.getTitleBar();
+        mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText(R.string.list_pager_name);
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
         mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
@@ -210,7 +210,7 @@ public class ListNestViewPagerActivity extends AbActivity {
 		mSlidingPlayView.addView(mPlayView2);
 		mSlidingPlayView.startPlay();
 		//设置高度
-		mSlidingPlayView.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.FILL_PARENT,150));
+		mSlidingPlayView.setLayoutParams(new AbsListView.LayoutParams(LayoutParams.FILL_PARENT,300));
 		mAbPullListView.addHeaderView(mSlidingPlayView);
 		//解决冲突问题
 		mSlidingPlayView.setParentListView(mAbPullListView);

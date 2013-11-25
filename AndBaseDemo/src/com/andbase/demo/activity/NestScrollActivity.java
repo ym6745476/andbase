@@ -37,6 +37,7 @@ public class NestScrollActivity extends AbActivity {
         application = (MyApplication)abApplication;
         Button listPager  = (Button)this.findViewById(R.id.listPager);
         Button slidingMenuPager  = (Button)this.findViewById(R.id.slidingMenuPager);
+        Button slidingMenuTab  = (Button)this.findViewById(R.id.slidingMenuTab);
         Button scrollList  = (Button)this.findViewById(R.id.scrollList);
         Button scrollPager  = (Button)this.findViewById(R.id.scrollPager);
         
@@ -55,6 +56,15 @@ public class NestScrollActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(NestScrollActivity.this,SlidingMenuNestViewPagerActivity.class); 
+ 				startActivity(intent);
+			}
+		});
+        
+        slidingMenuTab.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(NestScrollActivity.this,SlidingMenuNestTabActivity.class); 
  				startActivity(intent);
 			}
 		});

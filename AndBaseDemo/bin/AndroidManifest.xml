@@ -374,6 +374,10 @@
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
+        <activity
+            android:name=".demo.activity.SlidingMenuNestTabActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
         
         <activity
             android:name=".blog.WebActivity"

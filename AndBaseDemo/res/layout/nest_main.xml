@@ -16,6 +16,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
         android:text="SlidingMenu+ViewPager"/>
+    
+    <Button
+        android:id="@+id/slidingMenuTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="SlidingMenu+SlidingTab"/>
 
     <Button
         android:id="@+id/scrollList"
@@ -28,5 +34,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
         android:text="ScrollView+ViewPager"/>
+    
     
 </LinearLayout>

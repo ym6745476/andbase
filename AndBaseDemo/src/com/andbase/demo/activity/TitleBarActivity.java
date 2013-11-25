@@ -133,7 +133,7 @@ public class TitleBarActivity extends AbActivity {
 		    	mAbTitleBar.addRightView(rightViewOk);
 		    	mAbTitleBar.setTitleText("正在修改");
 		    	mAbTitleBar.setTitleBarBackground(R.drawable.top_bg2);
-		    	mAbTitleBar.setTitleBarGravity(Gravity.CENTER,Gravity.CENTER);
+		    	mAbTitleBar.setTitleBarGravity(Gravity.LEFT,Gravity.CENTER);
 		    	mAbTitleBar.setLogoOnClickListener(new OnClickListener() {
 					
 					@Override
@@ -145,6 +145,13 @@ public class TitleBarActivity extends AbActivity {
 						mAbTitleBar.setTitleBarGravity(Gravity.LEFT,Gravity.RIGHT);
 						mAbTitleBar.setTitleTextMargin(20, 0, 0, 0);
 						mAbTitleBar.getLogoView2().setVisibility(View.GONE);
+						mAbTitleBar.setLogoOnClickListener(new OnClickListener() {
+							
+							@Override
+							public void onClick(View v) {
+								finish();
+							}
+						});
 					}
 				});
 			}
