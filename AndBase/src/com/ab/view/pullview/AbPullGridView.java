@@ -93,6 +93,9 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	/** 外层是否可滚动. */
 	private boolean childScrollState = false;
 	
+	/**上一次的数量*/
+	private int count = 0;
+	
 	/**
 	 * Instantiates a new ab pull view.
 	 *
@@ -230,14 +233,16 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	 *
 	 * @param more the more
 	 */
-	public void stopLoadMore(boolean more) {
+	public void stopLoadMore() {
 		mFooterView.hide();
 		if (mPullLoading == true) {
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}
 		//判断有没有更多数据了
-		if(more){
+		int countNew = mAdapter.getCount();
+		
+		if(countNew > count){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
 			mFooterView.setState(AbListViewFooter.STATE_NO);
@@ -313,7 +318,6 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 				if (mEnablePullRefresh && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 					//下拉更新高度
 					updateHeaderHeight(deltaY / OFFSET_RADIO);
-					
 				}
 				break;
 			case MotionEvent.ACTION_UP:
@@ -391,7 +395,10 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	    	if(view.getFirstVisiblePosition() == 0){
 	    		Log.i("TAG", "滚动到顶部");
 	    		childScrollState = false;
-	    		
+	    		if (mEnablePullLoad && view.getLastVisiblePosition()==(view.getCount() - 1)) {
+	    			Log.i("TAG", "滚动到底部");
+	    			startLoadMore();
+				}
 	    	}else if (view.getLastVisiblePosition() == (view.getCount() - 1)) {
 	    		Log.i("TAG", "滚动到底部");
 	    		startLoadMore();

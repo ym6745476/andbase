@@ -37,6 +37,8 @@ public class Fragment1 extends Fragment {
 	private AbTaskQueue mAbTaskQueue = null;
 	private ArrayList<String> mPhotoList = new ArrayList<String>();
 	private ImageListAdapter myListViewAdapter = null;
+	private int total = 50;
+	private int pageSize = 5;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) { 
@@ -104,11 +106,11 @@ public class Fragment1 extends Fragment {
 	   		    	newList = new ArrayList<Map<String, Object>>();
 	   		    	Map<String, Object> map = null;
 	   		    	
-	   		    	for (int i = 0; i < 10; i++) {
+	   		    	for (int i = 0; i < pageSize; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "[Fragment1]"+i);
-		   		    	map.put("itemsText", "[Fragment1]..."+i);
+		   		    	map.put("itemsTitle", "[Fragment1]"+(i+1));
+		   		    	map.put("itemsText", "[Fragment1]..."+(i+1));
 		   		    	newList.add(map);
 	   				}
 	   		    } catch (Exception e) {
@@ -125,12 +127,8 @@ public class Fragment1 extends Fragment {
 					list.addAll(newList);
 					myListViewAdapter.notifyDataSetChanged();
 					newList.clear();
-					mAbPullListView.stopLoadMore(true);
-                }else{
-                	//没有新数据了
-                	mAbPullListView.stopLoadMore(false);
                 }
-				
+				mAbPullListView.stopLoadMore();
 			}
 
 			@Override
@@ -141,12 +139,14 @@ public class Fragment1 extends Fragment {
 	   		    	newList = new ArrayList<Map<String, Object>>();
                     Map<String, Object> map = null;
 	   		    	
-	   		    	for (int i = 0; i < 10; i++) {
+	   		    	for (int i = 0; i < pageSize; i++) {
 	   		    		map = new HashMap<String, Object>();
 	   					map.put("itemsIcon",mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-		   		    	map.put("itemsTitle", "item上拉"+i);
-		   		    	map.put("itemsText", "item上拉..."+i);
-		   		    	newList.add(map);
+	   			    	map.put("itemsTitle", "item上拉"+((currentPage-1)*pageSize+(i+1)));
+		   		    	map.put("itemsText", "item上拉..."+((currentPage-1)*pageSize+(i+1)));
+		   		    	if((list.size()+newList.size()) < total){
+		   		    		newList.add(map);
+		   		    	}
 	   				}
 	   		    } catch (Exception e) {
 	   		    	currentPage--;

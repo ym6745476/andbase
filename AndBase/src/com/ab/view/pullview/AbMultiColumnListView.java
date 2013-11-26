@@ -94,7 +94,9 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	/** The Constant OFFSET_RADIO. */
 	private final static float OFFSET_RADIO = 1.8f; // support iOS like pull
 													// feature.
-
+	/**上一次的数量*/
+	private int count = 0;
+	
 	/**
 	 * Instantiates a new ab multi column list view.
 	 *
@@ -139,8 +141,6 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 		mFooterView = new AbListViewFooter(context);
 		
 		mFooterViewHeight= mFooterView.getFooterHeight();
-		
-		mFooterView.hide();
 		
 	}
 
@@ -219,15 +219,16 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	/**
 	 * stop load more, reset footer view.
 	 *
-	 * @param more the more
 	 */
-	public void stopLoadMore(boolean more) {
+	public void stopLoadMore() {
+		mFooterView.hide();
 		if (mPullLoading == true) {
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}
+		int countNew = mAdapter.getCount();
 		//判断有没有更多数据了
-		if(more){
+		if(countNew > count){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
 			mFooterView.setState(AbListViewFooter.STATE_NO);
@@ -293,6 +294,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 * Start load more.
 	 */
 	private void startLoadMore() {
+		mFooterView.show();
 		mPullLoading = true;
 		mFooterView.setState(AbListViewFooter.STATE_LOADING);
 		if (mListViewListener != null) {
@@ -323,8 +325,8 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 			mLastY = ev.getRawY();
 			if (getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 				updateHeaderHeight(deltaY / OFFSET_RADIO);
-			} else if (getLastVisiblePosition() == mTotalItemCount - 1 && mFooterView.getVisiableHeight() < mFooterViewHeight) {
-				updateFooterHeight(-deltaY / OFFSET_RADIO);
+			} else if (getLastVisiblePosition() == mTotalItemCount - 1 && deltaY < 0) {
+				startLoadMore();
 			}
 			break;
 		case MotionEvent.ACTION_UP:
@@ -341,11 +343,6 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 				}
 				//根据mPullRefreshing判断显示的header
 				resetHeaderHeight();
-			} else if (getLastVisiblePosition() == mTotalItemCount - 1) {
-				// invoke load more.
-				if (mEnablePullLoad &&  mFooterView.getVisiableHeight() > mFooterViewHeight-2) {
-					startLoadMore();
-				}
 			}
 			break;
 		default:

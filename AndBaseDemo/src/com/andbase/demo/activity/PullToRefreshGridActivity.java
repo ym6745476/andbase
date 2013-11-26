@@ -33,6 +33,8 @@ public class PullToRefreshGridActivity extends AbActivity {
 	private ImageGridAdapter myGridViewAdapter = null;
 	private ArrayList<String> mPhotoList = new ArrayList<String>();
 	private AbTaskQueue mAbTaskQueue = null;
+	private int total = 50;
+	private int pageSize = 5;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,7 +126,7 @@ public class PullToRefreshGridActivity extends AbActivity {
 	   		    	Thread.sleep(1000);
 	   		    	mNewUserList =  new ArrayList<User>() ;
 	   				
-	   				for (int i = 0; i < 40; i++) {
+	   				for (int i = 0; i < pageSize; i++) {
 	   					final User mUser = new User();
 	   					mUser.setPhotoUrl(mPhotoList.get(new Random().nextInt(mPhotoList.size())));
 	   					mNewUserList.add(mUser);
@@ -144,12 +146,8 @@ public class PullToRefreshGridActivity extends AbActivity {
 					mUserList.addAll(mNewUserList);
 					myGridViewAdapter.notifyDataSetChanged();
                 	mNewUserList.clear();
-                	mAbPullGridView.stopLoadMore(true);
-                }else{
-                	//没有新数据了
-                	mAbPullGridView.stopLoadMore(false);
                 }
-				
+				mAbPullGridView.stopLoadMore();
 			}
 
 			@Override
@@ -158,10 +156,13 @@ public class PullToRefreshGridActivity extends AbActivity {
 	   		    	currentPage++;
 	   		    	Thread.sleep(1000);
 	   		    	mNewUserList =  new ArrayList<User>() ;
-	   				for (int i = 0; i < 8; i++) {
+	   				for (int i = 0; i < pageSize; i++) {
 	   					final User mUser = new User();
 	   					mUser.setPhotoUrl(mPhotoList.get(new Random().nextInt(mPhotoList.size())));
-	   					mNewUserList.add(mUser);
+	   					if((mUserList.size()+mNewUserList.size()) < total){
+	   						mNewUserList.add(mUser);
+		   		    	}
+	   					
 	   				}
 	   		    } catch (Exception e) {
 	   		    	currentPage--;

@@ -89,21 +89,23 @@ public class AbListViewFooter extends LinearLayout {
 	 */
 	public void setState(int state) {
 		
-		footerView.setVisibility(View.VISIBLE);
-		
 		if (state == STATE_READY) {
+			footerView.setVisibility(View.VISIBLE);
 			footerTextView.setVisibility(View.VISIBLE);
 			footerProgressBar.setVisibility(View.GONE);
 			footerTextView.setText("载入更多");
 		} else if (state == STATE_LOADING) {
+			footerView.setVisibility(View.VISIBLE);
 			footerTextView.setVisibility(View.VISIBLE);
 			footerProgressBar.setVisibility(View.VISIBLE);
 			footerTextView.setText("正在加载...");
 		}else if(state == STATE_NO){
+			footerView.setVisibility(View.GONE);
 			footerTextView.setVisibility(View.VISIBLE);
 			footerProgressBar.setVisibility(View.GONE);
 			footerTextView.setText("已是全部");
 		}else if(state == STATE_EMPTY){
+			footerView.setVisibility(View.GONE);
 			footerTextView.setVisibility(View.GONE);
 			footerProgressBar.setVisibility(View.GONE);
 			footerTextView.setText("没有数据");

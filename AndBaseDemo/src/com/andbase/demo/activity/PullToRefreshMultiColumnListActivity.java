@@ -126,10 +126,8 @@ public class PullToRefreshMultiColumnListActivity extends AbActivity implements 
             	if(mNewImageList!=null && mNewImageList.size()>0){
 					myListViewAdapter.addItemLast(mNewImageList);
 	                myListViewAdapter.notifyDataSetChanged();
-	                mListView.stopLoadMore(true);
-   		    	}else{
-   		    		mListView.stopLoadMore(false);
    		    	}
+            	mListView.stopLoadMore();
 			}
 
 			@Override

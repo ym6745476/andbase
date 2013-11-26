@@ -98,6 +98,9 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	/** 数据相关. */
 	private ListAdapter mAdapter = null;
 	
+	/**上一次的数量*/
+	private int count = 0;
+	
 	/**
 	 * Instantiates a new ab pull list view.
 	 *
@@ -146,6 +149,8 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		//默认是打开刷新与更多
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
+		
+		mFooterView.hide();
 	}
 
 	/**
@@ -213,7 +218,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 			resetHeaderHeight();
 		}
 		
-		int count = mAdapter.getCount();
+		count = mAdapter.getCount();
 		//判断有没有数据
 		if(count>0){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
@@ -225,15 +230,16 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	/**
 	 * stop load more, reset footer view.
 	 *
-	 * @param more the more
 	 */
-	public void stopLoadMore(boolean more) {
+	public void stopLoadMore() {
+		mFooterView.hide();
 		if (mPullLoading == true) {
 			mPullLoading = false;
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}
+		int countNew = mAdapter.getCount();
 		//判断有没有更多数据了
-		if(more){
+		if(countNew > count){
 			mFooterView.setState(AbListViewFooter.STATE_READY);
 		}else{
 			mFooterView.setState(AbListViewFooter.STATE_NO);
@@ -279,27 +285,12 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		invalidate();
 	}
 
-	/**
-	 * 更新 footer的显示.
-	 * @param delta 增加值
-	 */
-	private void updateFooterHeight(float delta) {
-		int newHeight = mFooterView.getVisiableHeight() + (int) delta;
-		if(newHeight > mFooterViewHeight){
-			newHeight = mFooterViewHeight;
-		}
-		mFooterView.setVisiableHeight(newHeight);
-		if (mEnablePullLoad && !mPullLoading) {
-			if (newHeight >= mFooterViewHeight) {
-				mFooterView.setState(AbListViewFooter.STATE_READY);
-			}
-		}
-	}
 
 	/**
 	 * Start load more.
 	 */
 	private void startLoadMore() {
+		mFooterView.show();
 		mPullLoading = true;
 		mFooterView.setState(AbListViewFooter.STATE_LOADING);
 		if (mListViewListener != null) {
@@ -327,8 +318,8 @@ public class AbPullListView extends ListView implements OnScrollListener {
 			mLastY = ev.getRawY();
 			if (mEnablePullRefresh && getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 				updateHeaderHeight(deltaY / OFFSET_RADIO);
-			} else if (mEnablePullRefresh && getLastVisiblePosition() == mTotalItemCount - 1 && mFooterView.getVisiableHeight() < mFooterViewHeight) {
-				updateFooterHeight(-deltaY / OFFSET_RADIO);
+			} else if (mEnablePullLoad && getLastVisiblePosition() == mTotalItemCount - 1 && deltaY<0) {
+				startLoadMore();
 			}
 			break;
 		case MotionEvent.ACTION_UP:
@@ -347,11 +338,6 @@ public class AbPullListView extends ListView implements OnScrollListener {
 				if(mEnablePullRefresh){
 					//弹回
 					resetHeaderHeight();
-				}
-			//在到底部就加载下一页
-			}else if (getLastVisiblePosition() == mTotalItemCount-1) {
-				if (mEnablePullLoad && mFooterView.getVisiableHeight() > mFooterViewHeight-2) {
-					startLoadMore();
 				}
 			}
 			break;

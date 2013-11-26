@@ -184,11 +184,8 @@ public class Fragment3 extends Fragment {
 					list.addAll(newList);
 					myListViewAdapter.notifyDataSetChanged();
 					newList.clear();
-					mAbPullListView.stopLoadMore(true);
-                }else{
-                	//没有新数据了
-                	mAbPullListView.stopLoadMore(false);
                 }
+				mAbPullListView.stopLoadMore();
 				
 			}
 
