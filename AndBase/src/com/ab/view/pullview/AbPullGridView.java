@@ -161,6 +161,8 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
 		
+		mFooterView.hide();
+		
 	}
 
 	/**

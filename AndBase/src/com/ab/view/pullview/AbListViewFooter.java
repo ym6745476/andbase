@@ -83,7 +83,7 @@ public class AbListViewFooter extends LinearLayout {
 	}
 
 	/**
-	 * Sets the state.
+	 * 设置当前状态.
 	 *
 	 * @param state the new state
 	 */
@@ -133,10 +133,11 @@ public class AbListViewFooter extends LinearLayout {
 	 * 显示footerView.
 	 */
 	public void show() {
+		footerView.setVisibility(View.INVISIBLE);
 		LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) footerView.getLayoutParams();
 		lp.height = LayoutParams.WRAP_CONTENT;
 		footerView.setLayoutParams(lp);
-		footerView.setVisibility(View.INVISIBLE);
+		
 	}
 
 	/**

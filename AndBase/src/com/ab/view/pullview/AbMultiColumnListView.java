@@ -140,6 +140,8 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 		
 		mFooterViewHeight= mFooterView.getFooterHeight();
 		
+		mFooterView.hide();
+		
 	}
 
 	/**

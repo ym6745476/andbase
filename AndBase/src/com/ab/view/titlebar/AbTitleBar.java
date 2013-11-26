@@ -144,6 +144,7 @@ public class AbTitleBar extends LinearLayout {
 		titleTextBtn.setPadding(5, 0, 5, 0);
 		titleTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextBtn.setBackgroundDrawable(null);
+		titleTextBtn.setSingleLine();
 		titleTextLayout.addView(titleTextBtn,layoutParamsWF);
 		
 		logoView = new ImageView(context);
@@ -466,7 +467,7 @@ public class AbTitleBar extends LinearLayout {
 	 * @param parent
 	 * @param view 要显示的View
 	 */
-	private void showWindow(View parent,View view) {
+	public void showWindow(View parent,View view) {
 		AbViewUtil.measureView(view);
 		int popWidth = parent.getMeasuredWidth();
 		int popMargin = (this.getMeasuredHeight()-parent.getMeasuredHeight())/2;
@@ -474,7 +475,7 @@ public class AbTitleBar extends LinearLayout {
 			popWidth = view.getMeasuredWidth();
 		}
 		if (popupWindow == null) {
-			popupWindow = new PopupWindow(view, popWidth, LayoutParams.WRAP_CONTENT, true);
+			popupWindow = new PopupWindow(view, popWidth+10, LayoutParams.WRAP_CONTENT, true);
 		}
 
 		// 使其聚集
@@ -484,6 +485,16 @@ public class AbTitleBar extends LinearLayout {
 		// 这个是为了点击“返回Back”也能使其消失，并且并不会影响你的背景
 		popupWindow.setBackgroundDrawable(new ColorDrawable(android.R.color.transparent));
 		popupWindow.showAsDropDown(parent,0, popMargin+2);
+	}
+	
+	/**
+	 * 描述：隐藏Window
+	 */
+	public void hideWindow() {
+		if (popupWindow != null) {
+			popupWindow.dismiss();
+		}
+
 	}
 	
 	/**

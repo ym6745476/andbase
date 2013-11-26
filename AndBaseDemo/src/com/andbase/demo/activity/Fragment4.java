@@ -34,7 +34,7 @@ public class Fragment4 extends Fragment {
 	private List<Map<String, Object>> newList = null;
 	private AbPullListView mAbPullListView = null;
 	private int currentPage = 1;
-	private com.ab.task.AbTaskQueue mAbTaskQueue = null;
+	private AbTaskQueue mAbTaskQueue = null;
 	private ArrayList<String> mPhotoList = new ArrayList<String>();
 	private ImageListAdapter myListViewAdapter = null;
 

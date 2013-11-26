@@ -22,6 +22,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 
 // TODO: Auto-generated Javadoc
@@ -64,7 +65,6 @@ public class AbBaseGridView extends LinearLayout {
 	public AbBaseGridView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
-		
 		layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 		this.setOrientation(LinearLayout.VERTICAL);
 		this.setBackgroundColor(Color.rgb(255, 255, 255));

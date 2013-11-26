@@ -47,13 +47,15 @@ public class PullToRefreshGridActivity extends AbActivity {
 	    mAbTitleBar.setLogoLine(R.drawable.line);
         
 	    mAbTaskQueue = AbTaskQueue.getInstance();
-	    mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215035600700175/T1C2mzXthaXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
-		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i2/13215025617307680/T1AQqAXqpeXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");
-		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i1/13215035569460099/T16GuzXs0cXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");
-		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i2/13215023694438773/T1lImmXElhXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");
-		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023521330093/T1BWuzXrhcXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
-		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i4/13215035563144015/T1Q.eyXsldXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
-		mPhotoList.add("http://img01.taobaocdn.com/bao/uploaded/i3/13215023749568975/T1UKWCXvpXXXXXXXXX_!!0-item_pic.jpg_230x230.jpg");  
+	    mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/0.jpg");  
+	    mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/1.jpg");
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/2.jpg");
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/3.jpg");
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/4.jpg");  
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/5.jpg");  
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/6.jpg");  
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/7.jpg"); 
+		mPhotoList.add("http://www.418log.org/content/templates/default/images/rand/8.jpg");   
 	    
 		application = (MyApplication) this.getApplication();
 		mAbPullGridView = (AbPullGridView)findViewById(R.id.mPhotoGridView);
