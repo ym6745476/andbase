@@ -200,7 +200,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 
 	/**
-	 * stop refresh, reset header view.
+	 * 停止刷新并重置header的状态.
 	 */
 	public void stopRefresh() {
 		if (mPullRefreshing == true) {

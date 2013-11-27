@@ -74,32 +74,31 @@ public class AbPullView extends ScrollView{
 	
 	
 	/**
-	 * Instantiates a new ab pull view.
+	 * 构造.
 	 *
 	 * @param context the context
 	 */
 	public AbPullView(Context context) {
 		super(context);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
-	 * Instantiates a new ab pull view.
+	 * 构造.
 	 *
 	 * @param context the context
 	 * @param attrs the attrs
 	 */
 	public AbPullView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
-	 * Inits the with context.
-	 *
+	 * 初始化View.
 	 * @param context the context
 	 */
-	private void initWithContext(Context context) {
+	private void initView(Context context) {
 		mScroller = new Scroller(context, new DecelerateInterpolator());
 		
 		LinearLayout.LayoutParams layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
@@ -118,9 +117,9 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * enable or disable pull down refresh feature.
+	 * 打开或者关闭下拉刷新功能.
 	 *
-	 * @param enable the new pull refresh enable
+	 * @param enable 开关标记
 	 */
 	public void setPullRefreshEnable(boolean enable) {
 		mEnablePullRefresh = enable;
@@ -132,7 +131,7 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * stop refresh, reset header view.
+	 * 停止刷新并重置header的状态.
 	 */
 	public void stopRefresh() {
 		if (mPullRefreshing == true) {
@@ -142,8 +141,9 @@ public class AbPullView extends ScrollView{
 	}
 
 	/**
-	 * Update header height.
-	 * @param delta the delta
+	 * 更新header的高度.
+	 *
+	 * @param delta 差的距离
 	 */
 	private void updateHeaderHeight(float delta) {
 		int newHeight = (int) delta + mHeaderView.getVisiableHeight();
@@ -178,10 +178,6 @@ public class AbPullView extends ScrollView{
 	
 	/**
 	 * 描述：TODO
-	 * @see android.widget.ScrollView#onTouchEvent(android.view.MotionEvent)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
@@ -224,10 +220,6 @@ public class AbPullView extends ScrollView{
 
 	/**
 	 * 描述：TODO
-	 * @see android.widget.ScrollView#computeScroll()
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
 	 */
 	@Override
 	public void computeScroll() {
@@ -243,7 +235,7 @@ public class AbPullView extends ScrollView{
 	/**
 	 * 描述：设置ListView的监听器.
 	 *
-	 * @param abOnRefreshListener the new ab on refresh listener
+	 * @param abOnRefreshListener
 	 */
 	public void setAbOnRefreshListener(AbOnRefreshListener abOnRefreshListener) {
 		mAbOnRefreshListener = abOnRefreshListener;
