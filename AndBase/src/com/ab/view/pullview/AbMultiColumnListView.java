@@ -35,13 +35,13 @@ import com.ab.view.pullview.AbMultiColumnBaseAbsListView.OnScrollListener;
 public class AbMultiColumnListView extends AbMultiColumnBaseListView implements OnScrollListener {
 
 	/** The m last y. */
-	private float mLastY = -1; // save event y
+	private float mLastY = -1;
 	
 	/** The m scroller. */
-	private Scroller mScroller; // used for scroll back
+	private Scroller mScroller;
 	
 	/** The m scroll listener. */
-	private OnScrollListener mScrollListener; // user's scroll listener
+	private OnScrollListener mScrollListener;
 
 	/** The m list view listener. */
 	private AbOnListViewListener mListViewListener;
@@ -74,11 +74,9 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	/** The m is footer ready. */
 	private boolean mIsFooterReady = false;
 
-	// total list items, used to detect is at the bottom of listview.
 	/** The m total item count. */
 	private int mTotalItemCount;
 
-	// for mScroller, scroll back from header or footer.
 	/** The m scroll back. */
 	private int mScrollBack;
 	
@@ -89,11 +87,11 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	private final static int SCROLLBACK_FOOTER = 1;
 
 	/** The Constant SCROLL_DURATION. */
-	private final static int SCROLL_DURATION = 200; // scroll back duration
+	private final static int SCROLL_DURATION = 200;
 	
 	/** The Constant OFFSET_RADIO. */
-	private final static float OFFSET_RADIO = 1.8f; // support iOS like pull
-													// feature.
+	private final static float OFFSET_RADIO = 1.8f; 
+													
 	/**上一次的数量*/
 	private int count = 0;
 	
@@ -104,7 +102,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 */
 	public AbMultiColumnListView(Context context) {
 		super(context);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
@@ -115,7 +113,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 */
 	public AbMultiColumnListView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
@@ -123,10 +121,9 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 *
 	 * @param context the context
 	 */
-	private void initWithContext(Context context) {
+	private void initView(Context context) {
 		mScroller = new Scroller(context, new DecelerateInterpolator());
-		// XListView need the scroll event, and it will dispatch the event to
-		// user's listener (as a proxy).
+		
 		super.setOnScrollListener(this);
 
 		// init header view
@@ -142,6 +139,8 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 		
 		mFooterViewHeight= mFooterView.getFooterHeight();
 		
+		//先隐藏
+		mFooterView.hide();
 	}
 
 	/**
@@ -169,7 +168,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 */
 	public void setPullRefreshEnable(boolean enable) {
 		mEnablePullRefresh = enable;
-		if (!mEnablePullRefresh) { // disable, hide the content
+		if (!mEnablePullRefresh) {
 			mHeaderView.setVisibility(View.INVISIBLE);
 		} else {
 			mHeaderView.setVisibility(View.VISIBLE);
@@ -190,7 +189,6 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 			mPullLoading = false;
 			mFooterView.show();
 			mFooterView.setState(AbListViewFooter.STATE_READY);
-			// both "pull up" and "click" will invoke load more.
 			mFooterView.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -215,17 +213,26 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 			mFooterView.setState(AbListViewFooter.STATE_EMPTY);
 		}
 	}
+	
+	/**
+	 * 开始加载更多.
+	 */
+	private void startLoadMore() {
+		mFooterView.show();
+		mPullLoading = true;
+		mFooterView.setState(AbListViewFooter.STATE_LOADING);
+		if (mListViewListener != null) {
+			//开始下载数据
+			mListViewListener.onLoadMore();
+		}
+	}
 
 	/**
-	 * stop load more, reset footer view.
-	 *
+	 * 停止加载更多并重置footer的状态.
 	 */
 	public void stopLoadMore() {
 		mFooterView.hide();
-		if (mPullLoading == true) {
-			mPullLoading = false;
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-		}
+		mPullLoading = false;
 		int countNew = mAdapter.getCount();
 		//判断有没有更多数据了
 		if(countNew > count){
@@ -273,42 +280,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	}
 
 	/**
-	 * 更新 footer的显示.
-	 * @param delta 增加值
-	 */
-	private void updateFooterHeight(float delta) {
-		int newHeight = mFooterView.getVisiableHeight() + (int) delta;
-		if(newHeight > mFooterViewHeight){
-			newHeight = mFooterViewHeight;
-		}
-		mFooterView.setVisiableHeight(newHeight);
-		if (mEnablePullLoad && !mPullLoading) {
-			if (newHeight >= mFooterViewHeight) {
-				mFooterView.setState(AbListViewFooter.STATE_READY);
-			}
-		}
-	}
-
-
-	/**
-	 * Start load more.
-	 */
-	private void startLoadMore() {
-		mFooterView.show();
-		mPullLoading = true;
-		mFooterView.setState(AbListViewFooter.STATE_LOADING);
-		if (mListViewListener != null) {
-			//开始下载数据
-			mListViewListener.onLoadMore();
-		}
-	}
-
-	/**
 	 * 描述：TODO
-	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#onTouchEvent(android.view.MotionEvent)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
@@ -325,7 +297,7 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 			mLastY = ev.getRawY();
 			if (getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 				updateHeaderHeight(deltaY / OFFSET_RADIO);
-			} else if (getLastVisiblePosition() == mTotalItemCount - 1 && deltaY < 0) {
+			} else if (mEnablePullLoad && !mPullLoading && getLastVisiblePosition() == mTotalItemCount - 1 && deltaY < 0) {
 				startLoadMore();
 			}
 			break;

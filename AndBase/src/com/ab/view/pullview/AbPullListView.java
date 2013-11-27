@@ -17,6 +17,7 @@ package com.ab.view.pullview;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -41,9 +42,6 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	
 	/** The m scroller. */
 	private Scroller mScroller; 
-	
-	/** The m scroll listener. */
-	private OnScrollListener mScrollListener; 
 
 	/** The m list view listener. */
 	private AbOnListViewListener mListViewListener;
@@ -75,11 +73,9 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	/** The m is footer ready. */
 	private boolean mIsFooterReady = false;
 
-	// total list items, used to detect is at the bottom of listview.
-	/** The m total item count. */
+	/** 总条数. */
 	private int mTotalItemCount;
 
-	// for mScroller, scroll back from header or footer.
 	/** The m scroll back. */
 	private int mScrollBack;
 	
@@ -93,8 +89,8 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	private final static int SCROLL_DURATION = 200;
 	
 	/** The Constant OFFSET_RADIO. */
-	private final static float OFFSET_RADIO = 1.8f; // support iOS like pull
-													// feature.
+	private final static float OFFSET_RADIO = 1.8f; 
+												
 	/** 数据相关. */
 	private ListAdapter mAdapter = null;
 	
@@ -102,32 +98,29 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	private int count = 0;
 	
 	/**
-	 * Instantiates a new ab pull list view.
-	 *
+	 * 构造.
 	 * @param context the context
 	 */
 	public AbPullListView(Context context) {
 		super(context);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
-	 * Instantiates a new ab pull list view.
-	 *
+	 * 构造.
 	 * @param context the context
 	 * @param attrs the attrs
 	 */
 	public AbPullListView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
-	 * Inits the with context.
-	 *
+	 * 初始化View.
 	 * @param context the context
 	 */
-	private void initWithContext(Context context) {
+	private void initView(Context context) {
 		
 		mScroller = new Scroller(context, new DecelerateInterpolator());
 		
@@ -150,20 +143,16 @@ public class AbPullListView extends ListView implements OnScrollListener {
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
 		
+		//先隐藏
 		mFooterView.hide();
 	}
 
 	/**
-	 * 描述：TODO
-	 * @see android.widget.ListView#setAdapter(android.widget.ListAdapter)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
+	 * 描述：设置适配器
 	 */
 	@Override
 	public void setAdapter(ListAdapter adapter) {
 		mAdapter = adapter;
-		// make sure XListViewFooter is the last footer view, and only add once.
 		if (mIsFooterReady == false) {
 			mIsFooterReady = true;
 			mFooterView.setGravity(Gravity.TOP);
@@ -174,7 +163,6 @@ public class AbPullListView extends ListView implements OnScrollListener {
 
 	/**
 	 * 打开或者关闭下拉刷新功能.
-	 *
 	 * @param enable 开关标记
 	 */
 	public void setPullRefreshEnable(boolean enable) {
@@ -188,7 +176,6 @@ public class AbPullListView extends ListView implements OnScrollListener {
 
 	/**
 	 * 打开或者关闭加载更多功能.
-	 *
 	 * @param enable 开关标记
 	 */
 	public void setPullLoadEnable(boolean enable) {
@@ -210,7 +197,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * stop refresh, reset header view.
+	 * 停止刷新并重置header的状态.
 	 */
 	public void stopRefresh() {
 		if (mPullRefreshing == true) {
@@ -228,30 +215,9 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	}
 
 	/**
-	 * stop load more, reset footer view.
+	 * 更新header的高度.
 	 *
-	 */
-	public void stopLoadMore() {
-		mFooterView.hide();
-		if (mPullLoading == true) {
-			mPullLoading = false;
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-		}
-		int countNew = mAdapter.getCount();
-		//判断有没有更多数据了
-		if(countNew > count){
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-		}else{
-			mFooterView.setState(AbListViewFooter.STATE_NO);
-		}
-	}
-
-
-
-	/**
-	 * Update header height.
-	 *
-	 * @param delta the delta
+	 * @param delta 差的距离
 	 */
 	private void updateHeaderHeight(float delta) {
 		int newHeight = (int) delta + mHeaderView.getVisiableHeight();
@@ -287,9 +253,10 @@ public class AbPullListView extends ListView implements OnScrollListener {
 
 
 	/**
-	 * Start load more.
+	 * 开始加载更多.
 	 */
 	private void startLoadMore() {
+		Log.d("TAG", "startLoadMore");
 		mFooterView.show();
 		mPullLoading = true;
 		mFooterView.setState(AbListViewFooter.STATE_LOADING);
@@ -298,10 +265,25 @@ public class AbPullListView extends ListView implements OnScrollListener {
 			mListViewListener.onLoadMore();
 		}
 	}
+	
+	/**
+	 * 停止加载更多并重置footer的状态.
+	 *
+	 */
+	public void stopLoadMore() {
+		mFooterView.hide();
+		mPullLoading = false;
+		int countNew = mAdapter.getCount();
+		//判断有没有更多数据了
+		if(countNew > count){
+			mFooterView.setState(AbListViewFooter.STATE_READY);
+		}else{
+			mFooterView.setState(AbListViewFooter.STATE_NO);
+		}
+	}
 
 	/**
 	 * 描述：onTouchEvent
-	 * @see android.widget.ListView#onTouchEvent(android.view.MotionEvent)
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
@@ -318,7 +300,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 			mLastY = ev.getRawY();
 			if (mEnablePullRefresh && getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 				updateHeaderHeight(deltaY / OFFSET_RADIO);
-			} else if (mEnablePullLoad && getLastVisiblePosition() == mTotalItemCount - 1 && deltaY<0) {
+			} else if (mEnablePullLoad && !mPullLoading && getLastVisiblePosition() == mTotalItemCount - 1 && deltaY<0) {
 				startLoadMore();
 			}
 			break;
@@ -365,7 +347,7 @@ public class AbPullListView extends ListView implements OnScrollListener {
 	/**
 	 * 描述：设置ListView的监听器.
 	 *
-	 * @param listViewListener the new ab on list view listener
+	 * @param listViewListener 
 	 */
 	public void setAbOnListViewListener(AbOnListViewListener listViewListener) {
 		mListViewListener = listViewListener;
@@ -373,29 +355,17 @@ public class AbPullListView extends ListView implements OnScrollListener {
 
 	/**
 	 * 描述：TODO
-	 * @see android.widget.AbsListView.OnScrollListener#onScrollStateChanged(android.widget.AbsListView, int)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
 	 */
 	@Override
 	public void onScrollStateChanged(AbsListView view, int scrollState) {
-		if (mScrollListener != null) {
-			mScrollListener.onScrollStateChanged(view, scrollState);
-		}
 	}
 
 	/**
 	 * 描述：TODO
-	 * @see android.widget.AbsListView.OnScrollListener#onScroll(android.widget.AbsListView, int, int, int)
 	 */
 	@Override
 	public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-		// send to user's listener
 		mTotalItemCount = totalItemCount;
-		if (mScrollListener != null) {
-			mScrollListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
-		}	
 	}
 
 	/**

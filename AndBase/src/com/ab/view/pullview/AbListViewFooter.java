@@ -15,17 +15,19 @@
  */
 package com.ab.view.pullview;
 
-import com.ab.util.AbViewUtil;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -81,6 +83,49 @@ public class AbListViewFooter extends LinearLayout {
 		initView(context);
 		setState(STATE_READY);
 	}
+	
+	/**
+	 * Inits the view.
+	 *
+	 * @param context the context
+	 */
+	private void initView(Context context) {
+		mContext = context;
+		
+		//底部刷新
+		footerView  = new LinearLayout(context);  
+		//设置布局 水平方向  
+		footerView.setOrientation(LinearLayout.HORIZONTAL);
+		footerView.setGravity(Gravity.CENTER); 
+		setBackgroundColor(Color.rgb(225, 225,225));
+		
+		footerTextView = new TextView(context);  
+		footerTextView.setGravity(Gravity.CENTER_VERTICAL);
+		setTextColor(Color.rgb(107, 107, 107));
+		footerTextView.setTextSize(15);
+		footerTextView.setMinimumHeight(50);
+		footerView.setPadding(0, 10, 0, 10);
+		
+		footerProgressBar = new ProgressBar(context,null,android.R.attr.progressBarStyle);
+		footerProgressBar.setVisibility(View.GONE);
+		
+		LinearLayout.LayoutParams layoutParamsWW = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		layoutParamsWW.gravity = Gravity.CENTER;
+		layoutParamsWW.width = 50;
+		layoutParamsWW.height = 50;
+		layoutParamsWW.rightMargin = 10;
+		footerView.addView(footerProgressBar,layoutParamsWW);
+		
+		LinearLayout.LayoutParams layoutParamsWW1 = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		footerView.addView(footerTextView,layoutParamsWW1);
+		
+		LinearLayout.LayoutParams layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+		addView(footerView,layoutParamsFW);
+		
+		//获取View的高度
+		AbViewUtil.measureView(this);
+		footerHeight = this.getMeasuredHeight();
+	}
 
 	/**
 	 * 设置当前状态.
@@ -135,56 +180,12 @@ public class AbListViewFooter extends LinearLayout {
 	 * 显示footerView.
 	 */
 	public void show() {
-		footerView.setVisibility(View.INVISIBLE);
+		footerView.setVisibility(View.VISIBLE);
 		LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) footerView.getLayoutParams();
 		lp.height = LayoutParams.WRAP_CONTENT;
 		footerView.setLayoutParams(lp);
-		
 	}
 
-	/**
-	 * Inits the view.
-	 *
-	 * @param context the context
-	 */
-	private void initView(Context context) {
-		mContext = context;
-		
-		//底部刷新
-		footerView  = new LinearLayout(context);  
-		//设置布局 水平方向  
-		footerView.setOrientation(LinearLayout.HORIZONTAL);
-		footerView.setGravity(Gravity.CENTER); 
-		setBackgroundColor(Color.rgb(225, 225,225));
-		
-		footerTextView = new TextView(context);  
-		footerTextView.setGravity(Gravity.CENTER_VERTICAL);
-		setTextColor(Color.rgb(107, 107, 107));
-		footerTextView.setTextSize(15);
-		footerTextView.setMinimumHeight(50);
-		footerView.setPadding(0, 10, 0, 10);
-		
-		footerProgressBar = new ProgressBar(context,null,android.R.attr.progressBarStyle);
-		footerProgressBar.setVisibility(View.GONE);
-		
-		LinearLayout.LayoutParams layoutParamsWW = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		layoutParamsWW.gravity = Gravity.CENTER;
-		layoutParamsWW.width = 50;
-		layoutParamsWW.height = 50;
-		layoutParamsWW.rightMargin = 10;
-		footerView.addView(footerProgressBar,layoutParamsWW);
-		
-		LinearLayout.LayoutParams layoutParamsWW1 = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		footerView.addView(footerTextView,layoutParamsWW1);
-		
-		LinearLayout.LayoutParams layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
-		addView(footerView,layoutParamsFW);
-		
-		//获取View的高度
-		AbViewUtil.measureView(this);
-		footerHeight = this.getMeasuredHeight();
-
-	}
 	
 	/**
 	 * 

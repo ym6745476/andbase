@@ -16,7 +16,6 @@
 package com.ab.view.pullview;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -85,8 +84,6 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	/** The m grid view. */
 	private GridView mGridView = null;
 	
-	private AbLoadingView loadingView = null;
-	
 	/** 数据相关. */
 	private BaseAdapter mAdapter = null;
 	
@@ -96,25 +93,29 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	/**上一次的数量*/
 	private int count = 0;
 	
+	/** 总条数. */
+	private int mTotalItemCount;
+
+	
 	/**
-	 * Instantiates a new ab pull view.
+	 * 构造..
 	 *
 	 * @param context the context
 	 */
 	public AbPullGridView(Context context) {
 		super(context);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
-	 * Instantiates a new ab pull view.
+	 * 构造.
 	 *
 	 * @param context the context
 	 * @param attrs the attrs
 	 */
 	public AbPullGridView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initWithContext(context);
+		initView(context);
 	}
 
 	/**
@@ -122,7 +123,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	 *
 	 * @param context the context
 	 */
-	private void initWithContext(Context context) {
+	private void initView(Context context) {
 		mScroller = new Scroller(context, new DecelerateInterpolator());
 		
 		// init header view
@@ -147,14 +148,6 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		mGridView.setOnScrollListener(this);
 		mGridView.setOnTouchListener(this);
 		
-		//加载时的View
-		//loadingView = new AbLoadingView(context);
-		
-		/*LinearLayout.LayoutParams layoutParamsFW1 = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT);
-		layoutParamsFW1.gravity = Gravity.CENTER;
-		layoutParamsFW1.weight = 1;
-		addFooterView(mHeaderView);*/
-		
 		// init footer view
 		mFooterView = new AbListViewFooter(context);
 		
@@ -164,6 +157,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		setPullRefreshEnable(true);
 		setPullLoadEnable(true);
 		
+		//先隐藏
 		mFooterView.hide();
 		
 	}
@@ -216,7 +210,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 	
 	/**
-	 * Start load more.
+	 * 开始加载更多.
 	 */
 	private void startLoadMore() {
 		mFooterView.show();
@@ -229,16 +223,12 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 	
 	/**
-	 * stop load more, reset footer view.
+	 * 停止加载更多并重置footer的状态.
 	 *
-	 * @param more the more
 	 */
 	public void stopLoadMore() {
 		mFooterView.hide();
-		if (mPullLoading == true) {
-			mPullLoading = false;
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-		}
+		mPullLoading = false;
 		//判断有没有更多数据了
 		int countNew = mAdapter.getCount();
 		
@@ -290,7 +280,6 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	
 	/**
 	 * 描述：事件
-	 * @see android.widget.ScrollView#onTouchEvent(android.view.MotionEvent)
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
@@ -318,6 +307,8 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 				if (mEnablePullRefresh && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 					//下拉更新高度
 					updateHeaderHeight(deltaY / OFFSET_RADIO);
+				} else if (mEnablePullLoad && !mPullLoading && mGridView.getLastVisiblePosition() == (mTotalItemCount-1) && deltaY<0) {
+					startLoadMore();
 				}
 				break;
 			case MotionEvent.ACTION_UP:
@@ -359,7 +350,7 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	/**
 	 * 描述：设置ListView的监听器.
 	 *
-	 * @param listViewListener the new ab on list view listener
+	 * @param listViewListener
 	 */
 	public void setAbOnListViewListener(AbOnListViewListener listViewListener) {
 		mListViewListener = listViewListener;
@@ -381,41 +372,32 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 	}
 
 	@Override
-	public void onScroll(AbsListView arg0, int arg1, int arg2, int arg3) {
-	   
+	public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+		mTotalItemCount = totalItemCount;
 	}
 
 	@Override
 	public void onScrollStateChanged(AbsListView view, int scrollState) {
-		
-		switch (scrollState) {
-	    // 当滚动时
-	    case OnScrollListener.SCROLL_STATE_IDLE:
-	    	Log.i("TAG", "SCROLL_STATE_IDLE");
-	    	if(view.getFirstVisiblePosition() == 0){
-	    		Log.i("TAG", "滚动到顶部");
-	    		childScrollState = false;
-	    		if (mEnablePullLoad && view.getLastVisiblePosition()==(view.getCount() - 1)) {
-	    			Log.i("TAG", "滚动到底部");
-	    			startLoadMore();
-				}
-	    	}else if (view.getLastVisiblePosition() == (view.getCount() - 1)) {
-	    		Log.i("TAG", "滚动到底部");
-	    		startLoadMore();
-	    	}else{
-	    		mFooterView.hide();
-	    		if(!mPullRefreshing){
-	    			childScrollState = true;
-	    		}
-	    	}
-	        break;
-	    case OnScrollListener.SCROLL_STATE_FLING:
-	    	Log.i("TAG", "SCROLL_STATE_FLING");
-	    	break;
-	    case OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:
-	         break;
+		 switch (scrollState) {
+         // 当滚动时
+         case OnScrollListener.SCROLL_STATE_IDLE:
+        	if(view.getFirstVisiblePosition() == 0){
+         		//Log.i("TAG", "滚动到顶部");
+         		childScrollState = false;
+         	}else if (view.getLastVisiblePosition() == (view.getCount() - 1)) {
+         		//Log.i("TAG", "滚动到底部");
+         		childScrollState = false;
+         	}else{
+         		if(!mPullRefreshing){
+         			childScrollState = true;
+         		}
+         	}
+             break;
+         case OnScrollListener.SCROLL_STATE_FLING:
+                 break;
+         case OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:
+              break;
         } 
-	
 	}
 	
 	/**

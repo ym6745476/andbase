@@ -33,8 +33,8 @@ public class PullToRefreshGridActivity extends AbActivity {
 	private ImageGridAdapter myGridViewAdapter = null;
 	private ArrayList<String> mPhotoList = new ArrayList<String>();
 	private AbTaskQueue mAbTaskQueue = null;
-	private int total = 50;
-	private int pageSize = 5;
+	private int total = 150;
+	private int pageSize = 15;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {

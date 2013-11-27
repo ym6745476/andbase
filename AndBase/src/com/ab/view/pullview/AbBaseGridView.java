@@ -22,7 +22,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 
 // TODO: Auto-generated Javadoc
