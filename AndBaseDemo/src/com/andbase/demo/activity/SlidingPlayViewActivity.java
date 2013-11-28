@@ -22,7 +22,7 @@ public class SlidingPlayViewActivity extends AbActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setAbContentView(R.layout.view_play);
+        setAbContentView(R.layout.sliding_play);
         
         AbTitleBar mAbTitleBar = this.getTitleBar();
         mAbTitleBar.setTitleText(R.string.view_play_name);

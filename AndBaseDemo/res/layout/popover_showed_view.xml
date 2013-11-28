@@ -14,7 +14,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/about_desc"
+            android:text="@string/popview_name"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#FF000000" />
     </LinearLayout>

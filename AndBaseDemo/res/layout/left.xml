@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" 
-        android:background="@color/window_bg">
+        android:background="@drawable/pic1">
 
         <TextView
             android:id="@+id/left1"

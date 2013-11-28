@@ -247,7 +247,7 @@ public class HttpActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				String url = "http://dldx.csdn.net/fd.php?i=569841705427009&s=69709ef2fa98dd2cb245dacab384395c";
+				String url = "http://www.418log.org/content/uploadfile/201311/38ed1385599018.jpg";
 				
 				mAbHttpUtil.get(url, new AbFileHttpResponseListener(url) {
 		        	

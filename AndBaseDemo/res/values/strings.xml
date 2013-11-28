@@ -65,20 +65,21 @@
     <string name="about">关于</string>
     <string name="version_lable">程序版本：</string>
     <string name="copyright">版权所有  CopyRight 2012 418log.org</string>
-    <string name="about_desc">\t\tAndroid开发宝(AndBase开发框架)
-      \n\t\tandbase是为Android开发者量身打造的一款开源类库产品，
-               您可以在本站中获取到最新的代码，示例以及开发文档。
-      \n\t\tandbase中包含了大量的开发常用手段，如网络下载数据的方法，Http请求,线程与线程池的管理，
-	      图片缓存管理LruCache，图片文件下载上传，简单轻量支持注解自动建表的ORM框架，
-	      并对常用工具类入字符串，日期，文件处理，图片处理等进行了进一步的封装，
-	      能够使您的应用在团队开发中减少冗余代码，很大的提高了代码的维护性与开发高效行，
+    <string name="about_desc">
+      \t\tAndroid开发宝
+      \n\t\t又“andBase开发框架”
+      andbase是为Android开发者量身打造的一款开源类库产品，
+               您可以在418log.org中获取到最新的代码，示例以及开发文档。
+      \n\t\tandbase中包含了大量的开发常用手段，如网络下载，Http请求,线程与线程池的管理，
+	      图片缓存管理，图片文件下载上传，数据库ORM框架，并封装了大量常用工具类入如字符串，日期，文件处理，图片处理等，
+	      能够使您的应用在团队开发中减少冗余代码，很大的提高了代码的维护性与开发高效性，
 	      能很好的规避由于开发疏忽而导致常犯的错误。 
-	  \n\t\t同时andbase封装了大量的常用且系统本身没有的控件。功能很多，
-	      但不会使你的程序包变大，却能大幅度缩小您的程序。
+	  \n\t\t同时andbase也包含一些常用的控件，如侧边栏，下拉刷新，Tab滑动等，
+	      不会使你的程序包变大，却能大幅度缩小您的程序。
 	      而这一切都是免费的。 
 	   \n
        \n\t\t官方主页：www.418log.org
-       \n\t\tQQ群：38535812
+       \n\t\t交流QQ群：38535812
     </string>
     
     

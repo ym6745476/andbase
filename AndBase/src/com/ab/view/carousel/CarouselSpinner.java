@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2013 www.418log.org
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.carousel;
 
 import java.util.ArrayList;
@@ -16,39 +31,79 @@ import android.view.ViewGroup;
 import android.widget.AbsSpinner;
 import android.widget.SpinnerAdapter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CarouselSpinner.
+ */
 public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
 
+    /** The m adapter. */
     SpinnerAdapter mAdapter;
 
+    /** The m height measure spec. */
     int mHeightMeasureSpec;
+    
+    /** The m width measure spec. */
     int mWidthMeasureSpec;
+    
+    /** The m block layout requests. */
     boolean mBlockLayoutRequests;
 
+    /** The m selection left padding. */
     int mSelectionLeftPadding = 0;
+    
+    /** The m selection top padding. */
     int mSelectionTopPadding = 0;
+    
+    /** The m selection right padding. */
     int mSelectionRightPadding = 0;
+    
+    /** The m selection bottom padding. */
     int mSelectionBottomPadding = 0;
+    
+    /** The m spinner padding. */
     final Rect mSpinnerPadding = new Rect();
 
+    /** The m recycler. */
     final RecycleBin mRecycler = new RecycleBin();
+    
+    /** The m data set observer. */
     private DataSetObserver mDataSetObserver;
 		
+    /**
+     * Instantiates a new carousel spinner.
+     *
+     * @param context the context
+     */
     public CarouselSpinner(Context context) {
         super(context);
         initCarouselSpinner();
     }
 
+    /**
+     * Instantiates a new carousel spinner.
+     *
+     * @param context the context
+     * @param attrs the attrs
+     */
     public CarouselSpinner(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
+    /**
+     * Instantiates a new carousel spinner.
+     *
+     * @param context the context
+     * @param attrs the attrs
+     * @param defStyle the def style
+     */
     public CarouselSpinner(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initCarouselSpinner();
     }
     
     /**
-     * Common code for different constructor flavors
+     * Common code for different constructor flavors.
      */
     private void initCarouselSpinner() {
         setFocusable(true);
@@ -56,10 +111,24 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     }    
            
     
+	/**
+	 * 描述：TODO
+	 * @see com.ab.view.carousel.CarouselAdapter#getAdapter()
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public SpinnerAdapter getAdapter() {
         return mAdapter;
     }
 
+	/**
+	 * 描述：TODO
+	 * @see com.ab.view.carousel.CarouselAdapter#setAdapter(android.widget.Adapter)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public void setAdapter(SpinnerAdapter adapter) {
         if (null != mAdapter) {
             mAdapter.unregisterDataSetObserver(mDataSetObserver);
@@ -100,6 +169,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
 		
 	}
 
+    /**
+     * 描述：TODO
+     * @see com.ab.view.carousel.CarouselAdapter#getSelectedView()
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     public View getSelectedView() {
         if (mItemCount > 0 && mSelectedPosition >= 0) {
             return getChildAt(mSelectedPosition - mFirstPosition);
@@ -110,6 +186,9 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
 	
     /**
      * Jump directly to a specific item in the adapter data.
+     *
+     * @param position the position
+     * @param animate the animate
      */
     public void setSelection(int position, boolean animate) {
         // Animate only if requested position is already on screen somewhere
@@ -136,14 +215,27 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         }
     }
     
+    /**
+     * Layout.
+     *
+     * @param delta the delta
+     * @param animate the animate
+     */
     abstract void layout(int delta, boolean animate);    
 
+	/**
+	 * 描述：TODO
+	 * @see com.ab.view.carousel.CarouselAdapter#setSelection(int)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public void setSelection(int position) {
         setSelectionInt(position, false);
 	}
 
     /**
-     * Clear out all children from the list
+     * Clear out all children from the list.
      */
     void resetList() {
         mDataChanged = false;
@@ -158,13 +250,17 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         invalidate();
     }
 	
-    /** 
+    /**
+     * On measure.
+     *
+     * @param widthMeasureSpec the width measure spec
+     * @param heightMeasureSpec the height measure spec
      * @see android.view.View#measure(int, int)
      * 
      * Figure out the dimensions of this Spinner. The width comes from
      * the widthMeasureSpec as Spinnners can't have their width set to
      * UNSPECIFIED. The height is based on the height of the selected item
-     * plus padding. 
+     * plus padding.
      */
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
@@ -236,14 +332,33 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         mWidthMeasureSpec = widthMeasureSpec;
     }
     
+    /**
+     * Gets the child height.
+     *
+     * @param child the child
+     * @return the child height
+     */
     int getChildHeight(View child) {
         return child.getMeasuredHeight();
     }
     
+    /**
+     * Gets the child width.
+     *
+     * @param child the child
+     * @return the child width
+     */
     int getChildWidth(View child) {
         return child.getMeasuredWidth();
     }
     
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#generateDefaultLayoutParams()
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     protected ViewGroup.LayoutParams generateDefaultLayoutParams() {
         /*
          * Carousel expects Carousel.LayoutParams.
@@ -253,6 +368,9 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     	
     }
     
+    /**
+     * Recycle all views.
+     */
     void recycleAllViews() {
         final int childCount = getChildCount();
         final CarouselSpinner.RecycleBin recycleBin = mRecycler;
@@ -268,8 +386,8 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     
     /**
      * Override to prevent spamming ourselves with layout requests
-     * as we place views
-     * 
+     * as we place views.
+     *
      * @see android.view.View#requestLayout()
      */
     @Override
@@ -280,6 +398,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     }
     
 
+    /**
+     * 描述：TODO
+     * @see com.ab.view.carousel.CarouselAdapter#getCount()
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public int getCount() {
         return mItemCount;
@@ -385,19 +510,30 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     		return mSelectedPosition;
     }
     
+    /**
+     * The Class SavedState.
+     */
     static class SavedState extends BaseSavedState {
+        
+        /** The selected id. */
         long selectedId;
+        
+        /** The position. */
         int position;
 
         /**
-         * Constructor called from {@link AbsSpinner#onSaveInstanceState()}
+         * Constructor called from {@link AbsSpinner#onSaveInstanceState()}.
+         *
+         * @param superState the super state
          */
         SavedState(Parcelable superState) {
             super(superState);
         }
         
         /**
-         * Constructor called from {@link #CREATOR}
+         * Constructor called from {@link #CREATOR}.
+         *
+         * @param in the in
          */
         private SavedState(Parcel in) {
             super(in);
@@ -405,6 +541,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
             position = in.readInt();
         }
 
+        /**
+         * 描述：TODO
+         * @see android.view.AbsSavedState#writeToParcel(android.os.Parcel, int)
+         * @author: zhaoqp
+         * @date：2013-11-28 上午11:14:34
+         * @version v1.0
+         */
         @Override
         public void writeToParcel(Parcel out, int flags) {
             super.writeToParcel(out, flags);
@@ -412,6 +555,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
             out.writeInt(position);
         }
 
+        /**
+         * 描述：TODO
+         * @see java.lang.Object#toString()
+         * @author: zhaoqp
+         * @date：2013-11-28 上午11:14:34
+         * @version v1.0
+         */
         @Override
         public String toString() {
             return "AbsSpinner.SavedState{"
@@ -420,6 +570,7 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
                     + " position=" + position + "}";
         }
 
+        /** The Constant CREATOR. */
         public static final Parcelable.Creator<SavedState> CREATOR
                 = new Parcelable.Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {
@@ -432,6 +583,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         };
     }
 
+    /**
+     * 描述：TODO
+     * @see android.view.View#onSaveInstanceState()
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
@@ -445,6 +603,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         return ss;
     }    
 
+    /**
+     * 描述：TODO
+     * @see android.view.View#onRestoreInstanceState(android.os.Parcelable)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public void onRestoreInstanceState(Parcelable state) {
         SavedState ss = (SavedState) state;
@@ -461,13 +626,30 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         }
     }
     
+    /**
+     * The Class RecycleBin.
+     */
     class RecycleBin {
+        
+        /** The m scrap heap. */
         private final SparseArray<View> mScrapHeap = new SparseArray<View>();
 
+        /**
+         * Put.
+         *
+         * @param position the position
+         * @param v the v
+         */
         public void put(int position, View v) {
             mScrapHeap.put(position, v);
         }
         
+        /**
+         * Gets the.
+         *
+         * @param position the position
+         * @return the view
+         */
         View get(int position) {
             // System.out.print("Looking for " + position);
             View result = mScrapHeap.get(position);
@@ -480,6 +662,9 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
             return result;
         }
 
+        /**
+         * Clear.
+         */
         void clear() {
             final SparseArray<View> scrapHeap = mScrapHeap;
             final int count = scrapHeap.size();

@@ -9,24 +9,28 @@
         android:id="@+id/threadBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="单线程" />
 
     <Button
         android:id="@+id/queueBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="线程队列" />
 
     <Button
         android:id="@+id/poolBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="线程池" />
 
     <Button
         android:id="@+id/taskBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="异步任务" />
 
 </LinearLayout>

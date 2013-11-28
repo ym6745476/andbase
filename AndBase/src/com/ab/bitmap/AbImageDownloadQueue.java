@@ -24,7 +24,6 @@ import android.util.Log;
 
 import com.ab.global.AbAppData;
 import com.ab.util.AbFileUtil;
-import com.ab.util.AbMd5;
 import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc

@@ -1,7 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:orientation="vertical"
     android:padding="20dip" >
 
@@ -19,12 +18,16 @@
                 android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="显示主操作栏" />
 
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="隐藏主操作栏" />
         </LinearLayout>
 
@@ -37,18 +40,24 @@
                 android:id="@+id/btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="显示右边" />
 
             <Button
                 android:id="@+id/btn4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="隐藏右边" />
-            
+
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="操作栏变换" />
         </LinearLayout>
 
@@ -61,18 +70,24 @@
                 android:id="@+id/btn6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="透明背景" />
 
             <Button
                 android:id="@+id/btn7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="标题下拉" />
 
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="标题下拉关闭" />
         </LinearLayout>
 
@@ -85,12 +100,16 @@
                 android:id="@+id/btn9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="显示副标题栏" />
 
             <Button
                 android:id="@+id/btn10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="隐藏副标题栏" />
         </LinearLayout>
     </LinearLayout>

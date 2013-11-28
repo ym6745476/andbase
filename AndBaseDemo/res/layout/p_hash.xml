@@ -72,21 +72,21 @@
             android:id="@+id/addBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dip"
+            android:layout_margin="5dip"
             android:text="上传" />
 
         <Button
             android:id="@+id/createBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dip"
+            android:layout_margin="5dip"
             android:text="创建图片索引" />
 
         <LinearLayout
             android:id="@+id/chart01"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
+            android:layout_marginTop="5dip"
             android:orientation="vertical" >
         </LinearLayout>
     </LinearLayout>

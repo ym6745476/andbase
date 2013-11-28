@@ -9,18 +9,21 @@
         android:id="@+id/table1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="纯文本适配" />
 
     <Button
         android:id="@+id/table2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="文本+图片适配" />
 
     <Button
         android:id="@+id/table3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dip"
         android:text="文本+图片+复选框适配" />
 
 </LinearLayout>

@@ -9,19 +9,22 @@
         android:id="@+id/btn1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="标题栏" />
+        android:text="标题栏" 
+        android:layout_margin="5dip"/>
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="进度框" />
+        android:text="进度框" 
+        android:layout_margin="5dip"/>
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Toast提示框" />
+        android:text="Toast提示框" 
+        android:layout_margin="5dip"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -33,25 +36,32 @@
             android:id="@+id/btn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="弹出框(上)" />
+            android:text="弹出框(上)" 
+            android:layout_margin="5dip"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btn5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="弹出框(中)" />
+            android:text="弹出框(中)" 
+            android:layout_margin="5dip"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btn6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="弹出框(下)" />
+            android:text="弹出框(下)" 
+            android:layout_margin="5dip"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/btn7"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="确认框" />
+        android:text="确认框" 
+        android:layout_margin="5dip"/>
 
 </LinearLayout>

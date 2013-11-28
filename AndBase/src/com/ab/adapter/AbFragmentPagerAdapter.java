@@ -23,7 +23,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbFragmentPagerAdapter.
+ * 名称：AbFragmentPagerAdapter.java 
+ * 描述：一个通用的Fragment适配器
+ * @author zhaoqp
+ * @date：2013-11-28 上午10:57:53
+ * @version v1.0
  */
 public class AbFragmentPagerAdapter extends FragmentPagerAdapter {
 

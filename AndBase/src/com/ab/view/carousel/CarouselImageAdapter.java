@@ -65,7 +65,9 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * 描述：TODO
+	 * 描述：TODO.
+	 *
+	 * @return the count
 	 * @see android.widget.Adapter#getCount()
 	 * @author: zhaoqp
 	 * @date：2013-8-22 下午4:07:39
@@ -80,7 +82,10 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * 描述：TODO
+	 * 描述：TODO.
+	 *
+	 * @param position the position
+	 * @return the item
 	 * @see android.widget.Adapter#getItem(int)
 	 * @author: zhaoqp
 	 * @date：2013-8-22 下午4:07:39
@@ -91,7 +96,10 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * 描述：TODO
+	 * 描述：TODO.
+	 *
+	 * @param position the position
+	 * @return the item id
 	 * @see android.widget.Adapter#getItemId(int)
 	 * @author: zhaoqp
 	 * @date：2013-8-22 下午4:07:39
@@ -102,7 +110,12 @@ public class CarouselImageAdapter extends BaseAdapter {
 	}
 
 	/**
-	 * 描述：TODO
+	 * 描述：TODO.
+	 *
+	 * @param position the position
+	 * @param convertView the convert view
+	 * @param parent the parent
+	 * @return the view
 	 * @see android.widget.Adapter#getView(int, android.view.View, android.view.ViewGroup)
 	 * @author: zhaoqp
 	 * @date：2013-8-22 下午4:07:39

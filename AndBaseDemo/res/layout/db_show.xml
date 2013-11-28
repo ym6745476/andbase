@@ -18,18 +18,24 @@
                 android:id="@+id/insertBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="插入数据" />
-            
+
             <Button
                 android:id="@+id/queryBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="查询数据" />
 
             <Button
                 android:id="@+id/deleteBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
                 android:text="删除数据" />
         </LinearLayout>
 

@@ -9,18 +9,21 @@
         android:id="@+id/analogClock"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
-        android:text="圆形挂钟"/>
+        android:text="圆形挂钟"
+        android:layout_margin="5dip"/>
 
     <Button
         android:id="@+id/numberClock"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
-        android:text="数字时钟"/>
+        android:text="数字时钟"
+        android:layout_margin="5dip"/>
     
     <Button
         android:id="@+id/calendar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
-        android:text="台历"/>
+        android:text="台历"
+        android:layout_margin="5dip"/>
 
 </LinearLayout>

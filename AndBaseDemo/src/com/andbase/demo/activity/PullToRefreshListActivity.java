@@ -34,7 +34,7 @@ public class PullToRefreshListActivity extends AbActivity {
 	private AbTitleBar mAbTitleBar = null;
 	private ImageListAdapter myListViewAdapter = null;
 	private int total = 50;
-	private int pageSize = 5;
+	private int pageSize = 15;
     
 	@Override
     public void onCreate(Bundle savedInstanceState) {

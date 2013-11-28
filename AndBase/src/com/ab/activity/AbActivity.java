@@ -68,10 +68,10 @@ import com.ab.view.titlebar.AbTitleBar;
 
 public abstract class AbActivity extends FragmentActivity {
 	
-	/** The tag. */
+	/** 记录日志的标记. */
 	private String TAG = AbActivity.class.getSimpleName();
 	
-	/** The debug. */
+	/** 记录日志的开关. */
 	private boolean D = AbAppData.DEBUG;
 
 	/** 加载框的文字说明. */
@@ -219,9 +219,11 @@ public abstract class AbActivity extends FragmentActivity {
 		//主标题栏
 		mAbTitleBar = new AbTitleBar(this);
 		
+		//最外层布局
 		ab_base = new RelativeLayout(this);
 		ab_base.setBackgroundColor(Color.rgb(255, 255, 255));
 		
+		//内容布局
 		contentLayout = new RelativeLayout(this);
 		contentLayout.setPadding(0, 0, 0, 0);
 		
@@ -240,9 +242,13 @@ public abstract class AbActivity extends FragmentActivity {
 		layoutParamsFW1.addRule(RelativeLayout.ABOVE, mAbBottomBar.getId());
 		ab_base.addView(contentLayout, layoutParamsFW1);
 		
+		//Application初始化
 		abApplication = getApplication();
+		
+		//SharedPreferences初始化
 		abSharedPreferences = getSharedPreferences(AbConstant.SHAREPATH, Context.MODE_PRIVATE);
         
+		//设置ContentView
         setContentView(ab_base,layoutParamsFF);
         
         //如果Dialog不是充满屏幕，要设置这个值

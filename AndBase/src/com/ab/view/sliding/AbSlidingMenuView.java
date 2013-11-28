@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ab.view.slidingmenu;
+package com.ab.view.sliding;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
@@ -25,15 +26,23 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
+import com.ab.global.AbAppData;
+
 // TODO: Auto-generated Javadoc
 /**
- * 描述：侧边栏实现.
- *
+ * 描述：左右简单的侧边栏实现
+ * 滑动事件只在一个android:clickable="true"的View上
  * @author zhaoqp
  * @date：2013-4-24 下午3:46:47
  * @version v1.0
  */
-public class AbSlidingLayout extends ViewGroup {
+public class AbSlidingMenuView extends ViewGroup {
+	
+	/** 记录日志的标记. */
+	private String TAG = AbSlidingMenuView.class.getSimpleName();
+	
+	/** 记录日志的开关. */
+	private boolean D = AbAppData.DEBUG;
 
 	/** The m scroller. */
 	private Scroller mScroller;
@@ -78,50 +87,28 @@ public class AbSlidingLayout extends ViewGroup {
 	private boolean mOnClick = false;
 
 	/**
-	 * Instantiates a new ab flipper layout.
-	 *
+	 * 构造.
 	 * @param context the context
 	 */
-	public AbSlidingLayout(Context context) {
+	public AbSlidingMenuView(Context context) {
 		super(context);
 		mScroller = new Scroller(context);
-		mWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,54, getResources().getDisplayMetrics());
+		mWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,60, getResources().getDisplayMetrics());
 
 	}
 
 	/**
-	 * Instantiates a new ab flipper layout.
-	 *
-	 * @param context the context
-	 * @param attrs the attrs
-	 * @param defStyle the def style
-	 */
-	public AbSlidingLayout(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-	}
-
-	/**
-	 * Instantiates a new ab flipper layout.
-	 *
+	 * 构造.
 	 * @param context the context
 	 * @param attrs the attrs
 	 */
-	public AbSlidingLayout(Context context, AttributeSet attrs) {
+	public AbSlidingMenuView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
 	/**
 	 * 描述：View的位置设定.
 	 *
-	 * @param changed the changed
-	 * @param l the l
-	 * @param t the t
-	 * @param r the r
-	 * @param b the b
-	 * @see android.view.ViewGroup#onLayout(boolean, int, int, int, int)
-	 * @author: zhaoqp
-	 * @date：2013-6-17 上午9:04:51
-	 * @version v1.0
 	 */
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
@@ -139,9 +126,6 @@ public class AbSlidingLayout extends ViewGroup {
 	 * @param widthMeasureSpec the width measure spec
 	 * @param heightMeasureSpec the height measure spec
 	 * @see android.view.View#onMeasure(int, int)
-	 * @author: zhaoqp
-	 * @date：2013-6-17 上午9:04:51
-	 * @version v1.0
 	 */
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -161,9 +145,11 @@ public class AbSlidingLayout extends ViewGroup {
 	 * @see android.view.ViewGroup#dispatchTouchEvent(android.view.MotionEvent)
 	 */
 	public boolean dispatchTouchEvent(MotionEvent ev) {
+		
 		obtainVelocityTracker(ev);
 		switch (ev.getAction()) {
 		case MotionEvent.ACTION_DOWN:
+			if(D) Log.d(TAG, "--dispatchTouchEvent ACTION_DOWN--");
 			mTouchState = mScroller.isFinished() ? TOUCH_STATE_RESTART: TOUCH_STATE_SCROLLING;
 			if (mTouchState == TOUCH_STATE_RESTART) {
 				int x = (int) ev.getX();
@@ -179,12 +165,15 @@ public class AbSlidingLayout extends ViewGroup {
 					mScrollState = SCROLL_STATE_NO_ALLOW;
 				}
 			} else {
+				if(D) Log.d(TAG, "--dispatchTouchEvent ACTION_DOWN return false--");
 				return false;
 			}
 			break;
 		case MotionEvent.ACTION_MOVE:
+			if(D) Log.d(TAG, "--dispatchTouchEvent ACTION_MOVE--");
 			mVelocityTracker.computeCurrentVelocity(1000,ViewConfiguration.getMaximumFlingVelocity());
 			if (mScrollState == SCROLL_STATE_ALLOW && getWidth() - (int) ev.getX() < mWidth) {
+				if(D) Log.d(TAG, "--dispatchTouchEvent ACTION_MOVE return true--");
 				return true;
 			}
 			break;
@@ -212,16 +201,20 @@ public class AbSlidingLayout extends ViewGroup {
 		obtainVelocityTracker(ev);
 		switch (ev.getAction()) {
 		case MotionEvent.ACTION_DOWN:
+			if(D) Log.d(TAG, "--onInterceptTouchEvent ACTION_DOWN--");
 			mTouchState = mScroller.isFinished() ? TOUCH_STATE_RESTART : TOUCH_STATE_SCROLLING;
 			if (mTouchState==TOUCH_STATE_SCROLLING) {
+				if(D) Log.d(TAG, "--onInterceptTouchEvent ACTION_DOWN return false--");
 				return false;
 			}
 			break;
 
 		case MotionEvent.ACTION_MOVE:
+			if(D) Log.d(TAG, "--onInterceptTouchEvent ACTION_MOVE--");
 			mOnClick = false;
 			mVelocityTracker.computeCurrentVelocity(1000,ViewConfiguration.getMaximumFlingVelocity());
 			if (mScrollState == SCROLL_STATE_ALLOW && Math.abs(mVelocityTracker.getXVelocity()) > 200) {
+				if(D) Log.d(TAG, "--onInterceptTouchEvent ACTION_MOVE return true--");
 				return true;
 			}
 			break;
@@ -247,13 +240,16 @@ public class AbSlidingLayout extends ViewGroup {
 		obtainVelocityTracker(event);
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
+			if(D) Log.d(TAG, "--onTouchEvent ACTION_DOWN--");
 			mTouchState = mScroller.isFinished() ? TOUCH_STATE_RESTART : TOUCH_STATE_SCROLLING;
 			if (mTouchState==TOUCH_STATE_SCROLLING) {
+				if(D) Log.d(TAG, "--onTouchEvent ACTION_DOWN return false--");
 				return false;
 			}
 			break;
 
 		case MotionEvent.ACTION_MOVE:
+			if(D) Log.d(TAG, "--onTouchEvent ACTION_MOVE--");
 			mVelocityTracker.computeCurrentVelocity(1000,ViewConfiguration.getMaximumFlingVelocity());
 			mVelocityValue = (int) mVelocityTracker.getXVelocity();
 			getChildAt(1).scrollTo(-(int) event.getX(), 0);
@@ -286,7 +282,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * Open.
+	 * 打开menu.
 	 */
 	public void open() {
 		mTouchState = mScroller.isFinished() ? TOUCH_STATE_RESTART: TOUCH_STATE_SCROLLING;
@@ -298,7 +294,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * Close.
+	 * 关闭menu.
 	 */
 	public void close() {
 		mScreenState = SCREEN_STATE_CLOSE;
@@ -320,7 +316,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * Obtain velocity tracker.
+	 * 初始化速度检测.
 	 *
 	 * @param event the event
 	 */
@@ -332,7 +328,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * Release velocity tracker.
+	 * 释放速度检测.
 	 */
 	private void releaseVelocityTracker() {
 		if (mVelocityTracker != null) {
@@ -342,8 +338,7 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * Gets the screen state.
-	 *
+	 * 获取当前状态.
 	 * @return the screen state
 	 */
 	public int getScreenState() {
@@ -351,50 +346,14 @@ public class AbSlidingLayout extends ViewGroup {
 	}
 
 	/**
-	 * Sets the content view.
+	 * 设置主View.
 	 *
-	 * @param view the new content view
+	 * @param view
 	 */
 	public void setContentView(View view) {
 		removeViewAt(1);
 		addView(view, 1, getLayoutParams());
 	}
 
-	/**
-	 * The listener interface for receiving onOpen events.
-	 * The class that is interested in processing a onOpen
-	 * event implements this interface, and the object created
-	 * with that class is registered with a component using the
-	 * component's <code>addOnOpenListener<code> method. When
-	 * the onOpen event occurs, that object's appropriate
-	 * method is invoked.
-	 *
-	 * @see OnOpenEvent
-	 */
-	public interface OnOpenListener {
-		
-		/**
-		 * Open.
-		 */
-		public abstract void open();
-	}
-
-	/**
-	 * The listener interface for receiving onClose events.
-	 * The class that is interested in processing a onClose
-	 * event implements this interface, and the object created
-	 * with that class is registered with a component using the
-	 * component's <code>addOnCloseListener<code> method. When
-	 * the onClose event occurs, that object's appropriate
-	 * method is invoked.
-	 *
-	 * @see OnCloseEvent
-	 */
-	public interface OnCloseListener {
-		
-		/**
-		 * Close.
-		 */
-		public abstract void close();
-	}
+	
 }

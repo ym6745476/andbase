@@ -14,8 +14,8 @@ import com.andbase.R;
 import com.andbase.global.MyApplication;
 
 /**
- * 名称：DemoAbActivity 描述：AbActivity基本用法
- * 
+ * 名称：DemoAbActivity 
+ * 描述：AbActivity基本用法
  * @author zhaoqp
  * @date 2011-12-13
  * @version

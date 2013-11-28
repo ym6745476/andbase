@@ -9,12 +9,14 @@
         android:id="@+id/btn1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
-        android:text="图片适配"/>
+        android:text="图片适配"
+        android:layout_margin="5dip"/>
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
-        android:text="View适配"/>
+        android:text="View适配"
+        android:layout_margin="5dip"/>
     
 </LinearLayout>

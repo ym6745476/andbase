@@ -2,38 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:padding="20dip">
-    
+    android:orientation="vertical"
+    android:padding="20dip" >
+
     <Button
         android:id="@+id/listPager"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:text="ListView+ViewPager"/>
-    
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="ListView+ViewPager" />
+
     <Button
         android:id="@+id/slidingMenuPager"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:text="SlidingMenu+ViewPager"/>
-    
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="SlidingMenu+ViewPager" />
+
     <Button
         android:id="@+id/slidingMenuTab"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:text="SlidingMenu+SlidingTab"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="SlidingMenu+SlidingTab" />
 
     <Button
         android:id="@+id/scrollList"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:text="ScrollView+ListView"/>
-    
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="ScrollView+ListView" />
+
     <Button
         android:id="@+id/scrollPager"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:text="ScrollView+ViewPager"/>
-    
-    
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="ScrollView+ViewPager" />
+
 </LinearLayout>

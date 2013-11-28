@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2013 www.418log.org
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.carousel;
 
 import java.util.ArrayList;
@@ -22,39 +37,34 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.animation.Transformation;
 
+// TODO: Auto-generated Javadoc
 /**
  * 
- * @author kushnarev
- * Carousel class
+ * Copyright (c) 2012 All rights reserved
+ * 名称：CarouselImageView.java 
+ * 描述：图片适配
+ * @author zhaoqp
+ * @date：2013-11-28 上午11:15:11
+ * @version v1.0
  */
 public class CarouselImageView extends CarouselSpinner implements GestureDetector.OnGestureListener {
 		    
 	
 	// Static private members
 
-	/**
-	 * Tag for a class logging
-	 */
+	/** Tag for a class logging. */
 	private static final String TAG = CarouselImageView.class.getSimpleName();
 
-	/**
-	 * If logging should be inside class
-	 */
+	/** If logging should be inside class. */
 	private static final boolean localLOGV = false;
 	
-	/**
-	 * Default min quantity of images
-	 */
+	/** Default min quantity of images. */
 	private static final int MIN_QUANTITY = 3;
 	
-	/**
-	 * Default max quantity of images
-	 */
+	/** Default max quantity of images. */
 	private static final int MAX_QUANTITY = 12;
 	
-	/**
-	 * Max theta
-	 */
+	/** Max theta. */
 	private static final float MAX_THETA = 15.0f;
 
 	/**
@@ -65,9 +75,7 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 	
 	// Private members		
     
-    /**
-     * The info for adapter context menu
-     */
+    /** The info for adapter context menu. */
     private AdapterContextMenuInfo mContextMenuInfo;
     
     /**
@@ -76,9 +84,7 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
      */
     private int mAnimationDuration = 900;    
     
-	/**
-	 * Camera to make 3D rotation
-	 */
+	/** Camera to make 3D rotation. */
 	private Camera mCamera = new Camera();
 
     /**
@@ -112,9 +118,7 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
      */
     private GestureDetector mGestureDetector;
 	
-    /**
-     * Gravity for the widget
-     */
+    /** Gravity for the widget. */
     private int mGravity;
     	
     /**
@@ -123,14 +127,10 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
      */
     private boolean mIsFirstScroll;
     
-    /**
-     * Set max qantity of images
-     */
+    /** Set max qantity of images. */
     private int mMaxQuantity = MAX_QUANTITY;
     
-    /**
-     * Set min quantity of images
-     */
+    /** Set min quantity of images. */
     private int mMinQuantity = MIN_QUANTITY;
     
     /**
@@ -170,26 +170,40 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
      */
     private boolean mSuppressSelectionChanged;
     
-	/**
-	 * The axe angle
-	 */
+	/** The axe angle. */
     private float mTheta = (float)(15.0f*(Math.PI/180.0));	
     
-    /**
-     * If items should be reflected
-     */
+    /** If items should be reflected. */
     private boolean mUseReflection;
 
     // Constructors
 
-	public CarouselImageView(Context context)  {
+	/**
+     * Instantiates a new carousel image view.
+     *
+     * @param context the context
+     */
+    public CarouselImageView(Context context)  {
 		this(context, null);
 	}
 	
+	/**
+	 * Instantiates a new carousel image view.
+	 *
+	 * @param context the context
+	 * @param attrs the attrs
+	 */
 	public CarouselImageView(Context context, AttributeSet attrs)  {
 		this(context, attrs, 0);
 	}
 	
+	/**
+	 * Instantiates a new carousel image view.
+	 *
+	 * @param context the context
+	 * @param attrs the attrs
+	 * @param defStyle the def style
+	 */
 	public CarouselImageView(Context context, AttributeSet attrs, int defStyle) {
 		
 		super(context, attrs, defStyle);
@@ -221,9 +235,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 	// These are for use with horizontal scrollbar
 	
 	/**
-	 * Compute the horizontal extent of the horizontal scrollbar's thumb 
-	 * within the horizontal range. This value is used to compute 
+	 * Compute the horizontal extent of the horizontal scrollbar's thumb
+	 * within the horizontal range. This value is used to compute
 	 * the length of the thumb within the scrollbar's track.
+	 *
+	 * @return the int
 	 */
     @Override
     protected int computeHorizontalScrollExtent() {
@@ -232,9 +248,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
     
     /**
-     * Compute the horizontal offset of the horizontal scrollbar's 
-     * thumb within the horizontal range. This value is used to compute 
+     * Compute the horizontal offset of the horizontal scrollbar's
+     * thumb within the horizontal range. This value is used to compute
      * the position of the thumb within the scrollbar's track.
+     *
+     * @return the int
      */
     @Override
     protected int computeHorizontalScrollOffset() {
@@ -244,6 +262,8 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     
     /**
      * Compute the horizontal range that the horizontal scrollbar represents.
+     *
+     * @return the int
      */
     @Override
     protected int computeHorizontalScrollRange() {
@@ -253,6 +273,9 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         
     /**
      * Implemented to handle touch screen motion events.
+     *
+     * @param event the event
+     * @return true, if successful
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -273,6 +296,8 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     
     /**
      * Extra information about the item for which the context menu should be shown.
+     *
+     * @return the context menu info
      */
     @Override
     protected ContextMenuInfo getContextMenuInfo() {
@@ -281,6 +306,8 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 
     /**
      * Bring up the context menu for this view.
+     *
+     * @return true, if successful
      */
     @Override
     public boolean showContextMenu() {
@@ -295,7 +322,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
     
     /**
-     * Handles left, right, and clicking
+     * Handles left, right, and clicking.
+     *
+     * @param keyCode the key code
+     * @param event the event
+     * @return true, if successful
      * @see android.view.View#onKeyDown
      */
     @Override
@@ -323,6 +354,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         return super.onKeyDown(keyCode, event);
     }
     
+    /**
+     * 描述：TODO
+     * @see android.view.View#onKeyUp(int, android.view.KeyEvent)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         switch (keyCode) {
@@ -355,6 +393,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         return super.onKeyUp(keyCode, event);
     }    
         
+    /**
+     * 描述：TODO
+     * @see android.view.View#onFocusChanged(boolean, int, android.graphics.Rect)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     protected void onFocusChanged(boolean gainFocus, int direction, Rect previouslyFocusedRect) {
         super.onFocusChanged(gainFocus, direction, previouslyFocusedRect);
@@ -372,21 +417,49 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     
     // ViewGroup overrides
     
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#checkLayoutParams(android.view.ViewGroup.LayoutParams)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
         return p instanceof LayoutParams;
     }
     
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#generateLayoutParams(android.view.ViewGroup.LayoutParams)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
         return new LayoutParams(p);
     }
     
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#generateLayoutParams(android.util.AttributeSet)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs) {
         return new LayoutParams(getContext(), attrs);
     }
         
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#dispatchSetSelected(boolean)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public void dispatchSetSelected(boolean selected) {
         /*
@@ -396,6 +469,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
          */
     }
     
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#dispatchSetPressed(boolean)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     protected void dispatchSetPressed(boolean pressed) {
         
@@ -405,6 +485,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         }
     }
     
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#showContextMenuForChild(android.view.View)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public boolean showContextMenuForChild(View originalView) {
 
@@ -418,6 +505,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
         
         
+    /**
+     * 描述：TODO
+     * @see android.view.ViewGroup#dispatchKeyEvent(android.view.KeyEvent)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
         // Gallery steals all key events
@@ -425,7 +519,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
         
     /**
-     * Index of the child to draw for this iteration
+     * Index of the child to draw for this iteration.
+     *
+     * @param childCount the child count
+     * @param i the i
+     * @return the child drawing order
      */
     @Override
     protected int getChildDrawingOrder(int childCount, int i) {
@@ -460,7 +558,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
     
     /**
-     * Transform an item depending on it's coordinates  
+     * Transform an item depending on it's coordinates.
+     *
+     * @param child the child
+     * @param transformation the transformation
+     * @return the child static transformation
      */
 	@Override
 	protected boolean getChildStaticTransformation(View child, Transformation transformation) {
@@ -504,8 +606,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     // CarouselAdapter overrides
     
 	/**
-	 * Setting up images
-	 */
+     * Setting up images.
+     *
+     * @param delta the delta
+     * @param animate the animate
+     */
 	void layout(int delta, boolean animate){
 		        
         if (mDataChanged) {
@@ -558,7 +663,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 	} 
     
 	/**
-	 * Setting up images after layout changed
+	 * Setting up images after layout changed.
+	 *
+	 * @param changed the changed
+	 * @param l the l
+	 * @param t the t
+	 * @param r the r
+	 * @param b the b
 	 */
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
@@ -573,6 +684,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         mInLayout = false;
     }	    
     	
+    /**
+     * 描述：TODO
+     * @see com.ab.view.carousel.CarouselAdapter#selectionChanged()
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     void selectionChanged() {
         if (!mSuppressSelectionChanged) {
@@ -580,6 +698,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         }
     }    
 	
+    /**
+     * 描述：TODO
+     * @see com.ab.view.carousel.CarouselAdapter#setSelectedPositionInt(int)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     @Override
     void setSelectedPositionInt(int position) {
         super.setSelectedPositionInt(position);
@@ -592,30 +717,37 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
       
     // Rotation class for the Carousel    
 	
-	private class FlingRotateRunnable implements Runnable {
+	/**
+     * The Class FlingRotateRunnable.
+     */
+    private class FlingRotateRunnable implements Runnable {
 
-        /**
-         * Tracks the decay of a fling rotation
-         */		
+        /** Tracks the decay of a fling rotation. */		
 		private Rotator mRotator;
 
-		/**
-         * Angle value reported by mRotator on the previous fling
-         */
+		/** Angle value reported by mRotator on the previous fling. */
         private float mLastFlingAngle;
         
         /**
-         * Constructor
+         * Constructor.
          */
         public FlingRotateRunnable(){
         	mRotator = new Rotator(getContext());
         }
         
+        /**
+         * Start common.
+         */
         private void startCommon() {
             // Remove any pending flings
             removeCallbacks(this);
         }
         
+        /**
+         * Start using velocity.
+         *
+         * @param initialVelocity the initial velocity
+         */
         public void startUsingVelocity(float initialVelocity) {
             if (initialVelocity == 0) return;
             
@@ -629,6 +761,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         }        
         
         
+        /**
+         * Start using distance.
+         *
+         * @param deltaAngle the delta angle
+         */
         public void startUsingDistance(float deltaAngle) {
             if (deltaAngle == 0) return;
             
@@ -642,11 +779,21 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
             post(this);
         }
         
+        /**
+         * Stop.
+         *
+         * @param scrollIntoSlots the scroll into slots
+         */
         public void stop(boolean scrollIntoSlots) {
             removeCallbacks(this);
             endFling(scrollIntoSlots);
         }        
         
+        /**
+         * End fling.
+         *
+         * @param scrollIntoSlots the scroll into slots
+         */
         private void endFling(boolean scrollIntoSlots) {
             /*
              * Force the scroller's status to finished (without setting its
@@ -659,6 +806,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
             if (scrollIntoSlots) scrollIntoSlots();
         }
                 		
+		/**
+		 * 描述：TODO
+		 * @see java.lang.Runnable#run()
+		 * @author: zhaoqp
+		 * @date：2013-11-28 上午11:14:34
+		 * @version v1.0
+		 */
 		public void run() {
             if (CarouselImageView.this.getChildCount() == 0) {
                 endFling(true);
@@ -698,6 +852,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         
 	// OnGestureListener implementation
 	
+	/**
+	 * 描述：TODO
+	 * @see android.view.GestureDetector.OnGestureListener#onDown(android.view.MotionEvent)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public boolean onDown(MotionEvent e) {
         // Kill any existing fling/scroll
         mFlingRunnable.stop(false);
@@ -718,6 +879,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         return true;
 	}	
 	
+    /**
+     * 描述：TODO
+     * @see android.view.GestureDetector.OnGestureListener#onFling(android.view.MotionEvent, android.view.MotionEvent, float, float)
+     * @author: zhaoqp
+     * @date：2013-11-28 上午11:14:34
+     * @version v1.0
+     */
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 
     	if (!mShouldCallbackDuringFling) {
@@ -739,6 +907,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
 					
 	
+	/**
+	 * 描述：TODO
+	 * @see android.view.GestureDetector.OnGestureListener#onLongPress(android.view.MotionEvent)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public void onLongPress(MotionEvent e) {
         
         if (mDownTouchPosition < 0) {
@@ -752,6 +927,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 	}
 			
 	
+	/**
+	 * 描述：TODO
+	 * @see android.view.GestureDetector.OnGestureListener#onScroll(android.view.MotionEvent, android.view.MotionEvent, float, float)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
 
@@ -794,6 +976,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
      }
 	
 	
+	/**
+	 * 描述：TODO
+	 * @see android.view.GestureDetector.OnGestureListener#onSingleTapUp(android.view.MotionEvent)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public boolean onSingleTapUp(MotionEvent e) {
         if (mDownTouchPosition >= 0) {
             
@@ -811,10 +1000,24 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 		
 	
 	///// Unused gestures
+	/**
+	 * 描述：TODO
+	 * @see android.view.GestureDetector.OnGestureListener#onShowPress(android.view.MotionEvent)
+	 * @author: zhaoqp
+	 * @date：2013-11-28 上午11:14:34
+	 * @version v1.0
+	 */
 	public void onShowPress(MotionEvent e) {
 	}
 		
 	
+    /**
+     * Calculate3 d position.
+     *
+     * @param child the child
+     * @param diameter the diameter
+     * @param angleOffset the angle offset
+     */
     private void Calculate3DPosition(CarouselItemImage child, int diameter, float angleOffset){
     	
     	angleOffset = angleOffset * (float)(Math.PI/180.0f);    	
@@ -831,9 +1034,10 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     	
 	
     /**
-     * Figure out vertical placement based on mGravity
-     * 
+     * Figure out vertical placement based on mGravity.
+     *
      * @param child Child to place
+     * @param duringLayout the during layout
      * @return Where the top of the child should be
      */
     private int calculateTop(View child, boolean duringLayout) {
@@ -858,6 +1062,14 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         return childTop;
     }    	
 	
+    /**
+     * Dispatch long press.
+     *
+     * @param view the view
+     * @param position the position
+     * @param id the id
+     * @return true, if successful
+     */
     private boolean dispatchLongPress(View view, int position, long id) {
         boolean handled = false;
         
@@ -878,6 +1090,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         return handled;
     }    
     
+    /**
+     * Dispatch press.
+     *
+     * @param child the child
+     */
     private void dispatchPress(View child) {
         
         if (child != null) {
@@ -887,6 +1104,9 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         setPressed(true);
     }
     
+    /**
+     * Dispatch unpress.
+     */
     private void dispatchUnpress() {
         
         for (int i = getChildCount() - 1; i >= 0; i--) {
@@ -897,6 +1117,8 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }            
 	
     /**
+     * Gets the center of gallery.
+     *
      * @return The center of this Gallery.
      */
     private int getCenterOfGallery() {
@@ -905,6 +1127,9 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }	
 	
     /**
+     * Gets the center of view.
+     *
+     * @param view the view
      * @return The center of the given view.
      */
     private static int getCenterOfView(View view) {
@@ -913,6 +1138,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 		
     
 
+    /**
+     * Gets the limited motion scroll amount.
+     *
+     * @param motionToLeft the motion to left
+     * @param deltaX the delta x
+     * @return the limited motion scroll amount
+     */
     float getLimitedMotionScrollAmount(boolean motionToLeft, float deltaX) {
         int extremeItemPosition = motionToLeft ? CarouselImageView.this.getCount() - 1 : 0;
         View extremeChild = getChildAt(extremeItemPosition - CarouselImageView.this.getFirstVisiblePosition());
@@ -945,6 +1177,13 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
        
 	
+    /**
+     * Gets the limited motion scroll amount.
+     *
+     * @param motionToLeft the motion to left
+     * @param deltaX the delta x
+     * @return the limited motion scroll amount
+     */
     int getLimitedMotionScrollAmount(boolean motionToLeft, int deltaX) {
         int extremeItemPosition = motionToLeft ? mItemCount - 1 : 0;
         View extremeChild = getChildAt(extremeItemPosition - mFirstPosition);
@@ -977,6 +1216,12 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
                 : Math.min(centerDifference, deltaX); 
     }    
     
+    /**
+     * Make and add view.
+     *
+     * @param position the position
+     * @param angleOffset the angle offset
+     */
     private void makeAndAddView(int position, float angleOffset) {
         CarouselItemImage child;
   
@@ -1006,12 +1251,15 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 
     }      
     
+    /**
+     * On cancel.
+     */
     void onCancel(){
     	onUp();
     }
 
     /**
-     * Called when rotation is finished
+     * Called when rotation is finished.
      */
     private void onFinishedMovement() {
         if (mSuppressSelectionChanged) {
@@ -1025,6 +1273,9 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
 
     }    
          
+    /**
+     * On up.
+     */
     void onUp(){
         if (mFlingRunnable.mRotator.isFinished()) {
             scrollIntoSlots();
@@ -1033,7 +1284,7 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     }
         
     /**
-     * Brings an item with nearest to 0 degrees angle to this angle and sets it selected 
+     * Brings an item with nearest to 0 degrees angle to this angle and sets it selected.
      */
     private void scrollIntoSlots(){
     	
@@ -1087,6 +1338,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         
     }
     
+	/**
+	 * Scroll to child.
+	 *
+	 * @param i the i
+	 */
 	void scrollToChild(int i){		
 		
 		CarouselItemImage view = (CarouselItemImage)getAdapter().getView(i, null, null);
@@ -1121,10 +1377,10 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     /**
      * Whether or not to callback when an item that is not selected is clicked.
      * If false, the item will become selected (and re-centered). If true, the
-     * {@link #getOnItemClickListener()} will get the callback.
-     * 
+     *
      * @param shouldCallback Whether or not to callback on the listener when a
-     *            item that is not selected is clicked.
+     * item that is not selected is clicked.
+     * {@link #getOnItemClickListener()} will get the callback.
      * @hide
      */
     public void setCallbackOnUnselectedItemClick(boolean shouldCallback) {
@@ -1144,6 +1400,11 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         mAnimationDuration = animationDurationMillis;
     }
             
+	/**
+	 * Sets the gravity.
+	 *
+	 * @param gravity the new gravity
+	 */
 	public void setGravity(int gravity){
 		if (mGravity != gravity) {
 			mGravity = gravity;
@@ -1155,14 +1416,10 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
     /**
      * Helper for makeAndAddView to set the position of a view and fill out its
      * layout paramters.
-     * 
+     *
      * @param child The view to position
-     * @param offset Offset from the selected position
-     * @param x X-coordintate indicating where this view should be placed. This
-     *        will either be the left or right edge of the view, depending on
-     *        the fromLeft paramter
-     * @param fromLeft Are we posiitoning views based on the left edge? (i.e.,
-     *        building from left to right)?
+     * @param index the index
+     * @param angleOffset the angle offset
      */
     private void setUpChild(CarouselItemImage child, int index, float angleOffset) {
                 
@@ -1244,6 +1501,9 @@ public class CarouselImageView extends CarouselSpinner implements GestureDetecto
         invalidate();
     }	
 	
+    /**
+     * Update selected item metadata.
+     */
     private void updateSelectedItemMetadata() {
         
         View oldSelectedChild = mSelectedChild;

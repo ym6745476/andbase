@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white" >
+    android:layout_height="match_parent">
 
     <com.ab.view.sliding.AbSlidingPlayView
         android:id="@+id/mAbSlidingPlayView"
@@ -15,48 +14,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mAbSlidingPlayView"
-        android:orientation="horizontal"
-        android:paddingTop="10dip" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/addBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
             android:text="增加一个View" />
 
         <Button
             android:id="@+id/removeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
             android:text="清空View" />
-        
+
         <Button
             android:id="@+id/addAllBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
             android:text="增加所有" />
-        
     </LinearLayout>
-    
+
     <LinearLayout
         android:id="@+id/mlayout02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mlayout01"
-        android:orientation="horizontal"
-        android:paddingTop="10dip" >
+        android:orientation="horizontal">
 
-        
         <Button
             android:id="@+id/startBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
             android:text="开始播放" />
-        
+
         <Button
             android:id="@+id/stopBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
             android:text="停止播放" />
     </LinearLayout>
 

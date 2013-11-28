@@ -10,17 +10,22 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.ab.view.slidingmenu.AbSlidingLayout;
-import com.ab.view.slidingmenu.AbSlidingLayout.OnOpenListener;
-import com.ab.view.slidingmenu.AbSlidingLeftView;
+import com.ab.view.sliding.AbSlidingMenuView;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
-
+/**
+ * 
+ * Copyright (c) 2012 All rights reserved
+ * 名称：SlidingLeftActivity.java 
+ * 描述：功能简单单一的一个示例
+ * @author zhaoqp
+ * @date：2013-11-28 上午11:29:23
+ * @version v1.0
+ */
 public class SlidingLeftActivity extends Activity{
 	private LayoutInflater mInflater = null;
-	private AbSlidingLayout mAbSlidingLayout;
+	private AbSlidingMenuView mAbSlidingView;
 	private MyApplication application = null;
-	private OnOpenListener mOnOpenListener;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,22 +36,22 @@ public class SlidingLeftActivity extends Activity{
 		mInflater = LayoutInflater.from(this);
 		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(
 				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
-		mAbSlidingLayout = new AbSlidingLayout(this);
-		mAbSlidingLayout.setLayoutParams(layoutParamsFF);
+		mAbSlidingView = new AbSlidingMenuView(this);
+		mAbSlidingView.setLayoutParams(layoutParamsFF);
 		
-		AbSlidingLeftView mAbSlidingLeftView = new AbSlidingLeftView(this,R.layout.left);
 		View mainView = mInflater.inflate(R.layout.right, null);
-		mAbSlidingLayout.addView(mAbSlidingLeftView.getView(), layoutParamsFF);
-		mAbSlidingLayout.addView(mainView, layoutParamsFF);
-		setContentView(mAbSlidingLayout);
+		View leftView = mInflater.inflate(R.layout.left, null);
+		mAbSlidingView.addView(leftView, layoutParamsFF);
+		mAbSlidingView.addView(mainView, layoutParamsFF);
+		setContentView(mAbSlidingView);
 		
 		Button rightBtn = (Button)mainView.findViewById(R.id.rightBtn);
 		rightBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				if (mAbSlidingLayout.getScreenState() == AbSlidingLayout.SCREEN_STATE_CLOSE) {
-					mAbSlidingLayout.open();
+				if (mAbSlidingView.getScreenState() == AbSlidingMenuView.SCREEN_STATE_CLOSE) {
+					mAbSlidingView.open();
 				}
 			}
 		});
