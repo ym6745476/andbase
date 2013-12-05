@@ -18,7 +18,6 @@ package com.ab.view.titlebar;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
@@ -26,12 +25,11 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
 
 import com.ab.util.AbViewUtil;
 
@@ -53,6 +51,9 @@ public class AbTitleBar extends LinearLayout {
 	
 	/** 显示标题文字的View. */
 	protected Button titleTextBtn = null;
+	
+	/** 显示标题文字的小View. */
+	protected TextView titleSmallTextView = null;
 	
 	/** 左侧的Logo图标View. */
 	protected ImageView logoView = null;
@@ -134,7 +135,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		
 		titleTextLayout = new LinearLayout(context);
-		titleTextLayout.setOrientation(LinearLayout.HORIZONTAL);
+		titleTextLayout.setOrientation(LinearLayout.VERTICAL);
 		titleTextLayout.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextLayout.setPadding(0, 0, 0, 0);
 		
@@ -145,7 +146,16 @@ public class AbTitleBar extends LinearLayout {
 		titleTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextBtn.setBackgroundDrawable(null);
 		titleTextBtn.setSingleLine();
-		titleTextLayout.addView(titleTextBtn,layoutParamsWF);
+		titleTextLayout.addView(titleTextBtn,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,1));
+		
+		titleSmallTextView = new TextView(context);
+		titleSmallTextView.setTextColor(Color.rgb(255, 255, 255));
+		titleSmallTextView.setTextSize(15);
+		titleSmallTextView.setPadding(6, 0, 5, 0);
+		titleSmallTextView.setGravity(Gravity.CENTER_VERTICAL);
+		titleSmallTextView.setBackgroundDrawable(null);
+		titleSmallTextView.setSingleLine();
+		titleTextLayout.addView(titleSmallTextView,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,0));
 		
 		logoView = new ImageView(context);
 		logoView.setVisibility(View.GONE);
@@ -356,6 +366,27 @@ public class AbTitleBar extends LinearLayout {
      */
 	public void setTitleText(int resId) {
 		titleTextBtn.setText(resId);
+	}
+	
+	
+	/**
+     * 描述：设置小标题文本.
+     * @param text  文本
+     */
+	public void setTitleSmallText(String text) {
+		LinearLayout.LayoutParams titleSmallTextViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		titleSmallTextView.setLayoutParams(titleSmallTextViewLayoutParams);
+		titleSmallTextView.setText(text);
+	}
+	
+	/**
+     * 描述：设置标题文本.
+     * @param resId  文本的资源ID
+     */
+	public void setTitleSmallText(int resId) {
+		LinearLayout.LayoutParams titleSmallTextViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		titleSmallTextView.setLayoutParams(titleSmallTextViewLayoutParams);
+		titleSmallTextView.setText(resId);
 	}
 	
 	/**

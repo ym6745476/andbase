@@ -137,14 +137,13 @@ public class AbPullGridView extends AbBaseGridView implements OnScrollListener,O
 		mGridView = this.getGridView();
 		mGridView.setCacheColorHint(context.getResources().getColor(android.R.color.transparent));
 		//默认值 自定义可以到Activity中修改
-		mGridView.setColumnWidth(100);
+		mGridView.setColumnWidth(150);
 		mGridView.setGravity(Gravity.CENTER);
 		mGridView.setHorizontalSpacing(5);
 		mGridView.setNumColumns(GridView.AUTO_FIT);
 		mGridView.setPadding(5, 5, 5, 5);
 		mGridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
 		mGridView.setVerticalSpacing(5);
-		//mGridView.setBackgroundColor(Color.GRAY);
 		mGridView.setOnScrollListener(this);
 		mGridView.setOnTouchListener(this);
 		

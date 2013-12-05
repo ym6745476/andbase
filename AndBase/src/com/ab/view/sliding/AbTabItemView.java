@@ -1,6 +1,7 @@
 package com.ab.view.sliding;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
@@ -72,6 +73,27 @@ public class AbTabItemView extends LinearLayout {
      */
 	public void setTabTextColor(int tabColor) {
 		mTextView.setTextColor(tabColor);
+	}
+	
+	/**
+     * 
+     * 描述：设置文字图片
+     * @throws 
+     */
+	public void setTabCompoundDrawables(Drawable left, Drawable top, Drawable right, Drawable bottom) {
+		if(left!=null){
+			left.setBounds(0, 0, left.getIntrinsicWidth(), left.getIntrinsicHeight()); 
+		}
+		if(top!=null){
+		    top.setBounds(0, 0, top.getIntrinsicWidth(), top.getIntrinsicHeight()); 
+		}
+		if(right!=null){
+		    right.setBounds(0, 0, right.getIntrinsicWidth(), right.getIntrinsicHeight());
+		}
+		if(bottom!=null){
+		    bottom.setBounds(0, 0, bottom.getIntrinsicWidth(), bottom.getIntrinsicHeight()); 
+		}
+		mTextView.setCompoundDrawables(left, top, right, bottom);
 	}
 	
 	/**

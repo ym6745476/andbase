@@ -66,7 +66,6 @@ public class AbBaseGridView extends LinearLayout {
 		this.context = context;
 		layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 		this.setOrientation(LinearLayout.VERTICAL);
-		this.setBackgroundColor(Color.rgb(255, 255, 255));
 		mLinearLayoutHeader = new LinearLayout(context);
 		mLinearLayoutFooter = new LinearLayout(context);
 		mGridView = new GridView(context);

@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.ab.view.sliding.AbSlidingButton;
+import com.andbase.R;
 
 /**
  * Copyright (c) 2011 All rights reserved 
@@ -92,7 +93,24 @@ public class CheckListViewAdapter extends BaseAdapter{
           //设置数据到View
           holder.itemsTitle.setText(data0.toString());
           holder.itemsText.setText(data1.toString());
-          holder.itemsCheck.setChecked((Boolean)data2, false, false);
+          
+          //设置开关显示所用的图片
+          holder.itemsCheck.setImageResource(R.drawable.btn_bottom,R.drawable.btn_frame,R.drawable.btn_mask, R.drawable.btn_unpressed,R.drawable.btn_pressed);
+          //holder.itemsCheck.setFocusable(false);
+          //设置开关的默认状态    true开启状态
+          //holder.itemsCheck.setToggleState(true);
+          
+          /*//设置开关的监听
+          holder.itemsCheck.setOnToggleStateListener(new OnToggleStateListener() {
+  			@Override
+  			public void onToggleState(boolean state) {
+  				if(state){
+  				} else {
+  				}
+  			}
+  		  });*/
+          
+          //holder.itemsCheck.setChecked((Boolean)data2, false, false);
           return convertView;
     }
     

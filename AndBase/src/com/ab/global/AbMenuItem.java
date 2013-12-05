@@ -24,12 +24,18 @@ package com.ab.global;
  * @version v1.0
  */
 public class AbMenuItem {
-
+	
 	/** 菜单的id. */
+	private int id;
+
+	/** 菜单的图标id. */
 	private int iconId;
 
 	/** 菜单的文本. */
 	private String text;
+	
+	/** 菜单的描述. */
+	private String mark;
 	
 
 	/**
@@ -60,6 +66,25 @@ public class AbMenuItem {
 	 */
 	public AbMenuItem() {
 		super();
+	}
+	
+
+	/**
+	 * Gets the id.
+	 *
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Sets the id.
+	 *
+	 * @param id the new id
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	/**
@@ -97,5 +122,25 @@ public class AbMenuItem {
 	public void setText(String text) {
 		this.text = text;
 	}
+
+	/**
+	 * Gets the mark.
+	 *
+	 * @return the mark
+	 */
+	public String getMark() {
+		return mark;
+	}
+
+	/**
+	 * Sets the mark.
+	 *
+	 * @param mark the new mark
+	 */
+	public void setMark(String mark) {
+		this.mark = mark;
+	}
+	
+	
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -68,6 +69,10 @@ public class AbSlidingTabView extends LinearLayout {
 	/**tab的文字*/
 	private List<String> tabItemTextList = null;
 	
+	/**tab的图标*/
+	private List<Drawable> tabItemDrawableList = null;
+	
+	
 	/**内容的View*/
 	private ArrayList<Fragment> pagerItemList = null;
 	
@@ -116,6 +121,7 @@ public class AbSlidingTabView extends LinearLayout {
   	    //定义Tab栏
   		tabItemList = new ArrayList<TextView>();
   		tabItemTextList = new ArrayList<String>();
+  		tabItemDrawableList = new ArrayList<Drawable>();
   		
   	    //要求必须是FragmentActivity的实例
 		if(!(this.context instanceof FragmentActivity)){
@@ -226,10 +232,24 @@ public class AbSlidingTabView extends LinearLayout {
      * @throws 
      */
     private void addTab(String text, int index) {
+    	addTab(text,index,null);
+    }
+    
+    /**
+     * 
+     * 描述：创造一个Tab
+     * @param text
+     * @param index
+     * @throws 
+     */
+    private void addTab(String text, int index,Drawable top) {
    	
     	AbTabItemView tabView = new AbTabItemView(this.context);
         if(tabBackgroundResource!=-1){
         	tabView.setTabBackgroundResource(tabBackgroundResource);
+        }
+        if(top!=null){
+        	tabView.setTabCompoundDrawables(null, top, null, null);
         }
     	tabView.setTabTextColor(tabTextColor);
     	tabView.setTabTextSize(tabTextSize);
@@ -250,7 +270,12 @@ public class AbSlidingTabView extends LinearLayout {
         tabItemList.clear();
         final int count = mFragmentPagerAdapter.getCount();
         for (int i = 0; i < count; i++) {
-            addTab(tabItemTextList.get(i), i);
+        	if(tabItemDrawableList.size()>0){
+        		addTab(tabItemTextList.get(i), i,tabItemDrawableList.get(i));
+        	}else{
+        		addTab(tabItemTextList.get(i), i);
+        	}
+            
         }
         if (mSelectedTabIndex > count) {
             mSelectedTabIndex = count - 1;
@@ -359,12 +384,39 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	/**
 	 * 
+	 * 描述：增加一组内容与tab
+	 * @throws 
+	 */
+	public void addItemViews(List<String> tabTexts,List<Drawable> drawables,List<Fragment> fragments){
+		
+		tabItemTextList.addAll(tabTexts);
+		pagerItemList.addAll(fragments);
+		tabItemDrawableList.addAll(drawables);
+		mFragmentPagerAdapter.notifyDataSetChanged();
+		notifyTabDataSetChanged();
+	}
+	
+	/**
+	 * 
 	 * 描述：增加一个内容与tab
 	 * @throws 
 	 */
 	public void addItemView(String tabText,Fragment fragment){
 		tabItemTextList.add(tabText);
 		pagerItemList.add(fragment);
+		mFragmentPagerAdapter.notifyDataSetChanged();
+		notifyTabDataSetChanged();
+	}
+	
+	/**
+	 * 
+	 * 描述：增加一个内容与tab
+	 * @throws 
+	 */
+	public void addItemView(String tabText,Drawable drawable,Fragment fragment){
+		tabItemTextList.add(tabText);
+		pagerItemList.add(fragment);
+		tabItemDrawableList.add(drawable);
 		mFragmentPagerAdapter.notifyDataSetChanged();
 		notifyTabDataSetChanged();
 	}
@@ -381,6 +433,7 @@ public class AbSlidingTabView extends LinearLayout {
 		mTabLayout.removeViewAt(index);
 		pagerItemList.remove(index);
 		tabItemList.remove(index);
+		tabItemDrawableList.remove(index);
 		mFragmentPagerAdapter.notifyDataSetChanged();
 		notifyTabDataSetChanged();
 	}
@@ -390,10 +443,11 @@ public class AbSlidingTabView extends LinearLayout {
 	 * 描述：删除所有
 	 * @throws 
 	 */
-	public void removeAllItemView(int index){
+	public void removeAllItemViews(){
 		mTabLayout.removeAllViews();
 		pagerItemList.clear();
 		tabItemList.clear();
+		tabItemDrawableList.clear();
 		mFragmentPagerAdapter.notifyDataSetChanged();
 		notifyTabDataSetChanged();
 	}
