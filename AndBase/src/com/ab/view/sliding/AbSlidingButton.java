@@ -24,12 +24,15 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.CheckBox;
 
 import com.ab.global.AbAppData;
+import com.ab.global.AbConstant;
 
 
 // TODO: Auto-generated Javadoc
@@ -68,6 +71,7 @@ public class AbSlidingButton extends CheckBox  {
 	private float mBtnOffPos;
 	private float mBtnOnPos;
 	private float mBtnPos;
+	private float mLastBtnPos;
 	private float mRealPos;
 	private float mBtnWidth;
 	
@@ -80,6 +84,25 @@ public class AbSlidingButton extends CheckBox  {
 	private Bitmap mCurBtnPic;
 	private float mFirstDownX;
 	private boolean mMoveEvent;
+	private boolean mAnimating;
+	private float mAnimationPosition;
+	private float mAnimatedVelocity;
+	
+	private Handler handler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+				case 0:
+					mRealPos = getRealPos((Float)msg.obj);
+					mLastBtnPos = (Float)msg.obj;
+					invalidate();
+					break;
+				default:
+					break;
+			}
+		}
+	};
 	
 	public AbSlidingButton(Context context) {
 		super(context);
@@ -98,6 +121,9 @@ public class AbSlidingButton extends CheckBox  {
 	    
 	    this.mPaint = new Paint();
 	    this.mPaint.setColor(Color.WHITE);
+	    
+	    float density = getResources().getDisplayMetrics().density;
+		this.mAnimatedVelocity = (int)(0.5F + 350.0F * density);
 	}
 	
 	protected void onDraw(Canvas canvas){
@@ -178,7 +204,7 @@ public class AbSlidingButton extends CheckBox  {
 	public boolean isChecked() {
 		return isChecked;
 	}
-
+	
 	/**
 	 * 
 	 * 描述：设置选中
@@ -188,13 +214,30 @@ public class AbSlidingButton extends CheckBox  {
 	 * @version v1.0
 	 */
 	public void setChecked(boolean isChecked) {
+		setChecked(isChecked,false);
+	}
+
+	/**
+	 * 
+	 * 描述：设置选中
+	 * @see android.widget.CompoundButton#setChecked(boolean)
+	 * @author: zhaoqp
+	 * @date：2013-11-29 下午3:54:33
+	 * @version v1.0
+	 */
+	public void setChecked(boolean isChecked,boolean anim) {
 		this.isChecked = isChecked;
 		if(this.isChecked){
 			this.mBtnPos = this.mBtnOnPos;
 		}else{
 		    this.mBtnPos = this.mBtnOffPos;
 		}
-		startAnimation();
+		if(anim){
+			startAnimation();
+		}else{
+			moveViewToTarget();
+		}
+		
 		if(onCheckedChangeListener!=null){
 			onCheckedChangeListener.onCheckedChanged(this, isChecked);
 		}
@@ -223,6 +266,9 @@ public class AbSlidingButton extends CheckBox  {
 	 * @version v1.0
 	 */
 	public boolean onTouchEvent(MotionEvent event){
+		if(this.mAnimating){
+			return true;
+		}
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
 			 mMoveEvent = false;
@@ -236,17 +282,19 @@ public class AbSlidingButton extends CheckBox  {
 		     }else{
 		    	 this.mBtnPos = this.mBtnOffPos;
 		     }
-		     Log.d(TAG, "原来的X位置："+this.mBtnPos);
+		     mLastBtnPos = mBtnPos;
+		     if(D)Log.d(TAG, "原来的X位置："+this.mBtnPos);
 		     break;
 		case MotionEvent.ACTION_MOVE:
-			
+			 if(D)Log.d(TAG, "－－－－移动－－－－");
 			 //当前点击位置
 			 float x = event.getX();
 			 //差
 			 float offsetX = x - this.mFirstDownX;
-		     Log.d(TAG, "X需要移动："+offsetX);
+			 if(D)Log.d(TAG, "X需要移动："+offsetX);
 		     
-		     if(offsetX < 5){
+		     //转换为点击事件
+		     if(Math.abs(offsetX) < 5){
 		    	 break;
 		     }else{
 		    	 mMoveEvent = true;
@@ -256,7 +304,7 @@ public class AbSlidingButton extends CheckBox  {
 			 
 		     //移动后的应该在的位置
 		     this.mBtnPos = this.mBtnPos + offsetX;
-		     Log.d(TAG, "现在的X位置："+this.mBtnPos);
+		     if(D)Log.d(TAG, "现在的X位置："+this.mBtnPos);
 		     //超出控件的设置
 		     if (this.mBtnPos < this.mBtnOffPos){
 		          this.mBtnPos = this.mBtnOffPos;
@@ -266,10 +314,11 @@ public class AbSlidingButton extends CheckBox  {
 		          this.mBtnPos = this.mBtnOnPos;
 		     }
 		     
-		     startAnimation();
+		     moveViewToTarget();
 			 break;
 		default:
 			if(mMoveEvent){
+				 if(D)Log.d(TAG, "－－－－弹起－－－－");
 				 //弹起
 			     this.mCurBtnPic = this.mBtnNormal;
 			     //本次移动最后结果
@@ -277,12 +326,12 @@ public class AbSlidingButton extends CheckBox  {
 			    	 this.mBtnPos = this.mBtnOffPos;
 			     }else{
 			    	 this.mBtnPos = this.mBtnOnPos;
-			     } 
+			     }
 			     startAnimation();
 			     offsetX = 0;
 			}else{
 				//点击事件
-				setChecked(!isChecked);
+				setChecked(!isChecked,true);
 			}
 			
 			 break;
@@ -294,20 +343,81 @@ public class AbSlidingButton extends CheckBox  {
 	/**
 	 * 
 	 * 描述：滑块移动
-	 * @param paramFloat
+	 * @param pos
 	 * @throws 
 	 * @date：2013-12-5 上午11:46:56
 	 * @version v1.0
 	 */
-	private void moveView(float paramFloat){
-	    this.mBtnPos = paramFloat;
-	    this.mRealPos = getRealPos(this.mBtnPos);
-	    invalidate();
+	private void moveView(float pos){
+		moveView(pos,false);
+	}
+	
+	/**
+	 * 
+	 * 描述：滑块移动
+	 * @param pos
+	 * @param delay
+	 * @throws 
+	 * @date：2013-12-5 上午11:46:56
+	 * @version v1.0
+	 */
+	private void moveView(final float pos,boolean delay){
+		if(handler!=null){
+			  handler.obtainMessage(0, pos).sendToTarget();
+		}
 	}
 
+	/**
+	 * 
+	 * 描述：用位移加速度实现动画
+	 * @throws 
+	 * @date：2013-12-9 上午9:47:59
+	 * @version v1.0
+	 */
 	private void startAnimation(){
-    	Log.d(TAG, "移动X："+this.mBtnPos);
- 	    moveView(this.mBtnPos);
+		//已经在目标位置
+		if(mLastBtnPos == this.mBtnPos){
+			return;
+ 	    }
+		this.mAnimating = true;
+		if(D)Log.d(TAG, "目标移动X到："+this.mBtnPos+",当前在:"+mLastBtnPos);
+    	float mVelocity = this.mAnimatedVelocity;
+ 	    if(mLastBtnPos > this.mBtnPos){
+ 	    	 mVelocity = -this.mAnimatedVelocity;
+ 	    }
+ 	    this.mAnimationPosition = mLastBtnPos;
+ 	    int i  = 0;
+    	while(true){
+    		this.mAnimationPosition = (this.mAnimationPosition + 16.0F * mVelocity / 1000.0F);
+    		if(D)Log.d(TAG, i+"次移动X到："+this.mAnimationPosition);
+    		if(this.mAnimationPosition >= this.mBtnOnPos){
+    			this.mAnimationPosition = this.mBtnOnPos;
+    			moveView(this.mAnimationPosition,true);
+    			isChecked = true;
+    			break;
+    		}else if(this.mAnimationPosition <= this.mBtnOffPos){
+    			this.mAnimationPosition = this.mBtnOffPos;
+    			moveView(this.mAnimationPosition,true);
+    			isChecked = false;
+    			break;
+    		}else{
+    			moveView(this.mAnimationPosition,true);
+    		}
+    		i++;
+    	}
+    	this.mAnimating = false;
+    	
+	}
+	
+	/**
+	 * 
+	 * 描述：直接移动到位置
+	 * @throws 
+	 * @date：2013-12-9 上午9:20:38
+	 * @version v1.0
+	 */
+	private void moveViewToTarget(){
+		moveView(this.mBtnPos);
 	    if (this.mBtnPos == this.mBtnOnPos){
 	    	 isChecked = true;
 		     return;
@@ -315,7 +425,6 @@ public class AbSlidingButton extends CheckBox  {
 			 isChecked = false;
 		     return;
 		}
-        
 	}
 	
 
