@@ -83,10 +83,11 @@ public class AbImageCache {
 		try {
 			if(D) Log.d(TAG, "图片下载完成:"+key);
 			lock.lock();
-			if(AbStrUtil.isEmpty(key) || bitmap == null){
+			if(AbStrUtil.isEmpty(key)){
 				return;
 			}
-			if (getBitmapFromCache(key) == null) {
+			
+			if (getBitmapFromCache(key) == null && bitmap!=null) {
 				bitmapCache.put(key, bitmap);
 				if(D) Log.d(TAG, "存入缓存:"+key+","+bitmap);
 			}

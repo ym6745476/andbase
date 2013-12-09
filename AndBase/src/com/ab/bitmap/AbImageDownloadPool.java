@@ -128,7 +128,8 @@ public class AbImageDownloadPool{
     	    				AbImageCache.addToRunRunnableCache(cacheKey, this);
     	    				item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
     	    				//增加到下载完成的缓存，删除下载中的记录和等待的记录，同时唤醒所有等待列表中key与其key相同的线程
-    	    				AbImageCache.addBitmapToCache(cacheKey,item.bitmap);     
+        	    			AbImageCache.addBitmapToCache(cacheKey,item.bitmap);     
+    	    				
 	    				}
 	    				
 	    			} catch (Exception e) { 

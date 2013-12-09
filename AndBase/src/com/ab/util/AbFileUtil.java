@@ -205,8 +205,12 @@ public class AbFileUtil {
 			 String fileName = getImageFileName(url,newWidth,newHeight,type);
 			 File file = new File(fileDirectory,fileName+suffix);
 			 if(!file.exists()){
-				 downFileToSD(url,file.getName());
-				 return getBitmapFromSD(file,type,newWidth,newHeight);
+				 String downFilePath = downFileToSD(url,file.getName());
+				 if(downFilePath != null){
+					 return getBitmapFromSD(file,type,newWidth,newHeight);
+				 }else{
+					 return null;
+				 }
 			 }else{
 				 //文件存在
 				 if(type == AbConstant.CUTIMG){
