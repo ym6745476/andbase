@@ -39,6 +39,8 @@
     <string name="progressbar_horizontal_name">水平进度条</string>
     <string name="ioc_name">ioc示例</string>
     <string name="rotate3d_name">3D翻转</string>
+    <string name="rotate3d_name1">硬币翻转</string>
+    <string name="rotate3d_name2">3D旋转View</string>
     <string name="http_name">Http</string>
     <string name="thread_name">线程管理</string>
     <string name="nest_name">嵌套问题</string>

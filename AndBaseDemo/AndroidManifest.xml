@@ -329,6 +329,16 @@
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
+         <activity
+            android:name=".demo.activity.Rotate3DActivity1"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+          <activity
+            android:name=".demo.activity.Rotate3DActivity2"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
         <activity
             android:name=".demo.activity.HttpActivity"
             android:configChanges="keyboardHidden|orientation" >

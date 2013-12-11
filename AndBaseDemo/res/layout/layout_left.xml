@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_left"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pic4"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/left_leftBtn"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="C面" />
+
+    <Button
+        android:id="@+id/left_rightBtn"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="A面" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="D面"
+        android:textColor="@color/blue"
+        android:textSize="36sp" />
+
+</RelativeLayout>

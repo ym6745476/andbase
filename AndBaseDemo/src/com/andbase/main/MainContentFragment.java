@@ -195,7 +195,7 @@ public class MainContentFragment extends Fragment {
 	    	map = new HashMap<String, Object>();
 	    	map.put("itemsIcon",R.drawable.image_bg);
 	    	map.put("itemsTitle", "22.3D翻转效果");
-	    	map.put("itemsText", "2013纪念币");
+	    	map.put("itemsText", "2013纪念币,3D切换界面");
 	    	list.add(map);
 	    	
 	    	map = new HashMap<String, Object>();
