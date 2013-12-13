@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_white" >
+    android:background="@color/gray_white"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/space_view_title" />
 
     <ListView
         android:id="@+id/mListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:cacheColorHint="#00000000" 
-        android:dividerHeight="1dip"
-        android:divider="@drawable/list_divider"/>
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="1dip" />
 
-</RelativeLayout>
+</LinearLayout>

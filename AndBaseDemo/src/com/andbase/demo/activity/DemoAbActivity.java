@@ -31,7 +31,7 @@ public class DemoAbActivity extends AbActivity {
 		setAbContentView(R.layout.demo_ab);
 
 		AbTitleBar mAbTitleBar = this.getTitleBar();
-		mAbTitleBar.setTitleText(R.string.demo_name);
+		mAbTitleBar.setTitleText(R.string.ab_name);
 		mAbTitleBar.setLogo(R.drawable.button_selector_back);
 		mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);

@@ -505,10 +505,7 @@ public class AbTitleBar extends LinearLayout {
 		if(view.getMeasuredWidth()>parent.getMeasuredWidth()){
 			popWidth = view.getMeasuredWidth();
 		}
-		if (popupWindow == null) {
-			popupWindow = new PopupWindow(view, popWidth+10, LayoutParams.WRAP_CONTENT, true);
-		}
-
+		popupWindow = new PopupWindow(view, popWidth+10, LayoutParams.WRAP_CONTENT, true);
 		// 使其聚集
 		popupWindow.setFocusable(true);
 		// 设置允许在外点击消失

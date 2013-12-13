@@ -6,6 +6,7 @@ import java.util.TimerTask;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -50,6 +51,7 @@ public class MainActivity extends AbActivity {
 	public AbSqliteStorage mAbSqliteStorage = null;
 	public UserDao mUserDao = null;
 	private MainMenuFragment mMainMenuFragment = null;
+	private MainContentFragment mMainContentFragment = null;
 	//推送服务
 	private FrontiaPush mPush = null;
 	
@@ -66,10 +68,11 @@ public class MainActivity extends AbActivity {
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
 		
+		mMainContentFragment =  new MainContentFragment();
         //主视图的Fragment添加
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.content_frame, new MainContentFragment())
+		.replace(R.id.content_frame, mMainContentFragment)
 		.commit();
 		
 		mMainMenuFragment = new MainMenuFragment();
@@ -216,21 +219,25 @@ public class MainActivity extends AbActivity {
 	
 	@Override 
     public boolean onKeyDown(int keyCode, KeyEvent event) {  
-        if (keyCode == KeyEvent.KEYCODE_BACK) {  
-            if(isExit == false ) {  
-                isExit = true;  
-                showToast("再按一次退出程序");  
-                if(!hasTask) {  
-                    tExit.schedule(task, 2000);  
-                }  
-            } else {  
-                finish();  
-                System.exit(0);  
-            }  
+        if (keyCode == KeyEvent.KEYCODE_BACK) { 
+        	if(mMainContentFragment.canBack()){
+        		if(isExit == false ) {  
+                    isExit = true;  
+                    showToast("再按一次退出程序");  
+                    if(!hasTask) {  
+                        tExit.schedule(task, 2000);  
+                    }  
+                } else {
+                    finish();  
+                    System.exit(0);  
+                }
+        	}
         }  
         return false;  
 
     } 
+	
+
 	
 	/**
     * 描述：点击菜单后
@@ -417,5 +424,24 @@ public class MainActivity extends AbActivity {
 				break;
 		}
 	}
+   
+   /**
+    * 
+    * 描述：显示这个fragment
+    * @param fragment
+    * @throws 
+    * @date：2013-12-13 上午10:55:26
+    * @version v1.0
+    */
+   public void showFragment(Fragment fragment){
+	 //主视图的Fragment添加
+	 getSupportFragmentManager()
+	 .beginTransaction()
+	 .replace(R.id.content_frame,fragment)
+	 .commit();
+	 if (menu.isMenuShowing()) {
+	     menu.showContent();
+	 }
+   }
    
 }

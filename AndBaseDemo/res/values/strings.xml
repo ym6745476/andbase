@@ -1,8 +1,8 @@
 <resources>
 
     <string name="app_name">Android开发宝</string>
-    
-    <string name="demo_name">AbActivity用法</string>
+    <string name="demo_name">程序案例</string>
+    <string name="ab_name">AbActivity用法</string>
     <string name="down_image_name">下载图片与裁剪缩放</string>
     <string name="pull_list_name">下拉刷新分页</string>
     <string name="multi_column_name">瀑布流</string>
@@ -51,24 +51,18 @@
     <string name="number_clock_name">数字时钟</string>
     <string name="desk_calendar_name">台历</string>
     <string name="popview_name">提示框</string>
-    
-    
-    
     <string name="register_name">新用户注册</string>
     <string name="blog_name">博客空间</string>
     <string name="friend_name">朋友圈</string>
-    
-    <string name="total">总条数:0</string> 
+    <string name="total">总条数:0</string>
     <string name="current">当前页:1</string>
-    
     <string name="okBtn">确定</string>
     <string name="cancelBtn">取消</string>
     <string name="see">查看</string>
     <string name="about">关于</string>
     <string name="version_lable">程序版本：</string>
     <string name="copyright">版权所有  CopyRight 2012 418log.org</string>
-    <string name="about_desc">
-      \t\tAndroid开发宝
+    <string name="about_desc">      \t\tAndroid开发宝
       \n\t\t又“andBase开发框架”
       andbase是为Android开发者量身打造的一款开源类库产品，
                您可以在418log.org中获取到最新的代码，示例以及开发文档。
@@ -81,17 +75,12 @@
 	      而这一切都是免费的。 
 	   \n
        \n\t\t官方主页：www.418log.org
-       \n\t\t交流QQ群：38535812
-    </string>
-    
-    
+       \n\t\t交流QQ群：38535812</string>
     <string name="date_picker">年月日：</string>
     <string name="time_picker1">月日时分：</string>
     <string name="time_picker2">时分：</string>
     <string name="data1_desc">选择：</string>
     <string name="data1_unit">单位</string>
-    
-    
     <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="userName">用户名</string>
@@ -101,62 +90,46 @@
     <string name="agreement">同意注册协议</string>
     <string name="email">邮箱,用于找回密码</string>
     <string name="find_pwd">找回密码</string>
-    
     <string name="share_desc">分享什么呢</string>
-    
     <string name="agreement_name">用户注册协议</string>
     <string name="error_agreement">请阅读用户协议条款并同意!</string>
-    
     <string name="setting_user_info">个人信息</string>
-    
     <string name="setting_pwd">修改密码</string>
     <string name="modify_pwd_name">修改密码</string>
     <string name="user_pwd">旧密码</string>
     <string name="user_newpwd">新密码</string>
     <string name="user_newpwd2">确认新密码</string>
     <string name="user_email">邮箱</string>
-    
     <string name="error_name">请输入用户名！</string>
     <string name="error_name_length1">用户名长度不能少于3个字符</string>
     <string name="error_name_length2">用户名长度不能超过20个字符</string>
     <string name="error_name_expr">用户名只能是字母和数字</string>
-    
     <string name="error_pwd">请输入密码！</string>
     <string name="error_pwd_match">两次密码输入不一致！</string>
     <string name="error_pwd_length1">密码长度不能少于6个字符</string>
     <string name="error_pwd_length2">密码长度不能超过20个字符</string>
     <string name="error_pwd_expr">密码只能是字母和数字</string>
-    
     <string name="error_pwd_old">请输入旧密码！</string>
     <string name="error_pwd_new">请输入新密码！</string>
-    
     <string name="error_email">请输入邮箱！</string>
     <string name="error_email_expr">邮箱格式不正确!</string>
     <string name="error_email_expr2">邮箱不能输入中文!</string>
-    
     <string name="error_nickname">请输入昵称！</string>
     <string name="error_nickname_length1">昵称长度不能少于3个字符</string>
     <string name="error_nickname_length2">昵称长度不能超过20个字符</string>
     <string name="error_nickname_expr">昵称格式不正确</string>
-    
     <string name="error_city">请输入城市！</string>
     <string name="error_city_length1">城市长度不能少于2个字符</string>
     <string name="error_city_length2">城市长度不能超过20个字符</string>
     <string name="error_city_expr">城市格式不正确</string>
-    
     <string name="error_intro_length1">个人说明长度不能少于2个字符</string>
     <string name="error_intro_length2">个人说明长度不能超过80个字符</string>
-    
     <string name="error_age">请输入年龄！</string>
     <string name="error_age_length1">年龄不能小于0</string>
     <string name="error_age_length2">年龄不能大于100个字符</string>
     <string name="error_age_expr">年龄必须为数字</string>
-    
     <string name="error_params_expr">包含不支持的文字格式!</string>
-    
-    
-    <string name="agreement_desc">
-                    提醒：本程序是一款Android学习产品，使用本程序即同意如下条款。
+    <string name="agreement_desc">                    提醒：本程序是一款Android学习产品，使用本程序即同意如下条款。
         \n1、服务修订
 		\n本程序所有者保留随时修改或中断服务而不需通知用户的权利。 
 		\n2、用户隐私制度
@@ -168,12 +141,9 @@
 		\n5、用户管理
 		\n用户单独承担发布内容的责任。用户对服务的使用是根据所有适用于服务的地方法律、国家法律和国际法律标准的。
 		\n6、通告
-		\n所有发给用户的通告都可通过电子邮件或常规的信件传送。  
-    </string>
+		\n所有发给用户的通告都可通过电子邮件或常规的信件传送。  </string>
     <string name="read_desc">请仔细阅读如下条款</string>
     <string name="register_protocol">同意注册协议</string>
-    
     <string name="clear_cache">清空缓存</string>
-    
-</resources>
 
+</resources>

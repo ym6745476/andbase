@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.andbase"
-    android:versionCode="13"
-    android:versionName="1.5.7" >
+    android:versionCode="14"
+    android:versionName="1.5.8" >
 
     <uses-sdk
-        android:minSdkVersion="7"
+        android:minSdkVersion="8"
         android:targetSdkVersion="17"/>
 
     <!-- 权限 -->
@@ -57,6 +57,11 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".demo.activity.DemoMainActivity"
+            android:configChanges="keyboardHidden|orientation" >
         </activity>
         
         <activity
