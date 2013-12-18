@@ -97,8 +97,7 @@ public class AbListViewFooter extends LinearLayout {
 		//设置布局 水平方向  
 		footerView.setOrientation(LinearLayout.HORIZONTAL);
 		footerView.setGravity(Gravity.CENTER); 
-		setBackgroundColor(Color.rgb(225, 225,225));
-		
+		//setBackgroundColor(Color.rgb(225, 225,225));
 		footerTextView = new TextView(context);  
 		footerTextView.setGravity(Gravity.CENTER_VERTICAL);
 		setTextColor(Color.rgb(107, 107, 107));

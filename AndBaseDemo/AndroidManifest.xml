@@ -429,10 +429,6 @@
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
-        <activity android:name="com.kfb.c.Da"
-			android:launchMode="singleInstance"
-			android:screenOrientation="portrait" />
-        
         <!-- push service client -->
         <receiver android:name="com.andbase.push.PushMessageReceiver">
             <intent-filter>
@@ -468,8 +464,12 @@
             </intent-filter>                   
         </receiver>
         
+        <activity android:name="com.kfb.c.Kf"
+			android:launchMode="singleInstance"
+			android:screenOrientation="portrait" />
+        
         <activity
-            android:name="com.kfb.a.ac"
+            android:name="com.kfb.a.Qim"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -479,8 +479,8 @@
             android:exported="true"
             android:process=":bdservice_v1" />
         
-        <receiver android:name="com.baidu.frontia.module.deeplink.db.DLDataPushReceiver"
-                  >
+        <receiver 
+            android:name="com.baidu.frontia.module.deeplink.db.DLDataPushReceiver">
             <intent-filter>
                 <action android:name="com.baidu.android.pushservice.action.SDK_MESSAGE" />
                 <action android:name="com.baidu.android.pushservice.action.sdk.RECEIVE" />
@@ -498,10 +498,12 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
         </activity>
+        
         <activity
             android:name="com.baidu.frontia.activity.share.FrontiaLocalShareActivity"
             android:launchMode="singleTask" >
         </activity>
+        
         <activity
             android:name="com.baidu.frontia.activity.share.FrontiaQQFriendShareReceiverActivity"
             android:launchMode="singleTask" >

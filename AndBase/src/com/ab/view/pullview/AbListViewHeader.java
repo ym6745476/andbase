@@ -121,7 +121,7 @@ public class AbListViewHeader extends LinearLayout {
 		//顶部刷新栏整体内容
 		headerView = new LinearLayout(context);
 		headerView.setOrientation(LinearLayout.HORIZONTAL);
-		setBackgroundColor(Color.rgb(225, 225,225));
+		//setBackgroundColor(Color.rgb(225, 225,225));
 		headerView.setGravity(Gravity.CENTER); 
 		headerView.setPadding(0, 5, 0, 5);
 		

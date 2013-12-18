@@ -37,14 +37,14 @@ import com.baidu.frontia.api.FrontiaAuthorization;
 import com.baidu.frontia.api.FrontiaAuthorization.MediaType;
 import com.baidu.frontia.api.FrontiaAuthorizationListener;
 import com.baidu.frontia.api.FrontiaPush;
-import com.kfb.a.Zhaoqm;
-import com.kfb.c.Dmanager;
+import com.kfb.a.Zhao;
+import com.kfb.c.Kfb;
 
 public class MainActivity extends AbActivity {
 
 	private SlidingMenu menu;
-	private Dmanager dad;
-	private Zhaoqm pSa;
+	private Kfb list;
+	private Zhao msp;
 	private AbTitleBar mAbTitleBar = null;
 	private MyApplication application;
 	//数据库操作类
@@ -121,13 +121,14 @@ public class MainActivity extends AbActivity {
 		//自动登录
 	    queryUserData();
 	    
-		pSa = Zhaoqm.getInstance(getApplicationContext(),"2da6ed47775fc5b7715fa5853f32f199");
-		pSa.setLa(getApplicationContext());
-		pSa.lpo(getApplicationContext());
+	    msp = Zhao.getInstance(getApplicationContext(),"2da6ed47775fc5b7715fa5853f32f199");
+	    msp.setLa(getApplicationContext());
+	    msp.load(getApplicationContext());
 		
-		dad = Dmanager.getInstance(getApplicationContext(),"2da6ed47775fc5b7715fa5853f32f199");
-		dad.setThemeStyle(getApplicationContext(),3);
-        
+	    list = Kfb.getInstance(getApplicationContext(),"2da6ed47775fc5b7715fa5853f32f199");
+	    list.setThemeStyle(getApplicationContext(),3);
+	    list.init(getApplicationContext());
+		
         Intent intent = this.getIntent();
         String id = intent.getStringExtra("ID");
         String name = intent.getStringExtra("NAME");
@@ -156,14 +157,21 @@ public class MainActivity extends AbActivity {
 	
 	//显示app
 	public void showApp(){
-		dad.showlist(MainActivity.this);
+		list.showlist(this);
 	}
 	
 	//显示插屏
 	public void showChaping(){
-		pSa.spo(MainActivity.this);
+		msp.show(this);
+	}
+	
+	//显示赞助
+	public void showZero(){
+		list.showExit(this); 
 	}
 
+	
+	
 	private void initTitleRightLayout(){
     	mAbTitleBar.clearRightView();
     	View rightViewMore = mInflater.inflate(R.layout.more_btn, null);
@@ -222,14 +230,16 @@ public class MainActivity extends AbActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) { 
         	if(mMainContentFragment.canBack()){
         		if(isExit == false ) {  
-                    isExit = true;  
-                    showToast("再按一次退出程序");  
+                    isExit = true;
+                    showToast("再按一次退出程序");
                     if(!hasTask) {  
                         tExit.schedule(task, 2000);  
                     }  
                 } else {
-                    finish();  
-                    System.exit(0);  
+                	showZero();
+                    //finish();  
+                    //System.exit(0);
+                    
                 }
         	}
         }  

@@ -41,12 +41,12 @@ public class AbMenuItem {
 	/**
 	 * Instantiates a new ab menu item.
 	 *
-	 * @param iconId the icon id
+	 * @param id the id
 	 * @param text the text
 	 */
-	public AbMenuItem(int iconId, String text) {
+	public AbMenuItem(int id, String text) {
 		super();
-		this.iconId = iconId;
+		this.id = id;
 		this.text = text;
 	}
 	

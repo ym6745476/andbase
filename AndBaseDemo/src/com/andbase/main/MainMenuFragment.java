@@ -219,7 +219,7 @@ public class MainMenuFragment extends Fragment {
 		
 		AbMenuItem m3 = new AbMenuItem();
 		m3.setIconId(R.drawable.set);
-		m3.setText("选项");
+		m3.setText("精神赞助我");
 		mChild2.add(m3);
 		
 		AbMenuItem m4 = new AbMenuItem();
@@ -311,8 +311,8 @@ public class MainMenuFragment extends Fragment {
 					}
 				}else if(groupPosition==1){
                     if(childPosition==0){
-						//选项
-                    	mActivity.showChaping();
+						//选项、赞助作者
+                    	mActivity.showApp();
 					}else if(childPosition==1){
 						//推荐
 						mSocialShare.show(mActivity.getWindow().getDecorView(), mImageContent, FrontiaTheme.LIGHT,  new ShareListener());
