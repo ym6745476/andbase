@@ -51,10 +51,10 @@ public class DownFile {
 	private String downPath;
 	
 	/** 文件当前下载大小. */
-	private int downLength;
+	private long downLength;
 	
 	/** 文件总大小. */
-	private int totalLength;
+	private long totalLength;
 	
 	/** 文件类型后缀.tmp. */
 	private String suffix;
@@ -208,7 +208,7 @@ public class DownFile {
 	 *
 	 * @return the down length
 	 */
-	public int getDownLength() {
+	public long getDownLength() {
 		return downLength;
 	}
 
@@ -217,7 +217,7 @@ public class DownFile {
 	 *
 	 * @param downLength the new down length
 	 */
-	public void setDownLength(int downLength) {
+	public void setDownLength(long downLength) {
 		this.downLength = downLength;
 	}
 
@@ -226,7 +226,7 @@ public class DownFile {
 	 *
 	 * @return the total length
 	 */
-	public int getTotalLength() {
+	public long getTotalLength() {
 		return totalLength;
 	}
 
@@ -235,7 +235,7 @@ public class DownFile {
 	 *
 	 * @param totalLength the new total length
 	 */
-	public void setTotalLength(int totalLength) {
+	public void setTotalLength(long totalLength) {
 		this.totalLength = totalLength;
 	}
 

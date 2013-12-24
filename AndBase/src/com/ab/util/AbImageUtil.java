@@ -184,13 +184,13 @@ public class AbImageUtil {
 		opts.inJustDecodeBounds = false;	
 	    //使图片不抖动
 		opts.inDither = false;  
-		if(D) Log.d(TAG, "将缩放图片:"+file.getPath());
+		//if(D) Log.d(TAG, "将缩放图片:"+file.getPath());
 		resizeBmp = BitmapFactory.decodeFile(file.getPath(),opts);
 	    //缩小或者放大
 	    if(resizeBmp != null && scale!=1){
 	    	resizeBmp = scaleImg(resizeBmp,scale);
 	    }
-	    if(D) Log.d(TAG, "缩放图片结果:"+resizeBmp);
+	    //if(D) Log.d(TAG, "缩放图片结果:"+resizeBmp);
 	    return resizeBmp;
     }
 	

@@ -29,7 +29,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
 
 import com.ab.util.AbStrUtil;
 import com.ab.util.AbViewUtil;
@@ -131,7 +130,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleTextLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,1);
 		titleTextLayoutParams.gravity = Gravity.CENTER_VERTICAL;
-		rightViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,0);
+		rightViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		rightViewLayoutParams.gravity = Gravity.CENTER_VERTICAL;
 		
 		
@@ -181,7 +180,7 @@ public class AbTitleBar extends LinearLayout {
 		rightLayout.setGravity(Gravity.CENTER_VERTICAL);
 		rightLayout.setVisibility(View.GONE);
 		this.addView(rightLayout,rightViewLayoutParams);
-	
+		
 		logoView.setOnClickListener(new View.OnClickListener() {
 				
 			@Override
@@ -465,7 +464,7 @@ public class AbTitleBar extends LinearLayout {
      */
 	public void addRightView(View rightView) {
 		rightLayout.setVisibility(View.VISIBLE);
-		rightLayout.addView(rightView,layoutParamsWF);
+		rightLayout.addView(rightView,layoutParamsFF);
 	}
 	
 	/**
@@ -474,7 +473,7 @@ public class AbTitleBar extends LinearLayout {
      */
 	public void addRightView(int resId) {
 		rightLayout.setVisibility(View.VISIBLE);
-		rightLayout.addView(mInflater.inflate(resId, null),layoutParamsWF);
+		rightLayout.addView(mInflater.inflate(resId, null),layoutParamsFF);
 	}
 	
 	/**
@@ -484,6 +483,14 @@ public class AbTitleBar extends LinearLayout {
 		rightLayout.removeAllViews();
 	}
 	
+	/**
+	 * 获取这个右边的布局,可用来设置位置
+	 * @return
+	 */
+	public LinearLayout getRightLayout() {
+		return rightLayout;
+	}
+
 	/**
 	 * 描述：设置Logo按钮的点击事件.
 	 * @param mOnClickListener  指定的返回事件
@@ -512,15 +519,21 @@ public class AbTitleBar extends LinearLayout {
 	 * 描述：下拉菜单的的实现方法
 	 * @param parent
 	 * @param view 要显示的View
+	 * @param offsetMode 不填满的模式
 	 */
-	public void showWindow(View parent,View view) {
+	public void showWindow(View parent,View view,boolean offsetMode) {
 		AbViewUtil.measureView(view);
 		int popWidth = parent.getMeasuredWidth();
 		int popMargin = (this.getMeasuredHeight()-parent.getMeasuredHeight())/2;
 		if(view.getMeasuredWidth()>parent.getMeasuredWidth()){
 			popWidth = view.getMeasuredWidth();
 		}
-		popupWindow = new PopupWindow(view, popWidth+10, LayoutParams.WRAP_CONTENT, true);
+		if(offsetMode){
+			popupWindow = new PopupWindow(view, popWidth+10, LayoutParams.WRAP_CONTENT, true);
+		}else{
+			popupWindow = new PopupWindow(view, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT, true);
+		}
+		
 		// 使其聚集
 		popupWindow.setFocusable(true);
 		// 设置允许在外点击消失
@@ -554,10 +567,44 @@ public class AbTitleBar extends LinearLayout {
 				
 			 @Override
 			 public void onClick(View v) {
-				 showWindow(titleTextBtn,view);
+				 showWindow(titleTextBtn,view,true);
 			 }
 		 });
 	}
+
+	/**
+	 * 获取标题的全体布局
+	 * @return
+	 */
+	public LinearLayout getTitleTextLayout() {
+		return titleTextLayout;
+	}
 	
+	/**
+	 * 获取子布局显示宽度比例
+	 * 默认为标题填充，右边靠右
+	 * @return
+	 */
+	public void setChildViewFillParent(boolean left) {
+		if(left){
+			titleTextLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,1);
+			titleTextLayoutParams.gravity = Gravity.CENTER_VERTICAL;
+			titleTextLayout.setLayoutParams(titleTextLayoutParams);
+			
+			rightViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			rightViewLayoutParams.gravity = Gravity.CENTER_VERTICAL;
+			rightLayout.setLayoutParams(rightViewLayoutParams);
+			
+		}else{
+			titleTextLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			titleTextLayoutParams.gravity = Gravity.CENTER_VERTICAL;
+			titleTextLayout.setLayoutParams(titleTextLayoutParams);
+			
+			rightViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,1);
+			rightViewLayoutParams.gravity = Gravity.CENTER_VERTICAL;
+			rightLayout.setLayoutParams(rightViewLayoutParams);
+		}
+		
+	}
 	
 }

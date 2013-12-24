@@ -19,14 +19,12 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.ab.global.AbAppData;
 import com.ab.global.AbConstant;
 import com.ab.util.AbImageUtil;
-import com.ab.util.AbMd5;
 import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc

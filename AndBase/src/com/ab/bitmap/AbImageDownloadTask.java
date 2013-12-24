@@ -7,7 +7,6 @@ import android.util.Log;
 
 import com.ab.global.AbAppData;
 import com.ab.util.AbFileUtil;
-import com.ab.util.AbMd5;
 import com.ab.util.AbStrUtil;
 /**
  * 
@@ -56,13 +55,14 @@ public class AbImageDownloadTask extends AsyncTask<AbImageDownloadItem, Integer,
     	}else{
     		url = url.trim();
     	}
-		//如果SD卡有这个图片, 先到SD中找这个图片
-		item.bitmap =  AbImageCache.getBitmapFromCache(AbMd5.MD5(url+"_"+item.width+"x"+item.height+"t"+item.type));
+    	
+    	String cacheKey = AbImageCache.getCacheKey(url, item.width, item.height, item.type);
+		item.bitmap =  AbImageCache.getBitmapFromCache(cacheKey);
     	if(item.bitmap == null){
     		//开始下载
             item.bitmap = AbFileUtil.getBitmapFromSDCache(item.imageUrl,item.type,item.width,item.height);
             //缓存图片路径
-            AbImageCache.addBitmapToCache(AbMd5.MD5(item.imageUrl+"_"+item.width+"x"+item.height+"t"+item.type),item.bitmap);                                           
+            AbImageCache.addBitmapToCache(cacheKey,item.bitmap);                                           
             //需要执行回调来显示图片
             if (item.listener != null) {
                 Message msg = handler.obtainMessage(); 
@@ -70,6 +70,7 @@ public class AbImageDownloadTask extends AsyncTask<AbImageDownloadItem, Integer,
                 handler.sendMessage(msg); 
             }
 		}else{
+			if(D) Log.d(TAG, "从内存缓存中得到图片:"+cacheKey+","+item.bitmap);
 			if (item.listener != null) {
                 Message msg = handler.obtainMessage(); 
                 msg.obj = item; 

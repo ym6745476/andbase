@@ -30,7 +30,7 @@ public interface AbDownloadProgressListener {
 	 *
 	 * @param size the size
 	 */
-	public void onDownloadSize(int size);
+	public void onDownloadSize(long size);
 }
 
 

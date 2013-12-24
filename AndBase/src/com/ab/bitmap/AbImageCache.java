@@ -45,14 +45,23 @@ public class AbImageCache {
 	/** The Constant D. */
 	private static final boolean D = AbAppData.DEBUG;
 	
-	/** 4MB. */
-	public static int cacheSize = 10 * 1024 * 1024; 
+	/** 缓存空间大小8MB. */
+	public static int cacheSize = 8 * 1024 * 1024; 
 	
 	/** 为了加快速度，在内存中开启缓存,最新的LruCache. */
 	private static final LruCache<String, Bitmap> bitmapCache = new LruCache<String, Bitmap>(cacheSize) {      
 		protected int sizeOf(String key, Bitmap bitmap) { 
 			return bitmap.getRowBytes() * bitmap.getHeight();        
-	}};
+	    }
+
+		@Override
+		protected void entryRemoved(boolean evicted, String key,
+				Bitmap oldValue, Bitmap newValue) {
+			if(D) Log.d(TAG, "LruCache:移除了"+key);
+		}
+		
+		
+	};  
 	
 	/**正在下载中的线程*/
     private static final HashMap<String, Runnable> runRunnableCache = new HashMap<String, Runnable>();
@@ -90,6 +99,7 @@ public class AbImageCache {
 			if (getBitmapFromCache(key) == null && bitmap!=null) {
 				bitmapCache.put(key, bitmap);
 				if(D) Log.d(TAG, "存入缓存:"+key+","+bitmap);
+				if(D) Log.d(TAG, "测试存入缓存是否成功:"+key+","+getBitmapFromCache(key));
 			}
 			//表示下载中的缓存清除
 			removeRunRunnableFromCache(key);
@@ -129,7 +139,7 @@ public class AbImageCache {
 	}
 	
 	/**
-     * 根据url计算缓存key.
+     * 根据url计算缓存key,这个key+后缀就是文件名.
      * @param url 图片地址.
      * @param width 图片宽度.
      * @param height 图片高度.
@@ -241,5 +251,6 @@ public class AbImageCache {
 			lock.unlock();
 		}
 	}
+	
 		
 }

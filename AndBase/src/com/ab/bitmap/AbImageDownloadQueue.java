@@ -105,6 +105,7 @@ public class AbImageDownloadQueue extends Thread {
     	if(item.bitmap == null){
     		addDownloadItem(item); 
 		}else{
+			if(D) Log.d(TAG, "从内存缓存中得到图片:"+cacheKey+","+item.bitmap);
     		if (item.listener != null) {
                 Message msg = handler.obtainMessage(); 
                 msg.obj = item; 

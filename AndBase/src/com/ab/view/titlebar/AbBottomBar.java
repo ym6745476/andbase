@@ -23,7 +23,6 @@ import android.util.AttributeSet;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
@@ -121,16 +120,20 @@ public class AbBottomBar extends LinearLayout {
 	 * 描述：下拉菜单的的实现方法
 	 * @param parent
 	 * @param view 要显示的View
+	 * @param offsetMode 不填满的模式
 	 */
-	private void showWindow(View parent,View view) {
+	private void showWindow(View parent,View view,boolean offsetMode) {
 		AbViewUtil.measureView(view);
 		int popWidth = parent.getMeasuredWidth();
 		if(view.getMeasuredWidth()>parent.getMeasuredWidth()){
 			popWidth = view.getMeasuredWidth();
 		}
 		int popMargin = this.getMeasuredHeight();
-		if (popupWindow == null) {
+		
+		if(offsetMode){
 			popupWindow = new PopupWindow(view,popWidth, LayoutParams.WRAP_CONTENT, true);
+		}else{
+			popupWindow = new PopupWindow(view, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT, true);
 		}
 
 		int[] location = new int[2];
@@ -164,7 +167,7 @@ public class AbBottomBar extends LinearLayout {
 			
 			@Override
 			public void onClick(View arg0) {
-				showWindow(parent,view);
+				showWindow(parent,view,true);
 			}
 		});
 		

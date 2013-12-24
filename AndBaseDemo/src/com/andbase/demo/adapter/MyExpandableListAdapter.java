@@ -104,7 +104,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	          }else if(mDownFile.getState() == Constant.downInProgress){
 	        	  holder.operateBtn.setBackgroundResource(R.drawable.down_pause);
 	        	  if(mDownFile.getDownLength()!=0 && mDownFile.getTotalLength()!=0){
-		        	  int c = mDownFile.getDownLength()*100/mDownFile.getTotalLength();
+		        	  int c = (int)(mDownFile.getDownLength()*100/mDownFile.getTotalLength());
 		        	  holder.itemsDesc.setVisibility(View.GONE);
 		        	  holder.received_progressBar.setVisibility(View.VISIBLE);
 		        	  holder.progress.setProgress(c);
@@ -115,7 +115,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	        	  holder.operateBtn.setBackgroundResource(R.drawable.down_load);
 	        	  //下载了多少
 	        	  if(mDownFile.getDownLength()!=0 && mDownFile.getTotalLength()!=0){
-		        	  int c = mDownFile.getDownLength()*100/mDownFile.getTotalLength();
+		        	  int c = (int)(mDownFile.getDownLength()*100/mDownFile.getTotalLength());
 		        	  holder.itemsDesc.setVisibility(View.GONE);
 		        	  holder.received_progressBar.setVisibility(View.VISIBLE);
 		        	  holder.progress.setProgress(c);
@@ -137,11 +137,11 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	          final AbDownloadProgressListener mDownloadProgressListener = new AbDownloadProgressListener() {
 					//实时获知文件已经下载的数据长度
 					@Override
-					public void onDownloadSize(final int size) {
+					public void onDownloadSize(final long size) {
 						if(mDownFile.getTotalLength()==0){
 							return;
 						}
-						final int c = size*100/mDownFile.getTotalLength();
+						final int c = (int)(size*100/mDownFile.getTotalLength());
 		        		if(c!=holder.progress.getProgress()){
 		        			holder.progress.post(new Runnable(){
 								@Override

@@ -41,6 +41,8 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.util.Log;
 
+import com.ab.bitmap.AbFileCache;
+import com.ab.bitmap.AbImageCache;
 import com.ab.global.AbAppData;
 import com.ab.global.AbConstant;
 
@@ -72,17 +74,10 @@ public class AbFileUtil {
 	/**MB  单位B*/
 	private static int MB = 1024*1024;
 	
-	/**缓存文件夹的大小100M  单位B*/
-	private static int cacheSize = 100*MB;
 	
     /**剩余空间大于200M才使用缓存*/
 	private static int freeSdSpaceNeededToCache = 200*MB;
 	
-	/**缓存空间当前的大小，临时*/
-	private static int dirSize = -1;
-	
-	/**统计程序下载的图片数，超过10张检查sd卡*/
-	private static int downCount = 0;
 	/**
 	 * 下载网络文件到SD卡中.如果SD中存在同名文件将不再下载
 	 * @param url 要下载文件的网络地址
@@ -152,13 +147,6 @@ public class AbFileUtil {
 				if(file.length() == 0){
 					Log.d(TAG, "下载出错了，文件大小为0");
 					file.delete();
-				}else{
-					downCount ++;
-				}
-				if(downCount >= 10){
-					//检查空间将很久未使用的文件删除
-					removeCache();
-					downCount = 0;
 				}
 				
 			} catch (Exception e) {
@@ -173,12 +161,12 @@ public class AbFileUtil {
 	  * @param url 文件的网络地址
 	  * @param type 图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类）
 	  * 如果设置为原图，则后边参数无效，得到原图
-	  * @param newWidth 新图片的宽
-	  * @param newHeight 新图片的高
+	  * @param width 新图片的宽
+	  * @param height 新图片的高
 	  * @return Bitmap 新图片
 	  */
-	 public static Bitmap getBitmapFromSDCache(String url,int type,int newWidth, int newHeight){
-		 Bitmap bit = null;
+	 public static Bitmap getBitmapFromSDCache(String url,int type,int width, int height){
+		 Bitmap bitmap = null;
 		 try {
 			 if(AbStrUtil.isEmpty(url)){
 		    	return null;
@@ -186,13 +174,16 @@ public class AbFileUtil {
 			 
 			 //SD卡不存在 或者剩余空间不足了就不缓存到SD卡了
 			 if(!isCanUseSD() || freeSdSpaceNeededToCache < freeSpaceOnSD()){
-				 bit = getBitmapFormURL(url,type,newWidth,newHeight);
-				 return bit;
+				 bitmap = getBitmapFormURL(url,type,width,height);
+				 return bitmap;
 		     }
 			 
-			 if(type != AbConstant.ORIGINALIMG && ( newWidth<=0 || newHeight<=0)){
+			 if(type != AbConstant.ORIGINALIMG && ( width<=0 || height<=0)){
 				 throw new IllegalArgumentException("缩放和裁剪图片的宽高设置不能小于0");
 			 }
+			 
+			 //缓存的key，也是文件名
+			 String key =  AbImageCache.getCacheKey(url, width, height, type);
 			 
 			 //文件是否存在
 			 File path = Environment.getExternalStorageDirectory();
@@ -201,31 +192,33 @@ public class AbFileUtil {
 			 //获取后缀
 			 String suffix = getSuffixFromNetUrl(url);
 			 
-			 //缓存的图片文件名的组合
-			 String fileName = getImageFileName(url,newWidth,newHeight,type);
-			 File file = new File(fileDirectory,fileName+suffix);
-			 if(!file.exists()){
+			 //缓存的图片文件名
+			 String fileName = key+suffix;
+			 File file = new File(fileDirectory,fileName);
+			 
+			 //检查文件缓存中是否存在文件
+			 File fileCache = AbFileCache.getFileFromCache(fileName);
+			 if(fileCache == null){
 				 String downFilePath = downFileToSD(url,file.getName());
 				 if(downFilePath != null){
-					 return getBitmapFromSD(file,type,newWidth,newHeight);
+					 //下载成功后存入缓存
+					 AbFileCache.addFileToCache(fileName, file);
+					 //获取
+					 return getBitmapFromSD(file,type,width,height);
 				 }else{
 					 return null;
 				 }
 			 }else{
-				 //文件存在
-				 if(type == AbConstant.CUTIMG){
-			 		bit = AbImageUtil.cutImg(file,newWidth,newHeight);
-			 	 }else if(type == AbConstant.SCALEIMG){
-			 		bit = AbImageUtil.scaleImg(file,newWidth,newHeight);
-			 	 }else{
-			 		bit = AbImageUtil.originalImg(file);
-			 	 }
-			 	 
+				 bitmap = getBitmapFromSD(file,type,width,height);
+				 if(D) Log.d(TAG, "从SD缓存中得到图片:"+key+","+bitmap);
+				 //获取
+				 return bitmap;
 			 }
+			 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return bit;
+		return bitmap;
 		
 	 }
 	 
@@ -234,11 +227,11 @@ public class AbFileUtil {
 	  * @param url 文件的网络地址
 	  * @param type 图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类）
 	  * 如果设置为原图，则后边参数无效，得到原图
-	  * @param newWidth 新图片的宽
-	  * @param newHeight 新图片的高
+	  * @param width 新图片的宽
+	  * @param height 新图片的高
 	  * @return Bitmap 新图片
 	  */
-	 public static Bitmap getBitmapFromSD(String url,int type,int newWidth, int newHeight){
+	 public static Bitmap getBitmapFromSD(String url,int type,int width, int height){
 		 Bitmap bit = null;
 		 try {
 			 //SD卡是否存在
@@ -246,26 +239,26 @@ public class AbFileUtil {
 				 return null;
 		     }
 			 
-			 if(type != AbConstant.ORIGINALIMG && ( newWidth<=0 || newHeight<=0)){
+			 if(type != AbConstant.ORIGINALIMG && ( width<=0 || height<=0)){
 				 throw new IllegalArgumentException("缩放和裁剪图片的宽高设置不能小于0");
 			 }
+			 
+			 //缓存的key，也是文件名
+			 String key =  AbImageCache.getCacheKey(url, width, height, type);
 			 
 			 //文件是否存在
 			 File path = Environment.getExternalStorageDirectory();
 			 File fileDirectory = new File(path.getAbsolutePath() + downPathImageDir);
-			 String fileName = getImageFileName(url,newWidth,newHeight,type);
+			 //获取后缀
+			 String suffix = getSuffixFromNetUrl(url);
+			 //缓存的图片文件名
+			 String fileName = key+suffix;
 			 File file = new File(fileDirectory,fileName);
 			 if(!file.exists()){
 				 return null;
 			 }else{
-				 //文件存在
-				 if(type == AbConstant.CUTIMG){
-			 		bit = AbImageUtil.cutImg(file,newWidth,newHeight);
-			 	 }else if(type == AbConstant.SCALEIMG){
-				 	bit = AbImageUtil.scaleImg(file,newWidth,newHeight);
-			 	 }else{
-			 		bit = AbImageUtil.originalImg(file);
-			 	 }
+				 //获取
+				 return getBitmapFromSD(file,type,width,height);
 			 }
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -300,6 +293,7 @@ public class AbFileUtil {
 			 if(!file.exists()){
 				 return null;
 			 }
+			 
 			 //文件存在
 			 if(type==AbConstant.CUTIMG){
 		 		bit = AbImageUtil.cutImg(file,newWidth,newHeight);
@@ -425,7 +419,6 @@ public class AbFileUtil {
 	    } catch (Exception e) {
 	    	 if(D)Log.d(TAG, "下载图片异常："+e.getMessage());
 		}
-	    if(D)Log.d(TAG, "返回的Bitmap："+bit);
 		return bit;
 	}
 	
@@ -442,7 +435,6 @@ public class AbFileUtil {
 	    } catch (Exception e) {
 	    	 if(D)Log.d(TAG, "获取图片异常："+e.getMessage());
 		}
-	    if(D)Log.d(TAG, "返回的Bitmap："+bit);
 		return bit;
 	}
 	
@@ -785,12 +777,44 @@ public class AbFileUtil {
 	    return pathDir;
 	}
 	
+	
+   /**
+    * 初始化缓存
+    */
+    public static boolean initFileCache() {
+    	
+       try {
+    	   
+    	   AbFileCache.cacheSize = 0;
+    	   
+		   if(!isCanUseSD()){
+				return false;
+		   }
+		   
+		   File path = Environment.getExternalStorageDirectory();
+		   File fileDirectory = new File(path.getAbsolutePath() + downPathImageDir);
+	       File[] files = fileDirectory.listFiles();
+	       if (files == null) {
+	            return true;
+	       }
+    	   for (int i = 0; i < files.length; i++) {
+    		   AbFileCache.cacheSize += files[i].length();
+    		   AbFileCache.addFileToCache(files[i].getName(), files[i]);
+	       }
+	   } catch (Exception e) {
+		   e.printStackTrace();
+		   return false;
+	   }
+                                                       
+       return true;
+    }
+	
 	/**
-    * 计算存储目录下的文件大小，
-    * 当文件总大小大于规定的CACHE_SIZE或者sdcard剩余空间小于FREE_SD_SPACE_NEEDED_TO_CACHE的规定
+    * 释放部分文件，
+    * 当文件总大小大于规定的AbFileCache.maxCacheSize或者sdcard剩余空间小于FREE_SD_SPACE_NEEDED_TO_CACHE的规定
     * 那么删除40%最近没有被使用的文件
     */
-    public static boolean removeCache() {
+    public static boolean freeCacheFiles() {
     	
        try {
 		   if(!isCanUseSD()){
@@ -803,22 +827,14 @@ public class AbFileUtil {
 	       if (files == null) {
 	            return true;
 	       }
-	       if(dirSize==-1){
-	    	   dirSize+=1;
-	    	   for (int i = 0; i < files.length; i++) {
-		            dirSize += files[i].length();
-		       }
-	       }
 	       
-	       //当前大小大于预定缓存空间
-	       if (dirSize > cacheSize) {
-	           int removeFactor = (int) ((0.4 * files.length) + 1);
-	           Arrays.sort(files, new FileLastModifSort());
-	           for (int i = 0; i < removeFactor; i++) {
-	        	   dirSize -= files[i].length();
-	               files[i].delete();
-	           }
-	        }
+           int removeFactor = (int) ((0.4 * files.length) + 1);
+           Arrays.sort(files, new FileLastModifSort());
+           for (int i = 0; i < removeFactor; i++) {
+        	   AbFileCache.cacheSize -= files[i].length();
+               files[i].delete();
+               AbFileCache.removeFileFromCache(files[i].getName());
+           }
 	       
 	   } catch (Exception e) {
 		   e.printStackTrace();
@@ -852,26 +868,6 @@ public class AbFileUtil {
             }
         }
     }
-
-    /**
-     * 
-     * 描述：缓存文件夹的大小
-     * @return
-     * @throws 
-     */
-	public static int getCacheSize() {
-		return cacheSize;
-	}
-
-	/**
-	 * 
-	 * 描述：设置缓存文件夹的大小
-	 * @param cacheSize   B
-	 * @throws 
-	 */
-	public static void setCacheSize(int cacheSize) {
-		AbFileUtil.cacheSize = cacheSize;
-	}
 
 	/**
 	 * 
@@ -919,17 +915,6 @@ public class AbFileUtil {
        return true;
     }
     
-    /**
-     * 根据url计算图片文件名称.
-     * @param url 图片地址.
-     * @param width 图片宽度.
-     * @param height 图片高度.
-     * @param type 处理类型.
-     */
-    public static String getImageFileName(String url, int width, int height,int type) {
-        return AbMd5.MD5(new StringBuilder(url.length() + 12).append("#W").append(width)
-        .append("#H").append(height).append("#T").append(type).append(url).toString());
-    }
     
     /**
      * 

@@ -18,7 +18,6 @@ package com.ab.bitmap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
 import android.os.Handler;
 import android.os.Message;
@@ -146,6 +145,7 @@ public class AbImageDownloadPool{
 	    	});  
     		
     	}else{
+    		if(D) Log.d(TAG, "从内存缓存中得到图片:"+cacheKey+","+item.bitmap);
     		if (item.listener != null) { 
                 Message msg = handler.obtainMessage(); 
                 msg.obj = item; 
