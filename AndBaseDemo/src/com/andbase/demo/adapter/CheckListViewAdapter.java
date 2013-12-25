@@ -8,8 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 
+import com.ab.activity.AbActivity;
 import com.ab.view.sliding.AbSlidingButton;
 import com.andbase.R;
 
@@ -100,17 +103,16 @@ public class CheckListViewAdapter extends BaseAdapter{
           //设置开关的默认状态    true开启状态
           //holder.itemsCheck.setToggleState(true);
           
-          /*//设置开关的监听
-          holder.itemsCheck.setOnToggleStateListener(new OnToggleStateListener() {
-  			@Override
-  			public void onToggleState(boolean state) {
-  				if(state){
-  				} else {
-  				}
-  			}
-  		  });*/
+          //设置开关的监听
+          holder.itemsCheck.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
+				// TODO Auto-generated method stub
+				((AbActivity)mContext).showToast("开关变化");
+			}
+		});
           
-          //holder.itemsCheck.setChecked((Boolean)data2, false, false);
           return convertView;
     }
     

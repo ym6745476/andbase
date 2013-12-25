@@ -32,7 +32,6 @@ import android.view.MotionEvent;
 import android.widget.CheckBox;
 
 import com.ab.global.AbAppData;
-import com.ab.global.AbConstant;
 
 
 // TODO: Auto-generated Javadoc
@@ -213,8 +212,8 @@ public class AbSlidingButton extends CheckBox  {
 	 * @date：2013-11-29 下午3:54:33
 	 * @version v1.0
 	 */
-	public void setChecked(boolean isChecked) {
-		setChecked(isChecked,false);
+	public void setChecked(boolean checked) {
+		setChecked(checked,false);
 	}
 
 	/**
@@ -225,9 +224,8 @@ public class AbSlidingButton extends CheckBox  {
 	 * @date：2013-11-29 下午3:54:33
 	 * @version v1.0
 	 */
-	public void setChecked(boolean isChecked,boolean anim) {
-		this.isChecked = isChecked;
-		if(this.isChecked){
+	public void setChecked(boolean checked,boolean anim) {
+		if(checked){
 			this.mBtnPos = this.mBtnOnPos;
 		}else{
 		    this.mBtnPos = this.mBtnOffPos;
@@ -236,10 +234,6 @@ public class AbSlidingButton extends CheckBox  {
 			startAnimation();
 		}else{
 			moveViewToTarget();
-		}
-		
-		if(onCheckedChangeListener!=null){
-			onCheckedChangeListener.onCheckedChanged(this, isChecked);
 		}
 			
 	}
@@ -363,7 +357,7 @@ public class AbSlidingButton extends CheckBox  {
 	 */
 	private void moveView(final float pos,boolean delay){
 		if(handler!=null){
-			  handler.obtainMessage(0, pos).sendToTarget();
+			handler.obtainMessage(0, pos).sendToTarget();
 		}
 	}
 
@@ -393,12 +387,22 @@ public class AbSlidingButton extends CheckBox  {
     		if(this.mAnimationPosition >= this.mBtnOnPos){
     			this.mAnimationPosition = this.mBtnOnPos;
     			moveView(this.mAnimationPosition,true);
-    			isChecked = true;
+    			if(!isChecked){
+	   		    	 isChecked = true;
+	   		    	 if(onCheckedChangeListener!=null){
+	   		 			onCheckedChangeListener.onCheckedChanged(this, isChecked);
+	   		 		 }
+   	    	    }
     			break;
     		}else if(this.mAnimationPosition <= this.mBtnOffPos){
     			this.mAnimationPosition = this.mBtnOffPos;
     			moveView(this.mAnimationPosition,true);
-    			isChecked = false;
+    			if(isChecked){
+	   		    	 isChecked = false;
+	   		    	 if(onCheckedChangeListener!=null){
+	   		 			onCheckedChangeListener.onCheckedChanged(this, isChecked);
+	   		 		 }
+  	    	    }
     			break;
     		}else{
     			moveView(this.mAnimationPosition,true);
@@ -419,10 +423,20 @@ public class AbSlidingButton extends CheckBox  {
 	private void moveViewToTarget(){
 		moveView(this.mBtnPos);
 	    if (this.mBtnPos == this.mBtnOnPos){
-	    	 isChecked = true;
+	    	 if(!isChecked){
+		    	 isChecked = true;
+		    	 if(onCheckedChangeListener!=null){
+		 			onCheckedChangeListener.onCheckedChanged(this, isChecked);
+		 		 }
+	    	 }
 		     return;
 		}else if(this.mBtnPos == this.mBtnOffPos){
-			 isChecked = false;
+			if(isChecked){
+				 isChecked = false;
+				 if(onCheckedChangeListener!=null){
+						onCheckedChangeListener.onCheckedChanged(this, isChecked);
+				 }
+			 }
 		     return;
 		}
 	}
