@@ -1,6 +1,10 @@
 andbase
 =======
-更多信息请进入官网查看: http://www.418log.org/post-47.html
+更多信息请进入官网查看: http://www.amsoft.cn/post-47.html
+
+
+更新的内容请访问官网，这里不再维护，谢谢
+
 
 andbase开发框架介绍 
 
