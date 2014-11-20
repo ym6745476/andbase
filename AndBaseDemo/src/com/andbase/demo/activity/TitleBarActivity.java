@@ -13,11 +13,14 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbMenuItem;
+import com.ab.model.AbMenuItem;
+import com.ab.util.AbToastUtil;
+import com.ab.view.titlebar.AbBottomBar;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.demo.adapter.ListPopAdapter;
 import com.andbase.global.MyApplication;
+import com.andbase.login.AboutActivity;
 
 public class TitleBarActivity extends AbActivity {
 	
@@ -25,6 +28,7 @@ public class TitleBarActivity extends AbActivity {
 	
 	//标题栏
 	private AbTitleBar mAbTitleBar = null;
+	private AbBottomBar mAbBottomBar = null;
 	
 	private PopupWindow popupWindow;
 	
@@ -36,17 +40,20 @@ public class TitleBarActivity extends AbActivity {
         application = (MyApplication)abApplication;
         
         mAbTitleBar = this.getTitleBar();
+        mAbBottomBar = this.getBottomBar(); 
         mAbTitleBar.setTitleText("多功能标题栏");
         mAbTitleBar.setLogo(R.drawable.button_selector_back);
         mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
         mAbTitleBar.setTitleTextMargin(20, 0, 0, 0);
         mAbTitleBar.setLogoLine(R.drawable.line);
         
+        
+        
         mAbTitleBar.setLogoOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				showToast("点了返回哦");
+				AbToastUtil.showToast(TitleBarActivity.this,"点了返回哦");
 				finish();
 			}
 		});
@@ -97,7 +104,7 @@ public class TitleBarActivity extends AbActivity {
 
 		 			@Override
 		 			public void onClick(View v) {
-		 				showToast("别点了");
+		 				AbToastUtil.showToast(TitleBarActivity.this,"别点了");
 		 			}
 		         });
 		    	
@@ -105,7 +112,7 @@ public class TitleBarActivity extends AbActivity {
 
 		 			@Override
 		 			public void onClick(View v) {
-		 				showToast("还点");
+		 				AbToastUtil.showToast(TitleBarActivity.this,"还点");
 		 			}
 		         	
 		         });
@@ -180,7 +187,7 @@ public class TitleBarActivity extends AbActivity {
 				 list.add(new AbMenuItem("貂蝉"));
 				 list.add(new AbMenuItem("紫罂粟"));
 				 list.add(new AbMenuItem("孙尚香"));
-				 ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list,R.layout.list_pop_item);
+				 ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list,R.layout.item_list_pop);
 				 popListView.setAdapter(mListPopAdapter);
 				 
 				 mAbTitleBar.setTitleTextDropDown(popView);
@@ -213,7 +220,7 @@ public class TitleBarActivity extends AbActivity {
 				list.add(new AbMenuItem("收藏"));
 				list.add(new AbMenuItem("好评"));
 				list.add(new AbMenuItem("搜索"));
-				ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list,R.layout.list_pop_item2);
+				ListPopAdapter mListPopAdapter = new ListPopAdapter(TitleBarActivity.this, list,R.layout.item2_list_pop);
 				popListView.setAdapter(mListPopAdapter);
 				mAbBottomBar.setDropDown(moreBtn,popView);
 				mAbBottomBar.setDropDown(selectBtn,popView);

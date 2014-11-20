@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.image.AbImageLoader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1image.html">image</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html">AbImageLoader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1image_1_1_ab_image_loader-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.image.AbImageLoader类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a54183bedcbbc1c4585cdd616a6d2196b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a54183bedcbbc1c4585cdd616a6d2196b">AbImageLoader</a> (Context context)</td></tr>
+<tr class="separator:a54183bedcbbc1c4585cdd616a6d2196b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b501400d5ff818a96b343058dbf480e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a0b501400d5ff818a96b343058dbf480e">display</a> (final ImageView imageView, String url)</td></tr>
+<tr class="separator:a0b501400d5ff818a96b343058dbf480e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37ba0b9515219f69dc5cb02a4d10347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#ac37ba0b9515219f69dc5cb02a4d10347">setLoadingImage</a> (int resID)</td></tr>
+<tr class="separator:ac37ba0b9515219f69dc5cb02a4d10347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b451b8403bf573e3196588c127e9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#ab7b451b8403bf573e3196588c127e9c0">setLoadingView</a> (View view)</td></tr>
+<tr class="separator:ab7b451b8403bf573e3196588c127e9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c4e95c6d3a22b0cffa05f9a0726554"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a84c4e95c6d3a22b0cffa05f9a0726554">setErrorImage</a> (int resID)</td></tr>
+<tr class="separator:a84c4e95c6d3a22b0cffa05f9a0726554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691e1d6463e60c4dc77fc99f4e6b011b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a691e1d6463e60c4dc77fc99f4e6b011b">setEmptyImage</a> (int resID)</td></tr>
+<tr class="separator:a691e1d6463e60c4dc77fc99f4e6b011b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f09a8d3823d40875d8ebbcf2733013"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a26f09a8d3823d40875d8ebbcf2733013">getMaxWidth</a> ()</td></tr>
+<tr class="separator:a26f09a8d3823d40875d8ebbcf2733013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f6f009f50e926b61b76852a89b324f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a93f6f009f50e926b61b76852a89b324f">setMaxWidth</a> (int <a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a90638867aa76a62446eaf0c1d747b9a3">maxWidth</a>)</td></tr>
+<tr class="separator:a93f6f009f50e926b61b76852a89b324f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bfcf0bc452348979eb07b84442d20a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a05bfcf0bc452348979eb07b84442d20a">getMaxHeight</a> ()</td></tr>
+<tr class="separator:a05bfcf0bc452348979eb07b84442d20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b307c04eb0df301964048ca17b1540c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a7b307c04eb0df301964048ca17b1540c">setMaxHeight</a> (int <a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#ac7ebe53464ffcf8c41daa9974e32ee7e">maxHeight</a>)</td></tr>
+<tr class="separator:a7b307c04eb0df301964048ca17b1540c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a651c8cf72b223b16294b22280f46190a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html">AbImageLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a651c8cf72b223b16294b22280f46190a">newInstance</a> (Context context)</td></tr>
+<tr class="separator:a651c8cf72b223b16294b22280f46190a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5d6a46df066ca11138272a5d1c9595e3"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a5d6a46df066ca11138272a5d1c9595e3">mContext</a> = null</td></tr>
+<tr class="separator:a5d6a46df066ca11138272a5d1c9595e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90638867aa76a62446eaf0c1d747b9a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a90638867aa76a62446eaf0c1d747b9a3">maxWidth</a></td></tr>
+<tr class="separator:a90638867aa76a62446eaf0c1d747b9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ebe53464ffcf8c41daa9974e32ee7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#ac7ebe53464ffcf8c41daa9974e32ee7e">maxHeight</a></td></tr>
+<tr class="separator:ac7ebe53464ffcf8c41daa9974e32ee7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0facfea0339d14e1ba3315024347e6e3"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a0facfea0339d14e1ba3315024347e6e3">loadingImage</a></td></tr>
+<tr class="separator:a0facfea0339d14e1ba3315024347e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f00c6772d1f0cb17c30f45b02a759a"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#ad4f00c6772d1f0cb17c30f45b02a759a">loadingView</a></td></tr>
+<tr class="separator:ad4f00c6772d1f0cb17c30f45b02a759a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dad86822d964b69e83ea16045407ef9"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a9dad86822d964b69e83ea16045407ef9">errorImage</a></td></tr>
+<tr class="separator:a9dad86822d964b69e83ea16045407ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d812343b5a18482479ecb45b088493"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#aa6d812343b5a18482479ecb45b088493">emptyImage</a></td></tr>
+<tr class="separator:aa6d812343b5a18482479ecb45b088493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01ef59072dc32450554bb85a4c4215c"><td class="memItemLeft" align="right" valign="top">RequestQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#af01ef59072dc32450554bb85a4c4215c">mQueue</a></td></tr>
+<tr class="separator:af01ef59072dc32450554bb85a4c4215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6b16d34b5ea521f898e1567f694b89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html">ImageLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html#a4f6b16d34b5ea521f898e1567f694b89">mImageLoader</a> = null</td></tr>
+<tr class="separator:a4f6b16d34b5ea521f898e1567f694b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbImageLoader.java 描述：下载图片并显示的工具类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2011-12-10 上午10:10:53 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a54183bedcbbc1c4585cdd616a6d2196b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.image.AbImageLoader.AbImageLoader </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构造图片下载器.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a0b501400d5ff818a96b343058dbf480e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.display </td>
+          <td>(</td>
+          <td class="paramtype">final ImageView&#160;</td>
+          <td class="paramname"><em>imageView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示这个图片</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageView</td><td>显得的View </td></tr>
+    <tr><td class="paramname">url</td><td>the url </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05bfcf0bc452348979eb07b84442d20a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.image.AbImageLoader.getMaxHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26f09a8d3823d40875d8ebbcf2733013"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.image.AbImageLoader.getMaxWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a651c8cf72b223b16294b22280f46190a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1image_1_1_ab_image_loader.html">AbImageLoader</a> com.ab.image.AbImageLoader.newInstance </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>New instance.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab image downloader </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a691e1d6463e60c4dc77fc99f4e6b011b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.setEmptyImage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置未找到的图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resID</td><td>the new empty image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a84c4e95c6d3a22b0cffa05f9a0726554"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.setErrorImage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置下载失败的图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resID</td><td>the new error image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac37ba0b9515219f69dc5cb02a4d10347"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.setLoadingImage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置下载中的图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resID</td><td>the new loading image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab7b451b8403bf573e3196588c127e9c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.setLoadingView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置下载中的View，优先级高于setLoadingImage.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>放在ImageView的上边或者下边的View </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7b307c04eb0df301964048ca17b1540c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.setMaxHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxHeight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a93f6f009f50e926b61b76852a89b324f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.AbImageLoader.setMaxWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aa6d812343b5a18482479ecb45b088493"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.image.AbImageLoader.emptyImage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片未找到的图片. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9dad86822d964b69e83ea16045407ef9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.image.AbImageLoader.errorImage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示下载失败的图片. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0facfea0339d14e1ba3315024347e6e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.image.AbImageLoader.loadingImage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示为下载中的图片. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4f00c6772d1f0cb17c30f45b02a759a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.image.AbImageLoader.loadingView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示为下载中的View. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac7ebe53464ffcf8c41daa9974e32ee7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.image.AbImageLoader.maxHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示的图片的高. </p>
+
+</div>
+</div>
+<a class="anchor" id="a90638867aa76a62446eaf0c1d747b9a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.image.AbImageLoader.maxWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示的图片的宽. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5d6a46df066ca11138272a5d1c9595e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.image.AbImageLoader.mContext = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Context. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4f6b16d34b5ea521f898e1567f694b89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html">ImageLoader</a> com.ab.image.AbImageLoader.mImageLoader = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af01ef59072dc32450554bb85a4c4215c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RequestQueue com.ab.image.AbImageLoader.mQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/image/<a class="el" href="_ab_image_loader_8java.html">AbImageLoader.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

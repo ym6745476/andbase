@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.Gson类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pac-static-attribs">静态包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1_gson-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.Gson类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6d3be515bca58ac5da6c075b02a78837"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a6d3be515bca58ac5da6c075b02a78837">Gson</a> ()</td></tr>
+<tr class="separator:a6d3be515bca58ac5da6c075b02a78837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:af634b10d0d18dc8480dd4d30358e949e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#af634b10d0d18dc8480dd4d30358e949e">Gson</a> (final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> excluder, final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_field_naming_strategy.html">FieldNamingStrategy</a> fieldNamingPolicy, final Map&lt; Type, InstanceCreator&lt;?&gt;&gt; instanceCreators, boolean <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a6ee610b1c06590275efb7e7634395a79">serializeNulls</a>, boolean complexMapKeySerialization, boolean generateNonExecutableGson, boolean <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a9dbf084c9896001d2930f70e51f15795">htmlSafe</a>, boolean <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a47270d9faa924840950bb4d42588d859">prettyPrinting</a>, boolean serializeSpecialFloatingPointValues, <a class="el" href="enumcom_1_1google_1_1gson_1_1_long_serialization_policy.html">LongSerializationPolicy</a> longSerializationPolicy, List&lt; <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">TypeAdapterFactory</a> &gt; typeAdapterFactories)</td></tr>
+<tr class="separator:af634b10d0d18dc8480dd4d30358e949e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:a7969a20d682cb0fd23c925a6f62022ab"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_deserialization_context.html">JsonDeserializationContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a7969a20d682cb0fd23c925a6f62022ab">deserializationContext</a></td></tr>
+<tr class="separator:a7969a20d682cb0fd23c925a6f62022ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9e8f24e2112c6682695c8138601aa3"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serialization_context.html">JsonSerializationContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a8e9e8f24e2112c6682695c8138601aa3">serializationContext</a></td></tr>
+<tr class="separator:a8e9e8f24e2112c6682695c8138601aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-attribs"></a>
+静态包属性</h2></td></tr>
+<tr class="memitem:afa8a30ff061396fceca6af40a2c8b52d"><td class="memItemLeft" align="right" valign="top">static final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#afa8a30ff061396fceca6af40a2c8b52d">DEFAULT_JSON_NON_EXECUTABLE</a> = false</td></tr>
+<tr class="separator:afa8a30ff061396fceca6af40a2c8b52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ac627708470212eb17127268604714edb"><td class="memItemLeft" align="right" valign="top">TypeAdapter&lt; Number &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#ac627708470212eb17127268604714edb">doubleAdapter</a> (boolean serializeSpecialFloatingPointValues)</td></tr>
+<tr class="separator:ac627708470212eb17127268604714edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f207ecb07d64058299f24d01a8212d"><td class="memItemLeft" align="right" valign="top">TypeAdapter&lt; Number &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a31f207ecb07d64058299f24d01a8212d">floatAdapter</a> (boolean serializeSpecialFloatingPointValues)</td></tr>
+<tr class="separator:a31f207ecb07d64058299f24d01a8212d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85eb0e99771c566d567a4faadd702708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a85eb0e99771c566d567a4faadd702708">checkValidFloatingPoint</a> (double value)</td></tr>
+<tr class="separator:a85eb0e99771c566d567a4faadd702708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5953c58e8d373ca9edaf2fd30e5bdc1b"><td class="memItemLeft" align="right" valign="top">TypeAdapter&lt; Number &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a5953c58e8d373ca9edaf2fd30e5bdc1b">longAdapter</a> (<a class="el" href="enumcom_1_1google_1_1gson_1_1_long_serialization_policy.html">LongSerializationPolicy</a> longSerializationPolicy)</td></tr>
+<tr class="separator:a5953c58e8d373ca9edaf2fd30e5bdc1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac0cbf6d86b8fc575687041f40fcaf8aa"><td class="memItemLeft" align="right" valign="top">final ThreadLocal&lt; Map<br class="typebreak" />
+&lt; TypeToken<br class="typebreak" />
+&lt;?&gt;, FutureTypeAdapter&lt;?&gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#ac0cbf6d86b8fc575687041f40fcaf8aa">calls</a></td></tr>
+<tr class="separator:ac0cbf6d86b8fc575687041f40fcaf8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109a8c6cffcd3c22d135ded63a8e2670"><td class="memItemLeft" align="right" valign="top">final Map&lt; TypeToken<br class="typebreak" />
+&lt;?&gt;, TypeAdapter&lt;?&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a109a8c6cffcd3c22d135ded63a8e2670">typeTokenCache</a> = Collections.synchronizedMap(new HashMap&lt;TypeToken&lt;?&gt;, TypeAdapter&lt;?&gt;&gt;())</td></tr>
+<tr class="separator:a109a8c6cffcd3c22d135ded63a8e2670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4af013938c44c7cef7e530c8382f18e"><td class="memItemLeft" align="right" valign="top">final List&lt; <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">TypeAdapterFactory</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#ae4af013938c44c7cef7e530c8382f18e">factories</a></td></tr>
+<tr class="separator:ae4af013938c44c7cef7e530c8382f18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a430c3deb80ffb6f9b26b4677a8f21e"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_constructor_constructor.html">ConstructorConstructor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a9a430c3deb80ffb6f9b26b4677a8f21e">constructorConstructor</a></td></tr>
+<tr class="separator:a9a430c3deb80ffb6f9b26b4677a8f21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee610b1c06590275efb7e7634395a79"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a6ee610b1c06590275efb7e7634395a79">serializeNulls</a></td></tr>
+<tr class="separator:a6ee610b1c06590275efb7e7634395a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbf084c9896001d2930f70e51f15795"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a9dbf084c9896001d2930f70e51f15795">htmlSafe</a></td></tr>
+<tr class="separator:a9dbf084c9896001d2930f70e51f15795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ed8988dd09582240a4c8b58d311be9"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a86ed8988dd09582240a4c8b58d311be9">generateNonExecutableJson</a></td></tr>
+<tr class="separator:a86ed8988dd09582240a4c8b58d311be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47270d9faa924840950bb4d42588d859"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a47270d9faa924840950bb4d42588d859">prettyPrinting</a></td></tr>
+<tr class="separator:a47270d9faa924840950bb4d42588d859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:aece42661525c35d714c1209a76a34895"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#aece42661525c35d714c1209a76a34895">JSON_NON_EXECUTABLE_PREFIX</a> = &quot;)]}'\n&quot;</td></tr>
+<tr class="separator:aece42661525c35d714c1209a76a34895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This is the main class for using <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>. <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> is typically used by first constructing a <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> instance and then invoking <a class="el" href="">toJson(Object)</a> or <a class="el" href="">fromJson(String, Class)</a> methods on it.</p>
+<p>You can create a <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> instance by invoking</p><div class="fragment"><div class="line"><span class="keyword">new</span> <a class="code" href="classcom_1_1google_1_1gson_1_1_gson.html#a6d3be515bca58ac5da6c075b02a78837">Gson</a>() </div>
+</div><!-- fragment --><p> if the default configuration is all you need. You can also use <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html">GsonBuilder</a> to build a <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> instance with various configuration options such as versioning support, pretty printing, custom <a class="el" href="">JsonSerializer</a>s, <a class="el" href="">JsonDeserializer</a>s, and <a class="el" href="">InstanceCreator</a>s.</p>
+<p>Here is an example of how <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> is used for a simple Class:</p>
+<pre>
+<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> gson = new <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a6d3be515bca58ac5da6c075b02a78837">Gson()</a>; // Or use new GsonBuilder().create();
+MyType target = new MyType();
+String json = gson.toJson(target); // serializes target to Json
+MyType target2 = gson.fromJson(json, MyType.class); // deserializes json into target2
+</pre><p>If the object that your are serializing/deserializing is a</p><div class="fragment"><div class="line">ParameterizedType </div>
+</div><!-- fragment --><p> (i.e. contains at least one type parameter and may be an array) then you must use the <a class="el" href="">toJson(Object, Type)</a> or <a class="el" href="">fromJson(String, Type)</a> method. Here is an example for serializing and deserialing a</p><div class="fragment"><div class="line">ParameterizedType </div>
+</div><!-- fragment --><p> :</p>
+<pre>
+Type listType = new TypeToken&lt;List&lt;String&gt;&gt;() {}.getType();
+List&lt;String&gt; target = new LinkedList&lt;String&gt;();
+target.add("blah");</pre><pre><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> gson = new <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html#a6d3be515bca58ac5da6c075b02a78837">Gson()</a>;
+String json = gson.toJson(target, listType);
+List&lt;String&gt; target2 = gson.fromJson(json, listType);
+</pre><p>See the <a href="https://sites.google.com/site/gson/gson-user-guide">Gson User Guide</a> for a more complete set of examples.</p>
+<dl class="section see"><dt>参见</dt><dd>com.google.gson.reflect.TypeToken</dd></dl>
+<dl class="section author"><dt>作者</dt><dd>Inderjeet Singh </dd>
+<dd>
+Joel Leitch </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a6d3be515bca58ac5da6c075b02a78837"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.Gson.Gson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs a <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> object with default configuration. The default configuration has the following settings: </p><ul>
+<li>
+The JSON generated by <code>toJson</code> methods is in compact representation. This means that all the unneeded white-space is removed. You can change this behavior with <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a630277dd33dd70e624acb70ab6ed21d1">GsonBuilder#setPrettyPrinting()</a>.  </li>
+<li>
+The generated JSON omits all the fields that are null. Note that nulls in arrays are kept as is since an array is an ordered list. Moreover, if a field is not null, but its generated JSON is empty, the field is kept. You can configure <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> to serialize null values by setting <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a714da36aa74c4b5863beb44fc3197104">GsonBuilder#serializeNulls()</a>. </li>
+<li>
+<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> provides default serialization and deserialization for Enums, <a class="el" href="">Map</a>, <a class="el" href="">java.net.URL</a>, <a class="el" href="">java.net.URI</a>, <a class="el" href="">java.util.Locale</a>, <a class="el" href="">java.util.Date</a>, <a class="el" href="">java.math.BigDecimal</a>, and <a class="el" href="">java.math.BigInteger</a> classes. If you would prefer to change the default representation, you can do so by registering a type adapter through <a class="el" href="">GsonBuilder#registerTypeAdapter(Type, Object)</a>.  </li>
+<li>
+The default Date format is same as <a class="el" href="">java.text.DateFormat#DEFAULT</a>. This format ignores the millisecond portion of the date during serialization. You can change this by invoking <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a0a0ef457c673c76ea18c5663e76e3787">GsonBuilder#setDateFormat(int)</a> or <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a407341bbe487e67ac6c3720bc76e0e66">GsonBuilder#setDateFormat(String)</a>.  </li>
+<li>
+By default, <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> ignores the <a class="el" href="">com.google.gson.annotations.Expose</a> annotation. You can enable <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> to serialize/deserialize only those fields marked with this annotation through <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a560cc929af341bb144d6a55712b99b97">GsonBuilder#excludeFieldsWithoutExposeAnnotation()</a>.  </li>
+<li>
+By default, <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> ignores the <a class="el" href="">com.google.gson.annotations.Since</a> annotation. You can enable <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> to use this annotation through <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a39796677873af696b138d5e099d68057">GsonBuilder#setVersion(double)</a>. </li>
+<li>
+The default field naming policy for the output Json is same as in Java. So, a Java class field <code>versionNumber</code> will be output as <code>&quot;versionNumber;</code> in Json. The same rules are applied for mapping incoming Json to the Java classes. You can change this policy through <a class="el" href="classcom_1_1google_1_1gson_1_1_gson_builder.html#a1bfd2a4d10dd22a36d2c964a70ad4d2e">GsonBuilder#setFieldNamingPolicy(FieldNamingPolicy)</a>. </li>
+<li>
+By default, <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> excludes <code>transient</code> or <code>static</code> fields from consideration for serialization and deserialization. You can change this behavior through <a class="el" href="">GsonBuilder#excludeFieldsWithModifiers(int...)</a>. </li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="af634b10d0d18dc8480dd4d30358e949e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.Gson.Gson </td>
+          <td>(</td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td>
+          <td class="paramname"><em>excluder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_field_naming_strategy.html">FieldNamingStrategy</a>&#160;</td>
+          <td class="paramname"><em>fieldNamingPolicy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Map&lt; Type, InstanceCreator&lt;?&gt;&gt;&#160;</td>
+          <td class="paramname"><em>instanceCreators</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serializeNulls</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>complexMapKeySerialization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>generateNonExecutableGson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>htmlSafe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>prettyPrinting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serializeSpecialFloatingPointValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1_long_serialization_policy.html">LongSerializationPolicy</a>&#160;</td>
+          <td class="paramname"><em>longSerializationPolicy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">TypeAdapterFactory</a> &gt;&#160;</td>
+          <td class="paramname"><em>typeAdapterFactories</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a85eb0e99771c566d567a4faadd702708"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.Gson.checkValidFloatingPoint </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac627708470212eb17127268604714edb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeAdapter&lt;Number&gt; com.google.gson.Gson.doubleAdapter </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serializeSpecialFloatingPointValues</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a31f207ecb07d64058299f24d01a8212d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeAdapter&lt;Number&gt; com.google.gson.Gson.floatAdapter </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serializeSpecialFloatingPointValues</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5953c58e8d373ca9edaf2fd30e5bdc1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeAdapter&lt;Number&gt; com.google.gson.Gson.longAdapter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1_long_serialization_policy.html">LongSerializationPolicy</a>&#160;</td>
+          <td class="paramname"><em>longSerializationPolicy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ac0cbf6d86b8fc575687041f40fcaf8aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ThreadLocal&lt;Map&lt;TypeToken&lt;?&gt;, FutureTypeAdapter&lt;?&gt; &gt; &gt; com.google.gson.Gson.calls</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> ThreadLocal&lt;Map&lt;TypeToken&lt;?&gt;, FutureTypeAdapter&lt;?&gt;&gt;&gt;() {</div>
+<div class="line">    @Override <span class="keyword">protected</span> Map&lt;TypeToken&lt;?&gt;, FutureTypeAdapter&lt;?&gt;&gt; initialValue() {</div>
+<div class="line">      <span class="keywordflow">return</span> <span class="keyword">new</span> HashMap&lt;TypeToken&lt;?&gt;, FutureTypeAdapter&lt;?&gt;&gt;();</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+</div><!-- fragment --><p>This thread local guards against reentrant calls to getAdapter(). In certain object graphs, creating an adapter for a type may recursively require an adapter for the same type! Without intervention, the recursive lookup would stack overflow. We cheat by returning a proxy type adapter. The proxy is wired up once the initial adapter has been created. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9a430c3deb80ffb6f9b26b4677a8f21e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_constructor_constructor.html">ConstructorConstructor</a> com.google.gson.Gson.constructorConstructor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa8a30ff061396fceca6af40a2c8b52d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.Gson.DEFAULT_JSON_NON_EXECUTABLE = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7969a20d682cb0fd23c925a6f62022ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_deserialization_context.html">JsonDeserializationContext</a> com.google.gson.Gson.deserializationContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> JsonDeserializationContext() {</div>
+<div class="line">    @SuppressWarnings(<span class="stringliteral">&quot;unchecked&quot;</span>)</div>
+<div class="line">    public &lt;T&gt; T deserialize(JsonElement json, Type typeOfT) throws JsonParseException {</div>
+<div class="line">      <span class="keywordflow">return</span> (T) fromJson(json, typeOfT);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae4af013938c44c7cef7e530c8382f18e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final List&lt;<a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">TypeAdapterFactory</a>&gt; com.google.gson.Gson.factories</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86ed8988dd09582240a4c8b58d311be9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.Gson.generateNonExecutableJson</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9dbf084c9896001d2930f70e51f15795"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.Gson.htmlSafe</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aece42661525c35d714c1209a76a34895"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.google.gson.Gson.JSON_NON_EXECUTABLE_PREFIX = &quot;)]}'\n&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47270d9faa924840950bb4d42588d859"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.Gson.prettyPrinting</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e9e8f24e2112c6682695c8138601aa3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serialization_context.html">JsonSerializationContext</a> com.google.gson.Gson.serializationContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> JsonSerializationContext() {</div>
+<div class="line">    <span class="keyword">public</span> JsonElement serialize(Object src) {</div>
+<div class="line">      <span class="keywordflow">return</span> toJsonTree(src);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span> JsonElement serialize(Object src, Type typeOfSrc) {</div>
+<div class="line">      <span class="keywordflow">return</span> toJsonTree(src, typeOfSrc);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6ee610b1c06590275efb7e7634395a79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.Gson.serializeNulls</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a109a8c6cffcd3c22d135ded63a8e2670"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Map&lt;TypeToken&lt;?&gt;, TypeAdapter&lt;?&gt; &gt; com.google.gson.Gson.typeTokenCache = Collections.synchronizedMap(new HashMap&lt;TypeToken&lt;?&gt;, TypeAdapter&lt;?&gt;&gt;())</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/<a class="el" href="_gson_8java.html">Gson.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

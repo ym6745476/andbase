@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,32 +21,49 @@ import android.os.Handler;
 import android.util.AttributeSet;
 import android.widget.HorizontalScrollView;
 
-import com.ab.view.listener.AbOnScrollListener;
-
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbHorizontalScrollView1.java 
  * 描述：有滚动事件监听的HorizontalScrollView
- * @author zhaoqp
- * @date：2013-11-20 下午3:00:53
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-20 下午3:00:53
  */
 public class AbHorizontalScrollView extends HorizontalScrollView {
 
+	/** The intit position. */
 	private int intitPosition;
+	
+	/** The child width. */
 	private int childWidth = 0;
+	
+	/** The on scroll listner. */
 	private AbOnScrollListener onScrollListner;
 	
+	/**
+	 * Instantiates a new ab horizontal scroll view.
+	 *
+	 * @param context the context
+	 */
 	public AbHorizontalScrollView(Context context) {
 		super(context);
 	}
 	
+	/**
+	 * Instantiates a new ab horizontal scroll view.
+	 *
+	 * @param context the context
+	 * @param attrs the attrs
+	 */
 	public AbHorizontalScrollView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onScrollChanged(int, int, int, int)
+	 */
 	@Override
 	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
 		
@@ -82,10 +99,9 @@ public class AbHorizontalScrollView extends HorizontalScrollView {
 
 	
 	/**
-	 * 
-	 * 描述：设置监听器
-	 * @param listner
-	 * @throws 
+	 * 描述：设置监听器.
+	 *
+	 * @param listner the new on scroll listener
 	 */
 	public void setOnScrollListener(AbOnScrollListener listner) {
 		onScrollListner = listner;
@@ -103,4 +119,33 @@ public class AbHorizontalScrollView extends HorizontalScrollView {
 		}
 	}
 	
+	/**
+	 * 滚动.
+	 *
+	 * @see AbOnScrollEvent
+	 */
+    public interface AbOnScrollListener {
+        
+        /**
+         * 滚动.
+         * @param arg1 返回参数
+         */
+        public void onScroll(int arg1); 
+        
+        /**
+         * 滚动停止.
+         */
+        public void onScrollStoped();
+
+        /**
+         * 滚到了最左边.
+         */
+        public void onScrollToLeft();
+
+        /**
+         * 滚到了最右边.
+         */
+        public void onScrollToRight();
+
+    }
 }

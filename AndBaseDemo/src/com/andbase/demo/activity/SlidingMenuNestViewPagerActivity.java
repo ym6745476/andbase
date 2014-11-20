@@ -10,10 +10,10 @@ import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 /**
  * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：SlidingMenuNestViewPagerActivity.java 
  * 描述：SlidingMenu+ViewPager冲突解决的演示
- * @author zhaoqp
+ * @author 还如一梦中
  * @date：2013-10-25 上午9:15:58
  * @version v1.0
  */
@@ -35,9 +35,9 @@ public class SlidingMenuNestViewPagerActivity extends AbActivity {
 		mAbTitleBar.getLogoView().setBackgroundResource(R.drawable.button_selector_menu);
 		
         //主视图的Fragment添加
-		getSupportFragmentManager()
+		getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.content_frame, new Fragment3())
+		.replace(R.id.content_frame, new FragmentLoad())
 		.commit();
 
 		//SlidingMenu的配置
@@ -56,9 +56,9 @@ public class SlidingMenuNestViewPagerActivity extends AbActivity {
 		
 		//menu视图的Fragment添加
 		menu.setMenu(R.layout.sliding_menu_menu);
-		getSupportFragmentManager()
+		getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame, new Fragment1())
+		.replace(R.id.menu_frame, new FragmentLoad())
 		.commit();
 		
 		mAbTitleBar.getLogoView().setOnClickListener(new OnClickListener() {

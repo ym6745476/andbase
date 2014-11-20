@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="加载中..."
-                android:textColor="@color/gray_black"
+                android:textColor="@color/gray_dark"
                 android:textSize="14dip" />
         </LinearLayout>
 
@@ -62,7 +62,7 @@
             android:layout_marginLeft="20dip"
             android:layout_marginRight="20dip"
             android:layout_toRightOf="@+id/userLayout"
-            android:background="@drawable/chat_left_bg"
+            android:background="@drawable/im_chat_from_bg"
             android:orientation="vertical" >
 
             <TextView
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="加载中..."
-                android:textColor="@color/gray_black"
+                android:textColor="@color/gray_dark"
                 android:textSize="16dip" />
 
             <ImageView

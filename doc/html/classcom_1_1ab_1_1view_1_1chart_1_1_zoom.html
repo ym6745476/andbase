@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.Zoom类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html">Zoom</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.Zoom类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.Zoom 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.png" usemap="#com.ab.view.chart.Zoom_map" alt=""/>
+  <map id="com.ab.view.chart.Zoom_map" name="com.ab.view.chart.Zoom_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html" alt="com.ab.view.chart.AbstractTool" shape="rect" coords="0,0,191,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afaf6d7f511aa2124868f2497779bc091"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#afaf6d7f511aa2124868f2497779bc091">Zoom</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">AbstractChart</a> chart, boolean in, float rate)</td></tr>
+<tr class="separator:afaf6d7f511aa2124868f2497779bc091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea77d181f51bdf2a0d096f33a699fef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#aea77d181f51bdf2a0d096f33a699fef6">setZoomRate</a> (float rate)</td></tr>
+<tr class="separator:aea77d181f51bdf2a0d096f33a699fef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0483f8a6e6a27fc7bb6fa7350da825d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#a0483f8a6e6a27fc7bb6fa7350da825d7">apply</a> (int zoom_axis)</td></tr>
+<tr class="separator:a0483f8a6e6a27fc7bb6fa7350da825d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c3caa9701ad5000e0af348d74f8c59"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#af2c3caa9701ad5000e0af348d74f8c59">notifyZoomResetListeners</a> ()</td></tr>
+<tr class="separator:af2c3caa9701ad5000e0af348d74f8c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76787375b9cbef5581258a37ce87f17c"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#a76787375b9cbef5581258a37ce87f17c">addZoomListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a> listener)</td></tr>
+<tr class="separator:a76787375b9cbef5581258a37ce87f17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad886f43734c126c0d9aaffe300422022"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#ad886f43734c126c0d9aaffe300422022">removeZoomListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a> listener)</td></tr>
+<tr class="separator:ad886f43734c126c0d9aaffe300422022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html">com.ab.view.chart.AbstractTool</a></td></tr>
+<tr class="memitem:aac464cbc96aafffd15afb7a61bb09f73 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#aac464cbc96aafffd15afb7a61bb09f73">AbstractTool</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">AbstractChart</a> chart)</td></tr>
+<tr class="separator:aac464cbc96aafffd15afb7a61bb09f73 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2db229a7c67dc2d70dbce73be4968c5 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top">double[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#ac2db229a7c67dc2d70dbce73be4968c5">getRange</a> (int scale)</td></tr>
+<tr class="separator:ac2db229a7c67dc2d70dbce73be4968c5 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa683d573edca9417dceae9eee6ed2297 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#aa683d573edca9417dceae9eee6ed2297">checkRange</a> (double[] range, int scale)</td></tr>
+<tr class="separator:aa683d573edca9417dceae9eee6ed2297 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ab85d5434f96496bff1be814c2bce35be"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#ab85d5434f96496bff1be814c2bce35be">ZOOM_AXIS_XY</a> = 0</td></tr>
+<tr class="separator:ab85d5434f96496bff1be814c2bce35be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24ec6072d0685c3854cc872212214c3"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#ad24ec6072d0685c3854cc872212214c3">ZOOM_AXIS_X</a> = 1</td></tr>
+<tr class="separator:ad24ec6072d0685c3854cc872212214c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd785a79277cd5829a22656f0bf8b99"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#a6fd785a79277cd5829a22656f0bf8b99">ZOOM_AXIS_Y</a> = 2</td></tr>
+<tr class="separator:a6fd785a79277cd5829a22656f0bf8b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a0471e3d68a802138dfa31143407ca1e4"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#a0471e3d68a802138dfa31143407ca1e4">notifyZoomListeners</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom_event.html">ZoomEvent</a> e)</td></tr>
+<tr class="separator:a0471e3d68a802138dfa31143407ca1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a37e4ed1dcf5bedbfa38b75ecf31336f7"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#a37e4ed1dcf5bedbfa38b75ecf31336f7">mZoomIn</a></td></tr>
+<tr class="separator:a37e4ed1dcf5bedbfa38b75ecf31336f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a507aebc12bed072cc1ec407162d96"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#ac9a507aebc12bed072cc1ec407162d96">mZoomRate</a></td></tr>
+<tr class="separator:ac9a507aebc12bed072cc1ec407162d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39567abf8104d87b2d29db0d87999b98"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#a39567abf8104d87b2d29db0d87999b98">mZoomListeners</a> = new ArrayList&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a>&gt;()</td></tr>
+<tr class="separator:a39567abf8104d87b2d29db0d87999b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda9af6a59189dea028523c1c44e63ce"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#acda9af6a59189dea028523c1c44e63ce">limitsReachedX</a> = false</td></tr>
+<tr class="separator:acda9af6a59189dea028523c1c44e63ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55b61ec575211eece1921ecc8344246"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html#ac55b61ec575211eece1921ecc8344246">limitsReachedY</a> = false</td></tr>
+<tr class="separator:ac55b61ec575211eece1921ecc8344246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html">com.ab.view.chart.AbstractTool</a></td></tr>
+<tr class="memitem:af8c2b31cdb28e8728b5a5291c2dbabad inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#af8c2b31cdb28e8728b5a5291c2dbabad">setXRange</a> (double min, double max, int scale)</td></tr>
+<tr class="separator:af8c2b31cdb28e8728b5a5291c2dbabad inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd63f5a84cd3067984017b6a76f96539 inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#abd63f5a84cd3067984017b6a76f96539">setYRange</a> (double min, double max, int scale)</td></tr>
+<tr class="separator:abd63f5a84cd3067984017b6a76f96539 inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html">com.ab.view.chart.AbstractTool</a></td></tr>
+<tr class="memitem:ab763c5e39c10bb39b296105d171844a9 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">AbstractChart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#ab763c5e39c10bb39b296105d171844a9">mChart</a></td></tr>
+<tr class="separator:ab763c5e39c10bb39b296105d171844a9 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984de24c5cbdf50a1c32679df6878598 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_multiple_series_renderer.html">XYMultipleSeriesRenderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool.html#a984de24c5cbdf50a1c32679df6878598">mRenderer</a></td></tr>
+<tr class="separator:a984de24c5cbdf50a1c32679df6878598 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The zoom tool. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="afaf6d7f511aa2124868f2497779bc091"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.chart.Zoom.Zoom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">AbstractChart</a>&#160;</td>
+          <td class="paramname"><em>chart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds the zoom tool.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chart</td><td>the chart </td></tr>
+    <tr><td class="paramname">in</td><td>zoom in or out </td></tr>
+    <tr><td class="paramname">rate</td><td>the zoom rate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a76787375b9cbef5581258a37ce87f17c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.Zoom.addZoomListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a new zoom listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>zoom listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0483f8a6e6a27fc7bb6fa7350da825d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.Zoom.apply </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zoom_axis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Apply the zoom.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoom_axis</td><td>the zoom_axis </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0471e3d68a802138dfa31143407ca1e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.Zoom.notifyZoomListeners </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom_event.html">ZoomEvent</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notify the zoom listeners about a zoom change.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>the zoom event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af2c3caa9701ad5000e0af348d74f8c59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.Zoom.notifyZoomResetListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notify the zoom listeners about a zoom reset. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad886f43734c126c0d9aaffe300422022"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.Zoom.removeZoomListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a zoom listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>zoom listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aea77d181f51bdf2a0d096f33a699fef6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.Zoom.setZoomRate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the zoom rate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rate</td><td>the new zoom rate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acda9af6a59189dea028523c1c44e63ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.Zoom.limitsReachedX = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html">Zoom</a> limits reached on the X axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac55b61ec575211eece1921ecc8344246"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.Zoom.limitsReachedY = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html">Zoom</a> limits reached on the Y axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="a37e4ed1dcf5bedbfa38b75ecf31336f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.Zoom.mZoomIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag to be used to know if this is a zoom in or out. </p>
+
+</div>
+</div>
+<a class="anchor" id="a39567abf8104d87b2d29db0d87999b98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a>&gt; com.ab.view.chart.Zoom.mZoomListeners = new ArrayList&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1chart_1_1_zoom_listener.html">ZoomListener</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The zoom listeners. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9a507aebc12bed072cc1ec407162d96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.Zoom.mZoomRate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The zoom rate. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad24ec6072d0685c3854cc872212214c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.Zoom.ZOOM_AXIS_X = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html">Zoom</a> on X axis independently. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab85d5434f96496bff1be814c2bce35be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.Zoom.ZOOM_AXIS_XY = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html">Zoom</a> on X axis and Y axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6fd785a79277cd5829a22656f0bf8b99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.Zoom.ZOOM_AXIS_Y = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_zoom.html">Zoom</a> on Y axis independently. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_zoom_8java.html">Zoom.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

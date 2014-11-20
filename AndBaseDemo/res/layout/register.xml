@@ -32,6 +32,7 @@
                 android:inputType="text"
                 android:singleLine="true"
                 android:maxLength="20"
+                android:paddingBottom="10dip"
                 android:textColor="@color/gray"
                 android:textSize="18sp" />
 
@@ -40,8 +41,7 @@
                 android:layout_width="25dip"
                 android:layout_height="25dip"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="12dip"
+                android:layout_marginRight="10dip"
                 android:background="@drawable/clear_icon"
                 android:visibility="invisible" />
         </RelativeLayout>
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:layout_marginTop="10dip" >
+            android:layout_marginTop="20dip" >
 
             <EditText
                 android:id="@+id/userPwd"
@@ -63,6 +63,7 @@
                 android:inputType="textPassword"
                 android:singleLine="true"
                 android:maxLength="20"
+                android:paddingBottom="10dip"
                 android:textColor="@color/gray"
                 android:textSize="18sp" >
             </EditText>
@@ -72,8 +73,7 @@
                 android:layout_width="25dip"
                 android:layout_height="25dip"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="12dip"
+                android:layout_marginRight="10dip"
                 android:background="@drawable/clear_icon"
                 android:visibility="invisible" />
         </RelativeLayout>
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:layout_marginTop="10dip" >
+            android:layout_marginTop="20dip" >
 
             <EditText
                 android:id="@+id/userPwd2"
@@ -93,6 +93,7 @@
                 android:gravity="center_vertical"
                 android:hint="@string/firm_pwd"
                 android:inputType="textPassword"
+                android:paddingBottom="10dip"
                 android:singleLine="true"
                 android:maxLength="20"
                 android:textColor="@color/gray"
@@ -104,8 +105,7 @@
                 android:layout_width="25dip"
                 android:layout_height="25dip"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="12dip"
+                android:layout_marginRight="10dip"
                 android:background="@drawable/clear_icon"
                 android:visibility="invisible" />
         </RelativeLayout>
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:layout_marginTop="10dip" >
+            android:layout_marginTop="20dip" >
 
             <EditText
                 android:id="@+id/email"
@@ -127,6 +127,7 @@
                 android:inputType="textEmailAddress"
                 android:singleLine="true"
                 android:maxLength="20"
+                android:paddingBottom="10dip"
                 android:textColor="@color/gray"
                 android:textSize="18sp" >
             </EditText>
@@ -136,8 +137,7 @@
                 android:layout_width="25dip"
                 android:layout_height="25dip"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="12dip"
+                android:layout_marginRight="10dip"
                 android:background="@drawable/clear_icon"
                 android:visibility="invisible" />
         </RelativeLayout>

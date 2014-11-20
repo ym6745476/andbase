@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.internal.$Types.WildcardTypeImpl类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html">$Types</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html">WildcardTypeImpl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.internal.$Types.WildcardTypeImpl类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.internal.$Types.WildcardTypeImpl 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.png" usemap="#com.google.gson.internal.$Types.WildcardTypeImpl_map" alt=""/>
+  <map id="com.google.gson.internal.$Types.WildcardTypeImpl_map" name="com.google.gson.internal.$Types.WildcardTypeImpl_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae1b97b43ee4b25b11e966bb50acf759a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#ae1b97b43ee4b25b11e966bb50acf759a">WildcardTypeImpl</a> (Type[] upperBounds, Type[] lowerBounds)</td></tr>
+<tr class="separator:ae1b97b43ee4b25b11e966bb50acf759a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b187f122ffc0fecd963d4e494eacbd"><td class="memItemLeft" align="right" valign="top">Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#a92b187f122ffc0fecd963d4e494eacbd">getUpperBounds</a> ()</td></tr>
+<tr class="separator:a92b187f122ffc0fecd963d4e494eacbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef87c32c91f265ce93b5aeee5c231e5"><td class="memItemLeft" align="right" valign="top">Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#a4ef87c32c91f265ce93b5aeee5c231e5">getLowerBounds</a> ()</td></tr>
+<tr class="separator:a4ef87c32c91f265ce93b5aeee5c231e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ac3dcd5bb05c7c7c1da852d2232283"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#ae8ac3dcd5bb05c7c7c1da852d2232283">equals</a> (Object other)</td></tr>
+<tr class="separator:ae8ac3dcd5bb05c7c7c1da852d2232283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ffd42404770d6c4f4367d405a677dab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#a4ffd42404770d6c4f4367d405a677dab">hashCode</a> ()</td></tr>
+<tr class="separator:a4ffd42404770d6c4f4367d405a677dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f04ef8fee22e0acbe65f1cf4007dd1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#a52f04ef8fee22e0acbe65f1cf4007dd1">toString</a> ()</td></tr>
+<tr class="separator:a52f04ef8fee22e0acbe65f1cf4007dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:afb1ed2819139de54d2814d717e8fa8af"><td class="memItemLeft" align="right" valign="top">final Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#afb1ed2819139de54d2814d717e8fa8af">upperBound</a></td></tr>
+<tr class="separator:afb1ed2819139de54d2814d717e8fa8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5aa0af3612884cfc0f30f21b97b617"><td class="memItemLeft" align="right" valign="top">final Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#a8b5aa0af3612884cfc0f30f21b97b617">lowerBound</a></td></tr>
+<tr class="separator:a8b5aa0af3612884cfc0f30f21b97b617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a4db300abb64895ca0671a188cc8e5df5"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html#a4db300abb64895ca0671a188cc8e5df5">serialVersionUID</a> = 0</td></tr>
+<tr class="separator:a4db300abb64895ca0671a188cc8e5df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The WildcardType interface supports multiple upper bounds and multiple lower bounds. We only support what the Java 6 language needs - at most one bound. If a lower bound is set, the upper bound must be Object.class. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae1b97b43ee4b25b11e966bb50acf759a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.internal.$Types.WildcardTypeImpl.WildcardTypeImpl </td>
+          <td>(</td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>upperBounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type[]&#160;</td>
+          <td class="paramname"><em>lowerBounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ae8ac3dcd5bb05c7c7c1da852d2232283"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.$Types.WildcardTypeImpl.equals </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4ef87c32c91f265ce93b5aeee5c231e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type [] com.google.gson.internal.$Types.WildcardTypeImpl.getLowerBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a92b187f122ffc0fecd963d4e494eacbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type [] com.google.gson.internal.$Types.WildcardTypeImpl.getUpperBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4ffd42404770d6c4f4367d405a677dab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.internal.$Types.WildcardTypeImpl.hashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a52f04ef8fee22e0acbe65f1cf4007dd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.internal.$Types.WildcardTypeImpl.toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a8b5aa0af3612884cfc0f30f21b97b617"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Type com.google.gson.internal.$Types.WildcardTypeImpl.lowerBound</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4db300abb64895ca0671a188cc8e5df5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long com.google.gson.internal.$Types.WildcardTypeImpl.serialVersionUID = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afb1ed2819139de54d2814d717e8fa8af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Type com.google.gson.internal.$Types.WildcardTypeImpl.upperBound</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/internal/<a class="el" href="_0B_gson_0B_types_8java.html">$Gson$Types.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

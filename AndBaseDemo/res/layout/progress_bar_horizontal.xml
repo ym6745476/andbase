@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:background="@color/gray_white"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:paddingTop="10dip">
 
     <com.ab.view.progress.AbHorizontalProgressBar
         android:id="@+id/horizontalProgressBar"

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,18 @@
 package com.ab.global;
 
 
+
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbAppData.
+ * © 2012 amsoft.cn
+ * 名称：AbAppData.java 
+ * 描述：全局的数据变量保存类.
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-10-16 下午1:33:39
  */
 public class AbAppData {
 	
-	/** 日志开关. */
-	public static  boolean DEBUG = false;
-	
-	/** 性能测试. */
-	public static boolean mMonitorOpened = false;
-	
-	/** 起始执行时间. */
-	public static long startLogTimeInMillis = 0;
 
 }

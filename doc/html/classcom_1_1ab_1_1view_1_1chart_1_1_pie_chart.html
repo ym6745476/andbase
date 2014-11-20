@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.PieChart类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.PieChart类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.PieChart 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.png" usemap="#com.ab.view.chart.PieChart_map" alt=""/>
+  <map id="com.ab.view.chart.PieChart_map" name="com.ab.view.chart.PieChart_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html" alt="com.ab.view.chart.RoundChart" shape="rect" coords="0,112,198,136"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html" alt="com.ab.view.chart.AbstractChart" shape="rect" coords="0,56,198,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2cf29c40f1b9e2d892e7b40b6eebd20a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html#a2cf29c40f1b9e2d892e7b40b6eebd20a">PieChart</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html">CategorySeries</a> dataset, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer)</td></tr>
+<tr class="separator:a2cf29c40f1b9e2d892e7b40b6eebd20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94943d3db1f0910f57d8d26f152dfba3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html#a94943d3db1f0910f57d8d26f152dfba3">draw</a> (Canvas canvas, int x, int y, int width, int height, Paint paint)</td></tr>
+<tr class="separator:a94943d3db1f0910f57d8d26f152dfba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39b65203eacb8a9902b6f409dec944c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html#ae39b65203eacb8a9902b6f409dec944c">getSeriesAndPointForScreenCoordinate</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> screenPoint)</td></tr>
+<tr class="separator:ae39b65203eacb8a9902b6f409dec944c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html">com.ab.view.chart.RoundChart</a></td></tr>
+<tr class="memitem:ae6d98fa762933199cdf645e7aee06d0a inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#ae6d98fa762933199cdf645e7aee06d0a">RoundChart</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html">CategorySeries</a> dataset, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer)</td></tr>
+<tr class="separator:ae6d98fa762933199cdf645e7aee06d0a inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7fd3f2dccb0578bcf1f803daa68df9 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#afc7fd3f2dccb0578bcf1f803daa68df9">drawTitle</a> (Canvas canvas, int x, int y, int width, Paint paint)</td></tr>
+<tr class="separator:afc7fd3f2dccb0578bcf1f803daa68df9 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89ce09628b4f51d3899a4165ee36450 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#ab89ce09628b4f51d3899a4165ee36450">getLegendShapeWidth</a> (int seriesIndex)</td></tr>
+<tr class="separator:ab89ce09628b4f51d3899a4165ee36450 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7d84a14f5704c8ce632d991df06f24 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a8a7d84a14f5704c8ce632d991df06f24">drawLegendShape</a> (Canvas canvas, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> renderer, float x, float y, int seriesIndex, Paint paint)</td></tr>
+<tr class="separator:a8a7d84a14f5704c8ce632d991df06f24 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18c97560a3960553b44360e56889a25 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#ab18c97560a3960553b44360e56889a25">getRenderer</a> ()</td></tr>
+<tr class="separator:ab18c97560a3960553b44360e56889a25 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cef65b04c0d78d092f7bb616a7f7fa inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a56cef65b04c0d78d092f7bb616a7f7fa">getCenterX</a> ()</td></tr>
+<tr class="separator:a56cef65b04c0d78d092f7bb616a7f7fa inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a30ac05a6a0ac7cf06964577e501c1c inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a6a30ac05a6a0ac7cf06964577e501c1c">getCenterY</a> ()</td></tr>
+<tr class="separator:a6a30ac05a6a0ac7cf06964577e501c1c inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0de02d6be546951715a930a165a807 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a7b0de02d6be546951715a930a165a807">setCenterX</a> (int centerX)</td></tr>
+<tr class="separator:a7b0de02d6be546951715a930a165a807 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477c14d321e7348ad53a10efdee4d028 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a477c14d321e7348ad53a10efdee4d028">setCenterY</a> (int centerY)</td></tr>
+<tr class="separator:a477c14d321e7348ad53a10efdee4d028 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">com.ab.view.chart.AbstractChart</a></td></tr>
+<tr class="memitem:af054c3acb60596913f260b6e22ea366f inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#af054c3acb60596913f260b6e22ea366f">draw</a> (Canvas canvas, int x, int y, int width, int height, Paint paint)</td></tr>
+<tr class="separator:af054c3acb60596913f260b6e22ea366f inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16a9f8f70a8b73490163ccccd670d82 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#af16a9f8f70a8b73490163ccccd670d82">isVertical</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer)</td></tr>
+<tr class="separator:af16a9f8f70a8b73490163ccccd670d82 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac4718fecc2beedd6388d937c407f78 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">abstract int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a3ac4718fecc2beedd6388d937c407f78">getLegendShapeWidth</a> (int seriesIndex)</td></tr>
+<tr class="separator:a3ac4718fecc2beedd6388d937c407f78 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab374c9f60ac0ed37c8df5e6dbf02da7e inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ab374c9f60ac0ed37c8df5e6dbf02da7e">drawLegendShape</a> (Canvas canvas, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> renderer, float x, float y, int seriesIndex, Paint paint)</td></tr>
+<tr class="separator:ab374c9f60ac0ed37c8df5e6dbf02da7e inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a73887f5c98d7665e03fca80ae6d528 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a1a73887f5c98d7665e03fca80ae6d528">isNullValue</a> (double value)</td></tr>
+<tr class="separator:a1a73887f5c98d7665e03fca80ae6d528 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee00e68d53c802a49f246b133118799 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a7ee00e68d53c802a49f246b133118799">getSeriesAndPointForScreenCoordinate</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> screenPoint)</td></tr>
+<tr class="separator:a7ee00e68d53c802a49f246b133118799 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9f55445a6c62427a6b910b591b3b67ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html">PieMapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html#a9f55445a6c62427a6b910b591b3b67ad">mPieMapper</a></td></tr>
+<tr class="separator:a9f55445a6c62427a6b910b591b3b67ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">com.ab.view.chart.AbstractChart</a></td></tr>
+<tr class="memitem:a65b1ab1278cced23bbb9847984e10d8e inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a65b1ab1278cced23bbb9847984e10d8e">drawBackground</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, Canvas canvas, int x, int y, int width, int height, Paint paint, boolean newColor, int color)</td></tr>
+<tr class="separator:a65b1ab1278cced23bbb9847984e10d8e inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af639f66e8f1c6d4bde627a5eb39c4a2f inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#af639f66e8f1c6d4bde627a5eb39c4a2f">drawLegend</a> (Canvas canvas, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, String[] titles, int left, int right, int y, int width, int height, int legendSize, Paint paint, boolean calculate)</td></tr>
+<tr class="separator:af639f66e8f1c6d4bde627a5eb39c4a2f inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fd347a5fc04a918aa9e8947feff30f inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ad4fd347a5fc04a918aa9e8947feff30f">drawString</a> (Canvas canvas, String text, float x, float y, Paint paint)</td></tr>
+<tr class="separator:ad4fd347a5fc04a918aa9e8947feff30f inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8753d03b9e985441d3a9aae3d05fc73 inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ad8753d03b9e985441d3a9aae3d05fc73">getExceed</a> (float currentWidth, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, int right, int width)</td></tr>
+<tr class="separator:ad8753d03b9e985441d3a9aae3d05fc73 inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b4ea39a213f82dcbdac68ac15d2cdb inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ad8b4ea39a213f82dcbdac68ac15d2cdb">getLabel</a> (double label)</td></tr>
+<tr class="separator:ad8b4ea39a213f82dcbdac68ac15d2cdb inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e139450f9a4cbb467a3b9ed3a1a1ad inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ab3e139450f9a4cbb467a3b9ed3a1a1ad">drawPath</a> (Canvas canvas, float[] points, Paint paint, boolean circular)</td></tr>
+<tr class="separator:ab3e139450f9a4cbb467a3b9ed3a1a1ad inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9264f7572afe231948e06fb7bb6f09b3 inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a9264f7572afe231948e06fb7bb6f09b3">getLegendSize</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, int defaultHeight, float extraHeight)</td></tr>
+<tr class="separator:a9264f7572afe231948e06fb7bb6f09b3 inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960e00103da9bf458aad6101e091009c inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a960e00103da9bf458aad6101e091009c">drawLabel</a> (Canvas canvas, String labelText, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, List&lt; RectF &gt; prevLabelsBounds, int centerX, int centerY, float shortRadius, float longRadius, float currentAngle, float angle, int left, int right, int color, Paint paint, boolean line)</td></tr>
+<tr class="separator:a960e00103da9bf458aad6101e091009c inherit pro_methods_classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html">com.ab.view.chart.RoundChart</a></td></tr>
+<tr class="memitem:a820907363e2291d62d0c1c7ab907ae6b inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html">CategorySeries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a820907363e2291d62d0c1c7ab907ae6b">mDataset</a></td></tr>
+<tr class="separator:a820907363e2291d62d0c1c7ab907ae6b inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3683657fcf04d68f40d9e1f67f0075ea inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a3683657fcf04d68f40d9e1f67f0075ea">mRenderer</a></td></tr>
+<tr class="separator:a3683657fcf04d68f40d9e1f67f0075ea inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ef81a370e8a422a27dc9c0598709a4 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a17ef81a370e8a422a27dc9c0598709a4">mCenterX</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a10ceadcd3b4ec5da86e0c53a7c731c06">NO_VALUE</a></td></tr>
+<tr class="separator:a17ef81a370e8a422a27dc9c0598709a4 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404bf8e89e9a1ce74533f02fabe60a11 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a404bf8e89e9a1ce74533f02fabe60a11">mCenterY</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a10ceadcd3b4ec5da86e0c53a7c731c06">NO_VALUE</a></td></tr>
+<tr class="separator:a404bf8e89e9a1ce74533f02fabe60a11 inherit pro_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart')"><img src="closed.png" alt="-"/>&#160;静态 Protected 属性 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html">com.ab.view.chart.RoundChart</a></td></tr>
+<tr class="memitem:a19c6940d1267b03014985626c0000588 inherit pro_static_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a19c6940d1267b03014985626c0000588">SHAPE_WIDTH</a> = 10</td></tr>
+<tr class="separator:a19c6940d1267b03014985626c0000588 inherit pro_static_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ceadcd3b4ec5da86e0c53a7c731c06 inherit pro_static_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html#a10ceadcd3b4ec5da86e0c53a7c731c06">NO_VALUE</a> = Integer.MAX_VALUE</td></tr>
+<tr class="separator:a10ceadcd3b4ec5da86e0c53a7c731c06 inherit pro_static_attribs_classcom_1_1ab_1_1view_1_1chart_1_1_round_chart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The pie chart rendering class. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a2cf29c40f1b9e2d892e7b40b6eebd20a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.chart.PieChart.PieChart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html">CategorySeries</a>&#160;</td>
+          <td class="paramname"><em>dataset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a new pie chart instance.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataset</td><td>the series dataset </td></tr>
+    <tr><td class="paramname">renderer</td><td>the series renderer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a94943d3db1f0910f57d8d26f152dfba3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.PieChart.draw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The graphical representation of the pie chart.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">x</td><td>the top left x value of the view to draw to </td></tr>
+    <tr><td class="paramname">y</td><td>the top left y value of the view to draw to </td></tr>
+    <tr><td class="paramname">width</td><td>the width of the view to draw to </td></tr>
+    <tr><td class="paramname">height</td><td>the height of the view to draw to </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae39b65203eacb8a9902b6f409dec944c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a> com.ab.view.chart.PieChart.getSeriesAndPointForScreenCoordinate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>the screen point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the series and point for screen coordinate </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a7ee00e68d53c802a49f246b133118799">com.ab.view.chart.AbstractChart::getSeriesAndPointForScreenCoordinate</a>(<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">com.ab.view.chart.Point</a>) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-6-17 上午9:04:46 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a9f55445a6c62427a6b910b591b3b67ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html">PieMapper</a> com.ab.view.chart.PieChart.mPieMapper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handles returning values when tapping on <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a>. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_pie_chart_8java.html">PieChart.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

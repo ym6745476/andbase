@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,13 @@ import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbTableHelper.
+ * © 2012 amsoft.cn
+ * 名称：AbTableHelper.java 
+ * 描述：数据库辅助类
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-5-23 上午10:10:53
  */
 public class AbTableHelper {
 	

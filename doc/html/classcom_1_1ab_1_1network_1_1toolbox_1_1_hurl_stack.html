@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.network.toolbox.HurlStack类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network.html">network</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html">HurlStack</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.network.toolbox.HurlStack类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.network.toolbox.HurlStack 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.png" usemap="#com.ab.network.toolbox.HurlStack_map" alt=""/>
+  <map id="com.ab.network.toolbox.HurlStack_map" name="com.ab.network.toolbox.HurlStack_map">
+<area href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html" alt="com.ab.network.toolbox.HttpStack" shape="rect" coords="0,0,204,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4d33b270844cde53b455759bf77606ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#a4d33b270844cde53b455759bf77606ca">HurlStack</a> ()</td></tr>
+<tr class="separator:a4d33b270844cde53b455759bf77606ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63d5495c3dfc56f70fa6da93be74f03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#af63d5495c3dfc56f70fa6da93be74f03">HurlStack</a> (<a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a> urlRewriter)</td></tr>
+<tr class="separator:af63d5495c3dfc56f70fa6da93be74f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131da9ea24abf0148025ec730dcd1552"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#a131da9ea24abf0148025ec730dcd1552">HurlStack</a> (<a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a> urlRewriter, SSLSocketFactory sslSocketFactory)</td></tr>
+<tr class="separator:a131da9ea24abf0148025ec730dcd1552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42df5b2db5c494c715b26c7c106a88a"><td class="memItemLeft" align="right" valign="top">HttpResponse&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#ad42df5b2db5c494c715b26c7c106a88a">performRequest</a> (Request&lt;?&gt; request, Map&lt; String, String &gt; additionalHeaders)  throws IOException, AuthFailureError </td></tr>
+<tr class="separator:ad42df5b2db5c494c715b26c7c106a88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a140059f20059c3b53a63634099b911c4"><td class="memItemLeft" align="right" valign="top">HttpURLConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#a140059f20059c3b53a63634099b911c4">createConnection</a> (URL url)  throws IOException </td></tr>
+<tr class="separator:a140059f20059c3b53a63634099b911c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a1124cf2cf861917a8094277f95196000"><td class="memItemLeft" align="right" valign="top">HttpURLConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#a1124cf2cf861917a8094277f95196000">openConnection</a> (URL url, Request&lt;?&gt; request)  throws IOException </td></tr>
+<tr class="separator:a1124cf2cf861917a8094277f95196000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ac30604efc8c7ee42c2b85d8d3ee9c99d"><td class="memItemLeft" align="right" valign="top">static HttpEntity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#ac30604efc8c7ee42c2b85d8d3ee9c99d">entityFromConnection</a> (HttpURLConnection connection)</td></tr>
+<tr class="separator:ac30604efc8c7ee42c2b85d8d3ee9c99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2f6a1c2eaf69644c384945daccb7ec39"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#a2f6a1c2eaf69644c384945daccb7ec39">mUrlRewriter</a></td></tr>
+<tr class="separator:a2f6a1c2eaf69644c384945daccb7ec39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e80f1812a24180bf6dc4db658e2017"><td class="memItemLeft" align="right" valign="top">final SSLSocketFactory&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#a31e80f1812a24180bf6dc4db658e2017">mSslSocketFactory</a></td></tr>
+<tr class="separator:a31e80f1812a24180bf6dc4db658e2017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:af1ac9ffa64178184de1cf2d3ecbb1e9a"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack.html#af1ac9ffa64178184de1cf2d3ecbb1e9a">HEADER_CONTENT_TYPE</a> = &quot;Content-Type&quot;</td></tr>
+<tr class="separator:af1ac9ffa64178184de1cf2d3ecbb1e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a> based on <a class="el" href="">HttpURLConnection</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a4d33b270844cde53b455759bf77606ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.HurlStack.HurlStack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af63d5495c3dfc56f70fa6da93be74f03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.HurlStack.HurlStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a>&#160;</td>
+          <td class="paramname"><em>urlRewriter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">urlRewriter</td><td>Rewriter to use for request URLs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a131da9ea24abf0148025ec730dcd1552"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.HurlStack.HurlStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a>&#160;</td>
+          <td class="paramname"><em>urlRewriter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SSLSocketFactory&#160;</td>
+          <td class="paramname"><em>sslSocketFactory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">urlRewriter</td><td>Rewriter to use for request URLs </td></tr>
+    <tr><td class="paramname">sslSocketFactory</td><td>SSL factory to use for HTTPS connections </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a140059f20059c3b53a63634099b911c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpURLConnection com.ab.network.toolbox.HurlStack.createConnection </td>
+          <td>(</td>
+          <td class="paramtype">URL&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create an <a class="el" href="">HttpURLConnection</a> for the specified</p><div class="fragment"><div class="line">url </div>
+</div><!-- fragment --><p> . </p>
+
+</div>
+</div>
+<a class="anchor" id="ac30604efc8c7ee42c2b85d8d3ee9c99d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static HttpEntity com.ab.network.toolbox.HurlStack.entityFromConnection </td>
+          <td>(</td>
+          <td class="paramtype">HttpURLConnection&#160;</td>
+          <td class="paramname"><em>connection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes an <a class="el" href="">HttpEntity</a> from the given <a class="el" href="">HttpURLConnection</a>. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>an HttpEntity populated with data from <code>connection</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1124cf2cf861917a8094277f95196000"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpURLConnection com.ab.network.toolbox.HurlStack.openConnection </td>
+          <td>(</td>
+          <td class="paramtype">URL&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Request&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Opens an <a class="el" href="">HttpURLConnection</a> with parameters. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>an open connection </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad42df5b2db5c494c715b26c7c106a88a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpResponse com.ab.network.toolbox.HurlStack.performRequest </td>
+          <td>(</td>
+          <td class="paramtype">Request&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>additionalHeaders</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException, AuthFailureError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Performs an HTTP request with the given parameters.</p>
+<p>A GET request is sent if request.getPostBody() == null. A POST request is sent otherwise, and the Content-Type header is set to request.getPostBodyContentType().</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>the request to perform </td></tr>
+    <tr><td class="paramname">additionalHeaders</td><td>additional headers to be sent together with <a class="el" href="">Request#getHeaders()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the HTTP response </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html#ac2860ecd15f39d3889dcd47d20f2cb92">com.ab.network.toolbox.HttpStack</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af1ac9ffa64178184de1cf2d3ecbb1e9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.network.toolbox.HurlStack.HEADER_CONTENT_TYPE = &quot;Content-Type&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a31e80f1812a24180bf6dc4db658e2017"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final SSLSocketFactory com.ab.network.toolbox.HurlStack.mSslSocketFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f6a1c2eaf69644c384945daccb7ec39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html">UrlRewriter</a> com.ab.network.toolbox.HurlStack.mUrlRewriter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/network/toolbox/<a class="el" href="_hurl_stack_8java.html">HurlStack.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

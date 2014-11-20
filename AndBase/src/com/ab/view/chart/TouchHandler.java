@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -143,12 +143,12 @@ public class TouchHandler implements ITouchHandler {
   /**
    * 描述：标尺滑动和比例缩放的点击的事件.
    *
+   * @version v1.0
    * @param event the event
    * @return true, if successful
    * @see com.ab.view.chart.ITouchHandler#handleTouchControl(android.view.MotionEvent)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-7 上午9:56:06
-   * @version v1.0
    */
   @Override
   public boolean handleTouchControl(MotionEvent event) {

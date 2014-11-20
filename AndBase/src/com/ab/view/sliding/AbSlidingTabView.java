@@ -1,18 +1,32 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.sliding;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,40 +35,45 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ab.adapter.AbFragmentPagerAdapter;
-import com.ab.global.AbAppData;
+import com.ab.util.AbLogUtil;
 
+// TODO: Auto-generated Javadoc
 /**
- * This widget implements the dynamic action bar tab behavior that can change
- * across different configurations or circumstances.
+ * © 2012 amsoft.cn
+ * 名称：AbSlidingTabView.java 
+ * 描述：滑动的tab,tab不固定超出后可滑动.
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-05-17 下午6:46:29
  */
 public class AbSlidingTabView extends LinearLayout {
 	
-	/** The tag. */
-	private static String TAG = "AbSlidingTabView";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
-  
+	/** The context. */
 	private Context context;
 	
+	/** The m tab selector. */
 	private Runnable mTabSelector;
     
+    /** The m listener. */
     private ViewPager.OnPageChangeListener mListener;
     
+    /** The m max tab width. */
     public int mMaxTabWidth;
     
+    /** The m selected tab index. */
     private int mSelectedTabIndex;
     
-    /**tab的背景*/
+    /** tab的背景. */
     private int tabBackgroundResource = -1;
     
-    /**tab的文字大小*/
-	private int tabTextSize = 16;
+    /** tab的文字大小. */
+	private int tabTextSize = 30;
 	
-	/**tab的文字颜色*/
+	/** tab的文字颜色. */
 	private int tabTextColor = Color.BLACK;
 	
-	/**tab的选中文字颜色*/
+	/** tab的选中文字颜色. */
 	private int tabSelectColor = Color.BLACK;
 	
 	/** tab的线性布局. */
@@ -66,22 +85,22 @@ public class AbSlidingTabView extends LinearLayout {
 	/** The m view pager. */
 	private ViewPager mViewPager;
 	
-	/**tab的文字*/
+	/** tab的文字. */
 	private List<String> tabItemTextList = null;
 	
-	/**tab的图标*/
+	/** tab的图标. */
 	private List<Drawable> tabItemDrawableList = null;
 	
-	
-	/**内容的View*/
+	/** 内容的View. */
 	private ArrayList<Fragment> pagerItemList = null;
 	
-	/**tab的列表*/
+	/** tab的列表. */
 	private ArrayList<TextView> tabItemList = null;
 	
-	/**内容区域的适配器*/
+	/** 内容区域的适配器. */
 	private AbFragmentPagerAdapter mFragmentPagerAdapter = null;
     
+    /** The m tab click listener. */
     private OnClickListener mTabClickListener = new OnClickListener() {
         public void onClick(View view) {
         	AbTabItemView tabView = (AbTabItemView)view;
@@ -89,10 +108,21 @@ public class AbSlidingTabView extends LinearLayout {
         }
     };
 
+    /**
+     * Instantiates a new ab sliding tab view.
+     *
+     * @param context the context
+     */
     public AbSlidingTabView(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new ab sliding tab view.
+     *
+     * @param context the context
+     * @param attrs the attrs
+     */
     public AbSlidingTabView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
@@ -125,10 +155,10 @@ public class AbSlidingTabView extends LinearLayout {
   		
   	    //要求必须是FragmentActivity的实例
 		if(!(this.context instanceof FragmentActivity)){
-			Log.e(TAG, "构造AbSlidingTabView的参数context,必须是FragmentActivity的实例。");
+			AbLogUtil.e(AbSlidingTabView.class, "构造AbSlidingTabView的参数context,必须是FragmentActivity的实例。");
 		}
   			
-  		FragmentManager mFragmentManager = ((FragmentActivity)this.context).getSupportFragmentManager();
+  		FragmentManager mFragmentManager = ((FragmentActivity)this.context).getFragmentManager();
 		mFragmentPagerAdapter = new AbFragmentPagerAdapter(
 				mFragmentManager, pagerItemList);
 		mViewPager.setAdapter(mFragmentPagerAdapter);
@@ -139,8 +169,22 @@ public class AbSlidingTabView extends LinearLayout {
     
     }
     
+    /**
+     * The listener interface for receiving myOnPageChange events.
+     * The class that is interested in processing a myOnPageChange
+     * event implements this interface, and the object created
+     * with that class is registered with a component using the
+     * component's <code>addMyOnPageChangeListener<code> method. When
+     * the myOnPageChange event occurs, that object's appropriate
+     * method is invoked.
+     *
+     * @see MyOnPageChangeEvent
+     */
     public class MyOnPageChangeListener implements OnPageChangeListener{
 
+		/* (non-Javadoc)
+		 * @see android.support.v4.view.ViewPager.OnPageChangeListener#onPageScrollStateChanged(int)
+		 */
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
 			if (mListener != null) {
@@ -148,6 +192,9 @@ public class AbSlidingTabView extends LinearLayout {
 	        }
 		}
 
+		/* (non-Javadoc)
+		 * @see android.support.v4.view.ViewPager.OnPageChangeListener#onPageScrolled(int, float, int)
+		 */
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
 			if (mListener != null) {
@@ -155,6 +202,9 @@ public class AbSlidingTabView extends LinearLayout {
 	        }
 		}
 
+		/* (non-Javadoc)
+		 * @see android.support.v4.view.ViewPager.OnPageChangeListener#onPageSelected(int)
+		 */
 		@Override
 		public void onPageSelected(int arg0) {
 			setCurrentItem(arg0);
@@ -165,6 +215,9 @@ public class AbSlidingTabView extends LinearLayout {
 		
 	}
 
+    /* (non-Javadoc)
+     * @see android.widget.LinearLayout#onMeasure(int, int)
+     */
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         final int widthMode = MeasureSpec.getMode(widthMeasureSpec);
@@ -192,6 +245,11 @@ public class AbSlidingTabView extends LinearLayout {
         }
     }
 
+    /**
+     * Animate to tab.
+     *
+     * @param position the position
+     */
     private void animateToTab(final int position) {
         final View tabView = mTabLayout.getChildAt(position);
         if (mTabSelector != null) {
@@ -207,6 +265,9 @@ public class AbSlidingTabView extends LinearLayout {
         post(mTabSelector);
     }
 
+    /* (non-Javadoc)
+     * @see android.view.View#onAttachedToWindow()
+     */
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
@@ -216,6 +277,9 @@ public class AbSlidingTabView extends LinearLayout {
         }
     }
 
+    /* (non-Javadoc)
+     * @see android.view.View#onDetachedFromWindow()
+     */
     @Override
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
@@ -225,22 +289,21 @@ public class AbSlidingTabView extends LinearLayout {
     }
     
     /**
-     * 
-     * 描述：创造一个Tab
-     * @param text
-     * @param index
-     * @throws 
+     * 描述：创造一个Tab.
+     *
+     * @param text the text
+     * @param index the index
      */
     private void addTab(String text, int index) {
     	addTab(text,index,null);
     }
     
     /**
-     * 
-     * 描述：创造一个Tab
-     * @param text
-     * @param index
-     * @throws 
+     * 描述：创造一个Tab.
+     *
+     * @param text the text
+     * @param index the index
+     * @param top the top
      */
     private void addTab(String text, int index,Drawable top) {
    	
@@ -257,13 +320,11 @@ public class AbSlidingTabView extends LinearLayout {
         tabView.init(index,text);
         tabItemList.add(tabView.getTextView());
         tabView.setOnClickListener(mTabClickListener);
-        mTabLayout.addView(tabView, new LayoutParams(0,LayoutParams.FILL_PARENT,1));
+        mTabLayout.addView(tabView, new LayoutParams(0,LayoutParams.MATCH_PARENT,1));
     }
 
     /**
-     * 
-     * 描述：tab有变化刷新
-     * @throws 
+     * 描述：tab有变化刷新.
      */
     public void notifyTabDataSetChanged() {
         mTabLayout.removeAllViews();
@@ -285,10 +346,9 @@ public class AbSlidingTabView extends LinearLayout {
     }
 
     /**
-     * 
-     * 描述：设置显示哪一个
-     * @param item
-     * @throws 
+     * 描述：设置显示哪一个.
+     *
+     * @param item the new current item
      */
     public void setCurrentItem(int item) {
         if (mViewPager == null) {
@@ -310,84 +370,81 @@ public class AbSlidingTabView extends LinearLayout {
     }
 
     /**
-     * 
-     * 描述：设置一个外部的监听器
-     * @param listener
-     * @throws 
+     * 描述：设置一个外部的监听器.
+     *
+     * @param listener the new on page change listener
      */
     public void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
         mListener = listener;
     }
 
 	/**
-	 * 
-	 * 描述：设置tab文字的颜色
-	 * @param tabColor
-	 * @throws 
+	 * 描述：设置tab文字的颜色.
+	 *
+	 * @param tabColor the new tab text color
 	 */
 	public void setTabTextColor(int tabColor) {
 		this.tabTextColor = tabColor;
 	}
 
 	/**
-	 * 
-	 * 描述：设置选中的颜色
-	 * @param tabColor
-	 * @throws 
+	 * 描述：设置选中的颜色.
+	 *
+	 * @param tabColor the new tab select color
 	 */
 	public void setTabSelectColor(int tabColor) {
 		this.tabSelectColor = tabColor;
 	}
 
 	/**
-     * 
-     * 描述：设置文字大小
-     * @param tabTextSize
-     * @throws 
-     */
+	 * 描述：设置文字大小.
+	 *
+	 * @param tabTextSize the new tab text size
+	 */
 	public void setTabTextSize(int tabTextSize) {
 		this.tabTextSize = tabTextSize;
 	}
 	
 	/**
-     * 描述：设置tab的背景选择
-     * @param resid
-     * @throws 
-     */
+	 * 描述：设置单个tab的背景选择器.
+	 *
+	 * @param resid the new tab background resource
+	 */
 	public void setTabBackgroundResource(int resid) {
     	tabBackgroundResource = resid;
     }
 	
 	/**
-	 * 
-	 * 描述：设置Tab的背景
-	 * @param res
-	 * @throws 
+	 * 描述：设置Tab的背景.
+	 *
+	 * @param resid the new tab layout background resource
 	 */
-	public void setTabLayoutBackgroundResource(int res) {
-		this.mTabLayout.setBackgroundResource(res);
+	public void setTabLayoutBackgroundResource(int resid) {
+		this.mTabLayout.setBackgroundResource(resid);
 	}
 	
 	/**
-	 * 
-	 * 描述：增加一组内容与tab
-	 * @throws 
+	 * 描述：增加一组内容与tab.
+	 *
+	 * @param tabTexts the tab texts
+	 * @param fragments the fragments
 	 */
 	public void addItemViews(List<String> tabTexts,List<Fragment> fragments){
 		
 		tabItemTextList.addAll(tabTexts);
 		pagerItemList.addAll(fragments);
-		
 		mFragmentPagerAdapter.notifyDataSetChanged();
 		notifyTabDataSetChanged();
 	}
 	
 	/**
-	 * 
-	 * 描述：增加一组内容与tab
-	 * @throws 
+	 * 描述：增加一组内容与tab.
+	 *
+	 * @param tabTexts the tab texts
+	 * @param fragments the fragments
+	 * @param drawables the drawables
 	 */
-	public void addItemViews(List<String> tabTexts,List<Drawable> drawables,List<Fragment> fragments){
+	public void addItemViews(List<String> tabTexts,List<Fragment> fragments,List<Drawable> drawables){
 		
 		tabItemTextList.addAll(tabTexts);
 		pagerItemList.addAll(fragments);
@@ -397,9 +454,10 @@ public class AbSlidingTabView extends LinearLayout {
 	}
 	
 	/**
-	 * 
-	 * 描述：增加一个内容与tab
-	 * @throws 
+	 * 描述：增加一个内容与tab.
+	 *
+	 * @param tabText the tab text
+	 * @param fragment the fragment
 	 */
 	public void addItemView(String tabText,Fragment fragment){
 		tabItemTextList.add(tabText);
@@ -409,11 +467,13 @@ public class AbSlidingTabView extends LinearLayout {
 	}
 	
 	/**
-	 * 
-	 * 描述：增加一个内容与tab
-	 * @throws 
+	 * 描述：增加一个内容与tab.
+	 *
+	 * @param tabText the tab text
+	 * @param fragment the fragment
+	 * @param drawable the drawable
 	 */
-	public void addItemView(String tabText,Drawable drawable,Fragment fragment){
+	public void addItemView(String tabText,Fragment fragment,Drawable drawable){
 		tabItemTextList.add(tabText);
 		pagerItemList.add(fragment);
 		tabItemDrawableList.add(drawable);
@@ -423,10 +483,9 @@ public class AbSlidingTabView extends LinearLayout {
 	
 	
 	/**
-	 * 
-	 * 描述：删除某一个
-	 * @param index
-	 * @throws 
+	 * 描述：删除某一个.
+	 *
+	 * @param index the index
 	 */
 	public void removeItemView(int index){
 		
@@ -434,42 +493,40 @@ public class AbSlidingTabView extends LinearLayout {
 		pagerItemList.remove(index);
 		tabItemList.remove(index);
 		tabItemDrawableList.remove(index);
+		tabItemTextList.remove(index); 
 		mFragmentPagerAdapter.notifyDataSetChanged();
 		notifyTabDataSetChanged();
 	}
 	
 	/**
-	 * 
-	 * 描述：删除所有
-	 * @throws 
+	 * 描述：删除所有.
 	 */
 	public void removeAllItemViews(){
 		mTabLayout.removeAllViews();
 		pagerItemList.clear();
 		tabItemList.clear();
 		tabItemDrawableList.clear();
+		tabItemTextList.clear(); 
 		mFragmentPagerAdapter.notifyDataSetChanged();
 		notifyTabDataSetChanged();
 	}
 	
 	/**
-	 * 
-	 * 描述：获取这个View的ViewPager
-	 * @return
-	 * @throws 
+	 * 描述：获取这个View的ViewPager.
+	 *
+	 * @return the view pager
 	 */
 	public ViewPager getViewPager() {
 		return mViewPager;
 	}
 	
 	/**
-	 * 
-	 * 描述：设置每个tab的边距
-	 * @param left
-	 * @param top
-	 * @param right
-	 * @param bottom
-	 * @throws 
+	 * 描述：设置每个tab的边距.
+	 *
+	 * @param left the left
+	 * @param top the top
+	 * @param right the right
+	 * @param bottom the bottom
 	 */
 	public void setTabPadding(int left, int top, int right, int bottom) {
 		for(int i = 0;i<tabItemList.size();i++){

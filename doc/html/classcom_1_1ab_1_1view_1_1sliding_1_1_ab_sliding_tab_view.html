@@ -1,0 +1,1442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.sliding.AbSlidingTabView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1sliding.html">sliding</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html">AbSlidingTabView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.sliding.AbSlidingTabView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.sliding.AbSlidingTabView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.png" usemap="#com.ab.view.sliding.AbSlidingTabView_map" alt=""/>
+  <map id="com.ab.view.sliding.AbSlidingTabView_map" name="com.ab.view.sliding.AbSlidingTabView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view_1_1_my_on_page_change_listener.html">MyOnPageChangeListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a91f6c557d9836311cc97a7c2c4c300b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a91f6c557d9836311cc97a7c2c4c300b9">AbSlidingTabView</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a60ce3d0fb5b0c084e6f280c8e5a33231">context</a>)</td></tr>
+<tr class="separator:a91f6c557d9836311cc97a7c2c4c300b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8fee8c7e2fd6491843760d871c882c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a0d8fee8c7e2fd6491843760d871c882c">AbSlidingTabView</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a60ce3d0fb5b0c084e6f280c8e5a33231">context</a>, AttributeSet attrs)</td></tr>
+<tr class="separator:a0d8fee8c7e2fd6491843760d871c882c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ffd0a11676b25ec725bdda759542b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a40ffd0a11676b25ec725bdda759542b7">onMeasure</a> (int widthMeasureSpec, int heightMeasureSpec)</td></tr>
+<tr class="separator:a40ffd0a11676b25ec725bdda759542b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195f31196368f4f133eff66cb544c554"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a195f31196368f4f133eff66cb544c554">onAttachedToWindow</a> ()</td></tr>
+<tr class="separator:a195f31196368f4f133eff66cb544c554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b116e65ba71d5cc16f40dcceeb54603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a1b116e65ba71d5cc16f40dcceeb54603">onDetachedFromWindow</a> ()</td></tr>
+<tr class="separator:a1b116e65ba71d5cc16f40dcceeb54603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13c7fe50bae78f603c89fc67986689c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#af13c7fe50bae78f603c89fc67986689c">notifyTabDataSetChanged</a> ()</td></tr>
+<tr class="separator:af13c7fe50bae78f603c89fc67986689c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06681f2bfbf971706aa64b46195f6ed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a06681f2bfbf971706aa64b46195f6ed6">setCurrentItem</a> (int item)</td></tr>
+<tr class="separator:a06681f2bfbf971706aa64b46195f6ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2303c3d11d85bfef55de0c9d076b7ec2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a2303c3d11d85bfef55de0c9d076b7ec2">setOnPageChangeListener</a> (ViewPager.OnPageChangeListener listener)</td></tr>
+<tr class="separator:a2303c3d11d85bfef55de0c9d076b7ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65654ead4fcf26fa80f53f9347dfc63d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a65654ead4fcf26fa80f53f9347dfc63d">setTabTextColor</a> (int tabColor)</td></tr>
+<tr class="separator:a65654ead4fcf26fa80f53f9347dfc63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59487fd262be8a7d51c8c3c58df14063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a59487fd262be8a7d51c8c3c58df14063">setTabSelectColor</a> (int tabColor)</td></tr>
+<tr class="separator:a59487fd262be8a7d51c8c3c58df14063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051ea17f70fb6c35b44f9dac089f40d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a051ea17f70fb6c35b44f9dac089f40d1">setTabTextSize</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#ad51816b0a9c25a78526030654775966a">tabTextSize</a>)</td></tr>
+<tr class="separator:a051ea17f70fb6c35b44f9dac089f40d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a0d622cfd1be977d671cbf222de00d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#aa6a0d622cfd1be977d671cbf222de00d">setTabBackgroundResource</a> (int resid)</td></tr>
+<tr class="separator:aa6a0d622cfd1be977d671cbf222de00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892a1cf6def1228a1d1123dfe56775ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a892a1cf6def1228a1d1123dfe56775ad">setTabLayoutBackgroundResource</a> (int resid)</td></tr>
+<tr class="separator:a892a1cf6def1228a1d1123dfe56775ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c641d1a23fe932342201653dc25d85d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a9c641d1a23fe932342201653dc25d85d">addItemViews</a> (List&lt; String &gt; tabTexts, List&lt; Fragment &gt; fragments)</td></tr>
+<tr class="separator:a9c641d1a23fe932342201653dc25d85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a89d0e341df11432df7633c1af10a60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a3a89d0e341df11432df7633c1af10a60">addItemViews</a> (List&lt; String &gt; tabTexts, List&lt; Fragment &gt; fragments, List&lt; Drawable &gt; drawables)</td></tr>
+<tr class="separator:a3a89d0e341df11432df7633c1af10a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3582a0ac537c3ab6d3b0356eec0b381a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a3582a0ac537c3ab6d3b0356eec0b381a">addItemView</a> (String tabText, Fragment fragment)</td></tr>
+<tr class="separator:a3582a0ac537c3ab6d3b0356eec0b381a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa53c3d75c07fc3e0862eabf49dbcfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#acfa53c3d75c07fc3e0862eabf49dbcfb">addItemView</a> (String tabText, Fragment fragment, Drawable drawable)</td></tr>
+<tr class="separator:acfa53c3d75c07fc3e0862eabf49dbcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512099dd5e2eefd96e9d597516c68a73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a512099dd5e2eefd96e9d597516c68a73">removeItemView</a> (int index)</td></tr>
+<tr class="separator:a512099dd5e2eefd96e9d597516c68a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e55f95b5dfbc9ff6d8e4cc72274cc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#ab4e55f95b5dfbc9ff6d8e4cc72274cc3">removeAllItemViews</a> ()</td></tr>
+<tr class="separator:ab4e55f95b5dfbc9ff6d8e4cc72274cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf120c49fcfd8b97857ee07138698689"><td class="memItemLeft" align="right" valign="top">ViewPager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#abf120c49fcfd8b97857ee07138698689">getViewPager</a> ()</td></tr>
+<tr class="separator:abf120c49fcfd8b97857ee07138698689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d40a41edfaca9f3383da431b7c8a8b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a5d40a41edfaca9f3383da431b7c8a8b4">setTabPadding</a> (int left, int top, int right, int bottom)</td></tr>
+<tr class="separator:a5d40a41edfaca9f3383da431b7c8a8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:af34c9e8fdddd179e557dd5eb6ac131aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#af34c9e8fdddd179e557dd5eb6ac131aa">mMaxTabWidth</a></td></tr>
+<tr class="separator:af34c9e8fdddd179e557dd5eb6ac131aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ad4ca06e86e447c10aca71de8fb05b890"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#ad4ca06e86e447c10aca71de8fb05b890">animateToTab</a> (final int position)</td></tr>
+<tr class="separator:ad4ca06e86e447c10aca71de8fb05b890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b475c8fb39397b37136e402c691151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a64b475c8fb39397b37136e402c691151">addTab</a> (String text, int index)</td></tr>
+<tr class="separator:a64b475c8fb39397b37136e402c691151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7fa5324fbcdd73fffc048e5f773a9f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#ad7fa5324fbcdd73fffc048e5f773a9f2">addTab</a> (String text, int index, Drawable top)</td></tr>
+<tr class="separator:ad7fa5324fbcdd73fffc048e5f773a9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a60ce3d0fb5b0c084e6f280c8e5a33231"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a60ce3d0fb5b0c084e6f280c8e5a33231">context</a></td></tr>
+<tr class="separator:a60ce3d0fb5b0c084e6f280c8e5a33231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d125e33855d84cd9d4611a400254bf0"><td class="memItemLeft" align="right" valign="top">Runnable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a1d125e33855d84cd9d4611a400254bf0">mTabSelector</a></td></tr>
+<tr class="separator:a1d125e33855d84cd9d4611a400254bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea7121b1694da9546e4be5185a57d22"><td class="memItemLeft" align="right" valign="top">ViewPager.OnPageChangeListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a7ea7121b1694da9546e4be5185a57d22">mListener</a></td></tr>
+<tr class="separator:a7ea7121b1694da9546e4be5185a57d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7e184e0add9407544d9af5a1000003"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a4f7e184e0add9407544d9af5a1000003">mSelectedTabIndex</a></td></tr>
+<tr class="separator:a4f7e184e0add9407544d9af5a1000003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33808f4ba217aa034715b4d3a7aa055"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#aa33808f4ba217aa034715b4d3a7aa055">tabBackgroundResource</a> = -1</td></tr>
+<tr class="separator:aa33808f4ba217aa034715b4d3a7aa055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51816b0a9c25a78526030654775966a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#ad51816b0a9c25a78526030654775966a">tabTextSize</a> = 30</td></tr>
+<tr class="separator:ad51816b0a9c25a78526030654775966a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3124deb81e6bca67ba960819e42ee5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a4a3124deb81e6bca67ba960819e42ee5">tabTextColor</a> = Color.BLACK</td></tr>
+<tr class="separator:a4a3124deb81e6bca67ba960819e42ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd701dfb0348ec5160d0ca449b3c34b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#aecd701dfb0348ec5160d0ca449b3c34b">tabSelectColor</a> = Color.BLACK</td></tr>
+<tr class="separator:aecd701dfb0348ec5160d0ca449b3c34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10fe70ef520b6d4600ecf10c71bdf7a"><td class="memItemLeft" align="right" valign="top">LinearLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#ab10fe70ef520b6d4600ecf10c71bdf7a">mTabLayout</a> = null</td></tr>
+<tr class="separator:ab10fe70ef520b6d4600ecf10c71bdf7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf74f3840cebdbbd11d517316d6c8c02"><td class="memItemLeft" align="right" valign="top">HorizontalScrollView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#aaf74f3840cebdbbd11d517316d6c8c02">mTabScrollView</a> = null</td></tr>
+<tr class="separator:aaf74f3840cebdbbd11d517316d6c8c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559cce555e1eb403ef9fd73cea76d09c"><td class="memItemLeft" align="right" valign="top">ViewPager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a559cce555e1eb403ef9fd73cea76d09c">mViewPager</a></td></tr>
+<tr class="separator:a559cce555e1eb403ef9fd73cea76d09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe115a780e8402d9763df65765d60238"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#abe115a780e8402d9763df65765d60238">tabItemTextList</a> = null</td></tr>
+<tr class="separator:abe115a780e8402d9763df65765d60238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0964acc7a854fb8b85001514716ce61"><td class="memItemLeft" align="right" valign="top">List&lt; Drawable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#af0964acc7a854fb8b85001514716ce61">tabItemDrawableList</a> = null</td></tr>
+<tr class="separator:af0964acc7a854fb8b85001514716ce61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493926b05f51c8022458517823664f27"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Fragment &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a493926b05f51c8022458517823664f27">pagerItemList</a> = null</td></tr>
+<tr class="separator:a493926b05f51c8022458517823664f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6fc33fa133b998210fe4a3e2adb80c"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; TextView &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#aee6fc33fa133b998210fe4a3e2adb80c">tabItemList</a> = null</td></tr>
+<tr class="separator:aee6fc33fa133b998210fe4a3e2adb80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693e77ae59af56e7b708c655a0e279bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1adapter_1_1_ab_fragment_pager_adapter.html">AbFragmentPagerAdapter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a693e77ae59af56e7b708c655a0e279bd">mFragmentPagerAdapter</a> = null</td></tr>
+<tr class="separator:a693e77ae59af56e7b708c655a0e279bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f0d241601a178bb9f1f3871a795bc9"><td class="memItemLeft" align="right" valign="top">OnClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a51f0d241601a178bb9f1f3871a795bc9">mTabClickListener</a></td></tr>
+<tr class="separator:a51f0d241601a178bb9f1f3871a795bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbSlidingTabView.java 描述：滑动的tab,tab不固定超出后可滑动.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-05-17 下午6:46:29 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a91f6c557d9836311cc97a7c2c4c300b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sliding.AbSlidingTabView.AbSlidingTabView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab sliding tab view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d8fee8c7e2fd6491843760d871c882c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sliding.AbSlidingTabView.AbSlidingTabView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab sliding tab view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a3582a0ac537c3ab6d3b0356eec0b381a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.addItemView </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>tabText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fragment&#160;</td>
+          <td class="paramname"><em>fragment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一个内容与tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabText</td><td>the tab text </td></tr>
+    <tr><td class="paramname">fragment</td><td>the fragment </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acfa53c3d75c07fc3e0862eabf49dbcfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.addItemView </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>tabText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fragment&#160;</td>
+          <td class="paramname"><em>fragment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>drawable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一个内容与tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabText</td><td>the tab text </td></tr>
+    <tr><td class="paramname">fragment</td><td>the fragment </td></tr>
+    <tr><td class="paramname">drawable</td><td>the drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9c641d1a23fe932342201653dc25d85d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.addItemViews </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>tabTexts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Fragment &gt;&#160;</td>
+          <td class="paramname"><em>fragments</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一组内容与tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabTexts</td><td>the tab texts </td></tr>
+    <tr><td class="paramname">fragments</td><td>the fragments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a89d0e341df11432df7633c1af10a60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.addItemViews </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; String &gt;&#160;</td>
+          <td class="paramname"><em>tabTexts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Fragment &gt;&#160;</td>
+          <td class="paramname"><em>fragments</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Drawable &gt;&#160;</td>
+          <td class="paramname"><em>drawables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一组内容与tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabTexts</td><td>the tab texts </td></tr>
+    <tr><td class="paramname">fragments</td><td>the fragments </td></tr>
+    <tr><td class="paramname">drawables</td><td>the drawables </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a64b475c8fb39397b37136e402c691151"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.addTab </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：创造一个Tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the text </td></tr>
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7fa5324fbcdd73fffc048e5f773a9f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.addTab </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>top</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：创造一个Tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the text </td></tr>
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+    <tr><td class="paramname">top</td><td>the top </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4ca06e86e447c10aca71de8fb05b890"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.animateToTab </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Animate to tab.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abf120c49fcfd8b97857ee07138698689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ViewPager com.ab.view.sliding.AbSlidingTabView.getViewPager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取这个View的ViewPager.</p>
+<dl class="section return"><dt>返回</dt><dd>the view pager </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af13c7fe50bae78f603c89fc67986689c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.notifyTabDataSetChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：tab有变化刷新. </p>
+
+</div>
+</div>
+<a class="anchor" id="a195f31196368f4f133eff66cb544c554"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.onAttachedToWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b116e65ba71d5cc16f40dcceeb54603"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.onDetachedFromWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40ffd0a11676b25ec725bdda759542b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthMeasureSpec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightMeasureSpec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab4e55f95b5dfbc9ff6d8e4cc72274cc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.removeAllItemViews </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：删除所有. </p>
+
+</div>
+</div>
+<a class="anchor" id="a512099dd5e2eefd96e9d597516c68a73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.removeItemView </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：删除某一个.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a06681f2bfbf971706aa64b46195f6ed6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setCurrentItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置显示哪一个.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>the new current item </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2303c3d11d85bfef55de0c9d076b7ec2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setOnPageChangeListener </td>
+          <td>(</td>
+          <td class="paramtype">ViewPager.OnPageChangeListener&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置一个外部的监听器.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>the new on page change listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6a0d622cfd1be977d671cbf222de00d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setTabBackgroundResource </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置单个tab的背景选择器.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resid</td><td>the new tab background resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a892a1cf6def1228a1d1123dfe56775ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setTabLayoutBackgroundResource </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置Tab的背景.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resid</td><td>the new tab layout background resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d40a41edfaca9f3383da431b7c8a8b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setTabPadding </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置每个tab的边距.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>the left </td></tr>
+    <tr><td class="paramname">top</td><td>the top </td></tr>
+    <tr><td class="paramname">right</td><td>the right </td></tr>
+    <tr><td class="paramname">bottom</td><td>the bottom </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a59487fd262be8a7d51c8c3c58df14063"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setTabSelectColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tabColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置选中的颜色.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabColor</td><td>the new tab select color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a65654ead4fcf26fa80f53f9347dfc63d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setTabTextColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tabColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置tab文字的颜色.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabColor</td><td>the new tab text color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a051ea17f70fb6c35b44f9dac089f40d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingTabView.setTabTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tabTextSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置文字大小.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabTextSize</td><td>the new tab text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a60ce3d0fb5b0c084e6f280c8e5a33231"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.view.sliding.AbSlidingTabView.context</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The context. </p>
+
+</div>
+</div>
+<a class="anchor" id="a693e77ae59af56e7b708c655a0e279bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1adapter_1_1_ab_fragment_pager_adapter.html">AbFragmentPagerAdapter</a> com.ab.view.sliding.AbSlidingTabView.mFragmentPagerAdapter = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>内容区域的适配器. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ea7121b1694da9546e4be5185a57d22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ViewPager.OnPageChangeListener com.ab.view.sliding.AbSlidingTabView.mListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m listener. </p>
+
+</div>
+</div>
+<a class="anchor" id="af34c9e8fdddd179e557dd5eb6ac131aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingTabView.mMaxTabWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The m max tab width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4f7e184e0add9407544d9af5a1000003"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingTabView.mSelectedTabIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m selected tab index. </p>
+
+</div>
+</div>
+<a class="anchor" id="a51f0d241601a178bb9f1f3871a795bc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnClickListener com.ab.view.sliding.AbSlidingTabView.mTabClickListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> OnClickListener() {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> onClick(View view) {</div>
+<div class="line">            AbTabItemView tabView = (AbTabItemView)view;</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_tab_view.html#a559cce555e1eb403ef9fd73cea76d09c">mViewPager</a>.setCurrentItem(tabView.getIndex());</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>The m tab click listener. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab10fe70ef520b6d4600ecf10c71bdf7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearLayout com.ab.view.sliding.AbSlidingTabView.mTabLayout = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的线性布局. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaf74f3840cebdbbd11d517316d6c8c02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HorizontalScrollView com.ab.view.sliding.AbSlidingTabView.mTabScrollView = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的线性布局父. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1d125e33855d84cd9d4611a400254bf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Runnable com.ab.view.sliding.AbSlidingTabView.mTabSelector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m tab selector. </p>
+
+</div>
+</div>
+<a class="anchor" id="a559cce555e1eb403ef9fd73cea76d09c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ViewPager com.ab.view.sliding.AbSlidingTabView.mViewPager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m view pager. </p>
+
+</div>
+</div>
+<a class="anchor" id="a493926b05f51c8022458517823664f27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;Fragment&gt; com.ab.view.sliding.AbSlidingTabView.pagerItemList = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>内容的View. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa33808f4ba217aa034715b4d3a7aa055"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingTabView.tabBackgroundResource = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的背景. </p>
+
+</div>
+</div>
+<a class="anchor" id="af0964acc7a854fb8b85001514716ce61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Drawable&gt; com.ab.view.sliding.AbSlidingTabView.tabItemDrawableList = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的图标. </p>
+
+</div>
+</div>
+<a class="anchor" id="aee6fc33fa133b998210fe4a3e2adb80c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;TextView&gt; com.ab.view.sliding.AbSlidingTabView.tabItemList = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的列表. </p>
+
+</div>
+</div>
+<a class="anchor" id="abe115a780e8402d9763df65765d60238"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String&gt; com.ab.view.sliding.AbSlidingTabView.tabItemTextList = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的文字. </p>
+
+</div>
+</div>
+<a class="anchor" id="aecd701dfb0348ec5160d0ca449b3c34b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingTabView.tabSelectColor = Color.BLACK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的选中文字颜色. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a3124deb81e6bca67ba960819e42ee5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingTabView.tabTextColor = Color.BLACK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的文字颜色. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad51816b0a9c25a78526030654775966a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingTabView.tabTextSize = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>tab的文字大小. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/sliding/<a class="el" href="_ab_sliding_tab_view_8java.html">AbSlidingTabView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

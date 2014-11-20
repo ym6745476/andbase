@@ -1,0 +1,1682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.level.AbLevelSeriesRenderer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1level.html">level</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html">AbLevelSeriesRenderer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.level.AbLevelSeriesRenderer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.level.AbLevelSeriesRenderer 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.png" usemap="#com.ab.view.level.AbLevelSeriesRenderer_map" alt=""/>
+  <map id="com.ab.view.level.AbLevelSeriesRenderer_map" name="com.ab.view.level.AbLevelSeriesRenderer_map">
+<area href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer.html" alt="com.ab.view.level.AbLevelDefaultRenderer" shape="rect" coords="0,56,258,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3b957da2d0683473fa759387ad9c3dd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a3b957da2d0683473fa759387ad9c3dd8">AbLevelSeriesRenderer</a> ()</td></tr>
+<tr class="separator:a3b957da2d0683473fa759387ad9c3dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b6a1e91e36ad00dde48ec444af0350"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a84b6a1e91e36ad00dde48ec444af0350">getWidth</a> ()</td></tr>
+<tr class="separator:a84b6a1e91e36ad00dde48ec444af0350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc32d58c4d287a52ebc8ed8afc99215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#abcc32d58c4d287a52ebc8ed8afc99215">setWidth</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a966e35eed389c5d536b1967fd80ffb50">width</a>)</td></tr>
+<tr class="separator:abcc32d58c4d287a52ebc8ed8afc99215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651dbc4995d506a10a3c163be0e48f2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a651dbc4995d506a10a3c163be0e48f2a">getHeight</a> ()</td></tr>
+<tr class="separator:a651dbc4995d506a10a3c163be0e48f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c8702fe25efc346b9a4c4f6a75c0a8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a5c8702fe25efc346b9a4c4f6a75c0a8d">setHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a6fd8a1eb4f8417cfa29d3f9ba84711bf">height</a>)</td></tr>
+<tr class="separator:a5c8702fe25efc346b9a4c4f6a75c0a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd33edaff42cfe6052cce2a80c09d665"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#afd33edaff42cfe6052cce2a80c09d665">getColor</a> ()</td></tr>
+<tr class="separator:afd33edaff42cfe6052cce2a80c09d665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee3cbf65de56dc3adb9f8e335dc803b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a3ee3cbf65de56dc3adb9f8e335dc803b">setColor</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a5b6e1abb1f6e949e38ce458798550ed0">color</a>)</td></tr>
+<tr class="separator:a3ee3cbf65de56dc3adb9f8e335dc803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cfa8e721d575780c799d31eb1b1e695"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a4cfa8e721d575780c799d31eb1b1e695">getPart</a> ()</td></tr>
+<tr class="separator:a4cfa8e721d575780c799d31eb1b1e695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4694a033a53e2720db03c452dde25b54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a4694a033a53e2720db03c452dde25b54">setPart</a> (float[] <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ab2923bd6af90fc785541b7fa70d89c04">part</a>)</td></tr>
+<tr class="separator:a4694a033a53e2720db03c452dde25b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24cddaaaaa7b51881474d55fb73c23dd"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a24cddaaaaa7b51881474d55fb73c23dd">getPartValue</a> ()</td></tr>
+<tr class="separator:a24cddaaaaa7b51881474d55fb73c23dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba46b1420fe1ab4c533ee11522cb1730"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aba46b1420fe1ab4c533ee11522cb1730">setPartValue</a> (float[] <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a3cf8820a1c3329dc3c30837275944d03">partValue</a>)</td></tr>
+<tr class="separator:aba46b1420fe1ab4c533ee11522cb1730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22775e1eb3920d1f270126ee2a28a25"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#af22775e1eb3920d1f270126ee2a28a25">getTextValue</a> ()</td></tr>
+<tr class="separator:af22775e1eb3920d1f270126ee2a28a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad598655e034e7c73e5be4e66804c07d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aad598655e034e7c73e5be4e66804c07d">setTextValue</a> (String <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aa1b5ebd7d452036934f38ee2a9a16996">textValue</a>)</td></tr>
+<tr class="separator:aad598655e034e7c73e5be4e66804c07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bc940af167dd3cc5f35d135ae0140b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a74bc940af167dd3cc5f35d135ae0140b">getTextDesc</a> ()</td></tr>
+<tr class="separator:a74bc940af167dd3cc5f35d135ae0140b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f542ec96b4f1fd21022ab2d8df5866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#af3f542ec96b4f1fd21022ab2d8df5866">setTextDesc</a> (String <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ab8aa53c1d5d296fef894133f0490ec76">textDesc</a>)</td></tr>
+<tr class="separator:af3f542ec96b4f1fd21022ab2d8df5866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68f9f56fa8a92474070d5fa24696ae5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a68f9f56fa8a92474070d5fa24696ae5a">getTextlevelIndex</a> ()</td></tr>
+<tr class="separator:a68f9f56fa8a92474070d5fa24696ae5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307103f09d09aadd85268bce67a7a2b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a307103f09d09aadd85268bce67a7a2b2">setTextlevelIndex</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a2add7ea139dcf41e0820c816a9cb01f5">textlevelIndex</a>)</td></tr>
+<tr class="separator:a307103f09d09aadd85268bce67a7a2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d366296ee08d4c82c9aa66c943bb89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aa2d366296ee08d4c82c9aa66c943bb89">getTextLevelSize</a> ()</td></tr>
+<tr class="separator:aa2d366296ee08d4c82c9aa66c943bb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36446ee9b98e6359978a3d29f48926f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a36446ee9b98e6359978a3d29f48926f8">setTextLevelSize</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a000d905cc663e395eeba031d206adb97">textLevelSize</a>)</td></tr>
+<tr class="separator:a36446ee9b98e6359978a3d29f48926f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ed2c20c0e10d13a51919cbf616c158"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ab0ed2c20c0e10d13a51919cbf616c158">getMarginTop</a> ()</td></tr>
+<tr class="separator:ab0ed2c20c0e10d13a51919cbf616c158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44d9a80dc2b7cb862c50bef5085129a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ad44d9a80dc2b7cb862c50bef5085129a">setMarginTop</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a597900f8c2068b9e412507590632e78e">marginTop</a>)</td></tr>
+<tr class="separator:ad44d9a80dc2b7cb862c50bef5085129a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cfb3bbe89879784ea891475269ce82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a26cfb3bbe89879784ea891475269ce82">getArrowWidth</a> ()</td></tr>
+<tr class="separator:a26cfb3bbe89879784ea891475269ce82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0954afc91295d67481b16f1e180c3a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ac0954afc91295d67481b16f1e180c3a0">setArrowWidth</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a15625349791d719bdad37e1817e21366">arrowWidth</a>)</td></tr>
+<tr class="separator:ac0954afc91295d67481b16f1e180c3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659764efc93335e8c080dc8b349a6c5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a659764efc93335e8c080dc8b349a6c5d">getArrowHeight</a> ()</td></tr>
+<tr class="separator:a659764efc93335e8c080dc8b349a6c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6ec093dc8b1ad706b96823e6d751f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#abc6ec093dc8b1ad706b96823e6d751f0">setArrowHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a01da673e15bd8916dc3cdb9b9048529f">arrowHeight</a>)</td></tr>
+<tr class="separator:abc6ec093dc8b1ad706b96823e6d751f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933047c866ec72e2ba585c5ae6a537ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a933047c866ec72e2ba585c5ae6a537ed">getLevelHeight</a> ()</td></tr>
+<tr class="separator:a933047c866ec72e2ba585c5ae6a537ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8a670c4ef6d018ef80928588994c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a0c8a670c4ef6d018ef80928588994c77">setLevelHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a97b0f2d474a274631ea48ad115d28862">levelHeight</a>)</td></tr>
+<tr class="separator:a0c8a670c4ef6d018ef80928588994c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627d767470588fc39a181b011d910616"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a627d767470588fc39a181b011d910616">getArrowMarginTop</a> ()</td></tr>
+<tr class="separator:a627d767470588fc39a181b011d910616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665f152e392d96f302a3b5b70572a21e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a665f152e392d96f302a3b5b70572a21e">setArrowMarginTop</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a7da01f9b6ef166ecd5e7d6e508ecf126">arrowMarginTop</a>)</td></tr>
+<tr class="separator:a665f152e392d96f302a3b5b70572a21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a67ac503fafd822c84a7a6136a41984"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a1a67ac503fafd822c84a7a6136a41984">getPartTextSize</a> ()</td></tr>
+<tr class="separator:a1a67ac503fafd822c84a7a6136a41984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709e6d818b4155e7d48c206f9f258b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a709e6d818b4155e7d48c206f9f258b49">setPartTextSize</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a77861df5f88dd427b255ec1f06686a50">partTextSize</a>)</td></tr>
+<tr class="separator:a709e6d818b4155e7d48c206f9f258b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3ad55812953eddbcaa029fa8de6078"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a2b3ad55812953eddbcaa029fa8de6078">getTextDescSize</a> ()</td></tr>
+<tr class="separator:a2b3ad55812953eddbcaa029fa8de6078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35ec2bf984d7220cbbabfc27ac6e7fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ab35ec2bf984d7220cbbabfc27ac6e7fa">setTextDescSize</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ae5845220692650953be36898f6789aac">textDescSize</a>)</td></tr>
+<tr class="separator:ab35ec2bf984d7220cbbabfc27ac6e7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee262050a41b0cbe2357f9f3afb962f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aee262050a41b0cbe2357f9f3afb962f0">getTextRectWidth</a> ()</td></tr>
+<tr class="separator:aee262050a41b0cbe2357f9f3afb962f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963c26bbfedfd0e460ff13503737eb16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a963c26bbfedfd0e460ff13503737eb16">setTextRectWidth</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a43dd399600b34528ade86e749efe24b6">textRectWidth</a>)</td></tr>
+<tr class="separator:a963c26bbfedfd0e460ff13503737eb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896538281dbc122fc8486509b8011dc6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a896538281dbc122fc8486509b8011dc6">getTextRectHeight</a> ()</td></tr>
+<tr class="separator:a896538281dbc122fc8486509b8011dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b4005382543c5f13062f678b38ff13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a30b4005382543c5f13062f678b38ff13">setTextRectHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a7e301b16101faded0b8ebb4887ddd4f8">textRectHeight</a>)</td></tr>
+<tr class="separator:a30b4005382543c5f13062f678b38ff13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer.html">com.ab.view.level.AbLevelDefaultRenderer</a></td></tr>
+<tr class="memitem:ac676e447dafb741098a1bdf271e4c9cd inherit pub_methods_classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer.html#ac676e447dafb741098a1bdf271e4c9cd">AbLevelDefaultRenderer</a> ()</td></tr>
+<tr class="separator:ac676e447dafb741098a1bdf271e4c9cd inherit pub_methods_classcom_1_1ab_1_1view_1_1level_1_1_ab_level_default_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a966e35eed389c5d536b1967fd80ffb50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a966e35eed389c5d536b1967fd80ffb50">width</a></td></tr>
+<tr class="separator:a966e35eed389c5d536b1967fd80ffb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd8a1eb4f8417cfa29d3f9ba84711bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a6fd8a1eb4f8417cfa29d3f9ba84711bf">height</a></td></tr>
+<tr class="separator:a6fd8a1eb4f8417cfa29d3f9ba84711bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6e1abb1f6e949e38ce458798550ed0"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a5b6e1abb1f6e949e38ce458798550ed0">color</a> = null</td></tr>
+<tr class="separator:a5b6e1abb1f6e949e38ce458798550ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2923bd6af90fc785541b7fa70d89c04"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ab2923bd6af90fc785541b7fa70d89c04">part</a> = null</td></tr>
+<tr class="separator:ab2923bd6af90fc785541b7fa70d89c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf8820a1c3329dc3c30837275944d03"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a3cf8820a1c3329dc3c30837275944d03">partValue</a> = null</td></tr>
+<tr class="separator:a3cf8820a1c3329dc3c30837275944d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b5ebd7d452036934f38ee2a9a16996"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aa1b5ebd7d452036934f38ee2a9a16996">textValue</a> = null</td></tr>
+<tr class="separator:aa1b5ebd7d452036934f38ee2a9a16996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8aa53c1d5d296fef894133f0490ec76"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ab8aa53c1d5d296fef894133f0490ec76">textDesc</a> = null</td></tr>
+<tr class="separator:ab8aa53c1d5d296fef894133f0490ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2add7ea139dcf41e0820c816a9cb01f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a2add7ea139dcf41e0820c816a9cb01f5">textlevelIndex</a> = 0</td></tr>
+<tr class="separator:a2add7ea139dcf41e0820c816a9cb01f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000d905cc663e395eeba031d206adb97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a000d905cc663e395eeba031d206adb97">textLevelSize</a> = 30</td></tr>
+<tr class="separator:a000d905cc663e395eeba031d206adb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597900f8c2068b9e412507590632e78e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a597900f8c2068b9e412507590632e78e">marginTop</a> = 30</td></tr>
+<tr class="separator:a597900f8c2068b9e412507590632e78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15625349791d719bdad37e1817e21366"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a15625349791d719bdad37e1817e21366">arrowWidth</a> = 20</td></tr>
+<tr class="separator:a15625349791d719bdad37e1817e21366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01da673e15bd8916dc3cdb9b9048529f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a01da673e15bd8916dc3cdb9b9048529f">arrowHeight</a> = 10</td></tr>
+<tr class="separator:a01da673e15bd8916dc3cdb9b9048529f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b0f2d474a274631ea48ad115d28862"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a97b0f2d474a274631ea48ad115d28862">levelHeight</a> = 20</td></tr>
+<tr class="separator:a97b0f2d474a274631ea48ad115d28862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da01f9b6ef166ecd5e7d6e508ecf126"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a7da01f9b6ef166ecd5e7d6e508ecf126">arrowMarginTop</a> = 10</td></tr>
+<tr class="separator:a7da01f9b6ef166ecd5e7d6e508ecf126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77861df5f88dd427b255ec1f06686a50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a77861df5f88dd427b255ec1f06686a50">partTextSize</a> = 15</td></tr>
+<tr class="separator:a77861df5f88dd427b255ec1f06686a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5845220692650953be36898f6789aac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#ae5845220692650953be36898f6789aac">textDescSize</a> = 22</td></tr>
+<tr class="separator:ae5845220692650953be36898f6789aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43dd399600b34528ade86e749efe24b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a43dd399600b34528ade86e749efe24b6">textRectWidth</a> = 120</td></tr>
+<tr class="separator:a43dd399600b34528ade86e749efe24b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e301b16101faded0b8ebb4887ddd4f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#a7e301b16101faded0b8ebb4887ddd4f8">textRectHeight</a> = 60</td></tr>
+<tr class="separator:a7e301b16101faded0b8ebb4887ddd4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:aad1de65c3bf5ac6b76c6b64ae95a1816"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html#aad1de65c3bf5ac6b76c6b64ae95a1816">serialVersionUID</a> = 1L</td></tr>
+<tr class="separator:aad1de65c3bf5ac6b76c6b64ae95a1816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class <a class="el" href="classcom_1_1ab_1_1view_1_1level_1_1_ab_level_series_renderer.html">AbLevelSeriesRenderer</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a3b957da2d0683473fa759387ad9c3dd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.level.AbLevelSeriesRenderer.AbLevelSeriesRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab level series renderer. </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a659764efc93335e8c080dc8b349a6c5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getArrowHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow height.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a627d767470588fc39a181b011d910616"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getArrowMarginTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow margin top.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow margin top </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26cfb3bbe89879784ea891475269ce82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getArrowWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow width.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afd33edaff42cfe6052cce2a80c09d665"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.level.AbLevelSeriesRenderer.getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the color.</p>
+<dl class="section return"><dt>返回</dt><dd>the color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a651dbc4995d506a10a3c163be0e48f2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the height.</p>
+<dl class="section return"><dt>返回</dt><dd>the height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a933047c866ec72e2ba585c5ae6a537ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getLevelHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the level height.</p>
+<dl class="section return"><dt>返回</dt><dd>the level height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0ed2c20c0e10d13a51919cbf616c158"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getMarginTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the margin top.</p>
+<dl class="section return"><dt>返回</dt><dd>the margin top </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4cfa8e721d575780c799d31eb1b1e695"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] com.ab.view.level.AbLevelSeriesRenderer.getPart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the part.</p>
+<dl class="section return"><dt>返回</dt><dd>the part </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a67ac503fafd822c84a7a6136a41984"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getPartTextSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the part text size.</p>
+<dl class="section return"><dt>返回</dt><dd>the part text size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a24cddaaaaa7b51881474d55fb73c23dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] com.ab.view.level.AbLevelSeriesRenderer.getPartValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the part value.</p>
+<dl class="section return"><dt>返回</dt><dd>the part value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a74bc940af167dd3cc5f35d135ae0140b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.level.AbLevelSeriesRenderer.getTextDesc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the text desc.</p>
+<dl class="section return"><dt>返回</dt><dd>the text desc </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b3ad55812953eddbcaa029fa8de6078"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getTextDescSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the text desc size.</p>
+<dl class="section return"><dt>返回</dt><dd>the text desc size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68f9f56fa8a92474070d5fa24696ae5a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getTextlevelIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the textlevel index.</p>
+<dl class="section return"><dt>返回</dt><dd>the textlevel index </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2d366296ee08d4c82c9aa66c943bb89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getTextLevelSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the text level size.</p>
+<dl class="section return"><dt>返回</dt><dd>the text level size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a896538281dbc122fc8486509b8011dc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getTextRectHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the text rect height.</p>
+<dl class="section return"><dt>返回</dt><dd>the text rect height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee262050a41b0cbe2357f9f3afb962f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getTextRectWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the text rect width.</p>
+<dl class="section return"><dt>返回</dt><dd>the text rect width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af22775e1eb3920d1f270126ee2a28a25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.level.AbLevelSeriesRenderer.getTextValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the text value.</p>
+<dl class="section return"><dt>返回</dt><dd>the text value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a84b6a1e91e36ad00dde48ec444af0350"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the width.</p>
+<dl class="section return"><dt>返回</dt><dd>the width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc6ec093dc8b1ad706b96823e6d751f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setArrowHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arrowHeight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowHeight</td><td>the new arrow height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a665f152e392d96f302a3b5b70572a21e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setArrowMarginTop </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arrowMarginTop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow margin top.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowMarginTop</td><td>the new arrow margin top </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0954afc91295d67481b16f1e180c3a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setArrowWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arrowWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowWidth</td><td>the new arrow width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ee3cbf65de56dc3adb9f8e335dc803b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setColor </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the new color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c8702fe25efc346b9a4c4f6a75c0a8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the new height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c8a670c4ef6d018ef80928588994c77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setLevelHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>levelHeight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the level height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">levelHeight</td><td>the new level height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad44d9a80dc2b7cb862c50bef5085129a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setMarginTop </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>marginTop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the margin top.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">marginTop</td><td>the new margin top </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4694a033a53e2720db03c452dde25b54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setPart </td>
+          <td>(</td>
+          <td class="paramtype">float[]&#160;</td>
+          <td class="paramname"><em>part</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the part.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">part</td><td>the new part </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a709e6d818b4155e7d48c206f9f258b49"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setPartTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>partTextSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the part text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">partTextSize</td><td>the new part text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aba46b1420fe1ab4c533ee11522cb1730"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setPartValue </td>
+          <td>(</td>
+          <td class="paramtype">float[]&#160;</td>
+          <td class="paramname"><em>partValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the part value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">partValue</td><td>the new part value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af3f542ec96b4f1fd21022ab2d8df5866"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextDesc </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>textDesc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text desc.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textDesc</td><td>the new text desc </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab35ec2bf984d7220cbbabfc27ac6e7fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextDescSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textDescSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text desc size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textDescSize</td><td>the new text desc size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a307103f09d09aadd85268bce67a7a2b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextlevelIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textlevelIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the textlevel index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textlevelIndex</td><td>the new textlevel index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a36446ee9b98e6359978a3d29f48926f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextLevelSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textLevelSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text level size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textLevelSize</td><td>the new text level size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a30b4005382543c5f13062f678b38ff13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextRectHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textRectHeight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text rect height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textRectHeight</td><td>the new text rect height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a963c26bbfedfd0e460ff13503737eb16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextRectWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textRectWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text rect width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textRectWidth</td><td>the new text rect width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aad598655e034e7c73e5be4e66804c07d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setTextValue </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>textValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textValue</td><td>the new text value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abcc32d58c4d287a52ebc8ed8afc99215"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.level.AbLevelSeriesRenderer.setWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>the new width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a01da673e15bd8916dc3cdb9b9048529f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.arrowHeight = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指示三角形的高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7da01f9b6ef166ecd5e7d6e508ecf126"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.arrowMarginTop = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指示三角形与其他间距. </p>
+
+</div>
+</div>
+<a class="anchor" id="a15625349791d719bdad37e1817e21366"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.arrowWidth = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指示三角形的宽度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b6e1abb1f6e949e38ce458798550ed0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.level.AbLevelSeriesRenderer.color = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>各等级段的颜色. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6fd8a1eb4f8417cfa29d3f9ba84711bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级图形的高. </p>
+
+</div>
+</div>
+<a class="anchor" id="a97b0f2d474a274631ea48ad115d28862"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.levelHeight = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级条的高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a597900f8c2068b9e412507590632e78e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.marginTop = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前值文字与顶部的距离. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2923bd6af90fc785541b7fa70d89c04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] com.ab.view.level.AbLevelSeriesRenderer.part = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>假如 每段的百分比 2 3 2 1 1 1. </p>
+
+</div>
+</div>
+<a class="anchor" id="a77861df5f88dd427b255ec1f06686a50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.partTextSize = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级坐标文字大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3cf8820a1c3329dc3c30837275944d03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] com.ab.view.level.AbLevelSeriesRenderer.partValue = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>各等级段的值. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad1de65c3bf5ac6b76c6b64ae95a1816"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long com.ab.view.level.AbLevelSeriesRenderer.serialVersionUID = 1L</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant serialVersionUID. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab8aa53c1d5d296fef894133f0490ec76"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.level.AbLevelSeriesRenderer.textDesc = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前值描述. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae5845220692650953be36898f6789aac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.textDescSize = 22</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级说明文字大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2add7ea139dcf41e0820c816a9cb01f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.textlevelIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前值的等级. </p>
+
+</div>
+</div>
+<a class="anchor" id="a000d905cc663e395eeba031d206adb97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.textLevelSize = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前值文字大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e301b16101faded0b8ebb4887ddd4f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.textRectHeight = 60</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级说明文字外边框的搞. </p>
+
+</div>
+</div>
+<a class="anchor" id="a43dd399600b34528ade86e749efe24b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.textRectWidth = 120</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级说明文字外边框的宽. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa1b5ebd7d452036934f38ee2a9a16996"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.level.AbLevelSeriesRenderer.textValue = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前值. </p>
+
+</div>
+</div>
+<a class="anchor" id="a966e35eed389c5d536b1967fd80ffb50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.level.AbLevelSeriesRenderer.width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等级图形的宽. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/level/<a class="el" href="_ab_level_series_renderer_8java.html">AbLevelSeriesRenderer.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

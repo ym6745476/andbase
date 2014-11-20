@@ -13,7 +13,7 @@ import com.andbase.global.MyApplication;
 /**
  * 名称：Rotate3DActivity
  * 描述：3D翻转示例
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-13
  * @version
  */

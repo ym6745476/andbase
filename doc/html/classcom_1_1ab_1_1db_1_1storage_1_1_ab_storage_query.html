@@ -1,0 +1,1305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.db.storage.AbStorageQuery类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1db.html">db</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1db_1_1storage.html">storage</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.db.storage.AbStorageQuery类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query_1_1_sort_order.html">SortOrder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4d2c60c9a902313b7434a6fcbbfb4935"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a4d2c60c9a902313b7434a6fcbbfb4935">AbStorageQuery</a> ()</td></tr>
+<tr class="separator:a4d2c60c9a902313b7434a6fcbbfb4935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853232622335724631380fd5e3f992b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a853232622335724631380fd5e3f992b3">equals</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:a853232622335724631380fd5e3f992b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0f26ccea7f8c5f63f66b7efc7a8418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a5c0f26ccea7f8c5f63f66b7efc7a8418">notEqual</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:a5c0f26ccea7f8c5f63f66b7efc7a8418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60bfb6fd5c7bcb1954871390160de96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#af60bfb6fd5c7bcb1954871390160de96">like</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:af60bfb6fd5c7bcb1954871390160de96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e52fb32f6c337b5371fd7c21e7379c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a8e52fb32f6c337b5371fd7c21e7379c9">greaterThan</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:a8e52fb32f6c337b5371fd7c21e7379c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d0f3e9ddadc985a6bb614a5696d8eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a37d0f3e9ddadc985a6bb614a5696d8eb">lessThan</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:a37d0f3e9ddadc985a6bb614a5696d8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3e2333b020bee506aa1e7a6da5ee0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#afa3e2333b020bee506aa1e7a6da5ee0f">greaterThanEqualTo</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:afa3e2333b020bee506aa1e7a6da5ee0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc535a3942d0f5cca463c3ec1e30607"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a0cc535a3942d0f5cca463c3ec1e30607">lessThanEqualTo</a> (String paramString, Object paramObject)</td></tr>
+<tr class="separator:a0cc535a3942d0f5cca463c3ec1e30607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7658a46157329b2c3f11338219b41ece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a7658a46157329b2c3f11338219b41ece">in</a> (String paramString, Object[] paramArrayOfObject)</td></tr>
+<tr class="separator:a7658a46157329b2c3f11338219b41ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad828b2a08c033f07ee2a2af158e3618a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ad828b2a08c033f07ee2a2af158e3618a">notIn</a> (String paramString, Object[] paramArrayOfObject)</td></tr>
+<tr class="separator:ad828b2a08c033f07ee2a2af158e3618a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ad24dc1fd9c67701a1d1a64828c0c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ab0ad24dc1fd9c67701a1d1a64828c0c3">and</a> (<a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> storageQuery)</td></tr>
+<tr class="separator:ab0ad24dc1fd9c67701a1d1a64828c0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ae2f926216860c8632fb101202c1f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ac8ae2f926216860c8632fb101202c1f3">or</a> (<a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> storageQuery)</td></tr>
+<tr class="separator:ac8ae2f926216860c8632fb101202c1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8b77bbc68ea0ca7b43d4dd21c0984e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a3a8b77bbc68ea0ca7b43d4dd21c0984e">setWhereClause</a> (String <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ac3eac2cdb7ffdf8fdeddf2f37067b6f7">whereClause</a>, String[] <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ae96b33838e3ed7850b6bcbfd175e1324">whereArgs</a>)</td></tr>
+<tr class="separator:a3a8b77bbc68ea0ca7b43d4dd21c0984e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77c0acb010e356fa5be0e02692ddfb3"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ad77c0acb010e356fa5be0e02692ddfb3">getWhereClause</a> ()</td></tr>
+<tr class="separator:ad77c0acb010e356fa5be0e02692ddfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52cc88761f1200c887414c9fbb85a2f5"><td class="memItemLeft" align="right" valign="top">String[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a52cc88761f1200c887414c9fbb85a2f5">getWhereArgs</a> ()</td></tr>
+<tr class="separator:a52cc88761f1200c887414c9fbb85a2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad565cff9c517efa7138eca22568a5fe3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ad565cff9c517efa7138eca22568a5fe3">addSort</a> (String paramString, <a class="el" href="enumcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query_1_1_sort_order.html">SortOrder</a> paramSortOrder)</td></tr>
+<tr class="separator:ad565cff9c517efa7138eca22568a5fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890120829995d42e0b78d175d20e6942"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a890120829995d42e0b78d175d20e6942">getHaving</a> ()</td></tr>
+<tr class="separator:a890120829995d42e0b78d175d20e6942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345873e27a584013fd5f02904e0c1d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a345873e27a584013fd5f02904e0c1d93">setHaving</a> (String <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a32a24d4baff119afff26b5bc938e7756">having</a>)</td></tr>
+<tr class="separator:a345873e27a584013fd5f02904e0c1d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab580c257a6c4e3fa9b8a9d5d397b31a6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ab580c257a6c4e3fa9b8a9d5d397b31a6">getGroupBy</a> ()</td></tr>
+<tr class="separator:ab580c257a6c4e3fa9b8a9d5d397b31a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b569cf3aa02ebfde4ac4138015bd956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a5b569cf3aa02ebfde4ac4138015bd956">setGroupBy</a> (String <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ac12062b06dc86898d693993aa930170c">groupBy</a>)</td></tr>
+<tr class="separator:a5b569cf3aa02ebfde4ac4138015bd956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73f50e5465fa094365dee56d26a915b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#af73f50e5465fa094365dee56d26a915b">getOrderBy</a> ()</td></tr>
+<tr class="separator:af73f50e5465fa094365dee56d26a915b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4e0e1dffb992d54e0491fb0e093e58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a4c4e0e1dffb992d54e0491fb0e093e58">setOrderBy</a> (String <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a3cebb66ff85a795a5cdcd27f16b8f112">orderBy</a>)</td></tr>
+<tr class="separator:a4c4e0e1dffb992d54e0491fb0e093e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f205ce1f00f3f9a56bc23b73d262dca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a9f205ce1f00f3f9a56bc23b73d262dca">getLimit</a> ()</td></tr>
+<tr class="separator:a9f205ce1f00f3f9a56bc23b73d262dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2db0a52e2fe70c9be7bd7b88b493b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#acf2db0a52e2fe70c9be7bd7b88b493b5">setLimit</a> (int <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a2a4c4f08058e4a8d0607deeada6bbd66">limit</a>)</td></tr>
+<tr class="separator:acf2db0a52e2fe70c9be7bd7b88b493b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c5ddab0fb2dabe9ddc2632014c4db2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a69c5ddab0fb2dabe9ddc2632014c4db2">getOffset</a> ()</td></tr>
+<tr class="separator:a69c5ddab0fb2dabe9ddc2632014c4db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f2de170e223f5365af2cdf75f3c726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#aa6f2de170e223f5365af2cdf75f3c726">setOffset</a> (int <a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a4f2c7a62f6929fa0469c30363cf534d3">offset</a>)</td></tr>
+<tr class="separator:aa6f2de170e223f5365af2cdf75f3c726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac2493f86568c0b273ee5b2d3e904c8b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ac2493f86568c0b273ee5b2d3e904c8b5">printLog</a> (<a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> mAbStorageQuery)</td></tr>
+<tr class="separator:ac2493f86568c0b273ee5b2d3e904c8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28beda11fd18f14969c5bdb0f3a24368"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a28beda11fd18f14969c5bdb0f3a24368">main</a> (String[] args)</td></tr>
+<tr class="separator:a28beda11fd18f14969c5bdb0f3a24368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac3eac2cdb7ffdf8fdeddf2f37067b6f7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ac3eac2cdb7ffdf8fdeddf2f37067b6f7">whereClause</a> = null</td></tr>
+<tr class="separator:ac3eac2cdb7ffdf8fdeddf2f37067b6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96b33838e3ed7850b6bcbfd175e1324"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ae96b33838e3ed7850b6bcbfd175e1324">whereArgs</a> = null</td></tr>
+<tr class="separator:ae96b33838e3ed7850b6bcbfd175e1324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a24d4baff119afff26b5bc938e7756"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a32a24d4baff119afff26b5bc938e7756">having</a> = null</td></tr>
+<tr class="separator:a32a24d4baff119afff26b5bc938e7756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12062b06dc86898d693993aa930170c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#ac12062b06dc86898d693993aa930170c">groupBy</a> = null</td></tr>
+<tr class="separator:ac12062b06dc86898d693993aa930170c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cebb66ff85a795a5cdcd27f16b8f112"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a3cebb66ff85a795a5cdcd27f16b8f112">orderBy</a> = null</td></tr>
+<tr class="separator:a3cebb66ff85a795a5cdcd27f16b8f112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4c4f08058e4a8d0607deeada6bbd66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a2a4c4f08058e4a8d0607deeada6bbd66">limit</a> = -1</td></tr>
+<tr class="separator:a2a4c4f08058e4a8d0607deeada6bbd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2c7a62f6929fa0469c30363cf534d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html#a4f2c7a62f6929fa0469c30363cf534d3">offset</a> = -1</td></tr>
+<tr class="separator:a4f2c7a62f6929fa0469c30363cf534d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbStorageQuery.java 描述：条件过滤实体</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-10-16 下午1:33:39 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a4d2c60c9a902313b7434a6fcbbfb4935"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.db.storage.AbStorageQuery.AbStorageQuery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab storage query. </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ad565cff9c517efa7138eca22568a5fe3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.addSort </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query_1_1_sort_order.html">SortOrder</a>&#160;</td>
+          <td class="paramname"><em>paramSortOrder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：排序语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramSortOrder</td><td>the param sort order </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0ad24dc1fd9c67701a1d1a64828c0c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.and </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td>
+          <td class="paramname"><em>storageQuery</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：和and语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">storageQuery</td><td>the storage query </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a853232622335724631380fd5e3f992b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.equals </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：相等语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab580c257a6c4e3fa9b8a9d5d397b31a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.getGroupBy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the group by.</p>
+<dl class="section return"><dt>返回</dt><dd>the group by </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a890120829995d42e0b78d175d20e6942"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.getHaving </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the having.</p>
+<dl class="section return"><dt>返回</dt><dd>the having </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f205ce1f00f3f9a56bc23b73d262dca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.storage.AbStorageQuery.getLimit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the limit.</p>
+<dl class="section return"><dt>返回</dt><dd>the limit </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69c5ddab0fb2dabe9ddc2632014c4db2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.storage.AbStorageQuery.getOffset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the offset.</p>
+<dl class="section return"><dt>返回</dt><dd>the offset </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af73f50e5465fa094365dee56d26a915b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.getOrderBy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the order by.</p>
+<dl class="section return"><dt>返回</dt><dd>the order by </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52cc88761f1200c887414c9fbb85a2f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String [] com.ab.db.storage.AbStorageQuery.getWhereArgs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获得绑定变量的参数.</p>
+<dl class="section return"><dt>返回</dt><dd>the where args </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad77c0acb010e356fa5be0e02692ddfb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.getWhereClause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取当前的查询sql语句.</p>
+<dl class="section return"><dt>返回</dt><dd>the where clause </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e52fb32f6c337b5371fd7c21e7379c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.greaterThan </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：大于语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa3e2333b020bee506aa1e7a6da5ee0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.greaterThanEqualTo </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：大于等于语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7658a46157329b2c3f11338219b41ece"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.in </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object[]&#160;</td>
+          <td class="paramname"><em>paramArrayOfObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：包含语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramArrayOfObject</td><td>the param array of object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37d0f3e9ddadc985a6bb614a5696d8eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.lessThan </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：小于语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0cc535a3942d0f5cca463c3ec1e30607"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.lessThanEqualTo </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：小于等于语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af60bfb6fd5c7bcb1954871390160de96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.like </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：相似语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a28beda11fd18f14969c5bdb0f3a24368"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.db.storage.AbStorageQuery.main </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The main method.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c0f26ccea7f8c5f63f66b7efc7a8418"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.notEqual </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>paramObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：不相等语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramObject</td><td>the param object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad828b2a08c033f07ee2a2af158e3618a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.notIn </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object[]&#160;</td>
+          <td class="paramname"><em>paramArrayOfObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：不包含语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramString</td><td>the param string </td></tr>
+    <tr><td class="paramname">paramArrayOfObject</td><td>the param array of object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8ae2f926216860c8632fb101202c1f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a> com.ab.db.storage.AbStorageQuery.or </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td>
+          <td class="paramname"><em>storageQuery</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：或者or语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">storageQuery</td><td>the storage query </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab storage query </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2493f86568c0b273ee5b2d3e904c8b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.db.storage.AbStorageQuery.printLog </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1db_1_1storage_1_1_ab_storage_query.html">AbStorageQuery</a>&#160;</td>
+          <td class="paramname"><em>mAbStorageQuery</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prints the log.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mAbStorageQuery</td><td>the m ab storage query </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b569cf3aa02ebfde4ac4138015bd956"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.storage.AbStorageQuery.setGroupBy </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>groupBy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the group by.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupBy</td><td>the new group by </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a345873e27a584013fd5f02904e0c1d93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.storage.AbStorageQuery.setHaving </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>having</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the having.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">having</td><td>the new having </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf2db0a52e2fe70c9be7bd7b88b493b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.storage.AbStorageQuery.setLimit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the limit.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>the new limit </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6f2de170e223f5365af2cdf75f3c726"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.storage.AbStorageQuery.setOffset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the offset.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>the new offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c4e0e1dffb992d54e0491fb0e093e58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.storage.AbStorageQuery.setOrderBy </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>orderBy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the order by.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orderBy</td><td>the new order by </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a8b77bbc68ea0ca7b43d4dd21c0984e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.storage.AbStorageQuery.setWhereClause </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>whereClause</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>whereArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置一个完整的sql语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">whereClause</td><td>如 user_name = ? 或者 user_name = 'xiao' </td></tr>
+    <tr><td class="paramname">whereArgs</td><td>the where args </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ac12062b06dc86898d693993aa930170c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.groupBy = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>groupBy 子句. </p>
+
+</div>
+</div>
+<a class="anchor" id="a32a24d4baff119afff26b5bc938e7756"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.having = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>having 子句. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a4c4f08058e4a8d0607deeada6bbd66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.storage.AbStorageQuery.limit = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>limit 值. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4f2c7a62f6929fa0469c30363cf534d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.storage.AbStorageQuery.offset = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>offset 值. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3cebb66ff85a795a5cdcd27f16b8f112"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.orderBy = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>orderBy 子句. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae96b33838e3ed7850b6bcbfd175e1324"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;String&gt; com.ab.db.storage.AbStorageQuery.whereArgs = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>where 子句的绑定参数. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3eac2cdb7ffdf8fdeddf2f37067b6f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.storage.AbStorageQuery.whereClause = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>where 子句. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/db/storage/<a class="el" href="_ab_storage_query_8java.html">AbStorageQuery.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

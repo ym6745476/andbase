@@ -1,0 +1,1637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1db.html">db</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1db_1_1orm.html">orm</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1db_1_1orm_1_1dao.html">dao</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html">AbDBDaoImpl< T ></a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.png" usemap="#com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;_map" alt=""/>
+  <map id="com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;_map" name="com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;_map">
+<area href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html" alt="com.ab.db.AbBasicDBDao" shape="rect" coords="0,0,234,24"/>
+<area href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html" alt="com.ab.db.orm.dao.AbDBDao&lt; T &gt;" shape="rect" coords="244,0,478,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aac162bb63aed8b211b4caad07707f072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#aac162bb63aed8b211b4caad07707f072">AbDBDaoImpl</a> (SQLiteOpenHelper <a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac5e74f8c679cd1e601991816196295d1">dbHelper</a>, Class&lt; T &gt; <a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#aa64afb68557079571e04874c7e61e586">clazz</a>)</td></tr>
+<tr class="separator:aac162bb63aed8b211b4caad07707f072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f33011c38650538d73cb8cb46080fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac8f33011c38650538d73cb8cb46080fa">AbDBDaoImpl</a> (SQLiteOpenHelper <a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac5e74f8c679cd1e601991816196295d1">dbHelper</a>)</td></tr>
+<tr class="separator:ac8f33011c38650538d73cb8cb46080fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6adfbfc562ecb135d2020460faaafd"><td class="memItemLeft" align="right" valign="top">SQLiteOpenHelper&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a6e6adfbfc562ecb135d2020460faaafd">getDbHelper</a> ()</td></tr>
+<tr class="separator:a6e6adfbfc562ecb135d2020460faaafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebbccb7254bbf837aeeedeaf500ac61"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a4ebbccb7254bbf837aeeedeaf500ac61">queryOne</a> (int id)</td></tr>
+<tr class="separator:a4ebbccb7254bbf837aeeedeaf500ac61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad962c6f6e68e970e853b27ee327dff50"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ad962c6f6e68e970e853b27ee327dff50">rawQuery</a> (String sql, String[] selectionArgs, Class&lt; T &gt; <a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#aa64afb68557079571e04874c7e61e586">clazz</a>)</td></tr>
+<tr class="separator:ad962c6f6e68e970e853b27ee327dff50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c41a5851b6ffe8439a215fed5c59cc2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a1c41a5851b6ffe8439a215fed5c59cc2">isExist</a> (String sql, String[] selectionArgs)</td></tr>
+<tr class="separator:a1c41a5851b6ffe8439a215fed5c59cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5307107287b3eb46a209532105fe0203"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a5307107287b3eb46a209532105fe0203">queryList</a> ()</td></tr>
+<tr class="separator:a5307107287b3eb46a209532105fe0203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5134f1dac24434c9aa70b22e12acca6"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac5134f1dac24434c9aa70b22e12acca6">queryList</a> (String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)</td></tr>
+<tr class="separator:ac5134f1dac24434c9aa70b22e12acca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc72d5b23ae28456c4b47db8dd820650"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#acc72d5b23ae28456c4b47db8dd820650">queryList</a> (String selection, String[] selectionArgs)</td></tr>
+<tr class="separator:acc72d5b23ae28456c4b47db8dd820650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad486b9aa85c80a9ed9f81f2006b4a04c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ad486b9aa85c80a9ed9f81f2006b4a04c">insert</a> (T entity)</td></tr>
+<tr class="separator:ad486b9aa85c80a9ed9f81f2006b4a04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0ba7c75bf216b4cf4087bd8eb508ab"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a2d0ba7c75bf216b4cf4087bd8eb508ab">insert</a> (T entity, boolean flag)</td></tr>
+<tr class="separator:a2d0ba7c75bf216b4cf4087bd8eb508ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e233044ff07b8f736d6dc9c51c35a9"><td class="memItemLeft" align="right" valign="top">long[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a47e233044ff07b8f736d6dc9c51c35a9">insertList</a> (List&lt; T &gt; entityList)</td></tr>
+<tr class="separator:a47e233044ff07b8f736d6dc9c51c35a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b2a97dfdcf7d7490240b345f637900"><td class="memItemLeft" align="right" valign="top">long[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a56b2a97dfdcf7d7490240b345f637900">insertList</a> (List&lt; T &gt; entityList, boolean flag)</td></tr>
+<tr class="separator:a56b2a97dfdcf7d7490240b345f637900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065d4a7da40728fdb1f43f8b220aa7b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a065d4a7da40728fdb1f43f8b220aa7b8">delete</a> (int id)</td></tr>
+<tr class="separator:a065d4a7da40728fdb1f43f8b220aa7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15585f9be14429570c91a4040e110e0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a15585f9be14429570c91a4040e110e0f">delete</a> (Integer...ids)</td></tr>
+<tr class="separator:a15585f9be14429570c91a4040e110e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6641e97dc69e5622b2c466368aba276"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac6641e97dc69e5622b2c466368aba276">delete</a> (String whereClause, String[] whereArgs)</td></tr>
+<tr class="separator:ac6641e97dc69e5622b2c466368aba276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9765ef6c96ebc7e37080cf5ad9721e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ab9765ef6c96ebc7e37080cf5ad9721e9">deleteAll</a> ()</td></tr>
+<tr class="separator:ab9765ef6c96ebc7e37080cf5ad9721e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21b6712cac74223a7cb458e4a7f4739"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac21b6712cac74223a7cb458e4a7f4739">update</a> (T entity)</td></tr>
+<tr class="separator:ac21b6712cac74223a7cb458e4a7f4739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aac43aabbb06f092d5446d4a433ef32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a5aac43aabbb06f092d5446d4a433ef32">updateList</a> (List&lt; T &gt; entityList)</td></tr>
+<tr class="separator:a5aac43aabbb06f092d5446d4a433ef32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e1e6bf49639b93a6fd2e3fa090c8fa"><td class="memItemLeft" align="right" valign="top">List&lt; Map&lt; String, String &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a53e1e6bf49639b93a6fd2e3fa090c8fa">queryMapList</a> (String sql, String[] selectionArgs)</td></tr>
+<tr class="separator:a53e1e6bf49639b93a6fd2e3fa090c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255b8539cd9e2e4bd1cca6532dcbe6d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a255b8539cd9e2e4bd1cca6532dcbe6d6">queryCount</a> (String sql, String[] selectionArgs)</td></tr>
+<tr class="separator:a255b8539cd9e2e4bd1cca6532dcbe6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7980a0a25c136281f33185e9735ccd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a7b7980a0a25c136281f33185e9735ccd">execSql</a> (String sql, Object[] selectionArgs)</td></tr>
+<tr class="separator:a7b7980a0a25c136281f33185e9735ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a881ce95d42cbfe9b584778a0067643f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a881ce95d42cbfe9b584778a0067643f5">startWritableDatabase</a> (boolean transaction)</td></tr>
+<tr class="separator:a881ce95d42cbfe9b584778a0067643f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3500ceabd36df7ead75624b72676032b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a3500ceabd36df7ead75624b72676032b">startReadableDatabase</a> ()</td></tr>
+<tr class="separator:a3500ceabd36df7ead75624b72676032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3305ddeac54484cdbbcc1e205b8c1c55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a3305ddeac54484cdbbcc1e205b8c1c55">closeDatabase</a> ()</td></tr>
+<tr class="separator:a3305ddeac54484cdbbcc1e205b8c1c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html">com.ab.db.AbBasicDBDao</a></td></tr>
+<tr class="memitem:a518bb2a21ac1f54f786da0636160da8d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#a518bb2a21ac1f54f786da0636160da8d">getStringColumnValue</a> (String columnName, Cursor cursor)</td></tr>
+<tr class="separator:a518bb2a21ac1f54f786da0636160da8d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efaf26f7555ec6ae6a49fe364bba5c0 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#a3efaf26f7555ec6ae6a49fe364bba5c0">getIntColumnValue</a> (String columnName, Cursor cursor)</td></tr>
+<tr class="separator:a3efaf26f7555ec6ae6a49fe364bba5c0 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a76e880735c68fac09c4e4383a3184 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#aa0a76e880735c68fac09c4e4383a3184">closeDatabase</a> (Cursor cursor, SQLiteDatabase db)</td></tr>
+<tr class="separator:aa0a76e880735c68fac09c4e4383a3184 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae515c4f6f2c53e531af5909ba475ae5d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#ae515c4f6f2c53e531af5909ba475ae5d">closeCursor</a> (Cursor cursor)</td></tr>
+<tr class="separator:ae515c4f6f2c53e531af5909ba475ae5d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a771f5c828dcc02e5c97f5b4a664f1733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a771f5c828dcc02e5c97f5b4a664f1733">getListFromCursor</a> (Class&lt;?&gt; <a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#aa64afb68557079571e04874c7e61e586">clazz</a>, List&lt; T &gt; list, Cursor cursor)  throws IllegalAccessException, InstantiationException </td></tr>
+<tr class="separator:a771f5c828dcc02e5c97f5b4a664f1733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8496957348464324533b639ca5c8607d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a8496957348464324533b639ca5c8607d">setContentValues</a> (T entity, ContentValues cv, int type, int method)  throws IllegalAccessException </td></tr>
+<tr class="separator:a8496957348464324533b639ca5c8607d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dab330eb749ade8a96ca76886f963b9"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a7dab330eb749ade8a96ca76886f963b9">getLogSql</a> (String sql, Object[] args)</td></tr>
+<tr class="separator:a7dab330eb749ade8a96ca76886f963b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc0cafad02ba44f953079aa563bb3d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a8bc0cafad02ba44f953079aa563bb3d5">checkDBOpened</a> ()</td></tr>
+<tr class="separator:a8bc0cafad02ba44f953079aa563bb3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac5e74f8c679cd1e601991816196295d1"><td class="memItemLeft" align="right" valign="top">SQLiteOpenHelper&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac5e74f8c679cd1e601991816196295d1">dbHelper</a></td></tr>
+<tr class="separator:ac5e74f8c679cd1e601991816196295d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff98a757afb313f84d24210f2dc79a29"><td class="memItemLeft" align="right" valign="top">final ReentrantLock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#aff98a757afb313f84d24210f2dc79a29">lock</a> = new ReentrantLock()</td></tr>
+<tr class="separator:aff98a757afb313f84d24210f2dc79a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f900cacedb3d00289b64574c995e4a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#ac5f900cacedb3d00289b64574c995e4a">tableName</a></td></tr>
+<tr class="separator:ac5f900cacedb3d00289b64574c995e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71926e49d4121f0cdd57283f3d89f7b0"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a71926e49d4121f0cdd57283f3d89f7b0">idColumn</a></td></tr>
+<tr class="separator:a71926e49d4121f0cdd57283f3d89f7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64afb68557079571e04874c7e61e586"><td class="memItemLeft" align="right" valign="top">Class&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#aa64afb68557079571e04874c7e61e586">clazz</a></td></tr>
+<tr class="separator:aa64afb68557079571e04874c7e61e586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2b9eacfa8845021809786b31768605"><td class="memItemLeft" align="right" valign="top">List&lt; Field &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a4c2b9eacfa8845021809786b31768605">allFields</a></td></tr>
+<tr class="separator:a4c2b9eacfa8845021809786b31768605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5a4d4fec5d145c9550cddf897f0bfc"><td class="memItemLeft" align="right" valign="top">SQLiteDatabase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#afe5a4d4fec5d145c9550cddf897f0bfc">db</a> = null</td></tr>
+<tr class="separator:afe5a4d4fec5d145c9550cddf897f0bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a92b8754541c378b9ea0f06181c44131c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a92b8754541c378b9ea0f06181c44131c">METHOD_INSERT</a> = 0</td></tr>
+<tr class="separator:a92b8754541c378b9ea0f06181c44131c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbcd770d50d9c9477530c032425e6a18"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#afbcd770d50d9c9477530c032425e6a18">METHOD_UPDATE</a> = 1</td></tr>
+<tr class="separator:afbcd770d50d9c9477530c032425e6a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7417fdbf8b7dcf77e7a8096982c88f49"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a7417fdbf8b7dcf77e7a8096982c88f49">TYPE_NOT_INCREMENT</a> = 0</td></tr>
+<tr class="separator:a7417fdbf8b7dcf77e7a8096982c88f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219a90591b71f4b1b88537674eccd6a4"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_impl_3_01_t_01_4.html#a219a90591b71f4b1b88537674eccd6a4">TYPE_INCREMENT</a> = 1</td></tr>
+<tr class="separator:a219a90591b71f4b1b88537674eccd6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbDBDaoImpl.java 描述：数据库表操作类接口实现类</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;T&gt;</td><td>the generic type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-7-23 上午9:47:10 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aac162bb63aed8b211b4caad07707f072"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.AbDBDaoImpl </td>
+          <td>(</td>
+          <td class="paramtype">SQLiteOpenHelper&#160;</td>
+          <td class="paramname"><em>dbHelper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>clazz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>用一个对象实体初始化这个数据库操作实现类.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dbHelper</td><td>数据库操作实现类 </td></tr>
+    <tr><td class="paramname">clazz</td><td>映射对象实体 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8f33011c38650538d73cb8cb46080fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.AbDBDaoImpl </td>
+          <td>(</td>
+          <td class="paramtype">SQLiteOpenHelper&#160;</td>
+          <td class="paramname"><em>dbHelper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化这个数据库操作实现类.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dbHelper</td><td>数据库操作实现类 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a8bc0cafad02ba44f953079aa563bb3d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.checkDBOpened </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：检查DB是否已经打开. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3305ddeac54484cdbbcc1e205b8c1c55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.closeDatabase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：关闭数据库，数据操作后必须调用. </p>
+
+</div>
+</div>
+<a class="anchor" id="a065d4a7da40728fdb1f43f8b220aa7b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.delete </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：按id删除.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::delete(int) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#ad4c8fa4c5f652d2e9477a12b339391e6">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15585f9be14429570c91a4040e110e0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.delete </td>
+          <td>(</td>
+          <td class="paramtype">Integer...&#160;</td>
+          <td class="paramname"><em>ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：按id删除.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ids</td><td>the ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::delete(java.lang.Integer[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a1863b22adf9e0210adeb8ec6cfa9e026">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6641e97dc69e5622b2c466368aba276"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.delete </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>whereClause</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>whereArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：按条件删除数据.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">whereClause</td><td>the where clause </td></tr>
+    <tr><td class="paramname">whereArgs</td><td>the where args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::delete(java.lang.String, java.lang.String[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#abc433ec180d83429520d536371e65e38">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9765ef6c96ebc7e37080cf5ad9721e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.deleteAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：清空数据.</p>
+<dl class="section return"><dt>返回</dt><dd>the int 影响的行 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::deleteAll() </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a189d3a972ab10130e88af67b582ee6de">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b7980a0a25c136281f33185e9735ccd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.execSql </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：执行特定的sql.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>the sql </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>the selection args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::execSql(java.lang.String, java.lang.Object[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a185ab8bbcda831dea2202ab8517cb52c">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e6adfbfc562ecb135d2020460faaafd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SQLiteOpenHelper com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.getDbHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section return"><dt>返回</dt><dd>the db helper </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::getDbHelper() </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#ad5a52dc055140eefcf1d5c6afbeab2d0">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a771f5c828dcc02e5c97f5b4a664f1733"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.getListFromCursor </td>
+          <td>(</td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>clazz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Cursor&#160;</td>
+          <td class="paramname"><em>cursor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IllegalAccessException, InstantiationException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从游标中获得映射对象列表.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clazz</td><td>the clazz </td></tr>
+    <tr><td class="paramname">list</td><td>返回的映射对象列表 </td></tr>
+    <tr><td class="paramname">cursor</td><td>当前游标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the list from cursor </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalAccessException</td><td>the illegal access exception </td></tr>
+    <tr><td class="paramname">InstantiationException</td><td>the instantiation exception </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7dab330eb749ade8a96ca76886f963b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.getLogSql </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object[]&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>打印当前sql语句.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>sql语句，带？ </td></tr>
+    <tr><td class="paramname">args</td><td>绑定变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>完整的sql </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad486b9aa85c80a9ed9f81f2006b4a04c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.insert </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：插入实体.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::insert(java.lang.Object) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#ac01829f7a67b2832194da5d4deaad5b3">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d0ba7c75bf216b4cf4087bd8eb508ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.insert </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：插入实体. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>the entity </td></tr>
+    <tr><td class="paramname">flag</td><td>the flag </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::insert(java.lang.Object, boolean) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a86822c04b03b1faffd7c82b4f61005ef">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47e233044ff07b8f736d6dc9c51c35a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long [] com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.insertList </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>entityList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：插入列表.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entityList</td><td>the entity list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long[] 插入成功的数据ID </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::insertList(java.util.List) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#aff45f2bfee25043f0d6b6bac6cad160b">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56b2a97dfdcf7d7490240b345f637900"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long [] com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.insertList </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>entityList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：插入列表.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entityList</td><td>the entity list </td></tr>
+    <tr><td class="paramname">flag</td><td>the flag </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long[] 插入成功的数据ID </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::insertList(java.util.List, boolean) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a16dea738bacefaafd5c206a63082d4b3">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c41a5851b6ffe8439a215fed5c59cc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.isExist </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否存在.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>the sql </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>the selection args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if is exist </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::isExist(java.lang.String, java.lang.String[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a7ce4adb716258152540ea8577dc83e61">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a255b8539cd9e2e4bd1cca6532dcbe6d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.queryCount </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：查询数量. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>the sql </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>the selection args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::queryCount(java.lang.String, java.lang.String[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a6c1ab71bd45264a225e9ab693be85cdf">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5307107287b3eb46a209532105fe0203"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;T&gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.queryList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：查询所有数据.</p>
+<dl class="section return"><dt>返回</dt><dd>the list </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::queryList() </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a58466cc923b5c082be88da707e1ad3cc">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5134f1dac24434c9aa70b22e12acca6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;T&gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.queryList </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>columns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>selection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>groupBy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>having</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>orderBy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：查询列表.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">columns</td><td>the columns </td></tr>
+    <tr><td class="paramname">selection</td><td>the selection </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>the selection args </td></tr>
+    <tr><td class="paramname">groupBy</td><td>the group by </td></tr>
+    <tr><td class="paramname">having</td><td>the having </td></tr>
+    <tr><td class="paramname">orderBy</td><td>the order by </td></tr>
+    <tr><td class="paramname">limit</td><td>the limit </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the list </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::queryList(java.lang.String[], java.lang.String, java.lang.String[], java.lang.String, java.lang.String, java.lang.String, java.lang.String) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a52b1bbe967ee38f1a4ae885404699ed7">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc72d5b23ae28456c4b47db8dd820650"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;T&gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.queryList </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>selection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：简单一些的查询.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selection</td><td>the selection </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>the selection args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the list </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::queryList(java.lang.String, java.lang.String[]) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a134417ec265608aa277e9d2a24c7c215">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53e1e6bf49639b93a6fd2e3fa090c8fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Map&lt;String, String&gt; &gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.queryMapList </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：查询为map列表.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>the sql </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>the selection args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the list </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::queryMapList(java.lang.String, java.lang.String[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a7096806d8526c41dc871c4de497bcdd3">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ebbccb7254bbf837aeeedeaf500ac61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.queryOne </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：查询一条.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the t </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::queryOne(int) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a5a3c2ea0368db4dfdd1332227c497379">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad962c6f6e68e970e853b27ee327dff50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;T&gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.rawQuery </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>selectionArgs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>clazz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：一种更灵活的方式查询，不支持对象关联，可以写完整的sql.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>完整的sql如：select * from a ,b where a.id=b.id and a.id = ? </td></tr>
+    <tr><td class="paramname">selectionArgs</td><td>绑定变量值 </td></tr>
+    <tr><td class="paramname">clazz</td><td>返回的对象类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the list </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::rawQuery(java.lang.String, java.lang.String[]) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a19637cb2179dee7937e9fe0a7c9dd2c2">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8496957348464324533b639ca5c8607d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.setContentValues </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ContentValues&#160;</td>
+          <td class="paramname"><em>cv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IllegalAccessException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置这个ContentValues.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>映射实体 </td></tr>
+    <tr><td class="paramname">cv</td><td>the cv </td></tr>
+    <tr><td class="paramname">type</td><td>id类的类型，是否自增 </td></tr>
+    <tr><td class="paramname">method</td><td>预执行的操作 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>sql的字符串 </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalAccessException</td><td>the illegal access exception </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3500ceabd36df7ead75624b72676032b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.startReadableDatabase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取读数据库，数据操作前必须调用. </p>
+
+</div>
+</div>
+<a class="anchor" id="a881ce95d42cbfe9b584778a0067643f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.startWritableDatabase </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>transaction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取写数据库，数据操作前必须调用.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transaction</td><td>是否开启事务 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac21b6712cac74223a7cb458e4a7f4739"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.update </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：更新实体. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int 影响的行 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::update(java.lang.Object) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a56794712844d912a847fa898e8d97f63">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5aac43aabbb06f092d5446d4a433ef32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.updateList </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>entityList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：更新列表.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entityList</td><td>the entity list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int 影响的行 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>com.ab.db.orm.dao.AbDBDao::updateList(java.util.List) </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1db_1_1orm_1_1dao_1_1_ab_d_b_dao_3_01_t_01_4.html#a5ac3859523e8695752bec1c7fc0572b9">com.ab.db.orm.dao.AbDBDao&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a4c2b9eacfa8845021809786b31768605"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Field&gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.allFields</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The all fields. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa64afb68557079571e04874c7e61e586"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Class&lt;T&gt; com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.clazz</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The clazz. </p>
+
+</div>
+</div>
+<a class="anchor" id="afe5a4d4fec5d145c9550cddf897f0bfc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SQLiteDatabase com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.db = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>这个Dao的数据库对象. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac5e74f8c679cd1e601991816196295d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SQLiteOpenHelper com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.dbHelper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The db helper. </p>
+
+</div>
+</div>
+<a class="anchor" id="a71926e49d4121f0cdd57283f3d89f7b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.idColumn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The id column. </p>
+
+</div>
+</div>
+<a class="anchor" id="aff98a757afb313f84d24210f2dc79a29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ReentrantLock com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.lock = new ReentrantLock()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>锁对象. </p>
+
+</div>
+</div>
+<a class="anchor" id="a92b8754541c378b9ea0f06181c44131c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.METHOD_INSERT = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant METHOD_INSERT. </p>
+
+</div>
+</div>
+<a class="anchor" id="afbcd770d50d9c9477530c032425e6a18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.METHOD_UPDATE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant METHOD_UPDATE. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac5f900cacedb3d00289b64574c995e4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.tableName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The table name. </p>
+
+</div>
+</div>
+<a class="anchor" id="a219a90591b71f4b1b88537674eccd6a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.TYPE_INCREMENT = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant TYPE_INCREMENT. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7417fdbf8b7dcf77e7a8096982c88f49"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.db.orm.dao.AbDBDaoImpl&lt; T &gt;.TYPE_NOT_INCREMENT = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant TYPE_NOT_INCREMENT. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/db/orm/dao/<a class="el" href="_ab_d_b_dao_impl_8java.html">AbDBDaoImpl.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

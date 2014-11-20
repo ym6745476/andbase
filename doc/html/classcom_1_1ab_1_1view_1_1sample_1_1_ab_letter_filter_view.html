@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.sample.AbLetterFilterView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.8r3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1sample.html">sample</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html">AbLetterFilterView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.sample.AbLetterFilterView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.sample.AbLetterFilterView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.png" usemap="#com.ab.view.sample.AbLetterFilterView_map" alt=""/>
+  <map id="com.ab.view.sample.AbLetterFilterView_map" name="com.ab.view.sample.AbLetterFilterView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af4af64958cec306e3605c7ad8611cb58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#af4af64958cec306e3605c7ad8611cb58">AbLetterFilterView</a> (Context context)</td></tr>
+<tr class="separator:af4af64958cec306e3605c7ad8611cb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149a755258d498fa8be26c9a1844c717"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a149a755258d498fa8be26c9a1844c717">AbLetterFilterView</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a149a755258d498fa8be26c9a1844c717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4197dad758b934c5ed52d1c0805d7a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#aa4197dad758b934c5ed52d1c0805d7a5">AbLetterFilterView</a> (Context context, AttributeSet attrs, int defStyle)</td></tr>
+<tr class="separator:aa4197dad758b934c5ed52d1c0805d7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3422746b68c077286ef5a6cf0615214a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a3422746b68c077286ef5a6cf0615214a">setListView</a> (ListView _list)</td></tr>
+<tr class="separator:a3422746b68c077286ef5a6cf0615214a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0e3d74a9596b3d3f399e70b564d35a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#ace0e3d74a9596b3d3f399e70b564d35a">setTextView</a> (TextView <a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#afbc106a3f195c855aec4025d857523ce">mDialogText</a>)</td></tr>
+<tr class="separator:ace0e3d74a9596b3d3f399e70b564d35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c411b439f52ec1b2ae943dbf446dff"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a88c411b439f52ec1b2ae943dbf446dff">onTouchEvent</a> (MotionEvent event)</td></tr>
+<tr class="separator:a88c411b439f52ec1b2ae943dbf446dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b373629b2d2dc745e4fccbf12a67ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a83b373629b2d2dc745e4fccbf12a67ff">getBackgroundResource</a> ()</td></tr>
+<tr class="separator:a83b373629b2d2dc745e4fccbf12a67ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbda649b39bea09ae710587a795b2f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#adbda649b39bea09ae710587a795b2f7a">setBackgroundResource</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#af230c67d7aa1416806b6eb23e6f0450a">backgroundResource</a>)</td></tr>
+<tr class="separator:adbda649b39bea09ae710587a795b2f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a6b34fc21444d667b35ea6fa13c30049e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a6b34fc21444d667b35ea6fa13c30049e">onDraw</a> (Canvas canvas)</td></tr>
+<tr class="separator:a6b34fc21444d667b35ea6fa13c30049e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ad19894282c971e9776e30a1735ee3fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#ad19894282c971e9776e30a1735ee3fbf">init</a> ()</td></tr>
+<tr class="separator:ad19894282c971e9776e30a1735ee3fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a48353ec89a9803d82c95503d79a7b18b"><td class="memItemLeft" align="right" valign="top">char[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a48353ec89a9803d82c95503d79a7b18b">l</a></td></tr>
+<tr class="separator:a48353ec89a9803d82c95503d79a7b18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eda09849ba87a30f4ea77e0d0e07282"><td class="memItemLeft" align="right" valign="top">SectionIndexer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a1eda09849ba87a30f4ea77e0d0e07282">sectionIndexter</a> = null</td></tr>
+<tr class="separator:a1eda09849ba87a30f4ea77e0d0e07282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab511935272164e8136f2ee5322bb6339"><td class="memItemLeft" align="right" valign="top">ListView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#ab511935272164e8136f2ee5322bb6339">list</a></td></tr>
+<tr class="separator:ab511935272164e8136f2ee5322bb6339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc106a3f195c855aec4025d857523ce"><td class="memItemLeft" align="right" valign="top">TextView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#afbc106a3f195c855aec4025d857523ce">mDialogText</a></td></tr>
+<tr class="separator:afbc106a3f195c855aec4025d857523ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091cbaa39abaace2b7e3701e1148ed7d"><td class="memItemLeft" align="right" valign="top">Paint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a091cbaa39abaace2b7e3701e1148ed7d">paint</a></td></tr>
+<tr class="separator:a091cbaa39abaace2b7e3701e1148ed7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af230c67d7aa1416806b6eb23e6f0450a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#af230c67d7aa1416806b6eb23e6f0450a">backgroundResource</a></td></tr>
+<tr class="separator:af230c67d7aa1416806b6eb23e6f0450a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a724aa89f8204bf39613d083b97bcf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#a14a724aa89f8204bf39613d083b97bcf">widthCenter</a></td></tr>
+<tr class="separator:a14a724aa89f8204bf39613d083b97bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c37b758f6ccc4cb6162fe21829b916"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sample_1_1_ab_letter_filter_view.html#af0c37b758f6ccc4cb6162fe21829b916">singleHeight</a></td></tr>
+<tr class="separator:af0c37b758f6ccc4cb6162fe21829b916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbLetterFilterView.java 描述：字母索引条</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-10-24 下午1:36:45 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="af4af64958cec306e3605c7ad8611cb58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sample.AbLetterFilterView.AbLetterFilterView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab letter filter view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a149a755258d498fa8be26c9a1844c717"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sample.AbLetterFilterView.AbLetterFilterView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab letter filter view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4197dad758b934c5ed52d1c0805d7a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sample.AbLetterFilterView.AbLetterFilterView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab letter filter view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+    <tr><td class="paramname">defStyle</td><td>the def style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a83b373629b2d2dc745e4fccbf12a67ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sample.AbLetterFilterView.getBackgroundResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the background resource.</p>
+<dl class="section return"><dt>返回</dt><dd>the background resource </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad19894282c971e9776e30a1735ee3fbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sample.AbLetterFilterView.init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inits the. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6b34fc21444d667b35ea6fa13c30049e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sample.AbLetterFilterView.onDraw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a88c411b439f52ec1b2ae943dbf446dff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sample.AbLetterFilterView.onTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adbda649b39bea09ae710587a795b2f7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sample.AbLetterFilterView.setBackgroundResource </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>backgroundResource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3422746b68c077286ef5a6cf0615214a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sample.AbLetterFilterView.setListView </td>
+          <td>(</td>
+          <td class="paramtype">ListView&#160;</td>
+          <td class="paramname"><em>_list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the list view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_list</td><td>the new list view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ace0e3d74a9596b3d3f399e70b564d35a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sample.AbLetterFilterView.setTextView </td>
+          <td>(</td>
+          <td class="paramtype">TextView&#160;</td>
+          <td class="paramname"><em>mDialogText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mDialogText</td><td>the new text view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af230c67d7aa1416806b6eb23e6f0450a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sample.AbLetterFilterView.backgroundResource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The background resource. </p>
+
+</div>
+</div>
+<a class="anchor" id="a48353ec89a9803d82c95503d79a7b18b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char [] com.ab.view.sample.AbLetterFilterView.l</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The l. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab511935272164e8136f2ee5322bb6339"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListView com.ab.view.sample.AbLetterFilterView.list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The list. </p>
+
+</div>
+</div>
+<a class="anchor" id="afbc106a3f195c855aec4025d857523ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextView com.ab.view.sample.AbLetterFilterView.mDialogText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m dialog text. </p>
+
+</div>
+</div>
+<a class="anchor" id="a091cbaa39abaace2b7e3701e1148ed7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Paint com.ab.view.sample.AbLetterFilterView.paint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The paint. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1eda09849ba87a30f4ea77e0d0e07282"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SectionIndexer com.ab.view.sample.AbLetterFilterView.sectionIndexter = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The section indexter. </p>
+
+</div>
+</div>
+<a class="anchor" id="af0c37b758f6ccc4cb6162fe21829b916"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sample.AbLetterFilterView.singleHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>字母之间的间距. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14a724aa89f8204bf39613d083b97bcf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sample.AbLetterFilterView.widthCenter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The width center. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/sample/<a class="el" href="_ab_letter_filter_view_8java.html">AbLetterFilterView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十月 28日 星期二 17:26:46 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.network.toolbox.Cache接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network.html">network</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.network.toolbox.Cache接口 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.network.toolbox.Cache 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.png" usemap="#com.ab.network.toolbox.Cache_map" alt=""/>
+  <map id="com.ab.network.toolbox.Cache_map" name="com.ab.network.toolbox.Cache_map">
+<area href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html" alt="com.ab.network.toolbox.DiskBasedCache" shape="rect" coords="0,56,245,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae95f82cef6cced75bd2b3fb26234b235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#ae95f82cef6cced75bd2b3fb26234b235">get</a> (String key)</td></tr>
+<tr class="separator:ae95f82cef6cced75bd2b3fb26234b235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d085c3dfb35d0d3292a605d6ea9a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#ae6d085c3dfb35d0d3292a605d6ea9a9d">put</a> (String key, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a> entry)</td></tr>
+<tr class="separator:ae6d085c3dfb35d0d3292a605d6ea9a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bd2b0446f2a6f1856db0515489f026"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#ac4bd2b0446f2a6f1856db0515489f026">initialize</a> ()</td></tr>
+<tr class="separator:ac4bd2b0446f2a6f1856db0515489f026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d034395f64bb3f86a97cee75b889d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#a6d034395f64bb3f86a97cee75b889d99">invalidate</a> (String key, boolean fullExpire)</td></tr>
+<tr class="separator:a6d034395f64bb3f86a97cee75b889d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3bc9aada27a954af25663499d0a8db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#a5f3bc9aada27a954af25663499d0a8db">remove</a> (String key)</td></tr>
+<tr class="separator:a5f3bc9aada27a954af25663499d0a8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758e8d4b2f5085aebcd08e39648de417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#a758e8d4b2f5085aebcd08e39648de417">clear</a> ()</td></tr>
+<tr class="separator:a758e8d4b2f5085aebcd08e39648de417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An interface for a cache keyed by a String with a byte array as data. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a758e8d4b2f5085aebcd08e39648de417"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Cache.clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Empties the cache. </p>
+
+<p>在 <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a293c479616f70fed1a08d18a6441cc5c">com.ab.network.toolbox.DiskBasedCache</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae95f82cef6cced75bd2b3fb26234b235"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a> com.ab.network.toolbox.Cache.get </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieves an entry from the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a> key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>An <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a> or null in the event of a cache miss </dd></dl>
+
+<p>在 <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a9c5c02d88f9128a30e4c8856152b3b21">com.ab.network.toolbox.DiskBasedCache</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4bd2b0446f2a6f1856db0515489f026"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Cache.initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Performs any potentially long-running actions needed to initialize the cache; will be called from a worker thread. </p>
+
+<p>在 <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a264ee66967da1a55b5c5db6304130695">com.ab.network.toolbox.DiskBasedCache</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d034395f64bb3f86a97cee75b889d99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Cache.invalidate </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>fullExpire</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Invalidates an entry in the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a> key </td></tr>
+    <tr><td class="paramname">fullExpire</td><td>True to fully expire the entry, false to soft expire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#aeed55b3e4e22b8a1c64b72a99c2f76ea">com.ab.network.toolbox.DiskBasedCache</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6d085c3dfb35d0d3292a605d6ea9a9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Cache.put </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a>&#160;</td>
+          <td class="paramname"><em>entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds or replaces an entry to the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a> key </td></tr>
+    <tr><td class="paramname">entry</td><td>Data to store and metadata for cache coherency, TTL, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a2ec0af088c3ae2caf736a1e4ff39182a">com.ab.network.toolbox.DiskBasedCache</a> 内被实现.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f3bc9aada27a954af25663499d0a8db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Cache.remove </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes an entry from the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a> key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a226b7a0873b37f2f49c319f402a7aeef">com.ab.network.toolbox.DiskBasedCache</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>src/com/ab/network/toolbox/<a class="el" href="_cache_8java.html">Cache.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,17 @@ import java.util.regex.Pattern;
 
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
+ * 名称：AbStrUtil.java 
  * 描述：字符串处理类.
  *
- * @author zhaoqp
- * @date：2013-1-17 上午10:07:09
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-01-17 下午11:52:13
  */
-public final class AbStrUtil {
+public class AbStrUtil {
     
     /**
      * 描述：将null转化为“”.

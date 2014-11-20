@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,7 @@ import android.graphics.Path;
  */
 public class AreaChart extends LineChart {
   
+  /** The Constant serialVersionUID. */
   private static final long serialVersionUID = 1L;
 
   /** The chart type. */
@@ -75,7 +76,12 @@ public class AreaChart extends LineChart {
   }
 
   /**
-   * 描述：TODO
+   * 描述：TODO.
+   *
+   * @param canvas the canvas
+   * @param points the points
+   * @param paint the paint
+   * @param circular the circular
    * @see com.ab.view.chart.AbstractChart#drawPath(android.graphics.Canvas, float[], android.graphics.Paint, boolean)
    */
   @Override

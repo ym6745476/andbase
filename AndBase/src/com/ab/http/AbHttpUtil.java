@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,25 +17,24 @@ package com.ab.http;
 
 import android.content.Context;
 
+// TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbHttpUtil.java 
  * 描述：Http执行工具类，可处理get，post，以及异步处理文件的上传下载
- * @author zhaoqp
- * @date：2013-10-22 下午4:15:52
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-10-22 下午4:15:52
  */
 public class AbHttpUtil {
 	
-	/** The m context. */
-	private Context mContext;
-
-	/**实例话对象*/
-	private AbHttpClient client = null;
+	/** 实例化单例对象. */
+	private AbHttpClient mClient = null;
 	
-	/** The m sqlite storage. */
+	/** 工具类单例. */
 	private static AbHttpUtil mAbHttpUtil = null;
+	
 	
 	/**
 	 * 描述：获取实例.
@@ -51,119 +50,136 @@ public class AbHttpUtil {
 	    return mAbHttpUtil;
 	}
 	
+	/**
+	 * 初始化AbHttpUtil.
+	 *
+	 * @param context the context
+	 */
 	private AbHttpUtil(Context context) {
 		super();
-		this.mContext = context;
-		this.client = new AbHttpClient(this.mContext);
+		this.mClient = new AbHttpClient(context);
 	}
 	
-
 	/**
-	 * 
-	 * 描述：无参数的get请求
-	 * @param url
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：无参数的get请求.
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
 	 */
 	public void get(String url, AbHttpResponseListener responseListener) {
-		client.get(url, responseListener);
+		mClient.get(url,null,responseListener);
 	}
-
+	
 	/**
-	 * 
-	 * 描述：带参数的get请求
-	 * @param url
-	 * @param params
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：带参数的get请求.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
 	 */
 	public void get(String url, AbRequestParams params,
 			AbHttpResponseListener responseListener) {
-		client.get(url, params, responseListener);
+		mClient.get(url, params, responseListener);
 	}
 	
 	/**
 	 *  
-	 * 描述：下载数据使用，会返回byte数据(下载文件或图片)
-	 * @param url
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：下载数据使用，会返回byte数据(下载文件或图片).
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
 	 */
 	public void get(String url, AbBinaryHttpResponseListener responseListener) {
-		client.get(url, responseListener);
+		mClient.get(url,null,responseListener);
 	}
 	
 	/**
-	 * 
-	 * 描述：文件下载的get
-	 * @param url
-	 * @param params
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：文件下载的get.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
 	 */
 	public void get(String url, AbRequestParams params,
 			AbFileHttpResponseListener responseListener) {
-		client.get(url, params, responseListener);
+		mClient.get(url, params, responseListener);
 	}
 	
-	
 	/**
-	 * 
-	 * 描述：无参数的post请求
-	 * @param url
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：无参数的post请求.
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
 	 */
 	public void post(String url, AbHttpResponseListener responseListener) {
-		client.post(url, responseListener);
+		mClient.post(url,null, responseListener);
 	}
 	
-	
 	/**
-	 * 
-	 * 描述：带参数的post请求
-	 * @param url
-	 * @param params
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：带参数的post请求.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
 	 */
 	public void post(String url, AbRequestParams params,
 			AbHttpResponseListener responseListener) {
-		client.post(url, params, responseListener);
+		mClient.post(url, params, responseListener);
 	}
 	
-	
 	/**
-	 * 
-	 * 描述：文件下载的post
-	 * @param url
-	 * @param params
-	 * @param responseHandler
-	 * @throws 
+	 * 描述：文件下载的post.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
 	 */
 	public void post(String url, AbRequestParams params,
 			AbFileHttpResponseListener responseListener) {
-		client.post(url, params, responseListener);
+		mClient.post(url, params, responseListener);
 	}
 	
 	/**
-	 * 
-	 * 描述：设置连接超时时间
+	 * 描述：设置连接超时时间(第一次请求前设置).
+	 *
 	 * @param timeout 毫秒
-	 * @throws 
 	 */
 	public void setTimeout(int timeout) {
-		client.setTimeout(timeout);
+		mClient.setTimeout(timeout);
+	}
+	
+    /**
+     * 打开ssl 自签名(第一次请求前设置).
+     * @param enabled
+     */
+    public void setEasySSLEnabled(boolean enabled){
+    	mClient.setOpenEasySSL(enabled);
+    }
+
+    /**
+	 * 设置编码(第一次请求前设置).
+	 * @param encode
+	 */
+	public void setEncode(String encode) {
+		mClient.setEncode(encode);
 	}
 	
 	/**
-	 * 
-	 * 描述：设置调试模式
-	 * @param debug 开关
-	 * @throws 
+     * 设置用户代理(第一次请求前设置).
+     * @param userAgent
+     */
+	public void setUserAgent(String userAgent) {
+		mClient.setUserAgent(userAgent);
+	}
+	
+	/**
+	 * 关闭HttpClient
+	 * 当HttpClient实例不再需要是，确保关闭connection manager，以释放其系统资源  
 	 */
-	public void setDebug(boolean debug) {
-		client.setDebug(debug);
+	public void shutdownHttpClient(){
+	    if(mClient != null){
+	    	mClient.shutdown();
+	    }
 	}
 	
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,27 +22,20 @@ import java.util.Map;
 
 import android.content.Context;
 import android.os.Environment;
-import android.util.Log;
 
-import com.ab.global.AbAppData;
 import com.ab.util.AbFileUtil;
+import com.ab.util.AbLogUtil;
 
 // TODO: Auto-generated Javadoc
 /**
  * 描述：多线程支持断点续传下载器.
  *
- * @author zhaoqp
- * @date：2013-3-14 下午5:00:52
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-3-14 下午5:00:52
  */
 public class AbFileDownloader {
 
-	/** The Constant TAG. */
-	private static final String TAG = "FileDownloader";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
-	
 	/** The context. */
 	private Context context;
 	
@@ -78,7 +71,6 @@ public class AbFileDownloader {
 	 *
 	 * @param context the context
 	 * @param downFile the down file
-	 * @param suffix 文件类型后缀
 	 * @param threadNum 下载线程数
 	 */
 	public AbFileDownloader(Context context,DownFile downFile,int threadNum) {
@@ -88,8 +80,8 @@ public class AbFileDownloader {
 			this.mThreadNum = threadNum;
 			mDownFileDao = new DownFileDao(context);
 			// 构建保存文件
-			String fileName = AbFileUtil.getFileNameFromUrl(mDownFile.getDownUrl());
-			saveFile = new File(Environment.getExternalStorageDirectory().getPath()+File.separator+AbFileUtil.getDownPathFileDir()+fileName);
+			String fileName = AbFileUtil.getRealFileNameFromUrl(mDownFile.getDownUrl());
+			saveFile = new File(AbFileUtil.getFileDownloadDir(context)+fileName);
 			if (!saveFile.getParentFile().exists()){
 				saveFile.getParentFile().mkdirs();
 			}
@@ -165,7 +157,7 @@ public class AbFileDownloader {
 		Map<String, String> header = getHttpResponseHeader(http);
 		for (Map.Entry<String, String> entry : header.entrySet()) {
 			String key = entry.getKey() != null ? entry.getKey() + ":" : "";
-			Log.i(TAG, key + entry.getValue());
+			AbLogUtil.i(AbFileDownloader.class, key + entry.getValue());
 		}
 	}
 

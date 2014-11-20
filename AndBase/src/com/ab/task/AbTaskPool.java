@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,44 +15,33 @@
  */
 package com.ab.task;
 
+import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.Executor;
 
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
-
-import com.ab.global.AbAppData;
-import com.ab.util.AbAppUtil;
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbTaskPool.java 
- * 描述：线程池,程序中只有1个
- * @author zhaoqp
- * @date：2013-5-23 上午10:10:53
+ * 描述：用andbase线程池
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-5-23 上午10:10:53
  */
 
 public class AbTaskPool{
 	
-	/** The tag. */
-	private static String TAG = "AbTaskPool";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
-	
 	/** 单例对象 The http pool. */
-	private static AbTaskPool mAbTaskPool = null; 
-	
-	/** 固定5个线程来执行任务. */
-	private static int nThreads  = 5;
+	private static AbTaskPool abTaskPool = null; 
 	
 	/** 线程执行器. */
-	private static ExecutorService executorService = null; 
+	public static Executor mExecutorService = null;
+	
+	/**  存放返回的任务结果. */
+    private static HashMap<String,Object> result;
 	
 	/** 下载完成后的消息句柄. */
     private static Handler handler = new Handler() { 
@@ -60,30 +49,23 @@ public class AbTaskPool{
         public void handleMessage(Message msg) { 
         	AbTaskItem item = (AbTaskItem)msg.obj; 
         	if(item.getListener() instanceof AbTaskListListener){
-        		((AbTaskListListener)item.listener).update((List<?>)item.getResult()); 
+        		((AbTaskListListener)item.getListener()).update((List<?>)result.get(item.toString())); 
         	}else if(item.getListener() instanceof AbTaskObjectListener){
-        		((AbTaskObjectListener)item.listener).update(item.getResult()); 
+        		((AbTaskObjectListener)item.getListener()).update(result.get(item.toString())); 
         	}else{
-        		item.listener.update(); 
+        		item.getListener().update(); 
         	}
+        	result.remove(item.toString());
         } 
     }; 
     
-    /**
-     * 初始化线程池
-     */
-    static{
-    	nThreads = AbAppUtil.getNumCores();
-    	mAbTaskPool = new AbTaskPool(nThreads*5); 
-    }
 	
 	/**
 	 * 构造线程池.
-	 *
-	 * @param nThreads 初始的线程数
 	 */
-    protected AbTaskPool(int nThreads) {
-    	executorService = Executors.newFixedThreadPool(nThreads); 
+    protected AbTaskPool() {
+        result = new HashMap<String,Object>();
+        mExecutorService = AbThreadFactory.getExecutorService();
     } 
 	
 	/**
@@ -92,20 +74,31 @@ public class AbTaskPool{
 	 * @return single instance of AbHttpPool
 	 */
     public static AbTaskPool getInstance() { 
-        return mAbTaskPool;
+    	if (abTaskPool == null) { 
+    		abTaskPool = new AbTaskPool(); 
+        } 
+        return abTaskPool;
     } 
     
     /**
      * 执行任务.
      * @param item the item
      */
-    public void execute(final AbTaskItem item) {    
-    	executorService.submit(new Runnable() { 
+    public void execute(final AbTaskItem item) {   
+    	mExecutorService.execute(new Runnable() { 
     		public void run() {
     			try {
     				//定义了回调
-                    if (item.listener != null) { 
-                    	item.listener.get();
+                    if (item.getListener() != null) { 
+                        if(item.getListener() instanceof AbTaskListListener){
+                            result.put(item.toString(), ((AbTaskListListener)item.getListener()).getList());
+                        }else if(item.getListener() instanceof AbTaskObjectListener){
+                            result.put(item.toString(), ((AbTaskObjectListener)item.getListener()).getObject());
+                        }else{
+                        	item.getListener().get();
+                            result.put(item.toString(), null);
+                        }
+                        
                     	//交由UI线程处理 
                         Message msg = handler.obtainMessage(); 
                         msg.obj = item; 
@@ -118,51 +111,5 @@ public class AbTaskPool{
     	});                 
     	
     }
-    
-    
-    /**
-     * 
-     * 描述：获取线程池的执行器
-     * @return executorService
-     * @throws 
-     */
-    public static ExecutorService getExecutorService() {
-		return executorService;
-	}
-
-
-	/**
-     * 描述：立即关闭.
-     */
-    public void shutdownNow(){
-    	if(!executorService.isTerminated()){
-    		executorService.shutdownNow();
-    		listenShutdown();
-    	}
-    	
-    }
-    
-    /**
-     * 描述：平滑关闭.
-     */
-    public void shutdown(){
-    	if(!executorService.isTerminated()){
-    	   executorService.shutdown();
-    	   listenShutdown();
-    	}
-    }
-    
-    /**
-     * 描述：关闭监听.
-     */
-    public void listenShutdown(){
-    	try {
-			while(!executorService.awaitTermination(1, TimeUnit.MILLISECONDS)) { 
-				if(D) Log.d(TAG, "线程池未关闭");
-			}  
-			if(D) Log.d(TAG, "线程池已关闭");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-    }
+	
 }

@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.CategorySeries类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html">CategorySeries</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.CategorySeries类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.CategorySeries 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.png" usemap="#com.ab.view.chart.CategorySeries_map" alt=""/>
+  <map id="com.ab.view.chart.CategorySeries_map" name="com.ab.view.chart.CategorySeries_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac9b46f222470566c64cc40c5f17cff28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#ac9b46f222470566c64cc40c5f17cff28">CategorySeries</a> (String title)</td></tr>
+<tr class="separator:ac9b46f222470566c64cc40c5f17cff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b56348493e3f084f7ab1a781c9c899"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a11b56348493e3f084f7ab1a781c9c899">getTitle</a> ()</td></tr>
+<tr class="separator:a11b56348493e3f084f7ab1a781c9c899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6be915853af22de1f132032c70f0cf"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#acf6be915853af22de1f132032c70f0cf">add</a> (double value)</td></tr>
+<tr class="separator:acf6be915853af22de1f132032c70f0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1935c30e3cbd8042cb0426cf0ae3d87"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#ae1935c30e3cbd8042cb0426cf0ae3d87">add</a> (double value, int color)</td></tr>
+<tr class="separator:ae1935c30e3cbd8042cb0426cf0ae3d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019ea5845beba7bc7c1acf3725d20a78"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a019ea5845beba7bc7c1acf3725d20a78">add</a> (double value, int color, String explain)</td></tr>
+<tr class="separator:a019ea5845beba7bc7c1acf3725d20a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f28f717ec8c1b707783a000dcf76816"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a9f28f717ec8c1b707783a000dcf76816">add</a> (String category, double value)</td></tr>
+<tr class="separator:a9f28f717ec8c1b707783a000dcf76816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7e73c94448a27772e3d01606700a2d"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a1f7e73c94448a27772e3d01606700a2d">add</a> (String category, double value, int color)</td></tr>
+<tr class="separator:a1f7e73c94448a27772e3d01606700a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080382db15d93b0f0fc20995d4c22df4"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a080382db15d93b0f0fc20995d4c22df4">add</a> (String category, double value, int color, String explain)</td></tr>
+<tr class="separator:a080382db15d93b0f0fc20995d4c22df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeaea9d695ae2c767cf140fec9500f97"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#adeaea9d695ae2c767cf140fec9500f97">set</a> (int index, String category, double value)</td></tr>
+<tr class="separator:adeaea9d695ae2c767cf140fec9500f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a747b824f8b01dfa7481846f549612"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a06a747b824f8b01dfa7481846f549612">remove</a> (int index)</td></tr>
+<tr class="separator:a06a747b824f8b01dfa7481846f549612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c838a5015f6ff29ea88e31a17f81692"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a9c838a5015f6ff29ea88e31a17f81692">clear</a> ()</td></tr>
+<tr class="separator:a9c838a5015f6ff29ea88e31a17f81692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df22e108ad0075d28c56a9bf501248a"><td class="memItemLeft" align="right" valign="top">synchronized double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a3df22e108ad0075d28c56a9bf501248a">getValue</a> (int index)</td></tr>
+<tr class="separator:a3df22e108ad0075d28c56a9bf501248a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9135b142670c92ccb23ddb893efbfdf"><td class="memItemLeft" align="right" valign="top">synchronized String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#ae9135b142670c92ccb23ddb893efbfdf">getCategory</a> (int index)</td></tr>
+<tr class="separator:ae9135b142670c92ccb23ddb893efbfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a2dbd8a6103d71e89e38c7ac22c225"><td class="memItemLeft" align="right" valign="top">List&lt; Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a17a2dbd8a6103d71e89e38c7ac22c225">getColors</a> ()</td></tr>
+<tr class="separator:a17a2dbd8a6103d71e89e38c7ac22c225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c37c4f6984ff58c86bc0e35e0f91471"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a9c37c4f6984ff58c86bc0e35e0f91471">getExplains</a> ()</td></tr>
+<tr class="separator:a9c37c4f6984ff58c86bc0e35e0f91471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb9da6f5355ca882aa4501fb8472e42"><td class="memItemLeft" align="right" valign="top">synchronized int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a9fb9da6f5355ca882aa4501fb8472e42">getItemCount</a> ()</td></tr>
+<tr class="separator:a9fb9da6f5355ca882aa4501fb8472e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44894174c0501d8b7491dc857b52a51f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html">XYSeries</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a44894174c0501d8b7491dc857b52a51f">toXYSeries</a> ()</td></tr>
+<tr class="separator:a44894174c0501d8b7491dc857b52a51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:ae331d8488dd475a0fd1cb96b7cff3a29"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#ae331d8488dd475a0fd1cb96b7cff3a29">mExplains</a> = new ArrayList&lt;String&gt;()</td></tr>
+<tr class="separator:ae331d8488dd475a0fd1cb96b7cff3a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aac04cf34493e5ffb2e75346b2df19e70"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#aac04cf34493e5ffb2e75346b2df19e70">mTitle</a></td></tr>
+<tr class="separator:aac04cf34493e5ffb2e75346b2df19e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4495aba50dd2717ace65ec52fb967a5"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#ae4495aba50dd2717ace65ec52fb967a5">mCategories</a> = new ArrayList&lt;String&gt;()</td></tr>
+<tr class="separator:ae4495aba50dd2717ace65ec52fb967a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df6759454214a1a947f0bad12f9a379"><td class="memItemLeft" align="right" valign="top">List&lt; Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a3df6759454214a1a947f0bad12f9a379">mValues</a> = new ArrayList&lt;Double&gt;()</td></tr>
+<tr class="separator:a3df6759454214a1a947f0bad12f9a379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939037712ea7d0cf0e10a10070ca4792"><td class="memItemLeft" align="right" valign="top">List&lt; Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_category_series.html#a939037712ea7d0cf0e10a10070ca4792">mColors</a> = new ArrayList&lt;Integer&gt;()</td></tr>
+<tr class="separator:a939037712ea7d0cf0e10a10070ca4792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A series for the category charts like the pie ones. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ac9b46f222470566c64cc40c5f17cff28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.chart.CategorySeries.CategorySeries </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a new category series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the series title </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="acf6be915853af22de1f132032c70f0cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a new value to the series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae1935c30e3cbd8042cb0426cf0ae3d87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>增加一个新的点以及颜色值.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+    <tr><td class="paramname">color</td><td>the new color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a019ea5845beba7bc7c1acf3725d20a78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>explain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>增加一个新的点以及颜色值,以及颜色,文字说明.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+    <tr><td class="paramname">color</td><td>the new color </td></tr>
+    <tr><td class="paramname">explain</td><td>the explain </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f28f717ec8c1b707783a000dcf76816"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.add </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a new value to the series. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category </td></tr>
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1f7e73c94448a27772e3d01606700a2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.add </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a new value to the series. 以及颜色 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category </td></tr>
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+    <tr><td class="paramname">color</td><td>the new color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a080382db15d93b0f0fc20995d4c22df4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.add </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>explain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a new value to the series. 以及颜色,文字说明</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category </td></tr>
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+    <tr><td class="paramname">color</td><td>the new color </td></tr>
+    <tr><td class="paramname">explain</td><td>the explain </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9c838a5015f6ff29ea88e31a17f81692"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes all the existing values from the series. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9135b142670c92ccb23ddb893efbfdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized String com.ab.view.chart.CategorySeries.getCategory </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the category name at the specified index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the category name at the index </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a17a2dbd8a6103d71e89e38c7ac22c225"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Integer&gt; com.ab.view.chart.CategorySeries.getColors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取点颜色数组.</p>
+<dl class="section return"><dt>返回</dt><dd>the colors </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9c37c4f6984ff58c86bc0e35e0f91471"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String&gt; com.ab.view.chart.CategorySeries.getExplains </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取点说明.</p>
+<dl class="section return"><dt>返回</dt><dd>the explains </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9fb9da6f5355ca882aa4501fb8472e42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized int com.ab.view.chart.CategorySeries.getItemCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the series item count.</p>
+<dl class="section return"><dt>返回</dt><dd>the series item count </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a11b56348493e3f084f7ab1a781c9c899"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.CategorySeries.getTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the series title.</p>
+<dl class="section return"><dt>返回</dt><dd>the series title </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3df22e108ad0075d28c56a9bf501248a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized double com.ab.view.chart.CategorySeries.getValue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value at the specified index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the value at the index </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a06a747b824f8b01dfa7481846f549612"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.remove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes an existing value from the series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index in the series of the value to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adeaea9d695ae2c767cf140fec9500f97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.CategorySeries.set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replaces the value at the specific index in the series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index in the series </td></tr>
+    <tr><td class="paramname">category</td><td>the category </td></tr>
+    <tr><td class="paramname">value</td><td>the new value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a44894174c0501d8b7491dc857b52a51f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html">XYSeries</a> com.ab.view.chart.CategorySeries.toXYSeries </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transforms the category series to an XY series. </p><dl class="section return"><dt>返回</dt><dd>the XY series </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ae4495aba50dd2717ace65ec52fb967a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String&gt; com.ab.view.chart.CategorySeries.mCategories = new ArrayList&lt;String&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The series categories. </p>
+
+</div>
+</div>
+<a class="anchor" id="a939037712ea7d0cf0e10a10070ca4792"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Integer&gt; com.ab.view.chart.CategorySeries.mColors = new ArrayList&lt;Integer&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>每个点的颜色. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae331d8488dd475a0fd1cb96b7cff3a29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String&gt; com.ab.view.chart.CategorySeries.mExplains = new ArrayList&lt;String&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>每个数据点的简要 说明. </p>
+
+</div>
+</div>
+<a class="anchor" id="aac04cf34493e5ffb2e75346b2df19e70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.CategorySeries.mTitle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The series title. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3df6759454214a1a947f0bad12f9a379"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Double&gt; com.ab.view.chart.CategorySeries.mValues = new ArrayList&lt;Double&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The series values. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_category_series_8java.html">CategorySeries.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -11,11 +11,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ab.image.AbImageLoader;
+import com.ab.util.AbImageUtil;
+import com.andbase.R;
+
 /**
- * Copyright (c) 2011 All rights reserved 
+ * © 2012 amsoft.cn 
  * 名称：MyListViewAdapter 
  * 描述：ListView自定义Adapter例子
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-11-8
  * @version
  */
@@ -30,6 +34,9 @@ public class MyListViewAdapter extends BaseAdapter{
     private String[] mFrom;
     //view的id
     private int[] mTo;
+    
+    //图片下载器
+    private AbImageLoader mAbImageLoader = null;
     
    /**
     * 构造方法
@@ -46,6 +53,13 @@ public class MyListViewAdapter extends BaseAdapter{
          mResource = resource;
          mFrom = from;
          mTo = to;
+         //图片下载器
+         mAbImageLoader = new AbImageLoader(mContext);
+         mAbImageLoader.setMaxWidth(100);
+         mAbImageLoader.setMaxHeight(100);
+         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
+         mAbImageLoader.setErrorImage(R.drawable.image_error);
+         mAbImageLoader.setEmptyImage(R.drawable.image_empty);
     }   
     
     @Override
@@ -88,11 +102,14 @@ public class MyListViewAdapter extends BaseAdapter{
           final Object data0 = dataSet.get(mFrom[0]);
           final Object data1 = dataSet.get(mFrom[1]);
           final Object data2 = dataSet.get(mFrom[2]);
-          //设置数据到View
-          holder.itemsIcon.setImageResource((Integer)data0);
-          holder.itemsTitle.setText(data1.toString());
+          String imageUrl = (String)data0;
+          //设置加载中的View
+          mAbImageLoader.setLoadingView(convertView.findViewById(R.id.progressBar));
+          //图片的下载
+          mAbImageLoader.display(holder.itemsIcon,imageUrl);
+          holder.itemsTitle.setText(String.valueOf(position+1)+"."+data1.toString());
           holder.itemsText.setText(data2.toString());
-          return convertView;
+          return convertView; 
     }
     
     /**

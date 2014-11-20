@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,13 @@ import android.database.sqlite.SQLiteDatabase;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbSDDBHelper.
+ * © 2012 amsoft.cn
+ * 名称：AbSDDBHelper.java 
+ * 描述：SD卡中保存数据库辅助类
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-7-23 上午9:47:10
  */
 public class AbSDDBHelper extends AbSDSQLiteOpenHelper {
 	
@@ -31,16 +37,16 @@ public class AbSDDBHelper extends AbSDSQLiteOpenHelper {
 	 * 初始化一个AbSDDBHelper.
 	 *
 	 * @param context 应用context
-	 * @param path 要放到SDCard下的文件夹路径
-	 * @param databaseName 数据库文件名
+	 * @param dir 数据库文件保存文件夹全路径
+	 * @param name 数据库文件名
 	 * @param factory 数据库查询的游标工厂
-	 * @param databaseVersion 数据库的新版本号
+	 * @param version 数据库的新版本号
 	 * @param modelClasses 要初始化的表的对象
 	 */
-	public AbSDDBHelper(Context context, String path,String databaseName,
-			SQLiteDatabase.CursorFactory factory, int databaseVersion,
+	public AbSDDBHelper(Context context, String dir,String name,
+			SQLiteDatabase.CursorFactory factory, int version,
 			Class<?>[] modelClasses) {
-        super(context, path,databaseName, null, databaseVersion);
+        super(context, dir,name, null, version);
 		this.modelClasses = modelClasses;
 
 	}

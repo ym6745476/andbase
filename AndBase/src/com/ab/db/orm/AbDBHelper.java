@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,13 +22,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbDBHelper.java 
  * 描述：手机data/data下面的数据库
- * @author zhaoqp
- * @date：2013-7-23 上午9:47:10
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-7-23 上午9:47:10
  */
 public class AbDBHelper extends SQLiteOpenHelper{
 	

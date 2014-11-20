@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +33,7 @@ import android.os.Environment;
 import android.os.Handler;
 
 import com.ab.global.AbConstant;
+import com.ab.util.AbDialogUtil;
 import com.ab.util.AbFileUtil;
 
 
@@ -79,7 +80,7 @@ public class CropImage{
 		mImageView.setCropImage(this);
 		mHandler = handler;
 		//初始化图片保存路径
-		FILE_LOCAL = new File(AbFileUtil.getFullImageDownPathDir());
+		FILE_LOCAL = new File(AbFileUtil.getImageDownloadDir(context));
 		if(!FILE_LOCAL.exists()){
 			FILE_LOCAL.mkdirs();
 		}
@@ -396,37 +397,23 @@ public class CropImage{
     		mHandler = handler;
     	}
     	
-	    /**
-    	 * 描述：TODO.
-    	 *
-    	 * @see java.lang.Runnable#run()
-    	 * @author: zhaoqp
-    	 * @date：2013-6-17 上午9:04:47
-    	 * @version v1.0
-    	 */
 	    public void run(){
     		final CountDownLatch latch = new CountDownLatch(1);
     		mHandler.post(new Runnable() {
                 public void run() {
-                    try{
-                    	mHandler.sendMessage(mHandler.obtainMessage(AbConstant.SHOW_PROGRESS));
-                    }catch (Exception e) {
-					}
                     latch.countDown();
                 }
             });
-    		 try {
+    		try {
                  latch.await();
-             } catch (Exception e) {
+            } catch (Exception e) {
                  throw new RuntimeException(e);
-             }
+            }
     		try {
     			mJob.run();
     		}catch (Exception e) {
     			e.printStackTrace();
-            }finally{
-    			mHandler.sendMessage(mHandler.obtainMessage(AbConstant.REMOVE_PROGRESS));
-    		}
+            }
     	}
     }
 }

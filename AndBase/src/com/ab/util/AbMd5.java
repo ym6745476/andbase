@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,15 @@ package com.ab.util;
 import java.security.MessageDigest;
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
+ * 名称：AbMd5.java 
  * 描述：MD5加密.
  *
- * @author zhaoqp
- * @date：2013-1-15 下午3:11:18
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-01-17 下午11:52:13
  */
 public class AbMd5 {
 	

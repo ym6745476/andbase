@@ -31,7 +31,7 @@
             android:layout_marginLeft="5dip"
             android:gravity="center"
             android:text="@string/total"
-            android:textColor="@color/gray_black" />
+            android:textColor="@color/gray_dark" />
 
         <TextView
             android:id="@+id/current"
@@ -40,7 +40,7 @@
             android:layout_marginLeft="5dip"
             android:gravity="center"
             android:text="@string/current"
-            android:textColor="@color/gray_black" />
+            android:textColor="@color/gray_dark" />
 
         <Button
             android:id="@+id/nextView"

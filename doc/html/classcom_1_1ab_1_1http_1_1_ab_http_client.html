@@ -1,0 +1,1400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.http.AbHttpClient类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html">AbHttpClient</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-static-attribs">静态 Protected 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1http_1_1_ab_http_client-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.http.AbHttpClient类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client_1_1_redirection_response_handler.html">RedirectionResponseHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client_1_1_responder_handler.html">ResponderHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab315c0b73cdf148cc80c8f1ac7055521"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ab315c0b73cdf148cc80c8f1ac7055521">AbHttpClient</a> (Context context)</td></tr>
+<tr class="separator:ab315c0b73cdf148cc80c8f1ac7055521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46166e64cf3798f0eb79f994fd6dbf97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a46166e64cf3798f0eb79f994fd6dbf97">get</a> (final String url, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:a46166e64cf3798f0eb79f994fd6dbf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02137a1d982c0c8be01514e77a71424b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a02137a1d982c0c8be01514e77a71424b">post</a> (final String url, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:a02137a1d982c0c8be01514e77a71424b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd6ab8ab7b591a6c17213ffbfb7e1a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#afdd6ab8ab7b591a6c17213ffbfb7e1a4">writeResponseData</a> (Context context, HttpEntity entity, String name, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_file_http_response_listener.html">AbFileHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:afdd6ab8ab7b591a6c17213ffbfb7e1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1e4482cc8d0bd45823940746a21a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a5d1e4482cc8d0bd45823940746a21a51">readResponseData</a> (HttpEntity entity, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html">AbBinaryHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:a5d1e4482cc8d0bd45823940746a21a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc8b735fb365f5452a2d318870f03cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a2dc8b735fb365f5452a2d318870f03cb">setTimeout</a> (int timeout)</td></tr>
+<tr class="separator:a2dc8b735fb365f5452a2d318870f03cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96cfac7f71ed4793fac9c5108a0836c"><td class="memItemLeft" align="right" valign="top">BasicHttpParams&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aa96cfac7f71ed4793fac9c5108a0836c">getHttpParams</a> ()</td></tr>
+<tr class="separator:aa96cfac7f71ed4793fac9c5108a0836c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d9ca437fccb1a72497a8c2080eb1f0"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aa1d9ca437fccb1a72497a8c2080eb1f0">getHttpClient</a> ()</td></tr>
+<tr class="separator:aa1d9ca437fccb1a72497a8c2080eb1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba64f8dff10fbfa8f51601decd75bb2"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acba64f8dff10fbfa8f51601decd75bb2">createHttpClient</a> ()</td></tr>
+<tr class="separator:acba64f8dff10fbfa8f51601decd75bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071981588ecf26cb52c0ae48f7501d83"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a071981588ecf26cb52c0ae48f7501d83">isOpenEasySSL</a> ()</td></tr>
+<tr class="separator:a071981588ecf26cb52c0ae48f7501d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4517919e6fc05768da9f27cb15dfbbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af4517919e6fc05768da9f27cb15dfbbe">setOpenEasySSL</a> (boolean <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a071981588ecf26cb52c0ae48f7501d83">isOpenEasySSL</a>)</td></tr>
+<tr class="separator:af4517919e6fc05768da9f27cb15dfbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da8669d2d9ae21eca9d21cca0d08b7f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a3da8669d2d9ae21eca9d21cca0d08b7f">getUserAgent</a> ()</td></tr>
+<tr class="separator:a3da8669d2d9ae21eca9d21cca0d08b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8e739d1c25de930bd73e615e0432b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a2c8e739d1c25de930bd73e615e0432b0">setUserAgent</a> (String <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af11173ce5fd368835ec106d5c65f5ecc">userAgent</a>)</td></tr>
+<tr class="separator:a2c8e739d1c25de930bd73e615e0432b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae358194f272e85b5bb07fe3e2ad5cc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a1ae358194f272e85b5bb07fe3e2ad5cc">getEncode</a> ()</td></tr>
+<tr class="separator:a1ae358194f272e85b5bb07fe3e2ad5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5eecbb08c8e0ed7c000e0fcf44d3027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ad5eecbb08c8e0ed7c000e0fcf44d3027">setEncode</a> (String <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a74497f197940247239c84d92b5024548">encode</a>)</td></tr>
+<tr class="separator:ad5eecbb08c8e0ed7c000e0fcf44d3027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643ee95cabb1d91207c7e3048eef9325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a643ee95cabb1d91207c7e3048eef9325">shutdown</a> ()</td></tr>
+<tr class="separator:a643ee95cabb1d91207c7e3048eef9325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:aa98c699911a922ce9a015d91fcf77f65"><td class="memItemLeft" align="right" valign="top">static Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aa98c699911a922ce9a015d91fcf77f65">mExecutorService</a> = null</td></tr>
+<tr class="separator:aa98c699911a922ce9a015d91fcf77f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca01a6f1a000a0c2faf399cc081f4d8"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acca01a6f1a000a0c2faf399cc081f4d8">DEFAULT_SOCKET_TIMEOUT</a> = 10000</td></tr>
+<tr class="separator:acca01a6f1a000a0c2faf399cc081f4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+静态 Protected 属性</h2></td></tr>
+<tr class="memitem:a9cf48acddab34ecd4db0bc3991ec9585"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a9cf48acddab34ecd4db0bc3991ec9585">SUCCESS_MESSAGE</a> = 0</td></tr>
+<tr class="separator:a9cf48acddab34ecd4db0bc3991ec9585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02138b25bc57f7df6b46b04da3e15f2"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ab02138b25bc57f7df6b46b04da3e15f2">FAILURE_MESSAGE</a> = 1</td></tr>
+<tr class="separator:ab02138b25bc57f7df6b46b04da3e15f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa821f1309976e3c4151f994f8a50906"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aaa821f1309976e3c4151f994f8a50906">FAILURE_MESSAGE_CONNECT</a> = 2</td></tr>
+<tr class="separator:aaa821f1309976e3c4151f994f8a50906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4de1dcb5e03fb7e434dec7f60ff301"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acb4de1dcb5e03fb7e434dec7f60ff301">FAILURE_MESSAGE_SERVICE</a> = 3</td></tr>
+<tr class="separator:acb4de1dcb5e03fb7e434dec7f60ff301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e30a15ff0ea251c1fd16b3b77abfd4"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a73e30a15ff0ea251c1fd16b3b77abfd4">START_MESSAGE</a> = 4</td></tr>
+<tr class="separator:a73e30a15ff0ea251c1fd16b3b77abfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca882626d7605fc3ac89296a54f9a0e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a3ca882626d7605fc3ac89296a54f9a0e">FINISH_MESSAGE</a> = 5</td></tr>
+<tr class="separator:a3ca882626d7605fc3ac89296a54f9a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda56b761c89f3d4abb83396c8663545"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acda56b761c89f3d4abb83396c8663545">PROGRESS_MESSAGE</a> = 6</td></tr>
+<tr class="separator:acda56b761c89f3d4abb83396c8663545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198f641a5c0679554bbc673078962c0d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a198f641a5c0679554bbc673078962c0d">RETRY_MESSAGE</a> = 7</td></tr>
+<tr class="separator:a198f641a5c0679554bbc673078962c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a6f170797a1d86301d1797002e2e212ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a6f170797a1d86301d1797002e2e212ea">doGet</a> (String url, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:a6f170797a1d86301d1797002e2e212ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7eb88959b7917445912c081a1563da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a8d7eb88959b7917445912c081a1563da">doPost</a> (String url, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:a8d7eb88959b7917445912c081a1563da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a74497f197940247239c84d92b5024548"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a74497f197940247239c84d92b5024548">encode</a> = HTTP.UTF_8</td></tr>
+<tr class="separator:a74497f197940247239c84d92b5024548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11173ce5fd368835ec106d5c65f5ecc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af11173ce5fd368835ec106d5c65f5ecc">userAgent</a> = &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 BIDUBrowser/6.x Safari/537.31&quot;</td></tr>
+<tr class="separator:af11173ce5fd368835ec106d5c65f5ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283f084fedaf0f736019742c309519b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a283f084fedaf0f736019742c309519b1">mTimeout</a> = <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acca01a6f1a000a0c2faf399cc081f4d8">DEFAULT_SOCKET_TIMEOUT</a></td></tr>
+<tr class="separator:a283f084fedaf0f736019742c309519b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b2e02634356ba04ef115c46616f70e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ae0b2e02634356ba04ef115c46616f70e">mIsOpenEasySSL</a> = true</td></tr>
+<tr class="separator:ae0b2e02634356ba04ef115c46616f70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47dd102ac54c5d1a1bd9e9a3a443832a"><td class="memItemLeft" align="right" valign="top">DefaultHttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a47dd102ac54c5d1a1bd9e9a3a443832a">mHttpClient</a> = null</td></tr>
+<tr class="separator:a47dd102ac54c5d1a1bd9e9a3a443832a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410b35cc183d63c7db21e32a95b5d639"><td class="memItemLeft" align="right" valign="top">HttpContext&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a410b35cc183d63c7db21e32a95b5d639">mHttpContext</a> = null</td></tr>
+<tr class="separator:a410b35cc183d63c7db21e32a95b5d639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7936b5902e0fdba3a6a7eb7472ed9422"><td class="memItemLeft" align="right" valign="top">HttpRequestRetryHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a7936b5902e0fdba3a6a7eb7472ed9422">mRequestRetryHandler</a></td></tr>
+<tr class="separator:a7936b5902e0fdba3a6a7eb7472ed9422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a0882088ecdda57beb5959b8cf12120ab"><td class="memItemLeft" align="right" valign="top">static Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a0882088ecdda57beb5959b8cf12120ab">mContext</a></td></tr>
+<tr class="separator:a0882088ecdda57beb5959b8cf12120ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ffbedad5950c5a1ea97b802f4b2ccb"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ad4ffbedad5950c5a1ea97b802f4b2ccb">HTTP_GET</a> = &quot;GET&quot;</td></tr>
+<tr class="separator:ad4ffbedad5950c5a1ea97b802f4b2ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9110bf1d152a93fdf97c32d9251820"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aaf9110bf1d152a93fdf97c32d9251820">HTTP_POST</a> = &quot;POST&quot;</td></tr>
+<tr class="separator:aaf9110bf1d152a93fdf97c32d9251820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ec83531643f7857d37124df41de88"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ac92ec83531643f7857d37124df41de88">USER_AGENT</a> = &quot;User-Agent&quot;</td></tr>
+<tr class="separator:ac92ec83531643f7857d37124df41de88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f58ee40003ef212e8b86deffe049ee"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af0f58ee40003ef212e8b86deffe049ee">ACCEPT_ENCODING</a> = &quot;Accept-Encoding&quot;</td></tr>
+<tr class="separator:af0f58ee40003ef212e8b86deffe049ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066a3ec8e0679a5659e9041ce71c93d0"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a066a3ec8e0679a5659e9041ce71c93d0">DEFAULT_MAX_CONNECTIONS</a> = 10</td></tr>
+<tr class="separator:a066a3ec8e0679a5659e9041ce71c93d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd4867974531ba2bc22b0a0890f9918"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acdd4867974531ba2bc22b0a0890f9918">DEFAULT_MAX_RETRIES</a> = 3</td></tr>
+<tr class="separator:acdd4867974531ba2bc22b0a0890f9918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9aaecd8bb8577bf744d2891231252d1"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ab9aaecd8bb8577bf744d2891231252d1">DEFAULT_SOCKET_BUFFER_SIZE</a> = 8192</td></tr>
+<tr class="separator:ab9aaecd8bb8577bf744d2891231252d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae891bef0ed45894abec8683ce1cfe691"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ae891bef0ed45894abec8683ce1cfe691">BUFFER_SIZE</a> = 4096</td></tr>
+<tr class="separator:ae891bef0ed45894abec8683ce1cfe691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbHttpClient.java 描述：Http客户端</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-13 上午9:00:52 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ab315c0b73cdf148cc80c8f1ac7055521"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.http.AbHttpClient.AbHttpClient </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="acba64f8dff10fbfa8f51601decd75bb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpClient com.ab.http.AbHttpClient.createHttpClient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取HttpClient，自签名的证书，如果想做签名参考AuthSSLProtocolSocketFactory类 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpParams</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f170797a1d86301d1797002e2e212ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.doGet </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：执行get请求.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>the url </td></tr>
+    <tr><td class="paramname">params</td><td>the params </td></tr>
+    <tr><td class="paramname">responseListener</td><td>the response listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d7eb88959b7917445912c081a1563da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.doPost </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：执行post请求.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>the url </td></tr>
+    <tr><td class="paramname">params</td><td>the params </td></tr>
+    <tr><td class="paramname">responseListener</td><td>the response listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a46166e64cf3798f0eb79f994fd6dbf97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.get </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：带参数的get请求.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>the url </td></tr>
+    <tr><td class="paramname">params</td><td>the params </td></tr>
+    <tr><td class="paramname">responseListener</td><td>the response listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ae358194f272e85b5bb07fe3e2ad5cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.AbHttpClient.getEncode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取编码 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa1d9ca437fccb1a72497a8c2080eb1f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpClient com.ab.http.AbHttpClient.getHttpClient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取HttpClient，自签名的证书，如果想做签名参考AuthSSLProtocolSocketFactory类 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa96cfac7f71ed4793fac9c5108a0836c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BasicHttpParams com.ab.http.AbHttpClient.getHttpParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>HTTP参数配置 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3da8669d2d9ae21eca9d21cca0d08b7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.AbHttpClient.getUserAgent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取用户代理 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a071981588ecf26cb52c0ae48f7501d83"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.http.AbHttpClient.isOpenEasySSL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>是否打开ssl 自签名 </p>
+
+</div>
+</div>
+<a class="anchor" id="a02137a1d982c0c8be01514e77a71424b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.post </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：带参数的post请求.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>the url </td></tr>
+    <tr><td class="paramname">params</td><td>the params </td></tr>
+    <tr><td class="paramname">responseListener</td><td>the response listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d1e4482cc8d0bd45823940746a21a51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.readResponseData </td>
+          <td>(</td>
+          <td class="paramtype">HttpEntity&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html">AbBinaryHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：转换为二进制并回调进度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>the entity </td></tr>
+    <tr><td class="paramname">responseListener</td><td>the response listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5eecbb08c8e0ed7c000e0fcf44d3027"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.setEncode </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>encode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置编码 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af4517919e6fc05768da9f27cb15dfbbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.setOpenEasySSL </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isOpenEasySSL</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>打开ssl 自签名 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isOpenEasySSL</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2dc8b735fb365f5452a2d318870f03cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.setTimeout </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置连接超时时间.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>毫秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c8e739d1c25de930bd73e615e0432b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.setUserAgent </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>userAgent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置用户代理 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userAgent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a643ee95cabb1d91207c7e3048eef9325"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>关闭HttpClient </p>
+
+</div>
+</div>
+<a class="anchor" id="afdd6ab8ab7b591a6c17213ffbfb7e1a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.writeResponseData </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HttpEntity&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_file_http_response_listener.html">AbFileHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：写入文件并回调进度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">entity</td><td>the entity </td></tr>
+    <tr><td class="paramname">name</td><td>the name </td></tr>
+    <tr><td class="paramname">responseListener</td><td>the response listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af0f58ee40003ef212e8b86deffe049ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.http.AbHttpClient.ACCEPT_ENCODING = &quot;Accept-Encoding&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae891bef0ed45894abec8683ce1cfe691"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.BUFFER_SIZE = 4096</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>缓冲大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a066a3ec8e0679a5659e9041ce71c93d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.DEFAULT_MAX_CONNECTIONS = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>最大连接数. </p>
+
+</div>
+</div>
+<a class="anchor" id="acdd4867974531ba2bc22b0a0890f9918"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.DEFAULT_MAX_RETRIES = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>重试次数. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab9aaecd8bb8577bf744d2891231252d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.DEFAULT_SOCKET_BUFFER_SIZE = 8192</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>缓冲大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="acca01a6f1a000a0c2faf399cc081f4d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.DEFAULT_SOCKET_TIMEOUT = 10000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>超时时间. </p>
+
+</div>
+</div>
+<a class="anchor" id="a74497f197940247239c84d92b5024548"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.AbHttpClient.encode = HTTP.UTF_8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>编码. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab02138b25bc57f7df6b46b04da3e15f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.FAILURE_MESSAGE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>失败. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa821f1309976e3c4151f994f8a50906"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.FAILURE_MESSAGE_CONNECT = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>和网络相关的失败. </p>
+
+</div>
+</div>
+<a class="anchor" id="acb4de1dcb5e03fb7e434dec7f60ff301"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.FAILURE_MESSAGE_SERVICE = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>和服务相关的失败. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ca882626d7605fc3ac89296a54f9a0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.FINISH_MESSAGE = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>完成. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4ffbedad5950c5a1ea97b802f4b2ccb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.http.AbHttpClient.HTTP_GET = &quot;GET&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf9110bf1d152a93fdf97c32d9251820"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.http.AbHttpClient.HTTP_POST = &quot;POST&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0882088ecdda57beb5959b8cf12120ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.http.AbHttpClient.mContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>上下文. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa98c699911a922ce9a015d91fcf77f65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Executor com.ab.http.AbHttpClient.mExecutorService = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>线程执行器. </p>
+
+</div>
+</div>
+<a class="anchor" id="a47dd102ac54c5d1a1bd9e9a3a443832a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DefaultHttpClient com.ab.http.AbHttpClient.mHttpClient = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>HTTP Client </p>
+
+</div>
+</div>
+<a class="anchor" id="a410b35cc183d63c7db21e32a95b5d639"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpContext com.ab.http.AbHttpClient.mHttpContext = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>HTTP 上下文 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae0b2e02634356ba04ef115c46616f70e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.http.AbHttpClient.mIsOpenEasySSL = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>通用证书. 如果要求HTTPS连接，则使用SSL打开连接 </p>
+
+</div>
+</div>
+<a class="anchor" id="a7936b5902e0fdba3a6a7eb7472ed9422"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpRequestRetryHandler com.ab.http.AbHttpClient.mRequestRetryHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自动重试处理 </p>
+
+</div>
+</div>
+<a class="anchor" id="a283f084fedaf0f736019742c309519b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.http.AbHttpClient.mTimeout = <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acca01a6f1a000a0c2faf399cc081f4d8">DEFAULT_SOCKET_TIMEOUT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>超时时间. </p>
+
+</div>
+</div>
+<a class="anchor" id="acda56b761c89f3d4abb83396c8663545"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.PROGRESS_MESSAGE = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>进行中. </p>
+
+</div>
+</div>
+<a class="anchor" id="a198f641a5c0679554bbc673078962c0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.RETRY_MESSAGE = 7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>重试. </p>
+
+</div>
+</div>
+<a class="anchor" id="a73e30a15ff0ea251c1fd16b3b77abfd4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.START_MESSAGE = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>开始. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9cf48acddab34ecd4db0bc3991ec9585"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.http.AbHttpClient.SUCCESS_MESSAGE = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>成功. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac92ec83531643f7857d37124df41de88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.http.AbHttpClient.USER_AGENT = &quot;User-Agent&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af11173ce5fd368835ec106d5c65f5ecc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.AbHttpClient.userAgent = &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 BIDUBrowser/6.x Safari/537.31&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>用户代理. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/http/<a class="el" href="_ab_http_client_8java.html">AbHttpClient.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

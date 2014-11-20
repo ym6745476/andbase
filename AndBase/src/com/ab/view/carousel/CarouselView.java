@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,12 +39,12 @@ import android.view.animation.Transformation;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：CarouselView.java 
- * @author zhaoqp
- * @date：2013-11-28 上午11:10:13
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-28 上午11:10:13
  */
 public class CarouselView extends CarouselSpinner implements GestureDetector.OnGestureListener {
 		    
@@ -354,11 +354,15 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }
     
     /**
-     * 描述：TODO
-     * @see android.view.View#onKeyUp(int, android.view.KeyEvent)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param keyCode the key code
+     * @param event the event
+     * @return true, if successful
+     * @see android.view.View#onKeyUp(int, android.view.KeyEvent)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -393,11 +397,15 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }    
         
     /**
-     * 描述：TODO
-     * @see android.view.View#onFocusChanged(boolean, int, android.graphics.Rect)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param gainFocus the gain focus
+     * @param direction the direction
+     * @param previouslyFocusedRect the previously focused rect
+     * @see android.view.View#onFocusChanged(boolean, int, android.graphics.Rect)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     protected void onFocusChanged(boolean gainFocus, int direction, Rect previouslyFocusedRect) {
@@ -417,11 +425,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     // ViewGroup overrides
     
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#checkLayoutParams(android.view.ViewGroup.LayoutParams)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param p the p
+     * @return true, if successful
+     * @see android.view.ViewGroup#checkLayoutParams(android.view.ViewGroup.LayoutParams)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
@@ -429,11 +440,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }
     
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#generateLayoutParams(android.view.ViewGroup.LayoutParams)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param p the p
+     * @return the view group. layout params
+     * @see android.view.ViewGroup#generateLayoutParams(android.view.ViewGroup.LayoutParams)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
@@ -441,11 +455,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }
     
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#generateLayoutParams(android.util.AttributeSet)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param attrs the attrs
+     * @return the view group. layout params
+     * @see android.view.ViewGroup#generateLayoutParams(android.util.AttributeSet)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs) {
@@ -453,11 +470,13 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }
         
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#dispatchSetSelected(boolean)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param selected the selected
+     * @see android.view.ViewGroup#dispatchSetSelected(boolean)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     public void dispatchSetSelected(boolean selected) {
@@ -469,11 +488,13 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }
     
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#dispatchSetPressed(boolean)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param pressed the pressed
+     * @see android.view.ViewGroup#dispatchSetPressed(boolean)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     protected void dispatchSetPressed(boolean pressed) {
@@ -485,11 +506,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }
     
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#showContextMenuForChild(android.view.View)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param originalView the original view
+     * @return true, if successful
+     * @see android.view.ViewGroup#showContextMenuForChild(android.view.View)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     public boolean showContextMenuForChild(View originalView) {
@@ -505,11 +529,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
         
         
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#dispatchKeyEvent(android.view.KeyEvent)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param event the event
+     * @return true, if successful
+     * @see android.view.ViewGroup#dispatchKeyEvent(android.view.KeyEvent)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
@@ -684,11 +711,12 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }	    
     	
     /**
-     * 描述：TODO
-     * @see com.ab.view.carousel.CarouselAdapter#selectionChanged()
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @see com.ab.view.carousel.CarouselAdapter#selectionChanged()
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     void selectionChanged() {
@@ -698,11 +726,13 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
     }    
 	
     /**
-     * 描述：TODO
-     * @see com.ab.view.carousel.CarouselAdapter#setSelectedPositionInt(int)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param position the new selected position int
+     * @see com.ab.view.carousel.CarouselAdapter#setSelectedPositionInt(int)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     @Override
     void setSelectedPositionInt(int position) {
@@ -806,11 +836,12 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
         }
                 		
 		/**
-		 * 描述：TODO
-		 * @see java.lang.Runnable#run()
-		 * @author: zhaoqp
-		 * @date：2013-11-28 上午11:14:35
+		 * 描述：TODO.
+		 *
 		 * @version v1.0
+		 * @see java.lang.Runnable#run()
+		 * @author: amsoft.cn
+		 * @date：2013-11-28 上午11:14:35
 		 */
 		public void run() {
             if (CarouselView.this.getChildCount() == 0) {
@@ -852,11 +883,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
 	// OnGestureListener implementation
 	
 	/**
-	 * 描述：TODO
-	 * @see android.view.GestureDetector.OnGestureListener#onDown(android.view.MotionEvent)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:35
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param e the e
+	 * @return true, if successful
+	 * @see android.view.GestureDetector.OnGestureListener#onDown(android.view.MotionEvent)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:35
 	 */
 	public boolean onDown(MotionEvent e) {
         // Kill any existing fling/scroll
@@ -879,11 +913,17 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
 	}	
 	
     /**
-     * 描述：TODO
-     * @see android.view.GestureDetector.OnGestureListener#onFling(android.view.MotionEvent, android.view.MotionEvent, float, float)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:35
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param e1 the e1
+     * @param e2 the e2
+     * @param velocityX the velocity x
+     * @param velocityY the velocity y
+     * @return true, if successful
+     * @see android.view.GestureDetector.OnGestureListener#onFling(android.view.MotionEvent, android.view.MotionEvent, float, float)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:35
      */
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 
@@ -907,11 +947,13 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
 					
 	
 	/**
-	 * 描述：TODO
-	 * @see android.view.GestureDetector.OnGestureListener#onLongPress(android.view.MotionEvent)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:35
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param e the e
+	 * @see android.view.GestureDetector.OnGestureListener#onLongPress(android.view.MotionEvent)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:35
 	 */
 	public void onLongPress(MotionEvent e) {
         
@@ -927,11 +969,17 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
 			
 	
 	/**
-	 * 描述：TODO
-	 * @see android.view.GestureDetector.OnGestureListener#onScroll(android.view.MotionEvent, android.view.MotionEvent, float, float)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:35
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param e1 the e1
+	 * @param e2 the e2
+	 * @param distanceX the distance x
+	 * @param distanceY the distance y
+	 * @return true, if successful
+	 * @see android.view.GestureDetector.OnGestureListener#onScroll(android.view.MotionEvent, android.view.MotionEvent, float, float)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:35
 	 */
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
@@ -976,11 +1024,14 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
 	
 	
 	/**
-	 * 描述：TODO
-	 * @see android.view.GestureDetector.OnGestureListener#onSingleTapUp(android.view.MotionEvent)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:35
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param e the e
+	 * @return true, if successful
+	 * @see android.view.GestureDetector.OnGestureListener#onSingleTapUp(android.view.MotionEvent)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:35
 	 */
 	public boolean onSingleTapUp(MotionEvent e) {
         if (mDownTouchPosition >= 0) {
@@ -1000,11 +1051,13 @@ public class CarouselView extends CarouselSpinner implements GestureDetector.OnG
 	
 	///// Unused gestures
 	/**
-	 * 描述：TODO
-	 * @see android.view.GestureDetector.OnGestureListener#onShowPress(android.view.MotionEvent)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:35
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param e the e
+	 * @see android.view.GestureDetector.OnGestureListener#onShowPress(android.view.MotionEvent)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:35
 	 */
 	public void onShowPress(MotionEvent e) {
 	}

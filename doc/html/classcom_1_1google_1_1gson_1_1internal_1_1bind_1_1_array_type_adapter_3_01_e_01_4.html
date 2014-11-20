@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal_1_1bind.html">bind</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html">ArrayTypeAdapter< E ></a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.png" usemap="#com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;_map" alt=""/>
+  <map id="com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;_map" name="com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7c3cb256ba98da9aa492a0e54ab10b5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a7c3cb256ba98da9aa492a0e54ab10b5f">ArrayTypeAdapter</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> context, TypeAdapter&lt; E &gt; <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#ab056eca004a399b8b323db4eefeaea02">componentTypeAdapter</a>, Class&lt; E &gt; <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a4f7bacc107c0d05fd011ea0f93eec640">componentType</a>)</td></tr>
+<tr class="separator:a7c3cb256ba98da9aa492a0e54ab10b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80240ce70c313c042cc5a461995fd956"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a80240ce70c313c042cc5a461995fd956">read</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html">JsonReader</a> in)  throws IOException </td></tr>
+<tr class="separator:a80240ce70c313c042cc5a461995fd956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a22d57abd4f136127737cc83b3680a8ce"><td class="memItemLeft" align="right" valign="top">static final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">TypeAdapterFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a22d57abd4f136127737cc83b3680a8ce">FACTORY</a></td></tr>
+<tr class="separator:a22d57abd4f136127737cc83b3680a8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a4f7bacc107c0d05fd011ea0f93eec640"><td class="memItemLeft" align="right" valign="top">final Class&lt; E &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a4f7bacc107c0d05fd011ea0f93eec640">componentType</a></td></tr>
+<tr class="separator:a4f7bacc107c0d05fd011ea0f93eec640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab056eca004a399b8b323db4eefeaea02"><td class="memItemLeft" align="right" valign="top">final TypeAdapter&lt; E &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#ab056eca004a399b8b323db4eefeaea02">componentTypeAdapter</a></td></tr>
+<tr class="separator:ab056eca004a399b8b323db4eefeaea02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Adapt an array of objects. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a7c3cb256ba98da9aa492a0e54ab10b5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;.ArrayTypeAdapter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TypeAdapter&lt; E &gt;&#160;</td>
+          <td class="paramname"><em>componentTypeAdapter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt; E &gt;&#160;</td>
+          <td class="paramname"><em>componentType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a80240ce70c313c042cc5a461995fd956"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;.read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html">JsonReader</a>&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a4f7bacc107c0d05fd011ea0f93eec640"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Class&lt;E&gt; com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;.componentType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab056eca004a399b8b323db4eefeaea02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final TypeAdapter&lt;E&gt; com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;.componentTypeAdapter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a22d57abd4f136127737cc83b3680a8ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">TypeAdapterFactory</a> com.google.gson.internal.bind.ArrayTypeAdapter&lt; E &gt;.FACTORY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> TypeAdapterFactory() {</div>
+<div class="line">    @SuppressWarnings({<span class="stringliteral">&quot;unchecked&quot;</span>, <span class="stringliteral">&quot;rawtypes&quot;</span>})</div>
+<div class="line">    public &lt;T&gt; TypeAdapter&lt;T&gt; create(Gson gson, TypeToken&lt;T&gt; typeToken) {</div>
+<div class="line">      Type type = typeToken.getType();</div>
+<div class="line">      <span class="keywordflow">if</span> (!(type instanceof GenericArrayType || type instanceof Class &amp;&amp; ((Class&lt;?&gt;) type).isArray())) {</div>
+<div class="line">        <span class="keywordflow">return</span> null;</div>
+<div class="line">      }</div>
+<div class="line"></div>
+<div class="line">      Type <a class="code" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a4f7bacc107c0d05fd011ea0f93eec640">componentType</a> = $Gson$Types.getArrayComponentType(type);</div>
+<div class="line">      TypeAdapter&lt;?&gt; <a class="code" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#ab056eca004a399b8b323db4eefeaea02">componentTypeAdapter</a> = gson.getAdapter(TypeToken.get(componentType));</div>
+<div class="line">      <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_array_type_adapter_3_01_e_01_4.html#a7c3cb256ba98da9aa492a0e54ab10b5f">ArrayTypeAdapter</a>(</div>
+<div class="line">              gson, componentTypeAdapter, $Gson$Types.getRawType(componentType));</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/internal/bind/<a class="el" href="_array_type_adapter_8java.html">ArrayTypeAdapter.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

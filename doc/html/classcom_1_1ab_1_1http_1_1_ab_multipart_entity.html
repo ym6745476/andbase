@@ -1,0 +1,1139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.http.AbMultipartEntity类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html">AbMultipartEntity</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.http.AbMultipartEntity类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.http.AbMultipartEntity 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.png" usemap="#com.ab.http.AbMultipartEntity_map" alt=""/>
+  <map id="com.ab.http.AbMultipartEntity_map" name="com.ab.http.AbMultipartEntity_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity_1_1_file_part.html">FilePart</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abd08e9e193cbb86b2ace20d7ae43954b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#abd08e9e193cbb86b2ace20d7ae43954b">AbMultipartEntity</a> (<a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#aae36712bd792ed1a2183f3c855c40096">responseListener</a>)</td></tr>
+<tr class="separator:abd08e9e193cbb86b2ace20d7ae43954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7faa7db10467ce96541d88db923b22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#ac7faa7db10467ce96541d88db923b22c">addPart</a> (String key, String value, String contentType)</td></tr>
+<tr class="separator:ac7faa7db10467ce96541d88db923b22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab21fff360fa39602ae65e7ab219428"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a2ab21fff360fa39602ae65e7ab219428">addPart</a> (String key, String value)</td></tr>
+<tr class="separator:a2ab21fff360fa39602ae65e7ab219428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefedd7dbe3774597c09d3a00d621b957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#aefedd7dbe3774597c09d3a00d621b957">addPart</a> (String key, File file)</td></tr>
+<tr class="separator:aefedd7dbe3774597c09d3a00d621b957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b33660bbd257826b15cedb6bf9f717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a98b33660bbd257826b15cedb6bf9f717">addPart</a> (String key, File file, String type)</td></tr>
+<tr class="separator:a98b33660bbd257826b15cedb6bf9f717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049205892d117a48714aade9a95b224e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a049205892d117a48714aade9a95b224e">addPart</a> (String key, String streamName, InputStream inputStream, String type)  throws IOException </td></tr>
+<tr class="separator:a049205892d117a48714aade9a95b224e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3936857d5b9b8d04c9c9db5782664a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#ada3936857d5b9b8d04c9c9db5782664a">getContentLength</a> ()</td></tr>
+<tr class="separator:ada3936857d5b9b8d04c9c9db5782664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb47d02fd80f564523cbf08a6503589"><td class="memItemLeft" align="right" valign="top">Header&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#acfb47d02fd80f564523cbf08a6503589">getContentType</a> ()</td></tr>
+<tr class="separator:acfb47d02fd80f564523cbf08a6503589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5934da8d89707967a09a91d9e3e8aa4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#af5934da8d89707967a09a91d9e3e8aa4">isChunked</a> ()</td></tr>
+<tr class="separator:af5934da8d89707967a09a91d9e3e8aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982f7d275af2455c493ad52d8433354b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a982f7d275af2455c493ad52d8433354b">isRepeatable</a> ()</td></tr>
+<tr class="separator:a982f7d275af2455c493ad52d8433354b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a515e107270dc829fad403b84bf932613"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a515e107270dc829fad403b84bf932613">isStreaming</a> ()</td></tr>
+<tr class="separator:a515e107270dc829fad403b84bf932613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710120e6cb20457b5d7c7abc31d88210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a710120e6cb20457b5d7c7abc31d88210">writeTo</a> (final OutputStream outstream)  throws IOException </td></tr>
+<tr class="separator:a710120e6cb20457b5d7c7abc31d88210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adade22aacd8922c2b72b1910efcc2b3d"><td class="memItemLeft" align="right" valign="top">Header&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#adade22aacd8922c2b72b1910efcc2b3d">getContentEncoding</a> ()</td></tr>
+<tr class="separator:adade22aacd8922c2b72b1910efcc2b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee813c4a035398bbff60ae63cd07f89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#afee813c4a035398bbff60ae63cd07f89">consumeContent</a> ()  throws IOException, UnsupportedOperationException </td></tr>
+<tr class="separator:afee813c4a035398bbff60ae63cd07f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066dd8ac2c74bbb02bcb8a3494bb8236"><td class="memItemLeft" align="right" valign="top">InputStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a066dd8ac2c74bbb02bcb8a3494bb8236">getContent</a> ()  throws IOException, UnsupportedOperationException </td></tr>
+<tr class="separator:a066dd8ac2c74bbb02bcb8a3494bb8236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a69a3f8b6f5e3d6e494f51a75fc38d468"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a69a3f8b6f5e3d6e494f51a75fc38d468">createContentType</a> (String type)</td></tr>
+<tr class="separator:a69a3f8b6f5e3d6e494f51a75fc38d468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6698cf94e3256093b561604804c53f1"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#aa6698cf94e3256093b561604804c53f1">createContentDisposition</a> (final String key)</td></tr>
+<tr class="separator:aa6698cf94e3256093b561604804c53f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed36cc2b99a7b70c3eb6e9d3c6c062bb"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#aed36cc2b99a7b70c3eb6e9d3c6c062bb">createContentDisposition</a> (final String key, final String fileName)</td></tr>
+<tr class="separator:aed36cc2b99a7b70c3eb6e9d3c6c062bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b0d35db4bad4144e5aab240a0301f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#ad5b0d35db4bad4144e5aab240a0301f5">updateProgress</a> (int count)</td></tr>
+<tr class="separator:ad5b0d35db4bad4144e5aab240a0301f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:abd450735a22df186475941fcbc6393cb"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#abd450735a22df186475941fcbc6393cb">boundary</a></td></tr>
+<tr class="separator:abd450735a22df186475941fcbc6393cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed65745ad70dd33ada1c138687d7fcb7"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#aed65745ad70dd33ada1c138687d7fcb7">boundaryLine</a></td></tr>
+<tr class="separator:aed65745ad70dd33ada1c138687d7fcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031e744836e47aa86804981cec4ccba3"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a031e744836e47aa86804981cec4ccba3">boundaryEnd</a></td></tr>
+<tr class="separator:a031e744836e47aa86804981cec4ccba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763b2931b70d5ce59266015680541af0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity_1_1_file_part.html">FilePart</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a763b2931b70d5ce59266015680541af0">fileParts</a> = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity_1_1_file_part.html">FilePart</a>&gt;()</td></tr>
+<tr class="separator:a763b2931b70d5ce59266015680541af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e260bebca765400ba5c370cddff854"><td class="memItemLeft" align="right" valign="top">ByteArrayOutputStream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a56e260bebca765400ba5c370cddff854">out</a> = new ByteArrayOutputStream()</td></tr>
+<tr class="separator:a56e260bebca765400ba5c370cddff854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae36712bd792ed1a2183f3c855c40096"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#aae36712bd792ed1a2183f3c855c40096">responseListener</a></td></tr>
+<tr class="separator:aae36712bd792ed1a2183f3c855c40096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8178514874e22ffcc162eda795583baf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a8178514874e22ffcc162eda795583baf">bytesWritten</a></td></tr>
+<tr class="separator:a8178514874e22ffcc162eda795583baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a165ba7190e68b5a58c1f1ab8c2089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#ac3a165ba7190e68b5a58c1f1ab8c2089">totalSize</a></td></tr>
+<tr class="separator:ac3a165ba7190e68b5a58c1f1ab8c2089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a27b3add7d1d99b6e1273ddc088a10ac2"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a27b3add7d1d99b6e1273ddc088a10ac2">APPLICATION_OCTET_STREAM</a> = &quot;application/octet-stream&quot;</td></tr>
+<tr class="separator:a27b3add7d1d99b6e1273ddc088a10ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8822a821c0d2209797af297fb8b3ec19"><td class="memItemLeft" align="right" valign="top">static final byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a8822a821c0d2209797af297fb8b3ec19">CR_LF</a> = (&quot;\r\n&quot;).getBytes()</td></tr>
+<tr class="separator:a8822a821c0d2209797af297fb8b3ec19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ce2c4ed684570cd793e9b5e999c8bd"><td class="memItemLeft" align="right" valign="top">static final byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a67ce2c4ed684570cd793e9b5e999c8bd">TRANSFER_ENCODING_BINARY</a></td></tr>
+<tr class="separator:a67ce2c4ed684570cd793e9b5e999c8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56662b2f962ba0c83e0c7b2aaa457747"><td class="memItemLeft" align="right" valign="top">static final char[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity.html#a56662b2f962ba0c83e0c7b2aaa457747">MULTIPART_CHARS</a> = &quot;-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;.toCharArray()</td></tr>
+<tr class="separator:a56662b2f962ba0c83e0c7b2aaa457747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbMultipartEntity.java 描述：用于文件上传</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-13 下午1:09:20 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="abd08e9e193cbb86b2ace20d7ae43954b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.http.AbMultipartEntity.AbMultipartEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构造方法.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">responseListener</td><td>监听器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac7faa7db10467ce96541d88db923b22c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.addPart </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>contentType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the part.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">value</td><td>the value </td></tr>
+    <tr><td class="paramname">contentType</td><td>the content type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ab21fff360fa39602ae65e7ab219428"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.addPart </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the part.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">value</td><td>the value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aefedd7dbe3774597c09d3a00d621b957"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.addPart </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the part.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">file</td><td>the file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a98b33660bbd257826b15cedb6bf9f717"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.addPart </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the part.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">file</td><td>the file </td></tr>
+    <tr><td class="paramname">type</td><td>the type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a049205892d117a48714aade9a95b224e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.addPart </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>streamName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>inputStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the part.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">streamName</td><td>the stream name </td></tr>
+    <tr><td class="paramname">inputStream</td><td>the input stream </td></tr>
+    <tr><td class="paramname">type</td><td>the type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>Signals that an I/O exception has occurred. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afee813c4a035398bbff60ae63cd07f89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.consumeContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException, UnsupportedOperationException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>Signals that an I/O exception has occurred. </td></tr>
+    <tr><td class="paramname">UnsupportedOperationException</td><td>the unsupported operation exception </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::consumeContent() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6698cf94e3256093b561604804c53f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.http.AbMultipartEntity.createContentDisposition </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates the content disposition.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aed36cc2b99a7b70c3eb6e9d3c6c062bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.http.AbMultipartEntity.createContentDisposition </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates the content disposition.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69a3f8b6f5e3d6e494f51a75fc38d468"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.http.AbMultipartEntity.createContentType </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates the content type.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a066dd8ac2c74bbb02bcb8a3494bb8236"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputStream com.ab.http.AbMultipartEntity.getContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException, UnsupportedOperationException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取内容流.</p>
+<dl class="section return"><dt>返回</dt><dd>the content </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>Signals that an I/O exception has occurred. </td></tr>
+    <tr><td class="paramname">UnsupportedOperationException</td><td>the unsupported operation exception </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::getContent() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adade22aacd8922c2b72b1910efcc2b3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Header com.ab.http.AbMultipartEntity.getContentEncoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取编码.</p>
+<dl class="section return"><dt>返回</dt><dd>the content encoding </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::getContentEncoding() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ada3936857d5b9b8d04c9c9db5782664a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.http.AbMultipartEntity.getContentLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取长度.</p>
+<dl class="section return"><dt>返回</dt><dd>the content length </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::getContentLength() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acfb47d02fd80f564523cbf08a6503589"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Header com.ab.http.AbMultipartEntity.getContentType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取类型.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>the content type </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::getContentType() </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-10-22 下午4:23:15 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af5934da8d89707967a09a91d9e3e8aa4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.http.AbMultipartEntity.isChunked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：输出的内容长度不能确定.</p>
+<dl class="section return"><dt>返回</dt><dd>true, if is chunked </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::isChunked() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a982f7d275af2455c493ad52d8433354b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.http.AbMultipartEntity.isRepeatable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否使用了不可重复的请求实体.</p>
+<dl class="section return"><dt>返回</dt><dd>true, if is repeatable </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::isRepeatable() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a515e107270dc829fad403b84bf932613"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.http.AbMultipartEntity.isStreaming </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section return"><dt>返回</dt><dd>true, if is streaming </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::isStreaming() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5b0d35db4bad4144e5aab240a0301f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.updateProgress </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update progress.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>the count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a710120e6cb20457b5d7c7abc31d88210"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbMultipartEntity.writeTo </td>
+          <td>(</td>
+          <td class="paramtype">final OutputStream&#160;</td>
+          <td class="paramname"><em>outstream</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：写入.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outstream</td><td>the outstream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>Signals that an I/O exception has occurred. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>org.apache.http.HttpEntity::writeTo(java.io.OutputStream) </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a27b3add7d1d99b6e1273ddc088a10ac2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.http.AbMultipartEntity.APPLICATION_OCTET_STREAM = &quot;application/octet-stream&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>流常量. </p>
+
+</div>
+</div>
+<a class="anchor" id="abd450735a22df186475941fcbc6393cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.AbMultipartEntity.boundary</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>二进制串. </p>
+
+</div>
+</div>
+<a class="anchor" id="a031e744836e47aa86804981cec4ccba3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.http.AbMultipartEntity.boundaryEnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>二进制的结束. </p>
+
+</div>
+</div>
+<a class="anchor" id="aed65745ad70dd33ada1c138687d7fcb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.http.AbMultipartEntity.boundaryLine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>二进制的换行. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8178514874e22ffcc162eda795583baf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.http.AbMultipartEntity.bytesWritten</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>已经写的字节数. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8822a821c0d2209797af297fb8b3ec19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final byte [] com.ab.http.AbMultipartEntity.CR_LF = (&quot;\r\n&quot;).getBytes()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>结束符. </p>
+
+</div>
+</div>
+<a class="anchor" id="a763b2931b70d5ce59266015680541af0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity_1_1_file_part.html">FilePart</a>&gt; com.ab.http.AbMultipartEntity.fileParts = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1http_1_1_ab_multipart_entity_1_1_file_part.html">FilePart</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文件域部分. </p>
+
+</div>
+</div>
+<a class="anchor" id="a56662b2f962ba0c83e0c7b2aaa457747"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final char [] com.ab.http.AbMultipartEntity.MULTIPART_CHARS = &quot;-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;.toCharArray()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>字符. </p>
+
+</div>
+</div>
+<a class="anchor" id="a56e260bebca765400ba5c370cddff854"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ByteArrayOutputStream com.ab.http.AbMultipartEntity.out = new ByteArrayOutputStream()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>输出流. </p>
+
+</div>
+</div>
+<a class="anchor" id="aae36712bd792ed1a2183f3c855c40096"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> com.ab.http.AbMultipartEntity.responseListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>响应监听器. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3a165ba7190e68b5a58c1f1ab8c2089"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.http.AbMultipartEntity.totalSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>总大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a67ce2c4ed684570cd793e9b5e999c8bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final byte [] com.ab.http.AbMultipartEntity.TRANSFER_ENCODING_BINARY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="stringliteral">&quot;Content-Transfer-Encoding: binary\r\n&quot;</span></div>
+<div class="line">            .getBytes()</div>
+</div><!-- fragment --><p>编码转换二进制. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/http/<a class="el" href="_ab_multipart_entity_8java.html">AbMultipartEntity.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

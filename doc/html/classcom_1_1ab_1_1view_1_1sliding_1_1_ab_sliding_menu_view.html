@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.sliding.AbSlidingMenuView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1sliding.html">sliding</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html">AbSlidingMenuView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.sliding.AbSlidingMenuView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.sliding.AbSlidingMenuView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.png" usemap="#com.ab.view.sliding.AbSlidingMenuView_map" alt=""/>
+  <map id="com.ab.view.sliding.AbSlidingMenuView_map" name="com.ab.view.sliding.AbSlidingMenuView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac8a567c4fda239c92ed2e7a4f58d02ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#ac8a567c4fda239c92ed2e7a4f58d02ad">AbSlidingMenuView</a> (Context context)</td></tr>
+<tr class="separator:ac8a567c4fda239c92ed2e7a4f58d02ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6940aacb4c65f3e2587ee808d9c20811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a6940aacb4c65f3e2587ee808d9c20811">AbSlidingMenuView</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a6940aacb4c65f3e2587ee808d9c20811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cdb03d9c3e19d9f0bfc7be253f236a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a18cdb03d9c3e19d9f0bfc7be253f236a">dispatchTouchEvent</a> (MotionEvent ev)</td></tr>
+<tr class="separator:a18cdb03d9c3e19d9f0bfc7be253f236a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a5e769145358f8a30a6cea3a01553f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a99a5e769145358f8a30a6cea3a01553f">onInterceptTouchEvent</a> (MotionEvent ev)</td></tr>
+<tr class="separator:a99a5e769145358f8a30a6cea3a01553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbe27872e230e42b12f24f6c1b03a47"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a6dbe27872e230e42b12f24f6c1b03a47">onTouchEvent</a> (MotionEvent event)</td></tr>
+<tr class="separator:a6dbe27872e230e42b12f24f6c1b03a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a7627a7a31d489cf4459bdb9ef76e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a70a7627a7a31d489cf4459bdb9ef76e5">open</a> ()</td></tr>
+<tr class="separator:a70a7627a7a31d489cf4459bdb9ef76e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028f389b487bf390e05ab4fdcc9fca6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a028f389b487bf390e05ab4fdcc9fca6b">close</a> ()</td></tr>
+<tr class="separator:a028f389b487bf390e05ab4fdcc9fca6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea61f2d5991e1dd51257670daa6bc267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#aea61f2d5991e1dd51257670daa6bc267">computeScroll</a> ()</td></tr>
+<tr class="separator:aea61f2d5991e1dd51257670daa6bc267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8400ae7b7b67a41b05fc6866fe9483e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#ab8400ae7b7b67a41b05fc6866fe9483e">getScreenState</a> ()</td></tr>
+<tr class="separator:ab8400ae7b7b67a41b05fc6866fe9483e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab9041806ee20fff54d6a832bc835da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a9ab9041806ee20fff54d6a832bc835da">setContentView</a> (View view)</td></tr>
+<tr class="separator:a9ab9041806ee20fff54d6a832bc835da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a617ffb5be9b49ce64e21dbed3dd184bc"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a617ffb5be9b49ce64e21dbed3dd184bc">SCREEN_STATE_CLOSE</a> = 0</td></tr>
+<tr class="separator:a617ffb5be9b49ce64e21dbed3dd184bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d3d788b67f533e4d7fb0ddf5c193b8"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a75d3d788b67f533e4d7fb0ddf5c193b8">SCREEN_STATE_OPEN</a> = 1</td></tr>
+<tr class="separator:a75d3d788b67f533e4d7fb0ddf5c193b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c31b7058032ca892b3324f6afc4444"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a32c31b7058032ca892b3324f6afc4444">TOUCH_STATE_RESTART</a> = 0</td></tr>
+<tr class="separator:a32c31b7058032ca892b3324f6afc4444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882f842ea0c9bbe2f9f7ec047972a099"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a882f842ea0c9bbe2f9f7ec047972a099">TOUCH_STATE_SCROLLING</a> = 1</td></tr>
+<tr class="separator:a882f842ea0c9bbe2f9f7ec047972a099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb16387312f27bca96bbd2da8624d129"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#aeb16387312f27bca96bbd2da8624d129">SCROLL_STATE_NO_ALLOW</a> = 0</td></tr>
+<tr class="separator:aeb16387312f27bca96bbd2da8624d129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6abdfdd3c60a354ac7199be50892758"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#ae6abdfdd3c60a354ac7199be50892758">SCROLL_STATE_ALLOW</a> = 1</td></tr>
+<tr class="separator:ae6abdfdd3c60a354ac7199be50892758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a38464ed5cf4839ec90deec927c646690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a38464ed5cf4839ec90deec927c646690">onLayout</a> (boolean changed, int l, int t, int r, int b)</td></tr>
+<tr class="separator:a38464ed5cf4839ec90deec927c646690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7a9edc58cd5de419389affd8a4c0c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#adf7a9edc58cd5de419389affd8a4c0c7">onMeasure</a> (int widthMeasureSpec, int heightMeasureSpec)</td></tr>
+<tr class="separator:adf7a9edc58cd5de419389affd8a4c0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aaf5627599018eda9256977f11522b4f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#aaf5627599018eda9256977f11522b4f9">obtainVelocityTracker</a> (MotionEvent event)</td></tr>
+<tr class="separator:aaf5627599018eda9256977f11522b4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750b64badfecfae066d68f3393cabd8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a750b64badfecfae066d68f3393cabd8f">releaseVelocityTracker</a> ()</td></tr>
+<tr class="separator:a750b64badfecfae066d68f3393cabd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8b30a50345b4b30dff48a9cd2f2a45b6"><td class="memItemLeft" align="right" valign="top">Scroller&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a8b30a50345b4b30dff48a9cd2f2a45b6">mScroller</a></td></tr>
+<tr class="separator:a8b30a50345b4b30dff48a9cd2f2a45b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab898a5b602b74f1929a730cafbba6c47"><td class="memItemLeft" align="right" valign="top">VelocityTracker&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#ab898a5b602b74f1929a730cafbba6c47">mVelocityTracker</a></td></tr>
+<tr class="separator:ab898a5b602b74f1929a730cafbba6c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786a7d533d37192ac43d718a059e29c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a786a7d533d37192ac43d718a059e29c1">mWidth</a></td></tr>
+<tr class="separator:a786a7d533d37192ac43d718a059e29c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b74fae605e0e5c306543a546564d81"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a79b74fae605e0e5c306543a546564d81">mScreenState</a> = 0</td></tr>
+<tr class="separator:a79b74fae605e0e5c306543a546564d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0efcc01cf9c1b344cdc6199498032ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#ab0efcc01cf9c1b344cdc6199498032ea">mTouchState</a> = 0</td></tr>
+<tr class="separator:ab0efcc01cf9c1b344cdc6199498032ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9fac63a6f55c9fa754277ef5c9bdba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#afa9fac63a6f55c9fa754277ef5c9bdba">mScrollState</a> = 0</td></tr>
+<tr class="separator:afa9fac63a6f55c9fa754277ef5c9bdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2326aeaaa9df74e2d7a7ec48f3bd4508"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a2326aeaaa9df74e2d7a7ec48f3bd4508">mVelocityValue</a> = 0</td></tr>
+<tr class="separator:a2326aeaaa9df74e2d7a7ec48f3bd4508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88141675c6979162cb2ea41b69350265"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_menu_view.html#a88141675c6979162cb2ea41b69350265">mOnClick</a> = false</td></tr>
+<tr class="separator:a88141675c6979162cb2ea41b69350265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbSlidingMenuView.java 描述：左右简单的侧边栏实现 滑动事件只在一个android:clickable="true"的View上.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-05-17 下午6:46:29 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ac8a567c4fda239c92ed2e7a4f58d02ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sliding.AbSlidingMenuView.AbSlidingMenuView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构造. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6940aacb4c65f3e2587ee808d9c20811"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sliding.AbSlidingMenuView.AbSlidingMenuView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构造. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a028f389b487bf390e05ab4fdcc9fca6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>关闭menu. </p>
+
+</div>
+</div>
+<a class="anchor" id="aea61f2d5991e1dd51257670daa6bc267"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.computeScroll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：滚动.</p>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::computeScroll() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a18cdb03d9c3e19d9f0bfc7be253f236a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingMenuView.dispatchTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：执行触摸事件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ev</td><td>the ev </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.ViewGroup::dispatchTouchEvent(android.view.MotionEvent) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8400ae7b7b67a41b05fc6866fe9483e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingMenuView.getScreenState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取当前状态. </p><dl class="section return"><dt>返回</dt><dd>the screen state </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaf5627599018eda9256977f11522b4f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.obtainVelocityTracker </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化速度检测.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a99a5e769145358f8a30a6cea3a01553f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingMenuView.onInterceptTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：拦截的触摸事件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ev</td><td>the ev </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.ViewGroup::onInterceptTouchEvent(android.view.MotionEvent) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a38464ed5cf4839ec90deec927c646690"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.onLayout </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>changed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：View的位置设定.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">changed</td><td>the changed </td></tr>
+    <tr><td class="paramname">l</td><td>the l </td></tr>
+    <tr><td class="paramname">t</td><td>the t </td></tr>
+    <tr><td class="paramname">r</td><td>the r </td></tr>
+    <tr><td class="paramname">b</td><td>the b </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adf7a9edc58cd5de419389affd8a4c0c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthMeasureSpec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightMeasureSpec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：测量View的宽高.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widthMeasureSpec</td><td>the width measure spec </td></tr>
+    <tr><td class="paramname">heightMeasureSpec</td><td>the height measure spec </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::onMeasure(int, int) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6dbe27872e230e42b12f24f6c1b03a47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingMenuView.onTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：触摸事件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::onTouchEvent(android.view.MotionEvent) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a70a7627a7a31d489cf4459bdb9ef76e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>打开menu. </p>
+
+</div>
+</div>
+<a class="anchor" id="a750b64badfecfae066d68f3393cabd8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.releaseVelocityTracker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>释放速度检测. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ab9041806ee20fff54d6a832bc835da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingMenuView.setContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置主View.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the new content view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a88141675c6979162cb2ea41b69350265"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingMenuView.mOnClick = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m on click. </p>
+
+</div>
+</div>
+<a class="anchor" id="a79b74fae605e0e5c306543a546564d81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingMenuView.mScreenState = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m screen state. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8b30a50345b4b30dff48a9cd2f2a45b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scroller com.ab.view.sliding.AbSlidingMenuView.mScroller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m scroller. </p>
+
+</div>
+</div>
+<a class="anchor" id="afa9fac63a6f55c9fa754277ef5c9bdba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingMenuView.mScrollState = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m scroll state. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab0efcc01cf9c1b344cdc6199498032ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingMenuView.mTouchState = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m touch state. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab898a5b602b74f1929a730cafbba6c47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VelocityTracker com.ab.view.sliding.AbSlidingMenuView.mVelocityTracker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m velocity tracker. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2326aeaaa9df74e2d7a7ec48f3bd4508"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingMenuView.mVelocityValue = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m velocity value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a786a7d533d37192ac43d718a059e29c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingMenuView.mWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a617ffb5be9b49ce64e21dbed3dd184bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.sliding.AbSlidingMenuView.SCREEN_STATE_CLOSE = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SCREEN_STATE_CLOSE. </p>
+
+</div>
+</div>
+<a class="anchor" id="a75d3d788b67f533e4d7fb0ddf5c193b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.sliding.AbSlidingMenuView.SCREEN_STATE_OPEN = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SCREEN_STATE_OPEN. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae6abdfdd3c60a354ac7199be50892758"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.sliding.AbSlidingMenuView.SCROLL_STATE_ALLOW = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SCROLL_STATE_ALLOW. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb16387312f27bca96bbd2da8624d129"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.sliding.AbSlidingMenuView.SCROLL_STATE_NO_ALLOW = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SCROLL_STATE_NO_ALLOW. </p>
+
+</div>
+</div>
+<a class="anchor" id="a32c31b7058032ca892b3324f6afc4444"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.sliding.AbSlidingMenuView.TOUCH_STATE_RESTART = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant TOUCH_STATE_RESTART. </p>
+
+</div>
+</div>
+<a class="anchor" id="a882f842ea0c9bbe2f9f7ec047972a099"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.sliding.AbSlidingMenuView.TOUCH_STATE_SCROLLING = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant TOUCH_STATE_SCROLLING. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/sliding/<a class="el" href="_ab_sliding_menu_view_8java.html">AbSlidingMenuView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

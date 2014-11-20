@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.app;
 
 import java.util.List;
@@ -17,34 +32,61 @@ import android.graphics.drawable.Drawable;
 import android.text.format.Time;
 import android.view.View;
 
+// TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbCalendar.java 
  * 描述：自定义显示日期的view
- * @author zhaoqp
- * @date：2013-11-7 下午2:35:05
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-7 下午2:35:05
  */
 public class AbCalendar extends View {
+	
+	/** The m calendar. */
 	private Time mCalendar;
 
+	/** The m cale bg. */
 	private Drawable mCaleBg;
+	
+	/** The m cale dot. */
 	private Drawable mCaleDot;
+	
+	/** The m pos year. */
 	private Point mPosYear;
+	
+	/** The d array year. */
 	private List<Drawable> dArrayYear;
+	
+	/** The m pos month. */
 	private Point mPosMonth;
+	
+	/** The d array month. */
 	private List<Drawable> dArrayMonth;
+	
+	/** The m pos date. */
 	private Point mPosDate;
+	
+	/** The d array date. */
 	private List<Drawable> dArrayDate;
+	
+	/** The m pos week. */
 	private Point mPosWeek;
+	
+	/** The d array week. */
 	private List<Drawable> dArrayWeek;
 
+	/** The m bg width. */
 	private int mBgWidth;
+	
+	/** The m bg height. */
 	private int mBgHeight;
 
+	/** The m date text size. */
 	private float mDateTextSize;
 
+	/** The date changed receiver. */
 	private final BroadcastReceiver dateChangedReceiver = new BroadcastReceiver() {
 		@Override
 		public void onReceive(Context context, Intent intent) {
@@ -55,8 +97,25 @@ public class AbCalendar extends View {
 			invalidate();
 		}
 	};
+	
+	/** The m attached. */
 	private boolean mAttached;
 
+	/**
+	 * Instantiates a new ab calendar.
+	 *
+	 * @param context the context
+	 * @param caleBg the cale bg
+	 * @param caleDot the cale dot
+	 * @param posYear the pos year
+	 * @param dYearArray the d year array
+	 * @param posMonth the pos month
+	 * @param dMonthArray the d month array
+	 * @param posDate the pos date
+	 * @param dDateArray the d date array
+	 * @param posWeek the pos week
+	 * @param dWeekArray the d week array
+	 */
 	public AbCalendar(Context context, Drawable caleBg, Drawable caleDot,
 			Point posYear, List<Drawable> dYearArray, Point posMonth,
 			List<Drawable> dMonthArray, Point posDate,
@@ -82,6 +141,9 @@ public class AbCalendar extends View {
 		mDateTextSize = 14;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onAttachedToWindow()
+	 */
 	@Override
 	protected void onAttachedToWindow() {
 		super.onAttachedToWindow();
@@ -94,6 +156,9 @@ public class AbCalendar extends View {
 		mCalendar = new Time();
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onDetachedFromWindow()
+	 */
 	@Override
 	protected void onDetachedFromWindow() {
 		super.onDetachedFromWindow();
@@ -103,6 +168,9 @@ public class AbCalendar extends View {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onMeasure(int, int)
+	 */
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
@@ -126,11 +194,17 @@ public class AbCalendar extends View {
 		setMeasuredDimension(mBgWidth * (int)scale,mBgHeight * (int)scale);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onSizeChanged(int, int, int, int)
+	 */
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onDraw(android.graphics.Canvas)
+	 */
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
@@ -305,10 +379,20 @@ public class AbCalendar extends View {
 		}
 	}
 
+	/**
+	 * Gets the date text size.
+	 *
+	 * @return the date text size
+	 */
 	public float getDateTextSize() {
 		return mDateTextSize;
 	}
 
+	/**
+	 * Sets the date text size.
+	 *
+	 * @param dateTextSize the new date text size
+	 */
 	public void setDateTextSize(float dateTextSize) {
 		this.mDateTextSize = dateTextSize;
 	}

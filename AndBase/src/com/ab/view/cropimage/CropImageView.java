@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,15 +50,15 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
+     * @version v1.0
      * @param changed the changed
      * @param left the left
      * @param top the top
      * @param right the right
      * @param bottom the bottom
      * @see com.ab.view.cropimage.CropViewBase#onLayout(boolean, int, int, int, int)
-     * @author: zhaoqp
+     * @author: amsoft.cn
      * @date：2013-6-17 上午9:04:49
-     * @version v1.0
      */
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
@@ -87,13 +87,13 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
+     * @version v1.0
      * @param scale the scale
      * @param centerX the center x
      * @param centerY the center y
      * @see com.ab.view.cropimage.CropViewBase#zoomTo(float, float, float)
-     * @author: zhaoqp
+     * @author: amsoft.cn
      * @date：2013-6-17 上午9:04:49
-     * @version v1.0
      */
     @Override
     protected void zoomTo(float scale, float centerX, float centerY) {
@@ -107,10 +107,10 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
-     * @see com.ab.view.cropimage.CropViewBase#zoomIn()
-     * @author: zhaoqp
-     * @date：2013-6-17 上午9:04:49
      * @version v1.0
+     * @see com.ab.view.cropimage.CropViewBase#zoomIn()
+     * @author: amsoft.cn
+     * @date：2013-6-17 上午9:04:49
      */
     @Override
     protected void zoomIn() {
@@ -124,10 +124,10 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
-     * @see com.ab.view.cropimage.CropViewBase#zoomOut()
-     * @author: zhaoqp
-     * @date：2013-6-17 上午9:04:49
      * @version v1.0
+     * @see com.ab.view.cropimage.CropViewBase#zoomOut()
+     * @author: amsoft.cn
+     * @date：2013-6-17 上午9:04:49
      */
     @Override
     protected void zoomOut() {
@@ -141,12 +141,12 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
+     * @version v1.0
      * @param deltaX the delta x
      * @param deltaY the delta y
      * @see com.ab.view.cropimage.CropViewBase#postTranslate(float, float)
-     * @author: zhaoqp
+     * @author: amsoft.cn
      * @date：2013-6-17 上午9:04:49
-     * @version v1.0
      */
     @Override
     protected void postTranslate(float deltaX, float deltaY) {
@@ -189,12 +189,12 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
+     * @version v1.0
      * @param event the event
      * @return true, if successful
      * @see android.view.View#onTouchEvent(android.view.MotionEvent)
-     * @author: zhaoqp
+     * @author: amsoft.cn
      * @date：2013-6-17 上午9:04:49
-     * @version v1.0
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -348,11 +348,11 @@ public class CropImageView extends CropViewBase {
     /**
      * 描述：TODO.
      *
+     * @version v1.0
      * @param canvas the canvas
      * @see android.widget.ImageView#onDraw(android.graphics.Canvas)
-     * @author: zhaoqp
+     * @author: amsoft.cn
      * @date：2013-6-17 上午9:04:49
-     * @version v1.0
      */
     @Override
     protected void onDraw(Canvas canvas) {

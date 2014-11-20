@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.carousel.CarouselItemView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1carousel.html">carousel</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html">CarouselItemView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.carousel.CarouselItemView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.carousel.CarouselItemView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.png" usemap="#com.ab.view.carousel.CarouselItemView_map" alt=""/>
+  <map id="com.ab.view.carousel.CarouselItemView_map" name="com.ab.view.carousel.CarouselItemView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab8758760f1d7a8ba60e9f0c2ce7ef7fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#ab8758760f1d7a8ba60e9f0c2ce7ef7fa">CarouselItemView</a> (Context context)</td></tr>
+<tr class="separator:ab8758760f1d7a8ba60e9f0c2ce7ef7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68b170eefb09009da00c703212b37c44"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a68b170eefb09009da00c703212b37c44">getName</a> ()</td></tr>
+<tr class="separator:a68b170eefb09009da00c703212b37c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5458032a62de51bec01a9ac4124a98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a1c5458032a62de51bec01a9ac4124a98">setIndex</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#af337a82665ccfe4b477017fc7073cf95">index</a>)</td></tr>
+<tr class="separator:a1c5458032a62de51bec01a9ac4124a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff87e66cc6ed922d05fca30994ab978"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a0ff87e66cc6ed922d05fca30994ab978">getIndex</a> ()</td></tr>
+<tr class="separator:a0ff87e66cc6ed922d05fca30994ab978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863403b5ce048ec50475fc05364c2e3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a863403b5ce048ec50475fc05364c2e3f">setCurrentAngle</a> (float <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a375255a7159a5ca3d6231d9dcf885e6e">currentAngle</a>)</td></tr>
+<tr class="separator:a863403b5ce048ec50475fc05364c2e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483f171c369dbba46518c3ad51fc96b5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a483f171c369dbba46518c3ad51fc96b5">getCurrentAngle</a> ()</td></tr>
+<tr class="separator:a483f171c369dbba46518c3ad51fc96b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56ec73c45f9984c3590baf616993445"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#ac56ec73c45f9984c3590baf616993445">compareTo</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html">CarouselItemView</a> another)</td></tr>
+<tr class="separator:ac56ec73c45f9984c3590baf616993445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48673c7f9bf1f372026bdc7fd619bb0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a48673c7f9bf1f372026bdc7fd619bb0f">setItemX</a> (float x)</td></tr>
+<tr class="separator:a48673c7f9bf1f372026bdc7fd619bb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d546ef2761ac20c14c5acce5467025"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a02d546ef2761ac20c14c5acce5467025">getItemX</a> ()</td></tr>
+<tr class="separator:a02d546ef2761ac20c14c5acce5467025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23755081727a01b53d176964b4e9a49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#af23755081727a01b53d176964b4e9a49">setItemY</a> (float y)</td></tr>
+<tr class="separator:af23755081727a01b53d176964b4e9a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2811c597225f7cb09a73be0e375952"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a7e2811c597225f7cb09a73be0e375952">getItemY</a> ()</td></tr>
+<tr class="separator:a7e2811c597225f7cb09a73be0e375952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6ecdcb42dbd7c76ba203de06f02a9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a2d6ecdcb42dbd7c76ba203de06f02a9c">setItemZ</a> (float z)</td></tr>
+<tr class="separator:a2d6ecdcb42dbd7c76ba203de06f02a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abc73497d157ca5c202cd67b8c64709"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a3abc73497d157ca5c202cd67b8c64709">getItemZ</a> ()</td></tr>
+<tr class="separator:a3abc73497d157ca5c202cd67b8c64709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903868dc7f1f4aa6409076bbb16e1df7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a903868dc7f1f4aa6409076bbb16e1df7">setDrawn</a> (boolean <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#af197fb1a88fde2b03bb355f227b425fa">drawn</a>)</td></tr>
+<tr class="separator:a903868dc7f1f4aa6409076bbb16e1df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfe55799c4a4deee7c159853379a47d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#abcfe55799c4a4deee7c159853379a47d">isDrawn</a> ()</td></tr>
+<tr class="separator:abcfe55799c4a4deee7c159853379a47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3896b616cc9027bf6a577672a0a71ac3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a3896b616cc9027bf6a577672a0a71ac3">setImageBitmap</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a3896b616cc9027bf6a577672a0a71ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae720ee7842856f162266392b84f1ac67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#ae720ee7842856f162266392b84f1ac67">setText</a> (String txt)</td></tr>
+<tr class="separator:ae720ee7842856f162266392b84f1ac67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:abec801acb89af53936856afc7beeaa58"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#abec801acb89af53936856afc7beeaa58">getCIMatrix</a> ()</td></tr>
+<tr class="separator:abec801acb89af53936856afc7beeaa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4aaabdc16b111840afce4e27cadd41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a6b4aaabdc16b111840afce4e27cadd41">setCIMatrix</a> (Matrix mMatrix)</td></tr>
+<tr class="separator:a6b4aaabdc16b111840afce4e27cadd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a89b3d598493bd9b8d0a337da3df16bfd"><td class="memItemLeft" align="right" valign="top">ImageView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a89b3d598493bd9b8d0a337da3df16bfd">mImage</a></td></tr>
+<tr class="separator:a89b3d598493bd9b8d0a337da3df16bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ade448209d7ed3589b0cdee31b3669a"><td class="memItemLeft" align="right" valign="top">TextView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a2ade448209d7ed3589b0cdee31b3669a">mText</a></td></tr>
+<tr class="separator:a2ade448209d7ed3589b0cdee31b3669a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af337a82665ccfe4b477017fc7073cf95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#af337a82665ccfe4b477017fc7073cf95">index</a></td></tr>
+<tr class="separator:af337a82665ccfe4b477017fc7073cf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375255a7159a5ca3d6231d9dcf885e6e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a375255a7159a5ca3d6231d9dcf885e6e">currentAngle</a></td></tr>
+<tr class="separator:a375255a7159a5ca3d6231d9dcf885e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e845eaf7c22fd17c6d61ef18278c0c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a04e845eaf7c22fd17c6d61ef18278c0c">itemX</a></td></tr>
+<tr class="separator:a04e845eaf7c22fd17c6d61ef18278c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473ec931aa1d9be2ad7b25bc39dd4803"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a473ec931aa1d9be2ad7b25bc39dd4803">itemY</a></td></tr>
+<tr class="separator:a473ec931aa1d9be2ad7b25bc39dd4803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7310d39b3d74b57b568da33656fa060"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#ad7310d39b3d74b57b568da33656fa060">itemZ</a></td></tr>
+<tr class="separator:ad7310d39b3d74b57b568da33656fa060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af197fb1a88fde2b03bb355f227b425fa"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#af197fb1a88fde2b03bb355f227b425fa">drawn</a></td></tr>
+<tr class="separator:af197fb1a88fde2b03bb355f227b425fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14cfa1b16f9ad2f1b07effec95320cff"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html#a14cfa1b16f9ad2f1b07effec95320cff">mCIMatrix</a></td></tr>
+<tr class="separator:a14cfa1b16f9ad2f1b07effec95320cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：CarouselItemView.java 描述：旋转木马的任意View</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-8-23 下午2:02:31 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ab8758760f1d7a8ba60e9f0c2ce7ef7fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.carousel.CarouselItemView.CarouselItemView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new carousel item view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac56ec73c45f9984c3590baf616993445"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselItemView.compareTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_item_view.html">CarouselItemView</a>&#160;</td>
+          <td class="paramname"><em>another</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">another</td><td>the another </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>java.lang.Comparable::compareTo(java.lang.Object) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:34 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abec801acb89af53936856afc7beeaa58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix com.ab.view.carousel.CarouselItemView.getCIMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the cI matrix.</p>
+<dl class="section return"><dt>返回</dt><dd>the cI matrix </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a483f171c369dbba46518c3ad51fc96b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.getCurrentAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the current angle.</p>
+<dl class="section return"><dt>返回</dt><dd>the current angle </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ff87e66cc6ed922d05fca30994ab978"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselItemView.getIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the index.</p>
+<dl class="section return"><dt>返回</dt><dd>the index </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02d546ef2761ac20c14c5acce5467025"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.getItemX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the item x.</p>
+<dl class="section return"><dt>返回</dt><dd>the item x </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7e2811c597225f7cb09a73be0e375952"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.getItemY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the item y.</p>
+<dl class="section return"><dt>返回</dt><dd>the item y </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3abc73497d157ca5c202cd67b8c64709"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.getItemZ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the item z.</p>
+<dl class="section return"><dt>返回</dt><dd>the item z </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68b170eefb09009da00c703212b37c44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.carousel.CarouselItemView.getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the name.</p>
+<dl class="section return"><dt>返回</dt><dd>the name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abcfe55799c4a4deee7c159853379a47d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselItemView.isDrawn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if is drawn.</p>
+<dl class="section return"><dt>返回</dt><dd>true, if is drawn </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6b4aaabdc16b111840afce4e27cadd41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setCIMatrix </td>
+          <td>(</td>
+          <td class="paramtype">Matrix&#160;</td>
+          <td class="paramname"><em>mMatrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the cI matrix.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mMatrix</td><td>the new cI matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a863403b5ce048ec50475fc05364c2e3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setCurrentAngle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>currentAngle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the current angle.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentAngle</td><td>the new current angle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a903868dc7f1f4aa6409076bbb16e1df7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setDrawn </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>drawn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the drawn.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawn</td><td>the new drawn </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3896b616cc9027bf6a577672a0a71ac3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setImageBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the image bitmap.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the new image bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c5458032a62de51bec01a9ac4124a98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the new index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a48673c7f9bf1f372026bdc7fd619bb0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setItemX </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the item x.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the new item x </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af23755081727a01b53d176964b4e9a49"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setItemY </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the item y.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>the new item y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2d6ecdcb42dbd7c76ba203de06f02a9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setItemZ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the item z.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">z</td><td>the new item z </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae720ee7842856f162266392b84f1ac67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselItemView.setText </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>the new text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a375255a7159a5ca3d6231d9dcf885e6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.currentAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The current angle. </p>
+
+</div>
+</div>
+<a class="anchor" id="af197fb1a88fde2b03bb355f227b425fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselItemView.drawn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The drawn. </p>
+
+</div>
+</div>
+<a class="anchor" id="af337a82665ccfe4b477017fc7073cf95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselItemView.index</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The index. </p>
+
+</div>
+</div>
+<a class="anchor" id="a04e845eaf7c22fd17c6d61ef18278c0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.itemX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item x. </p>
+
+</div>
+</div>
+<a class="anchor" id="a473ec931aa1d9be2ad7b25bc39dd4803"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.itemY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item y. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7310d39b3d74b57b568da33656fa060"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.CarouselItemView.itemZ</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item z. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14cfa1b16f9ad2f1b07effec95320cff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix com.ab.view.carousel.CarouselItemView.mCIMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m ci matrix. </p>
+
+</div>
+</div>
+<a class="anchor" id="a89b3d598493bd9b8d0a337da3df16bfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImageView com.ab.view.carousel.CarouselItemView.mImage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m image. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2ade448209d7ed3589b0cdee31b3669a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextView com.ab.view.carousel.CarouselItemView.mText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m text. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/carousel/<a class="el" href="_carousel_item_view_8java.html">CarouselItemView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

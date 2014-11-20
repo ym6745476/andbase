@@ -3,7 +3,6 @@ package com.andbase.demo.activity;
 
 import android.graphics.Point;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
@@ -32,7 +31,7 @@ public class PopoverActivity extends AbActivity implements OnClickListener{
         
         rootView = (RelativeLayout)findViewById(R.id.rootLayout);
         popoverView = new AbPopoverView(this);
-        popoverView.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.background_popover));
+        popoverView.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.popover_bg));
         popoverView.setArrowLeftDrawable(this.getResources().getDrawable(R.drawable.popover_arrow_left));
         popoverView.setArrowRightDrawable(this.getResources().getDrawable(R.drawable.popover_arrow_right));
         popoverView.setArrowDownDrawable(this.getResources().getDrawable(R.drawable.popover_arrow_down));

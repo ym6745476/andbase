@@ -1,0 +1,1066 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.network.toolbox.DiskBasedCache类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network.html">network</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html">DiskBasedCache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-static-methods">静态包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.network.toolbox.DiskBasedCache类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.network.toolbox.DiskBasedCache 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.png" usemap="#com.ab.network.toolbox.DiskBasedCache_map" alt=""/>
+  <map id="com.ab.network.toolbox.DiskBasedCache_map" name="com.ab.network.toolbox.DiskBasedCache_map">
+<area href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html" alt="com.ab.network.toolbox.Cache" shape="rect" coords="0,0,245,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_cache_header.html">CacheHeader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_counting_input_stream.html">CountingInputStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac5cace7f6d2732a576499f6247fdb0a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#ac5cace7f6d2732a576499f6247fdb0a5">DiskBasedCache</a> (File rootDirectory, int maxCacheSizeInBytes)</td></tr>
+<tr class="separator:ac5cace7f6d2732a576499f6247fdb0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133343670cb53fff456324fc375facd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a133343670cb53fff456324fc375facd5">DiskBasedCache</a> (File rootDirectory)</td></tr>
+<tr class="separator:a133343670cb53fff456324fc375facd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293c479616f70fed1a08d18a6441cc5c"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a293c479616f70fed1a08d18a6441cc5c">clear</a> ()</td></tr>
+<tr class="separator:a293c479616f70fed1a08d18a6441cc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5c02d88f9128a30e4c8856152b3b21"><td class="memItemLeft" align="right" valign="top">synchronized <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a9c5c02d88f9128a30e4c8856152b3b21">get</a> (String key)</td></tr>
+<tr class="separator:a9c5c02d88f9128a30e4c8856152b3b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264ee66967da1a55b5c5db6304130695"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a264ee66967da1a55b5c5db6304130695">initialize</a> ()</td></tr>
+<tr class="separator:a264ee66967da1a55b5c5db6304130695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed55b3e4e22b8a1c64b72a99c2f76ea"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#aeed55b3e4e22b8a1c64b72a99c2f76ea">invalidate</a> (String key, boolean fullExpire)</td></tr>
+<tr class="separator:aeed55b3e4e22b8a1c64b72a99c2f76ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec0af088c3ae2caf736a1e4ff39182a"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a2ec0af088c3ae2caf736a1e4ff39182a">put</a> (String key, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a> entry)</td></tr>
+<tr class="separator:a2ec0af088c3ae2caf736a1e4ff39182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226b7a0873b37f2f49c319f402a7aeef"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a226b7a0873b37f2f49c319f402a7aeef">remove</a> (String key)</td></tr>
+<tr class="separator:a226b7a0873b37f2f49c319f402a7aeef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6608ddc06e47b85ff4340e927dd02ec2"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a6608ddc06e47b85ff4340e927dd02ec2">getFileForKey</a> (String key)</td></tr>
+<tr class="separator:a6608ddc06e47b85ff4340e927dd02ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-methods"></a>
+静态包函数</h2></td></tr>
+<tr class="memitem:a4bda096589ad7f399e0201f07bdea287"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a4bda096589ad7f399e0201f07bdea287">writeInt</a> (OutputStream os, int n)  throws IOException </td></tr>
+<tr class="separator:a4bda096589ad7f399e0201f07bdea287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327bfd7734d3409c9058a964e893e5fb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a327bfd7734d3409c9058a964e893e5fb">readInt</a> (InputStream is)  throws IOException </td></tr>
+<tr class="separator:a327bfd7734d3409c9058a964e893e5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d04e8faaaf892a35a2e015b266bde9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a25d04e8faaaf892a35a2e015b266bde9">writeLong</a> (OutputStream os, long n)  throws IOException </td></tr>
+<tr class="separator:a25d04e8faaaf892a35a2e015b266bde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bb62bcc01ba86e9fe09213ff42a749"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a05bb62bcc01ba86e9fe09213ff42a749">readLong</a> (InputStream is)  throws IOException </td></tr>
+<tr class="separator:a05bb62bcc01ba86e9fe09213ff42a749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81126fb235c21ac7a71718212f7ff6c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a81126fb235c21ac7a71718212f7ff6c2">writeString</a> (OutputStream os, String s)  throws IOException </td></tr>
+<tr class="separator:a81126fb235c21ac7a71718212f7ff6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ae9e9a6830e556c6386572f360889f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#af4ae9e9a6830e556c6386572f360889f">readString</a> (InputStream is)  throws IOException </td></tr>
+<tr class="separator:af4ae9e9a6830e556c6386572f360889f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabf94770996392e7fbbcbc2fe2515fb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#aaabf94770996392e7fbbcbc2fe2515fb">writeStringStringMap</a> (Map&lt; String, String &gt; map, OutputStream os)  throws IOException </td></tr>
+<tr class="separator:aaabf94770996392e7fbbcbc2fe2515fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad423dad8e9858b023d8c4505fa964f6a"><td class="memItemLeft" align="right" valign="top">static Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#ad423dad8e9858b023d8c4505fa964f6a">readStringStringMap</a> (InputStream is)  throws IOException </td></tr>
+<tr class="separator:ad423dad8e9858b023d8c4505fa964f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ad84d5b62bf142df140f8c38d40410a86"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#ad84d5b62bf142df140f8c38d40410a86">getFilenameForKey</a> (String key)</td></tr>
+<tr class="separator:ad84d5b62bf142df140f8c38d40410a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392fc1da82b1df7a885ba3b2c42914ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a392fc1da82b1df7a885ba3b2c42914ba">pruneIfNeeded</a> (int neededSpace)</td></tr>
+<tr class="separator:a392fc1da82b1df7a885ba3b2c42914ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2943cee6d49f56c4ca46d9f128c452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#aab2943cee6d49f56c4ca46d9f128c452">putEntry</a> (String key, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_cache_header.html">CacheHeader</a> entry)</td></tr>
+<tr class="separator:aab2943cee6d49f56c4ca46d9f128c452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89aedd9f4ce4c0b49e02cc045db13ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#af89aedd9f4ce4c0b49e02cc045db13ae">removeEntry</a> (String key)</td></tr>
+<tr class="separator:af89aedd9f4ce4c0b49e02cc045db13ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ad352b4ab768379c2743f2a62f74dc3e2"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#ad352b4ab768379c2743f2a62f74dc3e2">streamToBytes</a> (InputStream in, int length)  throws IOException </td></tr>
+<tr class="separator:ad352b4ab768379c2743f2a62f74dc3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4735268e1c9e1581d091d2579fb0b1f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#ac4735268e1c9e1581d091d2579fb0b1f">read</a> (InputStream is)  throws IOException </td></tr>
+<tr class="separator:ac4735268e1c9e1581d091d2579fb0b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a35f7fc4677c247e734f09fa21ff5d2e4"><td class="memItemLeft" align="right" valign="top">final Map&lt; String, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_cache_header.html">CacheHeader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a35f7fc4677c247e734f09fa21ff5d2e4">mEntries</a></td></tr>
+<tr class="separator:a35f7fc4677c247e734f09fa21ff5d2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de384a6ef23d643f6867ce01142a86e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a0de384a6ef23d643f6867ce01142a86e">mTotalSize</a> = 0</td></tr>
+<tr class="separator:a0de384a6ef23d643f6867ce01142a86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb4f6a6835155c7a63ecf33afc0b32b"><td class="memItemLeft" align="right" valign="top">final File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#affb4f6a6835155c7a63ecf33afc0b32b">mRootDirectory</a></td></tr>
+<tr class="separator:affb4f6a6835155c7a63ecf33afc0b32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c5d1ac97e80370fca0b53f85851d42"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a98c5d1ac97e80370fca0b53f85851d42">mMaxCacheSizeInBytes</a></td></tr>
+<tr class="separator:a98c5d1ac97e80370fca0b53f85851d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:aa0e1dea7f0bbd35f68f380443a27196e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#aa0e1dea7f0bbd35f68f380443a27196e">DEFAULT_DISK_USAGE_BYTES</a> = 5 * 1024 * 1024</td></tr>
+<tr class="separator:aa0e1dea7f0bbd35f68f380443a27196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984bdc8ffcce503c40703f077b00c983"><td class="memItemLeft" align="right" valign="top">static final float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a984bdc8ffcce503c40703f077b00c983">HYSTERESIS_FACTOR</a> = 0.9f</td></tr>
+<tr class="separator:a984bdc8ffcce503c40703f077b00c983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f78da10c7def79282d2132899daf94c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html#a8f78da10c7def79282d2132899daf94c">CACHE_MAGIC</a> = 0x20120504</td></tr>
+<tr class="separator:a8f78da10c7def79282d2132899daf94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a> implementation that caches files directly onto the hard disk in the specified directory. The default disk usage size is 5MB, but is configurable. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ac5cace7f6d2732a576499f6247fdb0a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.DiskBasedCache.DiskBasedCache </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>rootDirectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCacheSizeInBytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs an instance of the <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html">DiskBasedCache</a> at the specified directory. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootDirectory</td><td>The root directory of the cache. </td></tr>
+    <tr><td class="paramname">maxCacheSizeInBytes</td><td>The maximum size of the cache in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a133343670cb53fff456324fc375facd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.DiskBasedCache.DiskBasedCache </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>rootDirectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs an instance of the <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html">DiskBasedCache</a> at the specified directory using the default maximum cache size of 5MB. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootDirectory</td><td>The root directory of the cache. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a293c479616f70fed1a08d18a6441cc5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.network.toolbox.DiskBasedCache.clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears the cache. Deletes all cached files from disk. </p>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#a758e8d4b2f5085aebcd08e39648de417">com.ab.network.toolbox.Cache</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c5c02d88f9128a30e4c8856152b3b21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a> com.ab.network.toolbox.DiskBasedCache.get </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the cache entry with the specified key if it exists, null otherwise. </p>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#ae95f82cef6cced75bd2b3fb26234b235">com.ab.network.toolbox.Cache</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6608ddc06e47b85ff4340e927dd02ec2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">File com.ab.network.toolbox.DiskBasedCache.getFileForKey </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a file object for the given cache key. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad84d5b62bf142df140f8c38d40410a86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.DiskBasedCache.getFilenameForKey </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a pseudo-unique filename for the specified cache key. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to generate a file name for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A pseudo-unique filename. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a264ee66967da1a55b5c5db6304130695"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.network.toolbox.DiskBasedCache.initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes the <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache.html">DiskBasedCache</a> by scanning for all files currently in the specified root directory. Creates the root directory if necessary. </p>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#ac4bd2b0446f2a6f1856db0515489f026">com.ab.network.toolbox.Cache</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeed55b3e4e22b8a1c64b72a99c2f76ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.network.toolbox.DiskBasedCache.invalidate </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>fullExpire</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invalidates an entry in the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html">Cache</a> key </td></tr>
+    <tr><td class="paramname">fullExpire</td><td>True to fully expire the entry, false to soft expire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#a6d034395f64bb3f86a97cee75b889d99">com.ab.network.toolbox.Cache</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a392fc1da82b1df7a885ba3b2c42914ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.DiskBasedCache.pruneIfNeeded </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>neededSpace</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prunes the cache to fit the amount of bytes specified. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">neededSpace</td><td>The amount of bytes we are trying to fit into the cache. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ec0af088c3ae2caf736a1e4ff39182a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.network.toolbox.DiskBasedCache.put </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_cache_1_1_entry.html">Entry</a>&#160;</td>
+          <td class="paramname"><em>entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Puts the entry with the specified key into the cache. </p>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#ae6d085c3dfb35d0d3292a605d6ea9a9d">com.ab.network.toolbox.Cache</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab2943cee6d49f56c4ca46d9f128c452"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.DiskBasedCache.putEntry </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_cache_header.html">CacheHeader</a>&#160;</td>
+          <td class="paramname"><em>entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Puts the entry with the specified key into the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to identify the entry by. </td></tr>
+    <tr><td class="paramname">entry</td><td>The entry to cache. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4735268e1c9e1581d091d2579fb0b1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.network.toolbox.DiskBasedCache.read </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Simple wrapper around <a class="el" href="">InputStream#read()</a> that throws EOFException instead of returning -1. </p>
+
+</div>
+</div>
+<a class="anchor" id="a327bfd7734d3409c9058a964e893e5fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.network.toolbox.DiskBasedCache.readInt </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05bb62bcc01ba86e9fe09213ff42a749"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long com.ab.network.toolbox.DiskBasedCache.readLong </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4ae9e9a6830e556c6386572f360889f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.network.toolbox.DiskBasedCache.readString </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad423dad8e9858b023d8c4505fa964f6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Map&lt;String, String&gt; com.ab.network.toolbox.DiskBasedCache.readStringStringMap </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a226b7a0873b37f2f49c319f402a7aeef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.network.toolbox.DiskBasedCache.remove </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes the specified key from the cache if it exists. </p>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_cache.html#a5f3bc9aada27a954af25663499d0a8db">com.ab.network.toolbox.Cache</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af89aedd9f4ce4c0b49e02cc045db13ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.DiskBasedCache.removeEntry </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes the entry identified by 'key' from the cache. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad352b4ab768379c2743f2a62f74dc3e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte [] com.ab.network.toolbox.DiskBasedCache.streamToBytes </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads the contents of an InputStream into a byte[]. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4bda096589ad7f399e0201f07bdea287"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.network.toolbox.DiskBasedCache.writeInt </td>
+          <td>(</td>
+          <td class="paramtype">OutputStream&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a25d04e8faaaf892a35a2e015b266bde9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.network.toolbox.DiskBasedCache.writeLong </td>
+          <td>(</td>
+          <td class="paramtype">OutputStream&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81126fb235c21ac7a71718212f7ff6c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.network.toolbox.DiskBasedCache.writeString </td>
+          <td>(</td>
+          <td class="paramtype">OutputStream&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaabf94770996392e7fbbcbc2fe2515fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.network.toolbox.DiskBasedCache.writeStringStringMap </td>
+          <td>(</td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputStream&#160;</td>
+          <td class="paramname"><em>os</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a8f78da10c7def79282d2132899daf94c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.DiskBasedCache.CACHE_MAGIC = 0x20120504</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Magic number for current version of cache file format. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa0e1dea7f0bbd35f68f380443a27196e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.DiskBasedCache.DEFAULT_DISK_USAGE_BYTES = 5 * 1024 * 1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default maximum disk usage in bytes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a984bdc8ffcce503c40703f077b00c983"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final float com.ab.network.toolbox.DiskBasedCache.HYSTERESIS_FACTOR = 0.9f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>High water mark percentage for the cache </p>
+
+</div>
+</div>
+<a class="anchor" id="a35f7fc4677c247e734f09fa21ff5d2e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Map&lt;String, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_cache_header.html">CacheHeader</a>&gt; com.ab.network.toolbox.DiskBasedCache.mEntries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> LinkedHashMap&lt;String, CacheHeader&gt;(16, .75f, <span class="keyword">true</span>)</div>
+</div><!-- fragment --><p>Map of the Key, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_disk_based_cache_1_1_cache_header.html">CacheHeader</a> pairs </p>
+
+</div>
+</div>
+<a class="anchor" id="a98c5d1ac97e80370fca0b53f85851d42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.DiskBasedCache.mMaxCacheSizeInBytes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The maximum size of the cache in bytes. </p>
+
+</div>
+</div>
+<a class="anchor" id="affb4f6a6835155c7a63ecf33afc0b32b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final File com.ab.network.toolbox.DiskBasedCache.mRootDirectory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The root directory to use for the cache. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0de384a6ef23d643f6867ce01142a86e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.network.toolbox.DiskBasedCache.mTotalSize = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Total amount of space currently used by the cache in bytes. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/network/toolbox/<a class="el" href="_disk_based_cache_8java.html">DiskBasedCache.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@ package com.ab.http;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -33,24 +32,24 @@ import org.apache.http.protocol.HTTP;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbRequestParams.java 
  * 描述：Http请求参数
- * @author zhaoqp
- * @date：2013-11-13 上午10:28:55
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-13 上午10:28:55
  */
 public class AbRequestParams {
-
-    /** The Constant TAG. */
-    private static final String TAG = "AbRequestParams";
-    
+	
     /** url参数. */
     protected ConcurrentHashMap<String, String> urlParams;
     
     /** 文件参数. */
     protected ConcurrentHashMap<String, FileWrapper> fileParams;
+    
+    /** 流常量. */
+    private static final String APPLICATION_OCTET_STREAM = "application/octet-stream";
 
     /**
      * 构造一个空的请求参数.
@@ -60,8 +59,9 @@ public class AbRequestParams {
     }
 
     /**
-     * 用一个map构造请求参数
-     * @param source
+     * 用一个map构造请求参数.
+     *
+     * @param source the source
      */
     public AbRequestParams(Map<String, String> source) {
         init();
@@ -72,9 +72,10 @@ public class AbRequestParams {
     }
 
     /**
-     * 用一个key和value构造请求参数
-     * @param key
-     * @param value
+     * 用一个key和value构造请求参数.
+     *
+     * @param key the key
+     * @param value the value
      */
     public AbRequestParams(String key, String value) {
         init();
@@ -92,8 +93,9 @@ public class AbRequestParams {
 
     /**
      * 增加一对请求参数.
-     * @param key
-     * @param value
+     *
+     * @param key the key
+     * @param value the value
      */
     public void put(String key, String value) {
         if (key != null && value != null) {
@@ -103,8 +105,9 @@ public class AbRequestParams {
     
     /**
      * 增加一个文件域.
-     * @param key
-     * @param value
+     *
+     * @param key the key
+     * @param file the file
      * @param contentType the content type of the file, eg. application/json
      */
     public void put(String key, File file,String contentType) {
@@ -115,17 +118,19 @@ public class AbRequestParams {
     
     /**
      * 增加一个文件域.
-     * @param key
-     * @param file
+     *
+     * @param key the key
+     * @param file the file
      */
     public void put(String key, File file) {
-    	put(key,file,"application/octet-stream");
+    	put(key,file,APPLICATION_OCTET_STREAM);
     }
     
     
     /**
      * 删除一个请求参数.
-     * @param key.
+     *
+     * @param key the key
      */
     public void remove(String key) {
         urlParams.remove(key);
@@ -133,7 +138,9 @@ public class AbRequestParams {
     }
 
     /**
-     * 描述：转换为参数字符串
+     * 描述：转换为参数字符串.
+     *
+     * @return the string
      */
     @Override
     public String toString() {
@@ -155,26 +162,36 @@ public class AbRequestParams {
      * @return the params list
      */
     public List<BasicNameValuePair> getParamsList() {
-        List<BasicNameValuePair> lparams = new LinkedList<BasicNameValuePair>();
+        List<BasicNameValuePair> paramsList = new LinkedList<BasicNameValuePair>();
         for (ConcurrentHashMap.Entry<String, String> entry : urlParams.entrySet()) {
-            lparams.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+        	paramsList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
         }
-        return lparams;
+        return paramsList;
     }
 
     
     /**
-     * 获取参数字符创.
+     * 获取参数字符串.
      * @return the param string
      */
     public String getParamString() {
         return URLEncodedUtils.format(getParamsList(), HTTP.UTF_8);
     }
     
+   /**
+    * 获取HttpEntity.
+    *
+    * @param responseListener the response listener
+    * @return the entity
+    * @throws IOException Signals that an I/O exception has occurred.
+    */
     public HttpEntity getEntity(AbHttpResponseListener responseListener) throws IOException {
-        if (fileParams.isEmpty()) {
+        
+    	//不包含文件的
+    	if (fileParams.isEmpty()) {
             return createFormEntity();
         } else {
+        	//包含文件和参数的
             return createMultipartEntity(responseListener);
         }
     }
@@ -186,20 +203,21 @@ public class AbRequestParams {
     public HttpEntity createFormEntity() {
         try {
             return new UrlEncodedFormEntity(getParamsList(), HTTP.UTF_8);
-        } catch (UnsupportedEncodingException e) {
+        } catch (Exception e) {
+        	e.printStackTrace();
             return null; 
         }
     }
     
     /**
-     * 
-     * 描述：创建文件域HttpEntity
-     * @param responseListener
-     * @return
-     * @throws IOException
+     * 描述：创建文件域HttpEntity.
+     *
+     * @param responseListener the response listener
+     * @return the http entity
+     * @throws IOException Signals that an I/O exception has occurred.
      */
     private HttpEntity createMultipartEntity(AbHttpResponseListener responseListener) throws IOException {
-        AbMultipartEntity entity = new AbMultipartEntity(responseListener);
+    	AbMultipartEntity entity = new AbMultipartEntity(responseListener);
 
         // Add string params
         for (ConcurrentHashMap.Entry<String, String> entry : urlParams.entrySet()) {
@@ -215,25 +233,33 @@ public class AbRequestParams {
         return entity;
     }
 
+    /**
+     * 获取url参数.
+     *
+     * @return the url params
+     */
 	public ConcurrentHashMap<String, String> getUrlParams() {
 		return urlParams;
 	}
 
+	/**
+	 * 设置url参数.
+	 *
+	 * @param urlParams the url params
+	 */
 	public void setUrlParams(ConcurrentHashMap<String, String> urlParams) {
 		this.urlParams = urlParams;
 	}
-
-	
 	
 	/**
      * 文件类.
      */
     private static class FileWrapper {
         
-        /** The file. */
+        /** 文件. */
         public File file;
         
-        /** The content type. */
+        /** 类型. */
         public String contentType;
 
         /**

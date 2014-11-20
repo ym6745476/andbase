@@ -33,11 +33,18 @@
                 android:columnWidth="75dp"
                 android:gravity="center"
                 android:horizontalSpacing="0dp"
+                android:listSelector="@android:color/transparent"
                 android:numColumns="auto_fit"
                 android:stretchMode="columnWidth"
-                android:verticalSpacing="10dp"
-                android:listSelector="@android:color/transparent"/>
+                android:verticalSpacing="10dp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:text="上传" />
     </LinearLayout>
 
 </ScrollView>

@@ -27,10 +27,17 @@
         android:text="线程池" />
 
     <Button
-        android:id="@+id/taskBtn"
+        android:id="@+id/taskBtn1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
         android:text="异步任务" />
+    
+    <Button
+        android:id="@+id/taskBtn2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="返回List和Object" />
 
 </LinearLayout>

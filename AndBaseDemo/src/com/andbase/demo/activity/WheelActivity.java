@@ -3,13 +3,14 @@ package com.andbase.demo.activity;
 import java.util.Calendar;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
+import com.ab.util.AbDialogUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.ab.view.wheel.AbNumericWheelAdapter;
 import com.ab.view.wheel.AbWheelUtil;
@@ -43,16 +44,6 @@ public class WheelActivity extends AbActivity {
 	    
         application = (MyApplication)abApplication;
         
-        if(diaplayWidth<400){
-			this.setDialogPadding(30);
-		}
-        
-        
-        mTimeView1 = mInflater.inflate(R.layout.choose_three, null);
-        mTimeView2 = mInflater.inflate(R.layout.choose_three, null);
-        mTimeView3 = mInflater.inflate(R.layout.choose_two, null);
-        mDataView1 = mInflater.inflate(R.layout.choose_one, null);
-        
         timeTextView1 = (TextView)findViewById(R.id.measureTimeText1);
         timeTextView2 = (TextView)findViewById(R.id.measureTimeText2);
         timeTextView3 = (TextView)findViewById(R.id.measureTimeText3);
@@ -62,7 +53,9 @@ public class WheelActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showDialog(AbConstant.DIALOGBOTTOM,mTimeView1);
+				mTimeView1 = mInflater.inflate(R.layout.choose_three, null);
+				initWheelDate(mTimeView1,timeTextView1);
+				AbDialogUtil.showDialog(mTimeView1,Gravity.BOTTOM);
 			}
 			
 		});
@@ -71,7 +64,9 @@ public class WheelActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showDialog(AbConstant.DIALOGBOTTOM,mTimeView2);
+				mTimeView2 = mInflater.inflate(R.layout.choose_three, null);
+				initWheelTime(mTimeView2,timeTextView2);
+				AbDialogUtil.showDialog(mTimeView2,Gravity.BOTTOM);
 			}
 			
 		});
@@ -80,7 +75,9 @@ public class WheelActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showDialog(AbConstant.DIALOGBOTTOM,mTimeView3);
+				mTimeView3 = mInflater.inflate(R.layout.choose_two, null);
+				initWheelTime2(mTimeView3,timeTextView3);
+				AbDialogUtil.showDialog(mTimeView3,Gravity.BOTTOM);
 			}
 			
 		});
@@ -89,16 +86,13 @@ public class WheelActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showDialog(AbConstant.DIALOGBOTTOM,mDataView1);
+				mDataView1 = mInflater.inflate(R.layout.choose_one, null);
+				initWheelData1(mDataView1);
+				AbDialogUtil.showDialog(mDataView1,Gravity.BOTTOM);
 			}
 			
 		});
         
-        initWheelDate(mTimeView1,timeTextView1);
-        initWheelTime(mTimeView2,timeTextView2);
-        initWheelTime2(mTimeView3,timeTextView3);
-        
-        initWheelData1(mDataView1);
     }
     
     
@@ -122,7 +116,7 @@ public class WheelActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				removeDialog(1);
+				AbDialogUtil.removeDialog(v.getContext());
 				int index = mWheelView1.getCurrentItem();
 				String val = mWheelView1.getAdapter().getItem(index);
 				mDataTextView1.setText(val);
@@ -134,7 +128,7 @@ public class WheelActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				removeDialog(1);
+				AbDialogUtil.removeDialog(v.getContext());
 			}
 			
 		});

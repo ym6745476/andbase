@@ -3,30 +3,32 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:paddingLeft="10dip"
-    android:paddingRight="10dip" >
+    android:padding="10dip" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" >
+        android:orientation="horizontal" >
 
         <EditText
             android:id="@+id/add_name"
             android:layout_width="0dip"
-            android:layout_height="wrap_content"
+            android:layout_height="45dip"
             android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_add_user"
+            android:drawablePadding="5dip"
             android:hint="输入名称"
             android:textColor="@android:color/black"
             android:textSize="15dip" />
 
         <Button
             android:id="@+id/addBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:gravity="center"
             android:paddingLeft="10dip"
+            android:paddingRight="5dip"
             android:text="增加" />
     </LinearLayout>
 

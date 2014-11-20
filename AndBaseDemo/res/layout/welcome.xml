@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:paddingLeft="10dip"
+                android:paddingRight="10dip"
                 android:layout_marginBottom="32.0dip"
                 android:gravity="center"
                 android:textColor="#FFFFFF"

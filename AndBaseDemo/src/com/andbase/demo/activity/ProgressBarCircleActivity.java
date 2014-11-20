@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
-import com.ab.view.listener.AbOnProgressListener;
 import com.ab.view.progress.AbCircleProgressBar;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
@@ -16,10 +14,10 @@ import com.andbase.global.Constant;
 import com.andbase.global.MyApplication;
 /**
  * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：ProgressBarCircleActivity.java 
  * 描述：环形进度条
- * @author zhaoqp
+ * @author 还如一梦中
  * @date：2013-9-22 下午4:52:06
  * @version v1.0
  */
@@ -70,7 +68,7 @@ public class ProgressBarCircleActivity extends AbActivity {
 		
 		startAddProgress();
 		
-		mAbProgressBar.setAbOnProgressListener(new AbOnProgressListener() {
+		mAbProgressBar.setAbOnProgressListener(new AbCircleProgressBar.AbOnProgressListener() {
 			
 			@Override
 			public void onProgress(int progress) {
@@ -78,7 +76,7 @@ public class ProgressBarCircleActivity extends AbActivity {
 			}
 			
 			@Override
-			public void onComplete(int progress1) {
+			public void onComplete() {
 				progress = 0;
 				mAbProgressBar.reset();
 			}

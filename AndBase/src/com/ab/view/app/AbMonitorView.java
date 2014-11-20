@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,24 +26,21 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.ab.global.AbAppData;
-import com.ab.util.AbGraphical;
+import com.ab.util.AbGraphicUtil;
+import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
+ * 名称：AbMonitorView.java 
  * 描述：阻塞测试View(显示页面停留时间，测试主界面阻塞情况).
- * 
- * @author zhaoqp
- * @date：2013-1-15 下午2:50:44
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-8-23 下午2:03:29
  */
 public class AbMonitorView extends View  {
-	
-	/** The tag. */
-	private static String TAG = "AbMonitorView";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
 
 	/** The m start time. */
 	private long mStartTime = -1;
@@ -82,18 +79,11 @@ public class AbMonitorView extends View  {
 	}
 
 	/**
-	 * 描述：TODO.
-	 *
-	 * @param canvas the canvas
-	 * @see android.view.View#onDraw(android.graphics.Canvas)
-	 * @author: zhaoqp
-	 * @date：2013-6-17 上午9:04:49
-	 * @version v1.0
+	 * 绘制
 	 */
 	@Override
 	protected void onDraw(Canvas canvas) {
 		
-		//if(D)Log.d(TAG, "--AbMonitorView onDraw--");
 		canvas.drawColor(Color.argb(80, 0, 0, 0));
 		if (mStartTime == -1) {
 			mStartTime = SystemClock.elapsedRealtime();
@@ -112,12 +102,12 @@ public class AbMonitorView extends View  {
         //获取值的文本的高度
         TextPaint mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setTypeface(Typeface.DEFAULT);
-        mTextPaint.setTextSize(16);
+        AbViewUtil.setTextSize(this.getContext(),mTextPaint, 30);
+        AbViewUtil.setTextSize(this.getContext(), mPaint, 30);
         FontMetrics fm  = mTextPaint.getFontMetrics();
         //得到行高
         int textHeight = (int)Math.ceil(fm.descent - fm.ascent)+2;
-        int textWidth = (int)AbGraphical.getStringWidth(text,mTextPaint);
-        
+        int textWidth = (int)AbGraphicUtil.getStringWidth(text,mTextPaint);
         
 		canvas.drawText(text,(this.getWidth()-textWidth)/2, textHeight, mPaint);
 		if (delay > 1000L) {

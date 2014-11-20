@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,13 +45,13 @@ public class IndexXYMap<K, V> extends TreeMap<K, V> {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param key the key
    * @param value the value
    * @return the v
    * @see java.util.TreeMap#put(java.lang.Object, java.lang.Object)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:48
-   * @version v1.0
    */
   public V put(K key, V value) {
     indexList.add(key);
@@ -86,10 +86,10 @@ public class IndexXYMap<K, V> extends TreeMap<K, V> {
   /**
    * 描述：TODO.
    *
-   * @see java.util.TreeMap#clear()
-   * @author: zhaoqp
-   * @date：2013-6-17 上午9:04:48
    * @version v1.0
+   * @see java.util.TreeMap#clear()
+   * @author: amsoft.cn
+   * @date：2013-6-17 上午9:04:48
    */
   public void clear() {
     updateMaxXDifference();

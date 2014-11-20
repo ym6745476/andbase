@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.network.toolbox.NetworkResponse类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network.html">network</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.network.toolbox.NetworkResponse类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a81db214e491a763023794f0db052072e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#a81db214e491a763023794f0db052072e">NetworkResponse</a> (int <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#a0fea03d819ff7fa9b1e36eb230b45430">statusCode</a>, byte[] <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#aadcadc5028765c85c12d3f85bdbda1ec">data</a>, Map&lt; String, String &gt; <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#ab716b96c9184e0fb7920ed92afcfb654">headers</a>, boolean <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#a636962446482a621d3d345698e5618a2">notModified</a>)</td></tr>
+<tr class="separator:a81db214e491a763023794f0db052072e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661d2e7735270cb7a6672b44cf0f9919"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#a661d2e7735270cb7a6672b44cf0f9919">NetworkResponse</a> (byte[] <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#aadcadc5028765c85c12d3f85bdbda1ec">data</a>)</td></tr>
+<tr class="separator:a661d2e7735270cb7a6672b44cf0f9919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17549a5eb6aceddec742e2d6ae4d834"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#ab17549a5eb6aceddec742e2d6ae4d834">NetworkResponse</a> (byte[] <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#aadcadc5028765c85c12d3f85bdbda1ec">data</a>, Map&lt; String, String &gt; <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#ab716b96c9184e0fb7920ed92afcfb654">headers</a>)</td></tr>
+<tr class="separator:ab17549a5eb6aceddec742e2d6ae4d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a0fea03d819ff7fa9b1e36eb230b45430"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#a0fea03d819ff7fa9b1e36eb230b45430">statusCode</a></td></tr>
+<tr class="separator:a0fea03d819ff7fa9b1e36eb230b45430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadcadc5028765c85c12d3f85bdbda1ec"><td class="memItemLeft" align="right" valign="top">final byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#aadcadc5028765c85c12d3f85bdbda1ec">data</a></td></tr>
+<tr class="separator:aadcadc5028765c85c12d3f85bdbda1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab716b96c9184e0fb7920ed92afcfb654"><td class="memItemLeft" align="right" valign="top">final Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#ab716b96c9184e0fb7920ed92afcfb654">headers</a></td></tr>
+<tr class="separator:ab716b96c9184e0fb7920ed92afcfb654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636962446482a621d3d345698e5618a2"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html#a636962446482a621d3d345698e5618a2">notModified</a></td></tr>
+<tr class="separator:a636962446482a621d3d345698e5618a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Data and headers returned from <a class="el" href="">Network#performRequest(Request)</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a81db214e491a763023794f0db052072e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.NetworkResponse.NetworkResponse </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>statusCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>notModified</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new network response. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>the HTTP status code </td></tr>
+    <tr><td class="paramname">data</td><td>Response body </td></tr>
+    <tr><td class="paramname">headers</td><td>Headers returned with this response, or null for none </td></tr>
+    <tr><td class="paramname">notModified</td><td>True if the server returned a 304 and the data was already in cache </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a661d2e7735270cb7a6672b44cf0f9919"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.NetworkResponse.NetworkResponse </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab17549a5eb6aceddec742e2d6ae4d834"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.NetworkResponse.NetworkResponse </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>headers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aadcadc5028765c85c12d3f85bdbda1ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">final byte [] com.ab.network.toolbox.NetworkResponse.data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Raw data from this response. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab716b96c9184e0fb7920ed92afcfb654"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Map&lt;String, String&gt; com.ab.network.toolbox.NetworkResponse.headers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Response headers. </p>
+
+</div>
+</div>
+<a class="anchor" id="a636962446482a621d3d345698e5618a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.ab.network.toolbox.NetworkResponse.notModified</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>True if the server returned a 304 (Not Modified). </p>
+
+</div>
+</div>
+<a class="anchor" id="a0fea03d819ff7fa9b1e36eb230b45430"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.NetworkResponse.statusCode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The HTTP status code. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/network/toolbox/<a class="el" href="_network_response_8java.html">NetworkResponse.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

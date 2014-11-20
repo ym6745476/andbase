@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 	<style name="myTheme" parent="android:Theme">
-        <item name="android:windowBackground">@drawable/start</item>
+        <!-- <item name="android:windowBackground">@drawable/start</item> -->
 	    <item name="android:windowFullscreen">false</item>
         <item name="android:windowContentOverlay">@null</item>
 	    <item name="android:windowNoTitle">false</item>
+	    <item name="android:windowTitleSize">55dip</item>
 	    <item name="android:windowTitleBackgroundStyle">@style/mCustomWindowTitleBackground</item>
 	    <item name="android:expandableListViewStyle">@style/mExpandableListView</item>
-	    
+	    <item name="android:listViewStyle">@style/mListView</item>
 	    <item name="android:buttonStyle">@style/mButtonWhite</item>
+	    <item name="android:editTextStyle">@style/mEditText</item>
+	    <item name="android:checkboxStyle">@style/mCheckBox</item>
 	    
 	    <item name="android:progressBarStyleHorizontal">@style/mProgressBarHorizontal</item>
 	    

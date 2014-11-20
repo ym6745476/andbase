@@ -1,0 +1,1767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.app.AbPopoverView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1app.html">app</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html">AbPopoverView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.app.AbPopoverView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.app.AbPopoverView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.png" usemap="#com.ab.view.app.AbPopoverView_map" alt=""/>
+  <map id="com.ab.view.app.AbPopoverView_map" name="com.ab.view.app.AbPopoverView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa6961541c37c59c5d34aa7579c0373f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#aa6961541c37c59c5d34aa7579c0373f6">AbPopoverView</a> (Context context)</td></tr>
+<tr class="separator:aa6961541c37c59c5d34aa7579c0373f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d002246b28843142a99a62a1a30507"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a57d002246b28843142a99a62a1a30507">AbPopoverView</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a57d002246b28843142a99a62a1a30507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7574e89ca8d7b41967db07b488b40f27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a7574e89ca8d7b41967db07b488b40f27">AbPopoverView</a> (Context context, AttributeSet attrs, int defStyle)</td></tr>
+<tr class="separator:a7574e89ca8d7b41967db07b488b40f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3a8734a17664d5070c55c9340b44fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a7f3a8734a17664d5070c55c9340b44fe">getFadeAnimationTime</a> ()</td></tr>
+<tr class="separator:a7f3a8734a17664d5070c55c9340b44fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e33055fde65d04977ad669d64cb7728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0e33055fde65d04977ad669d64cb7728">setFadeAnimationTime</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#af541c3b676ddc45fd7d352c5d76a743b">fadeAnimationTime</a>)</td></tr>
+<tr class="separator:a0e33055fde65d04977ad669d64cb7728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b973213fd8aff7c105ce9b9a6d81173"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a2b973213fd8aff7c105ce9b9a6d81173">getContentSizeForViewInPopover</a> ()</td></tr>
+<tr class="separator:a2b973213fd8aff7c105ce9b9a6d81173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada85734bb3eff11e32ed178f16810045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ada85734bb3eff11e32ed178f16810045">setContentSizeForViewInPopover</a> (Point <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#aa4dabf5febf4fe119dad1611b451c8ba">contentSizeForViewInPopover</a>)</td></tr>
+<tr class="separator:ada85734bb3eff11e32ed178f16810045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac7bb1c0d3301f53b68435540e47cf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a2ac7bb1c0d3301f53b68435540e47cf0">getPopoverViewListener</a> ()</td></tr>
+<tr class="separator:a2ac7bb1c0d3301f53b68435540e47cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6da7c2c96eae057bef4836a901985bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ad6da7c2c96eae057bef4836a901985bf">setPopoverViewListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a> <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a6186e921ff48ecc0fdb980006703738a">popoverViewListener</a>)</td></tr>
+<tr class="separator:ad6da7c2c96eae057bef4836a901985bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ad67c8e1f58dbb448d59e8b411d50b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a64ad67c8e1f58dbb448d59e8b411d50b">showPopoverFromRectInViewGroup</a> (ViewGroup group, Rect originRect, int arrowDirections, boolean animated)</td></tr>
+<tr class="separator:a64ad67c8e1f58dbb448d59e8b411d50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5dc8fad5ae4d80bc8d7c85566f1e9e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#af5dc8fad5ae4d80bc8d7c85566f1e9e2">dissmissPopover</a> (boolean animated)</td></tr>
+<tr class="separator:af5dc8fad5ae4d80bc8d7c85566f1e9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832bf9a4ce14c52d631370234cf96aaf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a832bf9a4ce14c52d631370234cf96aaf">onTouch</a> (View v, MotionEvent event)</td></tr>
+<tr class="separator:a832bf9a4ce14c52d631370234cf96aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82c0b7898c75da6b27d84a5dbe771354"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a82c0b7898c75da6b27d84a5dbe771354">getBackgroundDrawable</a> ()</td></tr>
+<tr class="separator:a82c0b7898c75da6b27d84a5dbe771354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d201730537ace6a96161f43b66ab23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a30d201730537ace6a96161f43b66ab23">setBackgroundDrawable</a> (Drawable <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a533ff3df968b73edf2603182a4866d07">backgroundDrawable</a>)</td></tr>
+<tr class="separator:a30d201730537ace6a96161f43b66ab23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113f1e6ef8659e89141fdf8509f4e36f"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a113f1e6ef8659e89141fdf8509f4e36f">getArrowUpDrawable</a> ()</td></tr>
+<tr class="separator:a113f1e6ef8659e89141fdf8509f4e36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffd2a6dc25a6371634d2087332d31b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#aeffd2a6dc25a6371634d2087332d31b1">setArrowUpDrawable</a> (Drawable <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a2ba9d738815f4d1436b40fd3cc3b5fb3">arrowUpDrawable</a>)</td></tr>
+<tr class="separator:aeffd2a6dc25a6371634d2087332d31b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac171a3a0c99311ed71a155727322cd74"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ac171a3a0c99311ed71a155727322cd74">getArrowDownDrawable</a> ()</td></tr>
+<tr class="separator:ac171a3a0c99311ed71a155727322cd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863b0fbcdf98050ef88cccd6becbd7db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a863b0fbcdf98050ef88cccd6becbd7db">setArrowDownDrawable</a> (Drawable <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a678172c8008b5fe3b866af3b8948250c">arrowDownDrawable</a>)</td></tr>
+<tr class="separator:a863b0fbcdf98050ef88cccd6becbd7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1737477b8114e5cd88d8b7ed57eebc4"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#af1737477b8114e5cd88d8b7ed57eebc4">getArrowLeftDrawable</a> ()</td></tr>
+<tr class="separator:af1737477b8114e5cd88d8b7ed57eebc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a8aa3e92362c8c55c882c719ef18e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a27a8aa3e92362c8c55c882c719ef18e8">setArrowLeftDrawable</a> (Drawable <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a903e733f0cedbd644c000f7fde3a038f">arrowLeftDrawable</a>)</td></tr>
+<tr class="separator:a27a8aa3e92362c8c55c882c719ef18e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9e3f6479d448725b8ccd90738428a4"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ade9e3f6479d448725b8ccd90738428a4">getArrowRightDrawable</a> ()</td></tr>
+<tr class="separator:ade9e3f6479d448725b8ccd90738428a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f86431bbfe05eeb9352159d2bffc91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a67f86431bbfe05eeb9352159d2bffc91">setArrowRightDrawable</a> (Drawable <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a9dc4226a4df827af2f91030524900af8">arrowRightDrawable</a>)</td></tr>
+<tr class="separator:a67f86431bbfe05eeb9352159d2bffc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650eeea1efbddf341af314fc82173160"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a650eeea1efbddf341af314fc82173160">getPopoverContentView</a> ()</td></tr>
+<tr class="separator:a650eeea1efbddf341af314fc82173160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7f667c4619ce0e581764145ed6c7c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a6a7f667c4619ce0e581764145ed6c7c7">setPopoverContentView</a> (View <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ab46677238532e22600f66912d8c52290">popoverContentView</a>)</td></tr>
+<tr class="separator:a6a7f667c4619ce0e581764145ed6c7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a78ea45cc069cbd3e2ce48f23cb16e8ad"><td class="memItemLeft" align="right" valign="top">static Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a78ea45cc069cbd3e2ce48f23cb16e8ad">getFrameForView</a> (View v)</td></tr>
+<tr class="separator:a78ea45cc069cbd3e2ce48f23cb16e8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ae9df23f20853050345b07125aae4744c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ae9df23f20853050345b07125aae4744c">PopoverArrowDirectionUp</a> = 0x00000001</td></tr>
+<tr class="separator:ae9df23f20853050345b07125aae4744c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2b9b75dbd7db045aad1c7cb63ca72a"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0c2b9b75dbd7db045aad1c7cb63ca72a">PopoverArrowDirectionDown</a> = 0x00000002</td></tr>
+<tr class="separator:a0c2b9b75dbd7db045aad1c7cb63ca72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6ce95f2c6005ce30217be3ade96d7f"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a4c6ce95f2c6005ce30217be3ade96d7f">PopoverArrowDirectionLeft</a> = 0x00000004</td></tr>
+<tr class="separator:a4c6ce95f2c6005ce30217be3ade96d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0523a75fd4102736d6d8a2e03c575765"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0523a75fd4102736d6d8a2e03c575765">PopoverArrowDirectionRight</a> = 0x00000008</td></tr>
+<tr class="separator:a0523a75fd4102736d6d8a2e03c575765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe2f643ef8767e13d65f6716d455778"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a4fe2f643ef8767e13d65f6716d455778">PopoverArrowDirectionAny</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ae9df23f20853050345b07125aae4744c">PopoverArrowDirectionUp</a>|<a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0c2b9b75dbd7db045aad1c7cb63ca72a">PopoverArrowDirectionDown</a>|<a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a4c6ce95f2c6005ce30217be3ade96d7f">PopoverArrowDirectionLeft</a>|<a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0523a75fd4102736d6d8a2e03c575765">PopoverArrowDirectionRight</a></td></tr>
+<tr class="separator:a4fe2f643ef8767e13d65f6716d455778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a6ede89d1196b5eb6094e5354476b001b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a6ede89d1196b5eb6094e5354476b001b">initPopoverView</a> ()</td></tr>
+<tr class="separator:a6ede89d1196b5eb6094e5354476b001b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818c8f77742a1c08725d5f43c1a93f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a818c8f77742a1c08725d5f43c1a93f8f">addPopoverInRect</a> (Rect insertRect)</td></tr>
+<tr class="separator:a818c8f77742a1c08725d5f43c1a93f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ae6ef0e63e331a18dee866ec21da63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a65ae6ef0e63e331a18dee866ec21da63">initArrow</a> (Rect originRect, Integer arrowDirection)</td></tr>
+<tr class="separator:a65ae6ef0e63e331a18dee866ec21da63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee51a8a363cf46f6db0ab8c2f331fb80"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#aee51a8a363cf46f6db0ab8c2f331fb80">getRectForArrowUp</a> (Rect originRect)</td></tr>
+<tr class="separator:aee51a8a363cf46f6db0ab8c2f331fb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a238d119275ec1bf7efb84c6c846ece"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a3a238d119275ec1bf7efb84c6c846ece">getRectForArrowDown</a> (Rect originRect)</td></tr>
+<tr class="separator:a3a238d119275ec1bf7efb84c6c846ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd835c64320871329f98e0103f386b7"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a5dd835c64320871329f98e0103f386b7">getRectForArrowRight</a> (Rect originRect)</td></tr>
+<tr class="separator:a5dd835c64320871329f98e0103f386b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c4243058bf1dab2dc6cd691e7ff6aa"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a22c4243058bf1dab2dc6cd691e7ff6aa">getRectForArrowLeft</a> (Rect originRect)</td></tr>
+<tr class="separator:a22c4243058bf1dab2dc6cd691e7ff6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee826a73b1a8237cff16da47e258ed20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#aee826a73b1a8237cff16da47e258ed20">addAvailableRects</a> (Rect originRect, int arrowDirections)</td></tr>
+<tr class="separator:aee826a73b1a8237cff16da47e258ed20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a0d311da641c02218ba98734003718"><td class="memItemLeft" align="right" valign="top">Integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ad3a0d311da641c02218ba98734003718">getBestRect</a> ()</td></tr>
+<tr class="separator:ad3a0d311da641c02218ba98734003718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a6186e921ff48ecc0fdb980006703738a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a6186e921ff48ecc0fdb980006703738a">popoverViewListener</a></td></tr>
+<tr class="separator:a6186e921ff48ecc0fdb980006703738a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2229c4cfc7e6be0b073036dda0c500"><td class="memItemLeft" align="right" valign="top">RelativeLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#acc2229c4cfc7e6be0b073036dda0c500">popoverView</a></td></tr>
+<tr class="separator:acc2229c4cfc7e6be0b073036dda0c500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efba2ff65a9ae3ddaea87906a55b9ae"><td class="memItemLeft" align="right" valign="top">ViewGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a5efba2ff65a9ae3ddaea87906a55b9ae">superview</a></td></tr>
+<tr class="separator:a5efba2ff65a9ae3ddaea87906a55b9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dabf5febf4fe119dad1611b451c8ba"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#aa4dabf5febf4fe119dad1611b451c8ba">contentSizeForViewInPopover</a> = new Point(0, 0)</td></tr>
+<tr class="separator:aa4dabf5febf4fe119dad1611b451c8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cb7ac0dacfec36fbcb7dcc444f6986"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a81cb7ac0dacfec36fbcb7dcc444f6986">realContentSize</a> = new Point(0, 0)</td></tr>
+<tr class="separator:a81cb7ac0dacfec36fbcb7dcc444f6986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e08f2d36036ccdaa1439b0159700d77"><td class="memItemLeft" align="right" valign="top">Map&lt; Integer, Rect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a8e08f2d36036ccdaa1439b0159700d77">possibleRects</a></td></tr>
+<tr class="separator:a8e08f2d36036ccdaa1439b0159700d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e84a3387542d03fefdd46c29e20e85c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0e84a3387542d03fefdd46c29e20e85c">isAnimating</a> = false</td></tr>
+<tr class="separator:a0e84a3387542d03fefdd46c29e20e85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af541c3b676ddc45fd7d352c5d76a743b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#af541c3b676ddc45fd7d352c5d76a743b">fadeAnimationTime</a> = 300</td></tr>
+<tr class="separator:af541c3b676ddc45fd7d352c5d76a743b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b7aa9c11aae9fc489d75f5fcdd3963"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a17b7aa9c11aae9fc489d75f5fcdd3963">popoverLayoutRect</a></td></tr>
+<tr class="separator:a17b7aa9c11aae9fc489d75f5fcdd3963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533ff3df968b73edf2603182a4866d07"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a533ff3df968b73edf2603182a4866d07">backgroundDrawable</a></td></tr>
+<tr class="separator:a533ff3df968b73edf2603182a4866d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba9d738815f4d1436b40fd3cc3b5fb3"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a2ba9d738815f4d1436b40fd3cc3b5fb3">arrowUpDrawable</a></td></tr>
+<tr class="separator:a2ba9d738815f4d1436b40fd3cc3b5fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678172c8008b5fe3b866af3b8948250c"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a678172c8008b5fe3b866af3b8948250c">arrowDownDrawable</a></td></tr>
+<tr class="separator:a678172c8008b5fe3b866af3b8948250c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903e733f0cedbd644c000f7fde3a038f"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a903e733f0cedbd644c000f7fde3a038f">arrowLeftDrawable</a></td></tr>
+<tr class="separator:a903e733f0cedbd644c000f7fde3a038f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc4226a4df827af2f91030524900af8"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a9dc4226a4df827af2f91030524900af8">arrowRightDrawable</a></td></tr>
+<tr class="separator:a9dc4226a4df827af2f91030524900af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ab0768cfc0512f1cb178674815a957"><td class="memItemLeft" align="right" valign="top">ImageView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ac1ab0768cfc0512f1cb178674815a957">arrowImageView</a> = null</td></tr>
+<tr class="separator:ac1ab0768cfc0512f1cb178674815a957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46677238532e22600f66912d8c52290"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ab46677238532e22600f66912d8c52290">popoverContentView</a> = null</td></tr>
+<tr class="separator:ab46677238532e22600f66912d8c52290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012-2015 amsoft.cn 名称：AbPopoverView.java 描述：提示框</p>
+<dl class="section author"><dt>作者</dt><dd>zhaoqp </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-18 下午5:02:16 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aa6961541c37c59c5d34aa7579c0373f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.app.AbPopoverView.AbPopoverView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor to create a popover with a popover view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>The context where we should create the popover view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a57d002246b28843142a99a62a1a30507"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.app.AbPopoverView.AbPopoverView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor to create a popover with a popover view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>The context where we should create the popover view </td></tr>
+    <tr><td class="paramname">attrs</td><td>Attribute set to init the view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7574e89ca8d7b41967db07b488b40f27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.app.AbPopoverView.AbPopoverView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor to create a popover with a popover view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>The context where we should create the popover view </td></tr>
+    <tr><td class="paramname">attrs</td><td>Attribute set to init the view </td></tr>
+    <tr><td class="paramname">defStyle</td><td>The default style for this view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aee826a73b1a8237cff16da47e258ed20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.addAvailableRects </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arrowDirections</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add available rects for each selected arrow direction.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originRect</td><td>The rect where the popover will appear from </td></tr>
+    <tr><td class="paramname">arrowDirections</td><td>The bit mask for the possible arrow directions </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a818c8f77742a1c08725d5f43c1a93f8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.addPopoverInRect </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>insertRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add the popover to the view with a defined rect inside the popover.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">insertRect</td><td>The rect we want to insert the view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af5dc8fad5ae4d80bc8d7c85566f1e9e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.dissmissPopover </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>animated</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Dismiss the current shown popover.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animated</td><td>Whether it should be dismissed animated or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac171a3a0c99311ed71a155727322cd74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.getArrowDownDrawable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow down drawable.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow down drawable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af1737477b8114e5cd88d8b7ed57eebc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.getArrowLeftDrawable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow left drawable.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow left drawable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ade9e3f6479d448725b8ccd90738428a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.getArrowRightDrawable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow right drawable.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow right drawable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a113f1e6ef8659e89141fdf8509f4e36f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.getArrowUpDrawable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow up drawable.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow up drawable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a82c0b7898c75da6b27d84a5dbe771354"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.getBackgroundDrawable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the background drawable.</p>
+<dl class="section return"><dt>返回</dt><dd>the background drawable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad3a0d311da641c02218ba98734003718"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Integer com.ab.view.app.AbPopoverView.getBestRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the best available rect (bigger area).</p>
+<dl class="section return"><dt>返回</dt><dd>The Integer key to get the Rect from posibleRects (PopoverArrowDirectionUp,PopoverArrowDirectionDown,PopoverArrowDirectionRight or PopoverArrowDirectionLeft) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b973213fd8aff7c105ce9b9a6d81173"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point com.ab.view.app.AbPopoverView.getContentSizeForViewInPopover </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the content size for view in popover.</p>
+<dl class="section return"><dt>返回</dt><dd>The point with the content size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f3a8734a17664d5070c55c9340b44fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.app.AbPopoverView.getFadeAnimationTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the current fade animation time.</p>
+<dl class="section return"><dt>返回</dt><dd>The fade animation time, in milliseconds </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a78ea45cc069cbd3e2ce48f23cb16e8ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Rect com.ab.view.app.AbPopoverView.getFrameForView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Rect frame for a view (relative to the Window of the application).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>The view to get the rect from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The rect of the view, relative to the application window </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a650eeea1efbddf341af314fc82173160"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.app.AbPopoverView.getPopoverContentView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the popover content view.</p>
+<dl class="section return"><dt>返回</dt><dd>the popover content view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ac7bb1c0d3301f53b68435540e47cf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a> com.ab.view.app.AbPopoverView.getPopoverViewListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the popover view listener.</p>
+<dl class="section return"><dt>返回</dt><dd>the popover view listener </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a238d119275ec1bf7efb84c6c846ece"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect com.ab.view.app.AbPopoverView.getRectForArrowDown </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the rect for showing the view with Arrow Down.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originRect</td><td>The origin rect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The calculated rect to show the view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a22c4243058bf1dab2dc6cd691e7ff6aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect com.ab.view.app.AbPopoverView.getRectForArrowLeft </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the rect for showing the view with Arrow Left.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originRect</td><td>The origin rect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The calculated rect to show the view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5dd835c64320871329f98e0103f386b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect com.ab.view.app.AbPopoverView.getRectForArrowRight </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the rect for showing the view with Arrow Right.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originRect</td><td>The origin rect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The calculated rect to show the view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee51a8a363cf46f6db0ab8c2f331fb80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect com.ab.view.app.AbPopoverView.getRectForArrowUp </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the rect for showing the view with Arrow Up.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originRect</td><td>The origin rect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The calculated rect to show the view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65ae6ef0e63e331a18dee866ec21da63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.initArrow </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Integer&#160;</td>
+          <td class="paramname"><em>arrowDirection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inits the arrow.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originRect</td><td>the origin rect </td></tr>
+    <tr><td class="paramname">arrowDirection</td><td>the arrow direction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ede89d1196b5eb6094e5354476b001b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.initPopoverView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Init the popover view. </p>
+
+</div>
+</div>
+<a class="anchor" id="a832bf9a4ce14c52d631370234cf96aaf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.app.AbPopoverView.onTouch </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a863b0fbcdf98050ef88cccd6becbd7db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setArrowDownDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>arrowDownDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow down drawable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowDownDrawable</td><td>the new arrow down drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a27a8aa3e92362c8c55c882c719ef18e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setArrowLeftDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>arrowLeftDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow left drawable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowLeftDrawable</td><td>the new arrow left drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a67f86431bbfe05eeb9352159d2bffc91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setArrowRightDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>arrowRightDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow right drawable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowRightDrawable</td><td>the new arrow right drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeffd2a6dc25a6371634d2087332d31b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setArrowUpDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>arrowUpDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the arrow up drawable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrowUpDrawable</td><td>the new arrow up drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a30d201730537ace6a96161f43b66ab23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setBackgroundDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>backgroundDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada85734bb3eff11e32ed178f16810045"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setContentSizeForViewInPopover </td>
+          <td>(</td>
+          <td class="paramtype">Point&#160;</td>
+          <td class="paramname"><em>contentSizeForViewInPopover</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the content size for the view in a popover, if point is (0,0) the popover will full the screen.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contentSizeForViewInPopover</td><td>the new content size for view in popover </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0e33055fde65d04977ad669d64cb7728"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setFadeAnimationTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fadeAnimationTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the fade animation time.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fadeAnimationTime</td><td>The time in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a7f667c4619ce0e581764145ed6c7c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setPopoverContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>popoverContentView</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置显示的View.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">popoverContentView</td><td>the new popover content view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6da7c2c96eae057bef4836a901985bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.setPopoverViewListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a>&#160;</td>
+          <td class="paramname"><em>popoverViewListener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the popover view listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">popoverViewListener</td><td>the new popover view listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a64ad67c8e1f58dbb448d59e8b411d50b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbPopoverView.showPopoverFromRectInViewGroup </td>
+          <td>(</td>
+          <td class="paramtype">ViewGroup&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>originRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arrowDirections</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>animated</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method shows a popover in a ViewGroup, from an origin rect (relative to the Application Window).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>The group we want to insert the popup. Normally a Relative Layout so it can stand on top of everything </td></tr>
+    <tr><td class="paramname">originRect</td><td>The rect we want the popup to appear from (relative to the Application Window!) </td></tr>
+    <tr><td class="paramname">arrowDirections</td><td>The mask of bits to tell in which directions we want the popover to be shown </td></tr>
+    <tr><td class="paramname">animated</td><td>Whether is animated, or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a678172c8008b5fe3b866af3b8948250c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.arrowDownDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The popover arrow down drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac1ab0768cfc0512f1cb178674815a957"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImageView com.ab.view.app.AbPopoverView.arrowImageView = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前显示的箭头图标. </p>
+
+</div>
+</div>
+<a class="anchor" id="a903e733f0cedbd644c000f7fde3a038f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.arrowLeftDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The popover arrow left drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9dc4226a4df827af2f91030524900af8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.arrowRightDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The popover arrow down drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2ba9d738815f4d1436b40fd3cc3b5fb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.arrowUpDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The popover arrow up drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="a533ff3df968b73edf2603182a4866d07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbPopoverView.backgroundDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The popover background drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa4dabf5febf4fe119dad1611b451c8ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point com.ab.view.app.AbPopoverView.contentSizeForViewInPopover = new Point(0, 0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The content size for the view in the popover. </p>
+
+</div>
+</div>
+<a class="anchor" id="af541c3b676ddc45fd7d352c5d76a743b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.app.AbPopoverView.fadeAnimationTime = 300</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The fade animation time in milliseconds. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0e84a3387542d03fefdd46c29e20e85c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.app.AbPopoverView.isAnimating = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether the view is animating or not. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4fe2f643ef8767e13d65f6716d455778"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.app.AbPopoverView.PopoverArrowDirectionAny = <a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#ae9df23f20853050345b07125aae4744c">PopoverArrowDirectionUp</a>|<a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0c2b9b75dbd7db045aad1c7cb63ca72a">PopoverArrowDirectionDown</a>|<a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a4c6ce95f2c6005ce30217be3ade96d7f">PopoverArrowDirectionLeft</a>|<a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_popover_view.html#a0523a75fd4102736d6d8a2e03c575765">PopoverArrowDirectionRight</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Popover arrow points any direction. Integer to use with bit operators to tell the popover where the arrow should appear and from where the popover should appear </p>
+
+</div>
+</div>
+<a class="anchor" id="a0c2b9b75dbd7db045aad1c7cb63ca72a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.app.AbPopoverView.PopoverArrowDirectionDown = 0x00000002</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Popover arrow points down. Integer to use with bit operators to tell the popover where the arrow should appear and from where the popover should appear </p>
+
+</div>
+</div>
+<a class="anchor" id="a4c6ce95f2c6005ce30217be3ade96d7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.app.AbPopoverView.PopoverArrowDirectionLeft = 0x00000004</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Popover arrow points left. Integer to use with bit operators to tell the popover where the arrow should appear and from where the popover should appear </p>
+
+</div>
+</div>
+<a class="anchor" id="a0523a75fd4102736d6d8a2e03c575765"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.app.AbPopoverView.PopoverArrowDirectionRight = 0x00000008</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Popover arrow points right. Integer to use with bit operators to tell the popover where the arrow should appear and from where the popover should appear </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9df23f20853050345b07125aae4744c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.app.AbPopoverView.PopoverArrowDirectionUp = 0x00000001</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Popover arrow points up. Integer to use with bit operators to tell the popover where the arrow should appear and from where the popover should appear </p>
+
+</div>
+</div>
+<a class="anchor" id="ab46677238532e22600f66912d8c52290"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.app.AbPopoverView.popoverContentView = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前显示的提示的View. </p>
+
+</div>
+</div>
+<a class="anchor" id="a17b7aa9c11aae9fc489d75f5fcdd3963"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect com.ab.view.app.AbPopoverView.popoverLayoutRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The layout Rect, is the same as the superview rect. </p>
+
+</div>
+</div>
+<a class="anchor" id="acc2229c4cfc7e6be0b073036dda0c500"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RelativeLayout com.ab.view.app.AbPopoverView.popoverView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The main popover containing the view we want to show. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6186e921ff48ecc0fdb980006703738a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1app_1_1_ab_popover_view_1_1_popover_view_listener.html">PopoverViewListener</a> com.ab.view.app.AbPopoverView.popoverViewListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The delegate of the view. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8e08f2d36036ccdaa1439b0159700d77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt;Integer, Rect&gt; com.ab.view.app.AbPopoverView.possibleRects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A hash containing. </p>
+
+</div>
+</div>
+<a class="anchor" id="a81cb7ac0dacfec36fbcb7dcc444f6986"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point com.ab.view.app.AbPopoverView.realContentSize = new Point(0, 0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The real content size we will use (it considers the padding). </p>
+
+</div>
+</div>
+<a class="anchor" id="a5efba2ff65a9ae3ddaea87906a55b9ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ViewGroup com.ab.view.app.AbPopoverView.superview</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The view group storing this popover. We need this so, when we dismiss the popover, we remove it from the view group </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/app/<a class="el" href="_ab_popover_view_8java.html">AbPopoverView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

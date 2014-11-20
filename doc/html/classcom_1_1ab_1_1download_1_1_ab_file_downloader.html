@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.download.AbFileDownloader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1download.html">download</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html">AbFileDownloader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1download_1_1_ab_file_downloader-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.download.AbFileDownloader类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae359f6d12a9c66e280ac4419a4d5e6f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#ae359f6d12a9c66e280ac4419a4d5e6f6">AbFileDownloader</a> (Context <a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a7d1f38370802494d8959f870ffbecfea">context</a>, <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a> downFile, int threadNum)</td></tr>
+<tr class="separator:ae359f6d12a9c66e280ac4419a4d5e6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf488d6df5a3edeaa49bc5abc05bedaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#abf488d6df5a3edeaa49bc5abc05bedaa">download</a> (<a class="el" href="interfacecom_1_1ab_1_1download_1_1_ab_download_progress_listener.html">AbDownloadProgressListener</a> listener)  throws Exception </td></tr>
+<tr class="separator:abf488d6df5a3edeaa49bc5abc05bedaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a22705c7ba1ca88c3a3b77364eb9ed2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_download_thread.html">AbDownloadThread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a5a22705c7ba1ca88c3a3b77364eb9ed2">getThreads</a> ()</td></tr>
+<tr class="separator:a5a22705c7ba1ca88c3a3b77364eb9ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10678aae1fd6608ac0758bae8ad6a66b"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a10678aae1fd6608ac0758bae8ad6a66b">getSaveFile</a> ()</td></tr>
+<tr class="separator:a10678aae1fd6608ac0758bae8ad6a66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78e52aaa3f29bf67a4cdc4827beff03"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#ad78e52aaa3f29bf67a4cdc4827beff03">getFlag</a> ()</td></tr>
+<tr class="separator:ad78e52aaa3f29bf67a4cdc4827beff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfd434187d8948f8cef70f9b9d4828e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a1dfd434187d8948f8cef70f9b9d4828e">setFlag</a> (boolean <a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#ac4e39dea6926721dfcd997f7dac1c184">flag</a>)</td></tr>
+<tr class="separator:a1dfd434187d8948f8cef70f9b9d4828e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a04466b305347b4b8fbdd0d1e7aa18616"><td class="memItemLeft" align="right" valign="top">static Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a04466b305347b4b8fbdd0d1e7aa18616">getHttpResponseHeader</a> (HttpURLConnection http)</td></tr>
+<tr class="separator:a04466b305347b4b8fbdd0d1e7aa18616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1778129b8c22558ff510cb8bb6f2d28"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#ac1778129b8c22558ff510cb8bb6f2d28">printResponseHeader</a> (HttpURLConnection http)</td></tr>
+<tr class="separator:ac1778129b8c22558ff510cb8bb6f2d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a8fe2a9c6deee807c538ef980accf3d90"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a8fe2a9c6deee807c538ef980accf3d90">update</a> (<a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a> downFile)</td></tr>
+<tr class="separator:a8fe2a9c6deee807c538ef980accf3d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7d1f38370802494d8959f870ffbecfea"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a7d1f38370802494d8959f870ffbecfea">context</a></td></tr>
+<tr class="separator:a7d1f38370802494d8959f870ffbecfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac161b5d09a1997de0b77b7721744cca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_download_thread.html">AbDownloadThread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#ac161b5d09a1997de0b77b7721744cca0">threads</a></td></tr>
+<tr class="separator:ac161b5d09a1997de0b77b7721744cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6446c99a1fa9dabcaa2e8dd785f4930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#aa6446c99a1fa9dabcaa2e8dd785f4930">mDownFileDao</a></td></tr>
+<tr class="separator:aa6446c99a1fa9dabcaa2e8dd785f4930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d58258d1a0f2dd9f786bdd59eef7a9c"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a0d58258d1a0f2dd9f786bdd59eef7a9c">saveFile</a></td></tr>
+<tr class="separator:a0d58258d1a0f2dd9f786bdd59eef7a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b16caeae18cd98391017f57918ede9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a20b16caeae18cd98391017f57918ede9">mDownFile</a> = null</td></tr>
+<tr class="separator:a20b16caeae18cd98391017f57918ede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6301b925332d039d8cf3353fd45d2db6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#a6301b925332d039d8cf3353fd45d2db6">mThreadNum</a> = 1</td></tr>
+<tr class="separator:a6301b925332d039d8cf3353fd45d2db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e39dea6926721dfcd997f7dac1c184"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_file_downloader.html#ac4e39dea6926721dfcd997f7dac1c184">flag</a> = true</td></tr>
+<tr class="separator:ac4e39dea6926721dfcd997f7dac1c184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>描述：多线程支持断点续传下载器.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-3-14 下午5:00:52 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae359f6d12a9c66e280ac4419a4d5e6f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.download.AbFileDownloader.AbFileDownloader </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a>&#160;</td>
+          <td class="paramname"><em>downFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>threadNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构建文件下载器.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">downFile</td><td>the down file </td></tr>
+    <tr><td class="paramname">threadNum</td><td>下载线程数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="abf488d6df5a3edeaa49bc5abc05bedaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.download.AbFileDownloader.download </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1download_1_1_ab_download_progress_listener.html">AbDownloadProgressListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td> throws Exception</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>开始下载文件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>监听下载数量的变化,如果不需要了解实时下载的数量,可以设置为null </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>已下载文件大小 </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>the exception </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad78e52aaa3f29bf67a4cdc4827beff03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.download.AbFileDownloader.getFlag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the flag.</p>
+<dl class="section return"><dt>返回</dt><dd>the flag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a04466b305347b4b8fbdd0d1e7aa18616"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Map&lt;String, String&gt; com.ab.download.AbFileDownloader.getHttpResponseHeader </td>
+          <td>(</td>
+          <td class="paramtype">HttpURLConnection&#160;</td>
+          <td class="paramname"><em>http</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取Http响应头字段.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">http</td><td>the http </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the http response header </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a10678aae1fd6608ac0758bae8ad6a66b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">File com.ab.download.AbFileDownloader.getSaveFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the save file.</p>
+<dl class="section return"><dt>返回</dt><dd>the save file </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5a22705c7ba1ca88c3a3b77364eb9ed2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_download_thread.html">AbDownloadThread</a> com.ab.download.AbFileDownloader.getThreads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the threads.</p>
+<dl class="section return"><dt>返回</dt><dd>the threads </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac1778129b8c22558ff510cb8bb6f2d28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.download.AbFileDownloader.printResponseHeader </td>
+          <td>(</td>
+          <td class="paramtype">HttpURLConnection&#160;</td>
+          <td class="paramname"><em>http</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>打印Http头字段.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">http</td><td>the http </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1dfd434187d8948f8cef70f9b9d4828e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.download.AbFileDownloader.setFlag </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the flag.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag</td><td>the new flag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8fe2a9c6deee807c538ef980accf3d90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.download.AbFileDownloader.update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a>&#160;</td>
+          <td class="paramname"><em>downFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>更新指定线程最后下载的位置.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">downFile</td><td>the down file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a7d1f38370802494d8959f870ffbecfea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.download.AbFileDownloader.context</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The context. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4e39dea6926721dfcd997f7dac1c184"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.download.AbFileDownloader.flag = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The flag. </p>
+
+</div>
+</div>
+<a class="anchor" id="a20b16caeae18cd98391017f57918ede9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a> com.ab.download.AbFileDownloader.mDownFile = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m down file. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6446c99a1fa9dabcaa2e8dd785f4930"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a> com.ab.download.AbFileDownloader.mDownFileDao</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m down file dao. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6301b925332d039d8cf3353fd45d2db6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.download.AbFileDownloader.mThreadNum = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m thread num. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d58258d1a0f2dd9f786bdd59eef7a9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">File com.ab.download.AbFileDownloader.saveFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>本地保存文件. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac161b5d09a1997de0b77b7721744cca0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1download_1_1_ab_download_thread.html">AbDownloadThread</a> com.ab.download.AbFileDownloader.threads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The threads. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/download/<a class="el" href="_ab_file_downloader_8java.html">AbFileDownloader.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

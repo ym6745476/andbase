@@ -1,0 +1,3293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.wheel.AbWheelView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1wheel.html">wheel</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html">AbWheelView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.wheel.AbWheelView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.wheel.AbWheelView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.png" usemap="#com.ab.view.wheel.AbWheelView_map" alt=""/>
+  <map id="com.ab.view.wheel.AbWheelView_map" name="com.ab.view.wheel.AbWheelView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7e61bbfd5aa05a9c2211e6bc37406a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a7e61bbfd5aa05a9c2211e6bc37406a98">AbWheelView</a> (Context context, AttributeSet attrs, int defStyle)</td></tr>
+<tr class="separator:a7e61bbfd5aa05a9c2211e6bc37406a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea2693a0a14d98cf911665c0f927fb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#adea2693a0a14d98cf911665c0f927fb3">AbWheelView</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:adea2693a0a14d98cf911665c0f927fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600e5a2f5db9c7a1e7173106eb699072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a600e5a2f5db9c7a1e7173106eb699072">AbWheelView</a> (Context context)</td></tr>
+<tr class="separator:a600e5a2f5db9c7a1e7173106eb699072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57a0f4432d0ff3ee0210252d1788aa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html">AbWheelAdapter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ae57a0f4432d0ff3ee0210252d1788aa1">getAdapter</a> ()</td></tr>
+<tr class="separator:ae57a0f4432d0ff3ee0210252d1788aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0faa52c99bd33ffab057a266c9b551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#adf0faa52c99bd33ffab057a266c9b551">setAdapter</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html">AbWheelAdapter</a> <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a630a81908d7f219f2f6eb22d75ef0f0c">adapter</a>)</td></tr>
+<tr class="separator:adf0faa52c99bd33ffab057a266c9b551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db818aa3e289aac3bbbd1904802cdce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5db818aa3e289aac3bbbd1904802cdce">setInterpolator</a> (Interpolator interpolator)</td></tr>
+<tr class="separator:a5db818aa3e289aac3bbbd1904802cdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446b6586da5f2ce683336ca4becf5418"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a446b6586da5f2ce683336ca4becf5418">getVisibleItems</a> ()</td></tr>
+<tr class="separator:a446b6586da5f2ce683336ca4becf5418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31b6c4dd6378a43faee86530b798bd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad31b6c4dd6378a43faee86530b798bd4">setVisibleItems</a> (int count)</td></tr>
+<tr class="separator:ad31b6c4dd6378a43faee86530b798bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ff851e536f82f35621f1d2ed933c8f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a50ff851e536f82f35621f1d2ed933c8f">getLabel</a> ()</td></tr>
+<tr class="separator:a50ff851e536f82f35621f1d2ed933c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4eae1bc0a65231ddac60affca025301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ae4eae1bc0a65231ddac60affca025301">setLabel</a> (String newLabel)</td></tr>
+<tr class="separator:ae4eae1bc0a65231ddac60affca025301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87d4cda3f576a2e05cb397488b19ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ab87d4cda3f576a2e05cb397488b19ef0">addChangingListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a> listener)</td></tr>
+<tr class="separator:ab87d4cda3f576a2e05cb397488b19ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3082795139cb3138ce3edc7df6ec52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9b3082795139cb3138ce3edc7df6ec52">removeChangingListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a> listener)</td></tr>
+<tr class="separator:a9b3082795139cb3138ce3edc7df6ec52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0bcb9b52a468cf00ca87f4be82343b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ae0bcb9b52a468cf00ca87f4be82343b6">addScrollingListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a> listener)</td></tr>
+<tr class="separator:ae0bcb9b52a468cf00ca87f4be82343b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b25293abfa63353dccf7635305c506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a47b25293abfa63353dccf7635305c506">removeScrollingListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a> listener)</td></tr>
+<tr class="separator:a47b25293abfa63353dccf7635305c506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca2b19bd48b36deaf970f0d79db2552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a1ca2b19bd48b36deaf970f0d79db2552">getCurrentItem</a> ()</td></tr>
+<tr class="separator:a1ca2b19bd48b36deaf970f0d79db2552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580553b3a2a6856876706d0c5ff03dce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a580553b3a2a6856876706d0c5ff03dce">setCurrentItem</a> (int index, boolean animated)</td></tr>
+<tr class="separator:a580553b3a2a6856876706d0c5ff03dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c81ea7c16878059b2ed811aa60ae71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a40c81ea7c16878059b2ed811aa60ae71">setCurrentItem</a> (int index)</td></tr>
+<tr class="separator:a40c81ea7c16878059b2ed811aa60ae71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a101068c38621beec914a5d3eb715a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ab6a101068c38621beec914a5d3eb715a">isCyclic</a> ()</td></tr>
+<tr class="separator:ab6a101068c38621beec914a5d3eb715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75130c1a421c89efe50d3230b59e33a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a75130c1a421c89efe50d3230b59e33a6">setCyclic</a> (boolean <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9efa0743362817b0b46e4f47a87f0778">isCyclic</a>)</td></tr>
+<tr class="separator:a75130c1a421c89efe50d3230b59e33a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3819218a6cee48a346b0c58157b7174"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ac3819218a6cee48a346b0c58157b7174">onTouchEvent</a> (MotionEvent event)</td></tr>
+<tr class="separator:ac3819218a6cee48a346b0c58157b7174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d599e73d6436b829d284fe7fdc0ed0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9d599e73d6436b829d284fe7fdc0ed0e">scroll</a> (int itemsToScroll, int time)</td></tr>
+<tr class="separator:a9d599e73d6436b829d284fe7fdc0ed0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae184c41a8202f2fca7ce1d2b1e5fa6f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ae184c41a8202f2fca7ce1d2b1e5fa6f0">setValueTextSize</a> (int textSize)</td></tr>
+<tr class="separator:ae184c41a8202f2fca7ce1d2b1e5fa6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4e3f371571fe899ab2366f9f96bcd9"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aef4e3f371571fe899ab2366f9f96bcd9">getCenterSelectGradientColors</a> ()</td></tr>
+<tr class="separator:aef4e3f371571fe899ab2366f9f96bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3bbcbfd8329b51dccd31bb093b42a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aba3bbcbfd8329b51dccd31bb093b42a3">setCenterSelectGradientColors</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af3ca04d22ec7ea1deabf9ff17d81d3ee">centerSelectGradientColors</a>)</td></tr>
+<tr class="separator:aba3bbcbfd8329b51dccd31bb093b42a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca95b1d29bd844418b487f55ea874d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af9ca95b1d29bd844418b487f55ea874d">getCenterSelectStrokeWidth</a> ()</td></tr>
+<tr class="separator:af9ca95b1d29bd844418b487f55ea874d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5bdf3900f07e4be8d7ebae87f070ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a4f5bdf3900f07e4be8d7ebae87f070ac">setCenterSelectStrokeWidth</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aa8da9776dbd6436f60cf5e3a6a9afb89">centerSelectStrokeWidth</a>)</td></tr>
+<tr class="separator:a4f5bdf3900f07e4be8d7ebae87f070ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5e0d1032777ae41466b059c1160ad4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a7d5e0d1032777ae41466b059c1160ad4">getCenterSelectStrokeColor</a> ()</td></tr>
+<tr class="separator:a7d5e0d1032777ae41466b059c1160ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4a76009f4c9016d5c95623ee9edce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a8c4a76009f4c9016d5c95623ee9edce8">setCenterSelectStrokeColor</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5b74e85fc5ec7840eb3f27a291fa52b7">centerSelectStrokeColor</a>)</td></tr>
+<tr class="separator:a8c4a76009f4c9016d5c95623ee9edce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbdbf17115b7b83a1b01b5e714fdee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5bbdbf17115b7b83a1b01b5e714fdee1">setCenterSelectDrawable</a> (Drawable <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a43182caaa9797782bfd6b14fe992e604">centerSelectDrawable</a>)</td></tr>
+<tr class="separator:a5bbdbf17115b7b83a1b01b5e714fdee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063cd68be092aa6acdf53f8cb88765c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a063cd68be092aa6acdf53f8cb88765c7">setValueTextColor</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a22618974102319fe7890c847d96fbf49">valueTextColor</a>)</td></tr>
+<tr class="separator:a063cd68be092aa6acdf53f8cb88765c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42654e8ea53a3de7f8954ab44de9f38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af42654e8ea53a3de7f8954ab44de9f38">setLabelTextColor</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a6c2c51bf1afe76abbfc12c13a309a0ae">labelTextColor</a>)</td></tr>
+<tr class="separator:af42654e8ea53a3de7f8954ab44de9f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc10685ed0f958d289221ea985e25b68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#adc10685ed0f958d289221ea985e25b68">setLabelTextSize</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad7ee22c6ed9104d27f9dff5852ccb575">labelTextSize</a>)</td></tr>
+<tr class="separator:adc10685ed0f958d289221ea985e25b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153cf1afa513ad2a9640b6e048d3d14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a153cf1afa513ad2a9640b6e048d3d14e">setAdditionalItemHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad4c02bd9f2b0764d837b468ebb25cf10">additionalItemHeight</a>)</td></tr>
+<tr class="separator:a153cf1afa513ad2a9640b6e048d3d14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a5b09702ebd36d6cd963c53a99025c3d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5b09702ebd36d6cd963c53a99025c3d7">notifyChangingListeners</a> (int oldValue, int newValue)</td></tr>
+<tr class="separator:a5b09702ebd36d6cd963c53a99025c3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca87085392bba9bd633f4978c277dce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a8ca87085392bba9bd633f4978c277dce">notifyScrollingListenersAboutStart</a> ()</td></tr>
+<tr class="separator:a8ca87085392bba9bd633f4978c277dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4637d76adc03392d373e9c4368bf795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aa4637d76adc03392d373e9c4368bf795">notifyScrollingListenersAboutEnd</a> ()</td></tr>
+<tr class="separator:aa4637d76adc03392d373e9c4368bf795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaeb8649debff539fe5a9218b3855f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afaeb8649debff539fe5a9218b3855f27">onMeasure</a> (int widthMeasureSpec, int heightMeasureSpec)</td></tr>
+<tr class="separator:afaeb8649debff539fe5a9218b3855f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7fe9811defc6fc2554df71c90ab6f51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ae7fe9811defc6fc2554df71c90ab6f51">onDraw</a> (Canvas canvas)</td></tr>
+<tr class="separator:ae7fe9811defc6fc2554df71c90ab6f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:ad8ef0a486296beb307f4b683bec5385d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad8ef0a486296beb307f4b683bec5385d">finishScrolling</a> ()</td></tr>
+<tr class="separator:ad8ef0a486296beb307f4b683bec5385d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:a9efa0743362817b0b46e4f47a87f0778"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9efa0743362817b0b46e4f47a87f0778">isCyclic</a> = false</td></tr>
+<tr class="separator:a9efa0743362817b0b46e4f47a87f0778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a11517d9af67eb0aef6254b347626d723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a11517d9af67eb0aef6254b347626d723">initData</a> (Context context)</td></tr>
+<tr class="separator:a11517d9af67eb0aef6254b347626d723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4c1de4d8b2b70559eb9a58e9ec0712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a7e4c1de4d8b2b70559eb9a58e9ec0712">invalidateLayouts</a> ()</td></tr>
+<tr class="separator:a7e4c1de4d8b2b70559eb9a58e9ec0712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b7adca1c3023ef88723904fbba2199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af8b7adca1c3023ef88723904fbba2199">initResourcesIfNecessary</a> ()</td></tr>
+<tr class="separator:af8b7adca1c3023ef88723904fbba2199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ec929846dce3f4aec6a98f1ddb0e09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a65ec929846dce3f4aec6a98f1ddb0e09">getDesiredHeight</a> (Layout layout)</td></tr>
+<tr class="separator:a65ec929846dce3f4aec6a98f1ddb0e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ded3f1904b8b2c84e3aebabd5f3f4e4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5ded3f1904b8b2c84e3aebabd5f3f4e4">getTextItem</a> (int index)</td></tr>
+<tr class="separator:a5ded3f1904b8b2c84e3aebabd5f3f4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551cb9f4831247a5fac0f9f8ee1bc2a7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a551cb9f4831247a5fac0f9f8ee1bc2a7">buildText</a> (boolean useCurrentValue)</td></tr>
+<tr class="separator:a551cb9f4831247a5fac0f9f8ee1bc2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bb07e1500f83ff34ba511d751bb228"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a46bb07e1500f83ff34ba511d751bb228">getMaxTextLength</a> ()</td></tr>
+<tr class="separator:a46bb07e1500f83ff34ba511d751bb228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd35386faa7679dfe594d85bba75622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aedd35386faa7679dfe594d85bba75622">getItemHeight</a> ()</td></tr>
+<tr class="separator:aedd35386faa7679dfe594d85bba75622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6939c99d46d6d4bbbfdc6b75750acb7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad6939c99d46d6d4bbbfdc6b75750acb7">calculateLayoutWidth</a> (int widthSize, int mode)</td></tr>
+<tr class="separator:ad6939c99d46d6d4bbbfdc6b75750acb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2963069638a7569dc4c14aa876aa7425"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2963069638a7569dc4c14aa876aa7425">createLayouts</a> (int widthItems, int widthLabel)</td></tr>
+<tr class="separator:a2963069638a7569dc4c14aa876aa7425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d3a90865dcd0abeb976d15b7969653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a44d3a90865dcd0abeb976d15b7969653">drawShadows</a> (Canvas canvas)</td></tr>
+<tr class="separator:a44d3a90865dcd0abeb976d15b7969653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e948aa5a1fc0db4fc01bdde70711112"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a3e948aa5a1fc0db4fc01bdde70711112">drawValue</a> (Canvas canvas)</td></tr>
+<tr class="separator:a3e948aa5a1fc0db4fc01bdde70711112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73171b923fe439be2d00593469e5dc01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a73171b923fe439be2d00593469e5dc01">drawItems</a> (Canvas canvas)</td></tr>
+<tr class="separator:a73171b923fe439be2d00593469e5dc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a319f0d59b84cd1d56aacd5d3628a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a4a319f0d59b84cd1d56aacd5d3628a37">drawCenterRect</a> (Canvas canvas)</td></tr>
+<tr class="separator:a4a319f0d59b84cd1d56aacd5d3628a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7a2c5b346d45f7709779a7b3d7d92e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5d7a2c5b346d45f7709779a7b3d7d92e">doScroll</a> (int delta)</td></tr>
+<tr class="separator:a5d7a2c5b346d45f7709779a7b3d7d92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8501e4e5d3b9d2400190a7f3b733ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5a8501e4e5d3b9d2400190a7f3b733ca">setNextMessage</a> (int message)</td></tr>
+<tr class="separator:a5a8501e4e5d3b9d2400190a7f3b733ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1495c421aeb90b27dd94553aac30d456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a1495c421aeb90b27dd94553aac30d456">clearMessages</a> ()</td></tr>
+<tr class="separator:a1495c421aeb90b27dd94553aac30d456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff90fce19b34bacd4c472c9c13b57671"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aff90fce19b34bacd4c472c9c13b57671">justify</a> ()</td></tr>
+<tr class="separator:aff90fce19b34bacd4c472c9c13b57671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc369636f757056b0c999ca6f98f17f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aabc369636f757056b0c999ca6f98f17f">startScrolling</a> ()</td></tr>
+<tr class="separator:aabc369636f757056b0c999ca6f98f17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ad7b4d46d614275dfbceee9500a326d40"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad7b4d46d614275dfbceee9500a326d40">mContext</a> = null</td></tr>
+<tr class="separator:ad7b4d46d614275dfbceee9500a326d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630a81908d7f219f2f6eb22d75ef0f0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html">AbWheelAdapter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a630a81908d7f219f2f6eb22d75ef0f0c">adapter</a> = null</td></tr>
+<tr class="separator:a630a81908d7f219f2f6eb22d75ef0f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb3920fa61b5cb01f4f2865601f976b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afcb3920fa61b5cb01f4f2865601f976b">currentItem</a> = 0</td></tr>
+<tr class="separator:afcb3920fa61b5cb01f4f2865601f976b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04889ae7a9b8709697002a2997235a45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a04889ae7a9b8709697002a2997235a45">itemsWidth</a> = 0</td></tr>
+<tr class="separator:a04889ae7a9b8709697002a2997235a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58232330ba5dd68a0a939dd3eef11b9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a58232330ba5dd68a0a939dd3eef11b9f">labelWidth</a> = 0</td></tr>
+<tr class="separator:a58232330ba5dd68a0a939dd3eef11b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acbffd41b6637979bd6fe00344a0226"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2acbffd41b6637979bd6fe00344a0226">visibleItems</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a66aa5d846eeb3e9497c646a0add382da">DEF_VISIBLE_ITEMS</a></td></tr>
+<tr class="separator:a2acbffd41b6637979bd6fe00344a0226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a7126ae75e8a12b54f9a8c38144112"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a76a7126ae75e8a12b54f9a8c38144112">itemHeight</a> = 0</td></tr>
+<tr class="separator:a76a7126ae75e8a12b54f9a8c38144112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8657c9561e5ce526fe22b70d0312ca"><td class="memItemLeft" align="right" valign="top">TextPaint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9e8657c9561e5ce526fe22b70d0312ca">itemsPaint</a></td></tr>
+<tr class="separator:a9e8657c9561e5ce526fe22b70d0312ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00eab9727916acdac67094acd91ae203"><td class="memItemLeft" align="right" valign="top">TextPaint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a00eab9727916acdac67094acd91ae203">valuePaint</a></td></tr>
+<tr class="separator:a00eab9727916acdac67094acd91ae203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae586e29032984cb09222d48a06ff2e50"><td class="memItemLeft" align="right" valign="top">TextPaint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ae586e29032984cb09222d48a06ff2e50">labelPaint</a></td></tr>
+<tr class="separator:ae586e29032984cb09222d48a06ff2e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b69057c6146ce018ff9dca533874ea"><td class="memItemLeft" align="right" valign="top">StaticLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad4b69057c6146ce018ff9dca533874ea">itemsLayout</a></td></tr>
+<tr class="separator:ad4b69057c6146ce018ff9dca533874ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35025ce826f588610a16c1ba59bfb89b"><td class="memItemLeft" align="right" valign="top">StaticLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a35025ce826f588610a16c1ba59bfb89b">labelLayout</a></td></tr>
+<tr class="separator:a35025ce826f588610a16c1ba59bfb89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ccfe0ac8defb4aefea139ea20fea9ad"><td class="memItemLeft" align="right" valign="top">StaticLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5ccfe0ac8defb4aefea139ea20fea9ad">valueLayout</a></td></tr>
+<tr class="separator:a5ccfe0ac8defb4aefea139ea20fea9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7649dce8b7fd3064c8aa59793b31d794"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a7649dce8b7fd3064c8aa59793b31d794">label</a></td></tr>
+<tr class="separator:a7649dce8b7fd3064c8aa59793b31d794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2917acdc7b36db0a9046395dc87abc91"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2917acdc7b36db0a9046395dc87abc91">isScrollingPerformed</a></td></tr>
+<tr class="separator:a2917acdc7b36db0a9046395dc87abc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbcf9f5435a73fcd85565516e67b80b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9dbcf9f5435a73fcd85565516e67b80b">scrollingOffset</a></td></tr>
+<tr class="separator:a9dbcf9f5435a73fcd85565516e67b80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9aabdedce65e0d234a32fb0baf983d0"><td class="memItemLeft" align="right" valign="top">GestureDetector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ab9aabdedce65e0d234a32fb0baf983d0">gestureDetector</a></td></tr>
+<tr class="separator:ab9aabdedce65e0d234a32fb0baf983d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4036cae039923610be2f2931e5a6ca"><td class="memItemLeft" align="right" valign="top">Scroller&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a></td></tr>
+<tr class="separator:afc4036cae039923610be2f2931e5a6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c25b0a8ba27b4f96d854c90d4ea2374"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9c25b0a8ba27b4f96d854c90d4ea2374">lastScrollY</a></td></tr>
+<tr class="separator:a9c25b0a8ba27b4f96d854c90d4ea2374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2415f096dfde43a29af106f4b0013680"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2415f096dfde43a29af106f4b0013680">changingListeners</a> = new LinkedList&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a>&gt;()</td></tr>
+<tr class="separator:a2415f096dfde43a29af106f4b0013680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2af6edeb281fbb7f2c071f905f7b8b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aab2af6edeb281fbb7f2c071f905f7b8b">scrollingListeners</a> = new LinkedList&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a>&gt;()</td></tr>
+<tr class="separator:aab2af6edeb281fbb7f2c071f905f7b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43182caaa9797782bfd6b14fe992e604"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a43182caaa9797782bfd6b14fe992e604">centerSelectDrawable</a></td></tr>
+<tr class="separator:a43182caaa9797782bfd6b14fe992e604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ca04d22ec7ea1deabf9ff17d81d3ee"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af3ca04d22ec7ea1deabf9ff17d81d3ee">centerSelectGradientColors</a> = new int[] {0x70222222,0x70222222, 0x70EEEEEE}</td></tr>
+<tr class="separator:af3ca04d22ec7ea1deabf9ff17d81d3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8da9776dbd6436f60cf5e3a6a9afb89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aa8da9776dbd6436f60cf5e3a6a9afb89">centerSelectStrokeWidth</a> = 1</td></tr>
+<tr class="separator:aa8da9776dbd6436f60cf5e3a6a9afb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b74e85fc5ec7840eb3f27a291fa52b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5b74e85fc5ec7840eb3f27a291fa52b7">centerSelectStrokeColor</a> = 0x70333333</td></tr>
+<tr class="separator:a5b74e85fc5ec7840eb3f27a291fa52b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac923585ef934d069e3a7757cb70cc9e6"><td class="memItemLeft" align="right" valign="top">GradientDrawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ac923585ef934d069e3a7757cb70cc9e6">topShadow</a></td></tr>
+<tr class="separator:ac923585ef934d069e3a7757cb70cc9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ea105460b6a01df18d80d98f7020d1"><td class="memItemLeft" align="right" valign="top">GradientDrawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a14ea105460b6a01df18d80d98f7020d1">bottomShadow</a></td></tr>
+<tr class="separator:a14ea105460b6a01df18d80d98f7020d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22618974102319fe7890c847d96fbf49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a22618974102319fe7890c847d96fbf49">valueTextColor</a> = 0xF0000000</td></tr>
+<tr class="separator:a22618974102319fe7890c847d96fbf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2c51bf1afe76abbfc12c13a309a0ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a6c2c51bf1afe76abbfc12c13a309a0ae">labelTextColor</a> = 0xF0000000</td></tr>
+<tr class="separator:a6c2c51bf1afe76abbfc12c13a309a0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8d6507bc38566b9267657f6938520e"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2f8d6507bc38566b9267657f6938520e">bottomGradientColors</a> = new int[] { 0x333, 0xDDD, 0x333 }</td></tr>
+<tr class="separator:a2f8d6507bc38566b9267657f6938520e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9ed4771e2d60d97624c4ea08fa0379"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aee9ed4771e2d60d97624c4ea08fa0379">topGradientColors</a> = new int[] { 0xAAA, 0xFFF, 0xAAA }</td></tr>
+<tr class="separator:aee9ed4771e2d60d97624c4ea08fa0379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2afd7f3ff9bd695910f15a33dc44fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#adb2afd7f3ff9bd695910f15a33dc44fa">topStrokeWidth</a> = 1</td></tr>
+<tr class="separator:adb2afd7f3ff9bd695910f15a33dc44fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fce11c6a919fa397ad9039ecae2b44f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a0fce11c6a919fa397ad9039ecae2b44f">topStrokeColor</a> = 0xFF333333</td></tr>
+<tr class="separator:a0fce11c6a919fa397ad9039ecae2b44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10e554a04e7fb746874b8383bbb6993"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af10e554a04e7fb746874b8383bbb6993">valueTextSize</a> = 35</td></tr>
+<tr class="separator:af10e554a04e7fb746874b8383bbb6993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ee22c6ed9104d27f9dff5852ccb575"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad7ee22c6ed9104d27f9dff5852ccb575">labelTextSize</a> = 35</td></tr>
+<tr class="separator:ad7ee22c6ed9104d27f9dff5852ccb575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a3e495753bf3faaf27590d2e3619ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a33a3e495753bf3faaf27590d2e3619ce">itemOffset</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af10e554a04e7fb746874b8383bbb6993">valueTextSize</a> / 5</td></tr>
+<tr class="separator:a33a3e495753bf3faaf27590d2e3619ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c02bd9f2b0764d837b468ebb25cf10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad4c02bd9f2b0764d837b468ebb25cf10">additionalItemHeight</a> = 30</td></tr>
+<tr class="separator:ad4c02bd9f2b0764d837b468ebb25cf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefe62fc1d92781fe941c385bd894f8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#acefe62fc1d92781fe941c385bd894f8a">screenWidth</a> = 0</td></tr>
+<tr class="separator:acefe62fc1d92781fe941c385bd894f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1d9138ee720fe1adb09cabfb4c30e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a7a1d9138ee720fe1adb09cabfb4c30e5">screenHeight</a> = 0</td></tr>
+<tr class="separator:a7a1d9138ee720fe1adb09cabfb4c30e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ac009061c9c94bc68fd197610a88f7"><td class="memItemLeft" align="right" valign="top">SimpleOnGestureListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ab9ac009061c9c94bc68fd197610a88f7">gestureListener</a></td></tr>
+<tr class="separator:ab9ac009061c9c94bc68fd197610a88f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b2d9d1bc4d380458f8753e3546b24b"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a77b2d9d1bc4d380458f8753e3546b24b">MESSAGE_SCROLL</a> = 0</td></tr>
+<tr class="separator:a77b2d9d1bc4d380458f8753e3546b24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b6dfc86a5e8683a8240cabecd0700d"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a87b6dfc86a5e8683a8240cabecd0700d">MESSAGE_JUSTIFY</a> = 1</td></tr>
+<tr class="separator:a87b6dfc86a5e8683a8240cabecd0700d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4bea7873f82d66e51e96145b02878c"><td class="memItemLeft" align="right" valign="top">Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2b4bea7873f82d66e51e96145b02878c">animationHandler</a></td></tr>
+<tr class="separator:a2b4bea7873f82d66e51e96145b02878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:aee39be92833238c40e18da462c153b1d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aee39be92833238c40e18da462c153b1d">SCROLLING_DURATION</a> = 400</td></tr>
+<tr class="separator:aee39be92833238c40e18da462c153b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa5efc433cd360cee04afff1861a39d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a6fa5efc433cd360cee04afff1861a39d">MIN_DELTA_FOR_SCROLLING</a> = 1</td></tr>
+<tr class="separator:a6fa5efc433cd360cee04afff1861a39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8720912cbbc2ecf799e14331a8668ddb"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a8720912cbbc2ecf799e14331a8668ddb">ITEMS_TEXT_COLOR</a> = 0xFF000000</td></tr>
+<tr class="separator:a8720912cbbc2ecf799e14331a8668ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a366c3ceff1540c46234b846e5618eb40"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a366c3ceff1540c46234b846e5618eb40">SHADOWS_COLORS</a> = new int[] { 0xFF111111, 0x00AAAAAA, 0x00AAAAAA }</td></tr>
+<tr class="separator:a366c3ceff1540c46234b846e5618eb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60829ca3b5623345039b433d1539ac4a"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a60829ca3b5623345039b433d1539ac4a">LABEL_OFFSET</a> = 8</td></tr>
+<tr class="separator:a60829ca3b5623345039b433d1539ac4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcb031283018c48bb3014f898db6bc6"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9dcb031283018c48bb3014f898db6bc6">PADDING</a> = 5</td></tr>
+<tr class="separator:a9dcb031283018c48bb3014f898db6bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66aa5d846eeb3e9497c646a0add382da"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a66aa5d846eeb3e9497c646a0add382da">DEF_VISIBLE_ITEMS</a> = 5</td></tr>
+<tr class="separator:a66aa5d846eeb3e9497c646a0add382da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbWheelView.java 描述：轮子View</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-05-17 下午6:46:29 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a7e61bbfd5aa05a9c2211e6bc37406a98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.wheel.AbWheelView.AbWheelView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+    <tr><td class="paramname">defStyle</td><td>the def style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adea2693a0a14d98cf911665c0f927fb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.wheel.AbWheelView.AbWheelView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a600e5a2f5db9c7a1e7173106eb699072"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.wheel.AbWheelView.AbWheelView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ab87d4cda3f576a2e05cb397488b19ef0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.addChangingListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds wheel changing listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>the listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0bcb9b52a468cf00ca87f4be82343b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.addScrollingListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds wheel scrolling listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>the listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a551cb9f4831247a5fac0f9f8ee1bc2a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.wheel.AbWheelView.buildText </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>useCurrentValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds text depending on current value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useCurrentValue</td><td>the use current value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the text </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6939c99d46d6d4bbbfdc6b75750acb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.calculateLayoutWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates control width and creates text layouts.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widthSize</td><td>the input layout width </td></tr>
+    <tr><td class="paramname">mode</td><td>the layout mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the calculated control width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1495c421aeb90b27dd94553aac30d456"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.clearMessages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears messages from queue. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2963069638a7569dc4c14aa876aa7425"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.createLayouts </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthItems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthLabel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates layouts.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widthItems</td><td>width of items layout </td></tr>
+    <tr><td class="paramname">widthLabel</td><td>width of label layout </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d7a2c5b346d45f7709779a7b3d7d92e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.doScroll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scrolls the wheel.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td>the scrolling value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a319f0d59b84cd1d56aacd5d3628a37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.drawCenterRect </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws rect for current value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas for drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a73171b923fe439be2d00593469e5dc01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.drawItems </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws items.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas for drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a44d3a90865dcd0abeb976d15b7969653"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.drawShadows </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws shadows on top and bottom of control.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas for drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e948aa5a1fc0db4fc01bdde70711112"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.drawValue </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws value and label layout.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas for drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8ef0a486296beb307f4b683bec5385d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.finishScrolling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Finishes scrolling. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae57a0f4432d0ff3ee0210252d1788aa1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html">AbWheelAdapter</a> com.ab.view.wheel.AbWheelView.getAdapter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets wheel adapter.</p>
+<dl class="section return"><dt>返回</dt><dd>the adapter </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aef4e3f371571fe899ab2366f9f96bcd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.wheel.AbWheelView.getCenterSelectGradientColors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the center select gradient colors.</p>
+<dl class="section return"><dt>返回</dt><dd>the center select gradient colors </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7d5e0d1032777ae41466b059c1160ad4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getCenterSelectStrokeColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the center select stroke color.</p>
+<dl class="section return"><dt>返回</dt><dd>the center select stroke color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af9ca95b1d29bd844418b487f55ea874d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getCenterSelectStrokeWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the center select stroke width.</p>
+<dl class="section return"><dt>返回</dt><dd>the center select stroke width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ca2b19bd48b36deaf970f0d79db2552"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getCurrentItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets current value.</p>
+<dl class="section return"><dt>返回</dt><dd>the current value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65ec929846dce3f4aec6a98f1ddb0e09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getDesiredHeight </td>
+          <td>(</td>
+          <td class="paramtype">Layout&#160;</td>
+          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates desired height for layout.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layout</td><td>the source layout </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the desired layout height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aedd35386faa7679dfe594d85bba75622"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getItemHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns height of wheel item.</p>
+<dl class="section return"><dt>返回</dt><dd>the item height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a50ff851e536f82f35621f1d2ed933c8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.wheel.AbWheelView.getLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets label.</p>
+<dl class="section return"><dt>返回</dt><dd>the label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a46bb07e1500f83ff34ba511d751bb228"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getMaxTextLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the max item length that can be present.</p>
+<dl class="section return"><dt>返回</dt><dd>the max length </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ded3f1904b8b2c84e3aebabd5f3f4e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.wheel.AbWheelView.getTextItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns text item by index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the item index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the item or null </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a446b6586da5f2ce683336ca4becf5418"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.getVisibleItems </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets count of visible items.</p>
+<dl class="section return"><dt>返回</dt><dd>the count of visible items </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a11517d9af67eb0aef6254b347626d723"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.initData </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes class data.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af8b7adca1c3023ef88723904fbba2199"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.initResourcesIfNecessary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes resources. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e4c1de4d8b2b70559eb9a58e9ec0712"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.invalidateLayouts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invalidates layouts. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab6a101068c38621beec914a5d3eb715a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.wheel.AbWheelView.isCyclic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tests if wheel is cyclic. That means before the 1st item there is shown the last one </p><dl class="section return"><dt>返回</dt><dd>true if wheel is cyclic </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aff90fce19b34bacd4c472c9c13b57671"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.justify </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Justifies wheel. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b09702ebd36d6cd963c53a99025c3d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.notifyChangingListeners </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>oldValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies changing listeners.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">oldValue</td><td>the old wheel value </td></tr>
+    <tr><td class="paramname">newValue</td><td>the new wheel value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa4637d76adc03392d373e9c4368bf795"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.notifyScrollingListenersAboutEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies listeners about ending scrolling. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8ca87085392bba9bd633f4978c277dce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.notifyScrollingListenersAboutStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies listeners about starting scrolling. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae7fe9811defc6fc2554df71c90ab6f51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.onDraw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::onDraw(android.graphics.Canvas) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-6-17 上午9:04:47 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afaeb8649debff539fe5a9218b3855f27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthMeasureSpec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightMeasureSpec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widthMeasureSpec</td><td>the width measure spec </td></tr>
+    <tr><td class="paramname">heightMeasureSpec</td><td>the height measure spec </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::onMeasure(int, int) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-6-17 上午9:04:47 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3819218a6cee48a346b0c58157b7174"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.wheel.AbWheelView.onTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::onTouchEvent(android.view.MotionEvent) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-6-17 上午9:04:47 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b3082795139cb3138ce3edc7df6ec52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.removeChangingListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes wheel changing listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>the listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a47b25293abfa63353dccf7635305c506"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.removeScrollingListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes wheel scrolling listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>the listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9d599e73d6436b829d284fe7fdc0ed0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.scroll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemsToScroll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scroll the wheel.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itemsToScroll</td><td>the items to scroll </td></tr>
+    <tr><td class="paramname">time</td><td>scrolling duration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adf0faa52c99bd33ffab057a266c9b551"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setAdapter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html">AbWheelAdapter</a>&#160;</td>
+          <td class="paramname"><em>adapter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets wheel adapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adapter</td><td>the new wheel adapter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a153cf1afa513ad2a9640b6e048d3d14e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setAdditionalItemHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>additionalItemHeight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the additional item height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">additionalItemHeight</td><td>the new additional item height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5bbdbf17115b7b83a1b01b5e714fdee1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCenterSelectDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>centerSelectDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置中间的选中层图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerSelectDrawable</td><td>the new center select drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aba3bbcbfd8329b51dccd31bb093b42a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCenterSelectGradientColors </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>centerSelectGradientColors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the center select gradient colors.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerSelectGradientColors</td><td>the new center select gradient colors </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c4a76009f4c9016d5c95623ee9edce8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCenterSelectStrokeColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>centerSelectStrokeColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the center select stroke color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerSelectStrokeColor</td><td>the new center select stroke color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f5bdf3900f07e4be8d7ebae87f070ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCenterSelectStrokeWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>centerSelectStrokeWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the center select stroke width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerSelectStrokeWidth</td><td>the new center select stroke width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a580553b3a2a6856876706d0c5ff03dce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCurrentItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>animated</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the current item. Does nothing when index is wrong. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the item index </td></tr>
+    <tr><td class="paramname">animated</td><td>the animation flag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a40c81ea7c16878059b2ed811aa60ae71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCurrentItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the current item w/o animation. Does nothing when index is wrong. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the item index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a75130c1a421c89efe50d3230b59e33a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setCyclic </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>isCyclic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set wheel cyclic flag.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isCyclic</td><td>the flag to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5db818aa3e289aac3bbbd1904802cdce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setInterpolator </td>
+          <td>(</td>
+          <td class="paramtype">Interpolator&#160;</td>
+          <td class="paramname"><em>interpolator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the the specified scrolling interpolator.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interpolator</td><td>the interpolator </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae4eae1bc0a65231ddac60affca025301"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setLabel </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>newLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets label.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newLabel</td><td>the label to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af42654e8ea53a3de7f8954ab44de9f38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setLabelTextColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>labelTextColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the label text color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">labelTextColor</td><td>the new label text color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adc10685ed0f958d289221ea985e25b68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setLabelTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>labelTextSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the label text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">labelTextSize</td><td>the new label text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5a8501e4e5d3b9d2400190a7f3b733ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setNextMessage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set next message to queue. Clears queue before. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>the message to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a063cd68be092aa6acdf53f8cb88765c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setValueTextColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>valueTextColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the value text color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valueTextColor</td><td>the new value text color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae184c41a8202f2fca7ce1d2b1e5fa6f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setValueTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the value text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>the new value text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad31b6c4dd6378a43faee86530b798bd4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.setVisibleItems </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets count of visible items.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>the new count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aabc369636f757056b0c999ca6f98f17f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.wheel.AbWheelView.startScrolling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts scrolling. </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a630a81908d7f219f2f6eb22d75ef0f0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html">AbWheelAdapter</a> com.ab.view.wheel.AbWheelView.adapter = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4c02bd9f2b0764d837b468ebb25cf10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.additionalItemHeight = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>中间覆盖条高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2b4bea7873f82d66e51e96145b02878c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Handler com.ab.view.wheel.AbWheelView.animationHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Handler() {</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> handleMessage(Message msg) {</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.computeScrollOffset();</div>
+<div class="line">            <span class="keywordtype">int</span> currY = <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.getCurrY();</div>
+<div class="line">            <span class="keywordtype">int</span> delta = <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9c25b0a8ba27b4f96d854c90d4ea2374">lastScrollY</a> - currY;</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9c25b0a8ba27b4f96d854c90d4ea2374">lastScrollY</a> = currY;</div>
+<div class="line">            <span class="keywordflow">if</span> (delta != 0) {</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5d7a2c5b346d45f7709779a7b3d7d92e">doScroll</a>(delta);</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            </div>
+<div class="line">            </div>
+<div class="line">            <span class="keywordflow">if</span> (Math.abs(currY - <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.getFinalY()) &lt; <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a6fa5efc433cd360cee04afff1861a39d">MIN_DELTA_FOR_SCROLLING</a>) {</div>
+<div class="line">                currY = <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.getFinalY();</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.forceFinished(<span class="keyword">true</span>);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">if</span> (!<a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.isFinished()) {</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2b4bea7873f82d66e51e96145b02878c">animationHandler</a>.sendEmptyMessage(msg.what);</div>
+<div class="line">            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (msg.what == <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a77b2d9d1bc4d380458f8753e3546b24b">MESSAGE_SCROLL</a>) {</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aff90fce19b34bacd4c472c9c13b57671">justify</a>();</div>
+<div class="line">            } <span class="keywordflow">else</span> {</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ad8ef0a486296beb307f4b683bec5385d">finishScrolling</a>();</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>The animation handler. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f8d6507bc38566b9267657f6938520e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.wheel.AbWheelView.bottomGradientColors = new int[] { 0x333, 0xDDD, 0x333 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The bottom gradient colors. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14ea105460b6a01df18d80d98f7020d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GradientDrawable com.ab.view.wheel.AbWheelView.bottomShadow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The bottom shadow. </p>
+
+</div>
+</div>
+<a class="anchor" id="a43182caaa9797782bfd6b14fe992e604"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.wheel.AbWheelView.centerSelectDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>中间覆盖条的背景图. </p>
+
+</div>
+</div>
+<a class="anchor" id="af3ca04d22ec7ea1deabf9ff17d81d3ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.wheel.AbWheelView.centerSelectGradientColors = new int[] {0x70222222,0x70222222, 0x70EEEEEE}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>中间覆盖条的颜色，如果没有设置centerDrawable时才生效. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b74e85fc5ec7840eb3f27a291fa52b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.centerSelectStrokeColor = 0x70333333</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The center select stroke color. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa8da9776dbd6436f60cf5e3a6a9afb89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.centerSelectStrokeWidth = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The center select stroke width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2415f096dfde43a29af106f4b0013680"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a>&gt; com.ab.view.wheel.AbWheelView.changingListeners = new LinkedList&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_changed_listener.html">AbOnWheelChangedListener</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The changing listeners. </p>
+
+</div>
+</div>
+<a class="anchor" id="afcb3920fa61b5cb01f4f2865601f976b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.currentItem = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The current item. </p>
+
+</div>
+</div>
+<a class="anchor" id="a66aa5d846eeb3e9497c646a0add382da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.DEF_VISIBLE_ITEMS = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default count of visible items. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab9aabdedce65e0d234a32fb0baf983d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GestureDetector com.ab.view.wheel.AbWheelView.gestureDetector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The gesture detector. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab9ac009061c9c94bc68fd197610a88f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SimpleOnGestureListener com.ab.view.wheel.AbWheelView.gestureListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> SimpleOnGestureListener() {</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">boolean</span> onDown(MotionEvent e) {</div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a2917acdc7b36db0a9046395dc87abc91">isScrollingPerformed</a>) {</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.forceFinished(<span class="keyword">true</span>);</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a1495c421aeb90b27dd94553aac30d456">clearMessages</a>();</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">boolean</span> onScroll(MotionEvent e1, MotionEvent e2, <span class="keywordtype">float</span> distanceX, <span class="keywordtype">float</span> distanceY) {</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aabc369636f757056b0c999ca6f98f17f">startScrolling</a>();</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5d7a2c5b346d45f7709779a7b3d7d92e">doScroll</a>((<span class="keywordtype">int</span>) -distanceY);</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">boolean</span> onFling(MotionEvent e1, MotionEvent e2, <span class="keywordtype">float</span> velocityX, <span class="keywordtype">float</span> velocityY) {</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9c25b0a8ba27b4f96d854c90d4ea2374">lastScrollY</a> = <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afcb3920fa61b5cb01f4f2865601f976b">currentItem</a> * <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aedd35386faa7679dfe594d85bba75622">getItemHeight</a>() + <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9dbcf9f5435a73fcd85565516e67b80b">scrollingOffset</a>;</div>
+<div class="line">            <span class="keywordtype">int</span> maxY = <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ab6a101068c38621beec914a5d3eb715a">isCyclic</a> ? 0x7FFFFFFF : <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a630a81908d7f219f2f6eb22d75ef0f0c">adapter</a>.<a class="code" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_adapter.html#a9969adb9ded3f3dcb37841ac24943ab5">getItemsCount</a>() * <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#aedd35386faa7679dfe594d85bba75622">getItemHeight</a>();</div>
+<div class="line">            <span class="keywordtype">int</span> minY = <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#ab6a101068c38621beec914a5d3eb715a">isCyclic</a> ? -maxY : 0;</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#afc4036cae039923610be2f2931e5a6ca">scroller</a>.fling(0, <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a9c25b0a8ba27b4f96d854c90d4ea2374">lastScrollY</a>, 0, (<span class="keywordtype">int</span>) -velocityY / 2, 0, 0, minY, maxY);</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a5a8501e4e5d3b9d2400190a7f3b733ca">setNextMessage</a>(<a class="code" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a77b2d9d1bc4d380458f8753e3546b24b">MESSAGE_SCROLL</a>);</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>The gesture listener. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9efa0743362817b0b46e4f47a87f0778"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.wheel.AbWheelView.isCyclic = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The is cyclic. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2917acdc7b36db0a9046395dc87abc91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.wheel.AbWheelView.isScrollingPerformed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The is scrolling performed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a76a7126ae75e8a12b54f9a8c38144112"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.itemHeight = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item height. </p>
+
+</div>
+</div>
+<a class="anchor" id="a33a3e495753bf3faaf27590d2e3619ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.itemOffset = <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#af10e554a04e7fb746874b8383bbb6993">valueTextSize</a> / 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Top and bottom items offset. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8720912cbbc2ecf799e14331a8668ddb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.ITEMS_TEXT_COLOR = 0xFF000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Items text color. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4b69057c6146ce018ff9dca533874ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaticLayout com.ab.view.wheel.AbWheelView.itemsLayout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The items layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e8657c9561e5ce526fe22b70d0312ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextPaint com.ab.view.wheel.AbWheelView.itemsPaint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The items paint. </p>
+
+</div>
+</div>
+<a class="anchor" id="a04889ae7a9b8709697002a2997235a45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.itemsWidth = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The items width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7649dce8b7fd3064c8aa59793b31d794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.wheel.AbWheelView.label</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The label. </p>
+
+</div>
+</div>
+<a class="anchor" id="a60829ca3b5623345039b433d1539ac4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.LABEL_OFFSET = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Label offset. </p>
+
+</div>
+</div>
+<a class="anchor" id="a35025ce826f588610a16c1ba59bfb89b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaticLayout com.ab.view.wheel.AbWheelView.labelLayout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The label layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae586e29032984cb09222d48a06ff2e50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextPaint com.ab.view.wheel.AbWheelView.labelPaint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The label paint. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6c2c51bf1afe76abbfc12c13a309a0ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.labelTextColor = 0xF0000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Current label text color. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7ee22c6ed9104d27f9dff5852ccb575"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.labelTextSize = 35</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>标签的文字大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a58232330ba5dd68a0a939dd3eef11b9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.labelWidth = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The label width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9c25b0a8ba27b4f96d854c90d4ea2374"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.lastScrollY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The last scroll y. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7b4d46d614275dfbceee9500a326d40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.view.wheel.AbWheelView.mContext = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m context. </p>
+
+</div>
+</div>
+<a class="anchor" id="a87b6dfc86a5e8683a8240cabecd0700d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.MESSAGE_JUSTIFY = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The message justify. </p>
+
+</div>
+</div>
+<a class="anchor" id="a77b2d9d1bc4d380458f8753e3546b24b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.MESSAGE_SCROLL = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The message scroll. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6fa5efc433cd360cee04afff1861a39d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.MIN_DELTA_FOR_SCROLLING = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Minimum delta for scrolling. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9dcb031283018c48bb3014f898db6bc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.PADDING = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Left and right padding value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7a1d9138ee720fe1adb09cabfb4c30e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.screenHeight = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>屏幕高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="acefe62fc1d92781fe941c385bd894f8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.screenWidth = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>屏幕宽度. </p>
+
+</div>
+</div>
+<a class="anchor" id="afc4036cae039923610be2f2931e5a6ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scroller com.ab.view.wheel.AbWheelView.scroller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The scroller. </p>
+
+</div>
+</div>
+<a class="anchor" id="aee39be92833238c40e18da462c153b1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.wheel.AbWheelView.SCROLLING_DURATION = 400</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scrolling duration. </p>
+
+</div>
+</div>
+<a class="anchor" id="aab2af6edeb281fbb7f2c071f905f7b8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a>&gt; com.ab.view.wheel.AbWheelView.scrollingListeners = new LinkedList&lt;<a class="el" href="interfacecom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view_1_1_ab_on_wheel_scroll_listener.html">AbOnWheelScrollListener</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The scrolling listeners. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9dbcf9f5435a73fcd85565516e67b80b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.scrollingOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The scrolling offset. </p>
+
+</div>
+</div>
+<a class="anchor" id="a366c3ceff1540c46234b846e5618eb40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.wheel.AbWheelView.SHADOWS_COLORS = new int[] { 0xFF111111, 0x00AAAAAA, 0x00AAAAAA }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Top and bottom shadows colors. </p>
+
+</div>
+</div>
+<a class="anchor" id="aee9ed4771e2d60d97624c4ea08fa0379"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.wheel.AbWheelView.topGradientColors = new int[] { 0xAAA, 0xFFF, 0xAAA }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The top gradient colors. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac923585ef934d069e3a7757cb70cc9e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GradientDrawable com.ab.view.wheel.AbWheelView.topShadow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Shadows drawables. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0fce11c6a919fa397ad9039ecae2b44f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.topStrokeColor = 0xFF333333</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The top stroke color. </p>
+
+</div>
+</div>
+<a class="anchor" id="adb2afd7f3ff9bd695910f15a33dc44fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.topStrokeWidth = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The top stroke width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5ccfe0ac8defb4aefea139ea20fea9ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaticLayout com.ab.view.wheel.AbWheelView.valueLayout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The value layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a00eab9727916acdac67094acd91ae203"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextPaint com.ab.view.wheel.AbWheelView.valuePaint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The value paint. </p>
+
+</div>
+</div>
+<a class="anchor" id="a22618974102319fe7890c847d96fbf49"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.valueTextColor = 0xF0000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Current value. </p>
+
+</div>
+</div>
+<a class="anchor" id="af10e554a04e7fb746874b8383bbb6993"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.valueTextSize = 35</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>值的文字大小. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2acbffd41b6637979bd6fe00344a0226"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.wheel.AbWheelView.visibleItems = <a class="el" href="classcom_1_1ab_1_1view_1_1wheel_1_1_ab_wheel_view.html#a66aa5d846eeb3e9497c646a0add382da">DEF_VISIBLE_ITEMS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The visible items. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/wheel/<a class="el" href="_ab_wheel_view_8java.html">AbWheelView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

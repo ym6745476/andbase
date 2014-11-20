@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>AndBase开发框架: com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1pullview.html">pullview</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view.html">AbMultiColumnBaseAbsListView</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html">RecycleBin</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8cbec8a046bcebed6f9114939bfb9144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a8cbec8a046bcebed6f9114939bfb9144">setViewTypeCount</a> (int viewTypeCount)</td></tr>
+<tr class="separator:a8cbec8a046bcebed6f9114939bfb9144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075ae00b6f10a97e2395056721ac1f52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a075ae00b6f10a97e2395056721ac1f52">markChildrenDirty</a> ()</td></tr>
+<tr class="separator:a075ae00b6f10a97e2395056721ac1f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537fec048994f312c42fe97b65e34513"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a537fec048994f312c42fe97b65e34513">shouldRecycleViewType</a> (int viewType)</td></tr>
+<tr class="separator:a537fec048994f312c42fe97b65e34513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:ab02a758f85d91402548bcfedceae19bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#ab02a758f85d91402548bcfedceae19bd">clear</a> ()</td></tr>
+<tr class="separator:ab02a758f85d91402548bcfedceae19bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3232aeb8d96ccc49ed7f59ca06c7e77c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a3232aeb8d96ccc49ed7f59ca06c7e77c">fillActiveViews</a> (int childCount, int firstActivePosition)</td></tr>
+<tr class="separator:a3232aeb8d96ccc49ed7f59ca06c7e77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a02edea53eb02fcfb2287652f8558a"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#ab1a02edea53eb02fcfb2287652f8558a">getActiveView</a> (int position)</td></tr>
+<tr class="separator:ab1a02edea53eb02fcfb2287652f8558a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6800777e78bf883640ff6cfce7251474"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a6800777e78bf883640ff6cfce7251474">getScrapView</a> (int position)</td></tr>
+<tr class="separator:a6800777e78bf883640ff6cfce7251474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e0d8d03aab139751ad9a8e42b84767"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#af6e0d8d03aab139751ad9a8e42b84767">addScrapView</a> (View scrap)</td></tr>
+<tr class="separator:af6e0d8d03aab139751ad9a8e42b84767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10535f0d8a8fdf7c467fc27651aba419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a10535f0d8a8fdf7c467fc27651aba419">scrapActiveViews</a> ()</td></tr>
+<tr class="separator:a10535f0d8a8fdf7c467fc27651aba419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca48aa832c84fa283e290872c935ce34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#aca48aa832c84fa283e290872c935ce34">reclaimScrapViews</a> (List&lt; View &gt; views)</td></tr>
+<tr class="separator:aca48aa832c84fa283e290872c935ce34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d38e2d5373ceb4a2c39224b67944712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a3d38e2d5373ceb4a2c39224b67944712">setCacheColorHint</a> (int color)</td></tr>
+<tr class="separator:a3d38e2d5373ceb4a2c39224b67944712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a0209fd03ec7f968b09c28049eceef081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a0209fd03ec7f968b09c28049eceef081">pruneScrapViews</a> ()</td></tr>
+<tr class="separator:a0209fd03ec7f968b09c28049eceef081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a874ceb455011e4994cf77c3737dfd310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycler_listener.html">RecyclerListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a874ceb455011e4994cf77c3737dfd310">mRecyclerListener</a></td></tr>
+<tr class="separator:a874ceb455011e4994cf77c3737dfd310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83fa1e054f650aa7d1c24688be3b15c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#ad83fa1e054f650aa7d1c24688be3b15c">mFirstActivePosition</a></td></tr>
+<tr class="separator:ad83fa1e054f650aa7d1c24688be3b15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc8bf2c767b456d2c42279f6231e9e6"><td class="memItemLeft" align="right" valign="top">View[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#adcc8bf2c767b456d2c42279f6231e9e6">mActiveViews</a> = new View[0]</td></tr>
+<tr class="separator:adcc8bf2c767b456d2c42279f6231e9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a20b20c62ddb915aa5dec971bf3313"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; View &gt;[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#aa6a20b20c62ddb915aa5dec971bf3313">mScrapViews</a></td></tr>
+<tr class="separator:aa6a20b20c62ddb915aa5dec971bf3313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074f3c5d314ffa765feefd36a367418b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a074f3c5d314ffa765feefd36a367418b">mViewTypeCount</a></td></tr>
+<tr class="separator:a074f3c5d314ffa765feefd36a367418b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264c96675454ad19d9a55644b6cc5655"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; View &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html#a264c96675454ad19d9a55644b6cc5655">mCurrentScrap</a></td></tr>
+<tr class="separator:a264c96675454ad19d9a55644b6cc5655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html">RecycleBin</a> facilitates reuse of views across layouts. The <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycle_bin.html">RecycleBin</a> has two levels of storage: ActiveViews and ScrapViews. ActiveViews are those views which were onscreen at the start of a layout. By construction, they are displaying current information. At the end of layout, all views in ActiveViews are demoted to ScrapViews. ScrapViews are old views that could potentially be used by the adapter to avoid allocating views unnecessarily.</p>
+<dl class="section see"><dt>参见</dt><dd>android.widget.AbsListView::setRecyclerListener(android.widget.AbsListView.RecyclerListener) </dd>
+<dd>
+android.widget.AbsListView.RecyclerListener </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="af6e0d8d03aab139751ad9a8e42b84767"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.addScrapView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>scrap</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Put a view into the ScapViews list. These views are unordered.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scrap</td><td>The view to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab02a758f85d91402548bcfedceae19bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.clear </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears the scrap heap. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3232aeb8d96ccc49ed7f59ca06c7e77c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.fillActiveViews </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>childCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>firstActivePosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fill ActiveViews with all of the children of the AbsListView.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">childCount</td><td>The minimum number of views mActiveViews should hold </td></tr>
+    <tr><td class="paramname">firstActivePosition</td><td>The position of the first view that will be stored in mActiveViews </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab1a02edea53eb02fcfb2287652f8558a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.getActiveView </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the view corresponding to the specified position. The view will be removed from mActiveViews if it is found.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position to look up in mActiveViews </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The view if it is found, null otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6800777e78bf883640ff6cfce7251474"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.getScrapView </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>A view from the ScrapViews collection. These are unordered. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a075ae00b6f10a97e2395056721ac1f52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.markChildrenDirty </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0209fd03ec7f968b09c28049eceef081"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.pruneScrapViews </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Makes sure that the size of mScrapViews does not exceed the size of mActiveViews. (This can happen if an adapter does not recycle its views). </p>
+
+</div>
+</div>
+<a class="anchor" id="aca48aa832c84fa283e290872c935ce34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.reclaimScrapViews </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; View &gt;&#160;</td>
+          <td class="paramname"><em>views</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Puts all views in the scrap heap into the supplied list. </p>
+
+</div>
+</div>
+<a class="anchor" id="a10535f0d8a8fdf7c467fc27651aba419"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.scrapActiveViews </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Move all views remaining in mActiveViews to mScrapViews. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3d38e2d5373ceb4a2c39224b67944712"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.setCacheColorHint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Updates the cache color hint of all known views.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The new cache color hint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cbec8a046bcebed6f9114939bfb9144"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.setViewTypeCount </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>viewTypeCount</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a537fec048994f312c42fe97b65e34513"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.shouldRecycleViewType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>viewType</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="adcc8bf2c767b456d2c42279f6231e9e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View [] com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.mActiveViews = new View[0]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Views that were on screen at the start of layout. This array is populated at the start of layout, and at the end of layout all view in mActiveViews are moved to mScrapViews. Views in mActiveViews represent a contiguous range of Views, with position of the first view store in mFirstActivePosition. </p>
+
+</div>
+</div>
+<a class="anchor" id="a264c96675454ad19d9a55644b6cc5655"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;View&gt; com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.mCurrentScrap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad83fa1e054f650aa7d1c24688be3b15c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.mFirstActivePosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position of the first view stored in mActiveViews. </p>
+
+</div>
+</div>
+<a class="anchor" id="a874ceb455011e4994cf77c3737dfd310"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_base_abs_list_view_1_1_recycler_listener.html">RecyclerListener</a> com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.mRecyclerListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa6a20b20c62ddb915aa5dec971bf3313"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;View&gt; [] com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.mScrapViews</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unsorted views that can be used by the adapter as a convert view. </p>
+
+</div>
+</div>
+<a class="anchor" id="a074f3c5d314ffa765feefd36a367418b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnBaseAbsListView.RecycleBin.mViewTypeCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/pullview/<a class="el" href="_ab_multi_column_base_abs_list_view_8java.html">AbMultiColumnBaseAbsListView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 三月 19日 星期三 16:24:31 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

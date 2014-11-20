@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.image.toolbox.ImageLoader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1image.html">image</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1image_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html">ImageLoader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.image.toolbox.ImageLoader类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_cache.html">ImageCache</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_listener.html">ImageListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a48b14f24172f953179e40eab166692c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a48b14f24172f953179e40eab166692c2">ImageLoader</a> (RequestQueue queue, <a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_cache.html">ImageCache</a> imageCache)</td></tr>
+<tr class="separator:a48b14f24172f953179e40eab166692c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15af8e0efabe8690989d6143f7b80d1b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a15af8e0efabe8690989d6143f7b80d1b">isCached</a> (String requestUrl, int maxWidth, int maxHeight)</td></tr>
+<tr class="separator:a15af8e0efabe8690989d6143f7b80d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8777d7b21d8358b4b1fdbb25eb9658de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a8777d7b21d8358b4b1fdbb25eb9658de">get</a> (String requestUrl, final <a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_listener.html">ImageListener</a> listener)</td></tr>
+<tr class="separator:a8777d7b21d8358b4b1fdbb25eb9658de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5ec37f96f76b8b5ac474549adeeaa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a0d5ec37f96f76b8b5ac474549adeeaa7">get</a> (String requestUrl, <a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_listener.html">ImageListener</a> imageListener, int maxWidth, int maxHeight)</td></tr>
+<tr class="separator:a0d5ec37f96f76b8b5ac474549adeeaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd175aaa32bb0843752608a5ed2e976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a2bd175aaa32bb0843752608a5ed2e976">setBatchedResponseDelay</a> (int newBatchedResponseDelayMs)</td></tr>
+<tr class="separator:a2bd175aaa32bb0843752608a5ed2e976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a5774bfa352a957a1ef6883b9639b7fc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a5774bfa352a957a1ef6883b9639b7fc6">onGetImageSuccess</a> (String cacheKey, Bitmap response)</td></tr>
+<tr class="separator:a5774bfa352a957a1ef6883b9639b7fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d74d8da8a4a6e56ab4ad126366bc460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a3d74d8da8a4a6e56ab4ad126366bc460">onGetImageError</a> (String cacheKey, VolleyError error)</td></tr>
+<tr class="separator:a3d74d8da8a4a6e56ab4ad126366bc460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dd132eddd1b56feb9deeae373bc582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a54dd132eddd1b56feb9deeae373bc582">batchResponse</a> (String cacheKey, <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a> request)</td></tr>
+<tr class="separator:a54dd132eddd1b56feb9deeae373bc582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e5e4190be17495e76353ae2eebe9e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#ae3e5e4190be17495e76353ae2eebe9e7">throwIfNotOnMainThread</a> ()</td></tr>
+<tr class="separator:ae3e5e4190be17495e76353ae2eebe9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ae5a496176506ef2e38aa4e8484237aaa"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#ae5a496176506ef2e38aa4e8484237aaa">getCacheKey</a> (String url, int maxWidth, int maxHeight)</td></tr>
+<tr class="separator:ae5a496176506ef2e38aa4e8484237aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a945e240bf7fd61fe1c9916149f1e4203"><td class="memItemLeft" align="right" valign="top">final RequestQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a945e240bf7fd61fe1c9916149f1e4203">mRequestQueue</a></td></tr>
+<tr class="separator:a945e240bf7fd61fe1c9916149f1e4203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a35f886a62224a04a2ce0aaad93fe6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#ad4a35f886a62224a04a2ce0aaad93fe6">mBatchResponseDelayMs</a> = 100</td></tr>
+<tr class="separator:ad4a35f886a62224a04a2ce0aaad93fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e44fa8793f463df1284c308fd342cea"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_cache.html">ImageCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a1e44fa8793f463df1284c308fd342cea">mCache</a></td></tr>
+<tr class="separator:a1e44fa8793f463df1284c308fd342cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eea1145bc0f5c162fde44c3994f07a3"><td class="memItemLeft" align="right" valign="top">final HashMap&lt; String, <br class="typebreak" />
+<a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a3eea1145bc0f5c162fde44c3994f07a3">mInFlightRequests</a></td></tr>
+<tr class="separator:a3eea1145bc0f5c162fde44c3994f07a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20d6953857ed7d59290cff44476b88d"><td class="memItemLeft" align="right" valign="top">final HashMap&lt; String, <br class="typebreak" />
+<a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#ac20d6953857ed7d59290cff44476b88d">mBatchedResponses</a></td></tr>
+<tr class="separator:ac20d6953857ed7d59290cff44476b88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5837fa2f3bc0ecaf0eb044b7353f34"><td class="memItemLeft" align="right" valign="top">final Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#a3e5837fa2f3bc0ecaf0eb044b7353f34">mHandler</a> = new Handler(Looper.getMainLooper())</td></tr>
+<tr class="separator:a3e5837fa2f3bc0ecaf0eb044b7353f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca9cad6403e82a87e8e390b017248b5"><td class="memItemLeft" align="right" valign="top">Runnable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html#acca9cad6403e82a87e8e390b017248b5">mRunnable</a></td></tr>
+<tr class="separator:acca9cad6403e82a87e8e390b017248b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Helper that handles loading and caching images from remote URLs.</p>
+<p>The simple way to use this class is to call <a class="el" href="">ImageLoader#get(String, ImageListener)</a> and to pass in the default image listener provided by <a class="el" href="">ImageLoader#getImageListener(ImageView, int, int)</a>. Note that all function calls to this class must be made from the main thead, and all responses will be delivered to the main thread as well. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a48b14f24172f953179e40eab166692c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.image.toolbox.ImageLoader.ImageLoader </td>
+          <td>(</td>
+          <td class="paramtype">RequestQueue&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_cache.html">ImageCache</a>&#160;</td>
+          <td class="paramname"><em>imageCache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs a new <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html">ImageLoader</a>. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>The RequestQueue to use for making image requests. </td></tr>
+    <tr><td class="paramname">imageCache</td><td>The cache to use as an L1 cache. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a54dd132eddd1b56feb9deeae373bc582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.toolbox.ImageLoader.batchResponse </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>cacheKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a>&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts the runnable for batched delivery of responses if it is not already started. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cacheKey</td><td>The cacheKey of the response being delivered. </td></tr>
+    <tr><td class="paramname">request</td><td>The <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a> to be delivered. </td></tr>
+    <tr><td class="paramname">error</td><td>The volley error associated with the request (if applicable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8777d7b21d8358b4b1fdbb25eb9658de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a> com.ab.image.toolbox.ImageLoader.get </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>requestUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_listener.html">ImageListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns an <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a> for the requested URL.</p>
+<p>The <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a> will contain either the specified default bitmap or the loaded bitmap. If the default was returned, the <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader.html">ImageLoader</a> will be invoked when the request is fulfilled.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">requestUrl</td><td>The URL of the image to be loaded. </td></tr>
+    <tr><td class="paramname">defaultImage</td><td>Optional default image to return until the actual image is loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d5ec37f96f76b8b5ac474549adeeaa7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_container.html">ImageContainer</a> com.ab.image.toolbox.ImageLoader.get </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>requestUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_listener.html">ImageListener</a>&#160;</td>
+          <td class="paramname"><em>imageListener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Issues a bitmap request with the given URL if that image is not available in the cache, and returns a bitmap container that contains all of the data relating to the request (as well as the default image if the requested image is not available). </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">requestUrl</td><td>The url of the remote image </td></tr>
+    <tr><td class="paramname">imageListener</td><td>The listener to call when the remote image is loaded </td></tr>
+    <tr><td class="paramname">maxWidth</td><td>The maximum width of the returned image. </td></tr>
+    <tr><td class="paramname">maxHeight</td><td>The maximum height of the returned image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A container object that contains all of the properties of the request, as well as the currently available image (default if remote is not loaded). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5a496176506ef2e38aa4e8484237aaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.image.toolbox.ImageLoader.getCacheKey </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a cache key for use with the L1 cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>The URL of the request. </td></tr>
+    <tr><td class="paramname">maxWidth</td><td>The max-width of the output. </td></tr>
+    <tr><td class="paramname">maxHeight</td><td>The max-height of the output. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a15af8e0efabe8690989d6143f7b80d1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.image.toolbox.ImageLoader.isCached </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>requestUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the item is available in the cache. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">requestUrl</td><td>The url of the remote image </td></tr>
+    <tr><td class="paramname">maxWidth</td><td>The maximum width of the returned image. </td></tr>
+    <tr><td class="paramname">maxHeight</td><td>The maximum height of the returned image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the item exists in cache, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d74d8da8a4a6e56ab4ad126366bc460"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.toolbox.ImageLoader.onGetImageError </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>cacheKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VolleyError&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for when an image failed to load. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cacheKey</td><td>The cache key that is associated with the image request. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5774bfa352a957a1ef6883b9639b7fc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.toolbox.ImageLoader.onGetImageSuccess </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>cacheKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>response</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for when an image was successfully loaded. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cacheKey</td><td>The cache key that is associated with the image request. </td></tr>
+    <tr><td class="paramname">response</td><td>The bitmap that was returned from the network. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2bd175aaa32bb0843752608a5ed2e976"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.toolbox.ImageLoader.setBatchedResponseDelay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newBatchedResponseDelayMs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the amount of time to wait after the first response arrives before delivering all responses. Batching can be disabled entirely by passing in 0. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newBatchedResponseDelayMs</td><td>The time in milliseconds to wait. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3e5e4190be17495e76353ae2eebe9e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.toolbox.ImageLoader.throwIfNotOnMainThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ac20d6953857ed7d59290cff44476b88d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final HashMap&lt;String, <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a>&gt; com.ab.image.toolbox.ImageLoader.mBatchedResponses</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> HashMap&lt;String, BatchedImageRequest&gt;()</div>
+</div><!-- fragment --><p>HashMap of the currently pending responses (waiting to be delivered). </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4a35f886a62224a04a2ce0aaad93fe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.image.toolbox.ImageLoader.mBatchResponseDelayMs = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Amount of time to wait after first response arrives before delivering all responses. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1e44fa8793f463df1284c308fd342cea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_image_cache.html">ImageCache</a> com.ab.image.toolbox.ImageLoader.mCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The cache implementation to be used as an L1 cache before calling into volley. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3e5837fa2f3bc0ecaf0eb044b7353f34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Handler com.ab.image.toolbox.ImageLoader.mHandler = new Handler(Looper.getMainLooper())</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handler to the main thread. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3eea1145bc0f5c162fde44c3994f07a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final HashMap&lt;String, <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a>&gt; com.ab.image.toolbox.ImageLoader.mInFlightRequests</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> HashMap&lt;String, BatchedImageRequest&gt;()</div>
+</div><!-- fragment --><p>HashMap of Cache keys -&gt; <a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_loader_1_1_batched_image_request.html">BatchedImageRequest</a> used to track in-flight requests so that we can coalesce multiple requests to the same URL into a single network request. </p>
+
+</div>
+</div>
+<a class="anchor" id="a945e240bf7fd61fe1c9916149f1e4203"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final RequestQueue com.ab.image.toolbox.ImageLoader.mRequestQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>RequestQueue for dispatching ImageRequests onto. </p>
+
+</div>
+</div>
+<a class="anchor" id="acca9cad6403e82a87e8e390b017248b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Runnable com.ab.image.toolbox.ImageLoader.mRunnable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Runnable for in-flight response delivery. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/image/toolbox/<a class="el" href="_image_loader_8java.html">ImageLoader.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

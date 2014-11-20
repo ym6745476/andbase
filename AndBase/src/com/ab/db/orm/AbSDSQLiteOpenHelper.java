@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,41 +16,34 @@
 package com.ab.db.orm;
 
 import java.io.File;
-import java.io.IOException;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Environment;
-import android.util.Log;
-
-import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
- * 名称：SDSQLiteOpenHelper.java 
+ * © 2012 amsoft.cn
+ * 名称：AbSDSQLiteOpenHelper.java 
  * 描述：SD卡中保存数据库
- * @author zhaoqp
- * @date：2013-7-23 上午9:47:10
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-7-23 上午9:47:10
  */
+
 public abstract class AbSDSQLiteOpenHelper extends SQLiteOpenHelper{
 	
-    /** 日志标记. */
-    private static final String TAG = "SDSQLiteOpenHelper";
-    
     /** 应用Context. */
     private final Context mContext;
     
     /** 数据库名. */
     private final String mName;
     
-    /** 要放到SDCard下的文件夹路径. */
-    private final String mPath;
+    /** 数据库文件保存文件夹全路径. */
+    private final String mDir;
     
     /** 数据库查询的游标工厂. */
     private final SQLiteDatabase.CursorFactory mFactory;
@@ -74,12 +67,12 @@ public abstract class AbSDSQLiteOpenHelper extends SQLiteOpenHelper{
      * @param factory 数据库查询的游标工厂
      * @param version 数据库的新版本号
      */
-    public AbSDSQLiteOpenHelper(Context context,String path, String name,
+    public AbSDSQLiteOpenHelper(Context context,String dir,String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
 		if (version < 1) throw new IllegalArgumentException("Version must be >= 1, was " + version);
 		mContext = context;
-	    mPath = path;
+		mDir = dir;
 	    mName = name;
 	    mFactory = factory;
 	    mNewVersion = version;
@@ -107,7 +100,7 @@ public abstract class AbSDSQLiteOpenHelper extends SQLiteOpenHelper{
                 db = SQLiteDatabase.create(null);
             } else {
             	//创建一个文件支持SQLite数据库
-                String path = getDatabasePath(mPath,mName).getPath();
+            	String path = mDir + File.separator + mName;
                 db = SQLiteDatabase.openOrCreateDatabase(path,mFactory);
             }
             int version = db.getVersion();
@@ -168,7 +161,7 @@ public abstract class AbSDSQLiteOpenHelper extends SQLiteOpenHelper{
 		} catch (Exception e1) {
 			try {
 	            mIsInitializing = true;
-	            String path = getDatabasePath(mPath,mName).getPath();
+	            String path = mDir + File.separator + mName;
 	            db = SQLiteDatabase.openDatabase(path, mFactory, SQLiteDatabase.OPEN_READONLY);
 	            if (db.getVersion() != mNewVersion) {
 	                throw new SQLiteException("不能更新只读数据库的版本 from version " +
@@ -223,35 +216,4 @@ public abstract class AbSDSQLiteOpenHelper extends SQLiteOpenHelper{
      */
     public abstract void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion);
     
-
-    /**
-     * 获取数据库文件.
-     *
-     * @param dbpath 数据库文件路径
-     * @param dbName 数据库文件名称
-     * @return 数据库文件
-     */
-    public File getDatabasePath(String dbpath,String dbName){
-    	
-    	dbpath  = AbStrUtil.parseEmpty(dbpath);
-    	//创建目录
-        File path = new File(Environment.getExternalStorageDirectory() + "/" + dbpath);
-        // 创建文件
-        File f = new File(path.getPath(),dbName);
-        // 目录存在返回false
-        if (!path.exists()) {
-        	// 创建目录
-            path.mkdirs();
-        }
-        // 文件存在返回false
-        if (!f.exists()) {
-            try {
-            	//创建文件
-                f.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return f;
-    }
 }

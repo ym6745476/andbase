@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.network.toolbox.BasicNetwork类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network.html">network</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html">BasicNetwork</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#pro-static-attribs">静态 Protected 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.network.toolbox.BasicNetwork类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.network.toolbox.BasicNetwork 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.png" usemap="#com.ab.network.toolbox.BasicNetwork_map" alt=""/>
+  <map id="com.ab.network.toolbox.BasicNetwork_map" name="com.ab.network.toolbox.BasicNetwork_map">
+<area href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_network.html" alt="com.ab.network.toolbox.Network" shape="rect" coords="0,0,226,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8e44ed3d41e3798d95c325fe349b2dac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a8e44ed3d41e3798d95c325fe349b2dac">BasicNetwork</a> (<a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a> httpStack)</td></tr>
+<tr class="separator:a8e44ed3d41e3798d95c325fe349b2dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f53ab56c6ba52f552f69356e4680b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#aa0f53ab56c6ba52f552f69356e4680b1">BasicNetwork</a> (<a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a> httpStack, <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_byte_array_pool.html">ByteArrayPool</a> pool)</td></tr>
+<tr class="separator:aa0f53ab56c6ba52f552f69356e4680b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1333c398362153c0e201db142dcab9c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a1333c398362153c0e201db142dcab9c6">performRequest</a> (Request&lt;?&gt; request)  throws VolleyError </td></tr>
+<tr class="separator:a1333c398362153c0e201db142dcab9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:aa8818ed4472dea345bd852ff14e31928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#aa8818ed4472dea345bd852ff14e31928">logError</a> (String what, String url, long start)</td></tr>
+<tr class="separator:aa8818ed4472dea345bd852ff14e31928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ac328d5ae71de4b507f4c27d5ce938672"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#ac328d5ae71de4b507f4c27d5ce938672">mHttpStack</a></td></tr>
+<tr class="separator:ac328d5ae71de4b507f4c27d5ce938672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc3afae71439aab798de92e5ae1a7ca"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_byte_array_pool.html">ByteArrayPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a5dc3afae71439aab798de92e5ae1a7ca">mPool</a></td></tr>
+<tr class="separator:a5dc3afae71439aab798de92e5ae1a7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+静态 Protected 属性</h2></td></tr>
+<tr class="memitem:aceaf379841e1afe09e51dfa6318daac1"><td class="memItemLeft" align="right" valign="top">static final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#aceaf379841e1afe09e51dfa6318daac1">DEBUG</a> = VolleyLog.DEBUG</td></tr>
+<tr class="separator:aceaf379841e1afe09e51dfa6318daac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a3bd5274ddfc3e09f925d767646c52900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a3bd5274ddfc3e09f925d767646c52900">logSlowRequests</a> (long requestLifetime, Request&lt;?&gt; request, byte[] responseContents, StatusLine statusLine)</td></tr>
+<tr class="separator:a3bd5274ddfc3e09f925d767646c52900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a3d6b5194de34d96dbcbed20f6b56c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a43a3d6b5194de34d96dbcbed20f6b56c">addCacheHeaders</a> (Map&lt; String, String &gt; headers, Cache.Entry entry)</td></tr>
+<tr class="separator:a43a3d6b5194de34d96dbcbed20f6b56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9eb38f8e19fb8ea8b7456522bbf3ba"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#acb9eb38f8e19fb8ea8b7456522bbf3ba">entityToBytes</a> (HttpEntity entity)  throws IOException, ServerError </td></tr>
+<tr class="separator:acb9eb38f8e19fb8ea8b7456522bbf3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a88612aa157a9eeb984a542c08bb07b7a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a88612aa157a9eeb984a542c08bb07b7a">attemptRetryOnException</a> (String logPrefix, Request&lt;?&gt; request, VolleyError exception)  throws VolleyError </td></tr>
+<tr class="separator:a88612aa157a9eeb984a542c08bb07b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9420272a1592cbb2708370ea6d5e5e86"><td class="memItemLeft" align="right" valign="top">static Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a9420272a1592cbb2708370ea6d5e5e86">convertHeaders</a> (Header[] headers)</td></tr>
+<tr class="separator:a9420272a1592cbb2708370ea6d5e5e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a662c971892d0626b467fc148b2ab2cfa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#a662c971892d0626b467fc148b2ab2cfa">SLOW_REQUEST_THRESHOLD_MS</a> = 3000</td></tr>
+<tr class="separator:a662c971892d0626b467fc148b2ab2cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc92f0b2edff4d7b25be2f8ba9d4080"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_basic_network.html#adfc92f0b2edff4d7b25be2f8ba9d4080">DEFAULT_POOL_SIZE</a> = 4096</td></tr>
+<tr class="separator:adfc92f0b2edff4d7b25be2f8ba9d4080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A network performing <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley.html">Volley</a> requests over an <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a8e44ed3d41e3798d95c325fe349b2dac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.BasicNetwork.BasicNetwork </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a>&#160;</td>
+          <td class="paramname"><em>httpStack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpStack</td><td>HTTP stack to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0f53ab56c6ba52f552f69356e4680b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.BasicNetwork.BasicNetwork </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a>&#160;</td>
+          <td class="paramname"><em>httpStack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_byte_array_pool.html">ByteArrayPool</a>&#160;</td>
+          <td class="paramname"><em>pool</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpStack</td><td>HTTP stack to be used </td></tr>
+    <tr><td class="paramname">pool</td><td>a buffer pool that improves GC performance in copy operations </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a43a3d6b5194de34d96dbcbed20f6b56c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.BasicNetwork.addCacheHeaders </td>
+          <td>(</td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Cache.Entry&#160;</td>
+          <td class="paramname"><em>entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a88612aa157a9eeb984a542c08bb07b7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.network.toolbox.BasicNetwork.attemptRetryOnException </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>logPrefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Request&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VolleyError&#160;</td>
+          <td class="paramname"><em>exception</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws VolleyError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attempts to prepare the request for a retry. If there are no more attempts remaining in the request's retry policy, a timeout exception is thrown. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9420272a1592cbb2708370ea6d5e5e86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Map&lt;String, String&gt; com.ab.network.toolbox.BasicNetwork.convertHeaders </td>
+          <td>(</td>
+          <td class="paramtype">Header[]&#160;</td>
+          <td class="paramname"><em>headers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Converts Headers[] to Map&lt;String, String&gt;. </p>
+
+</div>
+</div>
+<a class="anchor" id="acb9eb38f8e19fb8ea8b7456522bbf3ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.network.toolbox.BasicNetwork.entityToBytes </td>
+          <td>(</td>
+          <td class="paramtype">HttpEntity&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td> throws IOException, ServerError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads the contents of HttpEntity into a byte[]. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa8818ed4472dea345bd852ff14e31928"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.BasicNetwork.logError </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>what</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>start</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bd5274ddfc3e09f925d767646c52900"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.BasicNetwork.logSlowRequests </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>requestLifetime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Request&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>responseContents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StatusLine&#160;</td>
+          <td class="paramname"><em>statusLine</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs requests that took over SLOW_REQUEST_THRESHOLD_MS to complete. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1333c398362153c0e201db142dcab9c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a> com.ab.network.toolbox.BasicNetwork.performRequest </td>
+          <td>(</td>
+          <td class="paramtype">Request&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> throws VolleyError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Performs the specified request. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a> with data and caching metadata; will never be null </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">VolleyError</td><td>on errors </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_network.html#a26fa382eed4b209045408654912a3d31">com.ab.network.toolbox.Network</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aceaf379841e1afe09e51dfa6318daac1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.ab.network.toolbox.BasicNetwork.DEBUG = VolleyLog.DEBUG</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adfc92f0b2edff4d7b25be2f8ba9d4080"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.network.toolbox.BasicNetwork.DEFAULT_POOL_SIZE = 4096</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac328d5ae71de4b507f4c27d5ce938672"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_http_stack.html">HttpStack</a> com.ab.network.toolbox.BasicNetwork.mHttpStack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5dc3afae71439aab798de92e5ae1a7ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_byte_array_pool.html">ByteArrayPool</a> com.ab.network.toolbox.BasicNetwork.mPool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a662c971892d0626b467fc148b2ab2cfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.network.toolbox.BasicNetwork.SLOW_REQUEST_THRESHOLD_MS = 3000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/network/toolbox/<a class="el" href="_basic_network_8java.html">BasicNetwork.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

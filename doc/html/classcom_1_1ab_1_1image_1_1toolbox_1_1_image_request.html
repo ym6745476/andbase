@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.image.toolbox.ImageRequest类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1image.html">image</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1image_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html">ImageRequest</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-static-methods">静态包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.image.toolbox.ImageRequest类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.image.toolbox.ImageRequest 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.png" usemap="#com.ab.image.toolbox.ImageRequest_map" alt=""/>
+  <map id="com.ab.image.toolbox.ImageRequest_map" name="com.ab.image.toolbox.ImageRequest_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7a2165182c40d343e0dc55c4793b1248"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a7a2165182c40d343e0dc55c4793b1248">ImageRequest</a> (String url, Response.Listener&lt; Bitmap &gt; listener, int maxWidth, int maxHeight, Config decodeConfig, Response.ErrorListener errorListener)</td></tr>
+<tr class="separator:a7a2165182c40d343e0dc55c4793b1248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a845f82970a0249971adfde7d4b05ad"><td class="memItemLeft" align="right" valign="top">Priority&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a6a845f82970a0249971adfde7d4b05ad">getPriority</a> ()</td></tr>
+<tr class="separator:a6a845f82970a0249971adfde7d4b05ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a706fdddfffc34b02cb84609e6b122645"><td class="memItemLeft" align="right" valign="top">Response&lt; Bitmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a706fdddfffc34b02cb84609e6b122645">parseNetworkResponse</a> (<a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a> response)</td></tr>
+<tr class="separator:a706fdddfffc34b02cb84609e6b122645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aff635bfe1884fc047eaa376dd84d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a5aff635bfe1884fc047eaa376dd84d63">deliverResponse</a> (Bitmap response)</td></tr>
+<tr class="separator:a5aff635bfe1884fc047eaa376dd84d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-methods"></a>
+静态包函数</h2></td></tr>
+<tr class="memitem:adcf25313fda37a222d212c34f260e202"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#adcf25313fda37a222d212c34f260e202">findBestSampleSize</a> (int actualWidth, int actualHeight, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:adcf25313fda37a222d212c34f260e202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aca88a8b26446c26723520b0be54519f8"><td class="memItemLeft" align="right" valign="top">Response&lt; Bitmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#aca88a8b26446c26723520b0be54519f8">doParse</a> (<a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a> response)</td></tr>
+<tr class="separator:aca88a8b26446c26723520b0be54519f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a97516fcf8db6b094841bc1be8d089dc8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a97516fcf8db6b094841bc1be8d089dc8">getResizedDimension</a> (int maxPrimary, int maxSecondary, int actualPrimary, int actualSecondary)</td></tr>
+<tr class="separator:a97516fcf8db6b094841bc1be8d089dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a44847ce783474c58701ae2a13821a06b"><td class="memItemLeft" align="right" valign="top">final Response.Listener&lt; Bitmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a44847ce783474c58701ae2a13821a06b">mListener</a></td></tr>
+<tr class="separator:a44847ce783474c58701ae2a13821a06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bbecf8a336c53d56c47c19fcb2b8b3"><td class="memItemLeft" align="right" valign="top">final Config&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a84bbecf8a336c53d56c47c19fcb2b8b3">mDecodeConfig</a></td></tr>
+<tr class="separator:a84bbecf8a336c53d56c47c19fcb2b8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ef7aa68364fc506c1315bcf76646c3"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a56ef7aa68364fc506c1315bcf76646c3">mMaxWidth</a></td></tr>
+<tr class="separator:a56ef7aa68364fc506c1315bcf76646c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37091021e3dc40075c558ecd4df45c30"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#a37091021e3dc40075c558ecd4df45c30">mMaxHeight</a></td></tr>
+<tr class="separator:a37091021e3dc40075c558ecd4df45c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:af2dd001a0375d4690c18f6d83a6d573a"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#af2dd001a0375d4690c18f6d83a6d573a">IMAGE_TIMEOUT_MS</a> = 1000</td></tr>
+<tr class="separator:af2dd001a0375d4690c18f6d83a6d573a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace70ef6863ca4644b20fefb606230bcf"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#ace70ef6863ca4644b20fefb606230bcf">IMAGE_MAX_RETRIES</a> = 2</td></tr>
+<tr class="separator:ace70ef6863ca4644b20fefb606230bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c520e8699b008da47b14343ecbdaa0"><td class="memItemLeft" align="right" valign="top">static final float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#aa2c520e8699b008da47b14343ecbdaa0">IMAGE_BACKOFF_MULT</a> = 2f</td></tr>
+<tr class="separator:aa2c520e8699b008da47b14343ecbdaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacc19351ddb934972f4cdb4d9ed9ad3"><td class="memItemLeft" align="right" valign="top">static final Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1image_1_1toolbox_1_1_image_request.html#aaacc19351ddb934972f4cdb4d9ed9ad3">sDecodeLock</a> = new Object()</td></tr>
+<tr class="separator:aaacc19351ddb934972f4cdb4d9ed9ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A canned request for getting an image at a given URL and calling back with a decoded Bitmap. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a7a2165182c40d343e0dc55c4793b1248"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.image.toolbox.ImageRequest.ImageRequest </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Response.Listener&lt; Bitmap &gt;&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Config&#160;</td>
+          <td class="paramname"><em>decodeConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Response.ErrorListener&#160;</td>
+          <td class="paramname"><em>errorListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new image request, decoding to a maximum specified width and height. If both width and height are zero, the image will be decoded to its natural size. If one of the two is nonzero, that dimension will be clamped and the other one will be set to preserve the image's aspect ratio. If both width and height are nonzero, the image will be decoded to be fit in the rectangle of dimensions width x height while keeping its aspect ratio.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>URL of the image </td></tr>
+    <tr><td class="paramname">listener</td><td>Listener to receive the decoded bitmap </td></tr>
+    <tr><td class="paramname">maxWidth</td><td>Maximum width to decode this bitmap to, or zero for none </td></tr>
+    <tr><td class="paramname">maxHeight</td><td>Maximum height to decode this bitmap to, or zero for none </td></tr>
+    <tr><td class="paramname">decodeConfig</td><td>Format to decode the bitmap to </td></tr>
+    <tr><td class="paramname">errorListener</td><td>Error listener, or null to ignore errors </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a5aff635bfe1884fc047eaa376dd84d63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.image.toolbox.ImageRequest.deliverResponse </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aca88a8b26446c26723520b0be54519f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response&lt;Bitmap&gt; com.ab.image.toolbox.ImageRequest.doParse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a>&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The real guts of parseNetworkResponse. Broken out for readability. </p>
+
+</div>
+</div>
+<a class="anchor" id="adcf25313fda37a222d212c34f260e202"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.image.toolbox.ImageRequest.findBestSampleSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>actualWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>actualHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the largest power-of-two divisor for use in downscaling a bitmap that will not result in the scaling past the desired dimensions.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actualWidth</td><td>Actual width of the bitmap </td></tr>
+    <tr><td class="paramname">actualHeight</td><td>Actual height of the bitmap </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>Desired width of the bitmap </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>Desired height of the bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a845f82970a0249971adfde7d4b05ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Priority com.ab.image.toolbox.ImageRequest.getPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a97516fcf8db6b094841bc1be8d089dc8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.image.toolbox.ImageRequest.getResizedDimension </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxPrimary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxSecondary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>actualPrimary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>actualSecondary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scales one side of a rectangle to fit aspect ratio.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxPrimary</td><td>Maximum size of the primary dimension (i.e. width for max width), or zero to maintain aspect ratio with secondary dimension </td></tr>
+    <tr><td class="paramname">maxSecondary</td><td>Maximum size of the secondary dimension, or zero to maintain aspect ratio with primary dimension </td></tr>
+    <tr><td class="paramname">actualPrimary</td><td>Actual size of the primary dimension </td></tr>
+    <tr><td class="paramname">actualSecondary</td><td>Actual size of the secondary dimension </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a706fdddfffc34b02cb84609e6b122645"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response&lt;Bitmap&gt; com.ab.image.toolbox.ImageRequest.parseNetworkResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a>&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aa2c520e8699b008da47b14343ecbdaa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final float com.ab.image.toolbox.ImageRequest.IMAGE_BACKOFF_MULT = 2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default backoff multiplier for image requests </p>
+
+</div>
+</div>
+<a class="anchor" id="ace70ef6863ca4644b20fefb606230bcf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.image.toolbox.ImageRequest.IMAGE_MAX_RETRIES = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default number of retries for image requests </p>
+
+</div>
+</div>
+<a class="anchor" id="af2dd001a0375d4690c18f6d83a6d573a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.image.toolbox.ImageRequest.IMAGE_TIMEOUT_MS = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Socket timeout in milliseconds for image requests </p>
+
+</div>
+</div>
+<a class="anchor" id="a84bbecf8a336c53d56c47c19fcb2b8b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Config com.ab.image.toolbox.ImageRequest.mDecodeConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44847ce783474c58701ae2a13821a06b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Response.Listener&lt;Bitmap&gt; com.ab.image.toolbox.ImageRequest.mListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37091021e3dc40075c558ecd4df45c30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.image.toolbox.ImageRequest.mMaxHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56ef7aa68364fc506c1315bcf76646c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.image.toolbox.ImageRequest.mMaxWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaacc19351ddb934972f4cdb4d9ed9ad3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Object com.ab.image.toolbox.ImageRequest.sDecodeLock = new Object()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decoding lock so that we don't decode more than one image at a time (to avoid OOM's) </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/image/toolbox/<a class="el" href="_image_request_8java.html">ImageRequest.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

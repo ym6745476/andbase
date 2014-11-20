@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/itemsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingTop="5dip"
+        android:textColor="@color/gray_dark"
+        android:textSize="20dip" />
+
+    <TextView
+        android:id="@+id/itemsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemsTitle"
+        android:gravity="left"
+        android:paddingBottom="2dip"
+        android:paddingLeft="10dip"
+        android:textColor="@color/gray"
+        android:textSize="15dip" />
+
+    <com.ab.view.sliding.AbSlidingButton
+        android:id="@+id/mSliderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dip"
+        android:layout_marginRight="10dip">
+    </com.ab.view.sliding.AbSlidingButton>
+
+</RelativeLayout>

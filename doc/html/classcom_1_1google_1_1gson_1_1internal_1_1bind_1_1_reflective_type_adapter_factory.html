@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal_1_1bind.html">bind</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html">ReflectiveTypeAdapterFactory</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.internal.bind.ReflectiveTypeAdapterFactory类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.internal.bind.ReflectiveTypeAdapterFactory 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.png" usemap="#com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_map" alt=""/>
+  <map id="com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_map" name="com.google.gson.internal.bind.ReflectiveTypeAdapterFactory_map">
+<area href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html" alt="com.google.gson.TypeAdapterFactory" shape="rect" coords="0,0,359,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory_1_1_adapter_3_01_t_01_4.html">Adapter&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory_1_1_bound_field.html">BoundField</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a385535bcecf7ef3683646e8fa1a92b43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a385535bcecf7ef3683646e8fa1a92b43">ReflectiveTypeAdapterFactory</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_constructor_constructor.html">ConstructorConstructor</a> <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a3b417e4439faa8cd71e4e1dd263d75d7">constructorConstructor</a>, <a class="el" href="interfacecom_1_1google_1_1gson_1_1_field_naming_strategy.html">FieldNamingStrategy</a> <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a89fcab7149ffbb62e0f2a32110ebfba7">fieldNamingPolicy</a>, <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a64142c35745532b8e7712df88f2f261e">excluder</a>)</td></tr>
+<tr class="separator:a385535bcecf7ef3683646e8fa1a92b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf354ce164b665d6fc4028307e12b1d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a3bf354ce164b665d6fc4028307e12b1d">excludeField</a> (Field f, boolean serialize)</td></tr>
+<tr class="separator:a3bf354ce164b665d6fc4028307e12b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">com.google.gson.TypeAdapterFactory</a></td></tr>
+<tr class="memitem:a8f4c55ec13b384a3e1cba3c3a827ee48 inherit pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory"><td class="memItemLeft" align="right" valign="top">&lt; T &gt; TypeAdapter&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html#a8f4c55ec13b384a3e1cba3c3a827ee48">create</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> gson, TypeToken&lt; T &gt; type)</td></tr>
+<tr class="separator:a8f4c55ec13b384a3e1cba3c3a827ee48 inherit pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a7e8367d20a4845a07837cd407783b54f"><td class="memItemLeft" align="right" valign="top">public&lt; T &gt; TypeAdapter&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a7e8367d20a4845a07837cd407783b54f">create</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> gson, final TypeToken&lt; T &gt; type)</td></tr>
+<tr class="separator:a7e8367d20a4845a07837cd407783b54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a98ef29931d25354e266aed627dda7c36"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a98ef29931d25354e266aed627dda7c36">getFieldName</a> (Field f)</td></tr>
+<tr class="separator:a98ef29931d25354e266aed627dda7c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78104e73223b080ee461e791ce5bab71"><td class="memItemLeft" align="right" valign="top">ReflectiveTypeAdapterFactory.BoundField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a78104e73223b080ee461e791ce5bab71">createBoundField</a> (final <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> context, final Field field, final String name, final TypeToken&lt;?&gt; fieldType, boolean serialize, boolean deserialize)</td></tr>
+<tr class="separator:a78104e73223b080ee461e791ce5bab71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d62d0e27e59760bff79c9b251048f4"><td class="memItemLeft" align="right" valign="top">Map&lt; String, <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory_1_1_bound_field.html">BoundField</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#af4d62d0e27e59760bff79c9b251048f4">getBoundFields</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> context, TypeToken&lt;?&gt; type, Class&lt;?&gt; raw)</td></tr>
+<tr class="separator:af4d62d0e27e59760bff79c9b251048f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a3b417e4439faa8cd71e4e1dd263d75d7"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_constructor_constructor.html">ConstructorConstructor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a3b417e4439faa8cd71e4e1dd263d75d7">constructorConstructor</a></td></tr>
+<tr class="separator:a3b417e4439faa8cd71e4e1dd263d75d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fcab7149ffbb62e0f2a32110ebfba7"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_field_naming_strategy.html">FieldNamingStrategy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a89fcab7149ffbb62e0f2a32110ebfba7">fieldNamingPolicy</a></td></tr>
+<tr class="separator:a89fcab7149ffbb62e0f2a32110ebfba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64142c35745532b8e7712df88f2f261e"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory.html#a64142c35745532b8e7712df88f2f261e">excluder</a></td></tr>
+<tr class="separator:a64142c35745532b8e7712df88f2f261e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Type adapter that reflects over the fields and methods of a class. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a385535bcecf7ef3683646e8fa1a92b43"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.ReflectiveTypeAdapterFactory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_constructor_constructor.html">ConstructorConstructor</a>&#160;</td>
+          <td class="paramname"><em>constructorConstructor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_field_naming_strategy.html">FieldNamingStrategy</a>&#160;</td>
+          <td class="paramname"><em>fieldNamingPolicy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td>
+          <td class="paramname"><em>excluder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7e8367d20a4845a07837cd407783b54f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public&lt;T&gt; TypeAdapter&lt;T&gt; com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>&#160;</td>
+          <td class="paramname"><em>gson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final TypeToken&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78104e73223b080ee461e791ce5bab71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReflectiveTypeAdapterFactory.BoundField com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField </td>
+          <td>(</td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Field&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final TypeToken&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>fieldType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serialize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>deserialize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bf354ce164b665d6fc4028307e12b1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.excludeField </td>
+          <td>(</td>
+          <td class="paramtype">Field&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serialize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4d62d0e27e59760bff79c9b251048f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt;String, <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_reflective_type_adapter_factory_1_1_bound_field.html">BoundField</a>&gt; com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TypeToken&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>raw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a98ef29931d25354e266aed627dda7c36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getFieldName </td>
+          <td>(</td>
+          <td class="paramtype">Field&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a3b417e4439faa8cd71e4e1dd263d75d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_constructor_constructor.html">ConstructorConstructor</a> com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.constructorConstructor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64142c35745532b8e7712df88f2f261e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.excluder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89fcab7149ffbb62e0f2a32110ebfba7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="interfacecom_1_1google_1_1gson_1_1_field_naming_strategy.html">FieldNamingStrategy</a> com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.fieldNamingPolicy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/internal/bind/<a class="el" href="_reflective_type_adapter_factory_8java.html">ReflectiveTypeAdapterFactory.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

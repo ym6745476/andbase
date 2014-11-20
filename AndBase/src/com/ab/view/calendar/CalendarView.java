@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,12 +26,17 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.ab.view.listener.AbOnItemClickListener;
-
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class CalendarView.
+ * © 2012 amsoft.cn
+ * 名称：CalendarView.java 
+ * 描述：日历View
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-8-23 下午2:03:29
  */
 public class CalendarView extends LinearLayout {
 	
@@ -453,6 +458,20 @@ public class CalendarView extends LinearLayout {
 		final int iMonth = calSelected.get(Calendar.MONTH)+1;
 		final int iDay = calSelected.get(Calendar.DAY_OF_MONTH);
 		return iYear+"-"+iMonth+"-"+iDay;
+	}
+	
+	/**
+	 * 条目点击接口.
+	 *
+	 * @see AbOnItemClickEvent
+	 */
+	public interface AbOnItemClickListener {
+	    
+	    /**
+	     * 描述：点击事件.
+	     * @param position 索引
+	     */
+	    public void onClick(int position); 
 	}
 
  	

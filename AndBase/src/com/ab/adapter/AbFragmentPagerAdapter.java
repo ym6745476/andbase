@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,17 +17,20 @@ package com.ab.adapter;
 
 import java.util.ArrayList;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentPagerAdapter;
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
  * 名称：AbFragmentPagerAdapter.java 
  * 描述：一个通用的Fragment适配器
- * @author zhaoqp
- * @date：2013-11-28 上午10:57:53
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-28 上午10:57:53
  */
 public class AbFragmentPagerAdapter extends FragmentPagerAdapter {
 

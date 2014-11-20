@@ -7,10 +7,10 @@ import com.andbase.db.DBInsideHelper;
 import com.andbase.demo.model.LocalUser;
 /**
  * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：UserInsideDao.java 
  * 描述：本地数据库 在data下面
- * @author zhaoqp
+ * @author 还如一梦中
  * @date：2013-7-31 下午4:12:36
  * @version v1.0
  */

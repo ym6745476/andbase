@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.app.AbAnalogClock类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1app.html">app</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html">AbAnalogClock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.app.AbAnalogClock类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.app.AbAnalogClock 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.png" usemap="#com.ab.view.app.AbAnalogClock_map" alt=""/>
+  <map id="com.ab.view.app.AbAnalogClock_map" name="com.ab.view.app.AbAnalogClock_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7a7ff31bc0784440b9cbb3cd3ac1cfd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a7a7ff31bc0784440b9cbb3cd3ac1cfd1">AbAnalogClock</a> (Context context, Drawable dial, Drawable hourHand, Drawable minuteHand, Drawable secondHand)</td></tr>
+<tr class="separator:a7a7ff31bc0784440b9cbb3cd3ac1cfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ae082bc1c37ceb256a6453c1677638dd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#ae082bc1c37ceb256a6453c1677638dd8">onAttachedToWindow</a> ()</td></tr>
+<tr class="separator:ae082bc1c37ceb256a6453c1677638dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9750a2fd7aefa00358e8ede9ef84494a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a9750a2fd7aefa00358e8ede9ef84494a">onDetachedFromWindow</a> ()</td></tr>
+<tr class="separator:a9750a2fd7aefa00358e8ede9ef84494a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f461fd2b3a9cbb3dd495d8390e7709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a12f461fd2b3a9cbb3dd495d8390e7709">onMeasure</a> (int widthMeasureSpec, int heightMeasureSpec)</td></tr>
+<tr class="separator:a12f461fd2b3a9cbb3dd495d8390e7709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21097c8e3425130f0d36519f3a907dc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a21097c8e3425130f0d36519f3a907dc8">onSizeChanged</a> (int w, int h, int oldw, int oldh)</td></tr>
+<tr class="separator:a21097c8e3425130f0d36519f3a907dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3420553cefadd5a8e1be75eb7a4a8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a9e3420553cefadd5a8e1be75eb7a4a8e">onDraw</a> (Canvas canvas)</td></tr>
+<tr class="separator:a9e3420553cefadd5a8e1be75eb7a4a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a74190e8dd84d09f68a3d80307a936e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a74190e8dd84d09f68a3d80307a936e5d">onTimeChanged</a> ()</td></tr>
+<tr class="separator:a74190e8dd84d09f68a3d80307a936e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862206dce18b6535806a0cc9059a62c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a862206dce18b6535806a0cc9059a62c9">updateContentDescription</a> (Time time)</td></tr>
+<tr class="separator:a862206dce18b6535806a0cc9059a62c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:accc3d55153d24516ddfe0808596c2fbf"><td class="memItemLeft" align="right" valign="top">Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#accc3d55153d24516ddfe0808596c2fbf">mCalendar</a></td></tr>
+<tr class="separator:accc3d55153d24516ddfe0808596c2fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73ccc826a84525d9a4af4cf2edc0cc7"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#aa73ccc826a84525d9a4af4cf2edc0cc7">mHourHand</a></td></tr>
+<tr class="separator:aa73ccc826a84525d9a4af4cf2edc0cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bcac30ed1964684c7d0cad97a6014f"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a55bcac30ed1964684c7d0cad97a6014f">mMinuteHand</a></td></tr>
+<tr class="separator:a55bcac30ed1964684c7d0cad97a6014f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0777c9ffb6d5530ac3378f3f6f8cc943"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a0777c9ffb6d5530ac3378f3f6f8cc943">mSecondHand</a></td></tr>
+<tr class="separator:a0777c9ffb6d5530ac3378f3f6f8cc943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9fb73d7b22a9017b6c8fdf73d63d85"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#afb9fb73d7b22a9017b6c8fdf73d63d85">mDial</a></td></tr>
+<tr class="separator:afb9fb73d7b22a9017b6c8fdf73d63d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06933c83b6a859bebb0757cc674515c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#af06933c83b6a859bebb0757cc674515c">mDialWidth</a></td></tr>
+<tr class="separator:af06933c83b6a859bebb0757cc674515c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8b50e673944fc1825c1fa530f81076"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a0d8b50e673944fc1825c1fa530f81076">mDialHeight</a></td></tr>
+<tr class="separator:a0d8b50e673944fc1825c1fa530f81076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38d8c4af4112b9b559be77a65a55195"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#ab38d8c4af4112b9b559be77a65a55195">mAttached</a></td></tr>
+<tr class="separator:ab38d8c4af4112b9b559be77a65a55195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c4a23676256067e9c8fd021fedee2f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a33c4a23676256067e9c8fd021fedee2f">mMinutes</a></td></tr>
+<tr class="separator:a33c4a23676256067e9c8fd021fedee2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8bdbcba95ad8fe436efa7559f0015a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a3b8bdbcba95ad8fe436efa7559f0015a">mHour</a></td></tr>
+<tr class="separator:a3b8bdbcba95ad8fe436efa7559f0015a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc108e7e69ef479a86f243e496a9600b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#acc108e7e69ef479a86f243e496a9600b">mSecond</a></td></tr>
+<tr class="separator:acc108e7e69ef479a86f243e496a9600b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddd69d58bf65f004614ea491a88c689"><td class="memItemLeft" align="right" valign="top">final Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#acddd69d58bf65f004614ea491a88c689">mHandler</a> = new Handler()</td></tr>
+<tr class="separator:acddd69d58bf65f004614ea491a88c689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a40ef8eaf03740c421422b34a55825a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a7a40ef8eaf03740c421422b34a55825a">mChanged</a></td></tr>
+<tr class="separator:a7a40ef8eaf03740c421422b34a55825a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005a37e0f11cceeaef27fc4fec3283e6"><td class="memItemLeft" align="right" valign="top">final BroadcastReceiver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#a005a37e0f11cceeaef27fc4fec3283e6">mIntentReceiver</a></td></tr>
+<tr class="separator:a005a37e0f11cceeaef27fc4fec3283e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbAnalogClock.java 描述：自定义模拟时钟</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-6 上午9:13:49 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a7a7ff31bc0784440b9cbb3cd3ac1cfd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.app.AbAnalogClock.AbAnalogClock </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>dial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>hourHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>minuteHand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>secondHand</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab analog clock.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">dial</td><td>the dial </td></tr>
+    <tr><td class="paramname">hourHand</td><td>the hour hand </td></tr>
+    <tr><td class="paramname">minuteHand</td><td>the minute hand </td></tr>
+    <tr><td class="paramname">secondHand</td><td>the second hand </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ae082bc1c37ceb256a6453c1677638dd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.onAttachedToWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9750a2fd7aefa00358e8ede9ef84494a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.onDetachedFromWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9e3420553cefadd5a8e1be75eb7a4a8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.onDraw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12f461fd2b3a9cbb3dd495d8390e7709"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthMeasureSpec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightMeasureSpec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a21097c8e3425130f0d36519f3a907dc8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.onSizeChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>oldw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>oldh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a74190e8dd84d09f68a3d80307a936e5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.onTimeChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>On time changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a862206dce18b6535806a0cc9059a62c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.app.AbAnalogClock.updateContentDescription </td>
+          <td>(</td>
+          <td class="paramtype">Time&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update content description.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>the time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ab38d8c4af4112b9b559be77a65a55195"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.app.AbAnalogClock.mAttached</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m attached. </p>
+
+</div>
+</div>
+<a class="anchor" id="accc3d55153d24516ddfe0808596c2fbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Time com.ab.view.app.AbAnalogClock.mCalendar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m calendar. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7a40ef8eaf03740c421422b34a55825a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.app.AbAnalogClock.mChanged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="afb9fb73d7b22a9017b6c8fdf73d63d85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbAnalogClock.mDial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m dial. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d8b50e673944fc1825c1fa530f81076"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.app.AbAnalogClock.mDialHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m dial height. </p>
+
+</div>
+</div>
+<a class="anchor" id="af06933c83b6a859bebb0757cc674515c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.app.AbAnalogClock.mDialWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m dial width. </p>
+
+</div>
+</div>
+<a class="anchor" id="acddd69d58bf65f004614ea491a88c689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Handler com.ab.view.app.AbAnalogClock.mHandler = new Handler()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m handler. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3b8bdbcba95ad8fe436efa7559f0015a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.app.AbAnalogClock.mHour</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m hour. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa73ccc826a84525d9a4af4cf2edc0cc7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbAnalogClock.mHourHand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m hour hand. </p>
+
+</div>
+</div>
+<a class="anchor" id="a005a37e0f11cceeaef27fc4fec3283e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final BroadcastReceiver com.ab.view.app.AbAnalogClock.mIntentReceiver</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> BroadcastReceiver() {</div>
+<div class="line">        @Override</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> onReceive(Context context, Intent intent) {</div>
+<div class="line">            <span class="keywordflow">if</span> (intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED)) {</div>
+<div class="line">                String tz = intent.getStringExtra(<span class="stringliteral">&quot;time-zone&quot;</span>);</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1app_1_1_ab_analog_clock.html#accc3d55153d24516ddfe0808596c2fbf">mCalendar</a> = <span class="keyword">new</span> Time(TimeZone.getTimeZone(tz).getID());</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>The m intent receiver. </p>
+
+</div>
+</div>
+<a class="anchor" id="a55bcac30ed1964684c7d0cad97a6014f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbAnalogClock.mMinuteHand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m minute hand. </p>
+
+</div>
+</div>
+<a class="anchor" id="a33c4a23676256067e9c8fd021fedee2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.app.AbAnalogClock.mMinutes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m minutes. </p>
+
+</div>
+</div>
+<a class="anchor" id="acc108e7e69ef479a86f243e496a9600b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.app.AbAnalogClock.mSecond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m second. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0777c9ffb6d5530ac3378f3f6f8cc943"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.app.AbAnalogClock.mSecondHand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m second hand. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/app/<a class="el" href="_ab_analog_clock_8java.html">AbAnalogClock.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

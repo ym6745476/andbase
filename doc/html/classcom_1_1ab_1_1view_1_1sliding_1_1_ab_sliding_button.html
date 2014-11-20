@@ -1,0 +1,1461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.sliding.AbSlidingButton类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1sliding.html">sliding</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html">AbSlidingButton</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.sliding.AbSlidingButton类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.sliding.AbSlidingButton 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.png" usemap="#com.ab.view.sliding.AbSlidingButton_map" alt=""/>
+  <map id="com.ab.view.sliding.AbSlidingButton_map" name="com.ab.view.sliding.AbSlidingButton_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6028ea555f67e84be35c3a0ef93cbac0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a6028ea555f67e84be35c3a0ef93cbac0">AbSlidingButton</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2cc74b37301009d3db57d07c5e19a602">context</a>)</td></tr>
+<tr class="separator:a6028ea555f67e84be35c3a0ef93cbac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b43832a3dfd4be863c055abd7ce1b94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a5b43832a3dfd4be863c055abd7ce1b94">AbSlidingButton</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2cc74b37301009d3db57d07c5e19a602">context</a>, AttributeSet attrs)</td></tr>
+<tr class="separator:a5b43832a3dfd4be863c055abd7ce1b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab589bb14db0d96567dc37c16437f0d3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ab589bb14db0d96567dc37c16437f0d3b">setImageResource</a> (int btnBottomResource, int btnFrameResource, int btnMaskResource, int btnNormalResource, int btnPressedResource)</td></tr>
+<tr class="separator:ab589bb14db0d96567dc37c16437f0d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0c4a764cf622132fd92959722077bd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a0a0c4a764cf622132fd92959722077bd">isChecked</a> ()</td></tr>
+<tr class="separator:a0a0c4a764cf622132fd92959722077bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addedfcbca793c104bb4f1b44796b2e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#addedfcbca793c104bb4f1b44796b2e47">setChecked</a> (boolean checked)</td></tr>
+<tr class="separator:addedfcbca793c104bb4f1b44796b2e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38b68ceaae732cad7802ffe7891d3d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ab38b68ceaae732cad7802ffe7891d3d7">setChecked</a> (boolean checked, boolean anim)</td></tr>
+<tr class="separator:ab38b68ceaae732cad7802ffe7891d3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8613aa56adb6b6fcacefd7f5d637f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a4a8613aa56adb6b6fcacefd7f5d637f8">setOnCheckedChangeListener</a> (OnCheckedChangeListener listener)</td></tr>
+<tr class="separator:a4a8613aa56adb6b6fcacefd7f5d637f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5d83c77497157761edb29efaa7e74d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#aad5d83c77497157761edb29efaa7e74d">onTouchEvent</a> (MotionEvent event)</td></tr>
+<tr class="separator:aad5d83c77497157761edb29efaa7e74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e34b05d92847d12303179904993dc11"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a1e34b05d92847d12303179904993dc11">performClick</a> ()</td></tr>
+<tr class="separator:a1e34b05d92847d12303179904993dc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1a251abd0da85f0657ab35909456c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#aaa1a251abd0da85f0657ab35909456c8">toggle</a> ()</td></tr>
+<tr class="separator:aaa1a251abd0da85f0657ab35909456c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:aaa4985b693ff26caba2ad6cbbee3a83f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#aaa4985b693ff26caba2ad6cbbee3a83f">onDraw</a> (Canvas canvas)</td></tr>
+<tr class="separator:aaa4985b693ff26caba2ad6cbbee3a83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7585742faa87238ac59888ead522bc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ab7585742faa87238ac59888ead522bc9">onMeasure</a> (int paramInt1, int paramInt2)</td></tr>
+<tr class="separator:ab7585742faa87238ac59888ead522bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a2c946b7e7f8e66502ccf3f62eccc30dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2c946b7e7f8e66502ccf3f62eccc30dd">init</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2cc74b37301009d3db57d07c5e19a602">context</a>)</td></tr>
+<tr class="separator:a2c946b7e7f8e66502ccf3f62eccc30dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a963f228775125341b753eef348602a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2a963f228775125341b753eef348602a">getRealPos</a> (float paramFloat)</td></tr>
+<tr class="separator:a2a963f228775125341b753eef348602a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d9aa006edc580ec49707b151b899dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a96d9aa006edc580ec49707b151b899dc">moveView</a> (float pos)</td></tr>
+<tr class="separator:a96d9aa006edc580ec49707b151b899dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad798d2bbc1faf834bb6af4c909fe1980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ad798d2bbc1faf834bb6af4c909fe1980">moveView</a> (final float pos, boolean delay)</td></tr>
+<tr class="separator:ad798d2bbc1faf834bb6af4c909fe1980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9999a13d185a896f9a2e75ffbf8dd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#aae9999a13d185a896f9a2e75ffbf8dd6">startAnimation</a> ()</td></tr>
+<tr class="separator:aae9999a13d185a896f9a2e75ffbf8dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12147cb7a073d8613c026532fc3da02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ac12147cb7a073d8613c026532fc3da02">moveViewToTarget</a> ()</td></tr>
+<tr class="separator:ac12147cb7a073d8613c026532fc3da02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2cc74b37301009d3db57d07c5e19a602"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2cc74b37301009d3db57d07c5e19a602">context</a></td></tr>
+<tr class="separator:a2cc74b37301009d3db57d07c5e19a602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89208e4b192c83b61d8e3eaf096639ca"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a89208e4b192c83b61d8e3eaf096639ca">btnFrame</a></td></tr>
+<tr class="separator:a89208e4b192c83b61d8e3eaf096639ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4018b8c4811536ef47a51785ddcd5989"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a4018b8c4811536ef47a51785ddcd5989">btnMask</a></td></tr>
+<tr class="separator:a4018b8c4811536ef47a51785ddcd5989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8535fc82a87e103f28c7a28ca3ac739b"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a8535fc82a87e103f28c7a28ca3ac739b">btnBottom</a></td></tr>
+<tr class="separator:a8535fc82a87e103f28c7a28ca3ac739b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129fd42ad3a806a48012d1c8d53dbe74"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a129fd42ad3a806a48012d1c8d53dbe74">mBtnNormal</a></td></tr>
+<tr class="separator:a129fd42ad3a806a48012d1c8d53dbe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac78d184f68007259287fc617dfe50fd1"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ac78d184f68007259287fc617dfe50fd1">mBtnPressed</a></td></tr>
+<tr class="separator:ac78d184f68007259287fc617dfe50fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9aa183f59facb4618b11ff6beb59ee4"><td class="memItemLeft" align="right" valign="top">OnCheckedChangeListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ac9aa183f59facb4618b11ff6beb59ee4">onCheckedChangeListener</a></td></tr>
+<tr class="separator:ac9aa183f59facb4618b11ff6beb59ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e286354f95b5a2a40dd7f7b59c3c0ed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a8e286354f95b5a2a40dd7f7b59c3c0ed">isChecked</a></td></tr>
+<tr class="separator:a8e286354f95b5a2a40dd7f7b59c3c0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe1068a5011e892ec1640781caf2218"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a4fe1068a5011e892ec1640781caf2218">mMaskHeight</a></td></tr>
+<tr class="separator:a4fe1068a5011e892ec1640781caf2218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e1776ebb228d8f1892f9e423d6d663"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ad7e1776ebb228d8f1892f9e423d6d663">mMaskWidth</a></td></tr>
+<tr class="separator:ad7e1776ebb228d8f1892f9e423d6d663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600ca864a7a1ef17baa58c3703ba01a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a600ca864a7a1ef17baa58c3703ba01a6">mBtnOffPos</a></td></tr>
+<tr class="separator:a600ca864a7a1ef17baa58c3703ba01a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b29e1d95c7cc1c84dd814e81b173140"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a7b29e1d95c7cc1c84dd814e81b173140">mBtnOnPos</a></td></tr>
+<tr class="separator:a7b29e1d95c7cc1c84dd814e81b173140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca85c92b877731d65cea6bcc95d1a98"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#aeca85c92b877731d65cea6bcc95d1a98">mBtnPos</a></td></tr>
+<tr class="separator:aeca85c92b877731d65cea6bcc95d1a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e37b4fba4d4766210fda595bbb4bdd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a99e37b4fba4d4766210fda595bbb4bdd">mLastBtnPos</a></td></tr>
+<tr class="separator:a99e37b4fba4d4766210fda595bbb4bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7721ca72e06a4e5ee07dd36f986e89"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a8c7721ca72e06a4e5ee07dd36f986e89">mRealPos</a></td></tr>
+<tr class="separator:a8c7721ca72e06a4e5ee07dd36f986e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189137077c070585874ba1bd599019d6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a189137077c070585874ba1bd599019d6">mBtnWidth</a></td></tr>
+<tr class="separator:a189137077c070585874ba1bd599019d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c161dcca72a8a5a0e8890c1e8a29652"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a7c161dcca72a8a5a0e8890c1e8a29652">mExtendOffsetY</a></td></tr>
+<tr class="separator:a7c161dcca72a8a5a0e8890c1e8a29652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5562a18b3a338556b5881098fd2621b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#af5562a18b3a338556b5881098fd2621b">mAlpha</a></td></tr>
+<tr class="separator:af5562a18b3a338556b5881098fd2621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2913a0448de98d5c6d4d99a6573085"><td class="memItemLeft" align="right" valign="top">Paint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a4e2913a0448de98d5c6d4d99a6573085">mPaint</a></td></tr>
+<tr class="separator:a4e2913a0448de98d5c6d4d99a6573085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871fabe2548fd3a5b9c13e5e20c1aa94"><td class="memItemLeft" align="right" valign="top">PorterDuffXfermode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a871fabe2548fd3a5b9c13e5e20c1aa94">mXfermode</a></td></tr>
+<tr class="separator:a871fabe2548fd3a5b9c13e5e20c1aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b1623f85228339d0fcc3877c59ee551"><td class="memItemLeft" align="right" valign="top">RectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a4b1623f85228339d0fcc3877c59ee551">mSaveLayerRectF</a></td></tr>
+<tr class="separator:a4b1623f85228339d0fcc3877c59ee551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05b23474499f624bbac97d856c944ad"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ae05b23474499f624bbac97d856c944ad">mCurBtnPic</a></td></tr>
+<tr class="separator:ae05b23474499f624bbac97d856c944ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff750d97666c2414e55f43a1d8e4823"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#aeff750d97666c2414e55f43a1d8e4823">mFirstDownX</a></td></tr>
+<tr class="separator:aeff750d97666c2414e55f43a1d8e4823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd721d902d79fbe4889c031d9d714554"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#afd721d902d79fbe4889c031d9d714554">mMoveEvent</a></td></tr>
+<tr class="separator:afd721d902d79fbe4889c031d9d714554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9590a99ae8915b0ee0df464cee28b74d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a9590a99ae8915b0ee0df464cee28b74d">mAnimating</a></td></tr>
+<tr class="separator:a9590a99ae8915b0ee0df464cee28b74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01bebcbfd9e33bd0a261cadfc250e323"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a01bebcbfd9e33bd0a261cadfc250e323">mAnimationPosition</a></td></tr>
+<tr class="separator:a01bebcbfd9e33bd0a261cadfc250e323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1a18f26578b57297ee4ba6d02d8b09"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#afd1a18f26578b57297ee4ba6d02d8b09">mAnimatedVelocity</a></td></tr>
+<tr class="separator:afd1a18f26578b57297ee4ba6d02d8b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada24a22471468fdb58e1d335cd78ea3e"><td class="memItemLeft" align="right" valign="top">Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#ada24a22471468fdb58e1d335cd78ea3e">handler</a></td></tr>
+<tr class="separator:ada24a22471468fdb58e1d335cd78ea3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbSlidingButton.java 描述：滑动按钮</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-14 上午11:31:21 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a6028ea555f67e84be35c3a0ef93cbac0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sliding.AbSlidingButton.AbSlidingButton </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab sliding button.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b43832a3dfd4be863c055abd7ce1b94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.sliding.AbSlidingButton.AbSlidingButton </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab sliding button.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a2a963f228775125341b753eef348602a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.getRealPos </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>paramFloat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the real pos.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramFloat</td><td>the param float </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the real pos </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c946b7e7f8e66502ccf3f62eccc30dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.init </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inits the.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a0c4a764cf622132fd92959722077bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingButton.isChecked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获得当前.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>true, if is checked </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.widget.CompoundButton::isChecked() </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-29 下午3:54:47 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96d9aa006edc580ec49707b151b899dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.moveView </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：滑块移动.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the pos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-12-5 上午11:46:56 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad798d2bbc1faf834bb6af4c909fe1980"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.moveView </td>
+          <td>(</td>
+          <td class="paramtype">final float&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：滑块移动.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the pos </td></tr>
+    <tr><td class="paramname">delay</td><td>the delay </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-12-5 上午11:46:56 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac12147cb7a073d8613c026532fc3da02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.moveViewToTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：直接移动到位置.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-12-9 上午9:20:38 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa4985b693ff26caba2ad6cbbee3a83f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.onDraw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab7585742faa87238ac59888ead522bc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>paramInt1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>paramInt2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：测量View的宽高.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramInt1</td><td>the param int1 </td></tr>
+    <tr><td class="paramname">paramInt2</td><td>the param int2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::onMeasure(int, int) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aad5d83c77497157761edb29efaa7e74d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingButton.onTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：滑动事件.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.widget.TextView::onTouchEvent(android.view.MotionEvent) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-12-5 上午11:22:12 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1e34b05d92847d12303179904993dc11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingButton.performClick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="addedfcbca793c104bb4f1b44796b2e47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.setChecked </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>checked</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置选中.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checked</td><td>the new checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.widget.CompoundButton::setChecked(boolean) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-29 下午3:54:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab38b68ceaae732cad7802ffe7891d3d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.setChecked </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>checked</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>anim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置选中.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checked</td><td>the checked </td></tr>
+    <tr><td class="paramname">anim</td><td>the anim </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.widget.CompoundButton::setChecked(boolean) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-29 下午3:54:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab589bb14db0d96567dc37c16437f0d3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.setImageResource </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>btnBottomResource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>btnFrameResource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>btnMaskResource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>btnNormalResource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>btnPressedResource</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置图片资源.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">btnBottomResource</td><td>the btn bottom resource </td></tr>
+    <tr><td class="paramname">btnFrameResource</td><td>the btn frame resource </td></tr>
+    <tr><td class="paramname">btnMaskResource</td><td>the btn mask resource </td></tr>
+    <tr><td class="paramname">btnNormalResource</td><td>the btn normal resource </td></tr>
+    <tr><td class="paramname">btnPressedResource</td><td>the btn pressed resource </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-29 下午3:26:42 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a8613aa56adb6b6fcacefd7f5d637f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.setOnCheckedChangeListener </td>
+          <td>(</td>
+          <td class="paramtype">OnCheckedChangeListener&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置监听器.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>the new on checked change listener </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.widget.CompoundButton::setOnCheckedChangeListener(android.widget.CompoundButton.OnCheckedChangeListener) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-29 下午3:54:20 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae9999a13d185a896f9a2e75ffbf8dd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.startAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：用位移加速度实现动画.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-12-9 上午9:47:59 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa1a251abd0da85f0657ab35909456c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.sliding.AbSlidingButton.toggle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a8535fc82a87e103f28c7a28ca3ac739b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.sliding.AbSlidingButton.btnBottom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The btn bottom. </p>
+
+</div>
+</div>
+<a class="anchor" id="a89208e4b192c83b61d8e3eaf096639ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.sliding.AbSlidingButton.btnFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The btn frame. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4018b8c4811536ef47a51785ddcd5989"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.sliding.AbSlidingButton.btnMask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The btn mask. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2cc74b37301009d3db57d07c5e19a602"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.view.sliding.AbSlidingButton.context</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The context. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada24a22471468fdb58e1d335cd78ea3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Handler com.ab.view.sliding.AbSlidingButton.handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Handler() {</div>
+<div class="line"></div>
+<div class="line">        @Override</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> handleMessage(Message msg) {</div>
+<div class="line">            <span class="keywordflow">switch</span> (msg.what) {</div>
+<div class="line">                <span class="keywordflow">case</span> 0:</div>
+<div class="line">                    <a class="code" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a8c7721ca72e06a4e5ee07dd36f986e89">mRealPos</a> = <a class="code" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a2a963f228775125341b753eef348602a">getRealPos</a>((Float)msg.obj);</div>
+<div class="line">                    <a class="code" href="classcom_1_1ab_1_1view_1_1sliding_1_1_ab_sliding_button.html#a99e37b4fba4d4766210fda595bbb4bdd">mLastBtnPos</a> = (Float)msg.obj;</div>
+<div class="line">                    invalidate();</div>
+<div class="line">                    <span class="keywordflow">break</span>;</div>
+<div class="line">                <span class="keywordflow">default</span>:</div>
+<div class="line">                    <span class="keywordflow">break</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>The handler. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8e286354f95b5a2a40dd7f7b59c3c0ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingButton.isChecked</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The is checked. </p>
+
+</div>
+</div>
+<a class="anchor" id="af5562a18b3a338556b5881098fd2621b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.sliding.AbSlidingButton.mAlpha</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m alpha. </p>
+
+</div>
+</div>
+<a class="anchor" id="afd1a18f26578b57297ee4ba6d02d8b09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mAnimatedVelocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m animated velocity. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9590a99ae8915b0ee0df464cee28b74d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingButton.mAnimating</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m animating. </p>
+
+</div>
+</div>
+<a class="anchor" id="a01bebcbfd9e33bd0a261cadfc250e323"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mAnimationPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m animation position. </p>
+
+</div>
+</div>
+<a class="anchor" id="a129fd42ad3a806a48012d1c8d53dbe74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.sliding.AbSlidingButton.mBtnNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m btn normal. </p>
+
+</div>
+</div>
+<a class="anchor" id="a600ca864a7a1ef17baa58c3703ba01a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mBtnOffPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m btn off pos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7b29e1d95c7cc1c84dd814e81b173140"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mBtnOnPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m btn on pos. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeca85c92b877731d65cea6bcc95d1a98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mBtnPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m btn pos. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac78d184f68007259287fc617dfe50fd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.sliding.AbSlidingButton.mBtnPressed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m btn pressed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a189137077c070585874ba1bd599019d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mBtnWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m btn width. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae05b23474499f624bbac97d856c944ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.sliding.AbSlidingButton.mCurBtnPic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m cur btn pic. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c161dcca72a8a5a0e8890c1e8a29652"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mExtendOffsetY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m extend offset y. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeff750d97666c2414e55f43a1d8e4823"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mFirstDownX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m first down x. </p>
+
+</div>
+</div>
+<a class="anchor" id="a99e37b4fba4d4766210fda595bbb4bdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mLastBtnPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m last btn pos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4fe1068a5011e892ec1640781caf2218"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mMaskHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m mask height. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7e1776ebb228d8f1892f9e423d6d663"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mMaskWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m mask width. </p>
+
+</div>
+</div>
+<a class="anchor" id="afd721d902d79fbe4889c031d9d714554"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.sliding.AbSlidingButton.mMoveEvent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m move event. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4e2913a0448de98d5c6d4d99a6573085"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Paint com.ab.view.sliding.AbSlidingButton.mPaint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m paint. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c7721ca72e06a4e5ee07dd36f986e89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.sliding.AbSlidingButton.mRealPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m real pos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4b1623f85228339d0fcc3877c59ee551"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RectF com.ab.view.sliding.AbSlidingButton.mSaveLayerRectF</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m save layer rect f. </p>
+
+</div>
+</div>
+<a class="anchor" id="a871fabe2548fd3a5b9c13e5e20c1aa94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PorterDuffXfermode com.ab.view.sliding.AbSlidingButton.mXfermode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m xfermode. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9aa183f59facb4618b11ff6beb59ee4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnCheckedChangeListener com.ab.view.sliding.AbSlidingButton.onCheckedChangeListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The on checked change listener. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/sliding/<a class="el" href="_ab_sliding_button_8java.html">AbSlidingButton.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

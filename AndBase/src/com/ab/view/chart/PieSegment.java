@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -99,11 +99,11 @@ public class PieSegment implements Serializable {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @return the string
    * @see java.lang.Object#toString()
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:50
-   * @version v1.0
    */
   public String toString() {
     return "mDataIndex=" + mDataIndex + ",mValue=" + mValue + ",mStartAngle=" + mStartAngle

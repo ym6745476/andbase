@@ -1,0 +1,1154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.AbstractChart类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html">AbstractChart</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.AbstractChart类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.AbstractChart 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.png" usemap="#com.ab.view.chart.AbstractChart_map" alt=""/>
+  <map id="com.ab.view.chart.AbstractChart_map" name="com.ab.view.chart.AbstractChart_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_round_chart.html" alt="com.ab.view.chart.RoundChart" shape="rect" coords="0,112,198,136"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_chart.html" alt="com.ab.view.chart.XYChart" shape="rect" coords="416,112,614,136"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html" alt="com.ab.view.chart.PieChart" shape="rect" coords="0,168,198,192"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_bar_chart.html" alt="com.ab.view.chart.BarChart" shape="rect" coords="208,168,406,192"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_line_chart.html" alt="com.ab.view.chart.LineChart" shape="rect" coords="416,168,614,192"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_scatter_chart.html" alt="com.ab.view.chart.ScatterChart" shape="rect" coords="624,168,822,192"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_area_chart.html" alt="com.ab.view.chart.AreaChart" shape="rect" coords="312,224,510,248"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_time_chart.html" alt="com.ab.view.chart.TimeChart" shape="rect" coords="520,224,718,248"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af054c3acb60596913f260b6e22ea366f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#af054c3acb60596913f260b6e22ea366f">draw</a> (Canvas canvas, int x, int y, int width, int height, Paint paint)</td></tr>
+<tr class="separator:af054c3acb60596913f260b6e22ea366f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16a9f8f70a8b73490163ccccd670d82"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#af16a9f8f70a8b73490163ccccd670d82">isVertical</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer)</td></tr>
+<tr class="separator:af16a9f8f70a8b73490163ccccd670d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac4718fecc2beedd6388d937c407f78"><td class="memItemLeft" align="right" valign="top">abstract int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a3ac4718fecc2beedd6388d937c407f78">getLegendShapeWidth</a> (int seriesIndex)</td></tr>
+<tr class="separator:a3ac4718fecc2beedd6388d937c407f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab374c9f60ac0ed37c8df5e6dbf02da7e"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ab374c9f60ac0ed37c8df5e6dbf02da7e">drawLegendShape</a> (Canvas canvas, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> renderer, float x, float y, int seriesIndex, Paint paint)</td></tr>
+<tr class="separator:ab374c9f60ac0ed37c8df5e6dbf02da7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a73887f5c98d7665e03fca80ae6d528"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a1a73887f5c98d7665e03fca80ae6d528">isNullValue</a> (double value)</td></tr>
+<tr class="separator:a1a73887f5c98d7665e03fca80ae6d528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee00e68d53c802a49f246b133118799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a7ee00e68d53c802a49f246b133118799">getSeriesAndPointForScreenCoordinate</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> screenPoint)</td></tr>
+<tr class="separator:a7ee00e68d53c802a49f246b133118799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a65b1ab1278cced23bbb9847984e10d8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a65b1ab1278cced23bbb9847984e10d8e">drawBackground</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, Canvas canvas, int x, int y, int width, int height, Paint paint, boolean newColor, int color)</td></tr>
+<tr class="separator:a65b1ab1278cced23bbb9847984e10d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af639f66e8f1c6d4bde627a5eb39c4a2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#af639f66e8f1c6d4bde627a5eb39c4a2f">drawLegend</a> (Canvas canvas, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, String[] titles, int left, int right, int y, int width, int height, int legendSize, Paint paint, boolean calculate)</td></tr>
+<tr class="separator:af639f66e8f1c6d4bde627a5eb39c4a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fd347a5fc04a918aa9e8947feff30f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ad4fd347a5fc04a918aa9e8947feff30f">drawString</a> (Canvas canvas, String text, float x, float y, Paint paint)</td></tr>
+<tr class="separator:ad4fd347a5fc04a918aa9e8947feff30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8753d03b9e985441d3a9aae3d05fc73"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ad8753d03b9e985441d3a9aae3d05fc73">getExceed</a> (float currentWidth, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, int right, int width)</td></tr>
+<tr class="separator:ad8753d03b9e985441d3a9aae3d05fc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b4ea39a213f82dcbdac68ac15d2cdb"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ad8b4ea39a213f82dcbdac68ac15d2cdb">getLabel</a> (double label)</td></tr>
+<tr class="separator:ad8b4ea39a213f82dcbdac68ac15d2cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e139450f9a4cbb467a3b9ed3a1a1ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ab3e139450f9a4cbb467a3b9ed3a1a1ad">drawPath</a> (Canvas canvas, float[] points, Paint paint, boolean circular)</td></tr>
+<tr class="separator:ab3e139450f9a4cbb467a3b9ed3a1a1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9264f7572afe231948e06fb7bb6f09b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a9264f7572afe231948e06fb7bb6f09b3">getLegendSize</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, int defaultHeight, float extraHeight)</td></tr>
+<tr class="separator:a9264f7572afe231948e06fb7bb6f09b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960e00103da9bf458aad6101e091009c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a960e00103da9bf458aad6101e091009c">drawLabel</a> (Canvas canvas, String labelText, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a> renderer, List&lt; RectF &gt; prevLabelsBounds, int centerX, int centerY, float shortRadius, float longRadius, float currentAngle, float angle, int left, int right, int color, Paint paint, boolean line)</td></tr>
+<tr class="separator:a960e00103da9bf458aad6101e091009c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ab68682bb905c68004cfa22eb79413992"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#ab68682bb905c68004cfa22eb79413992">getFitText</a> (String text, float width, Paint paint)</td></tr>
+<tr class="separator:ab68682bb905c68004cfa22eb79413992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a7846166a7bdf5e1c2915d921e76b365d"><td class="memItemLeft" align="right" valign="top">static float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_abstract_chart.html#a7846166a7bdf5e1c2915d921e76b365d">calculateDrawPoints</a> (float p1x, float p1y, float p2x, float p2y, int screenHeight, int screenWidth)</td></tr>
+<tr class="separator:a7846166a7bdf5e1c2915d921e76b365d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An abstract class to be implemented by the chart rendering classes. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7846166a7bdf5e1c2915d921e76b365d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [] com.ab.view.chart.AbstractChart.calculateDrawPoints </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p1x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p1y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p2x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p2y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screenHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>screenWidth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate draw points.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1x</td><td>the p1x </td></tr>
+    <tr><td class="paramname">p1y</td><td>the p1y </td></tr>
+    <tr><td class="paramname">p2x</td><td>the p2x </td></tr>
+    <tr><td class="paramname">p2y</td><td>the p2y </td></tr>
+    <tr><td class="paramname">screenHeight</td><td>the screen height </td></tr>
+    <tr><td class="paramname">screenWidth</td><td>the screen width </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the float[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af054c3acb60596913f260b6e22ea366f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.view.chart.AbstractChart.draw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The graphical representation of the chart.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">x</td><td>the top left x value of the view to draw to </td></tr>
+    <tr><td class="paramname">y</td><td>the top left y value of the view to draw to </td></tr>
+    <tr><td class="paramname">width</td><td>the width of the view to draw to </td></tr>
+    <tr><td class="paramname">height</td><td>the height of the view to draw to </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a65b1ab1278cced23bbb9847984e10d8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.AbstractChart.drawBackground </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>newColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws the chart background.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the chart renderer </td></tr>
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">x</td><td>the top left x value of the view to draw to </td></tr>
+    <tr><td class="paramname">y</td><td>the top left y value of the view to draw to </td></tr>
+    <tr><td class="paramname">width</td><td>the width of the view to draw to </td></tr>
+    <tr><td class="paramname">height</td><td>the height of the view to draw to </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint used for drawing </td></tr>
+    <tr><td class="paramname">newColor</td><td>if a new color is to be used </td></tr>
+    <tr><td class="paramname">color</td><td>the color to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a960e00103da9bf458aad6101e091009c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.AbstractChart.drawLabel </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>labelText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; RectF &gt;&#160;</td>
+          <td class="paramname"><em>prevLabelsBounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>centerX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>centerY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>shortRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>longRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>currentAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a text label.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas </td></tr>
+    <tr><td class="paramname">labelText</td><td>the label text </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer </td></tr>
+    <tr><td class="paramname">prevLabelsBounds</td><td>the previous rendered label bounds </td></tr>
+    <tr><td class="paramname">centerX</td><td>the round chart center on X axis </td></tr>
+    <tr><td class="paramname">centerY</td><td>the round chart center on Y axis </td></tr>
+    <tr><td class="paramname">shortRadius</td><td>the short radius for the round chart </td></tr>
+    <tr><td class="paramname">longRadius</td><td>the long radius for the round chart </td></tr>
+    <tr><td class="paramname">currentAngle</td><td>the current angle </td></tr>
+    <tr><td class="paramname">angle</td><td>the label extra angle </td></tr>
+    <tr><td class="paramname">left</td><td>the left side </td></tr>
+    <tr><td class="paramname">right</td><td>the right side </td></tr>
+    <tr><td class="paramname">color</td><td>the label color </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint </td></tr>
+    <tr><td class="paramname">line</td><td>if a line to the label should be drawn </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af639f66e8f1c6d4bde627a5eb39c4a2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.AbstractChart.drawLegend </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>titles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>legendSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>calculate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws the chart legend.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">renderer</td><td>the series renderer </td></tr>
+    <tr><td class="paramname">titles</td><td>the titles to go to the legend </td></tr>
+    <tr><td class="paramname">left</td><td>the left X value of the area to draw to </td></tr>
+    <tr><td class="paramname">right</td><td>the right X value of the area to draw to </td></tr>
+    <tr><td class="paramname">y</td><td>the y value of the area to draw to </td></tr>
+    <tr><td class="paramname">width</td><td>the width of the area to draw to </td></tr>
+    <tr><td class="paramname">height</td><td>the height of the area to draw to </td></tr>
+    <tr><td class="paramname">legendSize</td><td>the legend size </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint to be used for drawing </td></tr>
+    <tr><td class="paramname">calculate</td><td>if only calculating the legend size</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the legend height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab374c9f60ac0ed37c8df5e6dbf02da7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.view.chart.AbstractChart.drawLegendShape </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seriesIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The graphical representation of the legend shape.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">renderer</td><td>the series renderer </td></tr>
+    <tr><td class="paramname">x</td><td>the x value of the point the shape should be drawn at </td></tr>
+    <tr><td class="paramname">y</td><td>the y value of the point the shape should be drawn at </td></tr>
+    <tr><td class="paramname">seriesIndex</td><td>the series index </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint to be used for drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab3e139450f9a4cbb467a3b9ed3a1a1ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.AbstractChart.drawPath </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float[]&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>circular</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The graphical representation of a path.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">points</td><td>the points that are contained in the path to paint </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint to be used for painting </td></tr>
+    <tr><td class="paramname">circular</td><td>if the path ends with the start point </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4fd347a5fc04a918aa9e8947feff30f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.AbstractChart.drawString </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw a multiple lines string.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>the canvas to paint to </td></tr>
+    <tr><td class="paramname">text</td><td>the text to be painted </td></tr>
+    <tr><td class="paramname">x</td><td>the x value of the area to draw to </td></tr>
+    <tr><td class="paramname">y</td><td>the y value of the area to draw to </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint to be used for drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8753d03b9e985441d3a9aae3d05fc73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.AbstractChart.getExceed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>currentWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates if the current width exceeds the total width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentWidth</td><td>the current width </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer </td></tr>
+    <tr><td class="paramname">right</td><td>the right side pixel value </td></tr>
+    <tr><td class="paramname">width</td><td>the total width </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>if the current width exceeds the total width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab68682bb905c68004cfa22eb79413992"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.AbstractChart.getFitText </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Paint&#160;</td>
+          <td class="paramname"><em>paint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the best text to fit into the available space.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the entire text </td></tr>
+    <tr><td class="paramname">width</td><td>the width to fit the text into </td></tr>
+    <tr><td class="paramname">paint</td><td>the paint </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the text to fit into the space </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8b4ea39a213f82dcbdac68ac15d2cdb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.AbstractChart.getLabel </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Makes sure the fraction digit is not displayed, if not needed.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the input label value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the label without the useless fraction digit </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ac4718fecc2beedd6388d937c407f78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract int com.ab.view.chart.AbstractChart.getLegendShapeWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seriesIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the legend shape width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seriesIndex</td><td>the series index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the legend shape width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9264f7572afe231948e06fb7bb6f09b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.AbstractChart.getLegendSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defaultHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>extraHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the current legend size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer </td></tr>
+    <tr><td class="paramname">defaultHeight</td><td>the default height </td></tr>
+    <tr><td class="paramname">extraHeight</td><td>the added extra height </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the legend size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ee00e68d53c802a49f246b133118799"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a> com.ab.view.chart.AbstractChart.getSeriesAndPointForScreenCoordinate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Given screen coordinates, returns the series and point indexes of a chart element. If there is no chart element (line, point, bar, etc) at those coordinates, null is returned.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>the screen point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the series and point indexes </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a73887f5c98d7665e03fca80ae6d528"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.AbstractChart.isNullValue </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if is null value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if is null value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af16a9f8f70a8b73490163ccccd670d82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.AbstractChart.isVertical </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the current chart is rendered as vertical.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>if the chart is rendered as a vertical one </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_abstract_chart_8java.html">AbstractChart.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

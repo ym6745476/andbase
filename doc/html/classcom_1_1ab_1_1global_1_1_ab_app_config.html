@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.global.AbAppConfig类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1global.html">global</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html">AbAppConfig</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="classcom_1_1ab_1_1global_1_1_ab_app_config-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.global.AbAppConfig类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a6d90ce8158dd4f5dae91ad4ae8d954ba"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a6d90ce8158dd4f5dae91ad4ae8d954ba">UI_WIDTH</a> = 720</td></tr>
+<tr class="separator:a6d90ce8158dd4f5dae91ad4ae8d954ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb393675607c4e5d296113e2e3e3307"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a7fb393675607c4e5d296113e2e3e3307">UI_HEIGHT</a> = 1080</td></tr>
+<tr class="separator:a7fb393675607c4e5d296113e2e3e3307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b7dee10d111d67364b348c20627f6c"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#ae3b7dee10d111d67364b348c20627f6c">SHARED_PATH</a> = &quot;app_share&quot;</td></tr>
+<tr class="separator:ae3b7dee10d111d67364b348c20627f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74dfba2cafcb422851192f2e0efeffa"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#ab74dfba2cafcb422851192f2e0efeffa">DOWNLOAD_ROOT_DIR</a> = &quot;download&quot;</td></tr>
+<tr class="separator:ab74dfba2cafcb422851192f2e0efeffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c2fce4e05cfc6cbf49776a27be167d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a70c2fce4e05cfc6cbf49776a27be167d">DOWNLOAD_IMAGE_DIR</a> = &quot;images&quot;</td></tr>
+<tr class="separator:a70c2fce4e05cfc6cbf49776a27be167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4508607b4034f7de812a0903b294c1"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a6e4508607b4034f7de812a0903b294c1">DOWNLOAD_FILE_DIR</a> = &quot;files&quot;</td></tr>
+<tr class="separator:a6e4508607b4034f7de812a0903b294c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467d89b7d4baaad6fa8f60a6edf4dcca"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a467d89b7d4baaad6fa8f60a6edf4dcca">CACHE_DIR</a> = &quot;cache&quot;</td></tr>
+<tr class="separator:a467d89b7d4baaad6fa8f60a6edf4dcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f56c3ba505403153eaf295776c12b3"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a59f56c3ba505403153eaf295776c12b3">DB_DIR</a> = &quot;db&quot;</td></tr>
+<tr class="separator:a59f56c3ba505403153eaf295776c12b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c1b54e530ab6fcefee1acbaedc62c6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#ab7c1b54e530ab6fcefee1acbaedc62c6">MAX_CACHE_SIZE_INBYTES</a> = 10*1024*1024</td></tr>
+<tr class="separator:ab7c1b54e530ab6fcefee1acbaedc62c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e042bdb0747e4e092ead96d8dc9a5b8"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a1e042bdb0747e4e092ead96d8dc9a5b8">CONNECT_EXCEPTION</a> = &quot;无法连接到网络&quot;</td></tr>
+<tr class="separator:a1e042bdb0747e4e092ead96d8dc9a5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f98c8e4d27f56838c572741156877f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a62f98c8e4d27f56838c572741156877f">UNKNOWN_HOST_EXCEPTION</a> = &quot;连接远程地址失败&quot;</td></tr>
+<tr class="separator:a62f98c8e4d27f56838c572741156877f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5b4ae5c1936b0ea396b63d6548e89a"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a1b5b4ae5c1936b0ea396b63d6548e89a">SOCKET_EXCEPTION</a> = &quot;网络连接出错，请重试&quot;</td></tr>
+<tr class="separator:a1b5b4ae5c1936b0ea396b63d6548e89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf5ec31ff6aefc2642f476094e9deaa"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a2cf5ec31ff6aefc2642f476094e9deaa">SOCKET_TIMEOUT_EXCEPTION</a> = &quot;连接超时，请重试&quot;</td></tr>
+<tr class="separator:a2cf5ec31ff6aefc2642f476094e9deaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d4a1a253a1fd83f4db419b8fc089ae"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a54d4a1a253a1fd83f4db419b8fc089ae">NULL_POINTER_EXCEPTION</a> = &quot;抱歉，远程服务出错了&quot;</td></tr>
+<tr class="separator:a54d4a1a253a1fd83f4db419b8fc089ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b31a0bf0054c37e260551b42ed31452"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a3b31a0bf0054c37e260551b42ed31452">NULL_MESSAGE_EXCEPTION</a> = &quot;抱歉，程序出错了&quot;</td></tr>
+<tr class="separator:a3b31a0bf0054c37e260551b42ed31452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323ae5fdf32c9b7c838bd9c34c496dad"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a323ae5fdf32c9b7c838bd9c34c496dad">CLIENTP_ROTOCOL_EXCEPTION</a> = &quot;Http请求参数错误&quot;</td></tr>
+<tr class="separator:a323ae5fdf32c9b7c838bd9c34c496dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34141deedfa8eb2e2fab0b9d60ec80c9"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a34141deedfa8eb2e2fab0b9d60ec80c9">MISSING_PARAMETERS</a> = &quot;参数没有包含足够的值&quot;</td></tr>
+<tr class="separator:a34141deedfa8eb2e2fab0b9d60ec80c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b90f2e2a593a38999bd3b0bbcdd3c7"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#af6b90f2e2a593a38999bd3b0bbcdd3c7">REMOTE_SERVICE_EXCEPTION</a> = &quot;抱歉，远程服务出错了&quot;</td></tr>
+<tr class="separator:af6b90f2e2a593a38999bd3b0bbcdd3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3025f0faa503765246d7e8c28ad23c"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#aca3025f0faa503765246d7e8c28ad23c">NOT_FOUND_EXCEPTION</a> = &quot;页面未找到&quot;</td></tr>
+<tr class="separator:aca3025f0faa503765246d7e8c28ad23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b5324b7816d7555278ab8bb81dd96f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_config.html#a02b5324b7816d7555278ab8bb81dd96f">UNTREATED_EXCEPTION</a> = &quot;未处理的异常&quot;</td></tr>
+<tr class="separator:a02b5324b7816d7555278ab8bb81dd96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbAppConfig.java 描述：初始设置类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2014-07-03 下午1:33:39 </dd></dl>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a467d89b7d4baaad6fa8f60a6edf4dcca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.CACHE_DIR = &quot;cache&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>APP缓存目录. </p>
+
+</div>
+</div>
+<a class="anchor" id="a323ae5fdf32c9b7c838bd9c34c496dad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.CLIENTP_ROTOCOL_EXCEPTION = &quot;Http请求参数错误&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant CLIENTPROTOCOLEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1e042bdb0747e4e092ead96d8dc9a5b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.CONNECT_EXCEPTION = &quot;无法连接到网络&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant CONNECTEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a59f56c3ba505403153eaf295776c12b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.DB_DIR = &quot;db&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>DB目录. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6e4508607b4034f7de812a0903b294c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.DOWNLOAD_FILE_DIR = &quot;files&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认下载文件地址. </p>
+
+</div>
+</div>
+<a class="anchor" id="a70c2fce4e05cfc6cbf49776a27be167d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.DOWNLOAD_IMAGE_DIR = &quot;images&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认下载图片文件地址. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab74dfba2cafcb422851192f2e0efeffa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.DOWNLOAD_ROOT_DIR = &quot;download&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认下载文件地址. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab7c1b54e530ab6fcefee1acbaedc62c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.global.AbAppConfig.MAX_CACHE_SIZE_INBYTES = 10*1024*1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>缓存大小 单位10M. </p>
+
+</div>
+</div>
+<a class="anchor" id="a34141deedfa8eb2e2fab0b9d60ec80c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.MISSING_PARAMETERS = &quot;参数没有包含足够的值&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>参数个数不够. </p>
+
+</div>
+</div>
+<a class="anchor" id="aca3025f0faa503765246d7e8c28ad23c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.NOT_FOUND_EXCEPTION = &quot;页面未找到&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>页面未找到. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3b31a0bf0054c37e260551b42ed31452"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.NULL_MESSAGE_EXCEPTION = &quot;抱歉，程序出错了&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant NULLMESSAGEEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a54d4a1a253a1fd83f4db419b8fc089ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.NULL_POINTER_EXCEPTION = &quot;抱歉，远程服务出错了&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant NULLPOINTEREXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="af6b90f2e2a593a38999bd3b0bbcdd3c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.REMOTE_SERVICE_EXCEPTION = &quot;抱歉，远程服务出错了&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant REMOTESERVICEEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae3b7dee10d111d67364b348c20627f6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.SHARED_PATH = &quot;app_share&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认 SharePreferences文件名. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1b5b4ae5c1936b0ea396b63d6548e89a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.SOCKET_EXCEPTION = &quot;网络连接出错，请重试&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SOCKETEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2cf5ec31ff6aefc2642f476094e9deaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.SOCKET_TIMEOUT_EXCEPTION = &quot;连接超时，请重试&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SOCKETTIMEOUTEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7fb393675607c4e5d296113e2e3e3307"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.global.AbAppConfig.UI_HEIGHT = 1080</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UI设计的基准高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6d90ce8158dd4f5dae91ad4ae8d954ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.global.AbAppConfig.UI_WIDTH = 720</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UI设计的基准宽度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a62f98c8e4d27f56838c572741156877f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.UNKNOWN_HOST_EXCEPTION = &quot;连接远程地址失败&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant UNKNOWNHOSTEXCEPTION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a02b5324b7816d7555278ab8bb81dd96f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.global.AbAppConfig.UNTREATED_EXCEPTION = &quot;未处理的异常&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>其他异常. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/global/<a class="el" href="_ab_app_config_8java.html">AbAppConfig.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -155,14 +155,14 @@ public class TimeChart extends LineChart {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param min the min
    * @param max the max
    * @param count the count
    * @return the x labels
    * @see com.ab.view.chart.XYChart#getXLabels(double, double, int)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:48
-   * @version v1.0
    */
   protected List<Double> getXLabels(double min, double max, int count) {
     final List<Double> result = new ArrayList<Double>();

@@ -10,7 +10,7 @@
         android:layout_alignParentLeft="true"
         android:layout_gravity="center_vertical"
         android:layout_margin="5dip"
-        android:background="@drawable/image_bg" />
+        android:background="@drawable/default_pic" />
 
     <TextView
         android:id="@+id/itemsTitle"
@@ -19,8 +19,9 @@
         android:layout_gravity="center_vertical"
         android:layout_toRightOf="@+id/itemsIcon"
         android:paddingLeft="5dip"
+        android:paddingRight="5dip"
         android:paddingTop="3dip"
-        android:textColor="@color/gray_black"
+        android:textColor="@color/gray_dark"
         android:textSize="18dip" />
 
     <TextView
@@ -31,6 +32,7 @@
         android:layout_gravity="center_vertical"
         android:layout_toRightOf="@+id/itemsIcon"
         android:paddingLeft="5dip"
+        android:paddingRight="5dip"
         android:paddingTop="5dip"
         android:textColor="@color/gray"
         android:textSize="15dip" />

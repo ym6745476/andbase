@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,85 +15,70 @@
  */
 package com.ab.view.pullview;
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.view.Gravity;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.ListAdapter;
-import android.widget.ProgressBar;
-import android.widget.Scroller;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.ab.view.listener.AbOnListViewListener;
-import com.ab.view.pullview.AbMultiColumnBaseAbsListView.OnScrollListener;
+import android.content.Context;
+import android.database.DataSetObserver;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+
+import com.ab.util.AbLogUtil;
+
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class AbMultiColumnListView.
  */
-public class AbMultiColumnListView extends AbMultiColumnBaseListView implements OnScrollListener {
+public class AbMultiColumnListView extends ScrollView{
 
-	/** The m last y. */
-	private float mLastY = -1;
-	
-	/** The m scroller. */
-	private Scroller mScroller;
-	
-	/** The m scroll listener. */
-	private OnScrollListener mScrollListener;
+	/** 每一列的宽度. */
+	private int columnWidth;
 
-	/** The m list view listener. */
-	private AbOnListViewListener mListViewListener;
+	/** 当前第一列的高度. */
+	private int firstColumnHeight;
 
-	/** The m header view. */
-	private AbListViewHeader mHeaderView;
-	
-	/** The m header view height. */
-	private int mHeaderViewHeight; 
-	
-	/** The m footer view height. */
-	private int mFooterViewHeight; 
-	
-	/** The m enable pull refresh. */
-	private boolean mEnablePullRefresh = true;
-	
-	/** The m pull refreshing. */
-	private boolean mPullRefreshing = false;
+	/** 当前第二列的高度. */
+	private int secondColumnHeight;
 
-	// -- footer view
-	/** The m footer view. */
-	private AbListViewFooter mFooterView;
-	
-	/** The m enable pull load. */
-	private boolean mEnablePullLoad;
-	
-	/** The m pull loading. */
-	private boolean mPullLoading;
-	
-	/** The m is footer ready. */
-	private boolean mIsFooterReady = false;
+	/** 当前第三列的高度. */
+	private int thirdColumnHeight;
 
-	/** The m total item count. */
-	private int mTotalItemCount;
+	/** 是否已加载过一次layout，这里onLayout中的初始化只需加载一次. */
+	private boolean loadOnce;
+	
+	/**  布局的高度。. */
+	private static int scrollViewHeight;
 
-	/** The m scroll back. */
-	private int mScrollBack;
-	
-	/** The Constant SCROLLBACK_HEADER. */
-	private final static int SCROLLBACK_HEADER = 0;
-	
-	/** The Constant SCROLLBACK_FOOTER. */
-	private final static int SCROLLBACK_FOOTER = 1;
+	/** 第一列的布局. */
+	private LinearLayout firstColumn;
 
-	/** The Constant SCROLL_DURATION. */
-	private final static int SCROLL_DURATION = 200;
+	/** 第二列的布局. */
+	private LinearLayout secondColumn;
+
+	/** 第三列的布局. */
+	private LinearLayout thirdColumn;
+
+	/** 直接子布局. */
+	private LinearLayout scrollLayout;
+
+	/**  Adapter. */
+	private AbMultiColumnListAdapter mAdapter = null;
 	
-	/** The Constant OFFSET_RADIO. */
-	private final static float OFFSET_RADIO = 1.8f; 
-													
-	/**上一次的数量*/
-	private int count = 0;
+	/**  Adapter改变的监听器. */
+	private AdapterDataSetObserver mDataSetObserver;
+	
+	/**  已加载的View. */
+	private List<AbViewInfo> mItems = null;
+	
+	/**  已加载的View. */
+	private OnScrollListener mOnScrollListener = null;
+	
+	/**  可释放图片资源的id. */
+	private int[] mReleaseImageResIds;
 	
 	/**
 	 * Instantiates a new ab multi column list view.
@@ -101,10 +86,9 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 * @param context the context
 	 */
 	public AbMultiColumnListView(Context context) {
-		super(context);
-		initView(context);
+		this(context,null);
 	}
-
+	
 	/**
 	 * Instantiates a new ab multi column list view.
 	 *
@@ -112,311 +96,328 @@ public class AbMultiColumnListView extends AbMultiColumnBaseListView implements 
 	 * @param attrs the attrs
 	 */
 	public AbMultiColumnListView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		initView(context);
+		this(context, attrs,0);
 	}
-
+	
 	/**
-	 * Inits the with context.
+	 * Instantiates a new ab multi column list view.
 	 *
 	 * @param context the context
+	 * @param attrs the attrs
+	 * @param defStyle the def style
 	 */
-	private void initView(Context context) {
-		mScroller = new Scroller(context, new DecelerateInterpolator());
+	public AbMultiColumnListView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
 		
-		super.setOnScrollListener(this);
-
-		// init header view
-		mHeaderView = new AbListViewHeader(context);
-		
-		// init header height
-		mHeaderViewHeight = mHeaderView.getHeaderHeight();
-		mHeaderView.setGravity(Gravity.BOTTOM);
-		addHeaderView(mHeaderView);
-
-		// init footer view
-		mFooterView = new AbListViewFooter(context);
-		
-		mFooterViewHeight= mFooterView.getFooterHeight();
-		
-		//先隐藏
-		mFooterView.hide();
+		scrollLayout = new LinearLayout(context);
+		scrollLayout.setOrientation(LinearLayout.HORIZONTAL);
+		firstColumn = new LinearLayout(context);
+		firstColumn.setOrientation(LinearLayout.VERTICAL);
+		secondColumn = new LinearLayout(context);
+		secondColumn.setOrientation(LinearLayout.VERTICAL);
+		thirdColumn = new LinearLayout(context);
+		thirdColumn.setOrientation(LinearLayout.VERTICAL);
+		scrollLayout.addView(firstColumn, new LinearLayout.LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+		scrollLayout.addView(secondColumn, new LinearLayout.LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+		scrollLayout.addView(thirdColumn, new LinearLayout.LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+		this.addView(scrollLayout, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+		mItems = new ArrayList<AbViewInfo>();
 	}
 
 	/**
-	 * 描述：TODO
-	 * @see com.ab.view.pullview.AbMultiColumnAbsListView#setAdapter(android.widget.ListAdapter)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
-	 */
-	@Override
-	public void setAdapter(ListAdapter adapter) {
-		// make sure XListViewFooter is the last footer view, and only add once.
-		if (mIsFooterReady == false) {
-			mIsFooterReady = true;
-			mFooterView.setGravity(Gravity.TOP);
-			addFooterView(mFooterView);
-		}
-		super.setAdapter(adapter);
-	}
-
-	/**
-	 * enable or disable pull down refresh feature.
+	 * Gets the adapter.
 	 *
-	 * @param enable the new pull refresh enable
+	 * @return the adapter
 	 */
-	public void setPullRefreshEnable(boolean enable) {
-		mEnablePullRefresh = enable;
-		if (!mEnablePullRefresh) {
-			mHeaderView.setVisibility(View.INVISIBLE);
-		} else {
-			mHeaderView.setVisibility(View.VISIBLE);
-		}
+	public AbMultiColumnListAdapter getAdapter() {
+		return mAdapter;
 	}
 
 	/**
-	 * enable or disable pull up load more feature.
+	 * Sets the adapter.
 	 *
-	 * @param enable the new pull load enable
+	 * @param adapter the new adapter
 	 */
-	public void setPullLoadEnable(boolean enable) {
-		mEnablePullLoad = enable;
-		if (!mEnablePullLoad) {
-			mFooterView.hide();
-			mFooterView.setOnClickListener(null);
-		} else {
-			mPullLoading = false;
-			mFooterView.show();
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-			mFooterView.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					startLoadMore();
-				}
-			});
+	public void setAdapter(AbMultiColumnListAdapter adapter) {
+		this.mAdapter = adapter;
+		
+		if (mAdapter != null && mDataSetObserver != null) {
+            mAdapter.unregisterDataSetObserver(mDataSetObserver);
+        }
+		
+		if (mAdapter != null) {
+            mDataSetObserver = new AdapterDataSetObserver();
+            mAdapter.registerDataSetObserver(mDataSetObserver);
 		}
-	}
-
-	/**
-	 * stop refresh, reset header view.
-	 */
-	public void stopRefresh() {
-		if (mPullRefreshing == true) {
-			mPullRefreshing = false;
-			resetHeaderHeight();
-		}
-		//判断有没有数据
-		if(mAdapter.getCount()>0){
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-		}else{
-			mFooterView.setState(AbListViewFooter.STATE_EMPTY);
-		}
+		
+		layoutChildren();
 	}
 	
 	/**
-	 * 开始加载更多.
-	 */
-	private void startLoadMore() {
-		mFooterView.show();
-		mPullLoading = true;
-		mFooterView.setState(AbListViewFooter.STATE_LOADING);
-		if (mListViewListener != null) {
-			//开始下载数据
-			mListViewListener.onLoadMore();
-		}
-	}
-
-	/**
-	 * 停止加载更多并重置footer的状态.
-	 */
-	public void stopLoadMore() {
-		mFooterView.hide();
-		mPullLoading = false;
-		int countNew = mAdapter.getCount();
-		//判断有没有更多数据了
-		if(countNew > count){
-			mFooterView.setState(AbListViewFooter.STATE_READY);
-		}else{
-			mFooterView.setState(AbListViewFooter.STATE_NO);
-		}
-	}
-
-	/**
-	 * Update header height.
+	 * 进行一些关键性的初始化操作，获取AbMultiColumnListView的高度，
+	 * 以及得到第一列的宽度值。并在这里开始加载第一页的图片。.
 	 *
-	 * @param delta the delta
-	 */
-	private void updateHeaderHeight(float delta) {
-		int newHeight = (int) delta + mHeaderView.getVisiableHeight();
-		mHeaderView.setVisiableHeight(newHeight);
-		if (mEnablePullRefresh && !mPullRefreshing) {
-			if (mHeaderView.getVisiableHeight() >= mHeaderViewHeight) {
-				mHeaderView.setState(AbListViewHeader.STATE_READY);
-			} else {
-				mHeaderView.setState(AbListViewHeader.STATE_NORMAL);
-			}
-		}
-		setSelection(0); 
-	}
-
-	/**
-	 * 根据状态设置Header的位置.
-	 */
-	private void resetHeaderHeight() {
-		//当前下拉到的高度
-		int height = mHeaderView.getVisiableHeight();
-		if (height < mHeaderViewHeight || !mPullRefreshing) {
-			//距离短  隐藏
-			mScrollBack = SCROLLBACK_HEADER;
-			mScroller.startScroll(0, height, 0, -1*height, SCROLL_DURATION);
-		}else if(height > mHeaderViewHeight || !mPullRefreshing){
-			//距离多的  弹回到mHeaderViewHeight
-			mScrollBack = SCROLLBACK_HEADER;
-			mScroller.startScroll(0, height, 0, -(height-mHeaderViewHeight), SCROLL_DURATION);
-		}
-		
-		invalidate();
-	}
-
-	/**
-	 * 描述：TODO
+	 * @param changed the changed
+	 * @param l the l
+	 * @param t the t
+	 * @param r the r
+	 * @param b the b
 	 */
 	@Override
-	public boolean onTouchEvent(MotionEvent ev) {
-		if (mLastY == -1) {
-			mLastY = ev.getRawY();
+	protected void onLayout(boolean changed, int l, int t, int r, int b) {
+		super.onLayout(changed, l, t, r, b);
+		//AbLogUtil.d(AbMultiColumnListView.class, "onLayout");
+		if (changed && !loadOnce) {
+			scrollViewHeight = getHeight();
+			scrollLayout = (LinearLayout)getChildAt(0);
+			columnWidth = firstColumn.getWidth();
+			loadOnce = true;
 		}
+		
+	}
+	
+    /**
+     * Layout children.
+     */
+    protected void layoutChildren() {
+    	AbLogUtil.d(AbMultiColumnListView.class, "layoutChildren");
+    	firstColumn.removeAllViews();
+		secondColumn.removeAllViews();
+		thirdColumn.removeAllViews();
+		mItems.clear();
+		firstColumnHeight = 0;
+        secondColumnHeight = 0;
+        thirdColumnHeight = 0;
+    	if(mAdapter != null){
+    		int mItemCount = mAdapter.getCount();
+    		for (int i = 0; i < mItemCount; i++) {
+    			AbViewInfo viewInfo = mAdapter.getView(i, null, null);
+    			viewInfo.setVisible(View.VISIBLE);
+    			findColumnToAdd(viewInfo);
+    			mItems.add(viewInfo);
+        	}
+    	}
+    }
+    
+    /**
+     * Adds the children.
+     */
+    protected void addChildren() {
+    	AbLogUtil.d(AbMultiColumnListView.class, "addChildren");
+    	if(mAdapter != null){
+    		int count = mAdapter.getCount();
+    		if(count > mItems.size()){
+    			for (int i = mItems.size(); i < count; i++) {
+        			AbViewInfo viewInfo = mAdapter.getView(i, null, null);
+        			viewInfo.setVisible(View.VISIBLE);
+        			findColumnToAdd(viewInfo);
+        			mItems.add(viewInfo);
+            	}
+    		}
+    	}
+    	
+    }
 
-		switch (ev.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			mLastY = ev.getRawY();
-			break;
-		case MotionEvent.ACTION_MOVE:
-			final float deltaY = ev.getRawY() - mLastY;
-			mLastY = ev.getRawY();
-			if (getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
-				updateHeaderHeight(deltaY / OFFSET_RADIO);
-			} else if (mEnablePullLoad && !mPullLoading && getLastVisiblePosition() == mTotalItemCount - 1 && deltaY < 0) {
-				startLoadMore();
+	
+	/**
+	 * 找到此时应该添加View的一列。原则就是对三列的高度进行判断，
+	 * 当前高度最小的一列就是应该添加的一列。.
+	 *
+	 * @param viewInfo the view info
+	 */
+	private void findColumnToAdd(AbViewInfo viewInfo) {
+		int width = viewInfo.getWidth();
+		int height = viewInfo.getHeight();
+		int scaledHeight = 0;
+		double ratio = width / (columnWidth * 1.0);
+	    scaledHeight = (int) (height / ratio);
+	    View view = viewInfo.getView();
+	    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+	    		columnWidth, scaledHeight);
+		
+		if (firstColumnHeight <= secondColumnHeight) {
+			if (firstColumnHeight <= thirdColumnHeight) {
+				viewInfo.setTop(firstColumnHeight);
+				firstColumnHeight += scaledHeight;
+				viewInfo.setBottom(firstColumnHeight);
+				firstColumn.addView(view,params);
+			}else{
+				viewInfo.setTop(thirdColumnHeight);
+				thirdColumnHeight += scaledHeight;
+				viewInfo.setBottom(thirdColumnHeight);
+				thirdColumn.addView(view,params);
 			}
-			break;
-		case MotionEvent.ACTION_UP:
-			mLastY = -1;
-			if (getFirstVisiblePosition() == 0) {
-				//需要刷新的条件
-				if (mEnablePullRefresh && mHeaderView.getVisiableHeight() >= mHeaderViewHeight) {
-					mPullRefreshing = true;
-					mHeaderView.setState(AbListViewHeader.STATE_REFRESHING);
-					if (mListViewListener != null) {
-						//刷新
-						mListViewListener.onRefresh();
+			
+		} else {
+			if (secondColumnHeight <= thirdColumnHeight) {
+				viewInfo.setTop(secondColumnHeight);
+				secondColumnHeight += scaledHeight;
+				viewInfo.setBottom(secondColumnHeight);
+				secondColumn.addView(view,params);
+			}else{
+				viewInfo.setTop(thirdColumnHeight);
+				thirdColumnHeight += scaledHeight;
+				viewInfo.setBottom(thirdColumnHeight);
+				thirdColumn.addView(view,params);
+			}
+			
+		}
+		
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.view.View#onScrollChanged(int, int, int, int)
+	 */
+	@Override
+    protected void onScrollChanged(int x, int y, int oldx, int oldy) {
+        super.onScrollChanged(x, y, oldx, oldy);
+        //将不可见区域的资源释放
+        AbViewInfo viewInfo = null;
+        for(int i=0;i<mItems.size();i++){
+        	viewInfo = mItems.get(i);
+        	if(!checkVisibility(i)){
+        		if(viewInfo.getVisible()==View.VISIBLE){
+        			viewInfo.setVisible(View.INVISIBLE);
+        			ImageView imageView = null;
+    				for(int id:mReleaseImageResIds){
+    				    imageView = (ImageView) viewInfo.getView().findViewById(id);
+    				    imageView.setImageBitmap(null);
+    				}
+        		}
+        		
+        	}else{
+        		try {
+					if(viewInfo.getVisible()==View.INVISIBLE){
+						//重新getView
+						viewInfo = mAdapter.getView(i, viewInfo, null);
+						viewInfo.setVisible(View.VISIBLE);
 					}
+				} catch (Exception e) {
 				}
-				//根据mPullRefreshing判断显示的header
-				resetHeaderHeight();
-			}
-			break;
-		default:
-			break;
-		}
-		return super.onTouchEvent(ev);
-	}
-
+        		
+        	}
+        	
+        }
+        
+        mOnScrollListener.onScrollChanged(x, y, oldx, oldy);
+    }
+	
 	/**
-	 * 描述：TODO
-	 * @see android.view.View#computeScroll()
-	 */
-	@Override
-	public void computeScroll() {
-		if (mScroller.computeScrollOffset()) {
-			if (mScrollBack == SCROLLBACK_HEADER) {
-				mHeaderView.setVisiableHeight(mScroller.getCurrY());
-			}
-			postInvalidate();
-		}
-		super.computeScroll();
-	}
-
-	/**
-	 * 描述：设置ListView的监听器.
+	 * 遍历List中的每个View，对可见性进行检查.
 	 *
-	 * @param abOnListViewListener the new ab on list view listener
+	 * @param position the position
+	 * @return true, if successful
 	 */
-	public void setAbOnListViewListener(AbOnListViewListener abOnListViewListener) {
-		mListViewListener = abOnListViewListener;
-	}
-
-
-	/**
-	 * 描述：TODO
-	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView.OnScrollListener#onScrollStateChanged(com.ab.view.pullview.AbMultiColumnBaseAbsListView, int)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
-	 */
-	@Override
-	public void onScrollStateChanged(AbMultiColumnBaseAbsListView view, int scrollState) {
-		if (mScrollListener != null) {
-			mScrollListener.onScrollStateChanged(view, scrollState);
+	public boolean checkVisibility(int position) {
+		AbViewInfo viewInfo = mItems.get(position);
+		int borderTop = viewInfo.getTop();
+		int borderBottom = viewInfo.getBottom();
+		if (borderBottom > getScrollY()
+				&& borderTop < getScrollY() + scrollViewHeight) {
+			return true;
+		} else {
+			return false;
 		}
 	}
+	
+	/**
+	 * An asynchronous update interface for receiving notifications
+	 * about AdapterDataSet information as the AdapterDataSet is constructed.
+	 */
+	class AdapterDataSetObserver extends DataSetObserver {
+
+		/* (non-Javadoc)
+		 * @see android.database.DataSetObserver#onChanged()
+		 */
+		@Override
+		public void onChanged() {
+			AbLogUtil.d(AbMultiColumnListView.class, "onChanged");
+			//判断是刷新还是添加
+    		int count = mAdapter.getCount();
+    		if(count > mItems.size()){
+    			//添加
+    			addChildren();
+    		}else{
+    			//刷新
+    			layoutChildren();
+    		}
+			
+			super.onChanged();
+		}
+
+		/* (non-Javadoc)
+		 * @see android.database.DataSetObserver#onInvalidated()
+		 */
+		@Override
+		public void onInvalidated() {
+			
+			super.onInvalidated();
+		}
+		
+   }
+	
+	
+	
+   
+   /**
+    * Gets the on scroll listener.
+    *
+    * @return the on scroll listener
+    */
+   public OnScrollListener getOnScrollListener() {
+		return mOnScrollListener;
+	}
 
 	/**
-	 * 描述：TODO
-	 * @see com.ab.view.pullview.AbMultiColumnBaseAbsListView.OnScrollListener#onScroll(com.ab.view.pullview.AbMultiColumnBaseAbsListView, int, int, int)
-	 * @author: zhaoqp
-	 * @date：2013-9-4 下午4:06:32
-	 * @version v1.0
+	 * Sets the on scroll listener.
+	 *
+	 * @param onScrollListener the new on scroll listener
 	 */
-	@Override
-	public void onScroll(AbMultiColumnBaseAbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-		// send to user's listener
-		mTotalItemCount = totalItemCount;
-		if (mScrollListener != null) {
-			mScrollListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
-		}	
+	public void setOnScrollListener(OnScrollListener onScrollListener) {
+		this.mOnScrollListener = onScrollListener;
 	}
 	
-	/**
-	 * 
-	 * 描述：获取Header View
-	 * @return
-	 * @throws 
-	 */
-	public AbListViewHeader getHeaderView() {
-		return mHeaderView;
+    /**
+     * Gets the release image res ids.
+     *
+     * @return the release image res ids
+     */
+    public int[] getReleaseImageResIds() {
+		return mReleaseImageResIds;
 	}
 
 	/**
-	 * 
-	 * 描述：获取Footer View
-	 * @return
-	 * @throws 
+	 * Sets the release image res ids.
+	 *
+	 * @param releaseImageResIds the new release image res ids
 	 */
-	public AbListViewFooter getFooterView() {
-		return mFooterView;
+	public void setReleaseImageResIds(int[] releaseImageResIds) {
+		this.mReleaseImageResIds = releaseImageResIds;
 	}
-	
-	/**
-	 * 
-	 * 描述：获取Header ProgressBar，用于设置自定义样式
-	 * @return
-	 * @throws 
-	 */
-	public ProgressBar getHeaderProgressBar() {
-		return mHeaderView.getHeaderProgressBar();
-	}
-	
-	
-	/**
-	 * 
-	 * 描述：获取Footer ProgressBar，用于设置自定义样式
-	 * @return
-	 * @throws 
-	 */
-	public ProgressBar getFooterProgressBar() {
-		return mFooterView.getFooterProgressBar();
-	}
-	
+
+/**
+    * The listener interface for receiving onScroll events.
+    * The class that is interested in processing a onScroll
+    * event implements this interface, and the object created
+    * with that class is registered with a component using the
+    * component's <code>addOnScrollListener<code> method. When
+    * the onScroll event occurs, that object's appropriate
+    * method is invoked.
+    *
+    * @see OnScrollEvent
+    */
+   public interface OnScrollListener {
+		 
+	    /**
+    	 * On scroll changed.
+    	 *
+    	 * @param x the x
+    	 * @param y the y
+    	 * @param oldx the oldx
+    	 * @param oldy the oldy
+    	 */
+    	void onScrollChanged(int x, int y, int oldx, int oldy);
+	 
+   }
+
 }

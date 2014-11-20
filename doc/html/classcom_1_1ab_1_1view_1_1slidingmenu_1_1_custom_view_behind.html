@@ -1,0 +1,2273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.slidingmenu.CustomViewBehind类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1slidingmenu.html">slidingmenu</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html">CustomViewBehind</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.slidingmenu.CustomViewBehind类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.slidingmenu.CustomViewBehind 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.png" usemap="#com.ab.view.slidingmenu.CustomViewBehind_map" alt=""/>
+  <map id="com.ab.view.slidingmenu.CustomViewBehind_map" name="com.ab.view.slidingmenu.CustomViewBehind_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a072332f0fded9489102391933155f9b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a072332f0fded9489102391933155f9b1">CustomViewBehind</a> (Context context)</td></tr>
+<tr class="separator:a072332f0fded9489102391933155f9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b23c23ed10ff0c538e1bb3eb1c54aa0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a4b23c23ed10ff0c538e1bb3eb1c54aa0">CustomViewBehind</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a4b23c23ed10ff0c538e1bb3eb1c54aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95433d30c998d9acb6b431bc107af73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ad95433d30c998d9acb6b431bc107af73">setCustomViewAbove</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_above.html">CustomViewAbove</a> customViewAbove)</td></tr>
+<tr class="separator:ad95433d30c998d9acb6b431bc107af73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10c7cdbd8a655e158ff2dc75c988d3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#aa10c7cdbd8a655e158ff2dc75c988d3d">setCanvasTransformer</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> t)</td></tr>
+<tr class="separator:aa10c7cdbd8a655e158ff2dc75c988d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1190487bf231c94b69c7c67887c88c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ad1190487bf231c94b69c7c67887c88c2">setWidthOffset</a> (int i)</td></tr>
+<tr class="separator:ad1190487bf231c94b69c7c67887c88c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c40410d21d539664bdd968b4e9f4bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a6c40410d21d539664bdd968b4e9f4bbe">setMarginThreshold</a> (int marginThreshold)</td></tr>
+<tr class="separator:a6c40410d21d539664bdd968b4e9f4bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee0e6cf690a3025130ab7d7bb8ad5f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#aeee0e6cf690a3025130ab7d7bb8ad5f4">getMarginThreshold</a> ()</td></tr>
+<tr class="separator:aeee0e6cf690a3025130ab7d7bb8ad5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a09f5a0d128b7d525bb8aeddbc14d85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a4a09f5a0d128b7d525bb8aeddbc14d85">getBehindWidth</a> ()</td></tr>
+<tr class="separator:a4a09f5a0d128b7d525bb8aeddbc14d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cdf36cd2f21a1e3217c92fb29361bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ac5cdf36cd2f21a1e3217c92fb29361bc">setContent</a> (View v)</td></tr>
+<tr class="separator:ac5cdf36cd2f21a1e3217c92fb29361bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0548b1611943dd306145f3cde8f544c2"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a0548b1611943dd306145f3cde8f544c2">getContent</a> ()</td></tr>
+<tr class="separator:a0548b1611943dd306145f3cde8f544c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a73142cc834d46de5b2cfed010dfa13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a8a73142cc834d46de5b2cfed010dfa13">setSecondaryContent</a> (View v)</td></tr>
+<tr class="separator:a8a73142cc834d46de5b2cfed010dfa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2523e03868260f4864dc6008bde5ef3"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ac2523e03868260f4864dc6008bde5ef3">getSecondaryContent</a> ()</td></tr>
+<tr class="separator:ac2523e03868260f4864dc6008bde5ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1252816baad97a59a7cbf3e51d79d872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a1252816baad97a59a7cbf3e51d79d872">setChildrenEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:a1252816baad97a59a7cbf3e51d79d872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a35dfb087cf260c3e85b560cfdcb3a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a9a35dfb087cf260c3e85b560cfdcb3a7">scrollTo</a> (int x, int y)</td></tr>
+<tr class="separator:a9a35dfb087cf260c3e85b560cfdcb3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0b676055a9ab548ec0de5709d62072"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#abb0b676055a9ab548ec0de5709d62072">onInterceptTouchEvent</a> (MotionEvent e)</td></tr>
+<tr class="separator:abb0b676055a9ab548ec0de5709d62072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776e2b61f94a1e6e4f553674b60132b8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a776e2b61f94a1e6e4f553674b60132b8">onTouchEvent</a> (MotionEvent e)</td></tr>
+<tr class="separator:a776e2b61f94a1e6e4f553674b60132b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab771a51dc47e0a930c6640ec32f85fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#aab771a51dc47e0a930c6640ec32f85fb">setMode</a> (int mode)</td></tr>
+<tr class="separator:aab771a51dc47e0a930c6640ec32f85fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b919e4e3769e0fb273da8307639526"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a45b919e4e3769e0fb273da8307639526">getMode</a> ()</td></tr>
+<tr class="separator:a45b919e4e3769e0fb273da8307639526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96569d6977d01f789698d728698eb118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a96569d6977d01f789698d728698eb118">setScrollScale</a> (float scrollScale)</td></tr>
+<tr class="separator:a96569d6977d01f789698d728698eb118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0b1bb7a0d836a4ef58bfbc4038916f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#afe0b1bb7a0d836a4ef58bfbc4038916f">getScrollScale</a> ()</td></tr>
+<tr class="separator:afe0b1bb7a0d836a4ef58bfbc4038916f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b29cc19fb6174cc2af008ec01c56f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a40b29cc19fb6174cc2af008ec01c56f6">setShadowDrawable</a> (Drawable shadow)</td></tr>
+<tr class="separator:a40b29cc19fb6174cc2af008ec01c56f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a94f6293aaeb8ae90b27e7f2f1a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a044a94f6293aaeb8ae90b27e7f2f1a6f">setSecondaryShadowDrawable</a> (Drawable shadow)</td></tr>
+<tr class="separator:a044a94f6293aaeb8ae90b27e7f2f1a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b72a09cb141825b314488044836c2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ab6b72a09cb141825b314488044836c2a">setShadowWidth</a> (int width)</td></tr>
+<tr class="separator:ab6b72a09cb141825b314488044836c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5aa4833d92a4cad6dc24ff2d88e6b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a4a5aa4833d92a4cad6dc24ff2d88e6b7">setFadeEnabled</a> (boolean b)</td></tr>
+<tr class="separator:a4a5aa4833d92a4cad6dc24ff2d88e6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2f48fbfd67efcddda41841b98445e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a1c2f48fbfd67efcddda41841b98445e5">setFadeDegree</a> (float degree)</td></tr>
+<tr class="separator:a1c2f48fbfd67efcddda41841b98445e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041a3de066feb4fd2817c322c37fb3f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a041a3de066feb4fd2817c322c37fb3f6">getMenuPage</a> (int page)</td></tr>
+<tr class="separator:a041a3de066feb4fd2817c322c37fb3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5397ee7ee8f13c95e0688713c0ad7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a2f5397ee7ee8f13c95e0688713c0ad7a">scrollBehindTo</a> (View content, int x, int y)</td></tr>
+<tr class="separator:a2f5397ee7ee8f13c95e0688713c0ad7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25697c305b2cdbbe05b5f5ccdb16d7cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a25697c305b2cdbbe05b5f5ccdb16d7cf">getMenuLeft</a> (View content, int page)</td></tr>
+<tr class="separator:a25697c305b2cdbbe05b5f5ccdb16d7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952396a1c88ec0243637610f55d4ecf9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a952396a1c88ec0243637610f55d4ecf9">getAbsLeftBound</a> (View content)</td></tr>
+<tr class="separator:a952396a1c88ec0243637610f55d4ecf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fff561d4c6d6e779c650915cd5278a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a23fff561d4c6d6e779c650915cd5278a">getAbsRightBound</a> (View content)</td></tr>
+<tr class="separator:a23fff561d4c6d6e779c650915cd5278a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e197945594311936a4e222ea0485354"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a9e197945594311936a4e222ea0485354">marginTouchAllowed</a> (View content, int x)</td></tr>
+<tr class="separator:a9e197945594311936a4e222ea0485354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb7bcc058572f8e84c6b7afec6069d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a5bb7bcc058572f8e84c6b7afec6069d4">setTouchMode</a> (int i)</td></tr>
+<tr class="separator:a5bb7bcc058572f8e84c6b7afec6069d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d736ef5cc697f15b9785fb031630ff"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a77d736ef5cc697f15b9785fb031630ff">menuOpenTouchAllowed</a> (View content, int currPage, float x)</td></tr>
+<tr class="separator:a77d736ef5cc697f15b9785fb031630ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c66a3517ea304193f580d316ebf0c91"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a0c66a3517ea304193f580d316ebf0c91">menuTouchInQuickReturn</a> (View content, int currPage, float x)</td></tr>
+<tr class="separator:a0c66a3517ea304193f580d316ebf0c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b7e800dafb667ae8da30796ca406cf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a49b7e800dafb667ae8da30796ca406cf">menuClosedSlideAllowed</a> (float dx)</td></tr>
+<tr class="separator:a49b7e800dafb667ae8da30796ca406cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab715e48dd35edf420932e882a91ffba3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ab715e48dd35edf420932e882a91ffba3">menuOpenSlideAllowed</a> (float dx)</td></tr>
+<tr class="separator:ab715e48dd35edf420932e882a91ffba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95025cf77b85d73c01c4ebf359dce67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ab95025cf77b85d73c01c4ebf359dce67">drawShadow</a> (View content, Canvas canvas)</td></tr>
+<tr class="separator:ab95025cf77b85d73c01c4ebf359dce67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4530dbd309674f4aa14a1ba0ad8a9602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a4530dbd309674f4aa14a1ba0ad8a9602">drawFade</a> (View content, Canvas canvas, float openPercent)</td></tr>
+<tr class="separator:a4530dbd309674f4aa14a1ba0ad8a9602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b22e68ea4ed00336cc5f36dccc1a5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ab4b22e68ea4ed00336cc5f36dccc1a5c">drawSelector</a> (View content, Canvas canvas, float openPercent)</td></tr>
+<tr class="separator:ab4b22e68ea4ed00336cc5f36dccc1a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfa1080df9b2211a8192bd95dfd666e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a0cfa1080df9b2211a8192bd95dfd666e">setSelectorEnabled</a> (boolean b)</td></tr>
+<tr class="separator:a0cfa1080df9b2211a8192bd95dfd666e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0b7fb4f4b4af779b05151cd9a74c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#aef0b7fb4f4b4af779b05151cd9a74c65">setSelectedView</a> (View v)</td></tr>
+<tr class="separator:aef0b7fb4f4b4af779b05151cd9a74c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f290a06f7813e533def1bdcd172cb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#af4f290a06f7813e533def1bdcd172cb5">setSelectorBitmap</a> (Bitmap b)</td></tr>
+<tr class="separator:af4f290a06f7813e533def1bdcd172cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a8d0530eb2c3d7f53647f3a7e3db0cddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a8d0530eb2c3d7f53647f3a7e3db0cddf">dispatchDraw</a> (Canvas canvas)</td></tr>
+<tr class="separator:a8d0530eb2c3d7f53647f3a7e3db0cddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3be055d2e7d6a7c8a4521e0dfb4c6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#abf3be055d2e7d6a7c8a4521e0dfb4c6a">onLayout</a> (boolean changed, int l, int t, int r, int b)</td></tr>
+<tr class="separator:abf3be055d2e7d6a7c8a4521e0dfb4c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcdaf514fd86b15484240ef945d4440"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a4fcdaf514fd86b15484240ef945d4440">onMeasure</a> (int widthMeasureSpec, int heightMeasureSpec)</td></tr>
+<tr class="separator:a4fcdaf514fd86b15484240ef945d4440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a9b37a37e06433544817fd1a40bc21445"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a9b37a37e06433544817fd1a40bc21445">getSelectorTop</a> ()</td></tr>
+<tr class="separator:a9b37a37e06433544817fd1a40bc21445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac4887a9e9db61cdf7961538caf8e8a8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ac4887a9e9db61cdf7961538caf8e8a8c">mTouchMode</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html#ab20b0cdabcd511ef5badd943cc663b1d">SlidingMenu.TOUCHMODE_MARGIN</a></td></tr>
+<tr class="separator:ac4887a9e9db61cdf7961538caf8e8a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51de54c4b014de7ab42ad66895c9570a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_above.html">CustomViewAbove</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a51de54c4b014de7ab42ad66895c9570a">mViewAbove</a></td></tr>
+<tr class="separator:a51de54c4b014de7ab42ad66895c9570a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49467b5b6a26ebd3ac74e84ed4598f9"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ad49467b5b6a26ebd3ac74e84ed4598f9">mContent</a></td></tr>
+<tr class="separator:ad49467b5b6a26ebd3ac74e84ed4598f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d050b764852adadc22b6f0c2914234b"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a7d050b764852adadc22b6f0c2914234b">mSecondaryContent</a></td></tr>
+<tr class="separator:a7d050b764852adadc22b6f0c2914234b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec88edd59e78490c1bbec36f5b343e27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#aec88edd59e78490c1bbec36f5b343e27">mMarginThreshold</a></td></tr>
+<tr class="separator:aec88edd59e78490c1bbec36f5b343e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5abfcad8c5422bcbe3f1ad87fbd4a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a2d5abfcad8c5422bcbe3f1ad87fbd4a9">mWidthOffset</a></td></tr>
+<tr class="separator:a2d5abfcad8c5422bcbe3f1ad87fbd4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d5a679d6bacfaba636f6fdcd269283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a35d5a679d6bacfaba636f6fdcd269283">mTransformer</a></td></tr>
+<tr class="separator:a35d5a679d6bacfaba636f6fdcd269283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f45eb9f45565d1cbb5bae22ffc4be1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ac9f45eb9f45565d1cbb5bae22ffc4be1">mChildrenEnabled</a></td></tr>
+<tr class="separator:ac9f45eb9f45565d1cbb5bae22ffc4be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b8f2e0709e5a465dd557f87bb2a617"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ad3b8f2e0709e5a465dd557f87bb2a617">selectedViewId</a> = 2012</td></tr>
+<tr class="separator:ad3b8f2e0709e5a465dd557f87bb2a617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbefc179658f53f250aafcbc882be1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a6dbefc179658f53f250aafcbc882be1a">mMode</a></td></tr>
+<tr class="separator:a6dbefc179658f53f250aafcbc882be1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed080ccf14fda972a1d5e5bbb9d82d5a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#aed080ccf14fda972a1d5e5bbb9d82d5a">mFadeEnabled</a></td></tr>
+<tr class="separator:aed080ccf14fda972a1d5e5bbb9d82d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc173b5813f486fb23b02eeec0566600"><td class="memItemLeft" align="right" valign="top">final Paint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#afc173b5813f486fb23b02eeec0566600">mFadePaint</a> = new Paint()</td></tr>
+<tr class="separator:afc173b5813f486fb23b02eeec0566600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2c24a2ece5e77f80ae075c2ea7ac7d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a3d2c24a2ece5e77f80ae075c2ea7ac7d">mScrollScale</a></td></tr>
+<tr class="separator:a3d2c24a2ece5e77f80ae075c2ea7ac7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1078ce5077d3538dd583354c558fcb25"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a1078ce5077d3538dd583354c558fcb25">mShadowDrawable</a></td></tr>
+<tr class="separator:a1078ce5077d3538dd583354c558fcb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9497cc01e715163cdadeb7b7055ce76"><td class="memItemLeft" align="right" valign="top">Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#ad9497cc01e715163cdadeb7b7055ce76">mSecondaryShadowDrawable</a></td></tr>
+<tr class="separator:ad9497cc01e715163cdadeb7b7055ce76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81acb7190f9d1bac65333b0befb6689"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#af81acb7190f9d1bac65333b0befb6689">mShadowWidth</a></td></tr>
+<tr class="separator:af81acb7190f9d1bac65333b0befb6689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cc9f30ee80620dc51c40755506f35b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a72cc9f30ee80620dc51c40755506f35b">mFadeDegree</a></td></tr>
+<tr class="separator:a72cc9f30ee80620dc51c40755506f35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09699f060d5abe11492dce4ca1cf8395"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a09699f060d5abe11492dce4ca1cf8395">mSelectorEnabled</a> = true</td></tr>
+<tr class="separator:a09699f060d5abe11492dce4ca1cf8395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c44a69b5d16f56e879b4d124ba0ead"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a08c44a69b5d16f56e879b4d124ba0ead">mSelectorDrawable</a></td></tr>
+<tr class="separator:a08c44a69b5d16f56e879b4d124ba0ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571228dc520207fc6b364266caf193fb"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a571228dc520207fc6b364266caf193fb">mSelectedView</a></td></tr>
+<tr class="separator:a571228dc520207fc6b364266caf193fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a1a33f439aa113a272be52d62675e1d25"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a1a33f439aa113a272be52d62675e1d25">TAG</a> = &quot;CustomViewBehind&quot;</td></tr>
+<tr class="separator:a1a33f439aa113a272be52d62675e1d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ccb747f7e2b956aa7cf2cbeefec5cb9"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html#a3ccb747f7e2b956aa7cf2cbeefec5cb9">MARGIN_THRESHOLD</a> = 48</td></tr>
+<tr class="separator:a3ccb747f7e2b956aa7cf2cbeefec5cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_behind.html">CustomViewBehind</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a072332f0fded9489102391933155f9b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.slidingmenu.CustomViewBehind.CustomViewBehind </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new custom view behind.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b23c23ed10ff0c538e1bb3eb1c54aa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.slidingmenu.CustomViewBehind.CustomViewBehind </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new custom view behind.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a8d0530eb2c3d7f53647f3a7e3db0cddf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.dispatchDraw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4530dbd309674f4aa14a1ba0ad8a9602"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.drawFade </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>openPercent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw fade.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">canvas</td><td>the canvas </td></tr>
+    <tr><td class="paramname">openPercent</td><td>the open percent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab4b22e68ea4ed00336cc5f36dccc1a5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.drawSelector </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>openPercent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw selector.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">canvas</td><td>the canvas </td></tr>
+    <tr><td class="paramname">openPercent</td><td>the open percent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab95025cf77b85d73c01c4ebf359dce67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.drawShadow </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw shadow.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">canvas</td><td>the canvas </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a952396a1c88ec0243637610f55d4ecf9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getAbsLeftBound </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the abs left bound.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the abs left bound </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a23fff561d4c6d6e779c650915cd5278a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getAbsRightBound </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the abs right bound.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the abs right bound </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a09f5a0d128b7d525bb8aeddbc14d85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getBehindWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the behind width.</p>
+<dl class="section return"><dt>返回</dt><dd>the behind width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0548b1611943dd306145f3cde8f544c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.CustomViewBehind.getContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the content.</p>
+<dl class="section return"><dt>返回</dt><dd>the content </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeee0e6cf690a3025130ab7d7bb8ad5f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getMarginThreshold </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the margin threshold.</p>
+<dl class="section return"><dt>返回</dt><dd>the margin threshold </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25697c305b2cdbbe05b5f5ccdb16d7cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getMenuLeft </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>page</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the menu left.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">page</td><td>the page </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the menu left </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a041a3de066feb4fd2817c322c37fb3f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getMenuPage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>page</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the menu page.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>the page </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the menu page </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a45b919e4e3769e0fb273da8307639526"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the mode.</p>
+<dl class="section return"><dt>返回</dt><dd>the mode </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afe0b1bb7a0d836a4ef58bfbc4038916f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.slidingmenu.CustomViewBehind.getScrollScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the scroll scale.</p>
+<dl class="section return"><dt>返回</dt><dd>the scroll scale </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2523e03868260f4864dc6008bde5ef3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.CustomViewBehind.getSecondaryContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the secondary content.</p>
+<dl class="section return"><dt>返回</dt><dd>the secondary content </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b37a37e06433544817fd1a40bc21445"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.getSelectorTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the selector top.</p>
+<dl class="section return"><dt>返回</dt><dd>the selector top </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e197945594311936a4e222ea0485354"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.marginTouchAllowed </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Margin touch allowed.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">x</td><td>the x </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a49b7e800dafb667ae8da30796ca406cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.menuClosedSlideAllowed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Menu closed slide allowed.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>the dx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab715e48dd35edf420932e882a91ffba3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.menuOpenSlideAllowed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Menu open slide allowed.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>the dx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a77d736ef5cc697f15b9785fb031630ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.menuOpenTouchAllowed </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currPage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Menu open touch allowed.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">currPage</td><td>the curr page </td></tr>
+    <tr><td class="paramname">x</td><td>the x </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c66a3517ea304193f580d316ebf0c91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.menuTouchInQuickReturn </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currPage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Menu touch in quick return.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">currPage</td><td>the curr page </td></tr>
+    <tr><td class="paramname">x</td><td>the x </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abb0b676055a9ab548ec0de5709d62072"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.onInterceptTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf3be055d2e7d6a7c8a4521e0dfb4c6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.onLayout </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>changed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4fcdaf514fd86b15484240ef945d4440"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.onMeasure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>widthMeasureSpec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightMeasureSpec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a776e2b61f94a1e6e4f553674b60132b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.onTouchEvent </td>
+          <td>(</td>
+          <td class="paramtype">MotionEvent&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f5397ee7ee8f13c95e0688713c0ad7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.scrollBehindTo </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scroll behind to.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">x</td><td>the x </td></tr>
+    <tr><td class="paramname">y</td><td>the y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9a35dfb087cf260c3e85b560cfdcb3a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.scrollTo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa10c7cdbd8a655e158ff2dc75c988d3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setCanvasTransformer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the canvas transformer.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>the new canvas transformer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1252816baad97a59a7cbf3e51d79d872"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setChildrenEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the children enabled.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>the new children enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5cdf36cd2f21a1e3217c92fb29361bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setContent </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the content.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>the new content </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad95433d30c998d9acb6b431bc107af73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setCustomViewAbove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_above.html">CustomViewAbove</a>&#160;</td>
+          <td class="paramname"><em>customViewAbove</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the custom view above.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">customViewAbove</td><td>the new custom view above </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c2f48fbfd67efcddda41841b98445e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setFadeDegree </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>degree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the fade degree.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degree</td><td>the new fade degree </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a5aa4833d92a4cad6dc24ff2d88e6b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setFadeEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the fade enabled.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>the new fade enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c40410d21d539664bdd968b4e9f4bbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setMarginThreshold </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>marginThreshold</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the margin threshold.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">marginThreshold</td><td>the new margin threshold </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aab771a51dc47e0a930c6640ec32f85fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the mode.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>the new mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a96569d6977d01f789698d728698eb118"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setScrollScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scrollScale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the scroll scale.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scrollScale</td><td>the new scroll scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a73142cc834d46de5b2cfed010dfa13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setSecondaryContent </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the secondary (right) menu for use when setMode is called with <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html#a10403442ca5d3f26fc96f349a9dc3607">SlidingMenu.LEFT_RIGHT</a>. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>the right menu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a044a94f6293aaeb8ae90b27e7f2f1a6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setSecondaryShadowDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>shadow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the secondary shadow drawable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shadow</td><td>the new secondary shadow drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aef0b7fb4f4b4af779b05151cd9a74c65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setSelectedView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the selected view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>the new selected view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af4f290a06f7813e533def1bdcd172cb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setSelectorBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the selector bitmap.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>the new selector bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0cfa1080df9b2211a8192bd95dfd666e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setSelectorEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the selector enabled.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>the new selector enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a40b29cc19fb6174cc2af008ec01c56f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setShadowDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>shadow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the shadow drawable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shadow</td><td>the new shadow drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab6b72a09cb141825b314488044836c2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setShadowWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the shadow width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>the new shadow width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5bb7bcc058572f8e84c6b7afec6069d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setTouchMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the touch mode.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>the new touch mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1190487bf231c94b69c7c67887c88c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CustomViewBehind.setWidthOffset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the width offset.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>the new width offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a3ccb747f7e2b956aa7cf2cbeefec5cb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.slidingmenu.CustomViewBehind.MARGIN_THRESHOLD = 48</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant MARGIN_THRESHOLD. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9f45eb9f45565d1cbb5bae22ffc4be1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.mChildrenEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m children enabled. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad49467b5b6a26ebd3ac74e84ed4598f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.CustomViewBehind.mContent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m content. </p>
+
+</div>
+</div>
+<a class="anchor" id="a72cc9f30ee80620dc51c40755506f35b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.slidingmenu.CustomViewBehind.mFadeDegree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m fade degree. </p>
+
+</div>
+</div>
+<a class="anchor" id="aed080ccf14fda972a1d5e5bbb9d82d5a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.mFadeEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m fade enabled. </p>
+
+</div>
+</div>
+<a class="anchor" id="afc173b5813f486fb23b02eeec0566600"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Paint com.ab.view.slidingmenu.CustomViewBehind.mFadePaint = new Paint()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m fade paint. </p>
+
+</div>
+</div>
+<a class="anchor" id="aec88edd59e78490c1bbec36f5b343e27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.mMarginThreshold</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m margin threshold. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6dbefc179658f53f250aafcbc882be1a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.mMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m mode. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3d2c24a2ece5e77f80ae075c2ea7ac7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.slidingmenu.CustomViewBehind.mScrollScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m scroll scale. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d050b764852adadc22b6f0c2914234b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.CustomViewBehind.mSecondaryContent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m secondary content. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad9497cc01e715163cdadeb7b7055ce76"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.slidingmenu.CustomViewBehind.mSecondaryShadowDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m secondary shadow drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="a571228dc520207fc6b364266caf193fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.CustomViewBehind.mSelectedView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m selected view. </p>
+
+</div>
+</div>
+<a class="anchor" id="a08c44a69b5d16f56e879b4d124ba0ead"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.slidingmenu.CustomViewBehind.mSelectorDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m selector drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="a09699f060d5abe11492dce4ca1cf8395"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.CustomViewBehind.mSelectorEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m selector enabled. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1078ce5077d3538dd583354c558fcb25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Drawable com.ab.view.slidingmenu.CustomViewBehind.mShadowDrawable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m shadow drawable. </p>
+
+</div>
+</div>
+<a class="anchor" id="af81acb7190f9d1bac65333b0befb6689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.mShadowWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m shadow width. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4887a9e9db61cdf7961538caf8e8a8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.mTouchMode = <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html#ab20b0cdabcd511ef5badd943cc663b1d">SlidingMenu.TOUCHMODE_MARGIN</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m touch mode. </p>
+
+</div>
+</div>
+<a class="anchor" id="a35d5a679d6bacfaba636f6fdcd269283"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CustomViewBehind.mTransformer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m transformer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a51de54c4b014de7ab42ad66895c9570a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_custom_view_above.html">CustomViewAbove</a> com.ab.view.slidingmenu.CustomViewBehind.mViewAbove</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m view above. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2d5abfcad8c5422bcbe3f1ad87fbd4a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.mWidthOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m width offset. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad3b8f2e0709e5a465dd557f87bb2a617"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.slidingmenu.CustomViewBehind.selectedViewId = 2012</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The selected view id. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1a33f439aa113a272be52d62675e1d25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.view.slidingmenu.CustomViewBehind.TAG = &quot;CustomViewBehind&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant TAG. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/slidingmenu/<a class="el" href="_custom_view_behind_8java.html">CustomViewBehind.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -30,16 +30,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
-import com.ab.global.AbResult;
+import com.ab.model.AbResult;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskPool;
 import com.ab.util.AbAppUtil;
+import com.ab.util.AbDialogUtil;
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbImageUtil;
+import com.ab.util.AbLogUtil;
 import com.ab.util.AbMathUtil;
 import com.ab.util.AbStrUtil;
+import com.ab.util.AbToastUtil;
 import com.ab.util.AbViewUtil;
 import com.ab.view.chart.CategorySeries;
 import com.ab.view.chart.ChartFactory;
@@ -54,8 +56,6 @@ import com.andbase.global.Constant;
 import com.andbase.global.MyApplication;
 
 public class PHashActivity extends AbActivity {
-	private static final String TAG = "PHashActivity";
-	private static final boolean D = Constant.DEBUG;
 
 	private MyApplication application;
 	private GridView mGridView = null;
@@ -110,9 +110,9 @@ public class PHashActivity extends AbActivity {
 	    //要显示图形的View
 	    mChartLinearLayout = (LinearLayout) findViewById(R.id.chart01);
 	    //初始化图片保存路径
-	    String photo_dir = AbFileUtil.getFullImageDownPathDir();
+	    String photo_dir = AbFileUtil.getImageDownloadDir(this);
 	    if(AbStrUtil.isEmpty(photo_dir)){
-	    	showToast("存储卡不存在");
+	    	AbToastUtil.showToast(PHashActivity.this,"存储卡不存在");
 	    }else{
 	    	PHOTO_DIR = new File(photo_dir);
 	    }
@@ -125,14 +125,14 @@ public class PHashActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				removeDialog(AbConstant.DIALOGBOTTOM);
-				// 从相册中去获取
+				AbDialogUtil.removeDialog(PHashActivity.this);
+				// 从相册中去获取	
 				try {
 					Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
 					intent.setType("image/*");
 					startActivityForResult(intent, PHOTO_PICKED_WITH_DATA);
 				} catch (ActivityNotFoundException e) {
-					showToast("没有找到照片");
+					AbToastUtil.showToast(PHashActivity.this,"没有找到照片");
 				}
 			}
 			
@@ -142,7 +142,7 @@ public class PHashActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(PHashActivity.this);
 				doPickPhotoAction();
 			}
 			
@@ -152,7 +152,7 @@ public class PHashActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(PHashActivity.this);
 			}
 			
 		});
@@ -165,9 +165,9 @@ public class PHashActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				if(filePathAll==null){
-					showToast("请先创建图片索引!");
+					AbToastUtil.showToast(PHashActivity.this,"请先创建图片索引!");
 				}else{
-					showDialog(1,mAvatarView);
+					AbDialogUtil.showDialog(mAvatarView);
 				}
 				
 			}
@@ -178,14 +178,14 @@ public class PHashActivity extends AbActivity {
 
 			@Override
 			public void onClick(View v) {
-				showProgressDialog();
+				AbDialogUtil.showProgressDialog(PHashActivity.this,R.drawable.progress_circular,"正在查询...");
 				final AbTaskItem item = new AbTaskItem();
-				item.listener = new AbTaskListener() {
+				item.setListener(new AbTaskListener() {
 
 					@Override
 					public void update() {
-						removeProgressDialog();
-						showToast("创建图片索引完成!");
+						AbDialogUtil.removeDialog(PHashActivity.this);
+						AbToastUtil.showToast(PHashActivity.this,"创建图片索引完成!");
 					}
 
 					@Override
@@ -196,7 +196,7 @@ public class PHashActivity extends AbActivity {
 			   		    	hashCodesAndDis.clear();
 			   		    	files.clear();
 			   		    	colorHistogram.clear();
-							AbAppUtil.prepareStartTime();
+							AbLogUtil.prepareLog(PHashActivity.this);
 							//查询手机中所有图片
 							if(!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
 							   //无sd卡
@@ -224,7 +224,7 @@ public class PHashActivity extends AbActivity {
 							//计算图片的hash
 							for(int i=0;i<files.size();i++){
 								File f = files.get(i);
-								if(D)Log.d(TAG, "图片的路径是 = " + f.getPath());
+								AbLogUtil.d(PHashActivity.this, "图片的路径是 = " + f.getPath());
 								Bitmap bitmap = AbFileUtil.getBitmapFromSD(f);
 								if(bitmap==null){
 									//图片有问题
@@ -235,20 +235,20 @@ public class PHashActivity extends AbActivity {
 									//计算hash
 									String hashCode = AbImageUtil.getDCTHashCode(bitmap);
 									hashCodes.add(hashCode);
-									Log.d(TAG,"hashCodes add:"+i+":"+hashCode);
+									AbLogUtil.d(PHashActivity.this,"hashCodes add:"+i+":"+hashCode);
 									//颜色分布
-									Bitmap bitmapT = AbImageUtil.cutImg(bitmap,360,360);
+									Bitmap bitmapT = AbImageUtil.getCutBitmap(bitmap,360,360);
 									int [] colors = AbImageUtil.getColorHistogram(bitmapT);
 									colorHistogram.add(colors);
 									AbImageUtil.releaseBitmap(bitmap);
 								}
 							}
-							AbAppUtil.logEndTime(D, TAG, "创建索引");
+							AbLogUtil.d(PHashActivity.this, "创建索引",true);
 			   		    } catch (Exception e) {
-			   		    	showToastInThread(e.getMessage());
+			   		    	AbToastUtil.showToastInThread(PHashActivity.this,e.getMessage());
 			   		    }
 				  };
-				};
+				});
 				mAbTaskPool.execute(item);
 			}
 			
@@ -270,7 +270,7 @@ public class PHashActivity extends AbActivity {
 		if (status.equals(Environment.MEDIA_MOUNTED)) {
 			doTakePhoto();
 		} else {
-			showToast("没有可用的存储卡");
+			AbToastUtil.showToast(PHashActivity.this,"没有可用的存储卡");
 		}
 	}
 
@@ -285,7 +285,7 @@ public class PHashActivity extends AbActivity {
 			intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mCurrentPhotoFile));
 			startActivityForResult(intent, CAMERA_WITH_DATA);
 		} catch (Exception e) {
-			showToast("未找到系统相机程序");
+			AbToastUtil.showToast(PHashActivity.this,"未找到系统相机程序");
 		}
 	}
 	
@@ -306,11 +306,11 @@ public class PHashActivity extends AbActivity {
 					intent1.putExtra("PATH", currentFilePath);
 					startActivityForResult(intent1, CAMERA_CROP_DATA);
 		        }else{
-		        	showToast("未在存储卡中找到这个文件");
+		        	AbToastUtil.showToast(PHashActivity.this,"未在存储卡中找到这个文件");
 		        }
 				break;
 			case CAMERA_WITH_DATA:
-				if(D)Log.d(TAG, "将要进行裁剪的图片的路径是 = " + mCurrentPhotoFile.getPath());
+				AbLogUtil.d(PHashActivity.this, "将要进行裁剪的图片的路径是 = " + mCurrentPhotoFile.getPath());
 				String currentFilePath2 = mCurrentPhotoFile.getPath();
 				Intent intent2 = new Intent(this, CropImageActivity.class);
 				intent2.putExtra("PATH",currentFilePath2);
@@ -319,7 +319,7 @@ public class PHashActivity extends AbActivity {
 			case CAMERA_CROP_DATA:
 				mChartLinearLayout.removeAllViews();
 				String path = mIntent.getStringExtra("PATH");
-		    	if(D)Log.d(TAG, "裁剪后得到的图片的路径是 = " + path);
+				AbLogUtil.d(PHashActivity.this, "裁剪后得到的图片的路径是 = " + path);
 		    	
 		    	Bitmap bitmap = AbFileUtil.getBitmapFromSD(new File(path));
 		    	myImage.setImageBitmap(bitmap);
@@ -335,7 +335,7 @@ public class PHashActivity extends AbActivity {
 		    	
 		    	//获取这个图的hashcode
 		    	String sourceHashCode = AbImageUtil.getDCTHashCode(bitmap);
-		    	Log.d(TAG,"this image sourceHashCode:"+sourceHashCode);
+		    	AbLogUtil.d(PHashActivity.this,"this image sourceHashCode:"+sourceHashCode);
 		    	//计算距离
 		    	for(int i = 0;i<hashCodes.size();i++){ 
 		    		String hashCode = hashCodes.get(i);
@@ -359,7 +359,7 @@ public class PHashActivity extends AbActivity {
                 //显示
                 for(int i=0;i<hashCodesAndDisNew.length;i++){
             	   String pathNew = files.get((Integer)hashCodesAndDisNew[i].getKey()).getPath();
-            	   Log.d(TAG,"匹配结果:"+pathNew+":"+hashCodesAndDisNew[i].getValue());
+            	   AbLogUtil.d(PHashActivity.this,"匹配结果:"+pathNew+":"+hashCodesAndDisNew[i].getValue());
             	   mImagePathAdapter.addItem(mImagePathAdapter.getCount(),pathNew);
             	   
             	   

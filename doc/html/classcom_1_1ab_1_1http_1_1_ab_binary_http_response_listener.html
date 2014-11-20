@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.http.AbBinaryHttpResponseListener类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html">AbBinaryHttpResponseListener</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.http.AbBinaryHttpResponseListener类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.http.AbBinaryHttpResponseListener 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.png" usemap="#com.ab.http.AbBinaryHttpResponseListener_map" alt=""/>
+  <map id="com.ab.http.AbBinaryHttpResponseListener_map" name="com.ab.http.AbBinaryHttpResponseListener_map">
+<area href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html" alt="com.ab.http.AbHttpResponseListener" shape="rect" coords="0,0,256,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a695f4fee70ddaf2d37aa445156a33fa5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html#a695f4fee70ddaf2d37aa445156a33fa5">AbBinaryHttpResponseListener</a> ()</td></tr>
+<tr class="separator:a695f4fee70ddaf2d37aa445156a33fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4a94e307f097938ab81885016a7d53"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html#acc4a94e307f097938ab81885016a7d53">onSuccess</a> (int statusCode, byte[] content)</td></tr>
+<tr class="separator:acc4a94e307f097938ab81885016a7d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f2a1afb04d410f127381623ff5458d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html#a12f2a1afb04d410f127381623ff5458d">sendSuccessMessage</a> (int statusCode, byte[] content)</td></tr>
+<tr class="separator:a12f2a1afb04d410f127381623ff5458d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">com.ab.http.AbHttpResponseListener</a></td></tr>
+<tr class="memitem:aa7b136556f5c089c7a0daf011c31c782 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#aa7b136556f5c089c7a0daf011c31c782">AbHttpResponseListener</a> ()</td></tr>
+<tr class="separator:aa7b136556f5c089c7a0daf011c31c782 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf904d7bf348ffecccfdf2564a04dc3 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#adaf904d7bf348ffecccfdf2564a04dc3">onStart</a> ()</td></tr>
+<tr class="separator:adaf904d7bf348ffecccfdf2564a04dc3 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9036f2f484129c0a654edceb8da4de6 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#ad9036f2f484129c0a654edceb8da4de6">onFinish</a> ()</td></tr>
+<tr class="separator:ad9036f2f484129c0a654edceb8da4de6 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9674b35fff1cbbd3b5b318dc3111c7dc inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a9674b35fff1cbbd3b5b318dc3111c7dc">onRetry</a> ()</td></tr>
+<tr class="separator:a9674b35fff1cbbd3b5b318dc3111c7dc inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa176806bed6d59163c45344fa8d4af34 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#aa176806bed6d59163c45344fa8d4af34">onFailure</a> (int statusCode, String content, Throwable error)</td></tr>
+<tr class="separator:aa176806bed6d59163c45344fa8d4af34 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fc1daf5e4e89e78652d2aa09ed8cde inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#ab9fc1daf5e4e89e78652d2aa09ed8cde">onProgress</a> (int bytesWritten, int totalSize)</td></tr>
+<tr class="separator:ab9fc1daf5e4e89e78652d2aa09ed8cde inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f15c364770ce579be00dcd6fdc0a9ce inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a8f15c364770ce579be00dcd6fdc0a9ce">sendStartMessage</a> ()</td></tr>
+<tr class="separator:a8f15c364770ce579be00dcd6fdc0a9ce inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2287581e2601d60174a6d31450e749a2 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a2287581e2601d60174a6d31450e749a2">sendFinishMessage</a> ()</td></tr>
+<tr class="separator:a2287581e2601d60174a6d31450e749a2 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c6f470564aff118e74a5d4cf3cc599 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a51c6f470564aff118e74a5d4cf3cc599">sendProgressMessage</a> (int bytesWritten, int totalSize)</td></tr>
+<tr class="separator:a51c6f470564aff118e74a5d4cf3cc599 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db1e49f1c4cea13670587d0d136eb26 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a5db1e49f1c4cea13670587d0d136eb26">sendFailureMessage</a> (int statusCode, String content, Throwable error)</td></tr>
+<tr class="separator:a5db1e49f1c4cea13670587d0d136eb26 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac750fc7cfc36384567e2eceb0e837e55 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#ac750fc7cfc36384567e2eceb0e837e55">sendRetryMessage</a> ()</td></tr>
+<tr class="separator:ac750fc7cfc36384567e2eceb0e837e55 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a7cfdab98ee0bb233bc8dc7bec6dbb inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a02a7cfdab98ee0bb233bc8dc7bec6dbb">sendMessage</a> (Message msg)</td></tr>
+<tr class="separator:a02a7cfdab98ee0bb233bc8dc7bec6dbb inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2036d52f330ac40c51d20ecd1fb45e7b inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a2036d52f330ac40c51d20ecd1fb45e7b">getHandler</a> ()</td></tr>
+<tr class="separator:a2036d52f330ac40c51d20ecd1fb45e7b inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85b669659c0b9a40c4f90aab9bef58f6 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a85b669659c0b9a40c4f90aab9bef58f6">setHandler</a> (Handler handler)</td></tr>
+<tr class="separator:a85b669659c0b9a40c4f90aab9bef58f6 inherit pub_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">com.ab.http.AbHttpResponseListener</a></td></tr>
+<tr class="memitem:a3ebfabcfa4a37100fbb4a16e4ffd7138 inherit pro_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memItemLeft" align="right" valign="top">Message&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html#a3ebfabcfa4a37100fbb4a16e4ffd7138">obtainMessage</a> (int responseMessage, Object response)</td></tr>
+<tr class="separator:a3ebfabcfa4a37100fbb4a16e4ffd7138 inherit pro_methods_classcom_1_1ab_1_1http_1_1_ab_http_response_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbBinaryHttpResponseListener.java 描述：Http二进制响应监听器</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-13 上午9:00:52 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a695f4fee70ddaf2d37aa445156a33fa5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.http.AbBinaryHttpResponseListener.AbBinaryHttpResponseListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构造. </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="acc4a94e307f097938ab81885016a7d53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.http.AbBinaryHttpResponseListener.onSuccess </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>statusCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取数据成功会调用这里.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>the status code </td></tr>
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a12f2a1afb04d410f127381623ff5458d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbBinaryHttpResponseListener.sendSuccessMessage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>statusCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>成功消息.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>the status code </td></tr>
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/http/<a class="el" href="_ab_binary_http_response_listener_8java.html">AbBinaryHttpResponseListener.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

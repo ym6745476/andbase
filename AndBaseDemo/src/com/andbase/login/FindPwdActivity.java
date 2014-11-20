@@ -12,11 +12,13 @@ import android.widget.ImageButton;
 
 import com.ab.activity.AbActivity;
 import com.ab.global.AbConstant;
-import com.ab.global.AbResult;
+import com.ab.model.AbResult;
 import com.ab.task.AbTaskItem;
-import com.ab.task.AbTaskListener;
+import com.ab.task.AbTaskObjectListener;
 import com.ab.task.AbTaskPool;
+import com.ab.util.AbDialogUtil;
 import com.ab.util.AbStrUtil;
+import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
@@ -31,7 +33,6 @@ public class FindPwdActivity extends AbActivity {
 	private ImageButton mClear2;
 	private String mStr_name = null;
 	private String mStr_email = null;
-	private AbResult mAbResult = null;
 	private AbTaskPool mAbTaskPool = null;
 	private AbTitleBar mAbTitleBar = null;
 	
@@ -46,7 +47,8 @@ public class FindPwdActivity extends AbActivity {
 		mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
-		
+		//设置AbTitleBar在最上
+		this.setTitleBarOverlay(true);
 		mAbTaskPool = AbTaskPool.getInstance();
 		userName = (EditText) this.findViewById(R.id.userName);
 		email = (EditText) this.findViewById(R.id.email);
@@ -66,7 +68,7 @@ public class FindPwdActivity extends AbActivity {
 						userName.setText(str);
 						String str1 = userName.getText().toString().trim();
 						userName.setSelection(str1.length());
-						showToast(R.string.error_name_expr);
+						AbToastUtil.showToast(FindPwdActivity.this,R.string.error_name_expr);
 					}
 					
 					mClear1.postDelayed(new Runnable() {
@@ -105,7 +107,7 @@ public class FindPwdActivity extends AbActivity {
 						email.setText(str);
 						String str1 = email.getText().toString().trim();
 						email.setSelection(str1.length());
-						showToast(R.string.error_email_expr2);
+						AbToastUtil.showToast(FindPwdActivity.this,R.string.error_email_expr2);
 					}
 					mClear2.postDelayed(new Runnable(){
 
@@ -156,28 +158,28 @@ public class FindPwdActivity extends AbActivity {
 			mStr_name = userName.getText().toString().trim();
 			mStr_email = email.getText().toString().trim();
 			if (TextUtils.isEmpty(mStr_name)) {
-				showToast(R.string.error_name);
+				AbToastUtil.showToast(FindPwdActivity.this,R.string.error_name);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (!AbStrUtil.isNumberLetter(mStr_name)) {
-				showToast(R.string.error_name_expr);
+				AbToastUtil.showToast(FindPwdActivity.this,R.string.error_name_expr);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_name) < 3) {
-				showToast(R.string.error_name_length1);
+				AbToastUtil.showToast(FindPwdActivity.this,R.string.error_name_length1);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_name) > 20) {
-				showToast(R.string.error_name_length2);
+				AbToastUtil.showToast(FindPwdActivity.this,R.string.error_name_length2);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
@@ -186,43 +188,47 @@ public class FindPwdActivity extends AbActivity {
 			
 			if (!TextUtils.isEmpty(mStr_email)) {
 				if (!AbStrUtil.isEmail(mStr_email)) {
-					showToast(R.string.error_email_expr);
+					AbToastUtil.showToast(FindPwdActivity.this,R.string.error_email_expr);
 					email.setFocusable(true);
 					email.requestFocus();
 					return;
 				}
 			}else{
-				showToast(R.string.error_email);
+				AbToastUtil.showToast(FindPwdActivity.this,R.string.error_email);
 				email.setFocusable(true);
 				email.requestFocus();
 			}
 			
 			
-			showProgressDialog();
+			AbDialogUtil.showProgressDialog(FindPwdActivity.this,R.drawable.progress_circular,"正在找回...");
 			final AbTaskItem item = new AbTaskItem();
-			item.listener = new AbTaskListener() {
+			item.setListener(new AbTaskObjectListener() {
 
 				@Override
-				public void update() {
-					removeProgressDialog();
+				public void update(Object obj) {
+					AbDialogUtil.removeDialog(FindPwdActivity.this);
+					AbResult mAbResult = (AbResult)obj;
 					if(mAbResult != null){
-						showToast(mAbResult.getResultMsg());
-						if(mAbResult.getResultCode()==AbConstant.RESULRCODE_OK){
+						AbToastUtil.showToast(FindPwdActivity.this,mAbResult.getResultMessage());
+						if(mAbResult.getResultCode()==AbResult.RESULR_OK){
 							finish();
 			        	}
 			        }
 				}
 
 				@Override
-				public void get() {
+				public Object getObject() {
+				    AbResult mAbResult = null;
 		   		    try {
 		   		    	mAbResult = new AbResult();
-		   		    	mAbResult.setResultMsg("ok");
+		   		    	mAbResult.setResultMessage("ok");
+		   		    	
 		   		    } catch (Exception e){
-		   		    	showToastInThread(e.getMessage());
+		   		    	AbToastUtil.showToastInThread(FindPwdActivity.this,e.getMessage());
 		   		    }
+		   		    return mAbResult;
 			  };
-			};
+			});
 			mAbTaskPool.execute(item);
 		}
 	}

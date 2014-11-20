@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.XYSeries类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html">XYSeries</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.XYSeries类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.XYSeries 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.png" usemap="#com.ab.view.chart.XYSeries_map" alt=""/>
+  <map id="com.ab.view.chart.XYSeries_map" name="com.ab.view.chart.XYSeries_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_time_series.html" alt="com.ab.view.chart.TimeSeries" shape="rect" coords="0,112,207,136"/>
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_value_series.html" alt="com.ab.view.chart.XYValueSeries" shape="rect" coords="217,112,424,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7c46b12d83efcd7ed348685458de71a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a7c46b12d83efcd7ed348685458de71a8">XYSeries</a> (String title)</td></tr>
+<tr class="separator:a7c46b12d83efcd7ed348685458de71a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8c0f857c9838877c364bc7d991bdd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a7e8c0f857c9838877c364bc7d991bdd9">XYSeries</a> (String title, int scaleNumber)</td></tr>
+<tr class="separator:a7e8c0f857c9838877c364bc7d991bdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d4ac7d474941375b057f0630e3b5d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a90d4ac7d474941375b057f0630e3b5d9">getScaleNumber</a> ()</td></tr>
+<tr class="separator:a90d4ac7d474941375b057f0630e3b5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b1b8f05e96144532f7b1a11a5f870a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#ad0b1b8f05e96144532f7b1a11a5f870a">getTitle</a> ()</td></tr>
+<tr class="separator:ad0b1b8f05e96144532f7b1a11a5f870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8e39e1d1353873a65da308d6229280"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a8d8e39e1d1353873a65da308d6229280">setTitle</a> (String title)</td></tr>
+<tr class="separator:a8d8e39e1d1353873a65da308d6229280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbef2a33cedcdc6c442d7cbdecdeab0d"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#adbef2a33cedcdc6c442d7cbdecdeab0d">add</a> (double x, double y)</td></tr>
+<tr class="separator:adbef2a33cedcdc6c442d7cbdecdeab0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc1185101cb3b4c666799d36d05a9e8"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#aabc1185101cb3b4c666799d36d05a9e8">add</a> (double x, double y, int c)</td></tr>
+<tr class="separator:aabc1185101cb3b4c666799d36d05a9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e12ca77e7913ae54056e7ef525d76af"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a9e12ca77e7913ae54056e7ef525d76af">add</a> (double x, double y, int c, String e)</td></tr>
+<tr class="separator:a9e12ca77e7913ae54056e7ef525d76af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b6a2d7c977d0602b375e86eb1f2a0e"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a27b6a2d7c977d0602b375e86eb1f2a0e">remove</a> (int index)</td></tr>
+<tr class="separator:a27b6a2d7c977d0602b375e86eb1f2a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd1681525e5bbc0ebdbedcd7684ff4a"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a5dd1681525e5bbc0ebdbedcd7684ff4a">clear</a> ()</td></tr>
+<tr class="separator:a5dd1681525e5bbc0ebdbedcd7684ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4668044a04ad6a5afb00fae07ee0a1e"><td class="memItemLeft" align="right" valign="top">synchronized double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#ac4668044a04ad6a5afb00fae07ee0a1e">getX</a> (int index)</td></tr>
+<tr class="separator:ac4668044a04ad6a5afb00fae07ee0a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b44c48a740af4c2fdde07c2a8a408cc"><td class="memItemLeft" align="right" valign="top">synchronized double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a9b44c48a740af4c2fdde07c2a8a408cc">getY</a> (int index)</td></tr>
+<tr class="separator:a9b44c48a740af4c2fdde07c2a8a408cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb772a8de78586328847ed02bf5d0b"><td class="memItemLeft" align="right" valign="top">synchronized SortedMap&lt; Double, <br class="typebreak" />
+Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#ac8bb772a8de78586328847ed02bf5d0b">getRange</a> (double start, double stop, int beforeAfterPoints)</td></tr>
+<tr class="separator:ac8bb772a8de78586328847ed02bf5d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c921a0486a817f38178042833c17ee2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a4c921a0486a817f38178042833c17ee2">getIndexForKey</a> (double key)</td></tr>
+<tr class="separator:a4c921a0486a817f38178042833c17ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e52917ef9c05b75650462e4829f2b9"><td class="memItemLeft" align="right" valign="top">synchronized int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a82e52917ef9c05b75650462e4829f2b9">getItemCount</a> ()</td></tr>
+<tr class="separator:a82e52917ef9c05b75650462e4829f2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16383357d75214a01f9a58054cfc0d0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#ad16383357d75214a01f9a58054cfc0d0">getMinX</a> ()</td></tr>
+<tr class="separator:ad16383357d75214a01f9a58054cfc0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1130147871d5e6049874351e532c3942"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a1130147871d5e6049874351e532c3942">getMinY</a> ()</td></tr>
+<tr class="separator:a1130147871d5e6049874351e532c3942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6086b763ca741f39f3fe79154ea713"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a0f6086b763ca741f39f3fe79154ea713">getMaxX</a> ()</td></tr>
+<tr class="separator:a0f6086b763ca741f39f3fe79154ea713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d4eff1f2495b996f4ccbad57dfaac6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#aa6d4eff1f2495b996f4ccbad57dfaac6">getMaxY</a> ()</td></tr>
+<tr class="separator:aa6d4eff1f2495b996f4ccbad57dfaac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392c3d423e32885664cd630718251278"><td class="memItemLeft" align="right" valign="top">IndexXYMap&lt; Double, Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a392c3d423e32885664cd630718251278">getmXC</a> ()</td></tr>
+<tr class="separator:a392c3d423e32885664cd630718251278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546deac93d3048eb696ae7b147206150"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a546deac93d3048eb696ae7b147206150">getmXCValue</a> (double key)</td></tr>
+<tr class="separator:a546deac93d3048eb696ae7b147206150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091132efc99a713de29abb8d26f7b5a1"><td class="memItemLeft" align="right" valign="top">IndexXYMap&lt; Double, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a091132efc99a713de29abb8d26f7b5a1">getmXE</a> ()</td></tr>
+<tr class="separator:a091132efc99a713de29abb8d26f7b5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa0f2fc1ee16d7c939ef10735373927"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a2fa0f2fc1ee16d7c939ef10735373927">getmXEValue</a> (double key)</td></tr>
+<tr class="separator:a2fa0f2fc1ee16d7c939ef10735373927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ac06c9d37fabb8a4512776ee167a84ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#ac06c9d37fabb8a4512776ee167a84ffc">initRange</a> ()</td></tr>
+<tr class="separator:ac06c9d37fabb8a4512776ee167a84ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5305173f0c9a64b9f1923e14e174c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a6d5305173f0c9a64b9f1923e14e174c9">updateRange</a> (double x, double y)</td></tr>
+<tr class="separator:a6d5305173f0c9a64b9f1923e14e174c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a867873e482981845ecf2588643e1341c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a867873e482981845ecf2588643e1341c">mTitle</a></td></tr>
+<tr class="separator:a867873e482981845ecf2588643e1341c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b957eef9cec3ab031c7245b1bea162"><td class="memItemLeft" align="right" valign="top">final IndexXYMap&lt; Double, Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a30b957eef9cec3ab031c7245b1bea162">mXY</a> = new IndexXYMap&lt;Double, Double&gt;()</td></tr>
+<tr class="separator:a30b957eef9cec3ab031c7245b1bea162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105926684f55355a8b8d654547b82ab7"><td class="memItemLeft" align="right" valign="top">final IndexXYMap&lt; Double, Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a105926684f55355a8b8d654547b82ab7">mXC</a> = new IndexXYMap&lt;Double, Integer&gt;()</td></tr>
+<tr class="separator:a105926684f55355a8b8d654547b82ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8bbd5e2640a8649a9071e1e9956a63"><td class="memItemLeft" align="right" valign="top">final IndexXYMap&lt; Double, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a8c8bbd5e2640a8649a9071e1e9956a63">mXE</a> = new IndexXYMap&lt;Double, String&gt;()</td></tr>
+<tr class="separator:a8c8bbd5e2640a8649a9071e1e9956a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05d7221f0f78f04c295bb6eafb87527"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#af05d7221f0f78f04c295bb6eafb87527">mMinX</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td></tr>
+<tr class="separator:af05d7221f0f78f04c295bb6eafb87527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26b5e0da690818be5fc434dc56472b33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a26b5e0da690818be5fc434dc56472b33">mMaxX</a> = -<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td></tr>
+<tr class="separator:a26b5e0da690818be5fc434dc56472b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02a5a69af5e8a7cd32f01183468500e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#ac02a5a69af5e8a7cd32f01183468500e">mMinY</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td></tr>
+<tr class="separator:ac02a5a69af5e8a7cd32f01183468500e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7349f146b2066a88ba91c63fd5eb8b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a7d7349f146b2066a88ba91c63fd5eb8b">mMaxY</a> = -<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td></tr>
+<tr class="separator:a7d7349f146b2066a88ba91c63fd5eb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81de4a69905aaeb05586ab92d31c3f18"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series.html#a81de4a69905aaeb05586ab92d31c3f18">mScaleNumber</a></td></tr>
+<tr class="separator:a81de4a69905aaeb05586ab92d31c3f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An XY series encapsulates values for XY charts like line, time, area, scatter... charts. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a7c46b12d83efcd7ed348685458de71a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.chart.XYSeries.XYSeries </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a new XY series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the series title. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7e8c0f857c9838877c364bc7d991bdd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.chart.XYSeries.XYSeries </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scaleNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a new XY series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the series title. </td></tr>
+    <tr><td class="paramname">scaleNumber</td><td>the series scale number </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="adbef2a33cedcdc6c442d7cbdecdeab0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.XYSeries.add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a new value to the series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the value for the X axis </td></tr>
+    <tr><td class="paramname">y</td><td>the value for the Y axis </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aabc1185101cb3b4c666799d36d05a9e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.XYSeries.add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds the.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x </td></tr>
+    <tr><td class="paramname">y</td><td>the y </td></tr>
+    <tr><td class="paramname">c</td><td>the c </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e12ca77e7913ae54056e7ef525d76af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.XYSeries.add </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：添加坐标，颜色，描述.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the x </td></tr>
+    <tr><td class="paramname">y</td><td>the y </td></tr>
+    <tr><td class="paramname">c</td><td>the c </td></tr>
+    <tr><td class="paramname">e</td><td>the e </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5dd1681525e5bbc0ebdbedcd7684ff4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.XYSeries.clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes all the existing values from the series. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4c921a0486a817f38178042833c17ee2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.XYSeries.getIndexForKey </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the index for key.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the index for key </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a82e52917ef9c05b75650462e4829f2b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized int com.ab.view.chart.XYSeries.getItemCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the series item count.</p>
+<dl class="section return"><dt>返回</dt><dd>the series item count </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0f6086b763ca741f39f3fe79154ea713"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.getMaxX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the maximum value on the X axis.</p>
+<dl class="section return"><dt>返回</dt><dd>the X axis maximum value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6d4eff1f2495b996f4ccbad57dfaac6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.getMaxY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the maximum value on the Y axis.</p>
+<dl class="section return"><dt>返回</dt><dd>the Y axis maximum value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad16383357d75214a01f9a58054cfc0d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.getMinX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the minimum value on the X axis.</p>
+<dl class="section return"><dt>返回</dt><dd>the X axis minimum value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1130147871d5e6049874351e532c3942"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.getMinY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the minimum value on the Y axis.</p>
+<dl class="section return"><dt>返回</dt><dd>the Y axis minimum value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a392c3d423e32885664cd630718251278"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IndexXYMap&lt;Double, Integer&gt; com.ab.view.chart.XYSeries.getmXC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取颜色值.</p>
+<dl class="section return"><dt>返回</dt><dd>the m xc </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a546deac93d3048eb696ae7b147206150"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.XYSeries.getmXCValue </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取这个点的颜色值.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the m xc value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a091132efc99a713de29abb8d26f7b5a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IndexXYMap&lt;Double, String&gt; com.ab.view.chart.XYSeries.getmXE </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取这个点的说明.</p>
+<dl class="section return"><dt>返回</dt><dd>the m xe </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2fa0f2fc1ee16d7c939ef10735373927"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.XYSeries.getmXEValue </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取值的说明.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the m xe value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8bb772a8de78586328847ed02bf5d0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized SortedMap&lt;Double, Double&gt; com.ab.view.chart.XYSeries.getRange </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beforeAfterPoints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns submap of x and y values according to the given start and end.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>start x value </td></tr>
+    <tr><td class="paramname">stop</td><td>stop x value </td></tr>
+    <tr><td class="paramname">beforeAfterPoints</td><td>the before after points </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a submap of x and y values </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a90d4ac7d474941375b057f0630e3b5d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.XYSeries.getScaleNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the scale number.</p>
+<dl class="section return"><dt>返回</dt><dd>the scale number </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad0b1b8f05e96144532f7b1a11a5f870a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.XYSeries.getTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the series title.</p>
+<dl class="section return"><dt>返回</dt><dd>the series title </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4668044a04ad6a5afb00fae07ee0a1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized double com.ab.view.chart.XYSeries.getX </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the X axis value at the specified index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the X value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b44c48a740af4c2fdde07c2a8a408cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized double com.ab.view.chart.XYSeries.getY </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the Y axis value at the specified index.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the Y value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac06c9d37fabb8a4512776ee167a84ffc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeries.initRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes the range for both axes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a27b6a2d7c977d0602b375e86eb1f2a0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void com.ab.view.chart.XYSeries.remove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes an existing value from the series.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index in the series of the value to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d8e39e1d1353873a65da308d6229280"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeries.setTitle </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the series title.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the series title </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d5305173f0c9a64b9f1923e14e174c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeries.updateRange </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Updates the range on both axes.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the new x value </td></tr>
+    <tr><td class="paramname">y</td><td>the new y value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a26b5e0da690818be5fc434dc56472b33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.mMaxX = -<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The maximum value for the X axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d7349f146b2066a88ba91c63fd5eb8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.mMaxY = -<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The maximum value for the Y axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="af05d7221f0f78f04c295bb6eafb87527"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.mMinX = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The minimum value for the X axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac02a5a69af5e8a7cd32f01183468500e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.XYSeries.mMinY = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_math_helper.html#ae32fa4eab35b73d21a1a7901feaa4056">MathHelper.NULL_VALUE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The minimum value for the Y axis. </p>
+
+</div>
+</div>
+<a class="anchor" id="a81de4a69905aaeb05586ab92d31c3f18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.XYSeries.mScaleNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The scale number for this series. </p>
+
+</div>
+</div>
+<a class="anchor" id="a867873e482981845ecf2588643e1341c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.XYSeries.mTitle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The series title. </p>
+
+</div>
+</div>
+<a class="anchor" id="a105926684f55355a8b8d654547b82ab7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final IndexXYMap&lt;Double, Integer&gt; com.ab.view.chart.XYSeries.mXC = new IndexXYMap&lt;Double, Integer&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>每个数据点的颜色值. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c8bbd5e2640a8649a9071e1e9956a63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final IndexXYMap&lt;Double, String&gt; com.ab.view.chart.XYSeries.mXE = new IndexXYMap&lt;Double, String&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>每个数据点的简要 说明. </p>
+
+</div>
+</div>
+<a class="anchor" id="a30b957eef9cec3ab031c7245b1bea162"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final IndexXYMap&lt;Double, Double&gt; com.ab.view.chart.XYSeries.mXY = new IndexXYMap&lt;Double, Double&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A map to contain values for X and Y axes and index for each bundle. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_x_y_series_8java.html">XYSeries.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

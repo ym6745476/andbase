@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,31 +19,48 @@ import java.util.List;
 
 // TODO: Auto-generated Javadoc
 /**
- * The listener interface for receiving abSqliteStorage events.
- * The class that is interested in processing a abSqliteStorage
- * event implements this interface, and the object created
- * with that class is registered with a component using the
- * component's <code>addAbSqliteStorageListener<code> method. When
- * the abSqliteStorage event occurs, that object's appropriate
- * method is invoked.
+ * © 2012 amsoft.cn
+ * 名称：AbSqliteStorageListener.java 
+ * 描述：数据操作结构监听器
  *
- * @see AbSqliteStorageEvent
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-10-16 下午1:33:39
  */
 public class AbSqliteStorageListener {
 
 	/**
 	 * 描述：插入数据的监听.
-	 *
-	 * @see AbDataInsertEvent
 	 */
 	public static abstract interface AbDataInsertListener {
 
 		/**
 		 * On success.
 		 *
-		 * @param paramLong the param long
+		 * @param rowId the rowId
 		 */
-		public abstract void onSuccess(long paramLong);
+		public abstract void onSuccess(long rowId);
+
+		/**
+		 * On failure.
+		 *
+		 * @param errorCode the error code
+		 * @param errorMessage the error message
+		 */
+		public abstract void onFailure(int errorCode, String errorMessage);
+	}
+	
+	/**
+	 * 描述：插入数据的监听.
+	 */
+	public static abstract interface AbDataInsertListListener {
+
+		/**
+		 * On success.
+		 *
+		 * @param rowIds rowIds
+		 */
+		public abstract void onSuccess(long[] rowIds);
 
 		/**
 		 * On failure.
@@ -57,9 +74,8 @@ public class AbSqliteStorageListener {
 	/**
 	 * 描述：查询数据的监听.
 	 *
-	 * @see AbDataInfoEvent
 	 */
-	public static abstract interface AbDataInfoListener {
+	public static abstract interface AbDataSelectListener {
 
 		/**
 		 * On success.
@@ -79,17 +95,36 @@ public class AbSqliteStorageListener {
 
 	/**
 	 * 描述：修改数据的监听.
-	 *
-	 * @see AbDataOperationEvent
 	 */
-	public static abstract interface AbDataOperationListener {
+	public static abstract interface AbDataUpdateListener {
 		
 		/**
 		 * On success.
 		 *
-		 * @param paramLong the param long
+		 * @param rows the rows
 		 */
-		public abstract void onSuccess(long paramLong);
+		public abstract void onSuccess(int rows);
+
+		/**
+		 * On failure.
+		 *
+		 * @param errorCode the error code
+		 * @param errorMessage the error message
+		 */
+		public abstract void onFailure(int errorCode, String errorMessage);
+	}
+	
+	/**
+	 * 描述：删除数据的监听.
+	 */
+	public static abstract interface AbDataDeleteListener {
+		
+		/**
+		 * On success.
+		 *
+		 * @param rows rows
+		 */
+		public abstract void onSuccess(int rows);
 
 		/**
 		 * On failure.

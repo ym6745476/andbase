@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,11 +46,11 @@ public class XYEntry<K, V> implements Entry<K, V> {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @return the key
    * @see java.util.Map.Entry#getKey()
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:49
-   * @version v1.0
    */
   public K getKey() {
     return key;
@@ -59,11 +59,11 @@ public class XYEntry<K, V> implements Entry<K, V> {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @return the value
    * @see java.util.Map.Entry#getValue()
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:49
-   * @version v1.0
    */
   public V getValue() {
     return value;
@@ -72,12 +72,12 @@ public class XYEntry<K, V> implements Entry<K, V> {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param object the object
    * @return the v
    * @see java.util.Map.Entry#setValue(java.lang.Object)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:49
-   * @version v1.0
    */
   public V setValue(V object) {
     this.value = object;

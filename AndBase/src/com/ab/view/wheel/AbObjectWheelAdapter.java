@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,10 +17,15 @@
 package com.ab.view.wheel;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The simple Array wheel adapter.
+ * © 2012 amsoft.cn
+ * 名称：AbObjectWheelAdapter.java 
+ * 描述：轮子适配器（对象）
  *
- * @param <T> the element type
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-05-17 下午6:46:29
  */
 public class AbObjectWheelAdapter<T> implements AbWheelAdapter {
 	
@@ -57,12 +62,12 @@ public class AbObjectWheelAdapter<T> implements AbWheelAdapter {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param index the index
 	 * @return the item
 	 * @see com.ab.view.wheel.AbWheelAdapter#getItem(int)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:48
-	 * @version v1.0
 	 */
 	@Override
 	public String getItem(int index) {
@@ -75,11 +80,11 @@ public class AbObjectWheelAdapter<T> implements AbWheelAdapter {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @return the items count
 	 * @see com.ab.view.wheel.AbWheelAdapter#getItemsCount()
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:48
-	 * @version v1.0
 	 */
 	@Override
 	public int getItemsCount() {
@@ -89,11 +94,11 @@ public class AbObjectWheelAdapter<T> implements AbWheelAdapter {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @return the maximum length
 	 * @see com.ab.view.wheel.AbWheelAdapter#getMaximumLength()
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:48
-	 * @version v1.0
 	 */
 	@Override
 	public int getMaximumLength() {

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,9 +20,9 @@ package com.ab.download;
 /**
  * 描述：下载文件.
  *
- * @author zhaoqp
- * @date：2012-6-25 下午4:20:55
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2012-6-25 下午4:20:55
  */
 public class DownFile {
 	

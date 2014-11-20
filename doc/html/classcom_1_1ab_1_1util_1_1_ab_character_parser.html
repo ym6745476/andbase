@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.util.AbCharacterParser类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1util_1_1_ab_character_parser-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.util.AbCharacterParser类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a184bc2f66fe9113389e904338aa521ca"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a184bc2f66fe9113389e904338aa521ca">getResource</a> ()</td></tr>
+<tr class="separator:a184bc2f66fe9113389e904338aa521ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71f88438df352d6db9ab3544bcc941d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#ae71f88438df352d6db9ab3544bcc941d">setResource</a> (String <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#abbbc108bebf2370aff229d1631dce904">resource</a>)</td></tr>
+<tr class="separator:ae71f88438df352d6db9ab3544bcc941d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05514e3e6db4289e2a36659fc666619b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a05514e3e6db4289e2a36659fc666619b">convert</a> (String str)</td></tr>
+<tr class="separator:a05514e3e6db4289e2a36659fc666619b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c22ca7a3a888ed76fc0178ce1d43a6b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a5c22ca7a3a888ed76fc0178ce1d43a6b">getSelling</a> (String chs)</td></tr>
+<tr class="separator:a5c22ca7a3a888ed76fc0178ce1d43a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a2d122a65ace9eeb506c65743c6a19"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#af7a2d122a65ace9eeb506c65743c6a19">getSpelling</a> ()</td></tr>
+<tr class="separator:af7a2d122a65ace9eeb506c65743c6a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a102168b6c05259fc85d0ffbd00c1ff37"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a102168b6c05259fc85d0ffbd00c1ff37">getInstance</a> ()</td></tr>
+<tr class="separator:a102168b6c05259fc85d0ffbd00c1ff37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ac26524daad8b0e6ac329472479bb44db"><td class="memItemLeft" align="right" valign="top">static String[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#ac26524daad8b0e6ac329472479bb44db">pystr</a></td></tr>
+<tr class="separator:ac26524daad8b0e6ac329472479bb44db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a02b392171351652c08ff066af24abdd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a02b392171351652c08ff066af24abdd5">getChsAscii</a> (String chs)</td></tr>
+<tr class="separator:a02b392171351652c08ff066af24abdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aab20f3d15b128d48160c3adcbc13f70f"><td class="memItemLeft" align="right" valign="top">StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#aab20f3d15b128d48160c3adcbc13f70f">buffer</a></td></tr>
+<tr class="separator:aab20f3d15b128d48160c3adcbc13f70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbc108bebf2370aff229d1631dce904"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#abbbc108bebf2370aff229d1631dce904">resource</a></td></tr>
+<tr class="separator:abbbc108bebf2370aff229d1631dce904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a2f9b9a917c189b16b06fd1e93636628c"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a2f9b9a917c189b16b06fd1e93636628c">pyvalue</a></td></tr>
+<tr class="separator:a2f9b9a917c189b16b06fd1e93636628c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f60ba9e18bdecd14405c49ed30a8ea5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html#a6f60ba9e18bdecd14405c49ed30a8ea5">characterParser</a> = new <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a>()</td></tr>
+<tr class="separator:a6f60ba9e18bdecd14405c49ed30a8ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbCharacterParser.java 描述：汉字转换为拼音.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2011-11-10 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a05514e3e6db4289e2a36659fc666619b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbCharacterParser.convert </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>单字解析.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the str </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02b392171351652c08ff066af24abdd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.util.AbCharacterParser.getChsAscii </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>chs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>汉字转成ASCII码.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chs</td><td>the chs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the chs ascii </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a102168b6c05259fc85d0ffbd00c1ff37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a> com.ab.util.AbCharacterParser.getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the single instance of <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a>.</p>
+<dl class="section return"><dt>返回</dt><dd>single instance of <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a184bc2f66fe9113389e904338aa521ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbCharacterParser.getResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the resource.</p>
+<dl class="section return"><dt>返回</dt><dd>the resource </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c22ca7a3a888ed76fc0178ce1d43a6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbCharacterParser.getSelling </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>chs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>词组解析.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chs</td><td>the chs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the selling </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af7a2d122a65ace9eeb506c65743c6a19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbCharacterParser.getSpelling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the spelling.</p>
+<dl class="section return"><dt>返回</dt><dd>the spelling </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae71f88438df352d6db9ab3544bcc941d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.util.AbCharacterParser.setResource </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>resource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the resource.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>the new resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aab20f3d15b128d48160c3adcbc13f70f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringBuilder com.ab.util.AbCharacterParser.buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The buffer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6f60ba9e18bdecd14405c49ed30a8ea5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a> com.ab.util.AbCharacterParser.characterParser = new <a class="el" href="classcom_1_1ab_1_1util_1_1_ab_character_parser.html">AbCharacterParser</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The character parser. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac26524daad8b0e6ac329472479bb44db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String [] com.ab.util.AbCharacterParser.pystr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> String[] {<span class="stringliteral">&quot;a&quot;</span>, <span class="stringliteral">&quot;ai&quot;</span>, <span class="stringliteral">&quot;an&quot;</span>, <span class="stringliteral">&quot;ang&quot;</span>, <span class="stringliteral">&quot;ao&quot;</span>, <span class="stringliteral">&quot;ba&quot;</span>, <span class="stringliteral">&quot;bai&quot;</span>, <span class="stringliteral">&quot;ban&quot;</span>, <span class="stringliteral">&quot;bang&quot;</span>, <span class="stringliteral">&quot;bao&quot;</span>, <span class="stringliteral">&quot;bei&quot;</span>, <span class="stringliteral">&quot;ben&quot;</span>, <span class="stringliteral">&quot;beng&quot;</span>, <span class="stringliteral">&quot;bi&quot;</span>, <span class="stringliteral">&quot;bian&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;biao&quot;</span>, <span class="stringliteral">&quot;bie&quot;</span>, <span class="stringliteral">&quot;bin&quot;</span>, <span class="stringliteral">&quot;bing&quot;</span>, <span class="stringliteral">&quot;bo&quot;</span>, <span class="stringliteral">&quot;bu&quot;</span>, <span class="stringliteral">&quot;ca&quot;</span>, <span class="stringliteral">&quot;cai&quot;</span>, <span class="stringliteral">&quot;can&quot;</span>, <span class="stringliteral">&quot;cang&quot;</span>, <span class="stringliteral">&quot;cao&quot;</span>, <span class="stringliteral">&quot;ce&quot;</span>, <span class="stringliteral">&quot;ceng&quot;</span>, <span class="stringliteral">&quot;cha&quot;</span>, <span class="stringliteral">&quot;chai&quot;</span>, <span class="stringliteral">&quot;chan&quot;</span>, <span class="stringliteral">&quot;chang&quot;</span>, <span class="stringliteral">&quot;chao&quot;</span>, <span class="stringliteral">&quot;che&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;chen&quot;</span>, <span class="stringliteral">&quot;cheng&quot;</span>, <span class="stringliteral">&quot;chi&quot;</span>, <span class="stringliteral">&quot;chong&quot;</span>, <span class="stringliteral">&quot;chou&quot;</span>, <span class="stringliteral">&quot;chu&quot;</span>, <span class="stringliteral">&quot;chuai&quot;</span>, <span class="stringliteral">&quot;chuan&quot;</span>, <span class="stringliteral">&quot;chuang&quot;</span>, <span class="stringliteral">&quot;chui&quot;</span>, <span class="stringliteral">&quot;chun&quot;</span>, <span class="stringliteral">&quot;chuo&quot;</span>, <span class="stringliteral">&quot;ci&quot;</span>, <span class="stringliteral">&quot;cong&quot;</span>, <span class="stringliteral">&quot;cou&quot;</span>, <span class="stringliteral">&quot;cu&quot;</span>, <span class="stringliteral">&quot;cuan&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;cui&quot;</span>, <span class="stringliteral">&quot;cun&quot;</span>, <span class="stringliteral">&quot;cuo&quot;</span>, <span class="stringliteral">&quot;da&quot;</span>, <span class="stringliteral">&quot;dai&quot;</span>, <span class="stringliteral">&quot;dan&quot;</span>, <span class="stringliteral">&quot;dang&quot;</span>, <span class="stringliteral">&quot;dao&quot;</span>, <span class="stringliteral">&quot;de&quot;</span>, <span class="stringliteral">&quot;deng&quot;</span>, <span class="stringliteral">&quot;di&quot;</span>, <span class="stringliteral">&quot;dian&quot;</span>, <span class="stringliteral">&quot;diao&quot;</span>, <span class="stringliteral">&quot;die&quot;</span>, <span class="stringliteral">&quot;ding&quot;</span>, <span class="stringliteral">&quot;diu&quot;</span>, <span class="stringliteral">&quot;dong&quot;</span>, <span class="stringliteral">&quot;dou&quot;</span>, <span class="stringliteral">&quot;du&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;duan&quot;</span>, <span class="stringliteral">&quot;dui&quot;</span>, <span class="stringliteral">&quot;dun&quot;</span>, <span class="stringliteral">&quot;duo&quot;</span>, <span class="stringliteral">&quot;e&quot;</span>, <span class="stringliteral">&quot;en&quot;</span>, <span class="stringliteral">&quot;er&quot;</span>, <span class="stringliteral">&quot;fa&quot;</span>, <span class="stringliteral">&quot;fan&quot;</span>, <span class="stringliteral">&quot;fang&quot;</span>, <span class="stringliteral">&quot;fei&quot;</span>, <span class="stringliteral">&quot;fen&quot;</span>, <span class="stringliteral">&quot;feng&quot;</span>, <span class="stringliteral">&quot;fo&quot;</span>, <span class="stringliteral">&quot;fou&quot;</span>, <span class="stringliteral">&quot;fu&quot;</span>, <span class="stringliteral">&quot;ga&quot;</span>, <span class="stringliteral">&quot;gai&quot;</span>, <span class="stringliteral">&quot;gan&quot;</span>, <span class="stringliteral">&quot;gang&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;gao&quot;</span>, <span class="stringliteral">&quot;ge&quot;</span>, <span class="stringliteral">&quot;gei&quot;</span>, <span class="stringliteral">&quot;gen&quot;</span>, <span class="stringliteral">&quot;geng&quot;</span>, <span class="stringliteral">&quot;gong&quot;</span>, <span class="stringliteral">&quot;gou&quot;</span>, <span class="stringliteral">&quot;gu&quot;</span>, <span class="stringliteral">&quot;gua&quot;</span>, <span class="stringliteral">&quot;guai&quot;</span>, <span class="stringliteral">&quot;guan&quot;</span>, <span class="stringliteral">&quot;guang&quot;</span>, <span class="stringliteral">&quot;gui&quot;</span>, <span class="stringliteral">&quot;gun&quot;</span>, <span class="stringliteral">&quot;guo&quot;</span>, <span class="stringliteral">&quot;ha&quot;</span>, <span class="stringliteral">&quot;hai&quot;</span>, <span class="stringliteral">&quot;han&quot;</span>, <span class="stringliteral">&quot;hang&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;hao&quot;</span>, <span class="stringliteral">&quot;he&quot;</span>, <span class="stringliteral">&quot;hei&quot;</span>, <span class="stringliteral">&quot;hen&quot;</span>, <span class="stringliteral">&quot;heng&quot;</span>, <span class="stringliteral">&quot;hong&quot;</span>, <span class="stringliteral">&quot;hou&quot;</span>, <span class="stringliteral">&quot;hu&quot;</span>, <span class="stringliteral">&quot;hua&quot;</span>, <span class="stringliteral">&quot;huai&quot;</span>, <span class="stringliteral">&quot;huan&quot;</span>, <span class="stringliteral">&quot;huang&quot;</span>, <span class="stringliteral">&quot;hui&quot;</span>, <span class="stringliteral">&quot;hun&quot;</span>, <span class="stringliteral">&quot;huo&quot;</span>, <span class="stringliteral">&quot;ji&quot;</span>, <span class="stringliteral">&quot;jia&quot;</span>, <span class="stringliteral">&quot;jian&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;jiang&quot;</span>, <span class="stringliteral">&quot;jiao&quot;</span>, <span class="stringliteral">&quot;jie&quot;</span>, <span class="stringliteral">&quot;jin&quot;</span>, <span class="stringliteral">&quot;jing&quot;</span>, <span class="stringliteral">&quot;jiong&quot;</span>, <span class="stringliteral">&quot;jiu&quot;</span>, <span class="stringliteral">&quot;ju&quot;</span>, <span class="stringliteral">&quot;juan&quot;</span>, <span class="stringliteral">&quot;jue&quot;</span>, <span class="stringliteral">&quot;jun&quot;</span>, <span class="stringliteral">&quot;ka&quot;</span>, <span class="stringliteral">&quot;kai&quot;</span>, <span class="stringliteral">&quot;kan&quot;</span>, <span class="stringliteral">&quot;kang&quot;</span>, <span class="stringliteral">&quot;kao&quot;</span>, <span class="stringliteral">&quot;ke&quot;</span>, <span class="stringliteral">&quot;ken&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;keng&quot;</span>, <span class="stringliteral">&quot;kong&quot;</span>, <span class="stringliteral">&quot;kou&quot;</span>, <span class="stringliteral">&quot;ku&quot;</span>, <span class="stringliteral">&quot;kua&quot;</span>, <span class="stringliteral">&quot;kuai&quot;</span>, <span class="stringliteral">&quot;kuan&quot;</span>, <span class="stringliteral">&quot;kuang&quot;</span>, <span class="stringliteral">&quot;kui&quot;</span>, <span class="stringliteral">&quot;kun&quot;</span>, <span class="stringliteral">&quot;kuo&quot;</span>, <span class="stringliteral">&quot;la&quot;</span>, <span class="stringliteral">&quot;lai&quot;</span>, <span class="stringliteral">&quot;lan&quot;</span>, <span class="stringliteral">&quot;lang&quot;</span>, <span class="stringliteral">&quot;lao&quot;</span>, <span class="stringliteral">&quot;le&quot;</span>, <span class="stringliteral">&quot;lei&quot;</span>, <span class="stringliteral">&quot;leng&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;li&quot;</span>, <span class="stringliteral">&quot;lia&quot;</span>, <span class="stringliteral">&quot;lian&quot;</span>, <span class="stringliteral">&quot;liang&quot;</span>, <span class="stringliteral">&quot;liao&quot;</span>, <span class="stringliteral">&quot;lie&quot;</span>, <span class="stringliteral">&quot;lin&quot;</span>, <span class="stringliteral">&quot;ling&quot;</span>, <span class="stringliteral">&quot;liu&quot;</span>, <span class="stringliteral">&quot;long&quot;</span>, <span class="stringliteral">&quot;lou&quot;</span>, <span class="stringliteral">&quot;lu&quot;</span>, <span class="stringliteral">&quot;lv&quot;</span>, <span class="stringliteral">&quot;luan&quot;</span>, <span class="stringliteral">&quot;lue&quot;</span>, <span class="stringliteral">&quot;lun&quot;</span>, <span class="stringliteral">&quot;luo&quot;</span>, <span class="stringliteral">&quot;ma&quot;</span>, <span class="stringliteral">&quot;mai&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;man&quot;</span>, <span class="stringliteral">&quot;mang&quot;</span>, <span class="stringliteral">&quot;mao&quot;</span>, <span class="stringliteral">&quot;me&quot;</span>, <span class="stringliteral">&quot;mei&quot;</span>, <span class="stringliteral">&quot;men&quot;</span>, <span class="stringliteral">&quot;meng&quot;</span>, <span class="stringliteral">&quot;mi&quot;</span>, <span class="stringliteral">&quot;mian&quot;</span>, <span class="stringliteral">&quot;miao&quot;</span>, <span class="stringliteral">&quot;mie&quot;</span>, <span class="stringliteral">&quot;min&quot;</span>, <span class="stringliteral">&quot;ming&quot;</span>, <span class="stringliteral">&quot;miu&quot;</span>, <span class="stringliteral">&quot;mo&quot;</span>, <span class="stringliteral">&quot;mou&quot;</span>, <span class="stringliteral">&quot;mu&quot;</span>, <span class="stringliteral">&quot;na&quot;</span>, <span class="stringliteral">&quot;nai&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;nan&quot;</span>, <span class="stringliteral">&quot;nang&quot;</span>, <span class="stringliteral">&quot;nao&quot;</span>, <span class="stringliteral">&quot;ne&quot;</span>, <span class="stringliteral">&quot;nei&quot;</span>, <span class="stringliteral">&quot;nen&quot;</span>, <span class="stringliteral">&quot;neng&quot;</span>, <span class="stringliteral">&quot;ni&quot;</span>, <span class="stringliteral">&quot;nian&quot;</span>, <span class="stringliteral">&quot;niang&quot;</span>, <span class="stringliteral">&quot;niao&quot;</span>, <span class="stringliteral">&quot;nie&quot;</span>, <span class="stringliteral">&quot;nin&quot;</span>, <span class="stringliteral">&quot;ning&quot;</span>, <span class="stringliteral">&quot;niu&quot;</span>, <span class="stringliteral">&quot;nong&quot;</span>, <span class="stringliteral">&quot;nu&quot;</span>, <span class="stringliteral">&quot;nv&quot;</span>, <span class="stringliteral">&quot;nuan&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;nue&quot;</span>, <span class="stringliteral">&quot;nuo&quot;</span>, <span class="stringliteral">&quot;o&quot;</span>, <span class="stringliteral">&quot;ou&quot;</span>, <span class="stringliteral">&quot;pa&quot;</span>, <span class="stringliteral">&quot;pai&quot;</span>, <span class="stringliteral">&quot;pan&quot;</span>, <span class="stringliteral">&quot;pang&quot;</span>, <span class="stringliteral">&quot;pao&quot;</span>, <span class="stringliteral">&quot;pei&quot;</span>, <span class="stringliteral">&quot;pen&quot;</span>, <span class="stringliteral">&quot;peng&quot;</span>, <span class="stringliteral">&quot;pi&quot;</span>, <span class="stringliteral">&quot;pian&quot;</span>, <span class="stringliteral">&quot;piao&quot;</span>, <span class="stringliteral">&quot;pie&quot;</span>, <span class="stringliteral">&quot;pin&quot;</span>, <span class="stringliteral">&quot;ping&quot;</span>, <span class="stringliteral">&quot;po&quot;</span>, <span class="stringliteral">&quot;pu&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;qi&quot;</span>, <span class="stringliteral">&quot;qia&quot;</span>, <span class="stringliteral">&quot;qian&quot;</span>, <span class="stringliteral">&quot;qiang&quot;</span>, <span class="stringliteral">&quot;qiao&quot;</span>, <span class="stringliteral">&quot;qie&quot;</span>, <span class="stringliteral">&quot;qin&quot;</span>, <span class="stringliteral">&quot;qing&quot;</span>, <span class="stringliteral">&quot;qiong&quot;</span>, <span class="stringliteral">&quot;qiu&quot;</span>, <span class="stringliteral">&quot;qu&quot;</span>, <span class="stringliteral">&quot;quan&quot;</span>, <span class="stringliteral">&quot;que&quot;</span>, <span class="stringliteral">&quot;qun&quot;</span>, <span class="stringliteral">&quot;ran&quot;</span>, <span class="stringliteral">&quot;rang&quot;</span>, <span class="stringliteral">&quot;rao&quot;</span>, <span class="stringliteral">&quot;re&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;ren&quot;</span>, <span class="stringliteral">&quot;reng&quot;</span>, <span class="stringliteral">&quot;ri&quot;</span>, <span class="stringliteral">&quot;rong&quot;</span>, <span class="stringliteral">&quot;rou&quot;</span>, <span class="stringliteral">&quot;ru&quot;</span>, <span class="stringliteral">&quot;ruan&quot;</span>, <span class="stringliteral">&quot;rui&quot;</span>, <span class="stringliteral">&quot;run&quot;</span>, <span class="stringliteral">&quot;ruo&quot;</span>, <span class="stringliteral">&quot;sa&quot;</span>, <span class="stringliteral">&quot;sai&quot;</span>, <span class="stringliteral">&quot;san&quot;</span>, <span class="stringliteral">&quot;sang&quot;</span>, <span class="stringliteral">&quot;sao&quot;</span>, <span class="stringliteral">&quot;se&quot;</span>, <span class="stringliteral">&quot;sen&quot;</span>, <span class="stringliteral">&quot;seng&quot;</span>, <span class="stringliteral">&quot;sha&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;shai&quot;</span>, <span class="stringliteral">&quot;shan&quot;</span>, <span class="stringliteral">&quot;shang&quot;</span>, <span class="stringliteral">&quot;shao&quot;</span>, <span class="stringliteral">&quot;she&quot;</span>, <span class="stringliteral">&quot;shen&quot;</span>, <span class="stringliteral">&quot;sheng&quot;</span>, <span class="stringliteral">&quot;shi&quot;</span>, <span class="stringliteral">&quot;shou&quot;</span>, <span class="stringliteral">&quot;shu&quot;</span>, <span class="stringliteral">&quot;shua&quot;</span>, <span class="stringliteral">&quot;shuai&quot;</span>, <span class="stringliteral">&quot;shuan&quot;</span>, <span class="stringliteral">&quot;shuang&quot;</span>, <span class="stringliteral">&quot;shui&quot;</span>, <span class="stringliteral">&quot;shun&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;shuo&quot;</span>, <span class="stringliteral">&quot;si&quot;</span>, <span class="stringliteral">&quot;song&quot;</span>, <span class="stringliteral">&quot;sou&quot;</span>, <span class="stringliteral">&quot;su&quot;</span>, <span class="stringliteral">&quot;suan&quot;</span>, <span class="stringliteral">&quot;sui&quot;</span>, <span class="stringliteral">&quot;sun&quot;</span>, <span class="stringliteral">&quot;suo&quot;</span>, <span class="stringliteral">&quot;ta&quot;</span>, <span class="stringliteral">&quot;tai&quot;</span>, <span class="stringliteral">&quot;tan&quot;</span>, <span class="stringliteral">&quot;tang&quot;</span>, <span class="stringliteral">&quot;tao&quot;</span>, <span class="stringliteral">&quot;te&quot;</span>, <span class="stringliteral">&quot;teng&quot;</span>, <span class="stringliteral">&quot;ti&quot;</span>, <span class="stringliteral">&quot;tian&quot;</span>, <span class="stringliteral">&quot;tiao&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;tie&quot;</span>, <span class="stringliteral">&quot;ting&quot;</span>, <span class="stringliteral">&quot;tong&quot;</span>, <span class="stringliteral">&quot;tou&quot;</span>, <span class="stringliteral">&quot;tu&quot;</span>, <span class="stringliteral">&quot;tuan&quot;</span>, <span class="stringliteral">&quot;tui&quot;</span>, <span class="stringliteral">&quot;tun&quot;</span>, <span class="stringliteral">&quot;tuo&quot;</span>, <span class="stringliteral">&quot;wa&quot;</span>, <span class="stringliteral">&quot;wai&quot;</span>, <span class="stringliteral">&quot;wan&quot;</span>, <span class="stringliteral">&quot;wang&quot;</span>, <span class="stringliteral">&quot;wei&quot;</span>, <span class="stringliteral">&quot;wen&quot;</span>, <span class="stringliteral">&quot;weng&quot;</span>, <span class="stringliteral">&quot;wo&quot;</span>, <span class="stringliteral">&quot;wu&quot;</span>, <span class="stringliteral">&quot;xi&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;xia&quot;</span>, <span class="stringliteral">&quot;xian&quot;</span>, <span class="stringliteral">&quot;xiang&quot;</span>, <span class="stringliteral">&quot;xiao&quot;</span>, <span class="stringliteral">&quot;xie&quot;</span>, <span class="stringliteral">&quot;xin&quot;</span>, <span class="stringliteral">&quot;xing&quot;</span>, <span class="stringliteral">&quot;xiong&quot;</span>, <span class="stringliteral">&quot;xiu&quot;</span>, <span class="stringliteral">&quot;xu&quot;</span>, <span class="stringliteral">&quot;xuan&quot;</span>, <span class="stringliteral">&quot;xue&quot;</span>, <span class="stringliteral">&quot;xun&quot;</span>, <span class="stringliteral">&quot;ya&quot;</span>, <span class="stringliteral">&quot;yan&quot;</span>, <span class="stringliteral">&quot;yang&quot;</span>, <span class="stringliteral">&quot;yao&quot;</span>, <span class="stringliteral">&quot;ye&quot;</span>, <span class="stringliteral">&quot;yi&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;yin&quot;</span>, <span class="stringliteral">&quot;ying&quot;</span>, <span class="stringliteral">&quot;yo&quot;</span>, <span class="stringliteral">&quot;yong&quot;</span>, <span class="stringliteral">&quot;you&quot;</span>, <span class="stringliteral">&quot;yu&quot;</span>, <span class="stringliteral">&quot;yuan&quot;</span>, <span class="stringliteral">&quot;yue&quot;</span>, <span class="stringliteral">&quot;yun&quot;</span>, <span class="stringliteral">&quot;za&quot;</span>, <span class="stringliteral">&quot;zai&quot;</span>, <span class="stringliteral">&quot;zan&quot;</span>, <span class="stringliteral">&quot;zang&quot;</span>, <span class="stringliteral">&quot;zao&quot;</span>, <span class="stringliteral">&quot;ze&quot;</span>, <span class="stringliteral">&quot;zei&quot;</span>, <span class="stringliteral">&quot;zen&quot;</span>, <span class="stringliteral">&quot;zeng&quot;</span>, <span class="stringliteral">&quot;zha&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;zhai&quot;</span>, <span class="stringliteral">&quot;zhan&quot;</span>, <span class="stringliteral">&quot;zhang&quot;</span>, <span class="stringliteral">&quot;zhao&quot;</span>, <span class="stringliteral">&quot;zhe&quot;</span>, <span class="stringliteral">&quot;zhen&quot;</span>, <span class="stringliteral">&quot;zheng&quot;</span>, <span class="stringliteral">&quot;zhi&quot;</span>, <span class="stringliteral">&quot;zhong&quot;</span>, <span class="stringliteral">&quot;zhou&quot;</span>, <span class="stringliteral">&quot;zhu&quot;</span>, <span class="stringliteral">&quot;zhua&quot;</span>, <span class="stringliteral">&quot;zhuai&quot;</span>, <span class="stringliteral">&quot;zhuan&quot;</span>, <span class="stringliteral">&quot;zhuang&quot;</span>, <span class="stringliteral">&quot;zhui&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;zhun&quot;</span>, <span class="stringliteral">&quot;zhuo&quot;</span>, <span class="stringliteral">&quot;zi&quot;</span>, <span class="stringliteral">&quot;zong&quot;</span>, <span class="stringliteral">&quot;zou&quot;</span>, <span class="stringliteral">&quot;zu&quot;</span>, <span class="stringliteral">&quot;zuan&quot;</span>, <span class="stringliteral">&quot;zui&quot;</span>, <span class="stringliteral">&quot;zun&quot;</span>, <span class="stringliteral">&quot;zuo&quot;</span>}</div>
+</div><!-- fragment --><p>The pystr. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f9b9a917c189b16b06fd1e93636628c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.util.AbCharacterParser.pyvalue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> <span class="keywordtype">int</span>[] {-20319, -20317, -20304, -20295, -20292, -20283, -20265, -20257, -20242, -20230, -20051, -20036, -20032,</div>
+<div class="line">            -20026, -20002, -19990, -19986, -19982, -19976, -19805, -19784, -19775, -19774, -19763, -19756, -19751, -19746, -19741, -19739, -19728,</div>
+<div class="line">            -19725, -19715, -19540, -19531, -19525, -19515, -19500, -19484, -19479, -19467, -19289, -19288, -19281, -19275, -19270, -19263, -19261,</div>
+<div class="line">            -19249, -19243, -19242, -19238, -19235, -19227, -19224, -19218, -19212, -19038, -19023, -19018, -19006, -19003, -18996, -18977, -18961,</div>
+<div class="line">            -18952, -18783, -18774, -18773, -18763, -18756, -18741, -18735, -18731, -18722, -18710, -18697, -18696, -18526, -18518, -18501, -18490,</div>
+<div class="line">            -18478, -18463, -18448, -18447, -18446, -18239, -18237, -18231, -18220, -18211, -18201, -18184, -18183, -18181, -18012, -17997, -17988,</div>
+<div class="line">            -17970, -17964, -17961, -17950, -17947, -17931, -17928, -17922, -17759, -17752, -17733, -17730, -17721, -17703, -17701, -17697, -17692,</div>
+<div class="line">            -17683, -17676, -17496, -17487, -17482, -17468, -17454, -17433, -17427, -17417, -17202, -17185, -16983, -16970, -16942, -16915, -16733,</div>
+<div class="line">            -16708, -16706, -16689, -16664, -16657, -16647, -16474, -16470, -16465, -16459, -16452, -16448, -16433, -16429, -16427, -16423, -16419,</div>
+<div class="line">            -16412, -16407, -16403, -16401, -16393, -16220, -16216, -16212, -16205, -16202, -16187, -16180, -16171, -16169, -16158, -16155, -15959,</div>
+<div class="line">            -15958, -15944, -15933, -15920, -15915, -15903, -15889, -15878, -15707, -15701, -15681, -15667, -15661, -15659, -15652, -15640, -15631,</div>
+<div class="line">            -15625, -15454, -15448, -15436, -15435, -15419, -15416, -15408, -15394, -15385, -15377, -15375, -15369, -15363, -15362, -15183, -15180,</div>
+<div class="line">            -15165, -15158, -15153, -15150, -15149, -15144, -15143, -15141, -15140, -15139, -15128, -15121, -15119, -15117, -15110, -15109, -14941,</div>
+<div class="line">            -14937, -14933, -14930, -14929, -14928, -14926, -14922, -14921, -14914, -14908, -14902, -14894, -14889, -14882, -14873, -14871, -14857,</div>
+<div class="line">            -14678, -14674, -14670, -14668, -14663, -14654, -14645, -14630, -14594, -14429, -14407, -14399, -14384, -14379, -14368, -14355, -14353,</div>
+<div class="line">            -14345, -14170, -14159, -14151, -14149, -14145, -14140, -14137, -14135, -14125, -14123, -14122, -14112, -14109, -14099, -14097, -14094,</div>
+<div class="line">            -14092, -14090, -14087, -14083, -13917, -13914, -13910, -13907, -13906, -13905, -13896, -13894, -13878, -13870, -13859, -13847, -13831,</div>
+<div class="line">            -13658, -13611, -13601, -13406, -13404, -13400, -13398, -13395, -13391, -13387, -13383, -13367, -13359, -13356, -13343, -13340, -13329,</div>
+<div class="line">            -13326, -13318, -13147, -13138, -13120, -13107, -13096, -13095, -13091, -13076, -13068, -13063, -13060, -12888, -12875, -12871, -12860,</div>
+<div class="line">            -12858, -12852, -12849, -12838, -12831, -12829, -12812, -12802, -12607, -12597, -12594, -12585, -12556, -12359, -12346, -12320, -12300,</div>
+<div class="line">            -12120, -12099, -12089, -12074, -12067, -12058, -12039, -11867, -11861, -11847, -11831, -11798, -11781, -11604, -11589, -11536, -11358,</div>
+<div class="line">            -11340, -11339, -11324, -11303, -11097, -11077, -11067, -11055, -11052, -11045, -11041, -11038, -11024, -11020, -11019, -11018, -11014,</div>
+<div class="line">            -10838, -10832, -10815, -10800, -10790, -10780, -10764, -10587, -10544, -10533, -10519, -10331, -10329, -10328, -10322, -10315, -10309,</div>
+<div class="line">            -10307, -10296, -10281, -10274, -10270, -10262, -10260, -10256, -10254}</div>
+</div><!-- fragment --><p>The pyvalue. </p>
+
+</div>
+</div>
+<a class="anchor" id="abbbc108bebf2370aff229d1631dce904"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbCharacterParser.resource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The resource. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/util/<a class="el" href="_ab_character_parser_8java.html">AbCharacterParser.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

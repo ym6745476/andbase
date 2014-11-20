@@ -27,13 +27,6 @@
         android:text="SlidingMenu+SlidingTab" />
 
     <Button
-        android:id="@+id/scrollList"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dip"
-        android:text="ScrollView+ListView" />
-
-    <Button
         android:id="@+id/scrollPager"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

@@ -15,8 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
 import com.ab.util.AbStrUtil;
+import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
@@ -48,7 +48,8 @@ public class RegisterActivity extends AbActivity {
 		mAbTitleBar.setTitleBarBackground(R.drawable.top_bg);
 		mAbTitleBar.setTitleTextMargin(10, 0, 0, 0);
 		mAbTitleBar.setLogoLine(R.drawable.line);
-        
+		//设置AbTitleBar在最上
+		this.setTitleBarOverlay(true);
         userName = (EditText)this.findViewById(R.id.userName);
 		userPwd = (EditText)this.findViewById(R.id.userPwd);
 		userPwd2 = (EditText)this.findViewById(R.id.userPwd2);
@@ -60,10 +61,10 @@ public class RegisterActivity extends AbActivity {
         mClear4 = (ImageButton)findViewById(R.id.clearEmail);
         Button agreementBtn = (Button) findViewById(R.id.agreementBtn);
         
-        //userName.setText("zhaoqp");
+        //userName.setText("amsoft.cn");
         //userPwd.setText("123456");
         //userPwd2.setText("123456");
-        //email.setText("zhaoqp2010@163.com");
+        //email.setText("amsoft.cn2010@163.com");
         
 		agreementBtn.setOnClickListener(new OnClickListener() {
 			
@@ -106,7 +107,7 @@ public class RegisterActivity extends AbActivity {
 						userName.setText(str);
 						String str1 = userName.getText().toString().trim();
 						userName.setSelection(str1.length());
-						showToast(R.string.error_name_expr);
+						AbToastUtil.showToast(RegisterActivity.this,R.string.error_name_expr);
 					}
 					mClear1.postDelayed(new Runnable(){
 
@@ -146,7 +147,7 @@ public class RegisterActivity extends AbActivity {
 						userPwd.setText(str);
 						String str1 = userPwd.getText().toString().trim();
 						userPwd.setSelection(str1.length());
-						showToast(R.string.error_name_expr);
+						AbToastUtil.showToast(RegisterActivity.this,R.string.error_name_expr);
 					}
 					
 					mClear2.postDelayed(new Runnable(){
@@ -185,7 +186,7 @@ public class RegisterActivity extends AbActivity {
 						userPwd2.setText(str);
 						String str1 = userPwd2.getText().toString().trim();
 						userPwd2.setSelection(str1.length());
-						showToast(R.string.error_name_expr);
+						AbToastUtil.showToast(RegisterActivity.this,R.string.error_name_expr);
 					}
 					mClear3.postDelayed(new Runnable(){
 
@@ -225,7 +226,7 @@ public class RegisterActivity extends AbActivity {
 						email.setText(str);
 						String str1 = email.getText().toString().trim();
 						email.setSelection(str1.length());
-						showToast(R.string.error_email_expr2);
+						AbToastUtil.showToast(RegisterActivity.this,R.string.error_email_expr2);
 					}
 					mClear4.postDelayed(new Runnable(){
 
@@ -296,104 +297,104 @@ public class RegisterActivity extends AbActivity {
 			final String mStr_pwd2 = userPwd2.getText().toString().trim();
 			final String mStr_email = email.getText().toString().trim();
 			if (TextUtils.isEmpty(mStr_name)) {
-				showToast(R.string.error_name);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_name);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (!AbStrUtil.isNumberLetter(mStr_name)) {
-				showToast(R.string.error_name_expr);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_name_expr);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_name)<3) {
-				showToast(R.string.error_name_length1);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_name_length1);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_name)>20) {
-				showToast(R.string.error_name_length2);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_name_length2);
 				userName.setFocusable(true);
 				userName.requestFocus();
 				return;
 			}
 			
 			if (TextUtils.isEmpty(mStr_pwd)) {
-				showToast(R.string.error_pwd);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd);
 				userPwd.setFocusable(true);
 				userPwd.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_pwd)<6) {
-				showToast(R.string.error_pwd_length1);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd_length1);
 				userPwd.setFocusable(true);
 				userPwd.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_pwd)>20) {
-				showToast(R.string.error_pwd_length2);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd_length2);
 				userPwd.setFocusable(true);
 				userPwd.requestFocus();
 				return;
 			}
 			
 			if (TextUtils.isEmpty(mStr_pwd2)) {
-				showToast(R.string.error_pwd);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd);
 				userPwd2.setFocusable(true);
 				userPwd2.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_pwd2)<6) {
-				showToast(R.string.error_pwd_length1);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd_length1);
 				userPwd2.setFocusable(true);
 				userPwd2.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.strLength(mStr_pwd2)>20) {
-				showToast(R.string.error_pwd_length2);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd_length2);
 				userPwd2.setFocusable(true);
 				userPwd2.requestFocus();
 				return;
 			}
 			
 			if (!mStr_pwd2.equals(mStr_pwd)) {
-				showToast(R.string.error_pwd_match);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd_match);
 				userPwd2.setFocusable(true);
 				userPwd2.requestFocus();
 				return;
 			}
 			
 			if (AbStrUtil.isEmpty(mStr_email)) {
-				showToast(R.string.error_email);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_email);
 				email.setFocusable(true);
 				email.requestFocus();
 				return;
 			}
 			
 			if (!AbStrUtil.isEmail(mStr_email)) {
-				showToast(R.string.error_email_expr);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_email_expr);
 				email.setFocusable(true);
 				email.requestFocus();
 				return;
 			}
 			
 			if(!checkBox.isChecked()){
-				showToast(R.string.error_agreement);
+				AbToastUtil.showToast(RegisterActivity.this,R.string.error_agreement);
 				return;
 			}
 			
 			
 			//showProgressDialog();
-			showToast("演示界面,没什么用");
+			AbToastUtil.showToast(RegisterActivity.this,"演示界面,没什么用");
 			
 		}
 	}

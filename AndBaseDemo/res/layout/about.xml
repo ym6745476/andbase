@@ -30,7 +30,7 @@
                     android:paddingTop="5dip"
                     android:text="@string/version_lable"
                     android:textColor="@color/orange"
-                    android:textSize="18dip" />
+                    android:textSize="18dip"/>
 
                 <TextView
                     android:id="@+id/version_val"
@@ -57,6 +57,7 @@
                     android:textSize="18sp" >
                 </TextView>
             </RelativeLayout>
+            
         </LinearLayout>
     </ScrollView>
 

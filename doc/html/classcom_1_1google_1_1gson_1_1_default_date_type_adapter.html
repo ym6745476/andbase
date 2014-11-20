@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.DefaultDateTypeAdapter类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html">DefaultDateTypeAdapter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.DefaultDateTypeAdapter类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.DefaultDateTypeAdapter 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.png" usemap="#com.google.gson.DefaultDateTypeAdapter_map" alt=""/>
+  <map id="com.google.gson.DefaultDateTypeAdapter_map" name="com.google.gson.DefaultDateTypeAdapter_map">
+<area href="interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4.html" alt="com.google.gson.JsonSerializer&lt; T &gt;" shape="rect" coords="0,0,251,24"/>
+<area href="interfacecom_1_1google_1_1gson_1_1_json_deserializer_3_01_t_01_4.html" alt="com.google.gson.JsonDeserializer&lt; T &gt;" shape="rect" coords="261,0,512,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac7c85d2d5aa03a0dbae53e515f8c9023"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#ac7c85d2d5aa03a0dbae53e515f8c9023">DefaultDateTypeAdapter</a> (int dateStyle, int timeStyle)</td></tr>
+<tr class="separator:ac7c85d2d5aa03a0dbae53e515f8c9023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87f80eec6a974879f8bd12b651ade86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#ad87f80eec6a974879f8bd12b651ade86">serialize</a> (Date src, Type typeOfSrc, <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serialization_context.html">JsonSerializationContext</a> context)</td></tr>
+<tr class="separator:ad87f80eec6a974879f8bd12b651ade86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95afa548702ea2249ddc8cf76a9aa0b"><td class="memItemLeft" align="right" valign="top">Date&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#af95afa548702ea2249ddc8cf76a9aa0b">deserialize</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> json, Type typeOfT, <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_deserialization_context.html">JsonDeserializationContext</a> context)  throws JsonParseException </td></tr>
+<tr class="separator:af95afa548702ea2249ddc8cf76a9aa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c8f7d18f4bd0c76d61a34eb68d0dae"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#a89c8f7d18f4bd0c76d61a34eb68d0dae">toString</a> ()</td></tr>
+<tr class="separator:a89c8f7d18f4bd0c76d61a34eb68d0dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4.html">com.google.gson.JsonSerializer&lt; T &gt;</a></td></tr>
+<tr class="memitem:ac5f25abd01336bbd54515201d922a47c inherit pub_methods_interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4.html#ac5f25abd01336bbd54515201d922a47c">serialize</a> (T src, Type typeOfSrc, <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serialization_context.html">JsonSerializationContext</a> context)</td></tr>
+<tr class="separator:ac5f25abd01336bbd54515201d922a47c inherit pub_methods_interfacecom_1_1google_1_1gson_1_1_json_serializer_3_01_t_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a34a68f49203ffe92c2bd15ad093ff528"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#a34a68f49203ffe92c2bd15ad093ff528">DefaultDateTypeAdapter</a> ()</td></tr>
+<tr class="separator:a34a68f49203ffe92c2bd15ad093ff528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95f7f9acad8dd7ac0e3c7c213e17aa0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#ad95f7f9acad8dd7ac0e3c7c213e17aa0">DefaultDateTypeAdapter</a> (String datePattern)</td></tr>
+<tr class="separator:ad95f7f9acad8dd7ac0e3c7c213e17aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9582bd56ce6f4e5ba006b0be4b036e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#adb9582bd56ce6f4e5ba006b0be4b036e">DefaultDateTypeAdapter</a> (int style)</td></tr>
+<tr class="separator:adb9582bd56ce6f4e5ba006b0be4b036e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac498f23c7756527e39a76eeb4e746959"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#ac498f23c7756527e39a76eeb4e746959">DefaultDateTypeAdapter</a> (DateFormat <a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#a9f5bff20a4294a3123cf861a896a930d">enUsFormat</a>, DateFormat <a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#aa7a4f7e06b002c255b5f574b6ec6068f">localFormat</a>)</td></tr>
+<tr class="separator:ac498f23c7756527e39a76eeb4e746959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a94ec9e9d54af351bc3f80d0002e13f79"><td class="memItemLeft" align="right" valign="top">Date&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#a94ec9e9d54af351bc3f80d0002e13f79">deserializeToDate</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> json)</td></tr>
+<tr class="separator:a94ec9e9d54af351bc3f80d0002e13f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9f5bff20a4294a3123cf861a896a930d"><td class="memItemLeft" align="right" valign="top">final DateFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#a9f5bff20a4294a3123cf861a896a930d">enUsFormat</a></td></tr>
+<tr class="separator:a9f5bff20a4294a3123cf861a896a930d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a4f7e06b002c255b5f574b6ec6068f"><td class="memItemLeft" align="right" valign="top">final DateFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#aa7a4f7e06b002c255b5f574b6ec6068f">localFormat</a></td></tr>
+<tr class="separator:aa7a4f7e06b002c255b5f574b6ec6068f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50d2149f7de7ab4a5e6fc317a5bac335"><td class="memItemLeft" align="right" valign="top">final DateFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_default_date_type_adapter.html#a50d2149f7de7ab4a5e6fc317a5bac335">iso8601Format</a></td></tr>
+<tr class="separator:a50d2149f7de7ab4a5e6fc317a5bac335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This type adapter supports three subclasses of date: Date, Timestamp, and java.sql.Date.</p>
+<dl class="section author"><dt>作者</dt><dd>Inderjeet Singh </dd>
+<dd>
+Joel Leitch </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a34a68f49203ffe92c2bd15ad093ff528"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.DefaultDateTypeAdapter.DefaultDateTypeAdapter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad95f7f9acad8dd7ac0e3c7c213e17aa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.DefaultDateTypeAdapter.DefaultDateTypeAdapter </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>datePattern</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb9582bd56ce6f4e5ba006b0be4b036e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.DefaultDateTypeAdapter.DefaultDateTypeAdapter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac7c85d2d5aa03a0dbae53e515f8c9023"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.DefaultDateTypeAdapter.DefaultDateTypeAdapter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dateStyle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac498f23c7756527e39a76eeb4e746959"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.DefaultDateTypeAdapter.DefaultDateTypeAdapter </td>
+          <td>(</td>
+          <td class="paramtype">DateFormat&#160;</td>
+          <td class="paramname"><em>enUsFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateFormat&#160;</td>
+          <td class="paramname"><em>localFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="af95afa548702ea2249ddc8cf76a9aa0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Date com.google.gson.DefaultDateTypeAdapter.deserialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a>&#160;</td>
+          <td class="paramname"><em>json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>typeOfT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_deserialization_context.html">JsonDeserializationContext</a>&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws <a class="el" href="classcom_1_1google_1_1gson_1_1_json_parse_exception.html">JsonParseException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> invokes this call-back method during deserialization when it encounters a field of the specified type. </p>
+<p>In the implementation of this call-back method, you should consider invoking <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_deserialization_context.html#a3427ae4625f05a5ab1d0e5bdb23bf68d">JsonDeserializationContext#deserialize(JsonElement, Type)</a> method to create objects for any non-trivial field of the returned object. However, you should never invoke it on the the same type passing</p><div class="fragment"><div class="line">json </div>
+</div><!-- fragment --><p> since that will cause an infinite loop (<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> will call your call-back method again).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json</td><td>The Json data being deserialized </td></tr>
+    <tr><td class="paramname">typeOfT</td><td>The type of the Object to deserialize to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a deserialized object of the specified type typeOfT which is a subclass of<div class="fragment"><div class="line">T </div>
+</div><!-- fragment --> </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_parse_exception.html">JsonParseException</a></td><td>if json is not in the expected format of<div class="fragment"><div class="line">typeofT </div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_deserializer_3_01_t_01_4.html#a119577e804cee59116d944f275aea983">com.google.gson.JsonDeserializer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94ec9e9d54af351bc3f80d0002e13f79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Date com.google.gson.DefaultDateTypeAdapter.deserializeToDate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a>&#160;</td>
+          <td class="paramname"><em>json</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad87f80eec6a974879f8bd12b651ade86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> com.google.gson.DefaultDateTypeAdapter.serialize </td>
+          <td>(</td>
+          <td class="paramtype">Date&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>typeOfSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_json_serialization_context.html">JsonSerializationContext</a>&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89c8f7d18f4bd0c76d61a34eb68d0dae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.DefaultDateTypeAdapter.toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a9f5bff20a4294a3123cf861a896a930d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final DateFormat com.google.gson.DefaultDateTypeAdapter.enUsFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a50d2149f7de7ab4a5e6fc317a5bac335"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final DateFormat com.google.gson.DefaultDateTypeAdapter.iso8601Format</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa7a4f7e06b002c255b5f574b6ec6068f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final DateFormat com.google.gson.DefaultDateTypeAdapter.localFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/<a class="el" href="_default_date_type_adapter_8java.html">DefaultDateTypeAdapter.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

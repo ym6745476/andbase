@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>AndBase开发框架: com.ab.view.progress.AbHorizontalProgressBar类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1progress.html">progress</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html">AbHorizontalProgressBar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.progress.AbHorizontalProgressBar类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.progress.AbHorizontalProgressBar 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.png" usemap="#com.ab.view.progress.AbHorizontalProgressBar_map" alt=""/>
+  <map id="com.ab.view.progress.AbHorizontalProgressBar_map" name="com.ab.view.progress.AbHorizontalProgressBar_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a34f7b526fb4a94f102eba857c721092f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a34f7b526fb4a94f102eba857c721092f">getProgress</a> ()</td></tr>
+<tr class="separator:a34f7b526fb4a94f102eba857c721092f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9257c558b3774132f39eca11fd4667e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#ab9257c558b3774132f39eca11fd4667e">setProgress</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#acc6420bead5716176380ef70fe23cf63">progress</a>)</td></tr>
+<tr class="separator:ab9257c558b3774132f39eca11fd4667e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0612793e5a35535d257a8854c0dbed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#afa0612793e5a35535d257a8854c0dbed">getMax</a> ()</td></tr>
+<tr class="separator:afa0612793e5a35535d257a8854c0dbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f719f93c04aaf657ecd9d6bec166b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#aa7f719f93c04aaf657ecd9d6bec166b8">setMax</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a9cd052bb26cf3ef84e64196b48e8f5e1">max</a>)</td></tr>
+<tr class="separator:aa7f719f93c04aaf657ecd9d6bec166b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ecdc3abc80fbeb4e2c5fc3c657b7ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a04ecdc3abc80fbeb4e2c5fc3c657b7ad">AbHorizontalProgressBar</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a04ecdc3abc80fbeb4e2c5fc3c657b7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5041b3349b30a7ddb21a542b9e370875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1listener_1_1_ab_on_progress_listener.html">AbOnProgressListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a5041b3349b30a7ddb21a542b9e370875">getAbOnProgressListener</a> ()</td></tr>
+<tr class="separator:a5041b3349b30a7ddb21a542b9e370875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987b68761caa4c3d7483e2b9a388259a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a987b68761caa4c3d7483e2b9a388259a">setAbOnProgressListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1listener_1_1_ab_on_progress_listener.html">AbOnProgressListener</a> <a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a34b8a7675121dd85c74bf641488c180e">mAbOnProgressListener</a>)</td></tr>
+<tr class="separator:a987b68761caa4c3d7483e2b9a388259a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8db37cfcbdc7a3a3c36a5a0f38181b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#aff8db37cfcbdc7a3a3c36a5a0f38181b">reset</a> ()</td></tr>
+<tr class="separator:aff8db37cfcbdc7a3a3c36a5a0f38181b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:aa9005ec467cdfc049b4fe88aafeacca1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#aa9005ec467cdfc049b4fe88aafeacca1">onDraw</a> (Canvas canvas)</td></tr>
+<tr class="separator:aa9005ec467cdfc049b4fe88aafeacca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:ad01f4375fdffb35bdcc63a6263b1355d"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#ad01f4375fdffb35bdcc63a6263b1355d">direction</a> = new float[]{1,1,1}</td></tr>
+<tr class="separator:ad01f4375fdffb35bdcc63a6263b1355d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f24e44cb62ec43ada969f8cfbeaa58c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a4f24e44cb62ec43ada969f8cfbeaa58c">light</a> = 0.4f</td></tr>
+<tr class="separator:a4f24e44cb62ec43ada969f8cfbeaa58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae734e0c9b8608b4281f7786a2a36c239"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#ae734e0c9b8608b4281f7786a2a36c239">specular</a> = 6</td></tr>
+<tr class="separator:ae734e0c9b8608b4281f7786a2a36c239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280abb625a5d9b20e7e39db22bf4febf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a280abb625a5d9b20e7e39db22bf4febf">blur</a> = 3.5f</td></tr>
+<tr class="separator:a280abb625a5d9b20e7e39db22bf4febf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:acc6420bead5716176380ef70fe23cf63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#acc6420bead5716176380ef70fe23cf63">progress</a> = 0</td></tr>
+<tr class="separator:acc6420bead5716176380ef70fe23cf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd052bb26cf3ef84e64196b48e8f5e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a9cd052bb26cf3ef84e64196b48e8f5e1">max</a> = 100</td></tr>
+<tr class="separator:a9cd052bb26cf3ef84e64196b48e8f5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e336e7b95f9d3f109904d00a3725af7"><td class="memItemLeft" align="right" valign="top">Paint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a2e336e7b95f9d3f109904d00a3725af7">pathPaint</a> = null</td></tr>
+<tr class="separator:a2e336e7b95f9d3f109904d00a3725af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa5a01ca11e72b227c27fbc3d2b98ea"><td class="memItemLeft" align="right" valign="top">Paint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#abaa5a01ca11e72b227c27fbc3d2b98ea">fillPaint</a> = null</td></tr>
+<tr class="separator:abaa5a01ca11e72b227c27fbc3d2b98ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f19d5bb2de22896f9542da37f53622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a94f19d5bb2de22896f9542da37f53622">pathWidth</a> = 35</td></tr>
+<tr class="separator:a94f19d5bb2de22896f9542da37f53622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39dce521b3c4f720d320cfe0383f89a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#ac39dce521b3c4f720d320cfe0383f89a">width</a></td></tr>
+<tr class="separator:ac39dce521b3c4f720d320cfe0383f89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c7cab81da03c2097f7a3b8a8058b0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a90c7cab81da03c2097f7a3b8a8058b0c">height</a></td></tr>
+<tr class="separator:a90c7cab81da03c2097f7a3b8a8058b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed79042c44e4ff73d0af4b0bf43b532a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#aed79042c44e4ff73d0af4b0bf43b532a">pathColor</a> = 0xFFF0EEDF</td></tr>
+<tr class="separator:aed79042c44e4ff73d0af4b0bf43b532a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add18ca81d170252353ef3a77192be33b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#add18ca81d170252353ef3a77192be33b">pathBorderColor</a> = 0xFFD2D1C4</td></tr>
+<tr class="separator:add18ca81d170252353ef3a77192be33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3c1d258784df6cc06352f3f0594182"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#abb3c1d258784df6cc06352f3f0594182">fillColors</a> = new int[] {0xFF3DF346,0xFF02C016}</td></tr>
+<tr class="separator:abb3c1d258784df6cc06352f3f0594182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5214723b552b01ffa086c7120f6576"><td class="memItemLeft" align="right" valign="top">EmbossMaskFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a4b5214723b552b01ffa086c7120f6576">emboss</a> = null</td></tr>
+<tr class="separator:a4b5214723b552b01ffa086c7120f6576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5dbea93bc1cf69b246766d1fff6ed91"><td class="memItemLeft" align="right" valign="top">BlurMaskFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#aa5dbea93bc1cf69b246766d1fff6ed91">mBlur</a> = null</td></tr>
+<tr class="separator:aa5dbea93bc1cf69b246766d1fff6ed91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b8a7675121dd85c74bf641488c180e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1listener_1_1_ab_on_progress_listener.html">AbOnProgressListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#a34b8a7675121dd85c74bf641488c180e">mAbOnProgressListener</a> = null</td></tr>
+<tr class="separator:a34b8a7675121dd85c74bf641488c180e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59c85c1797b54920de7380026483663"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1progress_1_1_ab_horizontal_progress_bar.html#ab59c85c1797b54920de7380026483663">reset</a> = false</td></tr>
+<tr class="separator:ab59c85c1797b54920de7380026483663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a04ecdc3abc80fbeb4e2c5fc3c657b7ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.progress.AbHorizontalProgressBar.AbHorizontalProgressBar </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a5041b3349b30a7ddb21a542b9e370875"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1listener_1_1_ab_on_progress_listener.html">AbOnProgressListener</a> com.ab.view.progress.AbHorizontalProgressBar.getAbOnProgressListener </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa0612793e5a35535d257a8854c0dbed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.getMax </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a34f7b526fb4a94f102eba857c721092f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.getProgress </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa9005ec467cdfc049b4fe88aafeacca1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.progress.AbHorizontalProgressBar.onDraw </td>
+          <td>(</td>
+          <td class="paramtype">Canvas&#160;</td>
+          <td class="paramname"><em>canvas</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff8db37cfcbdc7a3a3c36a5a0f38181b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.progress.AbHorizontalProgressBar.reset </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：重置进度 </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a987b68761caa4c3d7483e2b9a388259a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.progress.AbHorizontalProgressBar.setAbOnProgressListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1listener_1_1_ab_on_progress_listener.html">AbOnProgressListener</a>&#160;</td>
+          <td class="paramname"><em>mAbOnProgressListener</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa7f719f93c04aaf657ecd9d6bec166b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.progress.AbHorizontalProgressBar.setMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab9257c558b3774132f39eca11fd4667e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.progress.AbHorizontalProgressBar.setProgress </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>progress</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a280abb625a5d9b20e7e39db22bf4febf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.progress.AbHorizontalProgressBar.blur = 3.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad01f4375fdffb35bdcc63a6263b1355d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] com.ab.view.progress.AbHorizontalProgressBar.direction = new float[]{1,1,1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b5214723b552b01ffa086c7120f6576"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EmbossMaskFilter com.ab.view.progress.AbHorizontalProgressBar.emboss = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb3c1d258784df6cc06352f3f0594182"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.progress.AbHorizontalProgressBar.fillColors = new int[] {0xFF3DF346,0xFF02C016}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abaa5a01ca11e72b227c27fbc3d2b98ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Paint com.ab.view.progress.AbHorizontalProgressBar.fillPaint = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a90c7cab81da03c2097f7a3b8a8058b0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The height. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4f24e44cb62ec43ada969f8cfbeaa58c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.progress.AbHorizontalProgressBar.light = 0.4f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a34b8a7675121dd85c74bf641488c180e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1listener_1_1_ab_on_progress_listener.html">AbOnProgressListener</a> com.ab.view.progress.AbHorizontalProgressBar.mAbOnProgressListener = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9cd052bb26cf3ef84e64196b48e8f5e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.max = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa5dbea93bc1cf69b246766d1fff6ed91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlurMaskFilter com.ab.view.progress.AbHorizontalProgressBar.mBlur = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add18ca81d170252353ef3a77192be33b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.pathBorderColor = 0xFFD2D1C4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aed79042c44e4ff73d0af4b0bf43b532a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.pathColor = 0xFFF0EEDF</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e336e7b95f9d3f109904d00a3725af7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Paint com.ab.view.progress.AbHorizontalProgressBar.pathPaint = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94f19d5bb2de22896f9542da37f53622"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.pathWidth = 35</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc6420bead5716176380ef70fe23cf63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.progress = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab59c85c1797b54920de7380026483663"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.progress.AbHorizontalProgressBar.reset = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae734e0c9b8608b4281f7786a2a36c239"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.progress.AbHorizontalProgressBar.specular = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac39dce521b3c4f720d320cfe0383f89a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.progress.AbHorizontalProgressBar.width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The width. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/progress/<a class="el" href="_ab_horizontal_progress_bar_8java.html">AbHorizontalProgressBar.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 三月 19日 星期三 16:24:31 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

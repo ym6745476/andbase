@@ -90,7 +90,7 @@ public class SlidingButtonActivity extends AbActivity {
     	list.add(map);
     	
         //够造SimpleAdapter对象，适配数据
-    	CheckListViewAdapter simpleAdapter = new CheckListViewAdapter(this, list,R.layout.list_items_button,
+    	CheckListViewAdapter simpleAdapter = new CheckListViewAdapter(this, list,R.layout.item_list_button,
     				new String[] {"itemsTitle","itemsText","itemsCheck" }, new int[] {
     						R.id.itemsTitle,R.id.itemsText,R.id.mSliderBtn});
     	mListView.setAdapter(simpleAdapter);

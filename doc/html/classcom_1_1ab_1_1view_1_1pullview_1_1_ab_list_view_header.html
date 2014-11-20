@@ -1,0 +1,1079 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.pullview.AbListViewHeader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1pullview.html">pullview</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html">AbListViewHeader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.pullview.AbListViewHeader类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.pullview.AbListViewHeader 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.png" usemap="#com.ab.view.pullview.AbListViewHeader_map" alt=""/>
+  <map id="com.ab.view.pullview.AbListViewHeader_map" name="com.ab.view.pullview.AbListViewHeader_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0052c9bbf2275328188a5c04019d01f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a0052c9bbf2275328188a5c04019d01f2">AbListViewHeader</a> (Context context)</td></tr>
+<tr class="separator:a0052c9bbf2275328188a5c04019d01f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef0ca0c2ca1f680b000ac647349ed5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a0ef0ca0c2ca1f680b000ac647349ed5e">AbListViewHeader</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a0ef0ca0c2ca1f680b000ac647349ed5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c62be9b641477d53fdb8bdf93ebbd39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a2c62be9b641477d53fdb8bdf93ebbd39">setState</a> (int state)</td></tr>
+<tr class="separator:a2c62be9b641477d53fdb8bdf93ebbd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e21f9d527e258a48343e20191c8a068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a7e21f9d527e258a48343e20191c8a068">setVisiableHeight</a> (int height)</td></tr>
+<tr class="separator:a7e21f9d527e258a48343e20191c8a068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc990f67122aac34579afda8463a98fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#abc990f67122aac34579afda8463a98fe">getVisiableHeight</a> ()</td></tr>
+<tr class="separator:abc990f67122aac34579afda8463a98fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056124a15e422f62ce909b49ba0c06c4"><td class="memItemLeft" align="right" valign="top">LinearLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a056124a15e422f62ce909b49ba0c06c4">getHeaderView</a> ()</td></tr>
+<tr class="separator:a056124a15e422f62ce909b49ba0c06c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afedf17b31f1ea2319214182e5cd6da16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#afedf17b31f1ea2319214182e5cd6da16">setRefreshTime</a> (String time)</td></tr>
+<tr class="separator:afedf17b31f1ea2319214182e5cd6da16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a6664478849bbb4802350c56b3c093"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a91a6664478849bbb4802350c56b3c093">getHeaderHeight</a> ()</td></tr>
+<tr class="separator:a91a6664478849bbb4802350c56b3c093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a94aef32109886ff5de03f8e1a0644a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a2a94aef32109886ff5de03f8e1a0644a">setTextColor</a> (int color)</td></tr>
+<tr class="separator:a2a94aef32109886ff5de03f8e1a0644a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c2e3ee413b8ddf0d42a41e91468cb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a53c2e3ee413b8ddf0d42a41e91468cb5">setBackgroundColor</a> (int color)</td></tr>
+<tr class="separator:a53c2e3ee413b8ddf0d42a41e91468cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ee37c35cd51c15a38e46d4fc6c1908"><td class="memItemLeft" align="right" valign="top">ProgressBar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#aa2ee37c35cd51c15a38e46d4fc6c1908">getHeaderProgressBar</a> ()</td></tr>
+<tr class="separator:aa2ee37c35cd51c15a38e46d4fc6c1908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a336d2d5f7370dc51a9190c4b7a9671e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a336d2d5f7370dc51a9190c4b7a9671e0">setHeaderProgressBarDrawable</a> (Drawable indeterminateDrawable)</td></tr>
+<tr class="separator:a336d2d5f7370dc51a9190c4b7a9671e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33295c681b737e835a8645b89c11ffa9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a33295c681b737e835a8645b89c11ffa9">getState</a> ()</td></tr>
+<tr class="separator:a33295c681b737e835a8645b89c11ffa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7adf3652ed76825dbe26487ed1a8772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#ad7adf3652ed76825dbe26487ed1a8772">setStateTextSize</a> (int size)</td></tr>
+<tr class="separator:ad7adf3652ed76825dbe26487ed1a8772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738ddf193f7342b744f76805a721b105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a738ddf193f7342b744f76805a721b105">setTimeTextSize</a> (int size)</td></tr>
+<tr class="separator:a738ddf193f7342b744f76805a721b105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3cf2fb9f4c5e474948347aebfe9daa1"><td class="memItemLeft" align="right" valign="top">ImageView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#ac3cf2fb9f4c5e474948347aebfe9daa1">getArrowImageView</a> ()</td></tr>
+<tr class="separator:ac3cf2fb9f4c5e474948347aebfe9daa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273c1fb7d44dc4e68e8afa80e25be1de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a273c1fb7d44dc4e68e8afa80e25be1de">setArrowImage</a> (int resId)</td></tr>
+<tr class="separator:a273c1fb7d44dc4e68e8afa80e25be1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a6688d4a1fb49411b3c54bb119c6966bf"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a6688d4a1fb49411b3c54bb119c6966bf">STATE_NORMAL</a> = 0</td></tr>
+<tr class="separator:a6688d4a1fb49411b3c54bb119c6966bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8639fb692ddfe1f7a970c01feb6eda0b"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a8639fb692ddfe1f7a970c01feb6eda0b">STATE_READY</a> = 1</td></tr>
+<tr class="separator:a8639fb692ddfe1f7a970c01feb6eda0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0462d96386941bc2a4d152649c75b852"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a0462d96386941bc2a4d152649c75b852">STATE_REFRESHING</a> = 2</td></tr>
+<tr class="separator:a0462d96386941bc2a4d152649c75b852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a94942c87d6d238cdcaaea186144eec11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a94942c87d6d238cdcaaea186144eec11">initView</a> (Context context)</td></tr>
+<tr class="separator:a94942c87d6d238cdcaaea186144eec11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:accae4864e9401acfa1696f9b2143042a"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#accae4864e9401acfa1696f9b2143042a">mContext</a></td></tr>
+<tr class="separator:accae4864e9401acfa1696f9b2143042a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b8d855d7447a1560a854551b54695f"><td class="memItemLeft" align="right" valign="top">LinearLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a93b8d855d7447a1560a854551b54695f">headerView</a></td></tr>
+<tr class="separator:a93b8d855d7447a1560a854551b54695f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e354ded63df3dff2105a9dedc27fed"><td class="memItemLeft" align="right" valign="top">ImageView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a63e354ded63df3dff2105a9dedc27fed">arrowImageView</a></td></tr>
+<tr class="separator:a63e354ded63df3dff2105a9dedc27fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec63baad06836b53f105bda9bf8a7eff"><td class="memItemLeft" align="right" valign="top">ProgressBar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#aec63baad06836b53f105bda9bf8a7eff">headerProgressBar</a></td></tr>
+<tr class="separator:aec63baad06836b53f105bda9bf8a7eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7111efdc8a2149996494c4416d016f7a"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a7111efdc8a2149996494c4416d016f7a">arrowImage</a> = null</td></tr>
+<tr class="separator:a7111efdc8a2149996494c4416d016f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226fd2ba60bc66792c25b5e3ecaa1a6b"><td class="memItemLeft" align="right" valign="top">TextView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a226fd2ba60bc66792c25b5e3ecaa1a6b">tipsTextview</a></td></tr>
+<tr class="separator:a226fd2ba60bc66792c25b5e3ecaa1a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace16b6cbd667e02eecdec77cc107979d"><td class="memItemLeft" align="right" valign="top">TextView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#ace16b6cbd667e02eecdec77cc107979d">headerTimeView</a></td></tr>
+<tr class="separator:ace16b6cbd667e02eecdec77cc107979d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5f4892880dba034202207aff8d3002"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a8b5f4892880dba034202207aff8d3002">mState</a> = -1</td></tr>
+<tr class="separator:a8b5f4892880dba034202207aff8d3002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073f89ea701623ed0ad029c42ce11c22"><td class="memItemLeft" align="right" valign="top">Animation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a073f89ea701623ed0ad029c42ce11c22">mRotateUpAnim</a></td></tr>
+<tr class="separator:a073f89ea701623ed0ad029c42ce11c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6c97a6b493f725d1c83783befd9f68"><td class="memItemLeft" align="right" valign="top">Animation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#ace6c97a6b493f725d1c83783befd9f68">mRotateDownAnim</a></td></tr>
+<tr class="separator:ace6c97a6b493f725d1c83783befd9f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55cdca80f41c0c3f20a9cf85cacb047c"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a55cdca80f41c0c3f20a9cf85cacb047c">ROTATE_ANIM_DURATION</a> = 180</td></tr>
+<tr class="separator:a55cdca80f41c0c3f20a9cf85cacb047c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8158b11c5f48bc9b7cf477a33d3b27c4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#a8158b11c5f48bc9b7cf477a33d3b27c4">lastRefreshTime</a> = null</td></tr>
+<tr class="separator:a8158b11c5f48bc9b7cf477a33d3b27c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf13ed966230170f50ee58c1d04990d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_list_view_header.html#acf13ed966230170f50ee58c1d04990d3">headerHeight</a></td></tr>
+<tr class="separator:acf13ed966230170f50ee58c1d04990d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbListViewHeader.java 描述：下拉刷新的Header View类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-01-17 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a0052c9bbf2275328188a5c04019d01f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbListViewHeader.AbListViewHeader </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化Header.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ef0ca0c2ca1f680b000ac647349ed5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbListViewHeader.AbListViewHeader </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化Header.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac3cf2fb9f4c5e474948347aebfe9daa1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImageView com.ab.view.pullview.AbListViewHeader.getArrowImageView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the arrow image view.</p>
+<dl class="section return"><dt>返回</dt><dd>the arrow image view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a91a6664478849bbb4802350c56b3c093"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbListViewHeader.getHeaderHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取header的高度.</p>
+<dl class="section return"><dt>返回</dt><dd>高度 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2ee37c35cd51c15a38e46d4fc6c1908"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProgressBar com.ab.view.pullview.AbListViewHeader.getHeaderProgressBar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取Header ProgressBar，用于设置自定义样式.</p>
+<dl class="section return"><dt>返回</dt><dd>the header progress bar </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a056124a15e422f62ce909b49ba0c06c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearLayout com.ab.view.pullview.AbListViewHeader.getHeaderView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取HeaderView.</p>
+<dl class="section return"><dt>返回</dt><dd>the header view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a33295c681b737e835a8645b89c11ffa9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbListViewHeader.getState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：得到当前状态.</p>
+<dl class="section return"><dt>返回</dt><dd>the state </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc990f67122aac34579afda8463a98fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbListViewHeader.getVisiableHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取header可见的高度.</p>
+<dl class="section return"><dt>返回</dt><dd>the visiable height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94942c87d6d238cdcaaea186144eec11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.initView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化View.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a273c1fb7d44dc4e68e8afa80e25be1de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setArrowImage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置顶部刷新图标.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resId</td><td>the new arrow image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a53c2e3ee413b8ddf0d42a41e91468cb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setBackgroundColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置背景颜色.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the new background color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a336d2d5f7370dc51a9190c4b7a9671e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setHeaderProgressBarDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>indeterminateDrawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置Header ProgressBar样式.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indeterminateDrawable</td><td>the new header progress bar drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afedf17b31f1ea2319214182e5cd6da16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setRefreshTime </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置上一次刷新时间.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>时间字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c62be9b641477d53fdb8bdf93ebbd39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setState </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置状态.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>the new state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7adf3652ed76825dbe26487ed1a8772"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setStateTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置提示状态文字的大小.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the new state text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a94aef32109886ff5de03f8e1a0644a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setTextColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置字体颜色.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the new text color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a738ddf193f7342b744f76805a721b105"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setTimeTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置提示时间文字的大小.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the new time text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7e21f9d527e258a48343e20191c8a068"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbListViewHeader.setVisiableHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置header可见的高度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the new visiable height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a7111efdc8a2149996494c4416d016f7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.pullview.AbListViewHeader.arrowImage = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>箭头图标. </p>
+
+</div>
+</div>
+<a class="anchor" id="a63e354ded63df3dff2105a9dedc27fed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImageView com.ab.view.pullview.AbListViewHeader.arrowImageView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>箭头图标View. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf13ed966230170f50ee58c1d04990d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbListViewHeader.headerHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Header的高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="aec63baad06836b53f105bda9bf8a7eff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProgressBar com.ab.view.pullview.AbListViewHeader.headerProgressBar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>进度图标View. </p>
+
+</div>
+</div>
+<a class="anchor" id="ace16b6cbd667e02eecdec77cc107979d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextView com.ab.view.pullview.AbListViewHeader.headerTimeView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时间的View. </p>
+
+</div>
+</div>
+<a class="anchor" id="a93b8d855d7447a1560a854551b54695f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearLayout com.ab.view.pullview.AbListViewHeader.headerView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>主View. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8158b11c5f48bc9b7cf477a33d3b27c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.pullview.AbListViewHeader.lastRefreshTime = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>保存上一次的刷新时间. </p>
+
+</div>
+</div>
+<a class="anchor" id="accae4864e9401acfa1696f9b2143042a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.view.pullview.AbListViewHeader.mContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>上下文. </p>
+
+</div>
+</div>
+<a class="anchor" id="ace6c97a6b493f725d1c83783befd9f68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animation com.ab.view.pullview.AbListViewHeader.mRotateDownAnim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>向下的动画. </p>
+
+</div>
+</div>
+<a class="anchor" id="a073f89ea701623ed0ad029c42ce11c22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animation com.ab.view.pullview.AbListViewHeader.mRotateUpAnim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>向上的动画. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8b5f4892880dba034202207aff8d3002"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbListViewHeader.mState = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>当前状态. </p>
+
+</div>
+</div>
+<a class="anchor" id="a55cdca80f41c0c3f20a9cf85cacb047c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbListViewHeader.ROTATE_ANIM_DURATION = 180</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>动画时间. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6688d4a1fb49411b3c54bb119c6966bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbListViewHeader.STATE_NORMAL = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示 下拉刷新. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8639fb692ddfe1f7a970c01feb6eda0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbListViewHeader.STATE_READY = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示 松开刷新. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0462d96386941bc2a4d152649c75b852"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbListViewHeader.STATE_REFRESHING = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>显示 正在刷新.... </p>
+
+</div>
+</div>
+<a class="anchor" id="a226fd2ba60bc66792c25b5e3ecaa1a6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextView com.ab.view.pullview.AbListViewHeader.tipsTextview</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文本提示的View. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/pullview/<a class="el" href="_ab_list_view_header_8java.html">AbListViewHeader.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

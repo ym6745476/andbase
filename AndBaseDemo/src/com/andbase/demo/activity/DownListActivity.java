@@ -79,7 +79,7 @@ public class DownListActivity extends AbActivity{
 		mDownFile1.setDescription("以星球大战电影前传为背景");
 		mDownFile1.setPakageName("");
 		mDownFile1.setState(Constant.undownLoad);
-		mDownFile1.setIcon(String.valueOf(R.drawable.image_bg));
+		mDownFile1.setIcon(String.valueOf(R.drawable.default_pic));
 		mDownFile1.setDownUrl("http://down.apk.hiapk.com/down?aid=1832508&em=13");
 		mDownFile1.setSuffix(".apk");
 		mDownFileList.add(mDownFile1); 
@@ -89,7 +89,7 @@ public class DownListActivity extends AbActivity{
 		mDownFile2.setPakageName("");
 		mDownFile2.setDescription("一款老少皆宜的绿色音乐游戏");
 		mDownFile2.setState(Constant.undownLoad);
-		mDownFile2.setIcon(String.valueOf(R.drawable.image_bg));
+		mDownFile2.setIcon(String.valueOf(R.drawable.default_pic));
 		mDownFile2.setDownUrl("http://down.mumayi.com/292416/mbaidu");
 		mDownFile2.setSuffix(".apk");
 		mDownFileList.add(mDownFile2); 
@@ -99,7 +99,7 @@ public class DownListActivity extends AbActivity{
 		mDownFile3.setPakageName("");
 		mDownFile3.setDescription("腾讯移动游戏平台首批产品");
 		mDownFile3.setState(Constant.undownLoad);
-		mDownFile3.setIcon(String.valueOf(R.drawable.image_bg));
+		mDownFile3.setIcon(String.valueOf(R.drawable.default_pic));
 		mDownFile3.setDownUrl("http://down.mumayi.com/407098/mbaidu");
 		mDownFile3.setSuffix(".apk");
 		mDownFileList.add(mDownFile3); 

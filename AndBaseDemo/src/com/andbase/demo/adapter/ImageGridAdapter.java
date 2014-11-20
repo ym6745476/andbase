@@ -9,15 +9,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.ab.bitmap.AbImageDownloader;
-import com.ab.global.AbConstant;
+import com.ab.image.AbImageLoader;
+import com.ab.util.AbImageUtil;
 import com.andbase.R;
 import com.andbase.model.User;
 /**
- * Copyright (c) 2011 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：OverlayGridAdapter
  * 描述：在Adapter中释放Bitmap
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-10
  * @version
  */
@@ -36,7 +36,7 @@ public class ImageGridAdapter extends BaseAdapter{
     private int[] mTo;
     
     //图片下载器
-    private AbImageDownloader mAbImageDownloader = null;
+    private AbImageLoader mAbImageLoader = null;
     
    /**
     * 构造方法
@@ -56,14 +56,12 @@ public class ImageGridAdapter extends BaseAdapter{
         //用于将xml转为View
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
-        mAbImageDownloader = new AbImageDownloader(mContext);
-        mAbImageDownloader.setWidth(200);
-        mAbImageDownloader.setHeight(200);
-        mAbImageDownloader.setLoadingImage(R.drawable.image_loading);
-        mAbImageDownloader.setErrorImage(R.drawable.image_error);
-        mAbImageDownloader.setNoImage(R.drawable.image_no);
-        mAbImageDownloader.setType(AbConstant.SCALEIMG);
-        //mAbImageDownloader.setAnimation(true);
+        mAbImageLoader = new AbImageLoader(mContext);
+        mAbImageLoader.setMaxWidth(100);
+        mAbImageLoader.setMaxHeight(100);
+        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
+        mAbImageLoader.setErrorImage(R.drawable.image_error);
+        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
     } 
     
     @Override
@@ -95,11 +93,11 @@ public class ImageGridAdapter extends BaseAdapter{
           
 		  //获取该行的数据
           final User mUser = (User)mData.get(position);
-          String imageUrl = mUser.getPhotoUrl();
+          String imageUrl = mUser.getHeadUrl();
           //设置加载中的View
-          mAbImageDownloader.setLoadingView(convertView.findViewById(R.id.progressBar));
+          mAbImageLoader.setLoadingView(convertView.findViewById(R.id.progressBar));
           //图片的下载
-          mAbImageDownloader.display(holder.itemsIcon,imageUrl);
+          mAbImageLoader.display(holder.itemsIcon,imageUrl);
          
           return convertView;
     }

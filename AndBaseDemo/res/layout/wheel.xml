@@ -144,7 +144,7 @@
                     android:paddingBottom="8dip"
                     android:paddingLeft="5dip"
                     android:paddingTop="10dip"
-                    android:textColor="@color/gray_black"
+                    android:textColor="@color/gray_dark"
                     android:textSize="18sp" />
 
                 <TextView

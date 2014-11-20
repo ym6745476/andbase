@@ -32,10 +32,10 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.ab.bitmap.AbImageCache;
-import com.ab.bitmap.AbImageDownloader;
-import com.ab.global.AbConstant;
+import com.ab.image.AbImageCache;
+import com.ab.image.AbImageLoader;
 import com.ab.util.AbFileUtil;
+import com.ab.util.AbImageUtil;
 import com.ab.util.AbStrUtil;
 import com.andbase.R;
 
@@ -58,7 +58,7 @@ public class ImageShowAdapter extends BaseAdapter {
 	private int mHeight;
 	
 	//图片下载器
-    private AbImageDownloader mAbImageDownloader = null;
+    private AbImageLoader mAbImageLoader = null;
 	
 	/**
 	 * Instantiates a new ab image show adapter.
@@ -73,12 +73,12 @@ public class ImageShowAdapter extends BaseAdapter {
 		this.mWidth = width;
 		this.mHeight = height;
 		//图片下载器
-        mAbImageDownloader = new AbImageDownloader(mContext);
-        mAbImageDownloader.setWidth(this.mWidth);
-        mAbImageDownloader.setHeight(this.mHeight);
-        mAbImageDownloader.setLoadingImage(R.drawable.image_loading);
-        mAbImageDownloader.setErrorImage(R.drawable.image_error);
-        mAbImageDownloader.setNoImage(R.drawable.image_no);
+        mAbImageLoader = new AbImageLoader(mContext);
+        mAbImageLoader.setMaxWidth(this.mWidth);
+        mAbImageLoader.setMaxHeight(this.mHeight);
+        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
+        mAbImageLoader.setErrorImage(R.drawable.image_error);
+        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
 	}
 	
 	/**
@@ -157,14 +157,13 @@ public class ImageShowAdapter extends BaseAdapter {
 		
 		if(!AbStrUtil.isEmpty(imagePath)){
 		  //从缓存中获取图片，很重要否则会导致页面闪动
-      	  Bitmap bitmap = AbImageCache.getBitmapFromCache(imagePath);
+      	  Bitmap bitmap = AbImageCache.getInstance().getBitmap(imagePath);
       	  //缓存中没有则从网络和SD卡获取
       	  if(bitmap == null){
       		    holder.mImageView1.setImageResource(R.drawable.image_loading);
 	      		if(imagePath.indexOf("http://")!=-1){
 	      		    //图片的下载
-	                mAbImageDownloader.setType(AbConstant.ORIGINALIMG);
-	                mAbImageDownloader.display(holder.mImageView1,imagePath);
+	                mAbImageLoader.display(holder.mImageView1,imagePath);
 					
 				}else if(imagePath.indexOf("/")==-1){
 					//索引图片
@@ -175,12 +174,12 @@ public class ImageShowAdapter extends BaseAdapter {
 						holder.mImageView1.setImageResource(R.drawable.image_error);
 					}
 				}else{
-					Bitmap mBitmap = AbFileUtil.getBitmapFromSD(new File(imagePath), AbConstant.SCALEIMG, mWidth, mHeight);
+					Bitmap mBitmap = AbFileUtil.getBitmapFromSD(new File(imagePath), AbImageUtil.SCALEIMG, mWidth, mHeight);
 					if(mBitmap!=null){
 						holder.mImageView1.setImageBitmap(mBitmap);
 					}else{
 						// 无图片时显示
-						holder.mImageView1.setImageResource(R.drawable.image_no);
+						holder.mImageView1.setImageResource(R.drawable.image_empty);
 					}
 				}
       	  }else{
@@ -189,7 +188,7 @@ public class ImageShowAdapter extends BaseAdapter {
       	  }
 		}else{
 			// 无图片时显示
-			holder.mImageView1.setImageResource(R.drawable.image_no);
+			holder.mImageView1.setImageResource(R.drawable.image_empty);
 	    }
 		holder.mImageView1.setAdjustViewBounds(true);
 	    return convertView;

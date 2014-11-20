@@ -34,14 +34,14 @@ public class SlidingMenuTitleHoldActivity extends FragmentActivity {
 		
 		//加到系统标题栏位置上
 		LinearLayout titleBarLinearLayout = (LinearLayout)this.findViewById(R.id.titleBar);
-		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 		
 		titleBarLinearLayout.addView(mAbTitleBar,layoutParamsFF);
 		
         //主视图的Fragment添加
-		getSupportFragmentManager()
+		getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.content_frame, new Fragment1())
+		.replace(R.id.content_frame, new FragmentLoad())
 		.commit();
 
 		//SlidingMenu的配置
@@ -56,9 +56,9 @@ public class SlidingMenuTitleHoldActivity extends FragmentActivity {
 		
 		//menu视图的Fragment添加
 		menu.setMenu(R.layout.sliding_menu_menu);
-		getSupportFragmentManager()
+		getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame, new Fragment2())
+		.replace(R.id.menu_frame, new FragmentLoad())
 		.commit();
 		
 	}

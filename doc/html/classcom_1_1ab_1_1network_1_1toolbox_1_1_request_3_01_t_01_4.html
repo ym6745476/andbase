@@ -1,0 +1,1717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.network.toolbox.Request&lt; T &gt;类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network.html">network</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1network_1_1toolbox.html">toolbox</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html">Request< T ></a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.network.toolbox.Request&lt; T &gt;类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.network.toolbox.Request&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.png" usemap="#com.ab.network.toolbox.Request&lt; T &gt;_map" alt=""/>
+  <map id="com.ab.network.toolbox.Request&lt; T &gt;_map" name="com.ab.network.toolbox.Request&lt; T &gt;_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4_1_1_method.html">Method</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4_1_1_priority.html">Priority</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad88607d77ea5e8a95d091e0b2b4d4ba3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad88607d77ea5e8a95d091e0b2b4d4ba3">Request</a> (String url, Response.ErrorListener listener)</td></tr>
+<tr class="separator:ad88607d77ea5e8a95d091e0b2b4d4ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a99296e93a380676554879abd95458"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a58a99296e93a380676554879abd95458">Request</a> (int method, String url, Response.ErrorListener listener)</td></tr>
+<tr class="separator:a58a99296e93a380676554879abd95458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33202dab9a76277188d8ddf3875536c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad33202dab9a76277188d8ddf3875536c">getMethod</a> ()</td></tr>
+<tr class="separator:ad33202dab9a76277188d8ddf3875536c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01fdfa80078e94d116797c10b57fc75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad01fdfa80078e94d116797c10b57fc75">setTag</a> (Object tag)</td></tr>
+<tr class="separator:ad01fdfa80078e94d116797c10b57fc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefbeb1727e14bccd2d918bce55d02840"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aefbeb1727e14bccd2d918bce55d02840">getTag</a> ()</td></tr>
+<tr class="separator:aefbeb1727e14bccd2d918bce55d02840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add9cb069bfbb0231198959a54511aaf5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#add9cb069bfbb0231198959a54511aaf5">getTrafficStatsTag</a> ()</td></tr>
+<tr class="separator:add9cb069bfbb0231198959a54511aaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ecfdcdac32a5530f1988cd8d0ffd48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ae2ecfdcdac32a5530f1988cd8d0ffd48">setRetryPolicy</a> (<a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_retry_policy.html">RetryPolicy</a> retryPolicy)</td></tr>
+<tr class="separator:ae2ecfdcdac32a5530f1988cd8d0ffd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f632d9a40f10aaebf08a7d94dc220d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a1f632d9a40f10aaebf08a7d94dc220d9">addMarker</a> (String tag)</td></tr>
+<tr class="separator:a1f632d9a40f10aaebf08a7d94dc220d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2178655ddc76fd116b26a2c6e9ac000"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad2178655ddc76fd116b26a2c6e9ac000">setRequestQueue</a> (RequestQueue requestQueue)</td></tr>
+<tr class="separator:ad2178655ddc76fd116b26a2c6e9ac000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a675548655714fc0577cf3feda868e"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a24a675548655714fc0577cf3feda868e">setSequence</a> (int sequence)</td></tr>
+<tr class="separator:a24a675548655714fc0577cf3feda868e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd791f48e70c2a117607a284984c417"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a7cd791f48e70c2a117607a284984c417">getSequence</a> ()</td></tr>
+<tr class="separator:a7cd791f48e70c2a117607a284984c417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe08719d0789ce0a39d55983b381d7ee"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#afe08719d0789ce0a39d55983b381d7ee">getUrl</a> ()</td></tr>
+<tr class="separator:afe08719d0789ce0a39d55983b381d7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20c9287cab9fc305b6cc18a9974a5b7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad20c9287cab9fc305b6cc18a9974a5b7">getCacheKey</a> ()</td></tr>
+<tr class="separator:ad20c9287cab9fc305b6cc18a9974a5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e57ff52029278a056a37ae2d22ba052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a8e57ff52029278a056a37ae2d22ba052">setCacheEntry</a> (Cache.Entry entry)</td></tr>
+<tr class="separator:a8e57ff52029278a056a37ae2d22ba052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f693df6895fe386450d2f48e2524d7"><td class="memItemLeft" align="right" valign="top">Cache.Entry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#af2f693df6895fe386450d2f48e2524d7">getCacheEntry</a> ()</td></tr>
+<tr class="separator:af2f693df6895fe386450d2f48e2524d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f7199f3ed6dd93e91429a5e5dbdc6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ab1f7199f3ed6dd93e91429a5e5dbdc6d">cancel</a> ()</td></tr>
+<tr class="separator:ab1f7199f3ed6dd93e91429a5e5dbdc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6346be90c23af8450cd37e15d4ba87"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a3e6346be90c23af8450cd37e15d4ba87">isCanceled</a> ()</td></tr>
+<tr class="separator:a3e6346be90c23af8450cd37e15d4ba87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa692a47bde45007282498e5c403515e"><td class="memItemLeft" align="right" valign="top">Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aaa692a47bde45007282498e5c403515e">getHeaders</a> ()  throws AuthFailureError </td></tr>
+<tr class="separator:aaa692a47bde45007282498e5c403515e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1d955e30e3b363bd01f2aaf28ca527"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a3f1d955e30e3b363bd01f2aaf28ca527">getPostBodyContentType</a> ()</td></tr>
+<tr class="separator:a3f1d955e30e3b363bd01f2aaf28ca527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ea4feef8f0cc683d28fcadee9c481b"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a08ea4feef8f0cc683d28fcadee9c481b">getPostBody</a> ()  throws AuthFailureError </td></tr>
+<tr class="separator:a08ea4feef8f0cc683d28fcadee9c481b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8123bd0766632bbdafdb75eb711adf69"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a8123bd0766632bbdafdb75eb711adf69">getBodyContentType</a> ()</td></tr>
+<tr class="separator:a8123bd0766632bbdafdb75eb711adf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6a4d86fcc71bdd048054e50525e2c0"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#add6a4d86fcc71bdd048054e50525e2c0">getBody</a> ()  throws AuthFailureError </td></tr>
+<tr class="separator:add6a4d86fcc71bdd048054e50525e2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d34e692e396bd35ae7be12b5a8095e0"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a7d34e692e396bd35ae7be12b5a8095e0">setShouldCache</a> (boolean <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a6448986b4fb05b2435ef91af26165a4e">shouldCache</a>)</td></tr>
+<tr class="separator:a7d34e692e396bd35ae7be12b5a8095e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6448986b4fb05b2435ef91af26165a4e"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a6448986b4fb05b2435ef91af26165a4e">shouldCache</a> ()</td></tr>
+<tr class="separator:a6448986b4fb05b2435ef91af26165a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb875d05a7649f9ec1197abb42416fa"><td class="memItemLeft" align="right" valign="top">Priority&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#affb875d05a7649f9ec1197abb42416fa">getPriority</a> ()</td></tr>
+<tr class="separator:affb875d05a7649f9ec1197abb42416fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d168a37df3b695a5ece8a30ff7925e"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a27d168a37df3b695a5ece8a30ff7925e">getTimeoutMs</a> ()</td></tr>
+<tr class="separator:a27d168a37df3b695a5ece8a30ff7925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca01ff42ab9daa780bbfe4e2dfd40f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_retry_policy.html">RetryPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a0ca01ff42ab9daa780bbfe4e2dfd40f6">getRetryPolicy</a> ()</td></tr>
+<tr class="separator:a0ca01ff42ab9daa780bbfe4e2dfd40f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb727bb977f2db6e95e71c45a9139266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aeb727bb977f2db6e95e71c45a9139266">markDelivered</a> ()</td></tr>
+<tr class="separator:aeb727bb977f2db6e95e71c45a9139266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b51493a3255a67e97f7db7705021860"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a5b51493a3255a67e97f7db7705021860">hasHadResponseDelivered</a> ()</td></tr>
+<tr class="separator:a5b51493a3255a67e97f7db7705021860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f092973f1163dc8764f0fa67b51db68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a2f092973f1163dc8764f0fa67b51db68">deliverError</a> (VolleyError error)</td></tr>
+<tr class="separator:a2f092973f1163dc8764f0fa67b51db68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2434f9fa4ee0482420fe1e5586e471e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a2434f9fa4ee0482420fe1e5586e471e6">compareTo</a> (<a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad88607d77ea5e8a95d091e0b2b4d4ba3">Request</a>&lt; T &gt; other)</td></tr>
+<tr class="separator:a2434f9fa4ee0482420fe1e5586e471e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d93e5b7f6cf0f3e4a1635ea6317302"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a91d93e5b7f6cf0f3e4a1635ea6317302">toString</a> ()</td></tr>
+<tr class="separator:a91d93e5b7f6cf0f3e4a1635ea6317302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:aa3d322d6200d7b5237c0335a6e206205"><td class="memItemLeft" align="right" valign="top">Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aa3d322d6200d7b5237c0335a6e206205">getPostParams</a> ()  throws AuthFailureError </td></tr>
+<tr class="separator:aa3d322d6200d7b5237c0335a6e206205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9abffde6759041ad8fefff09d75e5c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aab9abffde6759041ad8fefff09d75e5c">getPostParamsEncoding</a> ()</td></tr>
+<tr class="separator:aab9abffde6759041ad8fefff09d75e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76a9154d4ca3a16e24c69456917e885"><td class="memItemLeft" align="right" valign="top">Map&lt; String, String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad76a9154d4ca3a16e24c69456917e885">getParams</a> ()  throws AuthFailureError </td></tr>
+<tr class="separator:ad76a9154d4ca3a16e24c69456917e885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e57a54c998737f3512b9c8e00115162"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a0e57a54c998737f3512b9c8e00115162">getParamsEncoding</a> ()</td></tr>
+<tr class="separator:a0e57a54c998737f3512b9c8e00115162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053e1a056451e638a641e0a568ab358e"><td class="memItemLeft" align="right" valign="top">abstract Response&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a053e1a056451e638a641e0a568ab358e">parseNetworkResponse</a> (<a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a> response)</td></tr>
+<tr class="separator:a053e1a056451e638a641e0a568ab358e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1acd652e5ba1390f340d8e65fc8a8b"><td class="memItemLeft" align="right" valign="top">VolleyError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a5d1acd652e5ba1390f340d8e65fc8a8b">parseNetworkError</a> (VolleyError volleyError)</td></tr>
+<tr class="separator:a5d1acd652e5ba1390f340d8e65fc8a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ee8e5ddbe826bfb1ffb7aed57c14c0"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a43ee8e5ddbe826bfb1ffb7aed57c14c0">deliverResponse</a> (T response)</td></tr>
+<tr class="separator:a43ee8e5ddbe826bfb1ffb7aed57c14c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a9bc0bf273dc3ccff324a778834e6c45f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a9bc0bf273dc3ccff324a778834e6c45f">finish</a> (final String tag)</td></tr>
+<tr class="separator:a9bc0bf273dc3ccff324a778834e6c45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a66e677bc4ac1ac0feb8da15c04a532a5"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a66e677bc4ac1ac0feb8da15c04a532a5">encodeParameters</a> (Map&lt; String, String &gt; params, String paramsEncoding)</td></tr>
+<tr class="separator:a66e677bc4ac1ac0feb8da15c04a532a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aedafcc06caf01559975ccfdabae65812"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley_log_1_1_marker_log.html">MarkerLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aedafcc06caf01559975ccfdabae65812">mEventLog</a> = <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley_log_1_1_marker_log.html#a1e79b171121caab4789143999e6eb1f7">MarkerLog.ENABLED</a> ? new <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley_log_1_1_marker_log.html">MarkerLog</a>() : null</td></tr>
+<tr class="separator:aedafcc06caf01559975ccfdabae65812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d44c4732147175dd032f87d274bc506"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a0d44c4732147175dd032f87d274bc506">mMethod</a></td></tr>
+<tr class="separator:a0d44c4732147175dd032f87d274bc506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047581fb2de0ad89357988c9d0e46feb"><td class="memItemLeft" align="right" valign="top">final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a047581fb2de0ad89357988c9d0e46feb">mUrl</a></td></tr>
+<tr class="separator:a047581fb2de0ad89357988c9d0e46feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6615b202ffa77284ca58c3fbd70869af"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a6615b202ffa77284ca58c3fbd70869af">mDefaultTrafficStatsTag</a></td></tr>
+<tr class="separator:a6615b202ffa77284ca58c3fbd70869af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4b650dab20e88a376ed3a12afc1de3"><td class="memItemLeft" align="right" valign="top">final Response.ErrorListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a6a4b650dab20e88a376ed3a12afc1de3">mErrorListener</a></td></tr>
+<tr class="separator:a6a4b650dab20e88a376ed3a12afc1de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef6238ad41eb12caa5b577d9ea96b8c"><td class="memItemLeft" align="right" valign="top">Integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a8ef6238ad41eb12caa5b577d9ea96b8c">mSequence</a></td></tr>
+<tr class="separator:a8ef6238ad41eb12caa5b577d9ea96b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1e1eb65731ee49fc5074c0ed270d5c"><td class="memItemLeft" align="right" valign="top">RequestQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aaa1e1eb65731ee49fc5074c0ed270d5c">mRequestQueue</a></td></tr>
+<tr class="separator:aaa1e1eb65731ee49fc5074c0ed270d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04d757e41cb6979ee6450c79aaa76cd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ac04d757e41cb6979ee6450c79aaa76cd">mShouldCache</a> = true</td></tr>
+<tr class="separator:ac04d757e41cb6979ee6450c79aaa76cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ad4580ccf7d3c8185df635c7f12fe6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad0ad4580ccf7d3c8185df635c7f12fe6">mCanceled</a> = false</td></tr>
+<tr class="separator:ad0ad4580ccf7d3c8185df635c7f12fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a450c2e57df55971d5dfa8197eef6a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ac4a450c2e57df55971d5dfa8197eef6a">mResponseDelivered</a> = false</td></tr>
+<tr class="separator:ac4a450c2e57df55971d5dfa8197eef6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c67a2f3e2350a3700ee96df4bc2400"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a57c67a2f3e2350a3700ee96df4bc2400">mRequestBirthTime</a> = 0</td></tr>
+<tr class="separator:a57c67a2f3e2350a3700ee96df4bc2400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5979f233ae448b151c5135184f8ee9f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_retry_policy.html">RetryPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a5979f233ae448b151c5135184f8ee9f8">mRetryPolicy</a></td></tr>
+<tr class="separator:a5979f233ae448b151c5135184f8ee9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf83d3d34a8a73835fc595c156d8c60c"><td class="memItemLeft" align="right" valign="top">Cache.Entry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#abf83d3d34a8a73835fc595c156d8c60c">mCacheEntry</a> = null</td></tr>
+<tr class="separator:abf83d3d34a8a73835fc595c156d8c60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b722dcec98fdc3d01309f09c08987d0"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a9b722dcec98fdc3d01309f09c08987d0">mTag</a></td></tr>
+<tr class="separator:a9b722dcec98fdc3d01309f09c08987d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a4d5b2029d9e2e7145faf4ed473aa8c38"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a4d5b2029d9e2e7145faf4ed473aa8c38">DEFAULT_PARAMS_ENCODING</a> = &quot;UTF-8&quot;</td></tr>
+<tr class="separator:a4d5b2029d9e2e7145faf4ed473aa8c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17353deaa222a5c2dbbd9d7b6eb04e3c"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a17353deaa222a5c2dbbd9d7b6eb04e3c">SLOW_REQUEST_THRESHOLD_MS</a> = 3000</td></tr>
+<tr class="separator:a17353deaa222a5c2dbbd9d7b6eb04e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Base class for all network requests.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;T&gt;</td><td>The type of parsed response this request expects. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ad88607d77ea5e8a95d091e0b2b4d4ba3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.Request&lt; T &gt;.Request </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Response.ErrorListener&#160;</td>
+          <td class="paramname"><em>listener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new request with the given URL and error listener. Note that the normal response listener is not provided here as delivery of responses is provided by subclasses, who have a better idea of how to deliver an already-parsed response.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">弃用:</a></b></dt><dd>Use <a class="el" href="">Request(int, String, com.android.volley.Response.ErrorListener)</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a58a99296e93a380676554879abd95458"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.network.toolbox.Request&lt; T &gt;.Request </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Response.ErrorListener&#160;</td>
+          <td class="paramname"><em>listener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new request with the given method (one of the values from <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4_1_1_method.html">Method</a>), URL, and error listener. Note that the normal response listener is not provided here as delivery of responses is provided by subclasses, who have a better idea of how to deliver an already-parsed response. </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a1f632d9a40f10aaebf08a7d94dc220d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.addMarker </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds an event to this request's event log; for debugging. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab1f7199f3ed6dd93e91429a5e5dbdc6d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.cancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Mark this request as canceled. No callback will be delivered. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2434f9fa4ee0482420fe1e5586e471e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.network.toolbox.Request&lt; T &gt;.compareTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad88607d77ea5e8a95d091e0b2b4d4ba3">Request</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Our comparator sorts from high to low priority, and secondarily by sequence number to provide FIFO ordering. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f092973f1163dc8764f0fa67b51db68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.deliverError </td>
+          <td>(</td>
+          <td class="paramtype">VolleyError&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Delivers error message to the ErrorListener that the Request was initialized with.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>Error details </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a43ee8e5ddbe826bfb1ffb7aed57c14c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.network.toolbox.Request&lt; T &gt;.deliverResponse </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subclasses must implement this to perform delivery of the parsed response to their listeners. The given response is guaranteed to be non-null; responses that fail to parse are not delivered. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>The parsed response returned by <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a053e1a056451e638a641e0a568ab358e">parseNetworkResponse(NetworkResponse)</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a66e677bc4ac1ac0feb8da15c04a532a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.network.toolbox.Request&lt; T &gt;.encodeParameters </td>
+          <td>(</td>
+          <td class="paramtype">Map&lt; String, String &gt;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>paramsEncoding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Converts <code>params</code> into an application/x-www-form-urlencoded encoded string. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9bc0bf273dc3ccff324a778834e6c45f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.finish </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the request queue that this request has finished (successfully or with error).</p>
+<p>Also dumps all events from this request's event log; for debugging.</p>
+
+</div>
+</div>
+<a class="anchor" id="add6a4d86fcc71bdd048054e50525e2c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.network.toolbox.Request&lt; T &gt;.getBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws AuthFailureError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the raw POST or PUT body to be sent.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthFailureError</td><td>in the event of auth failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8123bd0766632bbdafdb75eb711adf69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.getBodyContentType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af2f693df6895fe386450d2f48e2524d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cache.Entry com.ab.network.toolbox.Request&lt; T &gt;.getCacheEntry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the annotated cache entry, or null if there isn't one. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad20c9287cab9fc305b6cc18a9974a5b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.getCacheKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the cache key for this request. By default, this is the URL. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa692a47bde45007282498e5c403515e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt;String, String&gt; com.ab.network.toolbox.Request&lt; T &gt;.getHeaders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws AuthFailureError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a list of extra HTTP headers to go along with this request. Can throw <a class="el" href="">AuthFailureError</a> as authentication may be required to provide these values. </p><dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthFailureError</td><td>In the event of auth failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad33202dab9a76277188d8ddf3875536c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.network.toolbox.Request&lt; T &gt;.getMethod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the method for this request. Can be one of the values in <a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4_1_1_method.html">Method</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad76a9154d4ca3a16e24c69456917e885"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt;String, String&gt; com.ab.network.toolbox.Request&lt; T &gt;.getParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws AuthFailureError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a Map of parameters to be used for a POST or PUT request. Can throw <a class="el" href="">AuthFailureError</a> as authentication may be required to provide these values.</p>
+<p>Note that you can directly override <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#add6a4d86fcc71bdd048054e50525e2c0">getBody()</a> for custom data.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthFailureError</td><td>in the event of auth failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0e57a54c998737f3512b9c8e00115162"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.getParamsEncoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns which encoding should be used when converting POST or PUT parameters returned by <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad76a9154d4ca3a16e24c69456917e885">getParams()</a> into a raw POST or PUT body.</p>
+<p>This controls both encodings: </p><ol>
+<li>
+The string encoding used when converting parameter names and values into bytes prior to URL encoding them. </li>
+<li>
+The string encoding used when converting the URL encoded parameters into a raw byte array. </li>
+</ol>
+
+</div>
+</div>
+<a class="anchor" id="a08ea4feef8f0cc683d28fcadee9c481b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] com.ab.network.toolbox.Request&lt; T &gt;.getPostBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws AuthFailureError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the raw POST body to be sent.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthFailureError</td><td>In the event of auth failure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">弃用:</a></b></dt><dd>Use <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#add6a4d86fcc71bdd048054e50525e2c0">getBody()</a> instead. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f1d955e30e3b363bd01f2aaf28ca527"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.getPostBodyContentType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">弃用:</a></b></dt><dd>Use <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a8123bd0766632bbdafdb75eb711adf69">getBodyContentType()</a> instead. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa3d322d6200d7b5237c0335a6e206205"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt;String, String&gt; com.ab.network.toolbox.Request&lt; T &gt;.getPostParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws AuthFailureError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a Map of POST parameters to be used for this request, or null if a simple GET should be used. Can throw <a class="el" href="">AuthFailureError</a> as authentication may be required to provide these values.</p>
+<p>Note that only one of <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aa3d322d6200d7b5237c0335a6e206205">getPostParams()</a> and <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a08ea4feef8f0cc683d28fcadee9c481b">getPostBody()</a> can return a non-null value.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthFailureError</td><td>In the event of auth failure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">弃用:</a></b></dt><dd>Use <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#ad76a9154d4ca3a16e24c69456917e885">getParams()</a> instead. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aab9abffde6759041ad8fefff09d75e5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.getPostParamsEncoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns which encoding should be used when converting POST parameters returned by <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#aa3d322d6200d7b5237c0335a6e206205">getPostParams()</a> into a raw POST body.</p>
+<p>This controls both encodings: </p><ol>
+<li>
+The string encoding used when converting parameter names and values into bytes prior to URL encoding them. </li>
+<li>
+The string encoding used when converting the URL encoded parameters into a raw byte array. </li>
+</ol>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">弃用:</a></b></dt><dd>Use <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a0e57a54c998737f3512b9c8e00115162">getParamsEncoding()</a> instead. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="affb875d05a7649f9ec1197abb42416fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Priority com.ab.network.toolbox.Request&lt; T &gt;.getPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="enumcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4_1_1_priority.html">Priority</a> of this request; <a class="el" href="enumcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4_1_1_priority.html#ac6b29ce52f5b57e4895d35f8e589087b">Priority#NORMAL</a> by default. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ca01ff42ab9daa780bbfe4e2dfd40f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_retry_policy.html">RetryPolicy</a> com.ab.network.toolbox.Request&lt; T &gt;.getRetryPolicy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the retry policy that should be used for this request. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7cd791f48e70c2a117607a284984c417"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.Request&lt; T &gt;.getSequence </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the sequence number of this request. </p>
+
+</div>
+</div>
+<a class="anchor" id="aefbeb1727e14bccd2d918bce55d02840"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.network.toolbox.Request&lt; T &gt;.getTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns this request's tag. </p><dl class="section see"><dt>参见</dt><dd>Request::setTag(Object) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a27d168a37df3b695a5ece8a30ff7925e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.Request&lt; T &gt;.getTimeoutMs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the socket timeout in milliseconds per retry attempt. (This value can be changed per retry attempt if a backoff is specified via backoffTimeout()). If there are no retry attempts remaining, this will cause delivery of a <a class="el" href="">TimeoutError</a> error. </p>
+
+</div>
+</div>
+<a class="anchor" id="add9cb069bfbb0231198959a54511aaf5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.network.toolbox.Request&lt; T &gt;.getTrafficStatsTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>A tag for use with <a class="el" href="">TrafficStats#setThreadStatsTag(int)</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afe08719d0789ce0a39d55983b381d7ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.getUrl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the URL of this request. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b51493a3255a67e97f7db7705021860"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.network.toolbox.Request&lt; T &gt;.hasHadResponseDelivered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this request has had a response delivered for it. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3e6346be90c23af8450cd37e15d4ba87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.network.toolbox.Request&lt; T &gt;.isCanceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this request has been canceled. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb727bb977f2db6e95e71c45a9139266"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.markDelivered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Mark this request as having a response delivered on it. This can be used later in the request's lifetime for suppressing identical responses. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5d1acd652e5ba1390f340d8e65fc8a8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VolleyError com.ab.network.toolbox.Request&lt; T &gt;.parseNetworkError </td>
+          <td>(</td>
+          <td class="paramtype">VolleyError&#160;</td>
+          <td class="paramname"><em>volleyError</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subclasses can override this method to parse 'networkError' and return a more specific error.</p>
+<p>The default implementation just returns the passed 'networkError'.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volleyError</td><td>the error retrieved from the network </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>an NetworkError augmented with additional information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a053e1a056451e638a641e0a568ab358e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract Response&lt;T&gt; com.ab.network.toolbox.Request&lt; T &gt;.parseNetworkResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_network_response.html">NetworkResponse</a>&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subclasses must implement this to parse the raw network response and return an appropriate response type. This method will be called from a worker thread. The response will not be delivered if you return null. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>Response from the network </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The parsed response, or null in the case of an error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e57ff52029278a056a37ae2d22ba052"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.setCacheEntry </td>
+          <td>(</td>
+          <td class="paramtype">Cache.Entry&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Annotates this request with an entry retrieved for it from cache. Used for cache coherency support. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad2178655ddc76fd116b26a2c6e9ac000"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.setRequestQueue </td>
+          <td>(</td>
+          <td class="paramtype">RequestQueue&#160;</td>
+          <td class="paramname"><em>requestQueue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Associates this request with the given queue. The request queue will be notified when this request has finished. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae2ecfdcdac32a5530f1988cd8d0ffd48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.setRetryPolicy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_retry_policy.html">RetryPolicy</a>&#160;</td>
+          <td class="paramname"><em>retryPolicy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the retry policy for this request. </p>
+
+</div>
+</div>
+<a class="anchor" id="a24a675548655714fc0577cf3feda868e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.ab.network.toolbox.Request&lt; T &gt;.setSequence </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the sequence number of this request. Used by <a class="el" href="">RequestQueue</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d34e692e396bd35ae7be12b5a8095e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.ab.network.toolbox.Request&lt; T &gt;.setShouldCache </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>shouldCache</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set whether or not responses to this request should be cached. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad01fdfa80078e94d116797c10b57fc75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.network.toolbox.Request&lt; T &gt;.setTag </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set a tag on this request. Can be used to cancel all requests with this tag by <a class="el" href="">RequestQueue#cancelAll(Object)</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6448986b4fb05b2435ef91af26165a4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.ab.network.toolbox.Request&lt; T &gt;.shouldCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if responses to this request should be cached. </p>
+
+</div>
+</div>
+<a class="anchor" id="a91d93e5b7f6cf0f3e4a1635ea6317302"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.network.toolbox.Request&lt; T &gt;.toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a4d5b2029d9e2e7145faf4ed473aa8c38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.network.toolbox.Request&lt; T &gt;.DEFAULT_PARAMS_ENCODING = &quot;UTF-8&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default encoding for POST or PUT parameters. See <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_request_3_01_t_01_4.html#a0e57a54c998737f3512b9c8e00115162">getParamsEncoding()</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="abf83d3d34a8a73835fc595c156d8c60c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cache.Entry com.ab.network.toolbox.Request&lt; T &gt;.mCacheEntry = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When a request can be retrieved from cache but must be refreshed from the network, the cache entry will be stored here so that in the event of a "Not Modified" response, we can be sure it hasn't been evicted from cache. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad0ad4580ccf7d3c8185df635c7f12fe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.network.toolbox.Request&lt; T &gt;.mCanceled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether or not this request has been canceled. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6615b202ffa77284ca58c3fbd70869af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.Request&lt; T &gt;.mDefaultTrafficStatsTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default tag for <a class="el" href="">TrafficStats</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6a4b650dab20e88a376ed3a12afc1de3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Response.ErrorListener com.ab.network.toolbox.Request&lt; T &gt;.mErrorListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Listener interface for errors. </p>
+
+</div>
+</div>
+<a class="anchor" id="aedafcc06caf01559975ccfdabae65812"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley_log_1_1_marker_log.html">MarkerLog</a> com.ab.network.toolbox.Request&lt; T &gt;.mEventLog = <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley_log_1_1_marker_log.html#a1e79b171121caab4789143999e6eb1f7">MarkerLog.ENABLED</a> ? new <a class="el" href="classcom_1_1ab_1_1network_1_1toolbox_1_1_volley_log_1_1_marker_log.html">MarkerLog</a>() : null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>An event log tracing the lifetime of this request; for debugging. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d44c4732147175dd032f87d274bc506"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.network.toolbox.Request&lt; T &gt;.mMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Request method of this request. Currently supports GET, POST, PUT, and DELETE. </p>
+
+</div>
+</div>
+<a class="anchor" id="a57c67a2f3e2350a3700ee96df4bc2400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.network.toolbox.Request&lt; T &gt;.mRequestBirthTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa1e1eb65731ee49fc5074c0ed270d5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RequestQueue com.ab.network.toolbox.Request&lt; T &gt;.mRequestQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The request queue this request is associated with. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4a450c2e57df55971d5dfa8197eef6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.network.toolbox.Request&lt; T &gt;.mResponseDelivered = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether or not a response has been delivered for this request yet. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5979f233ae448b151c5135184f8ee9f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1network_1_1toolbox_1_1_retry_policy.html">RetryPolicy</a> com.ab.network.toolbox.Request&lt; T &gt;.mRetryPolicy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The retry policy for this request. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8ef6238ad41eb12caa5b577d9ea96b8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Integer com.ab.network.toolbox.Request&lt; T &gt;.mSequence</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sequence number of this request, used to enforce FIFO ordering. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac04d757e41cb6979ee6450c79aaa76cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.network.toolbox.Request&lt; T &gt;.mShouldCache = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether or not responses to this request should be cached. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9b722dcec98fdc3d01309f09c08987d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.network.toolbox.Request&lt; T &gt;.mTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>An opaque token tagging this request; used for bulk cancellation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a047581fb2de0ad89357988c9d0e46feb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.network.toolbox.Request&lt; T &gt;.mUrl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>URL of this request. </p>
+
+</div>
+</div>
+<a class="anchor" id="a17353deaa222a5c2dbbd9d7b6eb04e3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long com.ab.network.toolbox.Request&lt; T &gt;.SLOW_REQUEST_THRESHOLD_MS = 3000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Threshold at which we should log the request (even when debug logging is not enabled). </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/network/toolbox/<a class="el" href="_request_8java.html">Request.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

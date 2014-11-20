@@ -11,19 +11,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ab.bitmap.AbImageDownloader;
-import com.ab.global.AbConstant;
+import com.ab.image.AbImageLoader;
+import com.ab.util.AbViewHolder;
 import com.andbase.R;
 import com.andbase.global.Constant;
 /**
- * Copyright (c) 2011 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：MyListViewAdapter
  * 描述：在Adapter中释放Bitmap
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-10
  * @version
  */
@@ -44,7 +43,7 @@ public class ImageListAdapter extends BaseAdapter{
     //view的id
     private int[] mTo;
     //图片下载器
-    private AbImageDownloader mAbImageDownloader = null;
+    private AbImageLoader mAbImageLoader = null;
     
    /**
     * 构造方法
@@ -64,14 +63,12 @@ public class ImageListAdapter extends BaseAdapter{
         //用于将xml转为View
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
-        mAbImageDownloader = new AbImageDownloader(mContext);
-        mAbImageDownloader.setWidth(100);
-        mAbImageDownloader.setHeight(100);
-        mAbImageDownloader.setType(AbConstant.SCALEIMG);
-        mAbImageDownloader.setLoadingImage(R.drawable.image_loading);
-        mAbImageDownloader.setErrorImage(R.drawable.image_error);
-        mAbImageDownloader.setNoImage(R.drawable.image_no);
-        //mAbImageDownloader.setAnimation(true);
+        mAbImageLoader = new AbImageLoader(mContext);
+        mAbImageLoader.setMaxWidth(150);
+        mAbImageLoader.setMaxHeight(150);
+        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
+        mAbImageLoader.setErrorImage(R.drawable.image_error);
+        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
     }   
     
     @Override
@@ -86,47 +83,31 @@ public class ImageListAdapter extends BaseAdapter{
 
     @Override
     public long getItemId(int position){
-      return position;
+        return position;
     }
     
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
-    	  final ViewHolder holder;
           if(convertView == null){
 	           //使用自定义的list_items作为Layout
 	           convertView = mInflater.inflate(mResource, parent, false);
-	           //减少findView的次数
-			   holder = new ViewHolder();
-	           //初始化布局中的元素
-			   holder.itemsIcon = ((ImageView) convertView.findViewById(mTo[0])) ;
-			   holder.itemsTitle = ((TextView) convertView.findViewById(mTo[1]));
-			   holder.itemsText = ((TextView) convertView.findViewById(mTo[2]));
-			   convertView.setTag(holder);
-          }else{
-        	   holder = (ViewHolder) convertView.getTag();
           }
+          
+          ImageView itemsIcon = AbViewHolder.get(convertView, mTo[0]);
+          TextView itemsTitle = AbViewHolder.get(convertView, mTo[1]);
+          TextView itemsText = AbViewHolder.get(convertView, mTo[2]);
           
 		  //获取该行的数据
           final Map<String, Object>  obj = (Map<String, Object>)mData.get(position);
           String imageUrl = (String)obj.get("itemsIcon");
-          holder.itemsTitle.setText((String)obj.get("itemsTitle"));
-          holder.itemsText.setText((String)obj.get("itemsText"));
+          itemsTitle.setText((String)obj.get("itemsTitle"));
+          itemsText.setText((String)obj.get("itemsText"));
           //设置加载中的View
-          mAbImageDownloader.setLoadingView(convertView.findViewById(R.id.progressBar));
+          mAbImageLoader.setLoadingView(convertView.findViewById(R.id.progressBar));
           //图片的下载
-          mAbImageDownloader.display(holder.itemsIcon,imageUrl);
+          mAbImageLoader.display(itemsIcon,imageUrl);
           
           return convertView;
     }
-    
-    /**
-	 * View元素
-	 */
-	static class ViewHolder {
-		ImageView itemsIcon;
-		TextView itemsTitle;
-		TextView itemsText;
-		ImageButton itemsBtn;
-	}
     
 }

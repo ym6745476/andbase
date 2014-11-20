@@ -3,6 +3,7 @@ package com.andbase.demo.activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 
 import com.ab.activity.AbActivity;
 import com.ab.view.level.AbLevelChartFactory;
@@ -89,7 +90,7 @@ public class LevelChartActivity extends AbActivity {
         AbLevelSeriesDataset mDataset = new AbLevelSeriesDataset();
         AbLevelView mAbLevelView = AbLevelChartFactory.getLevelChartView(this,mDataset,renderer);
         
-        chartLayout.addView(mAbLevelView, layoutParamsFW);
+        chartLayout.addView(mAbLevelView, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
        
        
     }

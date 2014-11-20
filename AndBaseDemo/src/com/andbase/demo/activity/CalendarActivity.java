@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
 import com.ab.util.AbStrUtil;
+import com.ab.util.AbToastUtil;
 import com.ab.view.calendar.CalendarCell;
 import com.ab.view.calendar.CalendarView;
-import com.ab.view.listener.AbOnItemClickListener;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 
@@ -53,12 +53,12 @@ public class CalendarActivity extends AbActivity {
 		
 		mCalendarView.setBackgroundResource(R.drawable.calendar_bg);
 		mCalendarView.setHeaderBackgroundResource(R.drawable.week_bg);
-		mCalendarView.setOnItemClickListener(new AbOnItemClickListener() {
+		mCalendarView.setOnItemClickListener(new CalendarView.AbOnItemClickListener() {
 			
 			@Override
 			public void onClick(int position) {
 				String date = mCalendarView.getStrDateAtPosition(position);
-				showToast("点击了"+position+"值："+date);
+				AbToastUtil.showToast(CalendarActivity.this,"点击了"+position+"值："+date);
 			}
 		});
 		

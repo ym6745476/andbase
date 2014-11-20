@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.util.AbStrUtil类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html">AbStrUtil</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classcom_1_1ab_1_1util_1_1_ab_str_util-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.util.AbStrUtil类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a242b08fe62f3d66beef73cf071c04cd6"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a242b08fe62f3d66beef73cf071c04cd6">parseEmpty</a> (String str)</td></tr>
+<tr class="separator:a242b08fe62f3d66beef73cf071c04cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d513cc8f128bf45936e6b53b2c86393"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a5d513cc8f128bf45936e6b53b2c86393">isEmpty</a> (String str)</td></tr>
+<tr class="separator:a5d513cc8f128bf45936e6b53b2c86393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa329e1a650ba7cbf3d0711cdcebe23ce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#aa329e1a650ba7cbf3d0711cdcebe23ce">chineseLength</a> (String str)</td></tr>
+<tr class="separator:aa329e1a650ba7cbf3d0711cdcebe23ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209719913f02d1041c9f02056af794cc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a209719913f02d1041c9f02056af794cc">strLength</a> (String str)</td></tr>
+<tr class="separator:a209719913f02d1041c9f02056af794cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d422ab6ecfae4149a7174a1987321f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a33d422ab6ecfae4149a7174a1987321f">subStringLength</a> (String str, int maxL)</td></tr>
+<tr class="separator:a33d422ab6ecfae4149a7174a1987321f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a754b6802e81fce1f05e9dfeec8b8efb3"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a754b6802e81fce1f05e9dfeec8b8efb3">isMobileNo</a> (String str)</td></tr>
+<tr class="separator:a754b6802e81fce1f05e9dfeec8b8efb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607d76f933860c7b6ce1b2e27ea783b9"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a607d76f933860c7b6ce1b2e27ea783b9">isNumberLetter</a> (String str)</td></tr>
+<tr class="separator:a607d76f933860c7b6ce1b2e27ea783b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e974d89400b7f9e1e398e8ddcbcceb"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a13e974d89400b7f9e1e398e8ddcbcceb">isNumber</a> (String str)</td></tr>
+<tr class="separator:a13e974d89400b7f9e1e398e8ddcbcceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa563247e7e5e192a6923166c1e1faa4d"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#aa563247e7e5e192a6923166c1e1faa4d">isEmail</a> (String str)</td></tr>
+<tr class="separator:aa563247e7e5e192a6923166c1e1faa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afd11cae81ccfe414d98998a943e4f3"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a4afd11cae81ccfe414d98998a943e4f3">isChinese</a> (String str)</td></tr>
+<tr class="separator:a4afd11cae81ccfe414d98998a943e4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579222e75ea0dd720051b89582b40dfd"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a579222e75ea0dd720051b89582b40dfd">isContainChinese</a> (String str)</td></tr>
+<tr class="separator:a579222e75ea0dd720051b89582b40dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95e05a3f9200188d5b66accfdc1656b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#af95e05a3f9200188d5b66accfdc1656b">convertStreamToString</a> (InputStream is)</td></tr>
+<tr class="separator:af95e05a3f9200188d5b66accfdc1656b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94ebd1dd66c745e209348dee6d21c2b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#ac94ebd1dd66c745e209348dee6d21c2b">dateTimeFormat</a> (String dateTime)</td></tr>
+<tr class="separator:ac94ebd1dd66c745e209348dee6d21c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b4c59453cbeeac13c6840405b52022"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#ab1b4c59453cbeeac13c6840405b52022">strFormat2</a> (String str)</td></tr>
+<tr class="separator:ab1b4c59453cbeeac13c6840405b52022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3966b10b5ff04ed91682c2cc4a6147"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#aac3966b10b5ff04ed91682c2cc4a6147">cutString</a> (String str, int length)</td></tr>
+<tr class="separator:aac3966b10b5ff04ed91682c2cc4a6147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b07fbd5a730ff76088355c9d9373d1"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a88b07fbd5a730ff76088355c9d9373d1">cutString</a> (String str, int length, String dot)</td></tr>
+<tr class="separator:a88b07fbd5a730ff76088355c9d9373d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42aa3053ec1025e3357640997dbac718"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a42aa3053ec1025e3357640997dbac718">cutStringFromChar</a> (String str1, String str2, int offset)</td></tr>
+<tr class="separator:a42aa3053ec1025e3357640997dbac718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07e53cfedfc0615df92187afb713059"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#ae07e53cfedfc0615df92187afb713059">strlen</a> (String str, String charset)</td></tr>
+<tr class="separator:ae07e53cfedfc0615df92187afb713059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83bbf48f8d8d9f46b2113f5e9862317"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#ad83bbf48f8d8d9f46b2113f5e9862317">getSizeDesc</a> (long size)</td></tr>
+<tr class="separator:ad83bbf48f8d8d9f46b2113f5e9862317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc81b773ad30576f2894b22a98bd5e11"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#abc81b773ad30576f2894b22a98bd5e11">ip2int</a> (String ip)</td></tr>
+<tr class="separator:abc81b773ad30576f2894b22a98bd5e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b072cdd8da3a1b2b2a83166aacbcd5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_str_util.html#a41b072cdd8da3a1b2b2a83166aacbcd5">main</a> (String[] args)</td></tr>
+<tr class="separator:a41b072cdd8da3a1b2b2a83166aacbcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbStrUtil.java 描述：字符串处理类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-01-17 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aa329e1a650ba7cbf3d0711cdcebe23ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbStrUtil.chineseLength </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取字符串中文字符的长度（每个中文算2个字符）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中文字符的长度 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af95e05a3f9200188d5b66accfdc1656b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.convertStreamToString </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从输入流中获得String.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>输入流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>获得的String </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac3966b10b5ff04ed91682c2cc4a6147"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.cutString </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：截取字符串到指定字节长度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the str </td></tr>
+    <tr><td class="paramname">length</td><td>指定字节长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>截取后的字符串 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a88b07fbd5a730ff76088355c9d9373d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.cutString </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>dot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：截取字符串到指定字节长度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>文本 </td></tr>
+    <tr><td class="paramname">length</td><td>字节长度 </td></tr>
+    <tr><td class="paramname">dot</td><td>省略符号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>截取后的字符串 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a42aa3053ec1025e3357640997dbac718"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.cutStringFromChar </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：截取字符串从第一个指定字符.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str1</td><td>原文本 </td></tr>
+    <tr><td class="paramname">str2</td><td>指定字符 </td></tr>
+    <tr><td class="paramname">offset</td><td>偏移的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>截取后的字符串 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac94ebd1dd66c745e209348dee6d21c2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.dateTimeFormat </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>dateTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：标准化日期时间类型的数据，不足两位的补0.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dateTime</td><td>预格式的时间字符串，如:2012-3-2 12:2:20 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String 格式化好的时间字符串，如:2012-03-20 12:02:20 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad83bbf48f8d8d9f46b2113f5e9862317"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.getSizeDesc </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取大小的描述.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>字节个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>大小的描述 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc81b773ad30576f2894b22a98bd5e11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long com.ab.util.AbStrUtil.ip2int </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：ip地址转换为10进制数.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>the ip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4afd11cae81ccfe414d98998a943e4f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Boolean com.ab.util.AbStrUtil.isChinese </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否是中文.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否是中文:是为true，否则false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a579222e75ea0dd720051b89582b40dfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Boolean com.ab.util.AbStrUtil.isContainChinese </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否包含中文.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否包含中文:是为true，否则false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa563247e7e5e192a6923166c1e1faa4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Boolean com.ab.util.AbStrUtil.isEmail </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否是邮箱.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否是邮箱:是为true，否则false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d513cc8f128bf45936e6b53b2c86393"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbStrUtil.isEmpty </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：判断一个字符串是否为null或空值.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true or false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a754b6802e81fce1f05e9dfeec8b8efb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Boolean com.ab.util.AbStrUtil.isMobileNo </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：手机号格式验证.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的手机号码字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否为手机号码格式:是为true，否则false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a13e974d89400b7f9e1e398e8ddcbcceb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Boolean com.ab.util.AbStrUtil.isNumber </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否只是数字.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否只是数字:是为true，否则false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a607d76f933860c7b6ce1b2e27ea783b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Boolean com.ab.util.AbStrUtil.isNumberLetter </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：是否只是字母和数字.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否只是字母和数字:是为true，否则false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a41b072cdd8da3a1b2b2a83166aacbcd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbStrUtil.main </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The main method.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a242b08fe62f3d66beef73cf071c04cd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.parseEmpty </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：将null转化为“”.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符串的String类型 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab1b4c59453cbeeac13c6840405b52022"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbStrUtil.strFormat2 </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：不足2个字符的在前面补“0”.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>至少2个字符的字符串 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae07e53cfedfc0615df92187afb713059"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbStrUtil.strlen </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>charset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取字节长度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>文本 </td></tr>
+    <tr><td class="paramname">charset</td><td>字符集（GBK） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a209719913f02d1041c9f02056af794cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbStrUtil.strLength </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取字符串的长度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符串的长度（中文字符计2个） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a33d422ab6ecfae4149a7174a1987321f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbStrUtil.subStringLength </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxL</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取指定长度的字符所在位置.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>指定的字符串 </td></tr>
+    <tr><td class="paramname">maxL</td><td>要取到的长度（字符长度，中文字符计2个） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符的所在位置 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/util/<a class="el" href="_ab_str_util_8java.html">AbStrUtil.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

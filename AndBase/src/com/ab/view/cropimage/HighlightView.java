@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,8 +79,8 @@ public class HighlightView {
      * Inits the.
      */
     private void init() {
-        mResizeDrawableDiagonal = AbImageUtil.bitmapToDrawable(AbFileUtil.getBitmapFormSrc("image/crop_big.png"));
-        mResizeDrawableDiagonal2 = AbImageUtil.bitmapToDrawable(AbFileUtil.getBitmapFormSrc("image/crop_small.png"));
+        mResizeDrawableDiagonal = AbImageUtil.bitmapToDrawable(AbFileUtil.getBitmapFromSrc("image/crop_big.png"));
+        mResizeDrawableDiagonal2 = AbImageUtil.bitmapToDrawable(AbFileUtil.getBitmapFromSrc("image/crop_small.png"));
     }
 
     /** The m is focused. */

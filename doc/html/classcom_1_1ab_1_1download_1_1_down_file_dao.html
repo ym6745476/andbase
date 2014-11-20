@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.download.DownFileDao类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1download.html">download</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1download_1_1_down_file_dao-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.download.DownFileDao类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.download.DownFileDao 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1download_1_1_down_file_dao.png" usemap="#com.ab.download.DownFileDao_map" alt=""/>
+  <map id="com.ab.download.DownFileDao_map" name="com.ab.download.DownFileDao_map">
+<area href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html" alt="com.ab.db.AbBasicDBDao" shape="rect" coords="0,0,191,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac8f0fad40baf8dfcf30dc8ae33a0c727"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#ac8f0fad40baf8dfcf30dc8ae33a0c727">DownFileDao</a> (Context context)</td></tr>
+<tr class="separator:ac8f0fad40baf8dfcf30dc8ae33a0c727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b4bbb3b81aca83921e4ca44b1e9150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#a45b4bbb3b81aca83921e4ca44b1e9150">getDownFile</a> (String path)</td></tr>
+<tr class="separator:a45b4bbb3b81aca83921e4ca44b1e9150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bafb6a1de1a6ef8bed44a32042d3b4e"><td class="memItemLeft" align="right" valign="top">synchronized long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#a6bafb6a1de1a6ef8bed44a32042d3b4e">save</a> (<a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a> mDownFile)</td></tr>
+<tr class="separator:a6bafb6a1de1a6ef8bed44a32042d3b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05eb1cf3e02d461e5465b85fe48653e"><td class="memItemLeft" align="right" valign="top">synchronized long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#ac05eb1cf3e02d461e5465b85fe48653e">update</a> (<a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a> mDownFile)</td></tr>
+<tr class="separator:ac05eb1cf3e02d461e5465b85fe48653e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fd461fc1df96213afac23c832c2493"><td class="memItemLeft" align="right" valign="top">synchronized long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#a17fd461fc1df96213afac23c832c2493">delete</a> (String path)</td></tr>
+<tr class="separator:a17fd461fc1df96213afac23c832c2493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html">com.ab.db.AbBasicDBDao</a></td></tr>
+<tr class="memitem:a518bb2a21ac1f54f786da0636160da8d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#a518bb2a21ac1f54f786da0636160da8d">getStringColumnValue</a> (String columnName, Cursor cursor)</td></tr>
+<tr class="separator:a518bb2a21ac1f54f786da0636160da8d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efaf26f7555ec6ae6a49fe364bba5c0 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#a3efaf26f7555ec6ae6a49fe364bba5c0">getIntColumnValue</a> (String columnName, Cursor cursor)</td></tr>
+<tr class="separator:a3efaf26f7555ec6ae6a49fe364bba5c0 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a76e880735c68fac09c4e4383a3184 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#aa0a76e880735c68fac09c4e4383a3184">closeDatabase</a> (Cursor cursor, SQLiteDatabase db)</td></tr>
+<tr class="separator:aa0a76e880735c68fac09c4e4383a3184 inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae515c4f6f2c53e531af5909ba475ae5d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao.html#ae515c4f6f2c53e531af5909ba475ae5d">closeCursor</a> (Cursor cursor)</td></tr>
+<tr class="separator:ae515c4f6f2c53e531af5909ba475ae5d inherit pub_methods_classcom_1_1ab_1_1db_1_1_ab_basic_d_b_dao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a9ddfcdb85b60ca1ba0ea24992f73b734"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#a9ddfcdb85b60ca1ba0ea24992f73b734">getInstance</a> (Context context)</td></tr>
+<tr class="separator:a9ddfcdb85b60ca1ba0ea24992f73b734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a9dfd4a6dad62890f8e1c84946cbc77c1"><td class="memItemLeft" align="right" valign="top">static Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#a9dfd4a6dad62890f8e1c84946cbc77c1">mContext</a> = null</td></tr>
+<tr class="separator:a9dfd4a6dad62890f8e1c84946cbc77c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af903dda6945e761bc82d84f1fd9f816b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#af903dda6945e761bc82d84f1fd9f816b">mDownFileDao</a> = null</td></tr>
+<tr class="separator:af903dda6945e761bc82d84f1fd9f816b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a953b96e8845840019a3359d024f1f4c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1db_1_1_my_d_b_helper.html">MyDBHelper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html#a953b96e8845840019a3359d024f1f4c8">openHelper</a></td></tr>
+<tr class="separator:a953b96e8845840019a3359d024f1f4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ac8f0fad40baf8dfcf30dc8ae33a0c727"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.download.DownFileDao.DownFileDao </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new down file dao.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a17fd461fc1df96213afac23c832c2493"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized long com.ab.download.DownFileDao.delete </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>删除对应的下载记录.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a45b4bbb3b81aca83921e4ca44b1e9150"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a> com.ab.download.DownFileDao.getDownFile </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取已经下载的文件的信息.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the down file </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9ddfcdb85b60ca1ba0ea24992f73b734"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a> com.ab.download.DownFileDao.getInstance </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the single instance of <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a>.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>single instance of <a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6bafb6a1de1a6ef8bed44a32042d3b4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized long com.ab.download.DownFileDao.save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a>&#160;</td>
+          <td class="paramname"><em>mDownFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>保存线程已经下载的文件信息.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mDownFile</td><td>the m down file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac05eb1cf3e02d461e5465b85fe48653e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized long com.ab.download.DownFileDao.update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file.html">DownFile</a>&#160;</td>
+          <td class="paramname"><em>mDownFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>实时更新线程已经下载的文件长度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mDownFile</td><td>the m down file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the long </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a9dfd4a6dad62890f8e1c84946cbc77c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.download.DownFileDao.mContext = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m context. </p>
+
+</div>
+</div>
+<a class="anchor" id="af903dda6945e761bc82d84f1fd9f816b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1download_1_1_down_file_dao.html">DownFileDao</a> com.ab.download.DownFileDao.mDownFileDao = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m down file dao. </p>
+
+</div>
+</div>
+<a class="anchor" id="a953b96e8845840019a3359d024f1f4c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1db_1_1_my_d_b_helper.html">MyDBHelper</a> com.ab.download.DownFileDao.openHelper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The open helper. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/download/<a class="el" href="_down_file_dao_8java.html">DownFileDao.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

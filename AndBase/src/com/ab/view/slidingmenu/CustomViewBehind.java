@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.slidingmenu;
 
 import android.content.Context;
@@ -15,58 +30,126 @@ import android.view.ViewGroup;
 
 import com.ab.view.slidingmenu.SlidingMenu.CanvasTransformer;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CustomViewBehind.
+ */
 public class CustomViewBehind extends ViewGroup {
 
+	/** The Constant TAG. */
 	private static final String TAG = "CustomViewBehind";
 
+	/** The Constant MARGIN_THRESHOLD. */
 	private static final int MARGIN_THRESHOLD = 48; // dips
+	
+	/** The m touch mode. */
 	private int mTouchMode = SlidingMenu.TOUCHMODE_MARGIN;
 
+	/** The m view above. */
 	private CustomViewAbove mViewAbove;
 
+	/** The m content. */
 	private View mContent;
+	
+	/** The m secondary content. */
 	private View mSecondaryContent;
+	
+	/** The m margin threshold. */
 	private int mMarginThreshold;
+	
+	/** The m width offset. */
 	private int mWidthOffset;
+	
+	/** The m transformer. */
 	private CanvasTransformer mTransformer;
+	
+	/** The m children enabled. */
 	private boolean mChildrenEnabled;
+	
+	/** The selected view id. */
 	private int selectedViewId = 2012;
 
+	/**
+	 * Instantiates a new custom view behind.
+	 *
+	 * @param context the context
+	 */
 	public CustomViewBehind(Context context) {
 		this(context, null);
 	}
 
+	/**
+	 * Instantiates a new custom view behind.
+	 *
+	 * @param context the context
+	 * @param attrs the attrs
+	 */
 	public CustomViewBehind(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		mMarginThreshold = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 
 				MARGIN_THRESHOLD, getResources().getDisplayMetrics());
 	}
 
+	/**
+	 * Sets the custom view above.
+	 *
+	 * @param customViewAbove the new custom view above
+	 */
 	public void setCustomViewAbove(CustomViewAbove customViewAbove) {
 		mViewAbove = customViewAbove;
 	}
 
+	/**
+	 * Sets the canvas transformer.
+	 *
+	 * @param t the new canvas transformer
+	 */
 	public void setCanvasTransformer(CanvasTransformer t) {
 		mTransformer = t;
 	}
 
+	/**
+	 * Sets the width offset.
+	 *
+	 * @param i the new width offset
+	 */
 	public void setWidthOffset(int i) {
 		mWidthOffset = i;
 		requestLayout();
 	}
 	
+	/**
+	 * Sets the margin threshold.
+	 *
+	 * @param marginThreshold the new margin threshold
+	 */
 	public void setMarginThreshold(int marginThreshold) {
 		mMarginThreshold = marginThreshold;
 	}
 	
+	/**
+	 * Gets the margin threshold.
+	 *
+	 * @return the margin threshold
+	 */
 	public int getMarginThreshold() {
 		return mMarginThreshold;
 	}
 
+	/**
+	 * Gets the behind width.
+	 *
+	 * @return the behind width
+	 */
 	public int getBehindWidth() {
 		return mContent.getWidth();
 	}
 
+	/**
+	 * Sets the content.
+	 *
+	 * @param v the new content
+	 */
 	public void setContent(View v) {
 		if (mContent != null)
 			removeView(mContent);
@@ -74,6 +157,11 @@ public class CustomViewBehind extends ViewGroup {
 		addView(mContent);
 	}
 
+	/**
+	 * Gets the content.
+	 *
+	 * @return the content
+	 */
 	public View getContent() {
 		return mContent;
 	}
@@ -89,14 +177,27 @@ public class CustomViewBehind extends ViewGroup {
 		addView(mSecondaryContent);
 	}
 
+	/**
+	 * Gets the secondary content.
+	 *
+	 * @return the secondary content
+	 */
 	public View getSecondaryContent() {
 		return mSecondaryContent;
 	}
 
+	/**
+	 * Sets the children enabled.
+	 *
+	 * @param enabled the new children enabled
+	 */
 	public void setChildrenEnabled(boolean enabled) {
 		mChildrenEnabled = enabled;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#scrollTo(int, int)
+	 */
 	@Override
 	public void scrollTo(int x, int y) {
 		super.scrollTo(x, y);
@@ -104,16 +205,25 @@ public class CustomViewBehind extends ViewGroup {
 			invalidate();
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.ViewGroup#onInterceptTouchEvent(android.view.MotionEvent)
+	 */
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent e) {
 		return !mChildrenEnabled;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onTouchEvent(android.view.MotionEvent)
+	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent e) {
 		return !mChildrenEnabled;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.ViewGroup#dispatchDraw(android.graphics.Canvas)
+	 */
 	@Override
 	protected void dispatchDraw(Canvas canvas) {
 		if (mTransformer != null) {
@@ -125,6 +235,9 @@ public class CustomViewBehind extends ViewGroup {
 			super.dispatchDraw(canvas);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.ViewGroup#onLayout(boolean, int, int, int, int)
+	 */
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
 		final int width = r - l;
@@ -134,6 +247,9 @@ public class CustomViewBehind extends ViewGroup {
 			mSecondaryContent.layout(0, 0, width-mWidthOffset, height);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onMeasure(int, int)
+	 */
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		int width = getDefaultSize(0, widthMeasureSpec);
@@ -146,15 +262,35 @@ public class CustomViewBehind extends ViewGroup {
 			mSecondaryContent.measure(contentWidth, contentHeight);
 	}
 
+	/** The m mode. */
 	private int mMode;
+	
+	/** The m fade enabled. */
 	private boolean mFadeEnabled;
+	
+	/** The m fade paint. */
 	private final Paint mFadePaint = new Paint();
+	
+	/** The m scroll scale. */
 	private float mScrollScale;
+	
+	/** The m shadow drawable. */
 	private Drawable mShadowDrawable;
+	
+	/** The m secondary shadow drawable. */
 	private Drawable mSecondaryShadowDrawable;
+	
+	/** The m shadow width. */
 	private int mShadowWidth;
+	
+	/** The m fade degree. */
 	private float mFadeDegree;
 
+	/**
+	 * Sets the mode.
+	 *
+	 * @param mode the new mode
+	 */
 	public void setMode(int mode) {
 		if (mode == SlidingMenu.LEFT || mode == SlidingMenu.RIGHT) {
 			if (mContent != null)
@@ -165,43 +301,89 @@ public class CustomViewBehind extends ViewGroup {
 		mMode = mode;
 	}
 
+	/**
+	 * Gets the mode.
+	 *
+	 * @return the mode
+	 */
 	public int getMode() {
 		return mMode;
 	}
 
+	/**
+	 * Sets the scroll scale.
+	 *
+	 * @param scrollScale the new scroll scale
+	 */
 	public void setScrollScale(float scrollScale) {
 		mScrollScale = scrollScale;
 	}
 
+	/**
+	 * Gets the scroll scale.
+	 *
+	 * @return the scroll scale
+	 */
 	public float getScrollScale() {
 		return mScrollScale;
 	}
 
+	/**
+	 * Sets the shadow drawable.
+	 *
+	 * @param shadow the new shadow drawable
+	 */
 	public void setShadowDrawable(Drawable shadow) {
 		mShadowDrawable = shadow;
 		invalidate();
 	}
 
+	/**
+	 * Sets the secondary shadow drawable.
+	 *
+	 * @param shadow the new secondary shadow drawable
+	 */
 	public void setSecondaryShadowDrawable(Drawable shadow) {
 		mSecondaryShadowDrawable = shadow;
 		invalidate();
 	}
 
+	/**
+	 * Sets the shadow width.
+	 *
+	 * @param width the new shadow width
+	 */
 	public void setShadowWidth(int width) {
 		mShadowWidth = width;
 		invalidate();
 	}
 
+	/**
+	 * Sets the fade enabled.
+	 *
+	 * @param b the new fade enabled
+	 */
 	public void setFadeEnabled(boolean b) {
 		mFadeEnabled = b;
 	}
 
+	/**
+	 * Sets the fade degree.
+	 *
+	 * @param degree the new fade degree
+	 */
 	public void setFadeDegree(float degree) {
 		if (degree > 1.0f || degree < 0.0f)
 			throw new IllegalStateException("The BehindFadeDegree must be between 0.0f and 1.0f");
 		mFadeDegree = degree;
 	}
 
+	/**
+	 * Gets the menu page.
+	 *
+	 * @param page the page
+	 * @return the menu page
+	 */
 	public int getMenuPage(int page) {
 		page = (page > 1) ? 2 : ((page < 1) ? 0 : page);
 		if (mMode == SlidingMenu.LEFT && page > 1) {
@@ -213,6 +395,13 @@ public class CustomViewBehind extends ViewGroup {
 		}
 	}
 
+	/**
+	 * Scroll behind to.
+	 *
+	 * @param content the content
+	 * @param x the x
+	 * @param y the y
+	 */
 	public void scrollBehindTo(View content, int x, int y) {
 		int vis = View.VISIBLE;		
 		if (mMode == SlidingMenu.LEFT) {
@@ -238,6 +427,13 @@ public class CustomViewBehind extends ViewGroup {
 		setVisibility(vis);
 	}
 
+	/**
+	 * Gets the menu left.
+	 *
+	 * @param content the content
+	 * @param page the page
+	 * @return the menu left
+	 */
 	public int getMenuLeft(View content, int page) {
 		if (mMode == SlidingMenu.LEFT) {
 			switch (page) {
@@ -264,6 +460,12 @@ public class CustomViewBehind extends ViewGroup {
 		return content.getLeft();
 	}
 
+	/**
+	 * Gets the abs left bound.
+	 *
+	 * @param content the content
+	 * @return the abs left bound
+	 */
 	public int getAbsLeftBound(View content) {
 		if (mMode == SlidingMenu.LEFT || mMode == SlidingMenu.LEFT_RIGHT) {
 			return content.getLeft() - getBehindWidth();
@@ -273,6 +475,12 @@ public class CustomViewBehind extends ViewGroup {
 		return 0;
 	}
 
+	/**
+	 * Gets the abs right bound.
+	 *
+	 * @param content the content
+	 * @return the abs right bound
+	 */
 	public int getAbsRightBound(View content) {
 		if (mMode == SlidingMenu.LEFT) {
 			return content.getLeft();
@@ -282,6 +490,13 @@ public class CustomViewBehind extends ViewGroup {
 		return 0;
 	}
 
+	/**
+	 * Margin touch allowed.
+	 *
+	 * @param content the content
+	 * @param x the x
+	 * @return true, if successful
+	 */
 	public boolean marginTouchAllowed(View content, int x) {
 		int left = content.getLeft();
 		int right = content.getRight();
@@ -296,10 +511,23 @@ public class CustomViewBehind extends ViewGroup {
 		return false;
 	}
 
+	/**
+	 * Sets the touch mode.
+	 *
+	 * @param i the new touch mode
+	 */
 	public void setTouchMode(int i) {
 		mTouchMode = i;
 	}
 
+	/**
+	 * Menu open touch allowed.
+	 *
+	 * @param content the content
+	 * @param currPage the curr page
+	 * @param x the x
+	 * @return true, if successful
+	 */
 	public boolean menuOpenTouchAllowed(View content, int currPage, float x) {
 		switch (mTouchMode) {
 		case SlidingMenu.TOUCHMODE_FULLSCREEN:
@@ -310,6 +538,14 @@ public class CustomViewBehind extends ViewGroup {
 		return false;
 	}
 
+	/**
+	 * Menu touch in quick return.
+	 *
+	 * @param content the content
+	 * @param currPage the curr page
+	 * @param x the x
+	 * @return true, if successful
+	 */
 	public boolean menuTouchInQuickReturn(View content, int currPage, float x) {
 		if (mMode == SlidingMenu.LEFT || (mMode == SlidingMenu.LEFT_RIGHT && currPage == 0)) {
 			return x >= content.getLeft();
@@ -319,6 +555,12 @@ public class CustomViewBehind extends ViewGroup {
 		return false;
 	}
 
+	/**
+	 * Menu closed slide allowed.
+	 *
+	 * @param dx the dx
+	 * @return true, if successful
+	 */
 	public boolean menuClosedSlideAllowed(float dx) {
 		if (mMode == SlidingMenu.LEFT) {
 			return dx > 0;
@@ -330,6 +572,12 @@ public class CustomViewBehind extends ViewGroup {
 		return false;
 	}
 
+	/**
+	 * Menu open slide allowed.
+	 *
+	 * @param dx the dx
+	 * @return true, if successful
+	 */
 	public boolean menuOpenSlideAllowed(float dx) {
 		if (mMode == SlidingMenu.LEFT) {
 			return dx < 0;
@@ -341,6 +589,12 @@ public class CustomViewBehind extends ViewGroup {
 		return false;
 	}
 
+	/**
+	 * Draw shadow.
+	 *
+	 * @param content the content
+	 * @param canvas the canvas
+	 */
 	public void drawShadow(View content, Canvas canvas) {
 		if (mShadowDrawable == null || mShadowWidth <= 0) return;
 		int left = 0;
@@ -360,6 +614,13 @@ public class CustomViewBehind extends ViewGroup {
 		mShadowDrawable.draw(canvas);
 	}
 
+	/**
+	 * Draw fade.
+	 *
+	 * @param content the content
+	 * @param canvas the canvas
+	 * @param openPercent the open percent
+	 */
 	public void drawFade(View content, Canvas canvas, float openPercent) {
 		if (!mFadeEnabled) return;
 		final int alpha = (int) (mFadeDegree * 255 * Math.abs(1-openPercent));
@@ -382,10 +643,22 @@ public class CustomViewBehind extends ViewGroup {
 		canvas.drawRect(left, 0, right, getHeight(), mFadePaint);
 	}
 	
+	/** The m selector enabled. */
 	private boolean mSelectorEnabled = true;
+	
+	/** The m selector drawable. */
 	private Bitmap mSelectorDrawable;
+	
+	/** The m selected view. */
 	private View mSelectedView;
 	
+	/**
+	 * Draw selector.
+	 *
+	 * @param content the content
+	 * @param canvas the canvas
+	 * @param openPercent the open percent
+	 */
 	public void drawSelector(View content, Canvas canvas, float openPercent) {
 		if (!mSelectorEnabled) return;
 		if (mSelectorDrawable != null && mSelectedView != null) {
@@ -410,10 +683,20 @@ public class CustomViewBehind extends ViewGroup {
 		}
 	}
 	
+	/**
+	 * Sets the selector enabled.
+	 *
+	 * @param b the new selector enabled
+	 */
 	public void setSelectorEnabled(boolean b) {
 		mSelectorEnabled = b;
 	}
 
+	/**
+	 * Sets the selected view.
+	 *
+	 * @param v the new selected view
+	 */
 	public void setSelectedView(View v) {
 		if (mSelectedView != null) {
 			mSelectedView.setTag(selectedViewId, null);
@@ -426,12 +709,22 @@ public class CustomViewBehind extends ViewGroup {
 		}
 	}
 
+	/**
+	 * Gets the selector top.
+	 *
+	 * @return the selector top
+	 */
 	private int getSelectorTop() {
 		int y = mSelectedView.getTop();
 		y += (mSelectedView.getHeight() - mSelectorDrawable.getHeight()) / 2;
 		return y;
 	}
 
+	/**
+	 * Sets the selector bitmap.
+	 *
+	 * @param b the new selector bitmap
+	 */
 	public void setSelectorBitmap(Bitmap b) {
 		mSelectorDrawable = b;
 		refreshDrawableState();

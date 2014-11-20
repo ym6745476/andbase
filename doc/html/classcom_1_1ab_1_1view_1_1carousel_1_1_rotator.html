@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.carousel.Rotator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1carousel.html">carousel</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html">Rotator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.carousel.Rotator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a18264c628eb2e3a60d7fcf60643579be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a18264c628eb2e3a60d7fcf60643579be">Rotator</a> (Context context)</td></tr>
+<tr class="separator:a18264c628eb2e3a60d7fcf60643579be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a336a82883a4465b7f9e9b625916358"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a3a336a82883a4465b7f9e9b625916358">isFinished</a> ()</td></tr>
+<tr class="separator:a3a336a82883a4465b7f9e9b625916358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a733483afb1a372b1884e6b0233e30"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a33a733483afb1a372b1884e6b0233e30">forceFinished</a> (boolean finished)</td></tr>
+<tr class="separator:a33a733483afb1a372b1884e6b0233e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa353a673c5006b5365182f4c0ccd12e7"><td class="memItemLeft" align="right" valign="top">final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#aa353a673c5006b5365182f4c0ccd12e7">getDuration</a> ()</td></tr>
+<tr class="separator:aa353a673c5006b5365182f4c0ccd12e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ff46c5f1dc83a608d7df618224287f"><td class="memItemLeft" align="right" valign="top">final float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#ae2ff46c5f1dc83a608d7df618224287f">getCurrAngle</a> ()</td></tr>
+<tr class="separator:ae2ff46c5f1dc83a608d7df618224287f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a58bb672825636dacbdc7da7ee7204"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a02a58bb672825636dacbdc7da7ee7204">getCurrVelocity</a> ()</td></tr>
+<tr class="separator:a02a58bb672825636dacbdc7da7ee7204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d0e7bb4a1f16240e5c3e0cb9e8a66e"><td class="memItemLeft" align="right" valign="top">final float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#ac3d0e7bb4a1f16240e5c3e0cb9e8a66e">getStartAngle</a> ()</td></tr>
+<tr class="separator:ac3d0e7bb4a1f16240e5c3e0cb9e8a66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e5053b061efc1396e1b46a33d5c7f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#ae4e5053b061efc1396e1b46a33d5c7f8">timePassed</a> ()</td></tr>
+<tr class="separator:ae4e5053b061efc1396e1b46a33d5c7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ce2eb3b56854afb08bae6424c6d661"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a03ce2eb3b56854afb08bae6424c6d661">extendDuration</a> (int extend)</td></tr>
+<tr class="separator:a03ce2eb3b56854afb08bae6424c6d661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956beb74a395e8e44028f30515fbf7ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a956beb74a395e8e44028f30515fbf7ab">abortAnimation</a> ()</td></tr>
+<tr class="separator:a956beb74a395e8e44028f30515fbf7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76916c66bf744b6fc129628c8efec283"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a76916c66bf744b6fc129628c8efec283">computeAngleOffset</a> ()</td></tr>
+<tr class="separator:a76916c66bf744b6fc129628c8efec283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5663a36ab5797627ae26d4b7eb0e8634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a5663a36ab5797627ae26d4b7eb0e8634">startRotate</a> (float startAngle, float dAngle, int duration)</td></tr>
+<tr class="separator:a5663a36ab5797627ae26d4b7eb0e8634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade149e745599a87bd3078c7270257c9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#ade149e745599a87bd3078c7270257c9b">startRotate</a> (float startAngle, float dAngle)</td></tr>
+<tr class="separator:ade149e745599a87bd3078c7270257c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f86129da6b6ebf045a6c8093587d02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a34f86129da6b6ebf045a6c8093587d02">fling</a> (float velocityAngle)</td></tr>
+<tr class="separator:a34f86129da6b6ebf045a6c8093587d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:adacfd486f56e3e6b67806c1160125ac6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#adacfd486f56e3e6b67806c1160125ac6">mMode</a></td></tr>
+<tr class="separator:adacfd486f56e3e6b67806c1160125ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d660e7e8e93f3d4a02610ac59a2f2e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#af5d660e7e8e93f3d4a02610ac59a2f2e">mStartAngle</a></td></tr>
+<tr class="separator:af5d660e7e8e93f3d4a02610ac59a2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6eca15553c5deaf0d02daa2f676edda"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#aa6eca15553c5deaf0d02daa2f676edda">mCurrAngle</a></td></tr>
+<tr class="separator:aa6eca15553c5deaf0d02daa2f676edda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d1e698f05f1575091d8b76a19a79217"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a0d1e698f05f1575091d8b76a19a79217">mStartTime</a></td></tr>
+<tr class="separator:a0d1e698f05f1575091d8b76a19a79217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd9d4551ad0701db20be388731656f4"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a7bd9d4551ad0701db20be388731656f4">mDuration</a></td></tr>
+<tr class="separator:a7bd9d4551ad0701db20be388731656f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17278941ce89155e56852ddea1549ee6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a17278941ce89155e56852ddea1549ee6">mDeltaAngle</a></td></tr>
+<tr class="separator:a17278941ce89155e56852ddea1549ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8d265cd97e3a322aa8da197d50a159"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a7d8d265cd97e3a322aa8da197d50a159">mFinished</a></td></tr>
+<tr class="separator:a7d8d265cd97e3a322aa8da197d50a159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067cc2ce2948bac3d4d667ddf8561bcb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a067cc2ce2948bac3d4d667ddf8561bcb">mCoeffVelocity</a> = 0.05f</td></tr>
+<tr class="separator:a067cc2ce2948bac3d4d667ddf8561bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78119f5c0f08bb1e6b48f74582e40a7e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a78119f5c0f08bb1e6b48f74582e40a7e">mVelocity</a></td></tr>
+<tr class="separator:a78119f5c0f08bb1e6b48f74582e40a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9dc4bdc8f2292888b08e284533fd63d"><td class="memItemLeft" align="right" valign="top">final float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#af9dc4bdc8f2292888b08e284533fd63d">mDeceleration</a> = 240.0f</td></tr>
+<tr class="separator:af9dc4bdc8f2292888b08e284533fd63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a43c71f2458fba479ddd39caa82e70c1b"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a43c71f2458fba479ddd39caa82e70c1b">DEFAULT_DURATION</a> = 250</td></tr>
+<tr class="separator:a43c71f2458fba479ddd39caa82e70c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada46bccd805e80e719456509cc1137e6"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#ada46bccd805e80e719456509cc1137e6">SCROLL_MODE</a> = 0</td></tr>
+<tr class="separator:ada46bccd805e80e719456509cc1137e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1926413739fb351b72e749fe33575d28"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a1926413739fb351b72e749fe33575d28">FLING_MODE</a> = 1</td></tr>
+<tr class="separator:a1926413739fb351b72e749fe33575d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class encapsulates rotation. The duration of the rotation can be passed in the constructor and specifies the maximum time that the rotation animation should take. Past this time, the rotation is automatically moved to its final stage and computeRotationOffset() will always return false to indicate that scrolling is over. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a18264c628eb2e3a60d7fcf60643579be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.carousel.Rotator.Rotator </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a Scroller with the specified interpolator. If the interpolator is null, the default (viscous) interpolator will be used.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a956beb74a395e8e44028f30515fbf7ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.Rotator.abortAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stops the animation. Contrary to <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a33a733483afb1a372b1884e6b0233e30">forceFinished(boolean)</a>, aborting the animating cause the scroller to move to the final x and y position</p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_rotator.html#a33a733483afb1a372b1884e6b0233e30">forceFinished(boolean)</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a76916c66bf744b6fc129628c8efec283"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.Rotator.computeAngleOffset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Call this when you want to know the new location. If it returns true, the animation is not yet finished. loc will be altered to provide the new location.</p>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a03ce2eb3b56854afb08bae6424c6d661"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.Rotator.extendDuration </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>extend</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Extend the scroll animation. This allows a running animation to scroll further and longer, when used with <a class="el" href="">setFinalX(int)</a> or <a class="el" href="">setFinalY(int)</a>.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extend</td><td>Additional time to scroll in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>#setFinalX(int) </dd>
+<dd>
+#setFinalY(int) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a34f86129da6b6ebf045a6c8093587d02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.Rotator.fling </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>velocityAngle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Start scrolling based on a fling gesture. The distance travelled will depend on the initial velocity of the fling.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">velocityAngle</td><td>Initial velocity of the fling (X) measured in pixels per second. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a33a733483afb1a372b1884e6b0233e30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.ab.view.carousel.Rotator.forceFinished </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>finished</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Force the finished field to a particular value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">finished</td><td>The new finished value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae2ff46c5f1dc83a608d7df618224287f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final float com.ab.view.carousel.Rotator.getCurrAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the current X offset in the scroll.</p>
+<dl class="section return"><dt>返回</dt><dd>The new X offset as an absolute distance from the origin. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a02a58bb672825636dacbdc7da7ee7204"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.Rotator.getCurrVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the curr velocity.</p>
+<dl class="section return"><dt>返回</dt><dd>The original velocity less the deceleration. Result may be negative.  Returns the current velocity. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa353a673c5006b5365182f4c0ccd12e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long com.ab.view.carousel.Rotator.getDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns how long the scroll event will take, in milliseconds.</p>
+<dl class="section return"><dt>返回</dt><dd>The duration of the scroll in milliseconds. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3d0e7bb4a1f16240e5c3e0cb9e8a66e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final float com.ab.view.carousel.Rotator.getStartAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the start X offset in the scroll.</p>
+<dl class="section return"><dt>返回</dt><dd>The start X offset as an absolute distance from the origin. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a336a82883a4465b7f9e9b625916358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.ab.view.carousel.Rotator.isFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the scroller has finished scrolling.</p>
+<dl class="section return"><dt>返回</dt><dd>True if the scroller has finished scrolling, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5663a36ab5797627ae26d4b7eb0e8634"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.Rotator.startRotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>startAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Start scrolling by providing a starting point and the distance to travel.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startAngle</td><td>the start angle </td></tr>
+    <tr><td class="paramname">dAngle</td><td>the d angle </td></tr>
+    <tr><td class="paramname">duration</td><td>Duration of the scroll in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ade149e745599a87bd3078c7270257c9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.Rotator.startRotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>startAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dAngle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Start scrolling by providing a starting point and the distance to travel. The scroll will use the default value of 250 milliseconds for the duration.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startAngle</td><td>the start angle </td></tr>
+    <tr><td class="paramname">dAngle</td><td>the d angle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae4e5053b061efc1396e1b46a33d5c7f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.Rotator.timePassed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the time elapsed since the beginning of the scrolling.</p>
+<dl class="section return"><dt>返回</dt><dd>The elapsed time in milliseconds. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a43c71f2458fba479ddd39caa82e70c1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.Rotator.DEFAULT_DURATION = 250</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant DEFAULT_DURATION. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1926413739fb351b72e749fe33575d28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.Rotator.FLING_MODE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant FLING_MODE. </p>
+
+</div>
+</div>
+<a class="anchor" id="a067cc2ce2948bac3d4d667ddf8561bcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.Rotator.mCoeffVelocity = 0.05f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m coeff velocity. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6eca15553c5deaf0d02daa2f676edda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.Rotator.mCurrAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m curr angle. </p>
+
+</div>
+</div>
+<a class="anchor" id="af9dc4bdc8f2292888b08e284533fd63d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final float com.ab.view.carousel.Rotator.mDeceleration = 240.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m deceleration. </p>
+
+</div>
+</div>
+<a class="anchor" id="a17278941ce89155e56852ddea1549ee6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.Rotator.mDeltaAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m delta angle. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7bd9d4551ad0701db20be388731656f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.Rotator.mDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m duration. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d8d265cd97e3a322aa8da197d50a159"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.Rotator.mFinished</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m finished. </p>
+
+</div>
+</div>
+<a class="anchor" id="adacfd486f56e3e6b67806c1160125ac6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.Rotator.mMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m mode. </p>
+
+</div>
+</div>
+<a class="anchor" id="af5d660e7e8e93f3d4a02610ac59a2f2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.Rotator.mStartAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m start angle. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d1e698f05f1575091d8b76a19a79217"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.Rotator.mStartTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m start time. </p>
+
+</div>
+</div>
+<a class="anchor" id="a78119f5c0f08bb1e6b48f74582e40a7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.carousel.Rotator.mVelocity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m velocity. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada46bccd805e80e719456509cc1137e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.Rotator.SCROLL_MODE = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant SCROLL_MODE. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/carousel/<a class="el" href="_rotator_8java.html">Rotator.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

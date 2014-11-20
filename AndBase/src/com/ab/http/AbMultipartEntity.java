@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,6 @@
 
 package com.ab.http;
 
-import android.util.Log;
-
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.message.BasicHeader;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,62 +27,65 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+import org.apache.http.message.BasicHeader;
+
+import com.ab.util.AbLogUtil;
+
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbMultipartEntity.java 
  * 描述：用于文件上传
- * @author zhaoqp
- * @date：2013-11-13 下午1:09:20
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-13 下午1:09:20
  */
 public class AbMultipartEntity implements HttpEntity {
 
-    /** The Constant TAG. */
-    private static final String TAG = "AbMultipartEntity";
-
-    /** The Constant APPLICATION_OCTET_STREAM. */
+    /** 流常量. */
     private static final String APPLICATION_OCTET_STREAM = "application/octet-stream";
     
-    /** The Constant CR_LF. */
+    /** 结束符. */
     private static final byte[] CR_LF = ("\r\n").getBytes();
     
-    /** The Constant TRANSFER_ENCODING_BINARY. */
+    /** 编码转换二进制. */
     private static final byte[] TRANSFER_ENCODING_BINARY = "Content-Transfer-Encoding: binary\r\n"
             .getBytes();
 
-    /** The Constant MULTIPART_CHARS. */
+    /** 字符. */
     private final static char[] MULTIPART_CHARS = "-_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 
-    /** The boundary. */
+    /** 二进制串. */
     private String boundary;
     
-    /** The boundary line. */
+    /** 二进制的换行. */
     private byte[] boundaryLine;
     
-    /** The boundary end. */
+    /** 二进制的结束. */
     private byte[] boundaryEnd;
 
-    /** The file parts. */
+    /** 文件域部分. */
     private List<FilePart> fileParts = new ArrayList<FilePart>();
 
-    /** The out. */
+    /** 输出流. */
     private ByteArrayOutputStream out = new ByteArrayOutputStream();
 
-    /** The progress handler. */
+    /** 响应监听器. */
     private AbHttpResponseListener responseListener;
 
-    /** The bytes written. */
+    /** 已经写的字节数. */
     private int bytesWritten;
 
-    /** The total size. */
+    /** 总大小. */
     private int totalSize;
 
     /**
-     * Instantiates a new simple multipart entity.
+     * 构造方法.
      *
-     * @param progressHandler the progress handler
+     * @param responseListener 监听器
      */
     public AbMultipartEntity(AbHttpResponseListener responseListener) {
         final StringBuilder buf = new StringBuilder();
@@ -111,7 +108,7 @@ public class AbMultipartEntity implements HttpEntity {
      * @param value the value
      * @param contentType the content type
      */
-    public void addPart(final String key, final String value, final String contentType) {
+    public void addPart(String key,String value,String contentType) {
         try {
             out.write(boundaryLine);
             out.write(createContentDisposition(key));
@@ -119,9 +116,9 @@ public class AbMultipartEntity implements HttpEntity {
             out.write(CR_LF);
             out.write(value.getBytes());
             out.write(CR_LF);
-        } catch (final IOException e) {
+        } catch (Exception e) {
             // Can't happen on ByteArrayOutputStream
-            Log.e(TAG, "addPart ByteArrayOutputStream exception", e);
+            AbLogUtil.e(AbMultipartEntity.class, "addPart ByteArrayOutputStream exception");
         }
     }
 
@@ -131,7 +128,7 @@ public class AbMultipartEntity implements HttpEntity {
      * @param key the key
      * @param value the value
      */
-    public void addPart(final String key, final String value) {
+    public void addPart(String key, String value) {
         addPart(key, value, "text/plain; charset=UTF-8");
     }
 
@@ -152,7 +149,7 @@ public class AbMultipartEntity implements HttpEntity {
      * @param file the file
      * @param type the type
      */
-    public void addPart(final String key, File file, String type) {
+    public void addPart(String key, File file, String type) {
         if (type == null) {
             type = APPLICATION_OCTET_STREAM;
         }
@@ -191,12 +188,15 @@ public class AbMultipartEntity implements HttpEntity {
         out.write(CR_LF);
         out.flush();
         try {
-            inputStream.close();
-        } catch (final IOException e) {
-            // Not important, just log it
-            Log.w(TAG, "Cannot close input stream", e);
+        	if (out != null) {
+        		out.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        	AbLogUtil.e(AbMultipartEntity.class, "Cannot close output stream");
         }
     }
+    
 
     /**
      * Creates the content type.
@@ -242,6 +242,137 @@ public class AbMultipartEntity implements HttpEntity {
         responseListener.sendProgressMessage(bytesWritten, totalSize);
     }
 
+    // The following methods are from the HttpEntity interface
+
+    /**
+     * 描述：获取长度.
+     *
+     * @return the content length
+     * @see org.apache.http.HttpEntity#getContentLength()
+     */
+    @Override
+    public long getContentLength() {
+        long contentLen = out.size();
+        for (FilePart filePart : fileParts) {
+            long len = filePart.getTotalLength();
+            if (len < 0) {
+            	// Should normally not happen
+                return -1; 
+            }
+            contentLen += len;
+        }
+        contentLen += boundaryEnd.length;
+        return contentLen;
+    }
+
+    /**
+     * 描述：获取类型.
+     *
+     * @version v1.0
+     * @return the content type
+     * @see org.apache.http.HttpEntity#getContentType()
+     * @author: amsoft.cn
+     * @date：2013-10-22 下午4:23:15
+     */
+    @Override
+    public Header getContentType() {
+        return new BasicHeader("Content-Type", "multipart/form-data; boundary=" + boundary);
+    }
+
+    /**
+     * 描述：输出的内容长度不能确定.
+     *
+     * @return true, if is chunked
+     * @see org.apache.http.HttpEntity#isChunked()
+     */
+    @Override
+    public boolean isChunked() {
+        return false;
+    }
+
+    /**
+     * 描述：是否使用了不可重复的请求实体.
+     *
+     * @return true, if is repeatable
+     * @see org.apache.http.HttpEntity#isRepeatable()
+     */
+    @Override
+    public boolean isRepeatable() {
+        return false;
+    }
+
+    /**
+     * 描述：TODO.
+     *
+     * @return true, if is streaming
+     * @see org.apache.http.HttpEntity#isStreaming()
+     */
+    @Override
+    public boolean isStreaming() {
+        return false;
+    }
+
+    /**
+     * 描述：写入.
+     *
+     * @param outstream the outstream
+     * @throws IOException Signals that an I/O exception has occurred.
+     * @see org.apache.http.HttpEntity#writeTo(java.io.OutputStream)
+     */
+    @Override
+    public void writeTo(final OutputStream outstream) throws IOException {
+        bytesWritten = 0;
+        totalSize = (int) getContentLength();
+        out.writeTo(outstream);
+        updateProgress(out.size());
+
+        for (FilePart filePart : fileParts) {
+            filePart.writeTo(outstream);
+        }
+        outstream.write(boundaryEnd);
+        updateProgress(boundaryEnd.length);
+    }
+
+    /**
+     * 描述：获取编码.
+     *
+     * @return the content encoding
+     * @see org.apache.http.HttpEntity#getContentEncoding()
+     */
+    @Override
+    public Header getContentEncoding() {
+        return null;
+    }
+
+    /**
+     * 描述：TODO.
+     *
+     * @throws IOException Signals that an I/O exception has occurred.
+     * @throws UnsupportedOperationException the unsupported operation exception
+     * @see org.apache.http.HttpEntity#consumeContent()
+     */
+    @Override
+    public void consumeContent() throws IOException, UnsupportedOperationException {
+        if (isStreaming()) {
+            throw new UnsupportedOperationException(
+                    "Streaming entity does not implement #consumeContent()");
+        }
+    }
+
+    /**
+     * 描述：获取内容流.
+     *
+     * @return the content
+     * @throws IOException Signals that an I/O exception has occurred.
+     * @throws UnsupportedOperationException the unsupported operation exception
+     * @see org.apache.http.HttpEntity#getContent()
+     */
+    @Override
+    public InputStream getContent() throws IOException, UnsupportedOperationException {
+        throw new UnsupportedOperationException(
+                "getContent() is not supported. Use writeTo() instead.");
+    }
+    
     /**
      * The Class FilePart.
      */
@@ -266,7 +397,7 @@ public class AbMultipartEntity implements HttpEntity {
         }
 
         /**
-         * Creates the header.
+         * 创建请求头.
          *
          * @param key the key
          * @param filename the filename
@@ -283,15 +414,15 @@ public class AbMultipartEntity implements HttpEntity {
                 headerStream.write(createContentType(type));
                 headerStream.write(TRANSFER_ENCODING_BINARY);
                 headerStream.write(CR_LF);
-            } catch (IOException e) {
-                // Can't happen on ByteArrayOutputStream
-                Log.e(TAG, "createHeader ByteArrayOutputStream exception", e);
+            } catch (Exception e) {
+                e.printStackTrace();
+            	AbLogUtil.e(AbMultipartEntity.class, "createHeader ByteArrayOutputStream exception");
             }
             return headerStream.toByteArray();
         }
 
         /**
-         * Gets the total length.
+         * 获取长度.
          *
          * @return the total length
          */
@@ -301,139 +432,37 @@ public class AbMultipartEntity implements HttpEntity {
         }
 
         /**
-         * Write to.
+         * 写入OutputStream.
          *
          * @param out the out
          * @throws IOException Signals that an I/O exception has occurred.
          */
         public void writeTo(OutputStream out) throws IOException {
-            out.write(header);
-            updateProgress(header.length);
+            FileInputStream inputStream = null;
+			try {
+				out.write(header);
+				updateProgress(header.length);
 
-            FileInputStream inputStream = new FileInputStream(file);
-            final byte[] tmp = new byte[4096];
-            int l;
-            while ((l = inputStream.read(tmp)) != -1) {
-                out.write(tmp, 0, l);
-                updateProgress(l);
-            }
-            out.write(CR_LF);
-            updateProgress(CR_LF.length);
-            out.flush();
-            try {
-                inputStream.close();
-            } catch (final IOException e) {
-                // Not important, just log it
-                Log.w(TAG, "Cannot close input stream", e);
-            }
+				inputStream = new FileInputStream(file);
+				final byte[] tmp = new byte[4096];
+				int l;
+				while ((l = inputStream.read(tmp)) != -1) {
+				    out.write(tmp, 0, l);
+				    updateProgress(l);
+				}
+				out.write(CR_LF);
+				updateProgress(CR_LF.length);
+				out.flush();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}finally{
+				 try {
+					inputStream.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+	            	AbLogUtil.e(AbMultipartEntity.class,"Cannot close input stream");
+				}
+			}
         }
-    }
-
-    // The following methods are from the HttpEntity interface
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#getContentLength()
-     */
-    @Override
-    public long getContentLength() {
-        long contentLen = out.size();
-        for (FilePart filePart : fileParts) {
-            long len = filePart.getTotalLength();
-            if (len < 0) {
-                return -1; // Should normally not happen
-            }
-            contentLen += len;
-        }
-        contentLen += boundaryEnd.length;
-        return contentLen;
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#getContentType()
-     * @author: zhaoqp
-     * @date：2013-10-22 下午4:23:15
-     * @version v1.0
-     */
-    @Override
-    public Header getContentType() {
-        return new BasicHeader("Content-Type", "multipart/form-data; boundary=" + boundary);
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#isChunked()
-     */
-    @Override
-    public boolean isChunked() {
-        return false;
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#isRepeatable()
-     */
-    @Override
-    public boolean isRepeatable() {
-        return false;
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#isStreaming()
-     */
-    @Override
-    public boolean isStreaming() {
-        return false;
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#writeTo(java.io.OutputStream)
-     */
-    @Override
-    public void writeTo(final OutputStream outstream) throws IOException {
-        bytesWritten = 0;
-        totalSize = (int) getContentLength();
-        out.writeTo(outstream);
-        updateProgress(out.size());
-
-        for (FilePart filePart : fileParts) {
-            filePart.writeTo(outstream);
-        }
-        outstream.write(boundaryEnd);
-        updateProgress(boundaryEnd.length);
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#getContentEncoding()
-     */
-    @Override
-    public Header getContentEncoding() {
-        return null;
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#consumeContent()
-     */
-    @Override
-    public void consumeContent() throws IOException, UnsupportedOperationException {
-        if (isStreaming()) {
-            throw new UnsupportedOperationException(
-                    "Streaming entity does not implement #consumeContent()");
-        }
-    }
-
-    /**
-     * 描述：TODO
-     * @see org.apache.http.HttpEntity#getContent()
-     */
-    @Override
-    public InputStream getContent() throws IOException, UnsupportedOperationException {
-        throw new UnsupportedOperationException(
-                "getContent() is not supported. Use writeTo() instead.");
     }
 }

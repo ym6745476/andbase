@@ -1,0 +1,1203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.util.AbAppUtil类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html">AbAppUtil</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="classcom_1_1ab_1_1util_1_1_ab_app_util-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.util.AbAppUtil类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af018f792bd107e6a67c58bb5c0488644"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#af018f792bd107e6a67c58bb5c0488644">installApk</a> (Context context, File file)</td></tr>
+<tr class="separator:af018f792bd107e6a67c58bb5c0488644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51d02e1af90db565af43b9a4ecaac70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#ab51d02e1af90db565af43b9a4ecaac70">uninstallApk</a> (Context context, String packageName)</td></tr>
+<tr class="separator:ab51d02e1af90db565af43b9a4ecaac70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b09b961feddd170fbea0edda2c07dbf"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a2b09b961feddd170fbea0edda2c07dbf">isServiceRunning</a> (Context context, String className)</td></tr>
+<tr class="separator:a2b09b961feddd170fbea0edda2c07dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2daf0923be858fc30ede161a1733a495"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a2daf0923be858fc30ede161a1733a495">stopRunningService</a> (Context context, String className)</td></tr>
+<tr class="separator:a2daf0923be858fc30ede161a1733a495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cb2c5ce9e1b511635fead30c41dac2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#ac5cb2c5ce9e1b511635fead30c41dac2">getNumCores</a> ()</td></tr>
+<tr class="separator:ac5cb2c5ce9e1b511635fead30c41dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a5489dc97350d056775ad130a8b5df"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a91a5489dc97350d056775ad130a8b5df">isNetworkAvailable</a> (Context context)</td></tr>
+<tr class="separator:a91a5489dc97350d056775ad130a8b5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75a4e5e2970fe293e007937dc8793e1"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#ab75a4e5e2970fe293e007937dc8793e1">isGpsEnabled</a> (Context context)</td></tr>
+<tr class="separator:ab75a4e5e2970fe293e007937dc8793e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce575b06f4312d348ae8fd0f63a60ff"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a1ce575b06f4312d348ae8fd0f63a60ff">isMobile</a> (Context context)</td></tr>
+<tr class="separator:a1ce575b06f4312d348ae8fd0f63a60ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f409aac3681543a57cb14931a43478"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a86f409aac3681543a57cb14931a43478">importDatabase</a> (Context context, String dbName, int rawRes)</td></tr>
+<tr class="separator:a86f409aac3681543a57cb14931a43478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b27066f35715143bf8a90ff49c01ea"><td class="memItemLeft" align="right" valign="top">static DisplayMetrics&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a21b27066f35715143bf8a90ff49c01ea">getDisplayMetrics</a> (Context context)</td></tr>
+<tr class="separator:a21b27066f35715143bf8a90ff49c01ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6f710283a210fbf658fb5cfc777621"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a2a6f710283a210fbf658fb5cfc777621">showSoftInput</a> (Context context)</td></tr>
+<tr class="separator:a2a6f710283a210fbf658fb5cfc777621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30e90f3128a4292eac05b92b007a2f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#ad30e90f3128a4292eac05b92b007a2f7">closeSoftInput</a> (Context context)</td></tr>
+<tr class="separator:ad30e90f3128a4292eac05b92b007a2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc2a3b1d4ffcb621746bb4ae14bc0ae"><td class="memItemLeft" align="right" valign="top">static PackageInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a8cc2a3b1d4ffcb621746bb4ae14bc0ae">getPackageInfo</a> (Context context)</td></tr>
+<tr class="separator:a8cc2a3b1d4ffcb621746bb4ae14bc0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7884e57cd62e7bd6865c3f19a72c0e"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_app_process_info.html">AbAppProcessInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a8f7884e57cd62e7bd6865c3f19a72c0e">getRunningAppProcesses</a> (Context context)</td></tr>
+<tr class="separator:a8f7884e57cd62e7bd6865c3f19a72c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0a6c7934fd86c79508740c8b2f4a0f"><td class="memItemLeft" align="right" valign="top">static ApplicationInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a9a0a6c7934fd86c79508740c8b2f4a0f">getApplicationInfo</a> (Context context, String processName)</td></tr>
+<tr class="separator:a9a0a6c7934fd86c79508740c8b2f4a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94244a1bf9f92322057cf6de092af925"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a94244a1bf9f92322057cf6de092af925">killProcesses</a> (Context context, int pid, String processName)</td></tr>
+<tr class="separator:a94244a1bf9f92322057cf6de092af925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca3d323a9669234cc8d9c80ceb8bf65"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_ps_row.html">AbPsRow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a9ca3d323a9669234cc8d9c80ceb8bf65">ps</a> ()</td></tr>
+<tr class="separator:a9ca3d323a9669234cc8d9c80ceb8bf65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d4ae9524c444193df9f031345c6014"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_ps_row.html">AbPsRow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#ab4d4ae9524c444193df9f031345c6014">getPsRow</a> (String processName)</td></tr>
+<tr class="separator:ab4d4ae9524c444193df9f031345c6014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f2c0f1304571b077a05867f2725eef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_process_info.html">AbProcessInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a79f2c0f1304571b077a05867f2725eef">getMemInfo</a> (String processName)</td></tr>
+<tr class="separator:a79f2c0f1304571b077a05867f2725eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a7173c7d968237d6d2ec396ecc5117"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_process_info.html">AbProcessInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a44a7173c7d968237d6d2ec396ecc5117">getMemInfo</a> (int pid)</td></tr>
+<tr class="separator:a44a7173c7d968237d6d2ec396ecc5117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ee64f935d3d97d54dc8f919257b956"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a95ee64f935d3d97d54dc8f919257b956">runCommand</a> (String[] command, String workdirectory)</td></tr>
+<tr class="separator:a95ee64f935d3d97d54dc8f919257b956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793e1bfb0689ec149550b5dba7e6ca21"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a793e1bfb0689ec149550b5dba7e6ca21">runScript</a> (String script)</td></tr>
+<tr class="separator:a793e1bfb0689ec149550b5dba7e6ca21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab935537b7974725bc4cb6e08c79da727"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#ab935537b7974725bc4cb6e08c79da727">getRootPermission</a> (Context context)</td></tr>
+<tr class="separator:ab935537b7974725bc4cb6e08c79da727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825f26ada8cd46277ae3230ac570f48b"><td class="memItemLeft" align="right" valign="top">static List&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a825f26ada8cd46277ae3230ac570f48b">getProcessRunningInfo</a> ()</td></tr>
+<tr class="separator:a825f26ada8cd46277ae3230ac570f48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c96834033a98a1b1c32f2effdcc8a12"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a8c96834033a98a1b1c32f2effdcc8a12">runCommandTopN1</a> ()</td></tr>
+<tr class="separator:a8c96834033a98a1b1c32f2effdcc8a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11187f51b182c3ff87ca4a50573bf671"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_c_p_u_info.html">AbCPUInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a11187f51b182c3ff87ca4a50573bf671">getCPUInfo</a> ()</td></tr>
+<tr class="separator:a11187f51b182c3ff87ca4a50573bf671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d38e3d0e4b8bb7657f21c8ac577bd3"><td class="memItemLeft" align="right" valign="top">static List&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a01d38e3d0e4b8bb7657f21c8ac577bd3">parseProcessRunningInfo</a> (String info)</td></tr>
+<tr class="separator:a01d38e3d0e4b8bb7657f21c8ac577bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168d64da56f1c15a8bd879ebb368a642"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_c_p_u_info.html">AbCPUInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#a168d64da56f1c15a8bd879ebb368a642">parseCPUInfo</a> (String info)</td></tr>
+<tr class="separator:a168d64da56f1c15a8bd879ebb368a642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca57f263a7f602fea9139f1e1f2c0de3"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#aca57f263a7f602fea9139f1e1f2c0de3">getAvailMemory</a> (Context context)</td></tr>
+<tr class="separator:aca57f263a7f602fea9139f1e1f2c0de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaeed3caea2696a2e08424de90752796"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#afaeed3caea2696a2e08424de90752796">getTotalMemory</a> (Context context)</td></tr>
+<tr class="separator:afaeed3caea2696a2e08424de90752796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:af5c2ae88dc2c9bcfc81a5090a903c127"><td class="memItemLeft" align="right" valign="top">static List&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_app_util.html#af5c2ae88dc2c9bcfc81a5090a903c127">mProcessList</a> = null</td></tr>
+<tr class="separator:af5c2ae88dc2c9bcfc81a5090a903c127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbAppUtil.java 描述：应用工具类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2011-11-10 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ad30e90f3128a4292eac05b92b007a2f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbAppUtil.closeSoftInput </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>关闭键盘事件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9a0a6c7934fd86c79508740c8b2f4a0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ApplicationInfo com.ab.util.AbAppUtil.getApplicationInfo </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>processName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据进程名返回应用程序. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td></td></tr>
+    <tr><td class="paramname">processName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca57f263a7f602fea9139f1e1f2c0de3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long com.ab.util.AbAppUtil.getAvailMemory </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取可用内存. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a11187f51b182c3ff87ca4a50573bf671"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_c_p_u_info.html">AbCPUInfo</a> com.ab.util.AbAppUtil.getCPUInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取进程运行的信息. </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a21b27066f35715143bf8a90ff49c01ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DisplayMetrics com.ab.util.AbAppUtil.getDisplayMetrics </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取屏幕尺寸与密度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>mDisplayMetrics </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a79f2c0f1304571b077a05867f2725eef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_process_info.html">AbProcessInfo</a> com.ab.util.AbAppUtil.getMemInfo </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>processName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据进程名获取CPU和内存信息. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a44a7173c7d968237d6d2ec396ecc5117"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_process_info.html">AbProcessInfo</a> com.ab.util.AbAppUtil.getMemInfo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据进程ID获取CPU和内存信息. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pid</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5cb2c5ce9e1b511635fead30c41dac2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbAppUtil.getNumCores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the number of cores available in this device, across all processors. Requires: Ability to peruse the filesystem at "/sys/devices/system/cpu" </p><dl class="section return"><dt>返回</dt><dd>The number of cores, or 1 if failed to get result </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cc2a3b1d4ffcb621746bb4ae14bc0ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static PackageInfo com.ab.util.AbAppUtil.getPackageInfo </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取包信息.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a825f26ada8cd46277ae3230ac570f48b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;String[]&gt; com.ab.util.AbAppUtil.getProcessRunningInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取进程运行的信息. </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab4d4ae9524c444193df9f031345c6014"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_ps_row.html">AbPsRow</a> com.ab.util.AbAppUtil.getPsRow </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>processName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获得这个进程的ps信息. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab935537b7974725bc4cb6e08c79da727"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.getRootPermission </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>应用程序运行命令获取 Root权限，设备必须已破解(获得ROOT权限) </p><dl class="section return"><dt>返回</dt><dd>应用程序是/否获取Root权限 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8f7884e57cd62e7bd6865c3f19a72c0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;<a class="el" href="classcom_1_1ab_1_1model_1_1_ab_app_process_info.html">AbAppProcessInfo</a>&gt; com.ab.util.AbAppUtil.getRunningAppProcesses </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取运行的进程列表. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afaeed3caea2696a2e08424de90752796"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long com.ab.util.AbAppUtil.getTotalMemory </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：总内存. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a86f409aac3681543a57cb14931a43478"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.importDatabase </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>dbName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rawRes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>导入数据库.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">dbName</td><td>the db name </td></tr>
+    <tr><td class="paramname">rawRes</td><td>the raw res </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af018f792bd107e6a67c58bb5c0488644"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbAppUtil.installApk </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：打开并安装文件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">file</td><td>apk文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab75a4e5e2970fe293e007937dc8793e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.isGpsEnabled </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gps是否打开 需要&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;权限</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if is gps enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ce575b06f4312d348ae8fd0f63a60ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.isMobile </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>判断当前网络是否是移动数据网络.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a91a5489dc97350d056775ad130a8b5df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.isNetworkAvailable </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：判断网络是否有效.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if is network available </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b09b961feddd170fbea0edda2c07dbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.isServiceRunning </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>className</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>用来判断服务是否运行.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">className</td><td>判断的服务名字 "com.xxx.xx..XXXService" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 在运行 false 不在运行 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94244a1bf9f92322057cf6de092af925"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbAppUtil.killProcesses </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>processName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：kill进程. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td></td></tr>
+    <tr><td class="paramname">pid</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a168d64da56f1c15a8bd879ebb368a642"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1model_1_1_ab_c_p_u_info.html">AbCPUInfo</a> com.ab.util.AbAppUtil.parseCPUInfo </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：解析数据. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>User 39%, System 17%, IOW 3%, IRQ 0% </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a01d38e3d0e4b8bb7657f21c8ac577bd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;String[]&gt; com.ab.util.AbAppUtil.parseProcessRunningInfo </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：解析数据. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>User 39%, System 17%, IOW 3%, IRQ 0% PID PR CPU% S #THR VSS RSS PCY UID Name 31587 0 39% S 14 542288K 42272K fg u0_a162 cn.amsoft.process 313 1 17% S 12 68620K 11328K fg system /system/bin/surfaceflinger 32076 1 2% R 1 1304K 604K bg u0_a162 /system/bin/top </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9ca3d323a9669234cc8d9c80ceb8bf65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt;<a class="el" href="classcom_1_1ab_1_1model_1_1_ab_ps_row.html">AbPsRow</a>&gt; com.ab.util.AbAppUtil.ps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：执行PS. </p>
+
+</div>
+</div>
+<a class="anchor" id="a95ee64f935d3d97d54dc8f919257b956"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbAppUtil.runCommand </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>workdirectory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：执行命令. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td></td></tr>
+    <tr><td class="paramname">workdirectory</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c96834033a98a1b1c32f2effdcc8a12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbAppUtil.runCommandTopN1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：top -n 1. </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a793e1bfb0689ec149550b5dba7e6ca21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbAppUtil.runScript </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>script</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：运行脚本. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">script</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a6f710283a210fbf658fb5cfc777621"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbAppUtil.showSoftInput </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>打开键盘.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2daf0923be858fc30ede161a1733a495"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbAppUtil.stopRunningService </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>className</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>停止服务.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">className</td><td>the class name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab51d02e1af90db565af43b9a4ecaac70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbAppUtil.uninstallApk </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>packageName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：卸载程序.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">packageName</td><td>包名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af5c2ae88dc2c9bcfc81a5090a903c127"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String[]&gt; com.ab.util.AbAppUtil.mProcessList = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/util/<a class="el" href="_ab_app_util_8java.html">AbAppUtil.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

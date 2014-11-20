@@ -1,0 +1,1378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.stream.JsonReader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html">JsonReader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.stream.JsonReader类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.stream.JsonReader 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.png" usemap="#com.google.gson.stream.JsonReader_map" alt=""/>
+  <map id="com.google.gson.stream.JsonReader_map" name="com.google.gson.stream.JsonReader_map">
+<area href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_json_tree_reader.html" alt="com.google.gson.internal.bind.JsonTreeReader" shape="rect" coords="0,112,280,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2d397ab41b8e8f217283163b814e7650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> (Reader <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a77911b7388a5ee700b97e699f65ab502">in</a>)</td></tr>
+<tr class="separator:a2d397ab41b8e8f217283163b814e7650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74dbcaa9af5d74448d689c7542e7616"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#af74dbcaa9af5d74448d689c7542e7616">setLenient</a> (boolean <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a44276129c6c70b6d4f1e9e6195fda695">lenient</a>)</td></tr>
+<tr class="separator:af74dbcaa9af5d74448d689c7542e7616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b60799e731bf2be6074733ff1b6a53"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a28b60799e731bf2be6074733ff1b6a53">isLenient</a> ()</td></tr>
+<tr class="separator:a28b60799e731bf2be6074733ff1b6a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f37a23815e9041d3c99b295f9691f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a14f37a23815e9041d3c99b295f9691f6">beginArray</a> ()  throws IOException </td></tr>
+<tr class="separator:a14f37a23815e9041d3c99b295f9691f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819ec92aa19c130f1cc39a6c2c45b9bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a819ec92aa19c130f1cc39a6c2c45b9bb">endArray</a> ()  throws IOException </td></tr>
+<tr class="separator:a819ec92aa19c130f1cc39a6c2c45b9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4d01dbc8ae163e18e9688c6d972674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a8d4d01dbc8ae163e18e9688c6d972674">beginObject</a> ()  throws IOException </td></tr>
+<tr class="separator:a8d4d01dbc8ae163e18e9688c6d972674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19c6defcfb81f6a3dbed8af6b3f122a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ab19c6defcfb81f6a3dbed8af6b3f122a">endObject</a> ()  throws IOException </td></tr>
+<tr class="separator:ab19c6defcfb81f6a3dbed8af6b3f122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22109284568515e44ec530ea79abe2e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ad22109284568515e44ec530ea79abe2e">hasNext</a> ()  throws IOException </td></tr>
+<tr class="separator:ad22109284568515e44ec530ea79abe2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afced60098b726e4f75d2eb17c8b4b26f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#afced60098b726e4f75d2eb17c8b4b26f">peek</a> ()  throws IOException </td></tr>
+<tr class="separator:afced60098b726e4f75d2eb17c8b4b26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef562cdd7b06f0e9397d9592e95aef16"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#aef562cdd7b06f0e9397d9592e95aef16">nextName</a> ()  throws IOException </td></tr>
+<tr class="separator:aef562cdd7b06f0e9397d9592e95aef16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719ce3915da00a422189eefb4f0d800f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a719ce3915da00a422189eefb4f0d800f">nextString</a> ()  throws IOException </td></tr>
+<tr class="separator:a719ce3915da00a422189eefb4f0d800f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e5ac1f4b3fafbcc48cacc8472a77e1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a21e5ac1f4b3fafbcc48cacc8472a77e1">nextBoolean</a> ()  throws IOException </td></tr>
+<tr class="separator:a21e5ac1f4b3fafbcc48cacc8472a77e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc41b1f3c6ea408df231ec27743a8ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a3dc41b1f3c6ea408df231ec27743a8ad">nextNull</a> ()  throws IOException </td></tr>
+<tr class="separator:a3dc41b1f3c6ea408df231ec27743a8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143053fcb319b1ed175d28b31faa33e6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a143053fcb319b1ed175d28b31faa33e6">nextDouble</a> ()  throws IOException </td></tr>
+<tr class="separator:a143053fcb319b1ed175d28b31faa33e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af223f3e6b084e236b3edcf6a5eb8d66c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#af223f3e6b084e236b3edcf6a5eb8d66c">nextLong</a> ()  throws IOException </td></tr>
+<tr class="separator:af223f3e6b084e236b3edcf6a5eb8d66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df099d42f133078a29e3413633e4b3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a1df099d42f133078a29e3413633e4b3c">nextInt</a> ()  throws IOException </td></tr>
+<tr class="separator:a1df099d42f133078a29e3413633e4b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36beff2050e10908e0d77420849fb9fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a36beff2050e10908e0d77420849fb9fc">close</a> ()  throws IOException </td></tr>
+<tr class="separator:a36beff2050e10908e0d77420849fb9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93585d633a327c3291057468f7c2b44f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a93585d633a327c3291057468f7c2b44f">skipValue</a> ()  throws IOException </td></tr>
+<tr class="separator:a93585d633a327c3291057468f7c2b44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a48342b2b90cedb13fbd54aedda406a28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a48342b2b90cedb13fbd54aedda406a28">[instance initializer]</a></td></tr>
+<tr class="separator:a48342b2b90cedb13fbd54aedda406a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a8187fb31f1e95c8a8319cc0e73a50f11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a8187fb31f1e95c8a8319cc0e73a50f11">expect</a> (<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a> expected)  throws IOException </td></tr>
+<tr class="separator:a8187fb31f1e95c8a8319cc0e73a50f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fae4a8f958f9eba9e7c739f0dc6692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ab2fae4a8f958f9eba9e7c739f0dc6692">consumeNonExecutePrefix</a> ()  throws IOException </td></tr>
+<tr class="separator:ab2fae4a8f958f9eba9e7c739f0dc6692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3bf2a1aa2fdcf78f09e50d5bc32f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a1a3bf2a1aa2fdcf78f09e50d5bc32f22">advance</a> ()  throws IOException </td></tr>
+<tr class="separator:a1a3bf2a1aa2fdcf78f09e50d5bc32f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f0edcb393b93e67f630e248472672b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a48f0edcb393b93e67f630e248472672b">push</a> (<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> newTop)</td></tr>
+<tr class="separator:a48f0edcb393b93e67f630e248472672b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aaa97d041e9127b336ce47656c6cc4252"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_string_pool.html">StringPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#aaa97d041e9127b336ce47656c6cc4252">stringPool</a> = new <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_string_pool.html">StringPool</a>()</td></tr>
+<tr class="separator:aaa97d041e9127b336ce47656c6cc4252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77911b7388a5ee700b97e699f65ab502"><td class="memItemLeft" align="right" valign="top">final Reader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a77911b7388a5ee700b97e699f65ab502">in</a></td></tr>
+<tr class="separator:a77911b7388a5ee700b97e699f65ab502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44276129c6c70b6d4f1e9e6195fda695"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a44276129c6c70b6d4f1e9e6195fda695">lenient</a> = false</td></tr>
+<tr class="separator:a44276129c6c70b6d4f1e9e6195fda695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412a3fe4942f04a56299ef26cca63821"><td class="memItemLeft" align="right" valign="top">final char[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a412a3fe4942f04a56299ef26cca63821">buffer</a> = new char[1024]</td></tr>
+<tr class="separator:a412a3fe4942f04a56299ef26cca63821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa317d0fbc9c9c51aa99b42637b28b2cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#aa317d0fbc9c9c51aa99b42637b28b2cc">pos</a> = 0</td></tr>
+<tr class="separator:aa317d0fbc9c9c51aa99b42637b28b2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da632ade596f8539fc21ed7292a6253"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2da632ade596f8539fc21ed7292a6253">limit</a> = 0</td></tr>
+<tr class="separator:a2da632ade596f8539fc21ed7292a6253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c1f805bbc729df7499b161f4f4bf09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a51c1f805bbc729df7499b161f4f4bf09">bufferStartLine</a> = 1</td></tr>
+<tr class="separator:a51c1f805bbc729df7499b161f4f4bf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf2e7c21704800bc25d5d841ac18dc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a5cf2e7c21704800bc25d5d841ac18dc7">bufferStartColumn</a> = 1</td></tr>
+<tr class="separator:a5cf2e7c21704800bc25d5d841ac18dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b78ba20bcb761c7247266a50bfa104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a74b78ba20bcb761c7247266a50bfa104">stack</a> = new <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>[32]</td></tr>
+<tr class="separator:a74b78ba20bcb761c7247266a50bfa104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3adea10e848893b2bf00a79930456a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a1a3adea10e848893b2bf00a79930456a">stackSize</a> = 0</td></tr>
+<tr class="separator:a1a3adea10e848893b2bf00a79930456a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943cdfaed8157293dd2715fb7368ac8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a943cdfaed8157293dd2715fb7368ac8b">token</a></td></tr>
+<tr class="separator:a943cdfaed8157293dd2715fb7368ac8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7231dd5fac14276ccee4358a17c9ed6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ad7231dd5fac14276ccee4358a17c9ed6">name</a></td></tr>
+<tr class="separator:ad7231dd5fac14276ccee4358a17c9ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a1a80eabc8ded9044181ce783f1d25"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a03a1a80eabc8ded9044181ce783f1d25">value</a></td></tr>
+<tr class="separator:a03a1a80eabc8ded9044181ce783f1d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057b61798da541095609e6fe6d8f6b3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a057b61798da541095609e6fe6d8f6b3a">valuePos</a></td></tr>
+<tr class="separator:a057b61798da541095609e6fe6d8f6b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300a2f37505278d28b624c732510c0eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a300a2f37505278d28b624c732510c0eb">valueLength</a></td></tr>
+<tr class="separator:a300a2f37505278d28b624c732510c0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b880ab1a3b2b4b3a65646dd60d7e258"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a0b880ab1a3b2b4b3a65646dd60d7e258">skipping</a> = false</td></tr>
+<tr class="separator:a0b880ab1a3b2b4b3a65646dd60d7e258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a49df7e544f112449cf5a408d9975f656"><td class="memItemLeft" align="right" valign="top">static final char[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a49df7e544f112449cf5a408d9975f656">NON_EXECUTE_PREFIX</a> = &quot;)]}'\n&quot;.toCharArray()</td></tr>
+<tr class="separator:a49df7e544f112449cf5a408d9975f656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fe71b4451b108a81f12be5853cbd74"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a84fe71b4451b108a81f12be5853cbd74">TRUE</a> = &quot;true&quot;</td></tr>
+<tr class="separator:a84fe71b4451b108a81f12be5853cbd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0439e7da9103f44edf9467318c1950"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a0d0439e7da9103f44edf9467318c1950">FALSE</a> = &quot;false&quot;</td></tr>
+<tr class="separator:a0d0439e7da9103f44edf9467318c1950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Reads a JSON (<a href="http://www.ietf.org/rfc/rfc4627.txt">RFC 4627</a>) encoded value as a stream of tokens. This stream includes both literal values (strings, numbers, booleans, and nulls) as well as the begin and end delimiters of objects and arrays. The tokens are traversed in depth-first order, the same order that they appear in the JSON document. Within JSON objects, name/value pairs are represented by a single token.</p>
+<h3>Parsing JSON</h3>
+<p>To create a recursive descent parser for your own JSON streams, first create an entry point method that creates a</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> </div>
+</div><!-- fragment --><p> .</p>
+<p>Next, create handler methods for each structure in your JSON text. You'll need a method for each object type and for each array type. </p><ul>
+<li>
+Within <b>array handling</b> methods, first call <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a14f37a23815e9041d3c99b295f9691f6">beginArray</a> to consume the array's opening bracket. Then create a while loop that accumulates values, terminating when <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ad22109284568515e44ec530ea79abe2e">hasNext</a> is false. Finally, read the array's closing bracket by calling <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a819ec92aa19c130f1cc39a6c2c45b9bb">endArray</a>. </li>
+<li>
+Within <b>object handling</b> methods, first call <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a8d4d01dbc8ae163e18e9688c6d972674">beginObject</a> to consume the object's opening brace. Then create a while loop that assigns values to local variables based on their name. This loop should terminate when <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ad22109284568515e44ec530ea79abe2e">hasNext</a> is false. Finally, read the object's closing brace by calling <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ab19c6defcfb81f6a3dbed8af6b3f122a">endObject</a>. </li>
+</ul>
+<p>When a nested object or array is encountered, delegate to the corresponding handler method.</p>
+<p>When an unknown name is encountered, strict parsers should fail with an exception. Lenient parsers should call <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a93585d633a327c3291057468f7c2b44f">skipValue()</a> to recursively skip the value's nested tokens, which may otherwise conflict.</p>
+<p>If a value may be null, you should first check using <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#afced60098b726e4f75d2eb17c8b4b26f">peek()</a>. Null literals can be consumed using either <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a3dc41b1f3c6ea408df231ec27743a8ad">nextNull()</a> or <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a93585d633a327c3291057468f7c2b44f">skipValue()</a>.</p>
+<h3>Example</h3>
+<p>Suppose we'd like to parse a stream of messages such as the following: </p><pre><div class="fragment"><div class="line">[</div>
+<div class="line">  {</div>
+<div class="line">    <span class="stringliteral">&quot;id&quot;</span>: 912345678901,</div>
+<div class="line">    <span class="stringliteral">&quot;text&quot;</span>: <span class="stringliteral">&quot;How do I read a JSON stream in Java?&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;geo&quot;</span>: null,</div>
+<div class="line">    <span class="stringliteral">&quot;user&quot;</span>: {</div>
+<div class="line">      <span class="stringliteral">&quot;name&quot;</span>: <span class="stringliteral">&quot;json_newb&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">&quot;followers_count&quot;</span>: 41</div>
+<div class="line">     }</div>
+<div class="line">  },</div>
+<div class="line">  {</div>
+<div class="line">    <span class="stringliteral">&quot;id&quot;</span>: 912345678902,</div>
+<div class="line">    <span class="stringliteral">&quot;text&quot;</span>: <span class="stringliteral">&quot;@json_newb just use JsonReader!&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;geo&quot;</span>: [50.454722, -104.606667],</div>
+<div class="line">    <span class="stringliteral">&quot;user&quot;</span>: {</div>
+<div class="line">      <span class="stringliteral">&quot;name&quot;</span>: <span class="stringliteral">&quot;jesse&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">&quot;followers_count&quot;</span>: 2</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">] </div>
+</div><!-- fragment --> </pre><p> This code implements the parser for the above structure: </p><pre><div class="fragment"><div class="line"><span class="keyword">public</span> List&lt;Message&gt; readJsonStream(InputStream <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a77911b7388a5ee700b97e699f65ab502">in</a>) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> reader = <span class="keyword">new</span> <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a>(<span class="keyword">new</span> InputStreamReader(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a77911b7388a5ee700b97e699f65ab502">in</a>, <span class="stringliteral">&quot;UTF-8&quot;</span>));</div>
+<div class="line">  <span class="keywordflow">try</span> {</div>
+<div class="line">    <span class="keywordflow">return</span> readMessagesArray(reader);</div>
+<div class="line">  } <span class="keywordflow">finally</span> {</div>
+<div class="line">    reader.close();</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> List&lt;Message&gt; readMessagesArray(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> reader) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  List&lt;Message&gt; messages = <span class="keyword">new</span> ArrayList&lt;Message&gt;();</div>
+<div class="line"></div>
+<div class="line">  reader.beginArray();</div>
+<div class="line">  <span class="keywordflow">while</span> (reader.hasNext()) {</div>
+<div class="line">    messages.add(readMessage(reader));</div>
+<div class="line">  }</div>
+<div class="line">  reader.endArray();</div>
+<div class="line">  <span class="keywordflow">return</span> messages;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> Message readMessage(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> reader) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  <span class="keywordtype">long</span> <span class="keywordtype">id</span> = -1;</div>
+<div class="line">  String text = null;</div>
+<div class="line">  User user = null;</div>
+<div class="line">  List&lt;Double&gt; geo = null;</div>
+<div class="line"></div>
+<div class="line">  reader.beginObject();</div>
+<div class="line">  <span class="keywordflow">while</span> (reader.hasNext()) {</div>
+<div class="line">    String <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#ad7231dd5fac14276ccee4358a17c9ed6">name</a> = reader.nextName();</div>
+<div class="line">    <span class="keywordflow">if</span> (name.equals(<span class="stringliteral">&quot;id&quot;</span>)) {</div>
+<div class="line">      <span class="keywordtype">id</span> = reader.nextLong();</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.equals(<span class="stringliteral">&quot;text&quot;</span>)) {</div>
+<div class="line">      text = reader.nextString();</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.equals(<span class="stringliteral">&quot;geo&quot;</span>) &amp;&amp; reader.peek() != JsonToken.NULL) {</div>
+<div class="line">      geo = readDoublesArray(reader);</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.equals(<span class="stringliteral">&quot;user&quot;</span>)) {</div>
+<div class="line">      user = readUser(reader);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">      reader.skipValue();</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  reader.endObject();</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">new</span> Message(<span class="keywordtype">id</span>, text, user, geo);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> List&lt;Double&gt; readDoublesArray(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> reader) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  List&lt;Double&gt; doubles = <span class="keyword">new</span> ArrayList&lt;Double&gt;();</div>
+<div class="line"></div>
+<div class="line">  reader.beginArray();</div>
+<div class="line">  <span class="keywordflow">while</span> (reader.hasNext()) {</div>
+<div class="line">    doubles.add(reader.nextDouble());</div>
+<div class="line">  }</div>
+<div class="line">  reader.endArray();</div>
+<div class="line">  <span class="keywordflow">return</span> doubles;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> User readUser(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> reader) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  String username = null;</div>
+<div class="line">  <span class="keywordtype">int</span> followersCount = -1;</div>
+<div class="line"></div>
+<div class="line">  reader.beginObject();</div>
+<div class="line">  <span class="keywordflow">while</span> (reader.hasNext()) {</div>
+<div class="line">    String name = reader.nextName();</div>
+<div class="line">    <span class="keywordflow">if</span> (name.equals(<span class="stringliteral">&quot;name&quot;</span>)) {</div>
+<div class="line">      username = reader.nextString();</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.equals(<span class="stringliteral">&quot;followers_count&quot;</span>)) {</div>
+<div class="line">      followersCount = reader.nextInt();</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">      reader.skipValue();</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  reader.endObject();</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">new</span> User(username, followersCount);</div>
+<div class="line">} </div>
+</div><!-- fragment --> </pre><h3>Number Handling</h3>
+<p>This reader permits numeric values to be read as strings and string values to be read as numbers. For example, both elements of the JSON array</p><div class="fragment"><div class="line">[1, <span class="stringliteral">&quot;1&quot;</span>] </div>
+</div><!-- fragment --><p> may be read using either <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a1df099d42f133078a29e3413633e4b3c">nextInt</a> or <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a719ce3915da00a422189eefb4f0d800f">nextString</a>. This behavior is intended to prevent lossy numeric conversions: double is JavaScript's only numeric type and very large values like</p><div class="fragment"><div class="line">9007199254740993 </div>
+</div><!-- fragment --><p> cannot be represented exactly on that platform. To minimize precision loss, extremely large values should be written and read as strings in JSON.</p>
+<p><a class="anchor" id="nonexecuteprefix"></a></p><h3>Non-Execute Prefix</h3>
+<p>Web servers that serve private data using JSON may be vulnerable to <a href="http://en.wikipedia.org/wiki/JSON#Cross-site_request_forgery">Cross-site request forgery</a> attacks. In such an attack, a malicious site gains access to a private JSON file by executing it with an HTML</p><div class="fragment"><div class="line">&lt;script&gt; </div>
+</div><!-- fragment --><p> tag.</p>
+<p>Prefixing JSON files with <code>")]}'\n"</code> makes them non-executable by</p><div class="fragment"><div class="line">&lt;script&gt; </div>
+</div><!-- fragment --><p> tags, disarming the attack. Since the prefix is malformed JSON, strict parsing fails when it is encountered. This class permits the non-execute prefix when <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#af74dbcaa9af5d74448d689c7542e7616">lenient parsing</a> is enabled.</p>
+<p>Each</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a2d397ab41b8e8f217283163b814e7650">JsonReader</a> </div>
+</div><!-- fragment --><p> may be used to read a single JSON stream. Instances of this class are not thread safe.</p>
+<dl class="section author"><dt>作者</dt><dd>Jesse Wilson </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.6 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a2d397ab41b8e8f217283163b814e7650"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.stream.JsonReader.JsonReader </td>
+          <td>(</td>
+          <td class="paramtype">Reader&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new instance that reads a JSON-encoded stream from</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a77911b7388a5ee700b97e699f65ab502">in</a> </div>
+</div><!-- fragment --><p> . </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a48342b2b90cedb13fbd54aedda406a28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.stream.JsonReader.[instance initializer] </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1a3bf2a1aa2fdcf78f09e50d5bc32f22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a> com.google.gson.stream.JsonReader.advance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Advances the cursor in the JSON stream to the next token. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14f37a23815e9041d3c99b295f9691f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.beginArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes the next token from the JSON stream and asserts that it is the beginning of a new array. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8d4d01dbc8ae163e18e9688c6d972674"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.beginObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes the next token from the JSON stream and asserts that it is the beginning of a new object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a36beff2050e10908e0d77420849fb9fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Closes this JSON reader and the underlying <a class="el" href="">Reader</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2fae4a8f958f9eba9e7c739f0dc6692"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.consumeNonExecutePrefix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes the non-execute prefix if it exists. </p>
+
+</div>
+</div>
+<a class="anchor" id="a819ec92aa19c130f1cc39a6c2c45b9bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.endArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes the next token from the JSON stream and asserts that it is the end of the current array. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab19c6defcfb81f6a3dbed8af6b3f122a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.endObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes the next token from the JSON stream and asserts that it is the end of the current array. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8187fb31f1e95c8a8319cc0e73a50f11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.expect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a>&#160;</td>
+          <td class="paramname"><em>expected</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes</p><div class="fragment"><div class="line">expected </div>
+</div><!-- fragment --><p> . </p>
+
+</div>
+</div>
+<a class="anchor" id="ad22109284568515e44ec530ea79abe2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonReader.hasNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the current array or object has another element. </p>
+
+</div>
+</div>
+<a class="anchor" id="a28b60799e731bf2be6074733ff1b6a53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.stream.JsonReader.isLenient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this parser is liberal in what it accepts. </p>
+
+</div>
+</div>
+<a class="anchor" id="a21e5ac1f4b3fafbcc48cacc8472a77e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonReader.nextBoolean </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html#ac411dca94191ee365ca5e924a966f296">boolean</a> value of the next token, consuming it.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>if the next token is not a boolean or if this reader is closed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a143053fcb319b1ed175d28b31faa33e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.google.gson.stream.JsonReader.nextDouble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html#a77c852a6476639f2b9f453b38032789d">double</a> value of the next token, consuming it. If the next token is a string, this method will attempt to parse it as a double using <a class="el" href="">Double#parseDouble(String)</a>.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>if the next token is not a literal value. </td></tr>
+    <tr><td class="paramname">NumberFormatException</td><td>if the next literal value cannot be parsed as a double, or is non-finite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1df099d42f133078a29e3413633e4b3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.nextInt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html#a77c852a6476639f2b9f453b38032789d">int</a> value of the next token, consuming it. If the next token is a string, this method will attempt to parse it as an int. If the next token's numeric value cannot be exactly represented by a Java</p><div class="fragment"><div class="line"><span class="keywordtype">int</span> </div>
+</div><!-- fragment --><p> , this method throws.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>if the next token is not a literal value. </td></tr>
+    <tr><td class="paramname">NumberFormatException</td><td>if the next literal value cannot be parsed as a number, or exactly represented as an int. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af223f3e6b084e236b3edcf6a5eb8d66c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.google.gson.stream.JsonReader.nextLong </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html#a77c852a6476639f2b9f453b38032789d">long</a> value of the next token, consuming it. If the next token is a string, this method will attempt to parse it as a long. If the next token's numeric value cannot be exactly represented by a Java</p><div class="fragment"><div class="line"><span class="keywordtype">long</span> </div>
+</div><!-- fragment --><p> , this method throws.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>if the next token is not a literal value. </td></tr>
+    <tr><td class="paramname">NumberFormatException</td><td>if the next literal value cannot be parsed as a number, or exactly represented as a long. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aef562cdd7b06f0e9397d9592e95aef16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonReader.nextName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the next token, a <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html#a6a66bfd15981e356e11c31319f260635">property name</a>, and consumes it.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>if the next token in the stream is not a property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3dc41b1f3c6ea408df231ec27743a8ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.nextNull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Consumes the next token from the JSON stream and asserts that it is a literal null.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>if the next token is not null or if this reader is closed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a719ce3915da00a422189eefb4f0d800f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonReader.nextString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html#a8901ff8d74acb4756103d8e09b1b460a">string</a> value of the next token, consuming it. If the next token is a number, this method will return its string form.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>if the next token is not a string or if this reader is closed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afced60098b726e4f75d2eb17c8b4b26f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a> com.google.gson.stream.JsonReader.peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the type of the next token without consuming it. </p>
+
+</div>
+</div>
+<a class="anchor" id="a48f0edcb393b93e67f630e248472672b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&#160;</td>
+          <td class="paramname"><em>newTop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af74dbcaa9af5d74448d689c7542e7616"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.google.gson.stream.JsonReader.setLenient </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>lenient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure this parser to be be liberal in what it accepts. By default, this parser is strict and only accepts JSON as specified by <a href="http://www.ietf.org/rfc/rfc4627.txt">RFC 4627</a>. Setting the parser to lenient causes it to ignore the following syntax errors:</p>
+<ul>
+<li>
+Streams that start with the <a href="#nonexecuteprefix">non-execute prefix</a>, <code>")]}'\n"</code>. </li>
+<li>
+Streams that include multiple top-level values. With strict parsing, each stream must contain exactly one top-level value. </li>
+<li>
+Top-level values of any type. With strict parsing, the top-level value must be an object or an array. </li>
+<li>
+Numbers may be <a class="el" href="">NaNs</a> or <a class="el" href="">infinities</a>. </li>
+<li>
+End of line comments starting with<div class="fragment"><div class="line"><span class="comment">// </span></div>
+</div><!-- fragment --> or<div class="fragment"><div class="line"><span class="preprocessor"># </span></div>
+</div><!-- fragment --> and ending with a newline character. </li>
+<li>
+C-style comments starting with<div class="fragment"><div class="line"><span class="comment">/* </span></div>
+</div><!-- fragment --> and ending with <div class="fragment"><div class="line">* </div>
+</div><!-- fragment --><div class="fragment"><div class="line">/ </div>
+</div><!-- fragment --> . Such comments may not be nested. </li>
+<li>
+Names that are unquoted or<div class="fragment"><div class="line"><span class="stringliteral">&#39;single quoted&#39;</span> </div>
+</div><!-- fragment --> . </li>
+<li>
+Strings that are unquoted or<div class="fragment"><div class="line"><span class="stringliteral">&#39;single quoted&#39;</span> </div>
+</div><!-- fragment --> . </li>
+<li>
+Array elements separated by<div class="fragment"><div class="line">; </div>
+</div><!-- fragment --> instead of<div class="fragment"><div class="line">, </div>
+</div><!-- fragment --> . </li>
+<li>
+Unnecessary array separators. These are interpreted as if null was the omitted value. </li>
+<li>
+Names and values separated by<div class="fragment"><div class="line">= </div>
+</div><!-- fragment --> or<div class="fragment"><div class="line">=&gt; </div>
+</div><!-- fragment --> instead of <div class="fragment"><div class="line">: </div>
+</div><!-- fragment --> . </li>
+<li>
+Name/value pairs separated by<div class="fragment"><div class="line">; </div>
+</div><!-- fragment --> instead of<div class="fragment"><div class="line">, </div>
+</div><!-- fragment --> . </li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a93585d633a327c3291057468f7c2b44f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonReader.skipValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Skips the next value recursively. If it is an object or array, all nested elements are skipped. This method is intended for use when the JSON token stream contains unrecognized or unhandled values. </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a412a3fe4942f04a56299ef26cca63821"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final char [] com.google.gson.stream.JsonReader.buffer = new char[1024]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Use a manual buffer to easily read and unread upcoming characters, and also so we can create strings without an intermediate StringBuilder. We decode literals directly out of this buffer, so it must be at least as long as the longest token that can be reported as a number. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5cf2e7c21704800bc25d5d841ac18dc7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.bufferStartColumn = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a51c1f805bbc729df7499b161f4f4bf09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.bufferStartLine = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d0439e7da9103f44edf9467318c1950"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.google.gson.stream.JsonReader.FALSE = &quot;false&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a77911b7388a5ee700b97e699f65ab502"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Reader com.google.gson.stream.JsonReader.in</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The input JSON. </p>
+
+</div>
+</div>
+<a class="anchor" id="a44276129c6c70b6d4f1e9e6195fda695"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonReader.lenient = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>True to accept non-spec compliant JSON </p>
+
+</div>
+</div>
+<a class="anchor" id="a2da632ade596f8539fc21ed7292a6253"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.limit = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7231dd5fac14276ccee4358a17c9ed6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonReader.name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The text of the next name. </p>
+
+</div>
+</div>
+<a class="anchor" id="a49df7e544f112449cf5a408d9975f656"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final char [] com.google.gson.stream.JsonReader.NON_EXECUTE_PREFIX = &quot;)]}'\n&quot;.toCharArray()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The only non-execute prefix this parser permits </p>
+
+</div>
+</div>
+<a class="anchor" id="aa317d0fbc9c9c51aa99b42637b28b2cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.pos = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b880ab1a3b2b4b3a65646dd60d7e258"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonReader.skipping = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>True if we're currently handling a <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a93585d633a327c3291057468f7c2b44f">skipValue()</a> call. </p>
+
+</div>
+</div>
+<a class="anchor" id="a74b78ba20bcb761c7247266a50bfa104"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> [] com.google.gson.stream.JsonReader.stack = new <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1a3adea10e848893b2bf00a79930456a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.stackSize = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa97d041e9127b336ce47656c6cc4252"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_string_pool.html">StringPool</a> com.google.gson.stream.JsonReader.stringPool = new <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_string_pool.html">StringPool</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a943cdfaed8157293dd2715fb7368ac8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_token.html">JsonToken</a> com.google.gson.stream.JsonReader.token</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The type of the next token to be returned by <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#afced60098b726e4f75d2eb17c8b4b26f">peek</a> and <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#a1a3bf2a1aa2fdcf78f09e50d5bc32f22">advance</a>. If null, <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html#afced60098b726e4f75d2eb17c8b4b26f">peek()</a> will assign a value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a84fe71b4451b108a81f12be5853cbd74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.google.gson.stream.JsonReader.TRUE = &quot;true&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03a1a80eabc8ded9044181ce783f1d25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonReader.value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a300a2f37505278d28b624c732510c0eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.valueLength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a057b61798da541095609e6fe6d8f6b3a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.stream.JsonReader.valuePos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/stream/<a class="el" href="_json_reader_8java.html">JsonReader.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

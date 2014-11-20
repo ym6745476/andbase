@@ -10,13 +10,13 @@ public class User {
 	@Id
 	@Column(name = "_id")
 	private int _id;
-	
+
 	@Column(name = "u_id")
 	private String uId;
 
 	// 登录用户名 length=20数据字段的长度是20
-	@Column(name = "name", length = 20)
-	private String name;
+	@Column(name = "user_name", length = 20)
+	private String userName;
 
 	// 用户密码
 	@Column(name = "password")
@@ -40,8 +40,8 @@ public class User {
 	private String email;
 
 	// 头像地址
-	@Column(name = "photo_url")
-	private String photoUrl;
+	@Column(name = "head_url")
+	private String headUrl;
 
 	// 创建时间
 	@Column(name = "create_time")
@@ -70,29 +70,28 @@ public class User {
 	// 用户答案
 	@Column(name = "answer")
 	public String answer;
-	
+
 	// 登录次数
 	@Column(name = "login_count")
 	public int loginCount;
-	
+
 	// 有些字段您可能不希望保存到数据库中,不用@Column注释就不会映射到数据库.
 	private String remark;
-	
+
 	// 登录授权
 	@Column(name = "access_token")
 	private String accessToken;
-	
+
 	// 是否为当前登录
 	@Column(name = "is_login_user")
 	private boolean isLoginUser;
 
-
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -151,15 +150,16 @@ public class User {
 		this.rights = rights;
 	}
 
-	public String getPhotoUrl() {
-		return photoUrl;
-	}
 
-	public void setPhotoUrl(String photoUrl) {
-		this.photoUrl = photoUrl;
-	}
+	public String getHeadUrl() {
+        return headUrl;
+    }
 
-	public int getPoint() {
+    public void setHeadUrl(String headUrl){
+        this.headUrl = headUrl;
+    }
+
+    public int getPoint() {
 		return point;
 	}
 

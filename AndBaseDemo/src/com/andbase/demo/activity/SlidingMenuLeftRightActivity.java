@@ -33,7 +33,7 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
 		
 		//加到系统标题栏位置上
 		LinearLayout titleBarLinearLayout = (LinearLayout)this.findViewById(R.id.titleBar);
-		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		LinearLayout.LayoutParams layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 		
 		titleBarLinearLayout.addView(mAbTitleBar,layoutParamsFF);
 		
@@ -63,24 +63,24 @@ public class SlidingMenuLeftRightActivity extends SlidingFragmentActivity {
  		
  		//主视图的Fragment添加
 	    setContentView(R.layout.sliding_menu_content);
-        getSupportFragmentManager()
+        getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.content_frame, new Fragment1())
+		.replace(R.id.content_frame, new FragmentLoad())
 		.commit();
  		
  		//menu1视图的Fragment添加
 		menu.setMenu(R.layout.sliding_menu_menu);
-		getSupportFragmentManager()
+		getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame, new Fragment2())
+		.replace(R.id.menu_frame, new FragmentLoad())
 		.commit();
  		
  		//menu2视图的Fragment添加
 		menu.setSecondaryMenu(R.layout.sliding_menu_menu2);
 		menu.setSecondaryShadowDrawable(R.drawable.shadow_right);
-		getSupportFragmentManager()
+		getFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame_two, new Fragment4())
+		.replace(R.id.menu_frame_two, new FragmentLoad())
 		.commit();
         
 	}

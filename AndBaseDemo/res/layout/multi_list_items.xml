@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
-    <com.ab.view.sample.AbScaleImageView
+    <ImageView
         android:id="@+id/itemsIcon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

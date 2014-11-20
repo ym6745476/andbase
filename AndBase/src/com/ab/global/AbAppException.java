@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,17 +21,21 @@ import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.conn.HttpHostConnectException;
 
 import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * 描述： 公共异常类.
+ * © 2012 amsoft.cn
+ * 名称：AbAppException.java 
+ * 描述：公共异常类.
  *
- * @author zhaoqp
- * @date 2012-2-10
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-10-16 下午1:33:39
  */
 public class AbAppException extends Exception {
 
@@ -52,22 +56,24 @@ public class AbAppException extends Exception {
 
 		try {
 			if( e instanceof HttpHostConnectException) {  
-				msg = AbConstant.UNKNOWNHOSTEXCEPTION;
+				msg = AbAppConfig.UNKNOWN_HOST_EXCEPTION;
 			}else if (e instanceof ConnectException) {
-				msg = AbConstant.CONNECTEXCEPTION;
+				msg = AbAppConfig.CONNECT_EXCEPTION;
+			}else if (e instanceof ConnectTimeoutException) {
+				msg = AbAppConfig.CONNECT_EXCEPTION;
 			}else if (e instanceof UnknownHostException) {
-				msg = AbConstant.UNKNOWNHOSTEXCEPTION;
+				msg = AbAppConfig.UNKNOWN_HOST_EXCEPTION;
 			}else if (e instanceof SocketException) {
-				msg = AbConstant.SOCKETEXCEPTION;
+				msg = AbAppConfig.SOCKET_EXCEPTION;
 			}else if (e instanceof SocketTimeoutException) {
-				msg = AbConstant.SOCKETTIMEOUTEXCEPTION;
+				msg = AbAppConfig.SOCKET_TIMEOUT_EXCEPTION;
 			}else if( e instanceof NullPointerException) {  
-				msg = AbConstant.NULLPOINTEREXCEPTION;
+				msg = AbAppConfig.NULL_POINTER_EXCEPTION;
 			}else if( e instanceof ClientProtocolException) {  
-				msg = AbConstant.CLIENTPROTOCOLEXCEPTION;
+				msg = AbAppConfig.CLIENTP_ROTOCOL_EXCEPTION;
 			}else {
 				if (e == null || AbStrUtil.isEmpty(e.getMessage())) {
-					msg = AbConstant.NULLMESSAGEEXCEPTION;
+					msg = AbAppConfig.NULL_MESSAGE_EXCEPTION;
 				}else{
 				    msg = e.getMessage();
 				}

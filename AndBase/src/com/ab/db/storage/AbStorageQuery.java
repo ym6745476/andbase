@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,13 +22,13 @@ import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbStorageQuery.java 
  * 描述：条件过滤实体
- * @author zhaoqp
- * @date：2013-10-16 下午1:33:39
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-10-16 下午1:33:39
  */
 public class AbStorageQuery {
 	

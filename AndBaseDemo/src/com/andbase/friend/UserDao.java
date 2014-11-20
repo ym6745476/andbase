@@ -3,19 +3,19 @@ package com.andbase.friend;
 import android.content.Context;
 
 import com.ab.db.orm.dao.AbDBDaoImpl;
-import com.andbase.db.DBInsideHelper;
+import com.andbase.db.DBSDHelper;
 import com.andbase.model.User;
 /**
  * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：UserDao.java 
  * 描述：用户信息
- * @author zhaoqp
+ * @author 还如一梦中
  * @date：2013-7-31 下午4:12:36
  * @version v1.0
  */
 public class UserDao extends AbDBDaoImpl<User> {
 	public UserDao(Context context) {
-		super(new DBInsideHelper(context),User.class);
+		super(new DBSDHelper(context),User.class);
 	}
 }

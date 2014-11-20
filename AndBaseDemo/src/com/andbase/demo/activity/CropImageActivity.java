@@ -15,8 +15,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.ab.global.AbConstant;
 import com.ab.util.AbFileUtil;
+import com.ab.util.AbImageUtil;
 import com.ab.view.cropimage.CropImage;
 import com.ab.view.cropimage.CropImageView;
 import com.andbase.R;
@@ -83,7 +83,7 @@ public class CropImageActivity extends Activity implements OnClickListener{
         //相册中原来的图片
         File mFile = new File(mPath);
         try{
-        	mBitmap = AbFileUtil.getBitmapFromSD(mFile,AbConstant.SCALEIMG,500,500);
+        	mBitmap = AbFileUtil.getBitmapFromSD(mFile,AbImageUtil.SCALEIMG,500,500);
             if(mBitmap==null){
             	Toast.makeText(CropImageActivity.this, "没有找到图片", 0).show();
     			finish();

@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.app;
 
 import java.util.List;
@@ -16,34 +31,63 @@ import android.text.format.DateUtils;
 import android.text.format.Time;
 import android.view.View;
 
+// TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbNumberClock.java 
  * 描述：自定义数字时钟的view
- * @author zhaoqp
- * @date：2013-11-6 上午10:19:42
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-6 上午10:19:42
  */
 public class AbNumberClock extends View {
 	
+	/** The m calendar. */
 	private Time mCalendar;
 
+	/** The m time bg. */
 	private Drawable mTimeBg;
+	
+	/** The m time colon. */
 	private Drawable mTimeColon;
 	
+	/** The d time bmp. */
 	private List<Drawable> dTimeBmp;
+	
+	/** The d apm bmp. */
 	private List<Drawable> dApmBmp;
 
+	/** The m time bg width. */
 	private int mTimeBgWidth;
+	
+	/** The m time bg height. */
 	private int mTimeBgHeight;
 
+	/** The m attached. */
 	private boolean mAttached;
+	
+	/** The m handler. */
 	private final Handler mHandler = new Handler();
+	
+	/** The m minutes. */
 	private String mMinutes;
+	
+	/** The m hour. */
 	private String mHour;
+	
+	/** The m second. */
 	private String mSecond;
 
+	/**
+	 * Instantiates a new ab number clock.
+	 *
+	 * @param context the context
+	 * @param timeBg the time bg
+	 * @param timeColon the time colon
+	 * @param timeBmp the time bmp
+	 * @param apmBmp the apm bmp
+	 */
 	public AbNumberClock(Context context, Drawable timeBg, Drawable timeColon,
 			List<Drawable> timeBmp, List<Drawable> apmBmp) {
 		super(context);
@@ -67,6 +111,9 @@ public class AbNumberClock extends View {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onAttachedToWindow()
+	 */
 	@Override
 	protected void onAttachedToWindow() {
 		super.onAttachedToWindow();
@@ -95,6 +142,9 @@ public class AbNumberClock extends View {
 		onTimeChanged();
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onDetachedFromWindow()
+	 */
 	@Override
 	protected void onDetachedFromWindow() {
 		super.onDetachedFromWindow();
@@ -104,6 +154,9 @@ public class AbNumberClock extends View {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onMeasure(int, int)
+	 */
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
@@ -131,11 +184,17 @@ public class AbNumberClock extends View {
 				resolveSizeAndState((int) (mTimeBgHeight * scale),heightMeasureSpec, 0));*/
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onSizeChanged(int, int, int, int)
+	 */
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#onDraw(android.graphics.Canvas)
+	 */
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
@@ -260,10 +319,18 @@ public class AbNumberClock extends View {
 		}
 	}
 
+	/**
+	 * Gets the 24 hour mode.
+	 *
+	 * @return the 24 hour mode
+	 */
 	private boolean get24HourMode() {
 		return android.text.format.DateFormat.is24HourFormat(getContext());
 	}
 
+	/**
+	 * On time changed.
+	 */
 	private void onTimeChanged() {
 		mCalendar.setToNow();
 
@@ -290,6 +357,7 @@ public class AbNumberClock extends View {
         invalidate();
 	}
 
+	/** The m intent receiver. */
 	private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
 		@Override
 		public void onReceive(Context context, Intent intent) {
@@ -300,6 +368,11 @@ public class AbNumberClock extends View {
 		}
 	};
 
+	/**
+	 * Update content description.
+	 *
+	 * @param time the time
+	 */
 	private void updateContentDescription(Time time) {
 		int flags = DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_24HOUR;
 

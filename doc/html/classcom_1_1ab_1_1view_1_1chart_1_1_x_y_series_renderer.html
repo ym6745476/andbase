@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.XYSeriesRenderer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html">XYSeriesRenderer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.XYSeriesRenderer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.XYSeriesRenderer 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.png" usemap="#com.ab.view.chart.XYSeriesRenderer_map" alt=""/>
+  <map id="com.ab.view.chart.XYSeriesRenderer_map" name="com.ab.view.chart.XYSeriesRenderer_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html" alt="com.ab.view.chart.SimpleSeriesRenderer" shape="rect" coords="0,56,246,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:adddb747fa440828b82881d724484ba13"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#adddb747fa440828b82881d724484ba13">isFillBelowLine</a> ()</td></tr>
+<tr class="separator:adddb747fa440828b82881d724484ba13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa73c5b014446af11d537b9601826cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a8aa73c5b014446af11d537b9601826cd">setFillBelowLine</a> (boolean fill)</td></tr>
+<tr class="separator:a8aa73c5b014446af11d537b9601826cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ab93cc42ed1968bb8ca3bb6fabd522"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#ad8ab93cc42ed1968bb8ca3bb6fabd522">isFillPoints</a> ()</td></tr>
+<tr class="separator:ad8ab93cc42ed1968bb8ca3bb6fabd522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadff639dc0dd5abf2f051864cb3072e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#aadff639dc0dd5abf2f051864cb3072e2">setFillPoints</a> (boolean fill)</td></tr>
+<tr class="separator:aadff639dc0dd5abf2f051864cb3072e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfd904185784a1215ea1caac41678f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#aedfd904185784a1215ea1caac41678f3">getFillBelowLineColor</a> ()</td></tr>
+<tr class="separator:aedfd904185784a1215ea1caac41678f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894532607a694027488dd8c8073b7403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a894532607a694027488dd8c8073b7403">setFillBelowLineColor</a> (int color)</td></tr>
+<tr class="separator:a894532607a694027488dd8c8073b7403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce132f8d628b840d42d13190e34732e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html">PointStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a5ce132f8d628b840d42d13190e34732e">getPointStyle</a> ()</td></tr>
+<tr class="separator:a5ce132f8d628b840d42d13190e34732e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca4ab97f3e4181d5da95d1b6efb76a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a2ca4ab97f3e4181d5da95d1b6efb76a5">setPointStyle</a> (<a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html">PointStyle</a> style)</td></tr>
+<tr class="separator:a2ca4ab97f3e4181d5da95d1b6efb76a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb73a3b230dc98a995074283128b6992"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#abb73a3b230dc98a995074283128b6992">getLineWidth</a> ()</td></tr>
+<tr class="separator:abb73a3b230dc98a995074283128b6992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4fc17a484d282959ee677aae82b1313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#ab4fc17a484d282959ee677aae82b1313">setLineWidth</a> (float lineWidth)</td></tr>
+<tr class="separator:ab4fc17a484d282959ee677aae82b1313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">com.ab.view.chart.SimpleSeriesRenderer</a></td></tr>
+<tr class="memitem:a71a6f79ef0bbf31002e02276c81b515c inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a71a6f79ef0bbf31002e02276c81b515c">getColor</a> ()</td></tr>
+<tr class="separator:a71a6f79ef0bbf31002e02276c81b515c inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5392e23cb6ee7d3e5e814be5839a35b8 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a5392e23cb6ee7d3e5e814be5839a35b8">setColor</a> (int color)</td></tr>
+<tr class="separator:a5392e23cb6ee7d3e5e814be5839a35b8 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa73f7699f9ca2e03d00299203e8baf inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a2fa73f7699f9ca2e03d00299203e8baf">isDisplayChartValues</a> ()</td></tr>
+<tr class="separator:a2fa73f7699f9ca2e03d00299203e8baf inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19ed96a086c9914f1380a46d224afe8 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#af19ed96a086c9914f1380a46d224afe8">setDisplayChartValues</a> (boolean display)</td></tr>
+<tr class="separator:af19ed96a086c9914f1380a46d224afe8 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc108f2cc4b4e854d615673facc8df0 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#abdc108f2cc4b4e854d615673facc8df0">getChartValuesTextSize</a> ()</td></tr>
+<tr class="separator:abdc108f2cc4b4e854d615673facc8df0 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7317f1b55934bbd5b24842723972f1 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#abd7317f1b55934bbd5b24842723972f1">setChartValuesTextSize</a> (float textSize)</td></tr>
+<tr class="separator:abd7317f1b55934bbd5b24842723972f1 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe3dc3b6fdcc6820445a04c1be37dd5 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">Align&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a4fe3dc3b6fdcc6820445a04c1be37dd5">getChartValuesTextAlign</a> ()</td></tr>
+<tr class="separator:a4fe3dc3b6fdcc6820445a04c1be37dd5 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756ba9f68513b41b62410657b1d54761 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a756ba9f68513b41b62410657b1d54761">setChartValuesTextAlign</a> (Align align)</td></tr>
+<tr class="separator:a756ba9f68513b41b62410657b1d54761 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a8c9a8282ceaecdd8d258a117925a1 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ab5a8c9a8282ceaecdd8d258a117925a1">getChartValuesSpacing</a> ()</td></tr>
+<tr class="separator:ab5a8c9a8282ceaecdd8d258a117925a1 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68bfb35a6ef8fb756c678846e60d1f06 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a68bfb35a6ef8fb756c678846e60d1f06">setChartValuesSpacing</a> (float spacing)</td></tr>
+<tr class="separator:a68bfb35a6ef8fb756c678846e60d1f06 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee41044c1598c89c206ceebf30cfb08d inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aee41044c1598c89c206ceebf30cfb08d">getStroke</a> ()</td></tr>
+<tr class="separator:aee41044c1598c89c206ceebf30cfb08d inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ad4f6deea987be84b6c770ec4454b4 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aa6ad4f6deea987be84b6c770ec4454b4">setStroke</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a> stroke)</td></tr>
+<tr class="separator:aa6ad4f6deea987be84b6c770ec4454b4 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa331a60558bb296f6a1bb68fbebd286c inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aa331a60558bb296f6a1bb68fbebd286c">isGradientEnabled</a> ()</td></tr>
+<tr class="separator:aa331a60558bb296f6a1bb68fbebd286c inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500f223be72214bde161f8e0475a8c14 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a500f223be72214bde161f8e0475a8c14">setGradientEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:a500f223be72214bde161f8e0475a8c14 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9573c3b02bfce7d3e60be7ca4f1e8149 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a9573c3b02bfce7d3e60be7ca4f1e8149">getGradientStartValue</a> ()</td></tr>
+<tr class="separator:a9573c3b02bfce7d3e60be7ca4f1e8149 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ff60bc52a2873cca35196a4b77c763 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae1ff60bc52a2873cca35196a4b77c763">getGradientStartColor</a> ()</td></tr>
+<tr class="separator:ae1ff60bc52a2873cca35196a4b77c763 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b924f882b8c84b6c0198f7e3a9aa44 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a42b924f882b8c84b6c0198f7e3a9aa44">setGradientStart</a> (double start, int color)</td></tr>
+<tr class="separator:a42b924f882b8c84b6c0198f7e3a9aa44 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ae7ca2d93f5cfdea5bf39507b91ca9 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae3ae7ca2d93f5cfdea5bf39507b91ca9">getGradientStopValue</a> ()</td></tr>
+<tr class="separator:ae3ae7ca2d93f5cfdea5bf39507b91ca9 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13d4322c98b9c474de5a3cb6ac2b8a4 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae13d4322c98b9c474de5a3cb6ac2b8a4">getGradientStopColor</a> ()</td></tr>
+<tr class="separator:ae13d4322c98b9c474de5a3cb6ac2b8a4 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b61954ca1d4ce465ba13056bf57513 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#af1b61954ca1d4ce465ba13056bf57513">setGradientStop</a> (double start, int color)</td></tr>
+<tr class="separator:af1b61954ca1d4ce465ba13056bf57513 inherit pub_methods_classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a133228f675ba629b4c4373c006aa5267"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a133228f675ba629b4c4373c006aa5267">mFillPoints</a> = false</td></tr>
+<tr class="separator:a133228f675ba629b4c4373c006aa5267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fc7d869e45191827f56ce95155820a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a90fc7d869e45191827f56ce95155820a">mFillBelowLine</a> = false</td></tr>
+<tr class="separator:a90fc7d869e45191827f56ce95155820a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73f3f648ad6bbae36688e3991d70e7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#ac73f3f648ad6bbae36688e3991d70e7e">mFillColor</a> = Color.argb(125, 0, 0, 200)</td></tr>
+<tr class="separator:ac73f3f648ad6bbae36688e3991d70e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029a9e75016789ccbd57ce32bdf5cae6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html">PointStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a029a9e75016789ccbd57ce32bdf5cae6">mPointStyle</a> = <a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html#aa5d344892f45b278d28823fda46e3723">PointStyle.POINT</a></td></tr>
+<tr class="separator:a029a9e75016789ccbd57ce32bdf5cae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429548c2b48bccfa3515a1e0c9348a0c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html#a429548c2b48bccfa3515a1e0c9348a0c">mLineWidth</a> = 1</td></tr>
+<tr class="separator:a429548c2b48bccfa3515a1e0c9348a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A renderer for the XY type series. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aedfd904185784a1215ea1caac41678f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.XYSeriesRenderer.getFillBelowLineColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the fill below line color.</p>
+<dl class="section return"><dt>返回</dt><dd>the fill below line color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abb73a3b230dc98a995074283128b6992"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.XYSeriesRenderer.getLineWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chart line width.</p>
+<dl class="section return"><dt>返回</dt><dd>the line width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ce132f8d628b840d42d13190e34732e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html">PointStyle</a> com.ab.view.chart.XYSeriesRenderer.getPointStyle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the point style.</p>
+<dl class="section return"><dt>返回</dt><dd>the point style </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adddb747fa440828b82881d724484ba13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.XYSeriesRenderer.isFillBelowLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the chart should be filled below the line.</p>
+<dl class="section return"><dt>返回</dt><dd>the fill below line status </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8ab93cc42ed1968bb8ca3bb6fabd522"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.XYSeriesRenderer.isFillPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the chart points should be filled.</p>
+<dl class="section return"><dt>返回</dt><dd>the points fill status </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8aa73c5b014446af11d537b9601826cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeriesRenderer.setFillBelowLine </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>fill</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the line chart should be filled below its line. Filling below the line transforms a line chart into an area chart.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fill</td><td>the fill below line flag value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a894532607a694027488dd8c8073b7403"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeriesRenderer.setFillBelowLineColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the fill below the line color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the fill below line color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aadff639dc0dd5abf2f051864cb3072e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeriesRenderer.setFillPoints </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>fill</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the chart points should be filled.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fill</td><td>the points fill flag value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab4fc17a484d282959ee677aae82b1313"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeriesRenderer.setLineWidth </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lineWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the chart line width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineWidth</td><td>the line width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ca4ab97f3e4181d5da95d1b6efb76a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.XYSeriesRenderer.setPointStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html">PointStyle</a>&#160;</td>
+          <td class="paramname"><em>style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the point style.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">style</td><td>the point style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a90fc7d869e45191827f56ce95155820a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.XYSeriesRenderer.mFillBelowLine = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the chart should be filled below its line. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac73f3f648ad6bbae36688e3991d70e7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.XYSeriesRenderer.mFillColor = Color.argb(125, 0, 0, 200)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The fill below the chart line color. </p>
+
+</div>
+</div>
+<a class="anchor" id="a133228f675ba629b4c4373c006aa5267"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.XYSeriesRenderer.mFillPoints = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the chart points should be filled. </p>
+
+</div>
+</div>
+<a class="anchor" id="a429548c2b48bccfa3515a1e0c9348a0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.XYSeriesRenderer.mLineWidth = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart line width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a029a9e75016789ccbd57ce32bdf5cae6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html">PointStyle</a> com.ab.view.chart.XYSeriesRenderer.mPointStyle = <a class="el" href="enumcom_1_1ab_1_1view_1_1chart_1_1_point_style.html#aa5d344892f45b278d28823fda46e3723">PointStyle.POINT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The point style. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_x_y_series_renderer_8java.html">XYSeriesRenderer.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

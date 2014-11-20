@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 
-import com.ab.util.AbGraphical;
+import com.ab.util.AbGraphicUtil;
 import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
@@ -151,7 +151,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 		textlevelIndex = mRenderer.getTextlevelIndex();
 		//当前值文字大小
 		textLevelSize = mRenderer.getTextLevelSize();
-		textLevelSize = AbViewUtil.resizeTextSize(screenWidth,screenHeight, textLevelSize);
+		textLevelSize = AbViewUtil.scale(screenWidth,screenHeight, textLevelSize);
 		//当前值文字与顶部的距离
 		marginTop = mRenderer.getMarginTop();
 		//指示三角形的宽度
@@ -172,7 +172,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
         FontMetrics fm  = mTextPaint.getFontMetrics();
         //得到行高
         int textHeight = (int)Math.ceil(fm.descent - fm.ascent)+2-20;
-        int textWidth = (int)AbGraphical.getStringWidth(textValue,mTextPaint);
+        int textWidth = (int)AbGraphicUtil.getStringWidth(textValue,mTextPaint);
         
         int left = (screenWidth-measureWidth)/2;
 		
@@ -242,7 +242,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 		        FontMetrics textDescFm  = mTextPaint.getFontMetrics();
 		        //得到行高
 		        int textDescHeight = (int)Math.ceil(textDescFm.descent - textDescFm.ascent)+2;
-		        int textDescWidth = (int)AbGraphical.getStringWidth(textDesc,mTextPaint);
+		        int textDescWidth = (int)AbGraphicUtil.getStringWidth(textDesc,mTextPaint);
 				canvas.drawText(textDesc,center-textDescWidth/2,topDesc+20+((mRenderer.getTextRectHeight()-textDescHeight)/2),paint);
 				paint.setColor(color[i]);
 				
@@ -254,7 +254,7 @@ public class AbLevelChart extends AbLevelAbstractChart {
 			if(partValue!=null && partValue.length == color.length){
 				paint.setTextSize(partTextSize);
 		        mTextPaint.setTextSize(partTextSize);
-		        int partValueWidth = (int)AbGraphical.getStringWidth(String.valueOf(partValue[i]),mTextPaint);
+		        int partValueWidth = (int)AbGraphicUtil.getStringWidth(String.valueOf(partValue[i]),mTextPaint);
 				canvas.drawText(String.valueOf(partValue[i]),mLevelRectPart.left-partValueWidth/2,mLevelRectPart.top+levelHeight+15,paint);
 			}
 			

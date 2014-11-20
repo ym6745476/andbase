@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,9 +20,15 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Interface Table.
- * 表示表
+ * © 2012 amsoft.cn
+ * 名称：Id.java 
+ * 描述：表示表
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-7-23 上午9:47:10
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target( { java.lang.annotation.ElementType.TYPE })

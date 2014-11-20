@@ -15,10 +15,12 @@ import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
 import com.ab.db.storage.AbSqliteStorage;
-import com.ab.db.storage.AbSqliteStorageListener.AbDataInfoListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataDeleteListener;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataInsertListener;
-import com.ab.db.storage.AbSqliteStorageListener.AbDataOperationListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataSelectListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataUpdateListener;
 import com.ab.db.storage.AbStorageQuery;
+import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.demo.adapter.UserDBListAdapter;
@@ -28,7 +30,7 @@ import com.andbase.global.MyApplication;
 /**
  * 名称：DBObjectActivity
  * 描述：数据库演示andbase的对象化存储
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-13
  * @version
  */
@@ -73,7 +75,7 @@ public class DBObjectActivity extends AbActivity {
         mAbTitleBar.setLogoLine(R.drawable.line);
 	    
 	    application = (MyApplication)abApplication;
-	    
+	     
 	    //初始化AbSqliteStorage
 	    mAbSqliteStorage = AbSqliteStorage.getInstance(this);
 	    
@@ -116,7 +118,7 @@ public class DBObjectActivity extends AbActivity {
 					u.setName(name);
 					saveData(u);
 				}else{
-					showToast("请输入名称!");
+					AbToastUtil.showToast(DBObjectActivity.this,"请输入名称!");
 				}
 			}
         });
@@ -248,7 +250,7 @@ public class DBObjectActivity extends AbActivity {
 
 			@Override
 			public void onFailure(int errorCode, String errorMessage) {
-				showToast(errorMessage);
+				AbToastUtil.showToast(DBObjectActivity.this,errorMessage);
 			}
 			
 		});
@@ -261,11 +263,11 @@ public class DBObjectActivity extends AbActivity {
 		mAbStorageQuery.setOffset((pageNum-1)*pageSize);
 		
 		//无sql存储的查询
-		mAbSqliteStorage.findData(mAbStorageQuery, userDao, new AbDataInfoListener(){
+		mAbSqliteStorage.findData(mAbStorageQuery, userDao, new AbDataSelectListener(){
 
 			@Override
 			public void onFailure(int errorCode, String errorMessage) {
-				showToast(errorMessage);
+				AbToastUtil.showToast(DBObjectActivity.this,errorMessage);
 			}
 
 			@Override
@@ -287,11 +289,11 @@ public class DBObjectActivity extends AbActivity {
 		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
 		
 		//无sql存储的查询
-		mAbSqliteStorage.findData(mAbStorageQuery, userDao, new AbDataInfoListener(){
+		mAbSqliteStorage.findData(mAbStorageQuery, userDao, new AbDataSelectListener(){
 
 			@Override
 			public void onFailure(int errorCode, String errorMessage) {
-				showToast(errorMessage);
+				AbToastUtil.showToast(DBObjectActivity.this,errorMessage);
 			}
 
 			@Override
@@ -319,15 +321,15 @@ public class DBObjectActivity extends AbActivity {
 	public void updateData(LocalUser u){
 		
 		//无sql存储的更新
-		mAbSqliteStorage.updateData(u, userDao, new AbDataOperationListener(){
+		mAbSqliteStorage.updateData(u, userDao, new AbDataUpdateListener(){
 
 			@Override
 			public void onFailure(int errorCode, String errorMessage) {
-				showToast(errorMessage);
+				AbToastUtil.showToast(DBObjectActivity.this,errorMessage);
 			}
 
 			@Override
-			public void onSuccess(long paramLong) {
+			public void onSuccess(int rows) {
 				queryData();
 			}
 			
@@ -349,18 +351,18 @@ public class DBObjectActivity extends AbActivity {
 		mAbStorageQuery.equals("_id", String.valueOf(id));
 		
 		//无sql存储的查询
-		mAbSqliteStorage.findData(mAbStorageQuery, userDao, new AbDataInfoListener(){
+		mAbSqliteStorage.findData(mAbStorageQuery, userDao, new AbDataSelectListener(){
 
 			@Override
 			public void onFailure(int errorCode, String errorMessage) {
-				showToast(errorMessage);
+				AbToastUtil.showToast(DBObjectActivity.this,errorMessage);
 			}
 
 			@Override
 			public void onSuccess(List<?> paramList) {
 				if(paramList!=null && paramList.size()>0){
 					LocalUser u = (LocalUser)paramList.get(0);
-					showToast("结果：_id:"+u.get_id()+",name:"+u.getName());
+					AbToastUtil.showToast(DBObjectActivity.this,"结果：_id:"+u.get_id()+",name:"+u.getName());
 				}
 			}
 			
@@ -380,16 +382,16 @@ public class DBObjectActivity extends AbActivity {
 		mAbStorageQuery.equals("_id", String.valueOf(id));
 		
 		//无sql存储的删除
-		mAbSqliteStorage.deleteData(mAbStorageQuery, userDao, new AbDataOperationListener(){
+		mAbSqliteStorage.deleteData(mAbStorageQuery, userDao, new AbDataDeleteListener(){
 
 			@Override
-			public void onSuccess(long paramLong) {
+			public void onSuccess(int rows) {
 				queryData();
 			}
 
 			@Override
 			public void onFailure(int errorCode, String errorMessage) {
-				showToast(errorMessage);
+				AbToastUtil.showToast(DBObjectActivity.this,errorMessage);
 			}
 			
 		});

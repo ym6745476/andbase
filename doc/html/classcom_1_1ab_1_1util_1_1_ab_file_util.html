@@ -1,0 +1,1560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.util.AbFileUtil类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html">AbFileUtil</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1util_1_1_ab_file_util-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.util.AbFileUtil类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util_1_1_file_last_modif_sort.html">FileLastModifSort</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a6c468fe231231784b46efce6f4fb82b0"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a6c468fe231231784b46efce6f4fb82b0">getBitmapFromSD</a> (String url, int type, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a6c468fe231231784b46efce6f4fb82b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039560e55c6efcfa85807761fdec33bb"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a039560e55c6efcfa85807761fdec33bb">getBitmapFromSD</a> (File file, int type, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a039560e55c6efcfa85807761fdec33bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff5a538ee98e69b81a96ae8511a9a26"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a2ff5a538ee98e69b81a96ae8511a9a26">getBitmapFromSD</a> (File file)</td></tr>
+<tr class="separator:a2ff5a538ee98e69b81a96ae8511a9a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c329851cfff8542479baf739d8a589"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a07c329851cfff8542479baf739d8a589">getBitmapFromByte</a> (byte[] imgByte, String fileName, int type, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a07c329851cfff8542479baf739d8a589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0268168afd7b9cca1c041fc7c79c0c92"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a0268168afd7b9cca1c041fc7c79c0c92">getBitmapFromURL</a> (String url, int type, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a0268168afd7b9cca1c041fc7c79c0c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739306b02375601e13f722f3679cf4a9"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a739306b02375601e13f722f3679cf4a9">getBitmapFromSrc</a> (String src)</td></tr>
+<tr class="separator:a739306b02375601e13f722f3679cf4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67bc9bf9a9b14578e694d6d3a0d3c21"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#ae67bc9bf9a9b14578e694d6d3a0d3c21">getBitmapFromAsset</a> (Context context, String fileName)</td></tr>
+<tr class="separator:ae67bc9bf9a9b14578e694d6d3a0d3c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d31bbb86a1121cbf435de7950dd44b3"><td class="memItemLeft" align="right" valign="top">static Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a5d31bbb86a1121cbf435de7950dd44b3">getDrawableFromAsset</a> (Context context, String fileName)</td></tr>
+<tr class="separator:a5d31bbb86a1121cbf435de7950dd44b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83183e1867d4e736ec906b4b19599e32"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a83183e1867d4e736ec906b4b19599e32">downloadFile</a> (String url, String dirPath)</td></tr>
+<tr class="separator:a83183e1867d4e736ec906b4b19599e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bb30793b68367df791b8a063ed4ad1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#aa3bb30793b68367df791b8a063ed4ad1">getContentLengthFromUrl</a> (String Url)</td></tr>
+<tr class="separator:aa3bb30793b68367df791b8a063ed4ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ea13ad52122cbbb32b8a6b69a1e0a6"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a94ea13ad52122cbbb32b8a6b69a1e0a6">getRealFileNameFromUrl</a> (String url)</td></tr>
+<tr class="separator:a94ea13ad52122cbbb32b8a6b69a1e0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d5c5e513dfe4e9da79da2b39901b88b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a9d5c5e513dfe4e9da79da2b39901b88b">getRealFileName</a> (HttpURLConnection connection)</td></tr>
+<tr class="separator:a9d5c5e513dfe4e9da79da2b39901b88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ce8a95bd0eb5327efea57d180bc52b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a55ce8a95bd0eb5327efea57d180bc52b">getRealFileName</a> (HttpResponse response)</td></tr>
+<tr class="separator:a55ce8a95bd0eb5327efea57d180bc52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cf69d286d8a7eefc0c392a5ed4649b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a93cf69d286d8a7eefc0c392a5ed4649b">getCacheFileNameFromUrl</a> (String url)</td></tr>
+<tr class="separator:a93cf69d286d8a7eefc0c392a5ed4649b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712081010ce7284f2c592f57fb2aa13f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a712081010ce7284f2c592f57fb2aa13f">getCacheFileNameFromUrl</a> (String url, HttpResponse response)</td></tr>
+<tr class="separator:a712081010ce7284f2c592f57fb2aa13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf350895cccea2c7385fd72256a1971a"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#adf350895cccea2c7385fd72256a1971a">getCacheFileNameFromUrl</a> (String url, HttpURLConnection connection)</td></tr>
+<tr class="separator:adf350895cccea2c7385fd72256a1971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c28df7093803f661215953cd98a6ba1"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a8c28df7093803f661215953cd98a6ba1">getMIMEFromUrl</a> (String url, HttpURLConnection connection)</td></tr>
+<tr class="separator:a8c28df7093803f661215953cd98a6ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136cc030c7e347003c9dc1854813eded"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a136cc030c7e347003c9dc1854813eded">getMIMEFromUrl</a> (String url, HttpResponse response)</td></tr>
+<tr class="separator:a136cc030c7e347003c9dc1854813eded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad298d70a048b3433add717678482bdad"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#ad298d70a048b3433add717678482bdad">getByteArrayFromSD</a> (String path)</td></tr>
+<tr class="separator:ad298d70a048b3433add717678482bdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9547e4ee4917d8ce7fe3f31dc6a710d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a9547e4ee4917d8ce7fe3f31dc6a710d4">writeByteArrayToSD</a> (String path, byte[] content, boolean create)</td></tr>
+<tr class="separator:a9547e4ee4917d8ce7fe3f31dc6a710d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c6eec22f711e93f950ed194fa7f001"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a30c6eec22f711e93f950ed194fa7f001">isCanUseSD</a> ()</td></tr>
+<tr class="separator:a30c6eec22f711e93f950ed194fa7f001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f9b1ee1d565109c8eb4f56c710cb30"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a65f9b1ee1d565109c8eb4f56c710cb30">initFileDir</a> (Context context)</td></tr>
+<tr class="separator:a65f9b1ee1d565109c8eb4f56c710cb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25605d027509a5c4679ddce82684200a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a25605d027509a5c4679ddce82684200a">freeSpaceOnSD</a> ()</td></tr>
+<tr class="separator:a25605d027509a5c4679ddce82684200a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0563c2ca13b4b15c7f765d21f4ae675"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#ac0563c2ca13b4b15c7f765d21f4ae675">clearDownloadFile</a> ()</td></tr>
+<tr class="separator:ac0563c2ca13b4b15c7f765d21f4ae675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e56a1fcdaf2baaa8dd8c9dfb1638028"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a2e56a1fcdaf2baaa8dd8c9dfb1638028">readAssetsByName</a> (Context context, String name, String encoding)</td></tr>
+<tr class="separator:a2e56a1fcdaf2baaa8dd8c9dfb1638028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83376fe7c03c9e923330af9ff8c59fa2"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a83376fe7c03c9e923330af9ff8c59fa2">readRawByName</a> (Context context, int id, String encoding)</td></tr>
+<tr class="separator:a83376fe7c03c9e923330af9ff8c59fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0265a350118d9030db0f0962f9a27f41"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a0265a350118d9030db0f0962f9a27f41">getDownloadRootDir</a> (Context context)</td></tr>
+<tr class="separator:a0265a350118d9030db0f0962f9a27f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56900ce60896a1b14ff9ea3ea49870e"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#af56900ce60896a1b14ff9ea3ea49870e">getImageDownloadDir</a> (Context context)</td></tr>
+<tr class="separator:af56900ce60896a1b14ff9ea3ea49870e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a22c618b58f534b6064050a7c57fe6"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#ac0a22c618b58f534b6064050a7c57fe6">getFileDownloadDir</a> (Context context)</td></tr>
+<tr class="separator:ac0a22c618b58f534b6064050a7c57fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7d5ae94a396a244a656ff9a90eb5e2"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#ade7d5ae94a396a244a656ff9a90eb5e2">getCacheDownloadDir</a> (Context context)</td></tr>
+<tr class="separator:ade7d5ae94a396a244a656ff9a90eb5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21850d95b8b3364ef1c73904647c3d3"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#af21850d95b8b3364ef1c73904647c3d3">getDbDownloadDir</a> (Context context)</td></tr>
+<tr class="separator:af21850d95b8b3364ef1c73904647c3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88828b8ecb42627649c03a38758789fa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a88828b8ecb42627649c03a38758789fa">getFreeSdSpaceNeededToCache</a> ()</td></tr>
+<tr class="separator:a88828b8ecb42627649c03a38758789fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a9ddd0b007cceef19c6947a45507f6247"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a9ddd0b007cceef19c6947a45507f6247">downloadRootDir</a> = null</td></tr>
+<tr class="separator:a9ddd0b007cceef19c6947a45507f6247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288e54b1fa45eec8da396eeefb5aa520"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a288e54b1fa45eec8da396eeefb5aa520">imageDownloadDir</a> = null</td></tr>
+<tr class="separator:a288e54b1fa45eec8da396eeefb5aa520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027b53597d64034dca4f6b4109620243"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a027b53597d64034dca4f6b4109620243">fileDownloadDir</a> = null</td></tr>
+<tr class="separator:a027b53597d64034dca4f6b4109620243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c0e0f279b7cd6c5e01d5ad6cd9b37f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a96c0e0f279b7cd6c5e01d5ad6cd9b37f">cacheDownloadDir</a> = null</td></tr>
+<tr class="separator:a96c0e0f279b7cd6c5e01d5ad6cd9b37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5890ca01c629e6b522a521a0b4a0dc41"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a5890ca01c629e6b522a521a0b4a0dc41">dbDownloadDir</a> = null</td></tr>
+<tr class="separator:a5890ca01c629e6b522a521a0b4a0dc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8428208f331b36f68c364dca77d25a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_file_util.html#a3c8428208f331b36f68c364dca77d25a">freeSdSpaceNeededToCache</a> = 200*1024*1024</td></tr>
+<tr class="separator:a3c8428208f331b36f68c364dca77d25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbFileUtil.java 描述：文件操作类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-01-18 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac0563c2ca13b4b15c7f765d21f4ae675"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbFileUtil.clearDownloadFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>删除所有缓存文件.</p>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a83183e1867d4e736ec906b4b19599e32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.downloadFile </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>dirPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>下载网络文件到SD卡中.如果SD中存在同名文件将不再下载</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>要下载文件的网络地址 </td></tr>
+    <tr><td class="paramname">dirPath</td><td>the dir path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>下载好的本地文件地址 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25605d027509a5c4679ddce82684200a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbFileUtil.freeSpaceOnSD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>计算sdcard上的剩余空间.</p>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae67bc9bf9a9b14578e694d6d3a0d3c21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromAsset </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取Asset中的图片资源.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a07c329851cfff8542479baf739d8a589"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromByte </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>imgByte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：将图片的byte[]写入本地文件. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imgByte</td><td>图片的byte[]形势 </td></tr>
+    <tr><td class="paramname">fileName</td><td>文件名称，需要包含后缀，如.jpg </td></tr>
+    <tr><td class="paramname">type</td><td>图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类） </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c468fe231231784b46efce6f4fb82b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromSD </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：通过文件的网络地址从SD卡中读取图片，如果SD中没有则自动下载并保存. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件的网络地址 </td></tr>
+    <tr><td class="paramname">type</td><td>图片的处理类型（剪切或者缩放到指定大小，参考AbImageUtil类） 如果设置为原图，则后边参数无效，得到原图 </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a039560e55c6efcfa85807761fdec33bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromSD </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：通过文件的本地地址从SD卡读取图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file </td></tr>
+    <tr><td class="paramname">type</td><td>图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类） 如果设置为原图，则后边参数无效，得到原图 </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ff5a538ee98e69b81a96ae8511a9a26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromSD </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：通过文件的本地地址从SD卡读取图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a739306b02375601e13f722f3679cf4a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromSrc </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取src中的图片资源.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>图片的src路径，如（“image/arrow.png”） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0268168afd7b9cca1c041fc7c79c0c92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbFileUtil.getBitmapFromURL </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据URL从互连网获取图片. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>要下载文件的网络地址 </td></tr>
+    <tr><td class="paramname">type</td><td>图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类） </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad298d70a048b3433add717678482bdad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte [] com.ab.util.AbFileUtil.getByteArrayFromSD </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从sd卡中的文件读取到byte[].</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>sd卡中文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ade7d5ae94a396a244a656ff9a90eb5e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getCacheDownloadDir </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the cache download dir.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the cache download dir </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a93cf69d286d8a7eefc0c392a5ed4649b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getCacheFileNameFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取文件名（不含后缀）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件名 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a712081010ce7284f2c592f57fb2aa13f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getCacheFileNameFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HttpResponse&#160;</td>
+          <td class="paramname"><em>response</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取文件名（.后缀），外链模式和通过网络获取.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件地址 </td></tr>
+    <tr><td class="paramname">response</td><td>the response </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件名 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adf350895cccea2c7385fd72256a1971a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getCacheFileNameFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HttpURLConnection&#160;</td>
+          <td class="paramname"><em>connection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取文件名（.后缀），外链模式和通过网络获取.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件地址 </td></tr>
+    <tr><td class="paramname">connection</td><td>the connection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件名 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa3bb30793b68367df791b8a063ed4ad1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbFileUtil.getContentLengthFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>Url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取网络文件的大小.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Url</td><td>图片的网络路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 网络文件的大小 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af21850d95b8b3364ef1c73904647c3d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getDbDownloadDir </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the db download dir.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the db download dir </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0265a350118d9030db0f0962f9a27f41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getDownloadRootDir </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the download root dir.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the download root dir </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d31bbb86a1121cbf435de7950dd44b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Drawable com.ab.util.AbFileUtil.getDrawableFromAsset </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取Asset中的图片资源.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">fileName</td><td>the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Drawable 图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0a22c618b58f534b6064050a7c57fe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getFileDownloadDir </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the file download dir.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the file download dir </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a88828b8ecb42627649c03a38758789fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbFileUtil.getFreeSdSpaceNeededToCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the free sd space needed to cache.</p>
+<dl class="section return"><dt>返回</dt><dd>the free sd space needed to cache </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af56900ce60896a1b14ff9ea3ea49870e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getImageDownloadDir </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the image download dir.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the image download dir </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c28df7093803f661215953cd98a6ba1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getMIMEFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HttpURLConnection&#160;</td>
+          <td class="paramname"><em>connection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取文件后缀，本地.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件地址 </td></tr>
+    <tr><td class="paramname">connection</td><td>the connection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件后缀 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a136cc030c7e347003c9dc1854813eded"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getMIMEFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HttpResponse&#160;</td>
+          <td class="paramname"><em>response</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取文件后缀，本地和网络.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件地址 </td></tr>
+    <tr><td class="paramname">response</td><td>the response </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件后缀 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9d5c5e513dfe4e9da79da2b39901b88b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getRealFileName </td>
+          <td>(</td>
+          <td class="paramtype">HttpURLConnection&#160;</td>
+          <td class="paramname"><em>connection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取真实文件名（xx.后缀），通过网络获取. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection</td><td>连接 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件名 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a55ce8a95bd0eb5327efea57d180bc52b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getRealFileName </td>
+          <td>(</td>
+          <td class="paramtype">HttpResponse&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取真实文件名（xx.后缀），通过网络获取.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>the response </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件名 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94ea13ad52122cbbb32b8a6b69a1e0a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.getRealFileNameFromUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取文件名，通过网络获取. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>文件地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>文件名 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65f9b1ee1d565109c8eb4f56c710cb30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbFileUtil.initFileDir </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：初始化存储目录.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a30c6eec22f711e93f950ed194fa7f001"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbFileUtil.isCanUseSD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：SD卡是否能用.</p>
+<dl class="section return"><dt>返回</dt><dd>true 可用,false不可用 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e56a1fcdaf2baaa8dd8c9dfb1638028"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.readAssetsByName </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>encoding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：读取Assets目录的文件内容.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">name</td><td>the name </td></tr>
+    <tr><td class="paramname">encoding</td><td>the encoding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a83376fe7c03c9e923330af9ff8c59fa2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbFileUtil.readRawByName </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>encoding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：读取Raw目录的文件内容.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">id</td><td>the id </td></tr>
+    <tr><td class="paramname">encoding</td><td>the encoding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9547e4ee4917d8ce7fe3f31dc6a710d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbFileUtil.writeByteArrayToSD </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>create</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：将byte数组写入文件.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path </td></tr>
+    <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">create</td><td>the create </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a96c0e0f279b7cd6c5e01d5ad6cd9b37f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbFileUtil.cacheDownloadDir = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认缓存目录. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5890ca01c629e6b522a521a0b4a0dc41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbFileUtil.dbDownloadDir = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认下载数据库文件的目录. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ddd0b007cceef19c6947a45507f6247"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbFileUtil.downloadRootDir = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认APP根目录. </p>
+
+</div>
+</div>
+<a class="anchor" id="a027b53597d64034dca4f6b4109620243"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbFileUtil.fileDownloadDir = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认下载文件目录. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3c8428208f331b36f68c364dca77d25a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.util.AbFileUtil.freeSdSpaceNeededToCache = 200*1024*1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>剩余空间大于200M才使用SD缓存. </p>
+
+</div>
+</div>
+<a class="anchor" id="a288e54b1fa45eec8da396eeefb5aa520"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.util.AbFileUtil.imageDownloadDir = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>默认下载图片文件目录. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/util/<a class="el" href="_ab_file_util_8java.html">AbFileUtil.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

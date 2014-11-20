@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.ab.global.AbMenuItem;
+import com.ab.model.AbMenuItem;
 import com.andbase.R;
 
 

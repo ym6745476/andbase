@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.internal.$Types类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html">$Types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pac-static-methods">静态包函数</a> &#124;
+<a href="#pac-static-attribs">静态包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.internal.$Types类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_generic_array_type_impl.html">GenericArrayTypeImpl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_parameterized_type_impl.html">ParameterizedTypeImpl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html">WildcardTypeImpl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5f48a21cf2c59c86f2998527db38e616"><td class="memItemLeft" align="right" valign="top">static ParameterizedType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a5f48a21cf2c59c86f2998527db38e616">newParameterizedTypeWithOwner</a> (Type ownerType, Type rawType, Type...typeArguments)</td></tr>
+<tr class="separator:a5f48a21cf2c59c86f2998527db38e616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab078b782ede2deb0a392d9a8a41747c"><td class="memItemLeft" align="right" valign="top">static GenericArrayType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#aab078b782ede2deb0a392d9a8a41747c">arrayOf</a> (Type componentType)</td></tr>
+<tr class="separator:aab078b782ede2deb0a392d9a8a41747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e9b24a1c565ffc6bcad6c045fb827b"><td class="memItemLeft" align="right" valign="top">static WildcardType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#ac4e9b24a1c565ffc6bcad6c045fb827b">subtypeOf</a> (Type bound)</td></tr>
+<tr class="separator:ac4e9b24a1c565ffc6bcad6c045fb827b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62cc87f0b28f660904d5204a89cc4a3"><td class="memItemLeft" align="right" valign="top">static WildcardType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#af62cc87f0b28f660904d5204a89cc4a3">supertypeOf</a> (Type bound)</td></tr>
+<tr class="separator:af62cc87f0b28f660904d5204a89cc4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff2d396ddb34dc192a1159b87e418d1"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a6ff2d396ddb34dc192a1159b87e418d1">canonicalize</a> (Type type)</td></tr>
+<tr class="separator:a6ff2d396ddb34dc192a1159b87e418d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b64811e4de2bd3aa468d0358274e83"><td class="memItemLeft" align="right" valign="top">static Class&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a94b64811e4de2bd3aa468d0358274e83">getRawType</a> (Type type)</td></tr>
+<tr class="separator:a94b64811e4de2bd3aa468d0358274e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b299cb7e64be5f66161c7779d01b07"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a48b299cb7e64be5f66161c7779d01b07">equals</a> (Type a, Type b)</td></tr>
+<tr class="separator:a48b299cb7e64be5f66161c7779d01b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14c82e3cfcd73b222d7d2a19d153007"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#af14c82e3cfcd73b222d7d2a19d153007">typeToString</a> (Type type)</td></tr>
+<tr class="separator:af14c82e3cfcd73b222d7d2a19d153007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203acb85837a4633f0f2da6f7adf81d1"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a203acb85837a4633f0f2da6f7adf81d1">getArrayComponentType</a> (Type array)</td></tr>
+<tr class="separator:a203acb85837a4633f0f2da6f7adf81d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01386940a859194e3a04530a462ea1e6"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a01386940a859194e3a04530a462ea1e6">getCollectionElementType</a> (Type context, Class&lt;?&gt; contextRawType)</td></tr>
+<tr class="separator:a01386940a859194e3a04530a462ea1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602cfc61fb7dd1819c483cfa2792c631"><td class="memItemLeft" align="right" valign="top">static Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a602cfc61fb7dd1819c483cfa2792c631">getMapKeyAndValueTypes</a> (Type context, Class&lt;?&gt; contextRawType)</td></tr>
+<tr class="separator:a602cfc61fb7dd1819c483cfa2792c631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b47eb6dfeb374797950acf3b065f3e"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a72b47eb6dfeb374797950acf3b065f3e">resolve</a> (Type context, Class&lt;?&gt; contextRawType, Type toResolve)</td></tr>
+<tr class="separator:a72b47eb6dfeb374797950acf3b065f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-methods"></a>
+静态包函数</h2></td></tr>
+<tr class="memitem:a79c589e9ce93e7500aeb8824c3aee4fd"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a79c589e9ce93e7500aeb8824c3aee4fd">equal</a> (Object a, Object b)</td></tr>
+<tr class="separator:a79c589e9ce93e7500aeb8824c3aee4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa926838d6cd507c65657797971f48903"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#aa926838d6cd507c65657797971f48903">getGenericSupertype</a> (Type context, Class&lt;?&gt; rawType, Class&lt;?&gt; toResolve)</td></tr>
+<tr class="separator:aa926838d6cd507c65657797971f48903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff480be56c988928d78ac3c6353bf2f3"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#aff480be56c988928d78ac3c6353bf2f3">getSupertype</a> (Type context, Class&lt;?&gt; contextRawType, Class&lt;?&gt; supertype)</td></tr>
+<tr class="separator:aff480be56c988928d78ac3c6353bf2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68aeec4e6da1d360c1b8da45276ef19"><td class="memItemLeft" align="right" valign="top">static Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#ab68aeec4e6da1d360c1b8da45276ef19">resolveTypeVariable</a> (Type context, Class&lt;?&gt; contextRawType, TypeVariable&lt;?&gt; unknown)</td></tr>
+<tr class="separator:ab68aeec4e6da1d360c1b8da45276ef19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-attribs"></a>
+静态包属性</h2></td></tr>
+<tr class="memitem:aa58ac2335b26632ba02f52058fcbac1f"><td class="memItemLeft" align="right" valign="top">static final Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#aa58ac2335b26632ba02f52058fcbac1f">EMPTY_TYPE_ARRAY</a> = new Type[] {}</td></tr>
+<tr class="separator:aa58ac2335b26632ba02f52058fcbac1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aa5e20d5338787d37e88844a54596ba48"><td class="memItemLeft" align="right" valign="top">$<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#aa5e20d5338787d37e88844a54596ba48">$Types</a> ()</td></tr>
+<tr class="separator:aa5e20d5338787d37e88844a54596ba48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ae252247036ca3872eebe395d5a162dc4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#ae252247036ca3872eebe395d5a162dc4">hashCodeOrZero</a> (Object o)</td></tr>
+<tr class="separator:ae252247036ca3872eebe395d5a162dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d57ae1f53e4be8552f8dd0c663ceee"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#ac7d57ae1f53e4be8552f8dd0c663ceee">indexOf</a> (Object[] array, Object toFind)</td></tr>
+<tr class="separator:ac7d57ae1f53e4be8552f8dd0c663ceee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ed20bd4ef2099275c9031d6ac3b98e"><td class="memItemLeft" align="right" valign="top">static Class&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#a66ed20bd4ef2099275c9031d6ac3b98e">declaringClassOf</a> (TypeVariable&lt;?&gt; typeVariable)</td></tr>
+<tr class="separator:a66ed20bd4ef2099275c9031d6ac3b98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af578b41aafec713496e7fb7c95a01396"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_0B_types.html#af578b41aafec713496e7fb7c95a01396">checkNotPrimitive</a> (Type type)</td></tr>
+<tr class="separator:af578b41aafec713496e7fb7c95a01396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Static methods for working with types.</p>
+<dl class="section author"><dt>作者</dt><dd>Bob Lee </dd>
+<dd>
+Jesse Wilson </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aa5e20d5338787d37e88844a54596ba48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">$<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> com.google.gson.internal.$Types.$Types </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aab078b782ede2deb0a392d9a8a41747c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static GenericArrayType com.google.gson.internal.$Types.arrayOf </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>componentType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns an array type whose elements are all instances of </p><div class="fragment"><div class="line">componentType </div>
+</div><!-- fragment --><p> .</p>
+<dl class="section return"><dt>返回</dt><dd>a <a class="el" href="">serializable</a> generic array type. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ff2d396ddb34dc192a1159b87e418d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.canonicalize </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a type that is functionally equal but not necessarily equal according to <a class="el" href="">Object.equals()</a>. The returned type is <a class="el" href="">java.io.Serializable</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="af578b41aafec713496e7fb7c95a01396"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.google.gson.internal.$Types.checkNotPrimitive </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66ed20bd4ef2099275c9031d6ac3b98e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Class&lt;?&gt; com.google.gson.internal.$Types.declaringClassOf </td>
+          <td>(</td>
+          <td class="paramtype">TypeVariable&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>typeVariable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the declaring class of</p><div class="fragment"><div class="line">typeVariable </div>
+</div><!-- fragment --><p> , or</p><div class="fragment"><div class="line">null </div>
+</div><!-- fragment --><p> if it was not declared by a class. </p>
+
+</div>
+</div>
+<a class="anchor" id="a79c589e9ce93e7500aeb8824c3aee4fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.google.gson.internal.$Types.equal </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48b299cb7e64be5f66161c7779d01b07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.google.gson.internal.$Types.equals </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if</p><div class="fragment"><div class="line">a </div>
+</div><!-- fragment --><p> and</p><div class="fragment"><div class="line">b </div>
+</div><!-- fragment --><p> are equal. </p>
+
+</div>
+</div>
+<a class="anchor" id="a203acb85837a4633f0f2da6f7adf81d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.getArrayComponentType </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the component type of this array type. </p><dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ClassCastException</td><td>if this type is not an array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a01386940a859194e3a04530a462ea1e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.getCollectionElementType </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>contextRawType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the element type of this collection type. </p><dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalArgumentException</td><td>if this type is not a collection. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa926838d6cd507c65657797971f48903"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.getGenericSupertype </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>rawType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>toResolve</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the generic supertype for</p><div class="fragment"><div class="line">supertype </div>
+</div><!-- fragment --><p> . For example, given a class</p><div class="fragment"><div class="line">IntegerSet </div>
+</div><!-- fragment --><p> , the result for when supertype is</p><div class="fragment"><div class="line">Set.class </div>
+</div><!-- fragment --><p> is</p><div class="fragment"><div class="line">Set&lt;Integer&gt; </div>
+</div><!-- fragment --><p> and the result when the supertype is</p><div class="fragment"><div class="line">Collection.class </div>
+</div><!-- fragment --><p> is</p><div class="fragment"><div class="line">Collection&lt;Integer&gt; </div>
+</div><!-- fragment --><p> . </p>
+
+</div>
+</div>
+<a class="anchor" id="a602cfc61fb7dd1819c483cfa2792c631"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type [] com.google.gson.internal.$Types.getMapKeyAndValueTypes </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>contextRawType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a two element array containing this map's key and value types in positions 0 and 1 respectively. </p>
+
+</div>
+</div>
+<a class="anchor" id="a94b64811e4de2bd3aa468d0358274e83"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Class&lt;?&gt; com.google.gson.internal.$Types.getRawType </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff480be56c988928d78ac3c6353bf2f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.getSupertype </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>contextRawType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>supertype</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the generic form of</p><div class="fragment"><div class="line">supertype </div>
+</div><!-- fragment --><p> . For example, if this is</p><div class="fragment"><div class="line">ArrayList&lt;String&gt; </div>
+</div><!-- fragment --><p> , this returns</p><div class="fragment"><div class="line">Iterable&lt;String&gt; </div>
+</div><!-- fragment --><p> given the input</p><div class="fragment"><div class="line">Iterable.class </div>
+</div><!-- fragment --><p> .</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">supertype</td><td>a superclass of, or interface implemented by, this. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae252247036ca3872eebe395d5a162dc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.google.gson.internal.$Types.hashCodeOrZero </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac7d57ae1f53e4be8552f8dd0c663ceee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.google.gson.internal.$Types.indexOf </td>
+          <td>(</td>
+          <td class="paramtype">Object[]&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>toFind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5f48a21cf2c59c86f2998527db38e616"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ParameterizedType com.google.gson.internal.$Types.newParameterizedTypeWithOwner </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>ownerType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>rawType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type...&#160;</td>
+          <td class="paramname"><em>typeArguments</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a new parameterized type, applying</p><div class="fragment"><div class="line">typeArguments </div>
+</div><!-- fragment --><p> to </p><div class="fragment"><div class="line">rawType </div>
+</div><!-- fragment --><p> and enclosed by</p><div class="fragment"><div class="line">ownerType </div>
+</div><!-- fragment --><p> .</p>
+<dl class="section return"><dt>返回</dt><dd>a <a class="el" href="">serializable</a> parameterized type. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a72b47eb6dfeb374797950acf3b065f3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.resolve </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>contextRawType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>toResolve</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab68aeec4e6da1d360c1b8da45276ef19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Type com.google.gson.internal.$Types.resolveTypeVariable </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>contextRawType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TypeVariable&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>unknown</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac4e9b24a1c565ffc6bcad6c045fb827b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static WildcardType com.google.gson.internal.$Types.subtypeOf </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>bound</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a type that represents an unknown type that extends</p><div class="fragment"><div class="line">bound </div>
+</div><!-- fragment --><p> . For example, if</p><div class="fragment"><div class="line">bound </div>
+</div><!-- fragment --><p> is</p><div class="fragment"><div class="line">CharSequence.class </div>
+</div><!-- fragment --><p> , this returns </p><div class="fragment"><div class="line">? extends CharSequence </div>
+</div><!-- fragment --><p> . If</p><div class="fragment"><div class="line">bound </div>
+</div><!-- fragment --><p> is</p><div class="fragment"><div class="line">Object.class </div>
+</div><!-- fragment --><p> , this returns</p><div class="fragment"><div class="line">? </div>
+</div><!-- fragment --><p> , which is shorthand for</p><div class="fragment"><div class="line">? extends Object </div>
+</div><!-- fragment --><p> . </p>
+
+</div>
+</div>
+<a class="anchor" id="af62cc87f0b28f660904d5204a89cc4a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static WildcardType com.google.gson.internal.$Types.supertypeOf </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>bound</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a type that represents an unknown supertype of</p><div class="fragment"><div class="line">bound </div>
+</div><!-- fragment --><p> . For example, if</p><div class="fragment"><div class="line">bound </div>
+</div><!-- fragment --><p> is</p><div class="fragment"><div class="line">String.class </div>
+</div><!-- fragment --><p> , this returns</p><div class="fragment"><div class="line"> ?</div>
+<div class="line">super String </div>
+</div><!-- fragment --><p> . </p>
+
+</div>
+</div>
+<a class="anchor" id="af14c82e3cfcd73b222d7d2a19d153007"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.google.gson.internal.$Types.typeToString </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aa58ac2335b26632ba02f52058fcbac1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Type [] com.google.gson.internal.$Types.EMPTY_TYPE_ARRAY = new Type[] {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/internal/<a class="el" href="_0B_gson_0B_types_8java.html">$Gson$Types.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

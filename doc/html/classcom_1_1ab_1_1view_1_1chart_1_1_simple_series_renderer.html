@@ -1,0 +1,1000 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.SimpleSeriesRenderer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.SimpleSeriesRenderer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.SimpleSeriesRenderer 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.png" usemap="#com.ab.view.chart.SimpleSeriesRenderer_map" alt=""/>
+  <map id="com.ab.view.chart.SimpleSeriesRenderer_map" name="com.ab.view.chart.SimpleSeriesRenderer_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_series_renderer.html" alt="com.ab.view.chart.XYSeriesRenderer" shape="rect" coords="0,112,246,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a71a6f79ef0bbf31002e02276c81b515c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a71a6f79ef0bbf31002e02276c81b515c">getColor</a> ()</td></tr>
+<tr class="separator:a71a6f79ef0bbf31002e02276c81b515c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5392e23cb6ee7d3e5e814be5839a35b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a5392e23cb6ee7d3e5e814be5839a35b8">setColor</a> (int color)</td></tr>
+<tr class="separator:a5392e23cb6ee7d3e5e814be5839a35b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa73f7699f9ca2e03d00299203e8baf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a2fa73f7699f9ca2e03d00299203e8baf">isDisplayChartValues</a> ()</td></tr>
+<tr class="separator:a2fa73f7699f9ca2e03d00299203e8baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19ed96a086c9914f1380a46d224afe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#af19ed96a086c9914f1380a46d224afe8">setDisplayChartValues</a> (boolean display)</td></tr>
+<tr class="separator:af19ed96a086c9914f1380a46d224afe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc108f2cc4b4e854d615673facc8df0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#abdc108f2cc4b4e854d615673facc8df0">getChartValuesTextSize</a> ()</td></tr>
+<tr class="separator:abdc108f2cc4b4e854d615673facc8df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7317f1b55934bbd5b24842723972f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#abd7317f1b55934bbd5b24842723972f1">setChartValuesTextSize</a> (float textSize)</td></tr>
+<tr class="separator:abd7317f1b55934bbd5b24842723972f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe3dc3b6fdcc6820445a04c1be37dd5"><td class="memItemLeft" align="right" valign="top">Align&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a4fe3dc3b6fdcc6820445a04c1be37dd5">getChartValuesTextAlign</a> ()</td></tr>
+<tr class="separator:a4fe3dc3b6fdcc6820445a04c1be37dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756ba9f68513b41b62410657b1d54761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a756ba9f68513b41b62410657b1d54761">setChartValuesTextAlign</a> (Align align)</td></tr>
+<tr class="separator:a756ba9f68513b41b62410657b1d54761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a8c9a8282ceaecdd8d258a117925a1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ab5a8c9a8282ceaecdd8d258a117925a1">getChartValuesSpacing</a> ()</td></tr>
+<tr class="separator:ab5a8c9a8282ceaecdd8d258a117925a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68bfb35a6ef8fb756c678846e60d1f06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a68bfb35a6ef8fb756c678846e60d1f06">setChartValuesSpacing</a> (float spacing)</td></tr>
+<tr class="separator:a68bfb35a6ef8fb756c678846e60d1f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee41044c1598c89c206ceebf30cfb08d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aee41044c1598c89c206ceebf30cfb08d">getStroke</a> ()</td></tr>
+<tr class="separator:aee41044c1598c89c206ceebf30cfb08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ad4f6deea987be84b6c770ec4454b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aa6ad4f6deea987be84b6c770ec4454b4">setStroke</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a> stroke)</td></tr>
+<tr class="separator:aa6ad4f6deea987be84b6c770ec4454b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa331a60558bb296f6a1bb68fbebd286c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aa331a60558bb296f6a1bb68fbebd286c">isGradientEnabled</a> ()</td></tr>
+<tr class="separator:aa331a60558bb296f6a1bb68fbebd286c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500f223be72214bde161f8e0475a8c14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a500f223be72214bde161f8e0475a8c14">setGradientEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:a500f223be72214bde161f8e0475a8c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9573c3b02bfce7d3e60be7ca4f1e8149"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a9573c3b02bfce7d3e60be7ca4f1e8149">getGradientStartValue</a> ()</td></tr>
+<tr class="separator:a9573c3b02bfce7d3e60be7ca4f1e8149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ff60bc52a2873cca35196a4b77c763"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae1ff60bc52a2873cca35196a4b77c763">getGradientStartColor</a> ()</td></tr>
+<tr class="separator:ae1ff60bc52a2873cca35196a4b77c763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b924f882b8c84b6c0198f7e3a9aa44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a42b924f882b8c84b6c0198f7e3a9aa44">setGradientStart</a> (double start, int color)</td></tr>
+<tr class="separator:a42b924f882b8c84b6c0198f7e3a9aa44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ae7ca2d93f5cfdea5bf39507b91ca9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae3ae7ca2d93f5cfdea5bf39507b91ca9">getGradientStopValue</a> ()</td></tr>
+<tr class="separator:ae3ae7ca2d93f5cfdea5bf39507b91ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13d4322c98b9c474de5a3cb6ac2b8a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae13d4322c98b9c474de5a3cb6ac2b8a4">getGradientStopColor</a> ()</td></tr>
+<tr class="separator:ae13d4322c98b9c474de5a3cb6ac2b8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b61954ca1d4ce465ba13056bf57513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#af1b61954ca1d4ce465ba13056bf57513">setGradientStop</a> (double start, int color)</td></tr>
+<tr class="separator:af1b61954ca1d4ce465ba13056bf57513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7c173e96786eea5700734998375f6233"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a7c173e96786eea5700734998375f6233">mColor</a> = Color.BLUE</td></tr>
+<tr class="separator:a7c173e96786eea5700734998375f6233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51316050631fb756e455983b5ac11a54"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a51316050631fb756e455983b5ac11a54">mDisplayChartValues</a></td></tr>
+<tr class="separator:a51316050631fb756e455983b5ac11a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad27660a7a89d0b9c37f28bf22778992"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aad27660a7a89d0b9c37f28bf22778992">mChartValuesTextSize</a> = 10</td></tr>
+<tr class="separator:aad27660a7a89d0b9c37f28bf22778992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1759aa9a40cae3ac7648d499b25bf2e8"><td class="memItemLeft" align="right" valign="top">Align&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a1759aa9a40cae3ac7648d499b25bf2e8">mChartValuesTextAlign</a> = Align.CENTER</td></tr>
+<tr class="separator:a1759aa9a40cae3ac7648d499b25bf2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5501d74bc0d7979cdaf9d67d50646896"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a5501d74bc0d7979cdaf9d67d50646896">mChartValuesSpacing</a> = 5f</td></tr>
+<tr class="separator:a5501d74bc0d7979cdaf9d67d50646896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa874502f3539af448f4b7d9a4ad59f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#aa874502f3539af448f4b7d9a4ad59f3c">mStroke</a></td></tr>
+<tr class="separator:aa874502f3539af448f4b7d9a4ad59f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1dce25942e01cc6cbced4a38a29e28"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#add1dce25942e01cc6cbced4a38a29e28">mGradientEnabled</a> = false</td></tr>
+<tr class="separator:add1dce25942e01cc6cbced4a38a29e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae943b34745dd3b8b7db71947e17ebf1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#ae943b34745dd3b8b7db71947e17ebf1c">mGradientStartValue</a></td></tr>
+<tr class="separator:ae943b34745dd3b8b7db71947e17ebf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a873ba5a2f5086cc8acfc822e6e2d45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a7a873ba5a2f5086cc8acfc822e6e2d45">mGradientStartColor</a></td></tr>
+<tr class="separator:a7a873ba5a2f5086cc8acfc822e6e2d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ec4a5a075a971dd08c053b8cc967a2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a14ec4a5a075a971dd08c053b8cc967a2">mGradientStopValue</a></td></tr>
+<tr class="separator:a14ec4a5a075a971dd08c053b8cc967a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50813d860473251b690f2ced66c3b273"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html#a50813d860473251b690f2ced66c3b273">mGradientStopColor</a></td></tr>
+<tr class="separator:a50813d860473251b690f2ced66c3b273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A simple series renderer. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ab5a8c9a8282ceaecdd8d258a117925a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.SimpleSeriesRenderer.getChartValuesSpacing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chart values spacing from the data point.</p>
+<dl class="section return"><dt>返回</dt><dd>the chart values spacing </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4fe3dc3b6fdcc6820445a04c1be37dd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Align com.ab.view.chart.SimpleSeriesRenderer.getChartValuesTextAlign </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chart values text align.</p>
+<dl class="section return"><dt>返回</dt><dd>the chart values text align </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abdc108f2cc4b4e854d615673facc8df0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.SimpleSeriesRenderer.getChartValuesTextSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chart values text size.</p>
+<dl class="section return"><dt>返回</dt><dd>the chart values text size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a71a6f79ef0bbf31002e02276c81b515c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.SimpleSeriesRenderer.getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the series color.</p>
+<dl class="section return"><dt>返回</dt><dd>the series color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae1ff60bc52a2873cca35196a4b77c763"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.SimpleSeriesRenderer.getGradientStartColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the gradient start color.</p>
+<dl class="section return"><dt>返回</dt><dd>the gradient start color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9573c3b02bfce7d3e60be7ca4f1e8149"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.SimpleSeriesRenderer.getGradientStartValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the gradient start value.</p>
+<dl class="section return"><dt>返回</dt><dd>the gradient start value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae13d4322c98b9c474de5a3cb6ac2b8a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.SimpleSeriesRenderer.getGradientStopColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the gradient stop color.</p>
+<dl class="section return"><dt>返回</dt><dd>the gradient stop color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3ae7ca2d93f5cfdea5bf39507b91ca9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.SimpleSeriesRenderer.getGradientStopValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the gradient stop value.</p>
+<dl class="section return"><dt>返回</dt><dd>the gradient stop value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee41044c1598c89c206ceebf30cfb08d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a> com.ab.view.chart.SimpleSeriesRenderer.getStroke </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the stroke style.</p>
+<dl class="section return"><dt>返回</dt><dd>the stroke style </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2fa73f7699f9ca2e03d00299203e8baf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.SimpleSeriesRenderer.isDisplayChartValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the chart point values should be displayed as text.</p>
+<dl class="section return"><dt>返回</dt><dd>if the chart point values should be displayed as text </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa331a60558bb296f6a1bb68fbebd286c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.SimpleSeriesRenderer.isGradientEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the gradient is enabled value.</p>
+<dl class="section return"><dt>返回</dt><dd>the gradient enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68bfb35a6ef8fb756c678846e60d1f06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setChartValuesSpacing </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>spacing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the chart values spacing from the data point.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spacing</td><td>the chart values spacing (in pixels) from the chart data point </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a756ba9f68513b41b62410657b1d54761"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setChartValuesTextAlign </td>
+          <td>(</td>
+          <td class="paramtype">Align&#160;</td>
+          <td class="paramname"><em>align</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the chart values text align.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">align</td><td>the chart values text align </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abd7317f1b55934bbd5b24842723972f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setChartValuesTextSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>textSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the chart values text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>the chart values text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5392e23cb6ee7d3e5e814be5839a35b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the series color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the series color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af19ed96a086c9914f1380a46d224afe8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setDisplayChartValues </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>display</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the chart point values should be displayed as text.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">display</td><td>if the chart point values should be displayed as text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a500f223be72214bde161f8e0475a8c14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setGradientEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the gradient enabled value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>the gradient enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a42b924f882b8c84b6c0198f7e3a9aa44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setGradientStart </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the gradient start value and color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>the gradient start value </td></tr>
+    <tr><td class="paramname">color</td><td>the gradient start color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af1b61954ca1d4ce465ba13056bf57513"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setGradientStop </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the gradient stop value and color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>the gradient stop value </td></tr>
+    <tr><td class="paramname">color</td><td>the gradient stop color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6ad4f6deea987be84b6c770ec4454b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.SimpleSeriesRenderer.setStroke </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a>&#160;</td>
+          <td class="paramname"><em>stroke</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the stroke style.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stroke</td><td>the stroke style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a5501d74bc0d7979cdaf9d67d50646896"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.SimpleSeriesRenderer.mChartValuesSpacing = 5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart values spacing from the data point. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1759aa9a40cae3ac7648d499b25bf2e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Align com.ab.view.chart.SimpleSeriesRenderer.mChartValuesTextAlign = Align.CENTER</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart values text alignment. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad27660a7a89d0b9c37f28bf22778992"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.SimpleSeriesRenderer.mChartValuesTextSize = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart values text size. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c173e96786eea5700734998375f6233"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.SimpleSeriesRenderer.mColor = Color.BLUE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The series color. </p>
+
+</div>
+</div>
+<a class="anchor" id="a51316050631fb756e455983b5ac11a54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.SimpleSeriesRenderer.mDisplayChartValues</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the values should be displayed above the chart points. </p>
+
+</div>
+</div>
+<a class="anchor" id="add1dce25942e01cc6cbced4a38a29e28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.SimpleSeriesRenderer.mGradientEnabled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If gradient is enabled. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7a873ba5a2f5086cc8acfc822e6e2d45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.SimpleSeriesRenderer.mGradientStartColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The gradient start color. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae943b34745dd3b8b7db71947e17ebf1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.SimpleSeriesRenderer.mGradientStartValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The gradient start value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a50813d860473251b690f2ced66c3b273"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.SimpleSeriesRenderer.mGradientStopColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The gradient stop color. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14ec4a5a075a971dd08c053b8cc967a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.SimpleSeriesRenderer.mGradientStopValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The gradient stop value. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa874502f3539af448f4b7d9a4ad59f3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_basic_stroke.html">BasicStroke</a> com.ab.view.chart.SimpleSeriesRenderer.mStroke</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The stroke style. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_simple_series_renderer_8java.html">SimpleSeriesRenderer.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

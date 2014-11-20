@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,22 +19,21 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
 import android.view.GestureDetector.SimpleOnGestureListener;
+import android.view.MotionEvent;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbInnerViewPager.java 
  * 描述：这个ViewPager解决了外部是可滚动View（List或者scrollView）
  * 与内部可滑动View的事件冲突问题
- * @author zhaoqp
- * @date：2013-10-24 下午1:36:45
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-10-24 下午1:36:45
  */
 public class AbInnerViewPager extends ViewPager {
 
@@ -44,6 +43,7 @@ public class AbInnerViewPager extends ViewPager {
 	/** The parent list view. */
 	private ListView parentListView;
 	
+	/** The m gesture detector. */
 	private GestureDetector mGestureDetector;
 	
 	/**
@@ -116,8 +116,14 @@ public class AbInnerViewPager extends ViewPager {
 	}
 	
 	
+	/**
+	 * The Class YScrollDetector.
+	 */
 	class YScrollDetector extends SimpleOnGestureListener {
 		
+		/* (non-Javadoc)
+		 * @see android.view.GestureDetector.SimpleOnGestureListener#onScroll(android.view.MotionEvent, android.view.MotionEvent, float, float)
+		 */
 		@Override
 		public boolean onScroll(MotionEvent e1, MotionEvent e2,
 				float distanceX, float distanceY) {

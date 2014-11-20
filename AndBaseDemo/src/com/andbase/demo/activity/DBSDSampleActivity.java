@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
+import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.demo.adapter.UserDBListAdapter;
@@ -22,7 +23,7 @@ import com.andbase.global.MyApplication;
 /**
  * 名称：DBSDSampleActivity
  * 描述：数据库演示SD内数据库存储
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-13
  * @version
  */
@@ -69,12 +70,12 @@ public class DBSDSampleActivity extends AbActivity {
 	    userDao = new UserSDDao(DBSDSampleActivity.this);
 	    
 	    //(1)获取数据库 
-	  	userDao.startReadableDatabase(false);
+	  	userDao.startReadableDatabase();
 	  	//(2)执行查询
 	    userList = userDao.queryList(null, null, null, null, null, "create_time desc limit "+String.valueOf(pageSize)+ " offset " +0, null);
 	    totalCount = userDao.queryCount(null, null);
 	    //(3)关闭数据库
-	  	userDao.closeDatabase(false);
+	  	userDao.closeDatabase();
 	  	
         //获取ListView对象
         mListView = (ListView)this.findViewById(R.id.mListView);
@@ -120,7 +121,7 @@ public class DBSDSampleActivity extends AbActivity {
 					u.setName(name);
 					saveData(u);
 				}else{
-					showToast("请输入名称!");
+					AbToastUtil.showToast(DBSDSampleActivity.this,"请输入名称!");
 				}
 			}
         });
@@ -240,11 +241,11 @@ public class DBSDSampleActivity extends AbActivity {
 	 */
 	public void queryData(){
 		//(1)获取数据库
-		userDao.startReadableDatabase(false);
+		userDao.startReadableDatabase();
 		//(2)执行查询
 		List<LocalUser> userListNew = userDao.queryList(null, null, null, null, null, "create_time desc limit "+String.valueOf(pageSize)+ " offset " +String.valueOf((pageNum-1)*pageSize), null);
 		//(3)关闭数据库
-		userDao.closeDatabase(false);
+		userDao.closeDatabase();
 		
 		userList.clear();
 		if(userListNew!=null){
@@ -262,11 +263,11 @@ public class DBSDSampleActivity extends AbActivity {
 	 */
 	public void queryDataCount(){
 		//(1)获取数据库
-		userDao.startReadableDatabase(false);
+		userDao.startReadableDatabase();
 		//(2)执行查询
 		totalCount = userDao.queryCount(null, null);
 		//(3)关闭数据库
-		userDao.closeDatabase(false);
+		userDao.closeDatabase();
 		
 		total.setText("总条数:" +String.valueOf(totalCount));
 		current.setText("当前页:" + String.valueOf(pageNum));
@@ -287,7 +288,7 @@ public class DBSDSampleActivity extends AbActivity {
 		//(2)执行查询
 		long id = userDao.insert(u);
 		//(3)关闭数据库
-		userDao.closeDatabase(false);
+		userDao.closeDatabase();
 		
 		//showToast("插入数据成功,ID:"+id);
 		//插入数据成功
@@ -306,7 +307,7 @@ public class DBSDSampleActivity extends AbActivity {
 		//(1)获取数据库
 		userDao.startWritableDatabase(false);
 		userDao.update(u);
-		userDao.closeDatabase(false);
+		userDao.closeDatabase();
 	}
 	
 	/**
@@ -317,9 +318,9 @@ public class DBSDSampleActivity extends AbActivity {
 	 */
 	public LocalUser queryDataById(int id){
 		//(1)获取数据库
-		userDao.startReadableDatabase(false);
+		userDao.startReadableDatabase();
 		LocalUser u =  (LocalUser)userDao.queryOne(id);
-		userDao.closeDatabase(false);
+		userDao.closeDatabase();
 		return u;
 	}
 	
@@ -335,7 +336,7 @@ public class DBSDSampleActivity extends AbActivity {
 		//(2)执行查询
 		userDao.delete(id);
 		//(3)关闭数据库
-		userDao.closeDatabase(false);
+		userDao.closeDatabase();
 		
 		queryData();
 	}

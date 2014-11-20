@@ -1,0 +1,824 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>AndBase开发框架: com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1pullview.html">pullview</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html">AbMultiColumnHeaderViewListAdapter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pac-static-attribs">静态包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.png" usemap="#com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter_map" alt=""/>
+  <map id="com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter_map" name="com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9612f698b815acb4be77abdea41ce18f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a9612f698b815acb4be77abdea41ce18f">AbMultiColumnHeaderViewListAdapter</a> (ArrayList&lt; AbMultiColumnAbsListView.FixedViewInfo &gt; headerViewInfos, ArrayList&lt; AbMultiColumnAbsListView.FixedViewInfo &gt; footerViewInfos, ListAdapter adapter)</td></tr>
+<tr class="separator:a9612f698b815acb4be77abdea41ce18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e291dff884c93176fac85532356bce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a80e291dff884c93176fac85532356bce">getHeadersCount</a> ()</td></tr>
+<tr class="separator:a80e291dff884c93176fac85532356bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9544da8ec54c55351aba9e6484793e45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a9544da8ec54c55351aba9e6484793e45">getFootersCount</a> ()</td></tr>
+<tr class="separator:a9544da8ec54c55351aba9e6484793e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11206c396d3ab9418eb586f73b17a48d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a11206c396d3ab9418eb586f73b17a48d">isEmpty</a> ()</td></tr>
+<tr class="separator:a11206c396d3ab9418eb586f73b17a48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ea92ca71dc7a74de94c7e2afeeaa26"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a50ea92ca71dc7a74de94c7e2afeeaa26">removeHeader</a> (View v)</td></tr>
+<tr class="separator:a50ea92ca71dc7a74de94c7e2afeeaa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabaf595776fa913d5acf5ff5e85cdc1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#acabaf595776fa913d5acf5ff5e85cdc1">removeFooter</a> (View v)</td></tr>
+<tr class="separator:acabaf595776fa913d5acf5ff5e85cdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed89d4c67a2eca2275211db26810a39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a7ed89d4c67a2eca2275211db26810a39">getCount</a> ()</td></tr>
+<tr class="separator:a7ed89d4c67a2eca2275211db26810a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e940b76f1a28b985de20864ce89869"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#ac9e940b76f1a28b985de20864ce89869">areAllItemsEnabled</a> ()</td></tr>
+<tr class="separator:ac9e940b76f1a28b985de20864ce89869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb72d03e1cd6a32b322a3d596b93d20"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a3cb72d03e1cd6a32b322a3d596b93d20">isEnabled</a> (int position)</td></tr>
+<tr class="separator:a3cb72d03e1cd6a32b322a3d596b93d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a26d4f12a170ac6699e76bec035a280"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a7a26d4f12a170ac6699e76bec035a280">getItem</a> (int position)</td></tr>
+<tr class="separator:a7a26d4f12a170ac6699e76bec035a280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c18fe2dc4ae856fef5a3e3568b314e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a26c18fe2dc4ae856fef5a3e3568b314e">getItemId</a> (int position)</td></tr>
+<tr class="separator:a26c18fe2dc4ae856fef5a3e3568b314e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c595b0f5920ad843d57e1bc45be986b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a0c595b0f5920ad843d57e1bc45be986b">hasStableIds</a> ()</td></tr>
+<tr class="separator:a0c595b0f5920ad843d57e1bc45be986b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2e9e4d54a582d582e0814d288fa2ae"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a3a2e9e4d54a582d582e0814d288fa2ae">getView</a> (int position, View convertView, ViewGroup parent)</td></tr>
+<tr class="separator:a3a2e9e4d54a582d582e0814d288fa2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e2bd9750b691f6452ff6e01e34302c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a57e2bd9750b691f6452ff6e01e34302c">getItemViewType</a> (int position)</td></tr>
+<tr class="separator:a57e2bd9750b691f6452ff6e01e34302c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36426419286c9c4ae092fbbc13c696b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a36426419286c9c4ae092fbbc13c696b3">getViewTypeCount</a> ()</td></tr>
+<tr class="separator:a36426419286c9c4ae092fbbc13c696b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7840fa50b8c85f1594203ed4102ccdc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a7840fa50b8c85f1594203ed4102ccdc4">registerDataSetObserver</a> (DataSetObserver observer)</td></tr>
+<tr class="separator:a7840fa50b8c85f1594203ed4102ccdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32f4fa7728a5b0419f241477c645479"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#ab32f4fa7728a5b0419f241477c645479">unregisterDataSetObserver</a> (DataSetObserver observer)</td></tr>
+<tr class="separator:ab32f4fa7728a5b0419f241477c645479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ec83bec11ae737896a9e6939a3c00e"><td class="memItemLeft" align="right" valign="top">Filter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a26ec83bec11ae737896a9e6939a3c00e">getFilter</a> ()</td></tr>
+<tr class="separator:a26ec83bec11ae737896a9e6939a3c00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2304805ec2575be7befec00a497b9fca"><td class="memItemLeft" align="right" valign="top">ListAdapter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a2304805ec2575be7befec00a497b9fca">getWrappedAdapter</a> ()</td></tr>
+<tr class="separator:a2304805ec2575be7befec00a497b9fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:ad35c9831b589f719a36e938c801dee31"><td class="memItemLeft" align="right" valign="top">ArrayList<br class="typebreak"/>
+&lt; AbMultiColumnAbsListView.FixedViewInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#ad35c9831b589f719a36e938c801dee31">mHeaderViewInfos</a></td></tr>
+<tr class="separator:ad35c9831b589f719a36e938c801dee31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec1d598b1cdfb525a765a1f5b6b6377"><td class="memItemLeft" align="right" valign="top">ArrayList<br class="typebreak"/>
+&lt; AbMultiColumnAbsListView.FixedViewInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#afec1d598b1cdfb525a765a1f5b6b6377">mFooterViewInfos</a></td></tr>
+<tr class="separator:afec1d598b1cdfb525a765a1f5b6b6377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dd042590755e3edc84c0e83326d692"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a63dd042590755e3edc84c0e83326d692">mAreAllFixedViewsSelectable</a></td></tr>
+<tr class="separator:a63dd042590755e3edc84c0e83326d692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-attribs"></a>
+静态包属性</h2></td></tr>
+<tr class="memitem:af62fbd176eb3ef66c5d2de29931cc306"><td class="memItemLeft" align="right" valign="top">static final ArrayList<br class="typebreak"/>
+&lt; AbMultiColumnAbsListView.FixedViewInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#af62fbd176eb3ef66c5d2de29931cc306">EMPTY_INFO_LIST</a></td></tr>
+<tr class="separator:af62fbd176eb3ef66c5d2de29931cc306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a25a7d2b30dae8db44f0e567d95835e28"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a25a7d2b30dae8db44f0e567d95835e28">areAllListInfosSelectable</a> (ArrayList&lt; AbMultiColumnAbsListView.FixedViewInfo &gt; infos)</td></tr>
+<tr class="separator:a25a7d2b30dae8db44f0e567d95835e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ab9df031aa2ce1de9e58c574455f8627e"><td class="memItemLeft" align="right" valign="top">final ListAdapter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#ab9df031aa2ce1de9e58c574455f8627e">mAdapter</a></td></tr>
+<tr class="separator:ab9df031aa2ce1de9e58c574455f8627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538c689c11e80c21bbe5ac3ec6e93a29"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_header_view_list_adapter.html#a538c689c11e80c21bbe5ac3ec6e93a29">mIsFilterable</a></td></tr>
+<tr class="separator:a538c689c11e80c21bbe5ac3ec6e93a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>ListAdapter used when a ListView has header views. This ListAdapter wraps another one and also keeps track of the header views and their associated data objects. </p>
+<p>This is intended as a base class; you will probably not need to use this class directly in your own code. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a9612f698b815acb4be77abdea41ce18f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.AbMultiColumnHeaderViewListAdapter </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; AbMultiColumnAbsListView.FixedViewInfo &gt;&#160;</td>
+          <td class="paramname"><em>headerViewInfos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArrayList&lt; AbMultiColumnAbsListView.FixedViewInfo &gt;&#160;</td>
+          <td class="paramname"><em>footerViewInfos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListAdapter&#160;</td>
+          <td class="paramname"><em>adapter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac9e940b76f1a28b985de20864ce89869"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.areAllItemsEnabled </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a25a7d2b30dae8db44f0e567d95835e28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.areAllListInfosSelectable </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; AbMultiColumnAbsListView.FixedViewInfo &gt;&#160;</td>
+          <td class="paramname"><em>infos</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ed89d4c67a2eca2275211db26810a39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getCount </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26ec83bec11ae737896a9e6939a3c00e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Filter com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getFilter </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9544da8ec54c55351aba9e6484793e45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getFootersCount </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a80e291dff884c93176fac85532356bce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getHeadersCount </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a26d4f12a170ac6699e76bec035a280"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26c18fe2dc4ae856fef5a3e3568b314e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getItemId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a57e2bd9750b691f6452ff6e01e34302c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getItemViewType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a2e9e4d54a582d582e0814d288fa2ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getView </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>convertView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ViewGroup&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a36426419286c9c4ae092fbbc13c696b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getViewTypeCount </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2304805ec2575be7befec00a497b9fca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListAdapter com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.getWrappedAdapter </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c595b0f5920ad843d57e1bc45be986b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.hasStableIds </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a11206c396d3ab9418eb586f73b17a48d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.isEmpty </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3cb72d03e1cd6a32b322a3d596b93d20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.isEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7840fa50b8c85f1594203ed4102ccdc4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.registerDataSetObserver </td>
+          <td>(</td>
+          <td class="paramtype">DataSetObserver&#160;</td>
+          <td class="paramname"><em>observer</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acabaf595776fa913d5acf5ff5e85cdc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.removeFooter </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a50ea92ca71dc7a74de94c7e2afeeaa26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.removeHeader </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab32f4fa7728a5b0419f241477c645479"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.unregisterDataSetObserver </td>
+          <td>(</td>
+          <td class="paramtype">DataSetObserver&#160;</td>
+          <td class="paramname"><em>observer</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="af62fbd176eb3ef66c5d2de29931cc306"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ArrayList&lt;AbMultiColumnAbsListView.FixedViewInfo&gt; com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.EMPTY_INFO_LIST</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        <span class="keyword">new</span> ArrayList&lt;AbMultiColumnAbsListView.FixedViewInfo&gt;()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab9df031aa2ce1de9e58c574455f8627e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ListAdapter com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.mAdapter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63dd042590755e3edc84c0e83326d692"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.mAreAllFixedViewsSelectable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afec1d598b1cdfb525a765a1f5b6b6377"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;AbMultiColumnAbsListView.FixedViewInfo&gt; com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.mFooterViewInfos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad35c9831b589f719a36e938c801dee31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;AbMultiColumnAbsListView.FixedViewInfo&gt; com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.mHeaderViewInfos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a538c689c11e80c21bbe5ac3ec6e93a29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.ab.view.pullview.AbMultiColumnHeaderViewListAdapter.mIsFilterable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/pullview/<a class="el" href="_ab_multi_column_header_view_list_adapter_8java.html">AbMultiColumnHeaderViewListAdapter.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 三月 19日 星期三 16:24:31 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

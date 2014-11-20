@@ -9,8 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.view.listener.AbOnChangeListener;
-import com.ab.view.listener.AbOnItemClickListener;
+import com.ab.util.AbToastUtil;
 import com.ab.view.sliding.AbSlidingPlayView;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
@@ -51,7 +50,7 @@ public class SlidingPlayViewActivity extends AbActivity {
 		mPlayText2.setText("33333333333333333");
 		mPlayImage2.setBackgroundResource(R.drawable.pic3);
 
-		mSlidingPlayView.setPageLineHorizontalGravity(Gravity.RIGHT);
+		mSlidingPlayView.setNavHorizontalGravity(Gravity.RIGHT);
 		mSlidingPlayView.addView(mPlayView);
 		mSlidingPlayView.addView(mPlayView1);
         
@@ -116,19 +115,19 @@ public class SlidingPlayViewActivity extends AbActivity {
         	
         });
         
-        mSlidingPlayView.setOnItemClickListener(new AbOnItemClickListener() {
+        mSlidingPlayView.setOnItemClickListener(new AbSlidingPlayView.AbOnItemClickListener() {
 			
 			@Override
 			public void onClick(int position) {
-				showToast("点击"+position);
+				AbToastUtil.showToast(SlidingPlayViewActivity.this,"点击"+position);
 			}
 		});
         
-        mSlidingPlayView.setOnPageChangeListener(new AbOnChangeListener() {
+        mSlidingPlayView.setOnPageChangeListener(new AbSlidingPlayView.AbOnChangeListener() {
 			
 			@Override
 			public void onChange(int position) {
-				showToast("改变"+position);
+				AbToastUtil.showToast(SlidingPlayViewActivity.this,"改变"+position);
 			}
 		});
         

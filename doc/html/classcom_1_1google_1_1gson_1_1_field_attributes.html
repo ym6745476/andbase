@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.FieldAttributes类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html">FieldAttributes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1_field_attributes-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.FieldAttributes类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3434fe14004c190ae106636e65fa88d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#a3434fe14004c190ae106636e65fa88d0">FieldAttributes</a> (Field f)</td></tr>
+<tr class="separator:a3434fe14004c190ae106636e65fa88d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a1af607f8e4cead8315afcf4f241e3e"><td class="memItemLeft" align="right" valign="top">Class&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#a8a1af607f8e4cead8315afcf4f241e3e">getDeclaringClass</a> ()</td></tr>
+<tr class="separator:a8a1af607f8e4cead8315afcf4f241e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9565b38f8ddb1a6e53c862ea3850029"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#ae9565b38f8ddb1a6e53c862ea3850029">getName</a> ()</td></tr>
+<tr class="separator:ae9565b38f8ddb1a6e53c862ea3850029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbce245cc5534bb3722676f80b76f0e0"><td class="memItemLeft" align="right" valign="top">Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#adbce245cc5534bb3722676f80b76f0e0">getDeclaredType</a> ()</td></tr>
+<tr class="separator:adbce245cc5534bb3722676f80b76f0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55395989998e610aa2d07519683182c"><td class="memItemLeft" align="right" valign="top">Class&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#ab55395989998e610aa2d07519683182c">getDeclaredClass</a> ()</td></tr>
+<tr class="separator:ab55395989998e610aa2d07519683182c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06ab557323811b314629cbfa5f7dd57"><td class="memItemLeft" align="right" valign="top">Collection&lt; Annotation &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#ac06ab557323811b314629cbfa5f7dd57">getAnnotations</a> ()</td></tr>
+<tr class="separator:ac06ab557323811b314629cbfa5f7dd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4add951dd6b584f6376925c1554604"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#afa4add951dd6b584f6376925c1554604">hasModifier</a> (int modifier)</td></tr>
+<tr class="separator:afa4add951dd6b584f6376925c1554604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a9e40c45834ce24a6f1a6c99225030271"><td class="memItemLeft" align="right" valign="top">public&lt; T extends Annotation &gt; T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#a9e40c45834ce24a6f1a6c99225030271">getAnnotation</a> (Class&lt; T &gt; annotation)</td></tr>
+<tr class="separator:a9e40c45834ce24a6f1a6c99225030271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2035c19b180ec8b4ca4dd4c5dfb4e7"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#a2a2035c19b180ec8b4ca4dd4c5dfb4e7">get</a> (Object instance)  throws IllegalAccessException </td></tr>
+<tr class="separator:a2a2035c19b180ec8b4ca4dd4c5dfb4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f14d3070dadb9fbea57af150366c97f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#a5f14d3070dadb9fbea57af150366c97f">isSynthetic</a> ()</td></tr>
+<tr class="separator:a5f14d3070dadb9fbea57af150366c97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:acba4491ccf52cefdfee742bc407a68de"><td class="memItemLeft" align="right" valign="top">final Field&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_field_attributes.html#acba4491ccf52cefdfee742bc407a68de">field</a></td></tr>
+<tr class="separator:acba4491ccf52cefdfee742bc407a68de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A data object that stores attributes of a field.</p>
+<p>This class is immutable; therefore, it can be safely shared across threads.</p>
+<dl class="section author"><dt>作者</dt><dd>Inderjeet Singh </dd>
+<dd>
+Joel Leitch</dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a3434fe14004c190ae106636e65fa88d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.FieldAttributes.FieldAttributes </td>
+          <td>(</td>
+          <td class="paramtype">Field&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs a Field Attributes object from the</p><div class="fragment"><div class="line">f </div>
+</div><!-- fragment --><p> .</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>the field to pull attributes from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a2a2035c19b180ec8b4ca4dd4c5dfb4e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.google.gson.FieldAttributes.get </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td> throws IllegalAccessException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is exposed internally only for the removing synthetic fields from the JSON output.</p>
+<dl class="section return"><dt>返回</dt><dd>true if the field is synthetic; otherwise false </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalAccessException</td><td></td></tr>
+    <tr><td class="paramname">IllegalArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e40c45834ce24a6f1a6c99225030271"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public&lt;T extends Annotation&gt; T com.google.gson.FieldAttributes.getAnnotation </td>
+          <td>(</td>
+          <td class="paramtype">Class&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>annotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the</p><div class="fragment"><div class="line">T </div>
+</div><!-- fragment --><p> annotation object from this field if it exist; otherwise returns </p><div class="fragment"><div class="line">null </div>
+</div><!-- fragment --><p> .</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">annotation</td><td>the class of the annotation that will be retrieved </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the annotation instance if it is bound to the field; otherwise<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac06ab557323811b314629cbfa5f7dd57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Collection&lt;Annotation&gt; com.google.gson.FieldAttributes.getAnnotations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the annotations that are present on this field.</p>
+<dl class="section return"><dt>返回</dt><dd>an array of all the annotations set on the field </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab55395989998e610aa2d07519683182c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Class&lt;?&gt; com.google.gson.FieldAttributes.getDeclaredClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the</p><div class="fragment"><div class="line">Class </div>
+</div><!-- fragment --><p> object that was declared for this field.</p>
+<p>For example, assume the following class definition: </p><pre class="code">
+public class Foo {
+  private String bar;
+  private List&lt;String&gt; red;
+}
+</pre><p>This method would return</p><div class="fragment"><div class="line">String.class </div>
+</div><!-- fragment --><p> for the</p><div class="fragment"><div class="line">bar </div>
+</div><!-- fragment --><p> field and </p><div class="fragment"><div class="line">List.class </div>
+</div><!-- fragment --><p> for the</p><div class="fragment"><div class="line">red </div>
+</div><!-- fragment --><p> field.</p>
+<dl class="section return"><dt>返回</dt><dd>the specific class object that was declared for the field </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adbce245cc5534bb3722676f80b76f0e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type com.google.gson.FieldAttributes.getDeclaredType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>For example, assume the following class definition: </p><pre class="code">
+public class Foo {
+  private String bar;
+  private List&lt;String&gt; red;
+}</pre><pre class="code">Type listParmeterizedType = new TypeToken&lt;List&lt;String&gt;&gt;() {}.getType();
+</pre><p>This method would return</p><div class="fragment"><div class="line">String.class </div>
+</div><!-- fragment --><p> for the</p><div class="fragment"><div class="line">bar </div>
+</div><!-- fragment --><p> field and </p><div class="fragment"><div class="line">listParameterizedType </div>
+</div><!-- fragment --><p> for the</p><div class="fragment"><div class="line">red </div>
+</div><!-- fragment --><p> field.</p>
+<dl class="section return"><dt>返回</dt><dd>the specific type declared for this field </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a1af607f8e4cead8315afcf4f241e3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Class&lt;?&gt; com.google.gson.FieldAttributes.getDeclaringClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>the declaring class that contains this field </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae9565b38f8ddb1a6e53c862ea3850029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.FieldAttributes.getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>the name of the field </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa4add951dd6b584f6376925c1554604"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.FieldAttributes.hasModifier </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns</p><div class="fragment"><div class="line"><span class="keyword">true</span> </div>
+</div><!-- fragment --><p> if the field is defined with the</p><div class="fragment"><div class="line">modifier </div>
+</div><!-- fragment --><p> .</p>
+<p>This method is meant to be called as: </p><pre class="code">
+boolean hasPublicModifier = fieldAttribute.hasModifier(java.lang.reflect.Modifier.PUBLIC);
+</pre><dl class="section see"><dt>参见</dt><dd>java.lang.reflect.Modifier </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5f14d3070dadb9fbea57af150366c97f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.FieldAttributes.isSynthetic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is exposed internally only for the removing synthetic fields from the JSON output.</p>
+<dl class="section return"><dt>返回</dt><dd>true if the field is synthetic; otherwise false </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acba4491ccf52cefdfee742bc407a68de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Field com.google.gson.FieldAttributes.field</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/<a class="el" href="_field_attributes_8java.html">FieldAttributes.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

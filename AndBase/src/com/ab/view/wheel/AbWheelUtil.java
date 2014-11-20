@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,14 +26,23 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
 import com.ab.util.AbDateUtil;
+import com.ab.util.AbDialogUtil;
 import com.ab.util.AbStrUtil;
+import com.ab.view.wheel.AbWheelView.AbOnWheelChangedListener;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class AbViewUtil.
+ * © 2012 amsoft.cn
+ * 名称：AbWheelUtil.java 
+ * 描述：轮子工具类
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-05-17 下午6:46:29
  */
+
 public class AbWheelUtil {
 	
 	/**
@@ -82,8 +91,8 @@ public class AbWheelUtil {
 		mWheelViewY.setCyclic(true);// 可循环滚动
 		mWheelViewY.setLabel("年");  // 添加文字
 		mWheelViewY.setCurrentItem(defaultYear - startYear);// 初始化时显示的数据
-		mWheelViewY.setValueTextSize(32);
-		mWheelViewY.setLabelTextSize(30);
+		mWheelViewY.setValueTextSize(35);
+		mWheelViewY.setLabelTextSize(35);
 		mWheelViewY.setLabelTextColor(0x80000000);
 		//mWheelViewY.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -92,8 +101,8 @@ public class AbWheelUtil {
 		mWheelViewM.setCyclic(true);
 		mWheelViewM.setLabel("月");
 		mWheelViewM.setCurrentItem(defaultMonth-1);
-		mWheelViewM.setValueTextSize(32);
-		mWheelViewM.setLabelTextSize(30);
+		mWheelViewM.setValueTextSize(35);
+		mWheelViewM.setLabelTextSize(35);
 		mWheelViewM.setLabelTextColor(0x80000000);
 		//mWheelViewM.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -114,8 +123,8 @@ public class AbWheelUtil {
 		mWheelViewD.setCyclic(true);
 		mWheelViewD.setLabel("日");
 		mWheelViewD.setCurrentItem(defaultDay - 1);
-		mWheelViewD.setValueTextSize(32);
-		mWheelViewD.setLabelTextSize(30);
+		mWheelViewD.setValueTextSize(35);
+		mWheelViewD.setLabelTextSize(35);
 		mWheelViewD.setLabelTextColor(0x80000000);
 		//mWheelViewD.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -167,7 +176,7 @@ public class AbWheelUtil {
 
 			@Override
 			public void onClick(View v) {
-				activity.removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(v.getContext());
 				int indexYear = mWheelViewY.getCurrentItem();
 				String year = mWheelViewY.getAdapter().getItem(indexYear);
 				
@@ -186,7 +195,7 @@ public class AbWheelUtil {
 
 			@Override
 			public void onClick(View v) {
-				activity.removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(v.getContext());
 			}
 			
 		});
@@ -196,6 +205,7 @@ public class AbWheelUtil {
 	/**
 	 * 描述：默认的月日时分的时间选择器.
 	 *
+	 * @version v1.0
 	 * @param activity     AbActivity对象
 	 * @param mText the m text
 	 * @param mWheelViewMD  选择月日的轮子
@@ -210,7 +220,6 @@ public class AbWheelUtil {
 	 * @param defaultMinute the default minute
 	 * @param initStart the init start
 	 * @date：2013-7-16 上午10:19:01
-	 * @version v1.0
 	 */
 	public static void initWheelTimePicker(final AbActivity activity,final TextView mText,final AbWheelView mWheelViewMD,final AbWheelView mWheelViewHH,final AbWheelView mWheelViewMM,
 			 Button okBtn,Button cancelBtn,
@@ -277,8 +286,8 @@ public class AbWheelUtil {
 		mWheelViewMD.setCyclic(true);
 		mWheelViewMD.setLabel(""); 
 		mWheelViewMD.setCurrentItem(currentDayIndex);
-		mWheelViewMD.setValueTextSize(32);
-		mWheelViewMD.setLabelTextSize(30);
+		mWheelViewMD.setValueTextSize(35);
+		mWheelViewMD.setLabelTextSize(35);
 		mWheelViewMD.setLabelTextColor(0x80000000);
 		//mWheelViewMD.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -287,8 +296,8 @@ public class AbWheelUtil {
 		mWheelViewHH.setCyclic(true);
 		mWheelViewHH.setLabel("点");
 		mWheelViewHH.setCurrentItem(defaultHour);
-		mWheelViewHH.setValueTextSize(32);
-		mWheelViewHH.setLabelTextSize(30);
+		mWheelViewHH.setValueTextSize(35);
+		mWheelViewHH.setLabelTextSize(35);
 		mWheelViewHH.setLabelTextColor(0x80000000);
 		//mWheelViewH.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -297,8 +306,8 @@ public class AbWheelUtil {
 		mWheelViewMM.setCyclic(true);
 		mWheelViewMM.setLabel("分");
 		mWheelViewMM.setCurrentItem(defaultMinute);
-		mWheelViewMM.setValueTextSize(32);
-		mWheelViewMM.setLabelTextSize(30);
+		mWheelViewMM.setValueTextSize(35);
+		mWheelViewMM.setLabelTextSize(35);
 		mWheelViewMM.setLabelTextColor(0x80000000);
 		//mWheelViewM.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -306,7 +315,7 @@ public class AbWheelUtil {
 
 			@Override
 			public void onClick(View v) {
-				activity.removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(v.getContext());
 				int index1 = mWheelViewMD.getCurrentItem();
 				int index2 = mWheelViewHH.getCurrentItem();
 				int index3 = mWheelViewMM.getCurrentItem();
@@ -324,7 +333,7 @@ public class AbWheelUtil {
 
 			@Override
 			public void onClick(View v) {
-				activity.removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(v.getContext());
 			}
 			
 		});
@@ -365,8 +374,8 @@ public class AbWheelUtil {
 		mWheelViewHH.setCyclic(true);
 		mWheelViewHH.setLabel("点");
 		mWheelViewHH.setCurrentItem(defaultHour);
-		mWheelViewHH.setValueTextSize(32);
-		mWheelViewHH.setLabelTextSize(30);
+		mWheelViewHH.setValueTextSize(35);
+		mWheelViewHH.setLabelTextSize(35);
 		mWheelViewHH.setLabelTextColor(0x80000000);
 		//mWheelViewH.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -375,8 +384,8 @@ public class AbWheelUtil {
 		mWheelViewMM.setCyclic(true);
 		mWheelViewMM.setLabel("分");
 		mWheelViewMM.setCurrentItem(defaultMinute);
-		mWheelViewMM.setValueTextSize(32);
-		mWheelViewMM.setLabelTextSize(30);
+		mWheelViewMM.setValueTextSize(35);
+		mWheelViewMM.setLabelTextSize(35);
 		mWheelViewMM.setLabelTextColor(0x80000000);
 		//mWheelViewM.setCenterSelectDrawable(this.getResources().getDrawable(R.drawable.wheel_select));
 		
@@ -384,7 +393,7 @@ public class AbWheelUtil {
 
 			@Override
 			public void onClick(View v) {
-				activity.removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(v.getContext());
 				int index2 = mWheelViewHH.getCurrentItem();
 				int index3 = mWheelViewMM.getCurrentItem();
 				String val = AbStrUtil.dateTimeFormat(index2+":"+index3) ;
@@ -397,7 +406,7 @@ public class AbWheelUtil {
 
 			@Override
 			public void onClick(View v) {
-				activity.removeDialog(AbConstant.DIALOGBOTTOM);
+				AbDialogUtil.removeDialog(v.getContext());
 			}
 			
 		});

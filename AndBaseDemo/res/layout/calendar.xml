@@ -32,7 +32,7 @@
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip"
                 android:text="2012-07"
-                android:textColor="@color/gray_black"
+                android:textColor="@color/gray_dark"
                 android:textSize="20dip" />
 
             <Button

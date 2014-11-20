@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,25 +22,20 @@ import java.io.RandomAccessFile;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import android.util.Log;
-
-import com.ab.global.AbAppData;
+import com.ab.util.AbLogUtil;
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
+ * 名称：AbDownloadThread.java 
  * 描述：下载线程类.
  *
- * @author zhaoqp
- * @date：2013-3-14 下午5:01:31
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-10-16 下午1:33:39
  */
 public class AbDownloadThread extends Thread {
-	
-	/** The Constant TAG. */
-	private static final String TAG = "DownloadThread";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
 	
 	/** The save file. */
 	private File saveFile;
@@ -104,12 +99,12 @@ public class AbDownloadThread extends Thread {
 				threadfile.seek(mDownFile.getDownLength());
 				
 				while (flag && (offset = inStream.read(buffer, 0, 1024)) != -1) {
-					if(D)Log.d(TAG, "offset:"+offset);
+					AbLogUtil.d(AbDownloadThread.class, "offset:"+offset);
 					if(offset!=0){
 						threadfile.write(buffer, 0, offset);
 						mDownFile.setDownLength(mDownFile.getDownLength()+offset);
 						offset = 0;
-						if(D)Log.d(TAG, "DownLength:"+mDownFile.getDownLength()+"/"+mDownFile.getTotalLength());
+						AbLogUtil.d(AbDownloadThread.class, "DownLength:"+mDownFile.getDownLength()+"/"+mDownFile.getTotalLength());
 						downloader.update(mDownFile);
 						
 						if(mDownFile.getDownLength() == mDownFile.getTotalLength()){

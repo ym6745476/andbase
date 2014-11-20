@@ -3,16 +3,19 @@
     <string name="app_name">Android开发宝</string>
     <string name="demo_name">程序案例</string>
     <string name="ab_name">AbActivity用法</string>
+    <string name="dialog_name">Dialog示例</string>
     <string name="down_image_name">下载图片与裁剪缩放</string>
     <string name="pull_list_name">下拉刷新分页</string>
-    <string name="multi_column_name">瀑布流</string>
+    <string name="multi_column_name">多列View瀑布流</string>
     <string name="table_list_name">表格List</string>
     <string name="slider_button_name">滑动按钮</string>
     <string name="view_play_name">图片联播</string>
     <string name="down_list">下载器</string>
     <string name="welcome_name">欢迎页面</string>
     <string name="level_name">等级条</string>
-    <string name="sliding_tab_name">Sliding Tab</string>
+    <string name="tab_name">Tab切换</string>
+    <string name="tab_top_name">顶部切换Tab</string>
+    <string name="tab_bottom_name">底部切换Tab</string>
     <string name="wheel_name">轮子选择</string>
     <string name="photo_add_name">拍照相册选择</string>
     <string name="chart_name">图表</string>
@@ -38,10 +41,15 @@
     <string name="progressbar_circle_name">环形进度条</string>
     <string name="progressbar_horizontal_name">水平进度条</string>
     <string name="ioc_name">ioc示例</string>
+    <string name="anim_name">动画效果汇总</string>
+    <string name="ui_name">常用控件汇总</string>
+    <string name="city_list_name">城市选择</string>
     <string name="rotate3d_name">3D翻转</string>
     <string name="rotate3d_name1">硬币翻转</string>
     <string name="rotate3d_name2">3D旋转View</string>
-    <string name="http_name">Http</string>
+    <string name="http_name">HTTP工具类</string>
+    <string name="http_mini_name">HTTP迷你工具类</string>
+    <string name="soap_name">SOAP工具类</string>
     <string name="thread_name">线程管理</string>
     <string name="nest_name">嵌套问题</string>
     <string name="list_pager_name">ListView与ViewPager组合</string>
@@ -54,6 +62,8 @@
     <string name="register_name">新用户注册</string>
     <string name="blog_name">博客空间</string>
     <string name="friend_name">朋友圈</string>
+    <string name="contact_name">我的联系人</string>
+    <string name="message_name">系统通知</string>
     <string name="total">总条数:0</string>
     <string name="current">当前页:1</string>
     <string name="okBtn">确定</string>
@@ -61,11 +71,12 @@
     <string name="see">查看</string>
     <string name="about">关于</string>
     <string name="version_lable">程序版本：</string>
-    <string name="copyright">版权所有  CopyRight 2012 418log.org</string>
-    <string name="about_desc">      \t\tAndroid开发宝
+    <string name="copyright">© 2012 amsoft.cn</string>
+    <string name="about_desc">
+      \t\tAndroid开发宝
       \n\t\t又“andBase开发框架”
       andbase是为Android开发者量身打造的一款开源类库产品，
-               您可以在418log.org中获取到最新的代码，示例以及开发文档。
+                 您可以在amsoft.cn中获取到最新的代码，示例以及开发文档。
       \n\t\tandbase中包含了大量的开发常用手段，如网络下载，Http请求,线程与线程池的管理，
 	      图片缓存管理，图片文件下载上传，数据库ORM框架，并封装了大量常用工具类入如字符串，日期，文件处理，图片处理等，
 	      能够使您的应用在团队开发中减少冗余代码，很大的提高了代码的维护性与开发高效性，
@@ -74,14 +85,16 @@
 	      不会使你的程序包变大，却能大幅度缩小您的程序。
 	      而这一切都是免费的。 
 	   \n
-       \n\t\t官方主页：www.418log.org
-       \n\t\t交流QQ群：38535812</string>
+       \n\t\t官方主页：www.amsoft.cn
+       \n\t\t交流QQ群：38535812    </string>
+    
     <string name="date_picker">年月日：</string>
     <string name="time_picker1">月日时分：</string>
     <string name="time_picker2">时分：</string>
     <string name="data1_desc">选择：</string>
     <string name="data1_unit">单位</string>
     <string name="login">登录</string>
+    <string name="im_login">登录聊天系统</string>
     <string name="register">注册</string>
     <string name="userName">用户名</string>
     <string name="userPwd">密码</string>
@@ -129,7 +142,7 @@
     <string name="error_age_length2">年龄不能大于100个字符</string>
     <string name="error_age_expr">年龄必须为数字</string>
     <string name="error_params_expr">包含不支持的文字格式!</string>
-    <string name="agreement_desc">                    提醒：本程序是一款Android学习产品，使用本程序即同意如下条款。
+    <string name="agreement_desc">\t提醒：本程序是一款Android学习产品，使用本程序即同意如下条款。
         \n1、服务修订
 		\n本程序所有者保留随时修改或中断服务而不需通知用户的权利。 
 		\n2、用户隐私制度
@@ -141,9 +154,20 @@
 		\n5、用户管理
 		\n用户单独承担发布内容的责任。用户对服务的使用是根据所有适用于服务的地方法律、国家法律和国际法律标准的。
 		\n6、通告
-		\n所有发给用户的通告都可通过电子邮件或常规的信件传送。  </string>
+		\n所有发给用户的通告都可通过电子邮件或常规的信件传送。      </string>
     <string name="read_desc">请仔细阅读如下条款</string>
     <string name="register_protocol">同意注册协议</string>
     <string name="clear_cache">清空缓存</string>
+    
+    <!-- 缺省的服务器配置 --> 
+    <integer name="xmpp_port">5222</integer> 
+    <string name="xmpp_host">192.168.1.127</string> 
+    <string name="xmpp_service_name">amsoft</string>
+    <bool name="is_remember">true</bool>
+    <bool name="is_autologin">false</bool>
+    <bool name="is_novisible">false</bool> 
+    
+    <string name="accept_btn">同意</string>
+    <string name="reject_btn">拒绝</string>
 
 </resources>

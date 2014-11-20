@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -113,15 +113,15 @@ public abstract class CropViewBase extends ImageView {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param changed the changed
 	 * @param left the left
 	 * @param top the top
 	 * @param right the right
 	 * @param bottom the bottom
 	 * @see android.view.View#onLayout(boolean, int, int, int, int)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:50
-	 * @version v1.0
 	 */
 	@Override
 	protected void onLayout(boolean changed, int left, int top, int right,
@@ -143,13 +143,13 @@ public abstract class CropViewBase extends ImageView {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param keyCode the key code
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.view.View#onKeyDown(int, android.view.KeyEvent)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:50
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -174,11 +174,11 @@ public abstract class CropViewBase extends ImageView {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param bitmap the new image bitmap
 	 * @see android.widget.ImageView#setImageBitmap(android.graphics.Bitmap)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:50
-	 * @version v1.0
 	 */
 	@Override
 	public void setImageBitmap(Bitmap bitmap) {

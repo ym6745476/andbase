@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.activity.AbActivity类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1activity.html">activity</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html">AbActivity</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1activity_1_1_ab_activity-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.activity.AbActivity类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.activity.AbActivity 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1activity_1_1_ab_activity.png" usemap="#com.ab.activity.AbActivity_map" alt=""/>
+  <map id="com.ab.activity.AbActivity_map" name="com.ab.activity.AbActivity_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6633bee40347babe2216fe485961c881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a6633bee40347babe2216fe485961c881">setAbContentView</a> (View contentView)</td></tr>
+<tr class="separator:a6633bee40347babe2216fe485961c881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7333c2a0a066c65d926fcae3bb923dab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a7333c2a0a066c65d926fcae3bb923dab">setAbContentView</a> (int resId)</td></tr>
+<tr class="separator:a7333c2a0a066c65d926fcae3bb923dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0d237f8f010e5d9d13e64b38ea0b7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_title_bar.html">AbTitleBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a6c0d237f8f010e5d9d13e64b38ea0b7d">getTitleBar</a> ()</td></tr>
+<tr class="separator:a6c0d237f8f010e5d9d13e64b38ea0b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679b24c339a12e3b657bfecaa529c240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_bottom_bar.html">AbBottomBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a679b24c339a12e3b657bfecaa529c240">getBottomBar</a> ()</td></tr>
+<tr class="separator:a679b24c339a12e3b657bfecaa529c240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa173dc8599b8b02bc3bba5a3300c94ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#aa173dc8599b8b02bc3bba5a3300c94ad">finish</a> ()</td></tr>
+<tr class="separator:aa173dc8599b8b02bc3bba5a3300c94ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa80cbebc8174518239582465352704e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#aaa80cbebc8174518239582465352704e">setTitleBarOverlay</a> (boolean overlay)</td></tr>
+<tr class="separator:aaa80cbebc8174518239582465352704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048ca0368103c812b727804b9ee07bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a048ca0368103c812b727804b9ee07bba">setContentView</a> (int layoutResID)</td></tr>
+<tr class="separator:a048ca0368103c812b727804b9ee07bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c3c5a7c98322db6bba8d9203f21458"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#ac3c3c5a7c98322db6bba8d9203f21458">setContentView</a> (View view, android.view.ViewGroup.LayoutParams params)</td></tr>
+<tr class="separator:ac3c3c5a7c98322db6bba8d9203f21458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefde297bbbfe89439e675b61f114fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#aaefde297bbbfe89439e675b61f114fbb">setContentView</a> (View view)</td></tr>
+<tr class="separator:aaefde297bbbfe89439e675b61f114fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a85e15f0d9e1b2c2af0c0e1bb738a3e5f"><td class="memItemLeft" align="right" valign="top">LayoutInflater&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a85e15f0d9e1b2c2af0c0e1bb738a3e5f">mInflater</a></td></tr>
+<tr class="separator:a85e15f0d9e1b2c2af0c0e1bb738a3e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45cbf39329e5a3b4b06db85f41f0a30"><td class="memItemLeft" align="right" valign="top">Application&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#ac45cbf39329e5a3b4b06db85f41f0a30">abApplication</a> = null</td></tr>
+<tr class="separator:ac45cbf39329e5a3b4b06db85f41f0a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0660d7eb07dee276d520393aff2602"><td class="memItemLeft" align="right" valign="top">RelativeLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a2a0660d7eb07dee276d520393aff2602">ab_base</a> = null</td></tr>
+<tr class="separator:a2a0660d7eb07dee276d520393aff2602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a7afba96464cfded48ca1a3936918fc6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a7afba96464cfded48ca1a3936918fc6d">onCreate</a> (Bundle savedInstanceState)</td></tr>
+<tr class="separator:a7afba96464cfded48ca1a3936918fc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a53769b59db5804871bb8788bccaac52d"><td class="memItemLeft" align="right" valign="top">RelativeLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a53769b59db5804871bb8788bccaac52d">contentLayout</a> = null</td></tr>
+<tr class="separator:a53769b59db5804871bb8788bccaac52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a66a4871c62e17b9e1e8f2bfd2c8bdb0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a66a4871c62e17b9e1e8f2bfd2c8bdb0a">initIocView</a> ()</td></tr>
+<tr class="separator:a66a4871c62e17b9e1e8f2bfd2c8bdb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b396b3044a5f1ebe749c20fe9e5f45a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a4b396b3044a5f1ebe749c20fe9e5f45a">setViewSelectListener</a> (Field field, String select, String noSelect)  throws Exception</td></tr>
+<tr class="separator:a4b396b3044a5f1ebe749c20fe9e5f45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f14cebf6c1d565610ad44d80d582ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a9f14cebf6c1d565610ad44d80d582ce3">setListener</a> (Field field, String methodName, int method)  throws Exception</td></tr>
+<tr class="separator:a9f14cebf6c1d565610ad44d80d582ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ad2d9aab83763f9cc489d04ea9dafca74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_title_bar.html">AbTitleBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#ad2d9aab83763f9cc489d04ea9dafca74">mAbTitleBar</a> = null</td></tr>
+<tr class="separator:ad2d9aab83763f9cc489d04ea9dafca74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45894dde843bd31ff66168a7dc56201a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_bottom_bar.html">AbBottomBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1activity_1_1_ab_activity.html#a45894dde843bd31ff66168a7dc56201a">mAbBottomBar</a> = null</td></tr>
+<tr class="separator:a45894dde843bd31ff66168a7dc56201a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbActivity.java 描述：继承这个Activity使你的Activity拥有一个程序框架.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-1-15 下午3:27:05 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aa173dc8599b8b02bc3bba5a3300c94ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.finish </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：Activity结束.</p>
+<dl class="section see"><dt>参见</dt><dd>android.app.Activity::finish() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a679b24c339a12e3b657bfecaa529c240"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_bottom_bar.html">AbBottomBar</a> com.ab.activity.AbActivity.getBottomBar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取副标题栏布局. </p><dl class="section return"><dt>返回</dt><dd>the bottom layout </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c0d237f8f010e5d9d13e64b38ea0b7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_title_bar.html">AbTitleBar</a> com.ab.activity.AbActivity.getTitleBar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取主标题栏布局. </p><dl class="section return"><dt>返回</dt><dd>the title layout </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a66a4871c62e17b9e1e8f2bfd2c8bdb0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.initIocView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化为IOC控制的View. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7afba96464cfded48ca1a3936918fc6d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.onCreate </td>
+          <td>(</td>
+          <td class="paramtype">Bundle&#160;</td>
+          <td class="paramname"><em>savedInstanceState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：创建.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">savedInstanceState</td><td>the saved instance state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.support.v4.app.FragmentActivity::onCreate(android.os.Bundle) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6633bee40347babe2216fe485961c881"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setAbContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>contentView</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：用指定的View填充主界面. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contentView</td><td>指定的View </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7333c2a0a066c65d926fcae3bb923dab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setAbContentView </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：用指定资源ID表示的View填充主界面. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resId</td><td>指定的View的资源ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a048ca0368103c812b727804b9ee07bba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setContentView </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layoutResID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置界面显示（忽略标题栏）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layoutResID</td><td>the new content view </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.app.Activity::setContentView(int) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3c3c5a7c98322db6bba8d9203f21458"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">android.view.ViewGroup.LayoutParams&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置界面显示（忽略标题栏）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the view </td></tr>
+    <tr><td class="paramname">params</td><td>the params </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.app.Activity::setContentView(android.view.View, android.view.ViewGroup.LayoutParams) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaefde297bbbfe89439e675b61f114fbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置界面显示（忽略标题栏）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the new content view </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.app.Activity::setContentView(android.view.View) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f14cebf6c1d565610ad44d80d582ce3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setListener </td>
+          <td>(</td>
+          <td class="paramtype">Field&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置view的监听器.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>the field </td></tr>
+    <tr><td class="paramname">methodName</td><td>the method name </td></tr>
+    <tr><td class="paramname">method</td><td>the method </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>the exception </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa80cbebc8174518239582465352704e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setTitleBarOverlay </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>overlay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置绝对定位的主标题栏覆盖到内容的上边.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">overlay</td><td>the new title bar overlay </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b396b3044a5f1ebe749c20fe9e5f45a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.activity.AbActivity.setViewSelectListener </td>
+          <td>(</td>
+          <td class="paramtype">Field&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>select</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>noSelect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置view的监听器.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>the field </td></tr>
+    <tr><td class="paramname">select</td><td>the select </td></tr>
+    <tr><td class="paramname">noSelect</td><td>the no select </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>the exception </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a2a0660d7eb07dee276d520393aff2602"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RelativeLayout com.ab.activity.AbActivity.ab_base = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>总布局. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac45cbf39329e5a3b4b06db85f41f0a30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Application com.ab.activity.AbActivity.abApplication = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>全局的Application对象，已经完成初始化. </p>
+
+</div>
+</div>
+<a class="anchor" id="a53769b59db5804871bb8788bccaac52d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RelativeLayout com.ab.activity.AbActivity.contentLayout = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>主内容布局. </p>
+
+</div>
+</div>
+<a class="anchor" id="a45894dde843bd31ff66168a7dc56201a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_bottom_bar.html">AbBottomBar</a> com.ab.activity.AbActivity.mAbBottomBar = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>副标题栏布局. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad2d9aab83763f9cc489d04ea9dafca74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1titlebar_1_1_ab_title_bar.html">AbTitleBar</a> com.ab.activity.AbActivity.mAbTitleBar = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>标题栏布局. </p>
+
+</div>
+</div>
+<a class="anchor" id="a85e15f0d9e1b2c2af0c0e1bb738a3e5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayoutInflater com.ab.activity.AbActivity.mInflater</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>全局的LayoutInflater对象，已经完成初始化. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/activity/<a class="el" href="_ab_activity_8java.html">AbActivity.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

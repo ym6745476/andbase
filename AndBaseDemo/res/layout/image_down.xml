@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical" 
-        android:paddingTop="10dip">
+        android:orientation="vertical"
+        android:paddingTop="10dip" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,17 +18,17 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/original_img"
+                android:id="@+id/scale_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="matrix" />
 
             <TextView
-                android:id="@+id/original_text"
+                android:id="@+id/scale_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dip"
-                android:text="原图230x230" />
+                android:text="原图208x170" />
         </LinearLayout>
 
         <LinearLayout
@@ -45,89 +45,39 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/scale_img"
+                    android:id="@+id/scale_img2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="matrix" />
 
                 <TextView
-                    android:id="@+id/scale_text"
+                    android:id="@+id/scale_text2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dip"
-                    android:text="缩放150x150" />
+                    android:text="缩小150x150" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="10dip" >
-
-                <ImageView
-                    android:id="@+id/cut_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:id="@+id/cut_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dip"
-                    android:text="裁剪150x150" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
                 android:layout_marginTop="5dip"
                 android:gravity="center"
                 android:orientation="vertical" >
 
-                <com.ab.view.sample.AbScaleImageView
-                    android:id="@+id/set_img"
+                <ImageView
+                    android:id="@+id/scale_img3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="matrix" />
 
                 <TextView
-                    android:id="@+id/set_text"
+                    android:id="@+id/scale_text3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dip"
-                    android:text="设置的120x120" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="10dip" >
-
-                <com.ab.view.sample.AbNetworkImageView
-                    android:id="@+id/net_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:id="@+id/net_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dip"
-                    android:text="网络的150x150" />
+                    android:text="放大180x180" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -1,0 +1,1002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.pullview.AbViewInfo类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1pullview.html">pullview</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html">AbViewInfo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.pullview.AbViewInfo类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aac7cd450b155b2306020e5cc9f0fb752"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#aac7cd450b155b2306020e5cc9f0fb752">AbViewInfo</a> (View <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a23c1f0d57f760759a16386e787282578">view</a>, int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ab640ea577a15587daa3748368e5d3c7e">width</a>, int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ac7629a7bbc31e34d59be2c7dfe3b3cd2">height</a>, int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a1dfae02f310eaad5566f6572d1c28242">top</a>, int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a607e9017507ed4ca70043753ae1678b4">bottom</a>)</td></tr>
+<tr class="separator:aac7cd450b155b2306020e5cc9f0fb752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c24a41003cf4c1196d49eea0c5208e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ab0c24a41003cf4c1196d49eea0c5208e">AbViewInfo</a> (View <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a23c1f0d57f760759a16386e787282578">view</a>, int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ab640ea577a15587daa3748368e5d3c7e">width</a>, int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ac7629a7bbc31e34d59be2c7dfe3b3cd2">height</a>)</td></tr>
+<tr class="separator:ab0c24a41003cf4c1196d49eea0c5208e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274b67a01cd64dde59a247dcd4bee572"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a274b67a01cd64dde59a247dcd4bee572">AbViewInfo</a> (View <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a23c1f0d57f760759a16386e787282578">view</a>)</td></tr>
+<tr class="separator:a274b67a01cd64dde59a247dcd4bee572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7f30a210fa139676f0e4635186a32d"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a4f7f30a210fa139676f0e4635186a32d">getView</a> ()</td></tr>
+<tr class="separator:a4f7f30a210fa139676f0e4635186a32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d70b6035bb04cb972ee9a6fa0297eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ac5d70b6035bb04cb972ee9a6fa0297eb">setView</a> (View <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a23c1f0d57f760759a16386e787282578">view</a>)</td></tr>
+<tr class="separator:ac5d70b6035bb04cb972ee9a6fa0297eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17202c22ae40426eb6baf778384287e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#aa17202c22ae40426eb6baf778384287e">getWidth</a> ()</td></tr>
+<tr class="separator:aa17202c22ae40426eb6baf778384287e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a624c1f1e80d949c52902c26ab247d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#af6a624c1f1e80d949c52902c26ab247d">setWidth</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ab640ea577a15587daa3748368e5d3c7e">width</a>)</td></tr>
+<tr class="separator:af6a624c1f1e80d949c52902c26ab247d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1fe6406882b06267fa26bafc8d0786"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a8b1fe6406882b06267fa26bafc8d0786">getHeight</a> ()</td></tr>
+<tr class="separator:a8b1fe6406882b06267fa26bafc8d0786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa997c80c8b89cc99c2ea5736c14751d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#aa997c80c8b89cc99c2ea5736c14751d0">setHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ac7629a7bbc31e34d59be2c7dfe3b3cd2">height</a>)</td></tr>
+<tr class="separator:aa997c80c8b89cc99c2ea5736c14751d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630a6499f165f9cbe04db9cb9e0e4d58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a630a6499f165f9cbe04db9cb9e0e4d58">getTop</a> ()</td></tr>
+<tr class="separator:a630a6499f165f9cbe04db9cb9e0e4d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6e466e9d239cabebfdef4e7b589c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#aaa6e466e9d239cabebfdef4e7b589c09">setTop</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a1dfae02f310eaad5566f6572d1c28242">top</a>)</td></tr>
+<tr class="separator:aaa6e466e9d239cabebfdef4e7b589c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a15a97b35b568c2e0ccf342828a58e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a7a15a97b35b568c2e0ccf342828a58e6">getBottom</a> ()</td></tr>
+<tr class="separator:a7a15a97b35b568c2e0ccf342828a58e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588da6b0aba6aa60a826558544af2946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a588da6b0aba6aa60a826558544af2946">setBottom</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a607e9017507ed4ca70043753ae1678b4">bottom</a>)</td></tr>
+<tr class="separator:a588da6b0aba6aa60a826558544af2946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e9a4cfdca8e785955da2c84a4e08c5"><td class="memItemLeft" align="right" valign="top">.ExportedProperty Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a16e9a4cfdca8e785955da2c84a4e08c5">getTag</a> ()</td></tr>
+<tr class="separator:a16e9a4cfdca8e785955da2c84a4e08c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe19a00bca7ac9ad833ead6fac874d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#abe19a00bca7ac9ad833ead6fac874d60">setTag</a> (final Object <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#af867b77ce93050c8bf0cb086c4ab5708">tag</a>)</td></tr>
+<tr class="separator:abe19a00bca7ac9ad833ead6fac874d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2fbaa710831202dbe97ee3b6224d69"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a9b2fbaa710831202dbe97ee3b6224d69">getTag</a> (int key)</td></tr>
+<tr class="separator:a9b2fbaa710831202dbe97ee3b6224d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0577ae0930d1ce15177c6f6942594c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a0577ae0930d1ce15177c6f6942594c8b">setTag</a> (int key, final Object <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#af867b77ce93050c8bf0cb086c4ab5708">tag</a>)</td></tr>
+<tr class="separator:a0577ae0930d1ce15177c6f6942594c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be7b5a489cd883dc21e49d630bb7fc1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a2be7b5a489cd883dc21e49d630bb7fc1">getVisible</a> ()</td></tr>
+<tr class="separator:a2be7b5a489cd883dc21e49d630bb7fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db9dc1281741554e162e4eab4c7aacf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a1db9dc1281741554e162e4eab4c7aacf">setVisible</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ad0728cead007b28b27e6a7dba982d63a">visible</a>)</td></tr>
+<tr class="separator:a1db9dc1281741554e162e4eab4c7aacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aa0b78ad348eb4e3ff6b7fcbe9d70d2d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#aa0b78ad348eb4e3ff6b7fcbe9d70d2d7">setKeyedTag</a> (int key, Object <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#af867b77ce93050c8bf0cb086c4ab5708">tag</a>)</td></tr>
+<tr class="separator:aa0b78ad348eb4e3ff6b7fcbe9d70d2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a23c1f0d57f760759a16386e787282578"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a23c1f0d57f760759a16386e787282578">view</a></td></tr>
+<tr class="separator:a23c1f0d57f760759a16386e787282578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab640ea577a15587daa3748368e5d3c7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ab640ea577a15587daa3748368e5d3c7e">width</a></td></tr>
+<tr class="separator:ab640ea577a15587daa3748368e5d3c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7629a7bbc31e34d59be2c7dfe3b3cd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ac7629a7bbc31e34d59be2c7dfe3b3cd2">height</a></td></tr>
+<tr class="separator:ac7629a7bbc31e34d59be2c7dfe3b3cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfae02f310eaad5566f6572d1c28242"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a1dfae02f310eaad5566f6572d1c28242">top</a></td></tr>
+<tr class="separator:a1dfae02f310eaad5566f6572d1c28242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607e9017507ed4ca70043753ae1678b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#a607e9017507ed4ca70043753ae1678b4">bottom</a></td></tr>
+<tr class="separator:a607e9017507ed4ca70043753ae1678b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af867b77ce93050c8bf0cb086c4ab5708"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#af867b77ce93050c8bf0cb086c4ab5708">tag</a></td></tr>
+<tr class="separator:af867b77ce93050c8bf0cb086c4ab5708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0728cead007b28b27e6a7dba982d63a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#ad0728cead007b28b27e6a7dba982d63a">visible</a></td></tr>
+<tr class="separator:ad0728cead007b28b27e6a7dba982d63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20a92c3e2b8d62b2dd0adaeedddf033"><td class="memItemLeft" align="right" valign="top">SparseArray&lt; Object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html#af20a92c3e2b8d62b2dd0adaeedddf033">keyedTags</a></td></tr>
+<tr class="separator:af20a92c3e2b8d62b2dd0adaeedddf033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_view_info.html">AbViewInfo</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aac7cd450b155b2306020e5cc9f0fb752"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbViewInfo.AbViewInfo </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab view info.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the view </td></tr>
+    <tr><td class="paramname">width</td><td>the width </td></tr>
+    <tr><td class="paramname">height</td><td>the height </td></tr>
+    <tr><td class="paramname">top</td><td>the top </td></tr>
+    <tr><td class="paramname">bottom</td><td>the bottom </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0c24a41003cf4c1196d49eea0c5208e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbViewInfo.AbViewInfo </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab view info.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the view </td></tr>
+    <tr><td class="paramname">width</td><td>the width </td></tr>
+    <tr><td class="paramname">height</td><td>the height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a274b67a01cd64dde59a247dcd4bee572"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbViewInfo.AbViewInfo </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab view info.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a7a15a97b35b568c2e0ccf342828a58e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.getBottom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the bottom.</p>
+<dl class="section return"><dt>返回</dt><dd>the bottom </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8b1fe6406882b06267fa26bafc8d0786"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the height.</p>
+<dl class="section return"><dt>返回</dt><dd>the height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16e9a4cfdca8e785955da2c84a4e08c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty Object com.ab.view.pullview.AbViewInfo.getTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the tag.</p>
+<dl class="section return"><dt>返回</dt><dd>the tag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b2fbaa710831202dbe97ee3b6224d69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.pullview.AbViewInfo.getTag </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the tag.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the tag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a630a6499f165f9cbe04db9cb9e0e4d58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.getTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the top.</p>
+<dl class="section return"><dt>返回</dt><dd>the top </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f7f30a210fa139676f0e4635186a32d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbViewInfo.getView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the view.</p>
+<dl class="section return"><dt>返回</dt><dd>the view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2be7b5a489cd883dc21e49d630bb7fc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.getVisible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the visible.</p>
+<dl class="section return"><dt>返回</dt><dd>the visible </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa17202c22ae40426eb6baf778384287e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the width.</p>
+<dl class="section return"><dt>返回</dt><dd>the width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a588da6b0aba6aa60a826558544af2946"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setBottom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the bottom.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bottom</td><td>the new bottom </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa997c80c8b89cc99c2ea5736c14751d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the new height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0b78ad348eb4e3ff6b7fcbe9d70d2d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setKeyedTag </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the keyed tag.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">tag</td><td>the tag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abe19a00bca7ac9ad833ead6fac874d60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setTag </td>
+          <td>(</td>
+          <td class="paramtype">final Object&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the tag.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tag</td><td>the new tag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0577ae0930d1ce15177c6f6942594c8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setTag </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Object&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the tag.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+    <tr><td class="paramname">tag</td><td>the tag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa6e466e9d239cabebfdef4e7b589c09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setTop </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the top.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top</td><td>the new top </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac5d70b6035bb04cb972ee9a6fa0297eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>the new view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1db9dc1281741554e162e4eab4c7aacf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setVisible </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visible</td><td>the new visible </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af6a624c1f1e80d949c52902c26ab247d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbViewInfo.setWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the width.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>the new width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a607e9017507ed4ca70043753ae1678b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.bottom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The bottom. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac7629a7bbc31e34d59be2c7dfe3b3cd2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The height. </p>
+
+</div>
+</div>
+<a class="anchor" id="af20a92c3e2b8d62b2dd0adaeedddf033"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SparseArray&lt;Object&gt; com.ab.view.pullview.AbViewInfo.keyedTags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Map used to store views' tags. </p>
+
+</div>
+</div>
+<a class="anchor" id="af867b77ce93050c8bf0cb086c4ab5708"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.pullview.AbViewInfo.tag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The tag. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1dfae02f310eaad5566f6572d1c28242"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.top</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The top. </p>
+
+</div>
+</div>
+<a class="anchor" id="a23c1f0d57f760759a16386e787282578"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbViewInfo.view</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The view. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad0728cead007b28b27e6a7dba982d63a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.visible</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The tag. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab640ea577a15587daa3748368e5d3c7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbViewInfo.width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The width. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/pullview/<a class="el" href="_ab_view_info_8java.html">AbViewInfo.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

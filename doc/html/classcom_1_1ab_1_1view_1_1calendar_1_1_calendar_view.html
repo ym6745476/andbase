@@ -1,0 +1,1111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.calendar.CalendarView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1calendar.html">calendar</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html">CalendarView</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.calendar.CalendarView类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.calendar.CalendarView 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.png" usemap="#com.ab.view.calendar.CalendarView_map" alt=""/>
+  <map id="com.ab.view.calendar.CalendarView_map" name="com.ab.view.calendar.CalendarView_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae40b190c9834cf9eb6e601d7f0644679"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ae40b190c9834cf9eb6e601d7f0644679">CalendarView</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a35f00d1fd03a725ffe8cd2b8a3f1f326">context</a>)</td></tr>
+<tr class="separator:ae40b190c9834cf9eb6e601d7f0644679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b228f16ba2f6afe4622eafce90518eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a7b228f16ba2f6afe4622eafce90518eb">CalendarView</a> (Context <a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a35f00d1fd03a725ffe8cd2b8a3f1f326">context</a>, AttributeSet attrs)</td></tr>
+<tr class="separator:a7b228f16ba2f6afe4622eafce90518eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6acf0325b47a7b2f35fb45ead7d01db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a6acf0325b47a7b2f35fb45ead7d01db9">initRow</a> ()</td></tr>
+<tr class="separator:a6acf0325b47a7b2f35fb45ead7d01db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe9c09b0488719d27e6a3fe87d7bfc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a3fe9c09b0488719d27e6a3fe87d7bfc9">setOnItemClickListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> mAbOnItemClickListener)</td></tr>
+<tr class="separator:a3fe9c09b0488719d27e6a3fe87d7bfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea9d1954ee8644fe9409d2c7a50e033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#aaea9d1954ee8644fe9409d2c7a50e033">setHeaderHeight</a> (int <a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a9e37ef1275b0dfa747bcc25dcd9efbfd">height</a>)</td></tr>
+<tr class="separator:aaea9d1954ee8644fe9409d2c7a50e033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e6bca8fd388cd199fc38b6126c00f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a19e6bca8fd388cd199fc38b6126c00f2">setHeaderTextSize</a> (int size)</td></tr>
+<tr class="separator:a19e6bca8fd388cd199fc38b6126c00f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b9b7f75ac0c5fee6345e0653168134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac8b9b7f75ac0c5fee6345e0653168134">rebuildCalendar</a> (Calendar calendar)</td></tr>
+<tr class="separator:ac8b9b7f75ac0c5fee6345e0653168134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b170d17f880ea5778d7955ae69d5c6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a6b170d17f880ea5778d7955ae69d5c6a">setHeaderBackgroundResource</a> (int resid)</td></tr>
+<tr class="separator:a6b170d17f880ea5778d7955ae69d5c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980e2a3fef6889d08d71e6e643a64ca1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a980e2a3fef6889d08d71e6e643a64ca1">getStrDateAtPosition</a> (int position)</td></tr>
+<tr class="separator:a980e2a3fef6889d08d71e6e643a64ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f77bf1dc22519d0658900f9af65542"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ad8f77bf1dc22519d0658900f9af65542">getCalendarCellSize</a> ()</td></tr>
+<tr class="separator:ad8f77bf1dc22519d0658900f9af65542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5677693cd6d181fd9354c246c97db067"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_cell.html">CalendarCell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a5677693cd6d181fd9354c246c97db067">getCalendarCells</a> ()</td></tr>
+<tr class="separator:a5677693cd6d181fd9354c246c97db067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a96c6f768f88e4a05496e42e95b7852"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a3a96c6f768f88e4a05496e42e95b7852">getCalSelected</a> ()</td></tr>
+<tr class="separator:a3a96c6f768f88e4a05496e42e95b7852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ac17b3fde66a922532c0108f9aa14792e"><td class="memItemLeft" align="right" valign="top">static Calendar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac17b3fde66a922532c0108f9aa14792e">calStartDate</a> = Calendar.getInstance()</td></tr>
+<tr class="separator:ac17b3fde66a922532c0108f9aa14792e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:afbec9972e7cc3d6ae858a32c98e675c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#afbec9972e7cc3d6ae858a32c98e675c0">initStartDateForMonth</a> ()</td></tr>
+<tr class="separator:afbec9972e7cc3d6ae858a32c98e675c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b6000e906f3848bed8e9d24c275d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a31b6000e906f3848bed8e9d24c275d04">updateCalendar</a> ()</td></tr>
+<tr class="separator:a31b6000e906f3848bed8e9d24c275d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218364086d0c7052161b6b5ae1d3be40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a218364086d0c7052161b6b5ae1d3be40">initCalendar</a> ()</td></tr>
+<tr class="separator:a218364086d0c7052161b6b5ae1d3be40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5700dcedb0cfeaeb1bcd995a5173e68b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a5700dcedb0cfeaeb1bcd995a5173e68b">TAG</a> = &quot;CalendarView&quot;</td></tr>
+<tr class="separator:a5700dcedb0cfeaeb1bcd995a5173e68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f00d1fd03a725ffe8cd2b8a3f1f326"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a35f00d1fd03a725ffe8cd2b8a3f1f326">context</a></td></tr>
+<tr class="separator:a35f00d1fd03a725ffe8cd2b8a3f1f326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa9ccec3c45a426a35f34ef7389081b"><td class="memItemLeft" align="right" valign="top">LinearLayout.LayoutParams&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a1aa9ccec3c45a426a35f34ef7389081b">layoutParamsFW</a> = null</td></tr>
+<tr class="separator:a1aa9ccec3c45a426a35f34ef7389081b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e14ee7412324ef8cabe59ef92233449"><td class="memItemLeft" align="right" valign="top">LinearLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a0e14ee7412324ef8cabe59ef92233449">mLinearLayoutHeader</a> = null</td></tr>
+<tr class="separator:a0e14ee7412324ef8cabe59ef92233449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0700637c6cd3d3d142a2fd963fa50919"><td class="memItemLeft" align="right" valign="top">LinearLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a0700637c6cd3d3d142a2fd963fa50919">mLinearLayoutContent</a> = null</td></tr>
+<tr class="separator:a0700637c6cd3d3d142a2fd963fa50919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99ead8af5e741310d06a353880027cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_header.html">CalendarHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ae99ead8af5e741310d06a353880027cb">mCalendarHeader</a> = null</td></tr>
+<tr class="separator:ae99ead8af5e741310d06a353880027cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bdd9c6bfcca7a3ba6b5919a3961dfa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a5bdd9c6bfcca7a3ba6b5919a3961dfa5">width</a> = 320</td></tr>
+<tr class="separator:a5bdd9c6bfcca7a3ba6b5919a3961dfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e37ef1275b0dfa747bcc25dcd9efbfd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a9e37ef1275b0dfa747bcc25dcd9efbfd">height</a> = 480</td></tr>
+<tr class="separator:a9e37ef1275b0dfa747bcc25dcd9efbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6450735c7360231e64413b4a182bc15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac6450735c7360231e64413b4a182bc15">headerHeight</a> = 45</td></tr>
+<tr class="separator:ac6450735c7360231e64413b4a182bc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe250dcafac29b4b3088c184ef2fa5b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#abe250dcafac29b4b3088c184ef2fa5b9">rowHeight</a> = 40</td></tr>
+<tr class="separator:abe250dcafac29b4b3088c184ef2fa5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0006939be4fe49654f7252026dbe417a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a0006939be4fe49654f7252026dbe417a">cellWidth</a> = 40</td></tr>
+<tr class="separator:a0006939be4fe49654f7252026dbe417a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baaf5e03db299f57f591d91b77e7cb3"><td class="memItemLeft" align="right" valign="top">Calendar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a3baaf5e03db299f57f591d91b77e7cb3">calToday</a> = Calendar.getInstance()</td></tr>
+<tr class="separator:a3baaf5e03db299f57f591d91b77e7cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708d4fd97725e3945546ba24ff432835"><td class="memItemLeft" align="right" valign="top">Calendar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a708d4fd97725e3945546ba24ff432835">calSelected</a> = null</td></tr>
+<tr class="separator:a708d4fd97725e3945546ba24ff432835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d28000d9a581fed709c4ee034b1d6b"><td class="memItemLeft" align="right" valign="top">Calendar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a58d28000d9a581fed709c4ee034b1d6b">calCalendar</a> = Calendar.getInstance()</td></tr>
+<tr class="separator:a58d28000d9a581fed709c4ee034b1d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0061808c52093289e62868f5dfada9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#aba0061808c52093289e62868f5dfada9">currentMonth</a> = 0</td></tr>
+<tr class="separator:aba0061808c52093289e62868f5dfada9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454c11d3e5f1de98a185860b83964465"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a454c11d3e5f1de98a185860b83964465">currentYear</a> = 0</td></tr>
+<tr class="separator:a454c11d3e5f1de98a185860b83964465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11dc253ca3b3adac6f5942e2ab672bf0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a11dc253ca3b3adac6f5942e2ab672bf0">firstDayOfWeek</a> = Calendar.SUNDAY</td></tr>
+<tr class="separator:a11dc253ca3b3adac6f5942e2ab672bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a70633ed05298d2ab945d826845af5"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_cell.html">CalendarCell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac2a70633ed05298d2ab945d826845af5">mCalendarCells</a> = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_cell.html">CalendarCell</a>&gt;()</td></tr>
+<tr class="separator:ac2a70633ed05298d2ab945d826845af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b338c5e6d66f76fe809eb49ab139e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a74b338c5e6d66f76fe809eb49ab139e7">mOnItemClickListener</a></td></tr>
+<tr class="separator:a74b338c5e6d66f76fe809eb49ab139e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18a7248ea8dc208187861f737936c4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#aa18a7248ea8dc208187861f737936c4b">mOnDayCellClick</a></td></tr>
+<tr class="separator:aa18a7248ea8dc208187861f737936c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：CalendarView.java 描述：日历View</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-8-23 下午2:03:29 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae40b190c9834cf9eb6e601d7f0644679"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.calendar.CalendarView.CalendarView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new ab grid view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7b228f16ba2f6afe4622eafce90518eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.calendar.CalendarView.CalendarView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new calendar view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a5677693cd6d181fd9354c246c97db067"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_cell.html">CalendarCell</a>&gt; com.ab.view.calendar.CalendarView.getCalendarCells </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取当前日历的所有条目.</p>
+<dl class="section return"><dt>返回</dt><dd>the calendar cells </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8f77bf1dc22519d0658900f9af65542"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.getCalendarCellSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取这个日历的总日期数.</p>
+<dl class="section return"><dt>返回</dt><dd>the calendar cell size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a96c6f768f88e4a05496e42e95b7852"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.calendar.CalendarView.getCalSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取选中的日期，默认为今天.</p>
+<dl class="section return"><dt>返回</dt><dd>the cal selected </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a980e2a3fef6889d08d71e6e643a64ca1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.calendar.CalendarView.getStrDateAtPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据索引获取选择的日期.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the str date at position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a218364086d0c7052161b6b5ae1d3be40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.initCalendar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：更新日历. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6acf0325b47a7b2f35fb45ead7d01db9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.initRow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inits the row. </p>
+
+</div>
+</div>
+<a class="anchor" id="afbec9972e7cc3d6ae858a32c98e675c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.initStartDateForMonth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：由于日历上的日期都是从周日开始的，计算第一个单元格的日期. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8b9b7f75ac0c5fee6345e0653168134"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.rebuildCalendar </td>
+          <td>(</td>
+          <td class="paramtype">Calendar&#160;</td>
+          <td class="paramname"><em>calendar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rebuild calendar.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calendar</td><td>the calendar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6b170d17f880ea5778d7955ae69d5c6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.setHeaderBackgroundResource </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置标题背景.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resid</td><td>the new header background resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aaea9d1954ee8644fe9409d2c7a50e033"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.setHeaderHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the header height.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the new header height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a19e6bca8fd388cd199fc38b6126c00f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.setHeaderTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the header text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the new header text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3fe9c09b0488719d27e6a3fe87d7bfc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.setOnItemClickListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td>
+          <td class="paramname"><em>mAbOnItemClickListener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the on item click listener.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mAbOnItemClickListener</td><td>the new on item click listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a31b6000e906f3848bed8e9d24c275d04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.calendar.CalendarView.updateCalendar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：更新日历. </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a58d28000d9a581fed709c4ee034b1d6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Calendar com.ab.view.calendar.CalendarView.calCalendar = Calendar.getInstance()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The cal calendar. </p>
+
+</div>
+</div>
+<a class="anchor" id="a708d4fd97725e3945546ba24ff432835"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Calendar com.ab.view.calendar.CalendarView.calSelected = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The cal selected. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac17b3fde66a922532c0108f9aa14792e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Calendar com.ab.view.calendar.CalendarView.calStartDate = Calendar.getInstance()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The cal start date. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3baaf5e03db299f57f591d91b77e7cb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Calendar com.ab.view.calendar.CalendarView.calToday = Calendar.getInstance()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The cal today. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0006939be4fe49654f7252026dbe417a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.cellWidth = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The cell width. </p>
+
+</div>
+</div>
+<a class="anchor" id="a35f00d1fd03a725ffe8cd2b8a3f1f326"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.view.calendar.CalendarView.context</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The context. </p>
+
+</div>
+</div>
+<a class="anchor" id="aba0061808c52093289e62868f5dfada9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.currentMonth = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The current month. </p>
+
+</div>
+</div>
+<a class="anchor" id="a454c11d3e5f1de98a185860b83964465"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.currentYear = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The current year. </p>
+
+</div>
+</div>
+<a class="anchor" id="a11dc253ca3b3adac6f5942e2ab672bf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.firstDayOfWeek = Calendar.SUNDAY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The first day of week. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac6450735c7360231e64413b4a182bc15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.headerHeight = 45</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>星期头的行高. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e37ef1275b0dfa747bcc25dcd9efbfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.height = 480</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The height. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1aa9ccec3c45a426a35f34ef7389081b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearLayout.LayoutParams com.ab.view.calendar.CalendarView.layoutParamsFW = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The layout params fw. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac2a70633ed05298d2ab945d826845af5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_cell.html">CalendarCell</a>&gt; com.ab.view.calendar.CalendarView.mCalendarCells = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_cell.html">CalendarCell</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m calendar cells. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae99ead8af5e741310d06a353880027cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_header.html">CalendarHeader</a> com.ab.view.calendar.CalendarView.mCalendarHeader = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m calendar header. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0700637c6cd3d3d142a2fd963fa50919"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearLayout com.ab.view.calendar.CalendarView.mLinearLayoutContent = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m linear layout content. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0e14ee7412324ef8cabe59ef92233449"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearLayout com.ab.view.calendar.CalendarView.mLinearLayoutHeader = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m linear layout header. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa18a7248ea8dc208187861f737936c4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> com.ab.view.calendar.CalendarView.mOnDayCellClick</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> AbOnItemClickListener(){</div>
+<div class="line"></div>
+<div class="line">        @Override</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> onClick(<span class="keywordtype">int</span> position) {</div>
+<div class="line">            CalendarCell mCalendarCell = <a class="code" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac2a70633ed05298d2ab945d826845af5">mCalendarCells</a>.get(position);</div>
+<div class="line">            <span class="keywordflow">if</span>(mCalendarCell.isActiveMonth()){</div>
+<div class="line">                <a class="code" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a708d4fd97725e3945546ba24ff432835">calSelected</a>.setTimeInMillis(mCalendarCell.getThisCellDate().getTimeInMillis());</div>
+<div class="line">                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac2a70633ed05298d2ab945d826845af5">mCalendarCells</a>.size();i++){</div>
+<div class="line">                    CalendarCell mCalendarCellOther = <a class="code" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#ac2a70633ed05298d2ab945d826845af5">mCalendarCells</a>.get(i);</div>
+<div class="line">                    mCalendarCellOther.setSelected(<span class="keyword">false</span>);</div>
+<div class="line">                }</div>
+<div class="line">                mCalendarCell.setSelected(<span class="keyword">true</span>);</div>
+<div class="line">                <span class="keywordflow">if</span>(<a class="code" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a74b338c5e6d66f76fe809eb49ab139e7">mOnItemClickListener</a>!=null){</div>
+<div class="line">                    <a class="code" href="classcom_1_1ab_1_1view_1_1calendar_1_1_calendar_view.html#a74b338c5e6d66f76fe809eb49ab139e7">mOnItemClickListener</a>.<a class="code" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html#a9777a65b647decb5407bdb227192932b">onClick</a>(position);</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>点击日历，触发事件. </p>
+
+</div>
+</div>
+<a class="anchor" id="a74b338c5e6d66f76fe809eb49ab139e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1calendar_1_1_calendar_view_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> com.ab.view.calendar.CalendarView.mOnItemClickListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m on item click listener. </p>
+
+</div>
+</div>
+<a class="anchor" id="abe250dcafac29b4b3088c184ef2fa5b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.rowHeight = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The row height. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5700dcedb0cfeaeb1bcd995a5173e68b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.calendar.CalendarView.TAG = &quot;CalendarView&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The tag. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5bdd9c6bfcca7a3ba6b5919a3961dfa5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.calendar.CalendarView.width = 320</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The width. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/calendar/<a class="el" href="_calendar_view_8java.html">CalendarView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

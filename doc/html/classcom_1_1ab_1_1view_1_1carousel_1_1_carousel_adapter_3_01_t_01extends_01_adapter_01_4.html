@@ -1,0 +1,2683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1carousel.html">carousel</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html">CarouselAdapter< T extends Adapter ></a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pac-static-attribs">静态包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.png" usemap="#com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;_map" alt=""/>
+  <map id="com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;_map" name="com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;_map">
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_adapter_context_menu_info.html" alt="com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.AdapterContextMenuInfo" shape="rect" coords="0,112,512,136"/>
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_adapter_data_set_observer.html" alt="com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.AdapterDataSetObserver" shape="rect" coords="522,112,1034,136"/>
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_selection_notifier.html" alt="com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.SelectionNotifier" shape="rect" coords="1044,112,1556,136"/>
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_selection_notifier.html" alt="com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.SelectionNotifier" shape="rect" coords="1566,112,2078,136"/>
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_spinner.html" alt="com.ab.view.carousel.CarouselSpinner" shape="rect" coords="2088,112,2600,136"/>
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_image_view.html" alt="com.ab.view.carousel.CarouselImageView" shape="rect" coords="1827,168,2339,192"/>
+<area href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_view.html" alt="com.ab.view.carousel.CarouselView" shape="rect" coords="2349,168,2861,192"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_adapter_context_menu_info.html">AdapterContextMenuInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_adapter_data_set_observer.html">AdapterDataSetObserver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_on_item_click_listener.html">OnItemClickListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_on_item_long_click_listener.html">OnItemLongClickListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_on_item_selected_listener.html">OnItemSelectedListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_selection_notifier.html">SelectionNotifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af498b56242f4c0960dc9731176f7dae2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#af498b56242f4c0960dc9731176f7dae2">CarouselAdapter</a> (Context context)</td></tr>
+<tr class="separator:af498b56242f4c0960dc9731176f7dae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683c116b9d7db129f114036821645f9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a683c116b9d7db129f114036821645f9b">CarouselAdapter</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:a683c116b9d7db129f114036821645f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aece8922588f76cdf177afbfb664568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a9aece8922588f76cdf177afbfb664568">CarouselAdapter</a> (Context context, AttributeSet attrs, int defStyle)</td></tr>
+<tr class="separator:a9aece8922588f76cdf177afbfb664568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa467e559af6b9805b73a06e79af70c31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aa467e559af6b9805b73a06e79af70c31">setOnItemClickListener</a> (OnItemClickListener listener)</td></tr>
+<tr class="separator:aa467e559af6b9805b73a06e79af70c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c1e7b9709cd56d0db299d22e4f949b"><td class="memItemLeft" align="right" valign="top">final OnItemClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a36c1e7b9709cd56d0db299d22e4f949b">getOnItemClickListener</a> ()</td></tr>
+<tr class="separator:a36c1e7b9709cd56d0db299d22e4f949b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74acbcf268b7b4f3806c7e899ecdbc00"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a74acbcf268b7b4f3806c7e899ecdbc00">performItemClick</a> (View view, int position, long id)</td></tr>
+<tr class="separator:a74acbcf268b7b4f3806c7e899ecdbc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ae741a84afc9578458818d9df4a364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a42ae741a84afc9578458818d9df4a364">setOnItemLongClickListener</a> (OnItemLongClickListener listener)</td></tr>
+<tr class="separator:a42ae741a84afc9578458818d9df4a364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b0ab6c69575057f8e1a77b5dc715d0"><td class="memItemLeft" align="right" valign="top">final OnItemLongClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a04b0ab6c69575057f8e1a77b5dc715d0">getOnItemLongClickListener</a> ()</td></tr>
+<tr class="separator:a04b0ab6c69575057f8e1a77b5dc715d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a16a84d17710053f1200b4574ea4ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a36a16a84d17710053f1200b4574ea4ac">setOnItemSelectedListener</a> (OnItemSelectedListener listener)</td></tr>
+<tr class="separator:a36a16a84d17710053f1200b4574ea4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f3ebdbaae93fad64b842436765d032"><td class="memItemLeft" align="right" valign="top">final OnItemSelectedListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a41f3ebdbaae93fad64b842436765d032">getOnItemSelectedListener</a> ()</td></tr>
+<tr class="separator:a41f3ebdbaae93fad64b842436765d032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba22fb9a71831e231ac2f18d0334082"><td class="memItemLeft" align="right" valign="top">abstract T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a0ba22fb9a71831e231ac2f18d0334082">getAdapter</a> ()</td></tr>
+<tr class="separator:a0ba22fb9a71831e231ac2f18d0334082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d93e01362d32f60cf1c4533f8babc9"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a64d93e01362d32f60cf1c4533f8babc9">setAdapter</a> (T adapter)</td></tr>
+<tr class="separator:a64d93e01362d32f60cf1c4533f8babc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6314071d8026541b951d7e85214305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a4f6314071d8026541b951d7e85214305">addView</a> (View child)</td></tr>
+<tr class="separator:a4f6314071d8026541b951d7e85214305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16b8b04ba4e4dd2694f4b86335b64b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ab16b8b04ba4e4dd2694f4b86335b64b5">addView</a> (View child, int index)</td></tr>
+<tr class="separator:ab16b8b04ba4e4dd2694f4b86335b64b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af819b07bf449a6d1d100fa7345215070"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#af819b07bf449a6d1d100fa7345215070">addView</a> (View child, LayoutParams params)</td></tr>
+<tr class="separator:af819b07bf449a6d1d100fa7345215070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca249e3f7247869e557d6619553be92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a7ca249e3f7247869e557d6619553be92">addView</a> (View child, int index, LayoutParams params)</td></tr>
+<tr class="separator:a7ca249e3f7247869e557d6619553be92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae09011f11faab03f5d6c1ba9a39b66e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aae09011f11faab03f5d6c1ba9a39b66e">removeView</a> (View child)</td></tr>
+<tr class="separator:aae09011f11faab03f5d6c1ba9a39b66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64485686d407e0c0d2e125e1d0d315ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a64485686d407e0c0d2e125e1d0d315ad">removeViewAt</a> (int index)</td></tr>
+<tr class="separator:a64485686d407e0c0d2e125e1d0d315ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9949870d690650250db84ffeb740b6d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a9949870d690650250db84ffeb740b6d5">removeAllViews</a> ()</td></tr>
+<tr class="separator:a9949870d690650250db84ffeb740b6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2c527b62a23639ea74180ceed22e6c"><td class="memItemLeft" align="right" valign="top">.CapturedViewProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aeb2c527b62a23639ea74180ceed22e6c">getSelectedItemPosition</a> ()</td></tr>
+<tr class="separator:aeb2c527b62a23639ea74180ceed22e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4b679e94467fe27eb49d0a5f7b9a66"><td class="memItemLeft" align="right" valign="top">.CapturedViewProperty long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aff4b679e94467fe27eb49d0a5f7b9a66">getSelectedItemId</a> ()</td></tr>
+<tr class="separator:aff4b679e94467fe27eb49d0a5f7b9a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631cc68631653cb80390831b595f421f"><td class="memItemLeft" align="right" valign="top">abstract View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a631cc68631653cb80390831b595f421f">getSelectedView</a> ()</td></tr>
+<tr class="separator:a631cc68631653cb80390831b595f421f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ff0f7b69001f73405ef7e5de619af1"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#af9ff0f7b69001f73405ef7e5de619af1">getSelectedItem</a> ()</td></tr>
+<tr class="separator:af9ff0f7b69001f73405ef7e5de619af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349a621e0e9a909615beb006b6ab0c2c"><td class="memItemLeft" align="right" valign="top">.CapturedViewProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a349a621e0e9a909615beb006b6ab0c2c">getCount</a> ()</td></tr>
+<tr class="separator:a349a621e0e9a909615beb006b6ab0c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14842dd4b010fcda28b06fc08dcc4771"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a14842dd4b010fcda28b06fc08dcc4771">getPositionForView</a> (View view)</td></tr>
+<tr class="separator:a14842dd4b010fcda28b06fc08dcc4771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1e35aa0b2559afdf7c8a9616d754d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a4c1e35aa0b2559afdf7c8a9616d754d5">getFirstVisiblePosition</a> ()</td></tr>
+<tr class="separator:a4c1e35aa0b2559afdf7c8a9616d754d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26fafe34d40f6c1e015520d77d1f2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a6c26fafe34d40f6c1e015520d77d1f2c">getLastVisiblePosition</a> ()</td></tr>
+<tr class="separator:a6c26fafe34d40f6c1e015520d77d1f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d9abbfdef24e50e110a8dd1637ce98d"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a1d9abbfdef24e50e110a8dd1637ce98d">setSelection</a> (int position)</td></tr>
+<tr class="separator:a1d9abbfdef24e50e110a8dd1637ce98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf4dc73b24c7b28d98b78f229c343a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abbf4dc73b24c7b28d98b78f229c343a2">setEmptyView</a> (View emptyView)</td></tr>
+<tr class="separator:abbf4dc73b24c7b28d98b78f229c343a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67503252cd663374e8af71a2575ea312"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a67503252cd663374e8af71a2575ea312">getEmptyView</a> ()</td></tr>
+<tr class="separator:a67503252cd663374e8af71a2575ea312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e1b8b0ed3beff92ab494cf421e7052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a31e1b8b0ed3beff92ab494cf421e7052">setFocusable</a> (boolean focusable)</td></tr>
+<tr class="separator:a31e1b8b0ed3beff92ab494cf421e7052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc8e20561a238d95adfcf0f0a9a25f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a1bc8e20561a238d95adfcf0f0a9a25f1">setFocusableInTouchMode</a> (boolean focusable)</td></tr>
+<tr class="separator:a1bc8e20561a238d95adfcf0f0a9a25f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00074a237d0d58226f3199a65e72582c"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a00074a237d0d58226f3199a65e72582c">getItemAtPosition</a> (int position)</td></tr>
+<tr class="separator:a00074a237d0d58226f3199a65e72582c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc726764ed91c8d2442861f7caff6261"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abc726764ed91c8d2442861f7caff6261">getItemIdAtPosition</a> (int position)</td></tr>
+<tr class="separator:abc726764ed91c8d2442861f7caff6261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2995f8270cc6d219a176817fc531e86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ae2995f8270cc6d219a176817fc531e86">setOnClickListener</a> (OnClickListener l)</td></tr>
+<tr class="separator:ae2995f8270cc6d219a176817fc531e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8010bd1ba7f92d77118af4f0f47a4e97"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a8010bd1ba7f92d77118af4f0f47a4e97">dispatchPopulateAccessibilityEvent</a> (AccessibilityEvent event)</td></tr>
+<tr class="separator:a8010bd1ba7f92d77118af4f0f47a4e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a5999a935aabfa507b7de87b98108ab1c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a5999a935aabfa507b7de87b98108ab1c">ITEM_VIEW_TYPE_IGNORE</a> = -1</td></tr>
+<tr class="separator:a5999a935aabfa507b7de87b98108ab1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ceaa115e08f2a44fb837240986d144"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a43ceaa115e08f2a44fb837240986d144">ITEM_VIEW_TYPE_HEADER_OR_FOOTER</a> = -2</td></tr>
+<tr class="separator:a43ceaa115e08f2a44fb837240986d144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0c5c97d372b39eec393a30c9775f7c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a> = -1</td></tr>
+<tr class="separator:abe0c5c97d372b39eec393a30c9775f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32dfed305f8556d41df1f4f95a3d0642"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a> = Long.MIN_VALUE</td></tr>
+<tr class="separator:a32dfed305f8556d41df1f4f95a3d0642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a9e01f809fae8512ca51bc28d524b8806"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a9e01f809fae8512ca51bc28d524b8806">onLayout</a> (boolean changed, int left, int top, int right, int bottom)</td></tr>
+<tr class="separator:a9e01f809fae8512ca51bc28d524b8806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35bc04576a255938fd1e9f7e235e507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#af35bc04576a255938fd1e9f7e235e507">dispatchSaveInstanceState</a> (SparseArray&lt; Parcelable &gt; container)</td></tr>
+<tr class="separator:af35bc04576a255938fd1e9f7e235e507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c39b3945f7cb5934324725f4761dad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a45c39b3945f7cb5934324725f4761dad">dispatchRestoreInstanceState</a> (SparseArray&lt; Parcelable &gt; container)</td></tr>
+<tr class="separator:a45c39b3945f7cb5934324725f4761dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c44c80f6ba88143b0efdc616b9e499"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a17c44c80f6ba88143b0efdc616b9e499">canAnimate</a> ()</td></tr>
+<tr class="separator:a17c44c80f6ba88143b0efdc616b9e499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a32a4f60c3b004d95488731ed2a4f6f85"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32a4f60c3b004d95488731ed2a4f6f85">isInFilterMode</a> ()</td></tr>
+<tr class="separator:a32a4f60c3b004d95488731ed2a4f6f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3cf8b4f43de2f65c64c4d94429f7d6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ac3cf8b4f43de2f65c64c4d94429f7d6a">checkFocus</a> ()</td></tr>
+<tr class="separator:ac3cf8b4f43de2f65c64c4d94429f7d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e027a671182990e2339c3e066987c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ae5e027a671182990e2339c3e066987c9">selectionChanged</a> ()</td></tr>
+<tr class="separator:ae5e027a671182990e2339c3e066987c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e098c9c9e057f04bd7e6f3456501005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a2e098c9c9e057f04bd7e6f3456501005">handleDataChanged</a> ()</td></tr>
+<tr class="separator:a2e098c9c9e057f04bd7e6f3456501005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9aa973566a8416467bb71db773b031c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ac9aa973566a8416467bb71db773b031c">checkSelectionChanged</a> ()</td></tr>
+<tr class="separator:ac9aa973566a8416467bb71db773b031c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85cf8aa120addb18e9f8a53b6f5663e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ad85cf8aa120addb18e9f8a53b6f5663e">findSyncPosition</a> ()</td></tr>
+<tr class="separator:ad85cf8aa120addb18e9f8a53b6f5663e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96c62df56bc884d9db65020b63b1ed4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aa96c62df56bc884d9db65020b63b1ed4">lookForSelectablePosition</a> (int position, boolean lookDown)</td></tr>
+<tr class="separator:aa96c62df56bc884d9db65020b63b1ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac19ea48eb98714aee1a3df3cbc09f09a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ac19ea48eb98714aee1a3df3cbc09f09a">setSelectedPositionInt</a> (int position)</td></tr>
+<tr class="separator:ac19ea48eb98714aee1a3df3cbc09f09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8423ac06ce0dbcb8c624ae22aebc61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aac8423ac06ce0dbcb8c624ae22aebc61">setNextSelectedPositionInt</a> (int position)</td></tr>
+<tr class="separator:aac8423ac06ce0dbcb8c624ae22aebc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575a3af1858e3f8d3c5551b13e1e8ac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a575a3af1858e3f8d3c5551b13e1e8ac1">rememberSyncState</a> ()</td></tr>
+<tr class="separator:a575a3af1858e3f8d3c5551b13e1e8ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:ae5bc7fb78ccb475fbb9802a0b23217f4"><td class="memItemLeft" align="right" valign="top">.ExportedProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ae5bc7fb78ccb475fbb9802a0b23217f4">mFirstPosition</a> = 0</td></tr>
+<tr class="separator:ae5bc7fb78ccb475fbb9802a0b23217f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cacbb1d1ace770cd5bcdf5378cc2c3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a7cacbb1d1ace770cd5bcdf5378cc2c3d">mSpecificTop</a></td></tr>
+<tr class="separator:a7cacbb1d1ace770cd5bcdf5378cc2c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdede2dfe068b3f3696d457c3eb6d6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a0fdede2dfe068b3f3696d457c3eb6d6b">mSyncPosition</a></td></tr>
+<tr class="separator:a0fdede2dfe068b3f3696d457c3eb6d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e2990b763211d2e9edce276969fa9f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ac0e2990b763211d2e9edce276969fa9f">mSyncRowId</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td></tr>
+<tr class="separator:ac0e2990b763211d2e9edce276969fa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913b89f53114ed9ccbde4ea9288d487d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a913b89f53114ed9ccbde4ea9288d487d">mSyncHeight</a></td></tr>
+<tr class="separator:a913b89f53114ed9ccbde4ea9288d487d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda38fc1dcb2b66a2b72938848fd4edb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#adda38fc1dcb2b66a2b72938848fd4edb">mNeedSync</a> = false</td></tr>
+<tr class="separator:adda38fc1dcb2b66a2b72938848fd4edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5862e816227f91470beff327325e49a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a5862e816227f91470beff327325e49a4">mSyncMode</a></td></tr>
+<tr class="separator:a5862e816227f91470beff327325e49a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2795d7fce6223ccd5899bb589d1dd0"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a9c2795d7fce6223ccd5899bb589d1dd0">mInLayout</a> = false</td></tr>
+<tr class="separator:a9c2795d7fce6223ccd5899bb589d1dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f4445bf4ef1e7a1d166e68ac60ffcd"><td class="memItemLeft" align="right" valign="top">OnItemSelectedListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ae9f4445bf4ef1e7a1d166e68ac60ffcd">mOnItemSelectedListener</a></td></tr>
+<tr class="separator:ae9f4445bf4ef1e7a1d166e68ac60ffcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77931f15304327f821d5c81d935db936"><td class="memItemLeft" align="right" valign="top">OnItemClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a77931f15304327f821d5c81d935db936">mOnItemClickListener</a></td></tr>
+<tr class="separator:a77931f15304327f821d5c81d935db936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad47fb584ed67e32ed7d8a8345cd3de"><td class="memItemLeft" align="right" valign="top">OnItemLongClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a1ad47fb584ed67e32ed7d8a8345cd3de">mOnItemLongClickListener</a></td></tr>
+<tr class="separator:a1ad47fb584ed67e32ed7d8a8345cd3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6735847cd81ed838c53b8070a53c88a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#af6735847cd81ed838c53b8070a53c88a">mDataChanged</a></td></tr>
+<tr class="separator:af6735847cd81ed838c53b8070a53c88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce6b9b46e027f5e7f646142611befea"><td class="memItemLeft" align="right" valign="top">.ExportedProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a9ce6b9b46e027f5e7f646142611befea">mNextSelectedPosition</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a></td></tr>
+<tr class="separator:a9ce6b9b46e027f5e7f646142611befea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c614104951ec950a9ec7e8c3911695"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a76c614104951ec950a9ec7e8c3911695">mNextSelectedRowId</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td></tr>
+<tr class="separator:a76c614104951ec950a9ec7e8c3911695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a5c9a274cde885bc1ca87dc60a9c48"><td class="memItemLeft" align="right" valign="top">.ExportedProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ad7a5c9a274cde885bc1ca87dc60a9c48">mSelectedPosition</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a></td></tr>
+<tr class="separator:ad7a5c9a274cde885bc1ca87dc60a9c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2eea984e135d4cac99e65783976979e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ab2eea984e135d4cac99e65783976979e">mSelectedRowId</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td></tr>
+<tr class="separator:ab2eea984e135d4cac99e65783976979e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2e679fb7887d4fc9cfcd34ded03e3f"><td class="memItemLeft" align="right" valign="top">.ExportedProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a7b2e679fb7887d4fc9cfcd34ded03e3f">mItemCount</a></td></tr>
+<tr class="separator:a7b2e679fb7887d4fc9cfcd34ded03e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69502aea02e21c9fc46a9fd4a31341e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ab69502aea02e21c9fc46a9fd4a31341e">mOldItemCount</a></td></tr>
+<tr class="separator:ab69502aea02e21c9fc46a9fd4a31341e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307b0bca6dd5842d87cf6c1b6dfa8c04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a307b0bca6dd5842d87cf6c1b6dfa8c04">mOldSelectedPosition</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a></td></tr>
+<tr class="separator:a307b0bca6dd5842d87cf6c1b6dfa8c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac25a86158e91cdefddf644c7098aba2e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ac25a86158e91cdefddf644c7098aba2e">mOldSelectedRowId</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td></tr>
+<tr class="separator:ac25a86158e91cdefddf644c7098aba2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5dfbb7a8d9a984608a088ec4d0c315"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aea5dfbb7a8d9a984608a088ec4d0c315">mBlockLayoutRequests</a> = false</td></tr>
+<tr class="separator:aea5dfbb7a8d9a984608a088ec4d0c315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-attribs"></a>
+静态包属性</h2></td></tr>
+<tr class="memitem:ad3cd403ceb747a04c8dbaf8f68035dd9"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ad3cd403ceb747a04c8dbaf8f68035dd9">SYNC_SELECTED_POSITION</a> = 0</td></tr>
+<tr class="separator:ad3cd403ceb747a04c8dbaf8f68035dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabfd78504843fb322bfb31c1d6002974"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aabfd78504843fb322bfb31c1d6002974">SYNC_FIRST_POSITION</a> = 1</td></tr>
+<tr class="separator:aabfd78504843fb322bfb31c1d6002974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3391d61a7e80348c86ca7108d55e3195"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a3391d61a7e80348c86ca7108d55e3195">SYNC_MAX_DURATION_MILLIS</a> = 100</td></tr>
+<tr class="separator:a3391d61a7e80348c86ca7108d55e3195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a0a6977c023a4d245a23c246343e56c45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a0a6977c023a4d245a23c246343e56c45">updateEmptyStatus</a> (boolean empty)</td></tr>
+<tr class="separator:a0a6977c023a4d245a23c246343e56c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1ff98a108a7bb9478d4ec4a4e75e05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#adb1ff98a108a7bb9478d4ec4a4e75e05">fireOnSelected</a> ()</td></tr>
+<tr class="separator:adb1ff98a108a7bb9478d4ec4a4e75e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a3143c2d56645c37e161c615bb57a98da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a3143c2d56645c37e161c615bb57a98da">mLayoutHeight</a></td></tr>
+<tr class="separator:a3143c2d56645c37e161c615bb57a98da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fd0bca6507b6ffb2d1728f01378f67"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a85fd0bca6507b6ffb2d1728f01378f67">mEmptyView</a></td></tr>
+<tr class="separator:a85fd0bca6507b6ffb2d1728f01378f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28df1aeb284b5e40c3aef36abe17f6f6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a28df1aeb284b5e40c3aef36abe17f6f6">mDesiredFocusableState</a></td></tr>
+<tr class="separator:a28df1aeb284b5e40c3aef36abe17f6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39614992c62bf093fa8213aa4fd717d3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a39614992c62bf093fa8213aa4fd717d3">mDesiredFocusableInTouchModeState</a></td></tr>
+<tr class="separator:a39614992c62bf093fa8213aa4fd717d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09cdd227a94643e9355cd66a635cdab7"><td class="memItemLeft" align="right" valign="top">SelectionNotifier&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a09cdd227a94643e9355cd66a635cdab7">mSelectionNotifier</a></td></tr>
+<tr class="separator:a09cdd227a94643e9355cd66a635cdab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class CarouselAdapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;T&gt;</td><td>the generic type </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="af498b56242f4c0960dc9731176f7dae2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.CarouselAdapter </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new carousel adapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a683c116b9d7db129f114036821645f9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.CarouselAdapter </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new carousel adapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9aece8922588f76cdf177afbfb664568"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.CarouselAdapter </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new carousel adapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">attrs</td><td>the attrs </td></tr>
+    <tr><td class="paramname">defStyle</td><td>the def style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a4f6314071d8026541b951d7e85214305"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab16b8b04ba4e4dd2694f4b86335b64b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">index</td><td>Ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af819b07bf449a6d1d100fa7345215070"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayoutParams&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">params</td><td>Ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ca249e3f7247869e557d6619553be92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayoutParams&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">index</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">params</td><td>Ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a17c44c80f6ba88143b0efdc616b9e499"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.canAnimate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.ViewGroup::canAnimate() </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:34 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3cf8b4f43de2f65c64c4d94429f7d6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.checkFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check focus. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9aa973566a8416467bb71db773b031c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.checkSelectionChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check selection changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8010bd1ba7f92d77118af4f0f47a4e97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.dispatchPopulateAccessibilityEvent </td>
+          <td>(</td>
+          <td class="paramtype">AccessibilityEvent&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.ViewGroup::dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a45c39b3945f7cb5934324725f4761dad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.dispatchRestoreInstanceState </td>
+          <td>(</td>
+          <td class="paramtype">SparseArray&lt; Parcelable &gt;&#160;</td>
+          <td class="paramname"><em>container</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override to prevent thawing of any views created by the adapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container</td><td>the container </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af35bc04576a255938fd1e9f7e235e507"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.dispatchSaveInstanceState </td>
+          <td>(</td>
+          <td class="paramtype">SparseArray&lt; Parcelable &gt;&#160;</td>
+          <td class="paramname"><em>container</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override to prevent freezing of any views created by the adapter.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container</td><td>the container </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad85cf8aa120addb18e9f8a53b6f5663e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.findSyncPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Searches the adapter for a position matching mSyncRowId. The search starts at mSyncPosition and then alternates between moving up and moving down until 1) we find the right position, or 2) we run out of time, or 3) we have looked at every position</p>
+<dl class="section return"><dt>返回</dt><dd>Position of the row that matches mSyncRowId, or <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a> if it can't be found </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adb1ff98a108a7bb9478d4ec4a4e75e05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.fireOnSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fire on selected. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ba22fb9a71831e231ac2f18d0334082"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract T com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getAdapter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the adapter currently associated with this widget.</p>
+<dl class="section return"><dt>返回</dt><dd>The adapter used to provide this view's content. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a349a621e0e9a909615beb006b6ab0c2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.CapturedViewProperty int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the count.</p>
+<dl class="section return"><dt>返回</dt><dd>The number of items owned by the Adapter associated with this CarouselAdapter. (This is the number of data items, which may be larger than the number of visible view.) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a67503252cd663374e8af71a2575ea312"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getEmptyView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When the current adapter is empty, the CarouselAdapter can display a special view call the empty view. The empty view is used to provide feedback to the user that no data is available in this CarouselAdapter.</p>
+<dl class="section return"><dt>返回</dt><dd>The view to show if the adapter is empty. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c1e35aa0b2559afdf7c8a9616d754d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getFirstVisiblePosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the position within the adapter's data set for the first item displayed on screen.</p>
+<dl class="section return"><dt>返回</dt><dd>The position within the adapter's data set </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00074a237d0d58226f3199a65e72582c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getItemAtPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the data associated with the specified position in the list.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Which data to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The data associated with the specified position in the list </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc726764ed91c8d2442861f7caff6261"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getItemIdAtPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the item id at position.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the item id at position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c26fafe34d40f6c1e015520d77d1f2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getLastVisiblePosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the position within the adapter's data set for the last item displayed on screen.</p>
+<dl class="section return"><dt>返回</dt><dd>The position within the adapter's data set </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a36c1e7b9709cd56d0db299d22e4f949b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final OnItemClickListener com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getOnItemClickListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the on item click listener.</p>
+<dl class="section return"><dt>返回</dt><dd>The callback to be invoked with an item in this CarouselAdapter has been clicked, or null id no callback has been set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a04b0ab6c69575057f8e1a77b5dc715d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final OnItemLongClickListener com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getOnItemLongClickListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the on item long click listener.</p>
+<dl class="section return"><dt>返回</dt><dd>The callback to be invoked with an item in this CarouselAdapter has been clicked and held, or null id no callback as been set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a41f3ebdbaae93fad64b842436765d032"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final OnItemSelectedListener com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getOnItemSelectedListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the on item selected listener.</p>
+<dl class="section return"><dt>返回</dt><dd>the on item selected listener </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a14842dd4b010fcda28b06fc08dcc4771"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getPositionForView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position within the adapter's data set for the view, where view is a an adapter item or a descendant of an adapter item.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>an adapter item, or a descendant of an adapter item. This must be visible in this CarouselAdapter at the time of the call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the position within the adapter's data set of the view, or <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a> if the view does not correspond to a list item (or it is not currently visible). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af9ff0f7b69001f73405ef7e5de619af1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getSelectedItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the selected item.</p>
+<dl class="section return"><dt>返回</dt><dd>The data corresponding to the currently selected item, or null if there is nothing selected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aff4b679e94467fe27eb49d0a5f7b9a66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.CapturedViewProperty long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getSelectedItemId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the selected item id.</p>
+<dl class="section return"><dt>返回</dt><dd>The id corresponding to the currently selected item, or <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a> if nothing is selected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb2c527b62a23639ea74180ceed22e6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.CapturedViewProperty int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getSelectedItemPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the position of the currently selected item within the adapter's data set.</p>
+<dl class="section return"><dt>返回</dt><dd>int Position (starting at 0), or <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a> if there is nothing selected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a631cc68631653cb80390831b595f421f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract View com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.getSelectedView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the selected view.</p>
+<dl class="section return"><dt>返回</dt><dd>The view corresponding to the currently selected item, or null if nothing is selected </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e098c9c9e057f04bd7e6f3456501005"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.handleDataChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle data changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a32a4f60c3b004d95488731ed2a4f6f85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.isInFilterMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates whether this view is in filter mode. Filter mode can for instance be enabled by a user when typing on the keyboard.</p>
+<dl class="section return"><dt>返回</dt><dd>True if the view is in filter mode, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa96c62df56bc884d9db65020b63b1ed4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.lookForSelectablePosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>lookDown</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find a position that can be selected (i.e., is not a separator).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The starting position to look at. </td></tr>
+    <tr><td class="paramname">lookDown</td><td>Whether to look down for other positions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The next selectable position starting at position and then searching either up or down. Returns <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a> if nothing can be found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e01f809fae8512ca51bc28d524b8806"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.onLayout </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>changed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">changed</td><td>the changed </td></tr>
+    <tr><td class="paramname">left</td><td>the left </td></tr>
+    <tr><td class="paramname">top</td><td>the top </td></tr>
+    <tr><td class="paramname">right</td><td>the right </td></tr>
+    <tr><td class="paramname">bottom</td><td>the bottom </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.ViewGroup::onLayout(boolean, int, int, int, int) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a74acbcf268b7b4f3806c7e899ecdbc00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.performItemClick </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Call the <a class="el" href="interfacecom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_on_item_click_listener.html">OnItemClickListener</a>, if it is defined.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>The view within the CarouselAdapter that was clicked. </td></tr>
+    <tr><td class="paramname">position</td><td>The position of the view in the adapter. </td></tr>
+    <tr><td class="paramname">id</td><td>The row id of the item that was clicked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if there was an assigned <a class="el" href="interfacecom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4_1_1_on_item_click_listener.html">OnItemClickListener</a> that was called, false otherwise is returned. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a575a3af1858e3f8d3c5551b13e1e8ac1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.rememberSyncState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remember enough information to restore the screen state when the data has changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9949870d690650250db84ffeb740b6d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.removeAllViews </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called. </p>
+
+</div>
+</div>
+<a class="anchor" id="aae09011f11faab03f5d6c1ba9a39b66e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.removeView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a64485686d407e0c0d2e125e1d0d315ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.removeViewAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5e027a671182990e2339c3e066987c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.selectionChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Selection changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a64d93e01362d32f60cf1c4533f8babc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setAdapter </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>adapter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the adapter that provides the data and the views to represent the data in this widget.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adapter</td><td>The adapter to use to create this view's content. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abbf4dc73b24c7b28d98b78f229c343a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setEmptyView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>emptyView</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the view to show if the adapter is empty.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emptyView</td><td>the new empty view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a31e1b8b0ed3beff92ab494cf421e7052"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setFocusable </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>focusable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">focusable</td><td>the new focusable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::setFocusable(boolean) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1bc8e20561a238d95adfcf0f0a9a25f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setFocusableInTouchMode </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>focusable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">focusable</td><td>the new focusable in touch mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::setFocusableInTouchMode(boolean) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac8423ac06ce0dbcb8c624ae22aebc61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setNextSelectedPositionInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Utility to keep mNextSelectedPosition and mNextSelectedRowId in sync.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Intended value for mSelectedPosition the next time we go through layout </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae2995f8270cc6d219a176817fc531e86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setOnClickListener </td>
+          <td>(</td>
+          <td class="paramtype">OnClickListener&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：TODO.</p>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>the new on click listener </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>android.view.View::setOnClickListener(android.view.View.OnClickListener) </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>: amsoft.cn </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-11-28 上午11:14:33 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa467e559af6b9805b73a06e79af70c31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setOnItemClickListener </td>
+          <td>(</td>
+          <td class="paramtype">OnItemClickListener&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback to be invoked when an item in this CarouselAdapter has been clicked.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The callback that will be invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a42ae741a84afc9578458818d9df4a364"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setOnItemLongClickListener </td>
+          <td>(</td>
+          <td class="paramtype">OnItemLongClickListener&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback to be invoked when an item in this CarouselAdapter has been clicked and held.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The callback that will run </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a36a16a84d17710053f1200b4574ea4ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setOnItemSelectedListener </td>
+          <td>(</td>
+          <td class="paramtype">OnItemSelectedListener&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback to be invoked when an item in this CarouselAdapter has been selected.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The callback that will run </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac19ea48eb98714aee1a3df3cbc09f09a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setSelectedPositionInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Utility to keep mSelectedPosition and mSelectedRowId in sync.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Our current position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1d9abbfdef24e50e110a8dd1637ce98d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.setSelection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the currently selected item. To support accessibility subclasses that override this method must invoke the overriden super method first.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Index (starting at 0) of the data item to be selected. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a6977c023a4d245a23c246343e56c45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.updateEmptyStatus </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>empty</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update the status of the list based on the empty parameter. If empty is true and we have an empty view, display it. In all the other cases, make sure that the listview is VISIBLE and that the empty view is GONE (if it's not null).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">empty</td><td>the empty </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="abe0c5c97d372b39eec393a30c9775f7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.INVALID_POSITION = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents an invalid position. All valid positions are in the range 0 to 1 less than the number of items in the current adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="a32dfed305f8556d41df1f4f95a3d0642"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.INVALID_ROW_ID = Long.MIN_VALUE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents an empty or invalid row id. </p>
+
+</div>
+</div>
+<a class="anchor" id="a43ceaa115e08f2a44fb837240986d144"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.ITEM_VIEW_TYPE_HEADER_OR_FOOTER = -2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item view type returned by <a class="el" href="">Adapter#getItemViewType(int)</a> when the item is a header or footer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5999a935aabfa507b7de87b98108ab1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.ITEM_VIEW_TYPE_IGNORE = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item view type returned by <a class="el" href="">Adapter#getItemViewType(int)</a> when the adapter does not want the item's view recycled. </p>
+
+</div>
+</div>
+<a class="anchor" id="aea5dfbb7a8d9a984608a088ec4d0c315"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mBlockLayoutRequests = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When set to true, calls to requestLayout() will not propagate up the parent hierarchy. This is used to layout the children during a layout pass. </p>
+
+</div>
+</div>
+<a class="anchor" id="af6735847cd81ed838c53b8070a53c88a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mDataChanged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>True if the data has changed since the last layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a39614992c62bf093fa8213aa4fd717d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mDesiredFocusableInTouchModeState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m desired focusable in touch mode state. </p>
+
+</div>
+</div>
+<a class="anchor" id="a28df1aeb284b5e40c3aef36abe17f6f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mDesiredFocusableState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates what focusable state is requested when calling <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a31e1b8b0ed3beff92ab494cf421e7052">setFocusable()</a>. In addition to this, this view has other criteria for actually determining the focusable state (such as whether its empty or the text filter is shown).</p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a31e1b8b0ed3beff92ab494cf421e7052">setFocusable(boolean)</a> </dd>
+<dd>
+<a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ac3cf8b4f43de2f65c64c4d94429f7d6a">checkFocus()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85fd0bca6507b6ffb2d1728f01378f67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mEmptyView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>View to show if there are no items to show. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae5bc7fb78ccb475fbb9802a0b23217f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mFirstPosition = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position of the first child displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9c2795d7fce6223ccd5899bb589d1dd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mInLayout = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates that this view is currently being laid out. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7b2e679fb7887d4fc9cfcd34ded03e3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mItemCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of items in the current adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3143c2d56645c37e161c615bb57a98da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mLayoutHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Our height after the last layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="adda38fc1dcb2b66a2b72938848fd4edb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mNeedSync = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>True if we need to sync to mSyncRowId. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ce6b9b46e027f5e7f646142611befea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mNextSelectedPosition = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position within the adapter's data set of the item to select during the next layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a76c614104951ec950a9ec7e8c3911695"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mNextSelectedRowId = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item id of the item to select during the next layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab69502aea02e21c9fc46a9fd4a31341e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mOldItemCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of items in the adapter before a data changed event occured. </p>
+
+</div>
+</div>
+<a class="anchor" id="a307b0bca6dd5842d87cf6c1b6dfa8c04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mOldSelectedPosition = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The last selected position we used when notifying. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac25a86158e91cdefddf644c7098aba2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mOldSelectedRowId = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The id of the last selected position we used when notifying. </p>
+
+</div>
+</div>
+<a class="anchor" id="a77931f15304327f821d5c81d935db936"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnItemClickListener com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mOnItemClickListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The listener that receives notifications when an item is clicked. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1ad47fb584ed67e32ed7d8a8345cd3de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnItemLongClickListener com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mOnItemLongClickListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The listener that receives notifications when an item is long clicked. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9f4445bf4ef1e7a1d166e68ac60ffcd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnItemSelectedListener com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mOnItemSelectedListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The listener that receives notifications when an item is selected. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7a5c9a274cde885bc1ca87dc60a9c48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSelectedPosition = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#abe0c5c97d372b39eec393a30c9775f7c">INVALID_POSITION</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position within the adapter's data set of the currently selected item. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2eea984e135d4cac99e65783976979e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSelectedRowId = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item id of the currently selected item. </p>
+
+</div>
+</div>
+<a class="anchor" id="a09cdd227a94643e9355cd66a635cdab7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SelectionNotifier com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSelectionNotifier</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m selection notifier. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7cacbb1d1ace770cd5bcdf5378cc2c3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSpecificTop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The offset in pixels from the top of the CarouselAdapter to the top of the view to select during the next layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a913b89f53114ed9ccbde4ea9288d487d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSyncHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Height of the view when mSyncPosition and mSyncRowId where set. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5862e816227f91470beff327325e49a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSyncMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates whether to sync based on the selection or position. Possible values are <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ad3cd403ceb747a04c8dbaf8f68035dd9">SYNC_SELECTED_POSITION</a> or <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#aabfd78504843fb322bfb31c1d6002974">SYNC_FIRST_POSITION</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0fdede2dfe068b3f3696d457c3eb6d6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSyncPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Position from which to start looking for mSyncRowId. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac0e2990b763211d2e9edce276969fa9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.mSyncRowId = <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#a32dfed305f8556d41df1f4f95a3d0642">INVALID_ROW_ID</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Row id to look for when data has changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="aabfd78504843fb322bfb31c1d6002974"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.SYNC_FIRST_POSITION = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sync based on the first child displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3391d61a7e80348c86ca7108d55e3195"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.SYNC_MAX_DURATION_MILLIS = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum amount of time to spend in <a class="el" href="classcom_1_1ab_1_1view_1_1carousel_1_1_carousel_adapter_3_01_t_01extends_01_adapter_01_4.html#ad85cf8aa120addb18e9f8a53b6f5663e">findSyncPosition()</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad3cd403ceb747a04c8dbaf8f68035dd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.carousel.CarouselAdapter&lt; T extends Adapter &gt;.SYNC_SELECTED_POSITION = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sync based on the selected child. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/carousel/<a class="el" href="_carousel_adapter_8java.html">CarouselAdapter.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

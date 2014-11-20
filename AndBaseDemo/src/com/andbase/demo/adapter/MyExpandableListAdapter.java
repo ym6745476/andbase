@@ -18,16 +18,16 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.ab.activity.AbActivity;
 import com.ab.download.AbDownloadProgressListener;
 import com.ab.download.AbDownloadThread;
 import com.ab.download.AbFileDownloader;
 import com.ab.download.DownFile;
+import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
-import com.ab.task.AbThread;
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbStrUtil;
+import com.ab.util.AbToastUtil;
 import com.andbase.R;
 import com.andbase.global.Constant;
 
@@ -176,7 +176,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 					public void onClick(View v) {
 						if(!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
 							//无sd卡
-							((AbActivity)mContext).showToast("没找到存储卡");
+							AbToastUtil.showToast(mContext,"没找到存储卡");
 							return;
 						}
 						
@@ -187,9 +187,9 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 				        	holder.received_progressBar.setVisibility(View.VISIBLE);
 				        	holder.operateBtn.setBackgroundResource(R.drawable.down_pause);
 				        	mDownFile.setState(Constant.downInProgress);
-				        	AbThread mAbHttpThread = new AbThread();
+				        	AbTask mAbTask = new AbTask();
 							final AbTaskItem item = new AbTaskItem();
-							item.listener = new AbTaskListener() {
+							item.setListener(new AbTaskListener() {
 
 								@Override
 								public void update() {
@@ -199,7 +199,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 								public void get() {
 									try {
 										//检查文件总长度
-										int totalLength = AbFileUtil.getContentLengthFormUrl(mDownFile.getDownUrl());
+										int totalLength = AbFileUtil.getContentLengthFromUrl(mDownFile.getDownUrl());
 										mDownFile.setTotalLength(totalLength);
 										//开始下载文件
 										AbFileDownloader loader = new AbFileDownloader(mContext,mDownFile,1);
@@ -209,8 +209,8 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 										e.printStackTrace();
 									}
 							  };
-							};
-							mAbHttpThread.execute(item);
+							});
+							mAbTask.execute(item);
 							
 				        	
 						}else if(mDownFile.getState()==Constant.downInProgress){

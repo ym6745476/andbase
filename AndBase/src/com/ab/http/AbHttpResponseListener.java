@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,40 +22,22 @@ import android.os.Message;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbHttpResponseListener.java 
  * 描述：Http响应监听器
- * @author zhaoqp
- * @date：2013-11-13 上午9:00:52
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-13 上午9:00:52
  */
-public class AbHttpResponseListener {
+public abstract class AbHttpResponseListener {
 	
-	/** The Constant TAG. */
-    private static final String TAG = "AbHttpResponseListener";
-	
-	/** The Constant SUCCESS_MESSAGE. */
-    protected static final int SUCCESS_MESSAGE = 0;
-    
-    /** The Constant FAILURE_MESSAGE. */
-    protected static final int FAILURE_MESSAGE = 1;
-    
-    /** The Constant START_MESSAGE. */
-    protected static final int START_MESSAGE = 2;
-    
-    /** The Constant FINISH_MESSAGE. */
-    protected static final int FINISH_MESSAGE = 3;
-    
-    /** The Constant PROGRESS_MESSAGE. */
-    protected static final int PROGRESS_MESSAGE = 4;
-    
-    /** The Constant RETRY_MESSAGE. */
-    protected static final int RETRY_MESSAGE = 5;
-    
     /** The handler. */
     private Handler mHandler;
     
+    /**
+     * 构造.
+     */
     public AbHttpResponseListener() {
 		super();
 	}
@@ -63,13 +45,13 @@ public class AbHttpResponseListener {
 	/**
 	 * 描述：获取数据开始.
 	 */
-    public void onStart() {};
+    public abstract void onStart();
     
     
     /**
 	 * 完成后调用，失败，成功，调用.
 	 */
-    public void onFinish() {};
+    public abstract void onFinish();
     
     /**
 	 * 重试.
@@ -77,48 +59,62 @@ public class AbHttpResponseListener {
     public void onRetry() {}
     
     /**
-	 * 描述：失败，调用.
-	 */
-    public void onFailure(int statusCode, String content,Throwable error) {}
+     * 描述：失败，调用.
+     *
+     * @param statusCode the status code
+     * @param content the content
+     * @param error the error
+     */
+    public abstract void onFailure(int statusCode, String content,Throwable error);
     
     /**
-	 * 进度.
-	 */
+     * 进度.
+     *
+     * @param bytesWritten the bytes written
+     * @param totalSize the total size
+     */
     public void onProgress(int bytesWritten, int totalSize) {}
     
     /**
      * 开始消息.
      */
     public void sendStartMessage(){
-    	sendMessage(obtainMessage(START_MESSAGE, null));
+    	sendMessage(obtainMessage(AbHttpClient.START_MESSAGE, null));
     }
     
     /**
      * 完成消息.
      */
     public void sendFinishMessage(){
-    	sendMessage(obtainMessage(FINISH_MESSAGE,null));
+    	sendMessage(obtainMessage(AbHttpClient.FINISH_MESSAGE,null));
     }
     
     /**
      * 进度消息.
+     *
+     * @param bytesWritten the bytes written
+     * @param totalSize the total size
      */
     public void sendProgressMessage(int bytesWritten, int totalSize) {
-        sendMessage(obtainMessage(PROGRESS_MESSAGE, new Object[]{bytesWritten, totalSize}));
+        sendMessage(obtainMessage(AbHttpClient.PROGRESS_MESSAGE, new Object[]{bytesWritten, totalSize}));
     }
     
     /**
      * 失败消息.
+     *
+     * @param statusCode the status code
+     * @param content the content
+     * @param error the error
      */
     public void sendFailureMessage(int statusCode,String content,Throwable error){
-    	sendMessage(obtainMessage(FAILURE_MESSAGE, new Object[]{statusCode,content, error}));
+    	sendMessage(obtainMessage(AbHttpClient.FAILURE_MESSAGE, new Object[]{statusCode,content, error}));
     }
     
     /**
      * 重试消息.
      */
     public void sendRetryMessage() {
-        sendMessage(obtainMessage(RETRY_MESSAGE, null));
+        sendMessage(obtainMessage(AbHttpClient.RETRY_MESSAGE, null));
     }
     
     /**
@@ -151,16 +147,20 @@ public class AbHttpResponseListener {
         return msg;
     }
 
+	/**
+	 * Gets the handler.
+	 *
+	 * @return the handler
+	 */
 	public Handler getHandler() {
 		return mHandler;
 	}
 
 	/**
-     * 
-     * 描述：设置Handler
-     * @param handler
-     * @throws 
-     */
+	 * 描述：设置Handler.
+	 *
+	 * @param handler the new handler
+	 */
 	public void setHandler(Handler handler) {
 		this.mHandler = handler;
 	}

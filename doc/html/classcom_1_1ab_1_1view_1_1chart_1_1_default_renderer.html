@@ -1,0 +1,3111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.DefaultRenderer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html">DefaultRenderer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.DefaultRenderer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.DefaultRenderer 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.png" usemap="#com.ab.view.chart.DefaultRenderer_map" alt=""/>
+  <map id="com.ab.view.chart.DefaultRenderer_map" name="com.ab.view.chart.DefaultRenderer_map">
+<area href="classcom_1_1ab_1_1view_1_1chart_1_1_x_y_multiple_series_renderer.html" alt="com.ab.view.chart.XYMultipleSeriesRenderer" shape="rect" coords="0,112,271,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae926199d651d61eca56063ef31d4d94d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae926199d651d61eca56063ef31d4d94d">getChartTitle</a> ()</td></tr>
+<tr class="separator:ae926199d651d61eca56063ef31d4d94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f6e986d9dbb9d7dea3ca63d0abd221"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a29f6e986d9dbb9d7dea3ca63d0abd221">setChartTitle</a> (String title)</td></tr>
+<tr class="separator:a29f6e986d9dbb9d7dea3ca63d0abd221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3fa1d1eb3e09e84a7a75e1df2ae6a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a6f3fa1d1eb3e09e84a7a75e1df2ae6a5">getChartTitleTextSize</a> ()</td></tr>
+<tr class="separator:a6f3fa1d1eb3e09e84a7a75e1df2ae6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3df96ad3de3718c062ec7944e3da0c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aa3df96ad3de3718c062ec7944e3da0c5">setChartTitleTextSize</a> (float textSize)</td></tr>
+<tr class="separator:aa3df96ad3de3718c062ec7944e3da0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc2aeaec29ba85cb050de281a859b5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aefc2aeaec29ba85cb050de281a859b5d">addSeriesRenderer</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> renderer)</td></tr>
+<tr class="separator:aefc2aeaec29ba85cb050de281a859b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3dd4711d777452fc450fc7073086578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae3dd4711d777452fc450fc7073086578">addSeriesRenderer</a> (int index, <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> renderer)</td></tr>
+<tr class="separator:ae3dd4711d777452fc450fc7073086578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ecf3a387b3ca65699a1af90e336358"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a76ecf3a387b3ca65699a1af90e336358">removeSeriesRenderer</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> renderer)</td></tr>
+<tr class="separator:a76ecf3a387b3ca65699a1af90e336358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714c4f3a9f89dba96d7056701f7b73f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a714c4f3a9f89dba96d7056701f7b73f9">removeAllRenderers</a> ()</td></tr>
+<tr class="separator:a714c4f3a9f89dba96d7056701f7b73f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc9585cd67f115af8bb4614c605eb34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a4cc9585cd67f115af8bb4614c605eb34">getSeriesRendererAt</a> (int index)</td></tr>
+<tr class="separator:a4cc9585cd67f115af8bb4614c605eb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6825e288c18f3f00f3a68518d69ffb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a2a6825e288c18f3f00f3a68518d69ffb">getSeriesRendererCount</a> ()</td></tr>
+<tr class="separator:a2a6825e288c18f3f00f3a68518d69ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d8fc4ca300978759e14b9cb96a8d97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a10d8fc4ca300978759e14b9cb96a8d97">getSeriesRenderers</a> ()</td></tr>
+<tr class="separator:a10d8fc4ca300978759e14b9cb96a8d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab04867d464c17e01b5a75e8c2b05922"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aab04867d464c17e01b5a75e8c2b05922">getBackgroundColor</a> ()</td></tr>
+<tr class="separator:aab04867d464c17e01b5a75e8c2b05922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9663414ec663f65b0fc41c4211ce7b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a9663414ec663f65b0fc41c4211ce7b49">setBackgroundColor</a> (int color)</td></tr>
+<tr class="separator:a9663414ec663f65b0fc41c4211ce7b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae31a0d552774df3804071a5e760e09a2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae31a0d552774df3804071a5e760e09a2">isApplyBackgroundColor</a> ()</td></tr>
+<tr class="separator:ae31a0d552774df3804071a5e760e09a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14aa6be18bad7855cfbf9a9daab45f97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a14aa6be18bad7855cfbf9a9daab45f97">setApplyBackgroundColor</a> (boolean apply)</td></tr>
+<tr class="separator:a14aa6be18bad7855cfbf9a9daab45f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d030cf019a2a8433f8318df84c765c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a3d030cf019a2a8433f8318df84c765c3">getAxesColor</a> ()</td></tr>
+<tr class="separator:a3d030cf019a2a8433f8318df84c765c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb652b95644a84f3711e47a884d3ddaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adb652b95644a84f3711e47a884d3ddaa">setAxesColor</a> (int color)</td></tr>
+<tr class="separator:adb652b95644a84f3711e47a884d3ddaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248f9e78f5d200091825e92df20dc447"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a248f9e78f5d200091825e92df20dc447">getLabelsColor</a> ()</td></tr>
+<tr class="separator:a248f9e78f5d200091825e92df20dc447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1653522a5ded1cbf2cf05bc0f5fa1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a9f1653522a5ded1cbf2cf05bc0f5fa1d">setLabelsColor</a> (int color)</td></tr>
+<tr class="separator:a9f1653522a5ded1cbf2cf05bc0f5fa1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a06c7ef136c4f84ab2145d55ca082ec"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a8a06c7ef136c4f84ab2145d55ca082ec">getLabelsTextSize</a> ()</td></tr>
+<tr class="separator:a8a06c7ef136c4f84ab2145d55ca082ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff8c0fdf96cdb458f0271cdaffa3354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a0ff8c0fdf96cdb458f0271cdaffa3354">setLabelsTextSize</a> (float textSize)</td></tr>
+<tr class="separator:a0ff8c0fdf96cdb458f0271cdaffa3354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280662e7e47b162ea8e54d54e5973c7c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a280662e7e47b162ea8e54d54e5973c7c">isShowAxes</a> ()</td></tr>
+<tr class="separator:a280662e7e47b162ea8e54d54e5973c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4d55d6ba5580e4dc55765c85dbeeec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a6f4d55d6ba5580e4dc55765c85dbeeec">setShowAxes</a> (boolean showAxes)</td></tr>
+<tr class="separator:a6f4d55d6ba5580e4dc55765c85dbeeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d17315712899ba4bd44166e6be3b22"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a86d17315712899ba4bd44166e6be3b22">isShowLabels</a> ()</td></tr>
+<tr class="separator:a86d17315712899ba4bd44166e6be3b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581a2a9242fd4f1afe8a34a561d81094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a581a2a9242fd4f1afe8a34a561d81094">setShowLabels</a> (boolean showLabels)</td></tr>
+<tr class="separator:a581a2a9242fd4f1afe8a34a561d81094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fc2575b6b534344f17353bde605321"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae6fc2575b6b534344f17353bde605321">isShowGridX</a> ()</td></tr>
+<tr class="separator:ae6fc2575b6b534344f17353bde605321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec9da9d5195cc964103c032f6566e6a9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aec9da9d5195cc964103c032f6566e6a9">isShowGridY</a> ()</td></tr>
+<tr class="separator:aec9da9d5195cc964103c032f6566e6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5abcf9ecd713155e79e1222de111b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#acf5abcf9ecd713155e79e1222de111b4">setShowGridX</a> (boolean showGrid)</td></tr>
+<tr class="separator:acf5abcf9ecd713155e79e1222de111b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1fd833f652edd926a4ee7ddf9bd735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a7f1fd833f652edd926a4ee7ddf9bd735">setShowGridY</a> (boolean showGrid)</td></tr>
+<tr class="separator:a7f1fd833f652edd926a4ee7ddf9bd735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a24725e7d13306992516bdacece0264"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a1a24725e7d13306992516bdacece0264">setShowGrid</a> (boolean showGrid)</td></tr>
+<tr class="separator:a1a24725e7d13306992516bdacece0264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc469fc43b85ff8055b2cb36f3b28d7c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adc469fc43b85ff8055b2cb36f3b28d7c">isShowCustomTextGrid</a> ()</td></tr>
+<tr class="separator:adc469fc43b85ff8055b2cb36f3b28d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40daccd1da6d7143086f1911cfd720fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a40daccd1da6d7143086f1911cfd720fd">setShowCustomTextGrid</a> (boolean showGrid)</td></tr>
+<tr class="separator:a40daccd1da6d7143086f1911cfd720fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7793fa4fee7c2c1729550890e10c097"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aa7793fa4fee7c2c1729550890e10c097">isShowLegend</a> ()</td></tr>
+<tr class="separator:aa7793fa4fee7c2c1729550890e10c097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7182a7ac10efebe4165969783190462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ab7182a7ac10efebe4165969783190462">setShowLegend</a> (boolean showLegend)</td></tr>
+<tr class="separator:ab7182a7ac10efebe4165969783190462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e0fe9299be279fe10b46f9058fc593"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aa2e0fe9299be279fe10b46f9058fc593">isFitLegend</a> ()</td></tr>
+<tr class="separator:aa2e0fe9299be279fe10b46f9058fc593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35569d38c4139a3ee9036033d27e96d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a35569d38c4139a3ee9036033d27e96d8">setFitLegend</a> (boolean fit)</td></tr>
+<tr class="separator:a35569d38c4139a3ee9036033d27e96d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6af7d3eeb2f2762dae8e1a0e598207"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#acb6af7d3eeb2f2762dae8e1a0e598207">getTextTypefaceName</a> ()</td></tr>
+<tr class="separator:acb6af7d3eeb2f2762dae8e1a0e598207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bdda168a81f95c7b3643323a847c2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a99bdda168a81f95c7b3643323a847c2f">getTextTypefaceStyle</a> ()</td></tr>
+<tr class="separator:a99bdda168a81f95c7b3643323a847c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93656864a9a3023067ff40139f376009"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a93656864a9a3023067ff40139f376009">getLegendTextSize</a> ()</td></tr>
+<tr class="separator:a93656864a9a3023067ff40139f376009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fcb104ef203a76bc5af628aa6643096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a9fcb104ef203a76bc5af628aa6643096">setLegendTextSize</a> (float textSize)</td></tr>
+<tr class="separator:a9fcb104ef203a76bc5af628aa6643096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa426a46af31eb5108a8f133af567c0ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aa426a46af31eb5108a8f133af567c0ef">setTextTypeface</a> (String typefaceName, int style)</td></tr>
+<tr class="separator:aa426a46af31eb5108a8f133af567c0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74229b9d453bdc46f038f3cdb72dd6c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#af74229b9d453bdc46f038f3cdb72dd6c">isAntialiasing</a> ()</td></tr>
+<tr class="separator:af74229b9d453bdc46f038f3cdb72dd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe923a4c5eec9deddd1ebf1cef2368ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#abe923a4c5eec9deddd1ebf1cef2368ee">setAntialiasing</a> (boolean antialiasing)</td></tr>
+<tr class="separator:abe923a4c5eec9deddd1ebf1cef2368ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41fa96ae10a70f84fbdecd514ebcabf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae41fa96ae10a70f84fbdecd514ebcabf">getScale</a> ()</td></tr>
+<tr class="separator:ae41fa96ae10a70f84fbdecd514ebcabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd268d7efe53c009ef77dda49074b73a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#abd268d7efe53c009ef77dda49074b73a">getOriginalScale</a> ()</td></tr>
+<tr class="separator:abd268d7efe53c009ef77dda49074b73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9ae0e9aee9baf9bbee947b925aeb51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a9e9ae0e9aee9baf9bbee947b925aeb51">setScale</a> (float scale)</td></tr>
+<tr class="separator:a9e9ae0e9aee9baf9bbee947b925aeb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0134653aa97d9b061e783741fed79d97"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a0134653aa97d9b061e783741fed79d97">isZoomEnabled</a> ()</td></tr>
+<tr class="separator:a0134653aa97d9b061e783741fed79d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac679e129889c61a8d8ed45c385b48865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ac679e129889c61a8d8ed45c385b48865">setZoomEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:ac679e129889c61a8d8ed45c385b48865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4550b1fe5864227d6e2249f6d88b7e5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ac4550b1fe5864227d6e2249f6d88b7e5">isZoomButtonsVisible</a> ()</td></tr>
+<tr class="separator:ac4550b1fe5864227d6e2249f6d88b7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc65fe544f6fc2a92a3734acaf2b13e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adc65fe544f6fc2a92a3734acaf2b13e4">setZoomButtonsVisible</a> (boolean visible)</td></tr>
+<tr class="separator:adc65fe544f6fc2a92a3734acaf2b13e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6756a0f2909660a236c8185c8df39e02"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a6756a0f2909660a236c8185c8df39e02">isExternalZoomEnabled</a> ()</td></tr>
+<tr class="separator:a6756a0f2909660a236c8185c8df39e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d1801efc1ef04d31c4a40cb6654eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a91d1801efc1ef04d31c4a40cb6654eff">setExternalZoomEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:a91d1801efc1ef04d31c4a40cb6654eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f9ac86d0acf6843cf385c40b7973dc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ad3f9ac86d0acf6843cf385c40b7973dc">getZoomRate</a> ()</td></tr>
+<tr class="separator:ad3f9ac86d0acf6843cf385c40b7973dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c193ec21388f600afb43cf2cb96c9b0"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a3c193ec21388f600afb43cf2cb96c9b0">isPanEnabled</a> ()</td></tr>
+<tr class="separator:a3c193ec21388f600afb43cf2cb96c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0605c05d3caa25269b3c07b9bbd79396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a0605c05d3caa25269b3c07b9bbd79396">setPanEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:a0605c05d3caa25269b3c07b9bbd79396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22e60c17ba25054b4c8e737c63747f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aa22e60c17ba25054b4c8e737c63747f2">setZoomRate</a> (float rate)</td></tr>
+<tr class="separator:aa22e60c17ba25054b4c8e737c63747f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e18d95162d3ab977243da072630f8cd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a7e18d95162d3ab977243da072630f8cd">isClickEnabled</a> ()</td></tr>
+<tr class="separator:a7e18d95162d3ab977243da072630f8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903456b8f524336a8909b3c52cb5c68f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a903456b8f524336a8909b3c52cb5c68f">setClickEnabled</a> (boolean enabled)</td></tr>
+<tr class="separator:a903456b8f524336a8909b3c52cb5c68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739ff196d4870b11d0fa3be64c36cfb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a739ff196d4870b11d0fa3be64c36cfb1">getSelectableBuffer</a> ()</td></tr>
+<tr class="separator:a739ff196d4870b11d0fa3be64c36cfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bc94c10720a030e006f3458b9e3e9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a82bc94c10720a030e006f3458b9e3e9d">setSelectableBuffer</a> (int buffer)</td></tr>
+<tr class="separator:a82bc94c10720a030e006f3458b9e3e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61cb4840f34349f0322265f95c1dbee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ac61cb4840f34349f0322265f95c1dbee">getLegendHeight</a> ()</td></tr>
+<tr class="separator:ac61cb4840f34349f0322265f95c1dbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e0b55806d29fb44d8fa345818ce0bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ab0e0b55806d29fb44d8fa345818ce0bb">setLegendHeight</a> (int height)</td></tr>
+<tr class="separator:ab0e0b55806d29fb44d8fa345818ce0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a65841973ca693d4c084d3c504b47a"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ad8a65841973ca693d4c084d3c504b47a">getMargins</a> ()</td></tr>
+<tr class="separator:ad8a65841973ca693d4c084d3c504b47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54dc0342e4f95cfb637ba6aa363482b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ab54dc0342e4f95cfb637ba6aa363482b">setMargins</a> (int[] margins)</td></tr>
+<tr class="separator:ab54dc0342e4f95cfb637ba6aa363482b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8862a44b4c1f5974b7deb36578c90ac2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a8862a44b4c1f5974b7deb36578c90ac2">isInScroll</a> ()</td></tr>
+<tr class="separator:a8862a44b4c1f5974b7deb36578c90ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16fa61d6aa085b46b2836b007b7bb981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a16fa61d6aa085b46b2836b007b7bb981">setInScroll</a> (boolean inScroll)</td></tr>
+<tr class="separator:a16fa61d6aa085b46b2836b007b7bb981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912b767bcee36a04e6d8de024e6615e1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a912b767bcee36a04e6d8de024e6615e1">getStartAngle</a> ()</td></tr>
+<tr class="separator:a912b767bcee36a04e6d8de024e6615e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f290cf88331adf0aed4ab379db01d0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a7f290cf88331adf0aed4ab379db01d0d">setStartAngle</a> (float startAngle)</td></tr>
+<tr class="separator:a7f290cf88331adf0aed4ab379db01d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffb910b465589dffa9dd631dd35a29a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a7ffb910b465589dffa9dd631dd35a29a">isDisplayValues</a> ()</td></tr>
+<tr class="separator:a7ffb910b465589dffa9dd631dd35a29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9d1e2fe0d3a276ead7b4c72cbba004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#afb9d1e2fe0d3a276ead7b4c72cbba004">setDisplayValues</a> (boolean display)</td></tr>
+<tr class="separator:afb9d1e2fe0d3a276ead7b4c72cbba004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a48d10b42cf4c1ea1914d2b0887123075"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a48d10b42cf4c1ea1914d2b0887123075">NO_COLOR</a> = 0</td></tr>
+<tr class="separator:a48d10b42cf4c1ea1914d2b0887123075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e7249e3f4c6b85156081e46a1232b2"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ad9e7249e3f4c6b85156081e46a1232b2">BACKGROUND_COLOR</a> = Color.BLACK</td></tr>
+<tr class="separator:ad9e7249e3f4c6b85156081e46a1232b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda11045462dc3f99ed004397efec03d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adda11045462dc3f99ed004397efec03d">TEXT_COLOR</a> = Color.LTGRAY</td></tr>
+<tr class="separator:adda11045462dc3f99ed004397efec03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae04bddc929817a2142ffe3a3616f9720"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae04bddc929817a2142ffe3a3616f9720">mChartTitle</a> = &quot;&quot;</td></tr>
+<tr class="separator:ae04bddc929817a2142ffe3a3616f9720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb85e1a5c14c58cf3348fea3fc149c33"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#abb85e1a5c14c58cf3348fea3fc149c33">mChartTitleTextSize</a> = 15</td></tr>
+<tr class="separator:abb85e1a5c14c58cf3348fea3fc149c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade08df540f817e7c4487ab719e587f4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aade08df540f817e7c4487ab719e587f4">mTextTypefaceName</a> = REGULAR_TEXT_FONT.toString()</td></tr>
+<tr class="separator:aade08df540f817e7c4487ab719e587f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0635654ba9680f7f89faad7af6e386"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a4a0635654ba9680f7f89faad7af6e386">mTextTypefaceStyle</a> = Typeface.NORMAL</td></tr>
+<tr class="separator:a4a0635654ba9680f7f89faad7af6e386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa726d5f6fd5f706d7dda263c6049de8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aa726d5f6fd5f706d7dda263c6049de8e">mBackgroundColor</a></td></tr>
+<tr class="separator:aa726d5f6fd5f706d7dda263c6049de8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e5c2fe0084af23527b906f93335785"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a80e5c2fe0084af23527b906f93335785">mApplyBackgroundColor</a></td></tr>
+<tr class="separator:a80e5c2fe0084af23527b906f93335785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9935fcb2122e1f6c96abe4c8eca406f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#af9935fcb2122e1f6c96abe4c8eca406f">mShowAxes</a> = true</td></tr>
+<tr class="separator:af9935fcb2122e1f6c96abe4c8eca406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef6159038afd6bc2ce2fa1d0a2de8fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a6ef6159038afd6bc2ce2fa1d0a2de8fd">mAxesColor</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adda11045462dc3f99ed004397efec03d">TEXT_COLOR</a></td></tr>
+<tr class="separator:a6ef6159038afd6bc2ce2fa1d0a2de8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27719f3752f2cf3dd96baba78c15f48d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a27719f3752f2cf3dd96baba78c15f48d">mShowLabels</a> = true</td></tr>
+<tr class="separator:a27719f3752f2cf3dd96baba78c15f48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae9b6a124b844e5eaa144914280611a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aeae9b6a124b844e5eaa144914280611a">mLabelsColor</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adda11045462dc3f99ed004397efec03d">TEXT_COLOR</a></td></tr>
+<tr class="separator:aeae9b6a124b844e5eaa144914280611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c18032cd4017289c00824acef92686"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a85c18032cd4017289c00824acef92686">mLabelsTextSize</a> = 10</td></tr>
+<tr class="separator:a85c18032cd4017289c00824acef92686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a087e4e72820de25fe29f073bec6e8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a16a087e4e72820de25fe29f073bec6e8">mShowLegend</a> = true</td></tr>
+<tr class="separator:a16a087e4e72820de25fe29f073bec6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3de370b181fb5b06711e78ec7f21c8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adc3de370b181fb5b06711e78ec7f21c8">mLegendTextSize</a> = 12</td></tr>
+<tr class="separator:adc3de370b181fb5b06711e78ec7f21c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ecbcc4d5f6c7a019ba4683abac5e54a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a0ecbcc4d5f6c7a019ba4683abac5e54a">mFitLegend</a> = false</td></tr>
+<tr class="separator:a0ecbcc4d5f6c7a019ba4683abac5e54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b07b72966a7b6a4a492143d1fb8e58c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a4b07b72966a7b6a4a492143d1fb8e58c">mShowGridX</a> = false</td></tr>
+<tr class="separator:a4b07b72966a7b6a4a492143d1fb8e58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af82cc36b0a333dbf471e3bf40264ddd1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#af82cc36b0a333dbf471e3bf40264ddd1">mShowGridY</a> = false</td></tr>
+<tr class="separator:af82cc36b0a333dbf471e3bf40264ddd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1078fc0862f464b50c45e475dfca04c9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a1078fc0862f464b50c45e475dfca04c9">mShowCustomTextGrid</a> = false</td></tr>
+<tr class="separator:a1078fc0862f464b50c45e475dfca04c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa41c2ba263fd960e5b47963bc4b76b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#aafa41c2ba263fd960e5b47963bc4b76b">mRenderers</a> = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&gt;()</td></tr>
+<tr class="separator:aafa41c2ba263fd960e5b47963bc4b76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a659977e4e6e0bed91c30666d68202"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ae5a659977e4e6e0bed91c30666d68202">mAntialiasing</a> = true</td></tr>
+<tr class="separator:ae5a659977e4e6e0bed91c30666d68202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3424e1a197ac64f3c19ba7d6c03379"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a5f3424e1a197ac64f3c19ba7d6c03379">mLegendHeight</a> = 0</td></tr>
+<tr class="separator:a5f3424e1a197ac64f3c19ba7d6c03379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0be6774e156b727cfcabf20c6aaafbd"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ad0be6774e156b727cfcabf20c6aaafbd">mMargins</a> = new int[] { 20, 30, 10, 20 }</td></tr>
+<tr class="separator:ad0be6774e156b727cfcabf20c6aaafbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1b22ee7f9b002961e9c3baef763c5d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a2a1b22ee7f9b002961e9c3baef763c5d">mScale</a> = 1</td></tr>
+<tr class="separator:a2a1b22ee7f9b002961e9c3baef763c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c3db4f8202abb7a292ea6feb1a2801"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a95c3db4f8202abb7a292ea6feb1a2801">mPanEnabled</a> = true</td></tr>
+<tr class="separator:a95c3db4f8202abb7a292ea6feb1a2801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efdabf6fe193c9ab12ee5970dd70c98"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a6efdabf6fe193c9ab12ee5970dd70c98">mZoomEnabled</a> = true</td></tr>
+<tr class="separator:a6efdabf6fe193c9ab12ee5970dd70c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5b8c6c45f2daecf8dd1b73f4468dad"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a0c5b8c6c45f2daecf8dd1b73f4468dad">mZoomButtonsVisible</a> = false</td></tr>
+<tr class="separator:a0c5b8c6c45f2daecf8dd1b73f4468dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d88bf9856d473ad4b29dbd79575629"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a15d88bf9856d473ad4b29dbd79575629">mZoomRate</a> = 1.5f</td></tr>
+<tr class="separator:a15d88bf9856d473ad4b29dbd79575629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07674665c410205aa9ad74a5258242c3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a07674665c410205aa9ad74a5258242c3">mExternalZoomEnabled</a> = false</td></tr>
+<tr class="separator:a07674665c410205aa9ad74a5258242c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d518b53fdd1cb2c393051d5127ebe2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a35d518b53fdd1cb2c393051d5127ebe2">mOriginalScale</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a2a1b22ee7f9b002961e9c3baef763c5d">mScale</a></td></tr>
+<tr class="separator:a35d518b53fdd1cb2c393051d5127ebe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3c865e92d09e53abb729f015b31e32"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a8c3c865e92d09e53abb729f015b31e32">mClickEnabled</a> = false</td></tr>
+<tr class="separator:a8c3c865e92d09e53abb729f015b31e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d366d6cd02fba958a43db82d305f2c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a9d366d6cd02fba958a43db82d305f2c8">selectableBuffer</a> = 15</td></tr>
+<tr class="separator:a9d366d6cd02fba958a43db82d305f2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a50b9b87bd5da365cbc06fe94880e3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#ad2a50b9b87bd5da365cbc06fe94880e3">mDisplayValues</a></td></tr>
+<tr class="separator:ad2a50b9b87bd5da365cbc06fe94880e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840b7988f4911c965937314decb25f0a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a840b7988f4911c965937314decb25f0a">mInScroll</a></td></tr>
+<tr class="separator:a840b7988f4911c965937314decb25f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592cd9ced602a0a35549b1d323c22855"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a592cd9ced602a0a35549b1d323c22855">mStartAngle</a> = 0</td></tr>
+<tr class="separator:a592cd9ced602a0a35549b1d323c22855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a576495c5f1c9d0a05e032e01466bb387"><td class="memItemLeft" align="right" valign="top">static final Typeface&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a576495c5f1c9d0a05e032e01466bb387">REGULAR_TEXT_FONT</a></td></tr>
+<tr class="separator:a576495c5f1c9d0a05e032e01466bb387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An abstract renderer to be extended by the multiple series classes. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aefc2aeaec29ba85cb050de281a859b5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.addSeriesRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a simple renderer to the multiple renderer.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3dd4711d777452fc450fc7073086578"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.addSeriesRenderer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a simple renderer to the multiple renderer.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index in the renderers list </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d030cf019a2a8433f8318df84c765c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getAxesColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the axes color.</p>
+<dl class="section return"><dt>返回</dt><dd>the axes color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aab04867d464c17e01b5a75e8c2b05922"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getBackgroundColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the background color.</p>
+<dl class="section return"><dt>返回</dt><dd>the background color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae926199d651d61eca56063ef31d4d94d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.DefaultRenderer.getChartTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chart title.</p>
+<dl class="section return"><dt>返回</dt><dd>the chart title </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f3fa1d1eb3e09e84a7a75e1df2ae6a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getChartTitleTextSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chart title text size.</p>
+<dl class="section return"><dt>返回</dt><dd>the chart title text size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a248f9e78f5d200091825e92df20dc447"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getLabelsColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the labels color. 获取图表上标题与X轴与Y轴的说明文字颜色 </p><dl class="section return"><dt>返回</dt><dd>the labels color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a06c7ef136c4f84ab2145d55ca082ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getLabelsTextSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the labels text size.</p>
+<dl class="section return"><dt>返回</dt><dd>the labels text size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac61cb4840f34349f0322265f95c1dbee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getLegendHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the legend height.</p>
+<dl class="section return"><dt>返回</dt><dd>the legend height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a93656864a9a3023067ff40139f376009"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getLegendTextSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the legend text size.</p>
+<dl class="section return"><dt>返回</dt><dd>the legend text size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8a65841973ca693d4c084d3c504b47a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.chart.DefaultRenderer.getMargins </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the margin sizes. An array containing the margins in this order: top, left, bottom, right</p>
+<dl class="section return"><dt>返回</dt><dd>the margin sizes </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abd268d7efe53c009ef77dda49074b73a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getOriginalScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the original value to be used for scaling the chart.</p>
+<dl class="section return"><dt>返回</dt><dd>the original scale value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae41fa96ae10a70f84fbdecd514ebcabf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value to be used for scaling the chart.</p>
+<dl class="section return"><dt>返回</dt><dd>the scale value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a739ff196d4870b11d0fa3be64c36cfb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getSelectableBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the selectable radius value around clickable points.</p>
+<dl class="section return"><dt>返回</dt><dd>the selectable radius </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4cc9585cd67f115af8bb4614c605eb34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> com.ab.view.chart.DefaultRenderer.getSeriesRendererAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the simple renderer from the multiple renderer list.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index in the simple renderers list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the simple renderer at the specified index </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a6825e288c18f3f00f3a68518d69ffb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getSeriesRendererCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the simple renderers count in the multiple renderer list.</p>
+<dl class="section return"><dt>返回</dt><dd>the simple renderers count </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a10d8fc4ca300978759e14b9cb96a8d97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a> [] com.ab.view.chart.DefaultRenderer.getSeriesRenderers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns an array of the simple renderers in the multiple renderer list.</p>
+<dl class="section return"><dt>返回</dt><dd>the simple renderers array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a912b767bcee36a04e6d8de024e6615e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getStartAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the start angle for circular charts such as pie, doughnut. An angle of 0 degrees correspond to the geometric angle of 0 degrees (3 o'clock on a watch.)</p>
+<dl class="section return"><dt>返回</dt><dd>the start angle in degrees </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acb6af7d3eeb2f2762dae8e1a0e598207"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.DefaultRenderer.getTextTypefaceName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the text typeface name.</p>
+<dl class="section return"><dt>返回</dt><dd>the text typeface name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99bdda168a81f95c7b3643323a847c2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.getTextTypefaceStyle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the text typeface style.</p>
+<dl class="section return"><dt>返回</dt><dd>the text typeface style </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad3f9ac86d0acf6843cf385c40b7973dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.getZoomRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the zoom rate.</p>
+<dl class="section return"><dt>返回</dt><dd>the zoom rate </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af74229b9d453bdc46f038f3cdb72dd6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isAntialiasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the antialiasing flag value.</p>
+<dl class="section return"><dt>返回</dt><dd>the antialiasing value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae31a0d552774df3804071a5e760e09a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isApplyBackgroundColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the background color should be applied.</p>
+<dl class="section return"><dt>返回</dt><dd>the apply flag for the background color. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7e18d95162d3ab977243da072630f8cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isClickEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the enabled state of the click.</p>
+<dl class="section return"><dt>返回</dt><dd>if click is enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ffb910b465589dffa9dd631dd35a29a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isDisplayValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the values should be displayed as text.</p>
+<dl class="section return"><dt>返回</dt><dd>if the values should be displayed as text </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6756a0f2909660a236c8185c8df39e02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isExternalZoomEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the enabled state of the external (application implemented) zoom.</p>
+<dl class="section return"><dt>返回</dt><dd>if external zoom is enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2e0fe9299be279fe10b46f9058fc593"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isFitLegend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the legend should size to fit.</p>
+<dl class="section return"><dt>返回</dt><dd>the fit behavior </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8862a44b4c1f5974b7deb36578c90ac2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isInScroll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the chart is inside a scroll view and doesn't need to shrink.</p>
+<dl class="section return"><dt>返回</dt><dd>if it is inside a scroll view </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c193ec21388f600afb43cf2cb96c9b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isPanEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the enabled state of the pan.</p>
+<dl class="section return"><dt>返回</dt><dd>if pan is enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a280662e7e47b162ea8e54d54e5973c7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isShowAxes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the axes should be visible.</p>
+<dl class="section return"><dt>返回</dt><dd>the visibility flag for the axes </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc469fc43b85ff8055b2cb36f3b28d7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isShowCustomTextGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the grid should be visible for custom X or Y labels.</p>
+<dl class="section return"><dt>返回</dt><dd>the visibility flag for the custom text grid </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae6fc2575b6b534344f17353bde605321"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isShowGridX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the X axis grid should be visible.</p>
+<dl class="section return"><dt>返回</dt><dd>the visibility flag for the X axis grid </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aec9da9d5195cc964103c032f6566e6a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isShowGridY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the Y axis grid should be visible.</p>
+<dl class="section return"><dt>返回</dt><dd>the visibility flag for the Y axis grid </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a86d17315712899ba4bd44166e6be3b22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isShowLabels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the labels should be visible.</p>
+<dl class="section return"><dt>返回</dt><dd>the visibility flag for the labels </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa7793fa4fee7c2c1729550890e10c097"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isShowLegend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if the legend should be visible.</p>
+<dl class="section return"><dt>返回</dt><dd>the visibility flag for the legend </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4550b1fe5864227d6e2249f6d88b7e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isZoomButtonsVisible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the visible state of the zoom buttons.</p>
+<dl class="section return"><dt>返回</dt><dd>if zoom buttons are visible </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0134653aa97d9b061e783741fed79d97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.isZoomEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the enabled state of the zoom.</p>
+<dl class="section return"><dt>返回</dt><dd>if zoom is enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a714c4f3a9f89dba96d7056701f7b73f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.removeAllRenderers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes all renderers from the multiple renderer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a76ecf3a387b3ca65699a1af90e336358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.removeSeriesRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a simple renderer from the multiple renderer.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer to be removed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abe923a4c5eec9deddd1ebf1cef2368ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setAntialiasing </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>antialiasing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the antialiasing value.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">antialiasing</td><td>the antialiasing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a14aa6be18bad7855cfbf9a9daab45f97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setApplyBackgroundColor </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>apply</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the background color should be applied.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">apply</td><td>the apply flag for the background color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adb652b95644a84f3711e47a884d3ddaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setAxesColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the axes color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the axes color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9663414ec663f65b0fc41c4211ce7b49"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setBackgroundColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the background color.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the background color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a29f6e986d9dbb9d7dea3ca63d0abd221"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setChartTitle </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the chart title.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the chart title </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa3df96ad3de3718c062ec7944e3da0c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setChartTitleTextSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>textSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the chart title text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>the chart title text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a903456b8f524336a8909b3c52cb5c68f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setClickEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the enabled state of the click.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>click enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afb9d1e2fe0d3a276ead7b4c72cbba004"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setDisplayValues </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>display</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the values should be displayed as text (supported by pie chart).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">display</td><td>if the values should be displayed as text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a91d1801efc1ef04d31c4a40cb6654eff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setExternalZoomEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the enabled state of the external (application implemented) zoom.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>external zoom enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a35569d38c4139a3ee9036033d27e96d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setFitLegend </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>fit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the legend should size to fit.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fit</td><td>the fit behavior </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a16fa61d6aa085b46b2836b007b7bb981"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setInScroll </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>inScroll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>To be set if the chart is inside a scroll view and doesn't need to shrink when not enough space.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inScroll</td><td>if it is inside a scroll view </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f1653522a5ded1cbf2cf05bc0f5fa1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setLabelsColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the labels color. 设置图表上标题与X轴与Y轴的说明文字颜色 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the labels color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ff8c0fdf96cdb458f0271cdaffa3354"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setLabelsTextSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>textSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the labels text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>the labels text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0e0b55806d29fb44d8fa345818ce0bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setLegendHeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the legend height, in pixels.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the legend height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9fcb104ef203a76bc5af628aa6643096"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setLegendTextSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>textSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the legend text size.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>the legend text size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab54dc0342e4f95cfb637ba6aa363482b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setMargins </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>margins</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the margins, in pixels.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">margins</td><td>an array containing the margin size values, in this order: top, left, bottom, right </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0605c05d3caa25269b3c07b9bbd79396"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setPanEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the enabled state of the pan.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>pan enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9e9ae0e9aee9baf9bbee947b925aeb51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the value to be used for scaling the chart. It works on some charts like pie, doughnut, dial.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>the scale value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a82bc94c10720a030e006f3458b9e3e9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setSelectableBuffer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the selectable radius value around clickable points.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>the selectable radius </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f4d55d6ba5580e4dc55765c85dbeeec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowAxes </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showAxes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the axes should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showAxes</td><td>the visibility flag for the axes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a40daccd1da6d7143086f1911cfd720fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowCustomTextGrid </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showGrid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the grid for custom X or Y labels should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showGrid</td><td>the visibility flag for the custom text grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a24725e7d13306992516bdacece0264"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowGrid </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showGrid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the grid should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showGrid</td><td>the visibility flag for the grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf5abcf9ecd713155e79e1222de111b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowGridX </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showGrid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the X axis grid should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showGrid</td><td>the visibility flag for the X axis grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f1fd833f652edd926a4ee7ddf9bd735"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowGridY </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showGrid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the Y axis grid should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showGrid</td><td>the visibility flag for the Y axis grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a581a2a9242fd4f1afe8a34a561d81094"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowLabels </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showLabels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the labels should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showLabels</td><td>the visibility flag for the labels </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab7182a7ac10efebe4165969783190462"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setShowLegend </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>showLegend</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets if the legend should be visible.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showLegend</td><td>the visibility flag for the legend </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f290cf88331adf0aed4ab379db01d0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setStartAngle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>startAngle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the start angle for circular charts such as pie, doughnut, etc. An angle of 0 degrees correspond to the geometric angle of 0 degrees (3 o'clock on a watch.)</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startAngle</td><td>the start angle in degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa426a46af31eb5108a8f133af567c0ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setTextTypeface </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>typefaceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>style</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the text typeface name and style.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">typefaceName</td><td>the text typeface name </td></tr>
+    <tr><td class="paramname">style</td><td>the text typeface style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adc65fe544f6fc2a92a3734acaf2b13e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setZoomButtonsVisible </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the visible state of the zoom buttons.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visible</td><td>if the zoom buttons are visible </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac679e129889c61a8d8ed45c385b48865"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setZoomEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the enabled state of the zoom. 缩放打开默认拖动也打开 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>zoom enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa22e60c17ba25054b4c8e737c63747f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.DefaultRenderer.setZoomRate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the zoom rate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rate</td><td>the zoom rate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ad9e7249e3f4c6b85156081e46a1232b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.DefaultRenderer.BACKGROUND_COLOR = Color.BLACK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default background color. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae5a659977e4e6e0bed91c30666d68202"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mAntialiasing = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The antialiasing flag. </p>
+
+</div>
+</div>
+<a class="anchor" id="a80e5c2fe0084af23527b906f93335785"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mApplyBackgroundColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the background color is applied. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6ef6159038afd6bc2ce2fa1d0a2de8fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.mAxesColor = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adda11045462dc3f99ed004397efec03d">TEXT_COLOR</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The axes color. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa726d5f6fd5f706d7dda263c6049de8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.mBackgroundColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart background color. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae04bddc929817a2142ffe3a3616f9720"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.DefaultRenderer.mChartTitle = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart title. </p>
+
+</div>
+</div>
+<a class="anchor" id="abb85e1a5c14c58cf3348fea3fc149c33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mChartTitleTextSize = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The chart title text size. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c3c865e92d09e53abb729f015b31e32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mClickEnabled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag for enabling the click on elements. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad2a50b9b87bd5da365cbc06fe94880e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mDisplayValues</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the chart should display the values (available for pie chart). </p>
+
+</div>
+</div>
+<a class="anchor" id="a07674665c410205aa9ad74a5258242c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mExternalZoomEnabled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag for enabling the external zoom. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ecbcc4d5f6c7a019ba4683abac5e54a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mFitLegend = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the legend should size to fit. </p>
+
+</div>
+</div>
+<a class="anchor" id="a840b7988f4911c965937314decb25f0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mInScroll</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag to be set if the chart is inside a scroll and doesn't need to shrink when not enough space. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeae9b6a124b844e5eaa144914280611a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.mLabelsColor = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#adda11045462dc3f99ed004397efec03d">TEXT_COLOR</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The labels color. </p>
+
+</div>
+</div>
+<a class="anchor" id="a85c18032cd4017289c00824acef92686"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mLabelsTextSize = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The labels text size. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5f3424e1a197ac64f3c19ba7d6c03379"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.mLegendHeight = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The legend height. </p>
+
+</div>
+</div>
+<a class="anchor" id="adc3de370b181fb5b06711e78ec7f21c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mLegendTextSize = 12</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The legend text size. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad0be6774e156b727cfcabf20c6aaafbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.chart.DefaultRenderer.mMargins = new int[] { 20, 30, 10, 20 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The margins size. </p>
+
+</div>
+</div>
+<a class="anchor" id="a35d518b53fdd1cb2c393051d5127ebe2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mOriginalScale = <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_default_renderer.html#a2a1b22ee7f9b002961e9c3baef763c5d">mScale</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The original chart scale. </p>
+
+</div>
+</div>
+<a class="anchor" id="a95c3db4f8202abb7a292ea6feb1a2801"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mPanEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag for enabling the pan. </p>
+
+</div>
+</div>
+<a class="anchor" id="aafa41c2ba263fd960e5b47963bc4b76b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&gt; com.ab.view.chart.DefaultRenderer.mRenderers = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_simple_series_renderer.html">SimpleSeriesRenderer</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The simple renderers that are included in this multiple series renderer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a1b22ee7f9b002961e9c3baef763c5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mScale = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A value to be used for scaling the chart. </p>
+
+</div>
+</div>
+<a class="anchor" id="af9935fcb2122e1f6c96abe4c8eca406f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mShowAxes = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the axes are visible. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1078fc0862f464b50c45e475dfca04c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mShowCustomTextGrid = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the custom text grid should be displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4b07b72966a7b6a4a492143d1fb8e58c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mShowGridX = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the X axis grid should be displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="af82cc36b0a333dbf471e3bf40264ddd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mShowGridY = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the Y axis grid should be displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a27719f3752f2cf3dd96baba78c15f48d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mShowLabels = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the labels are visible. </p>
+
+</div>
+</div>
+<a class="anchor" id="a16a087e4e72820de25fe29f073bec6e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mShowLegend = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If the legend is visible. </p>
+
+</div>
+</div>
+<a class="anchor" id="a592cd9ced602a0a35549b1d323c22855"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mStartAngle = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The start angle for circular charts such as pie, doughnut, etc. </p>
+
+</div>
+</div>
+<a class="anchor" id="aade08df540f817e7c4487ab719e587f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.chart.DefaultRenderer.mTextTypefaceName = REGULAR_TEXT_FONT.toString()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The typeface name for the texts. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a0635654ba9680f7f89faad7af6e386"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.mTextTypefaceStyle = Typeface.NORMAL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The typeface style for the texts. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0c5b8c6c45f2daecf8dd1b73f4468dad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mZoomButtonsVisible = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag for enabling the visibility of the zoom buttons. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6efdabf6fe193c9ab12ee5970dd70c98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.DefaultRenderer.mZoomEnabled = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A flag for enabling the zoom. </p>
+
+</div>
+</div>
+<a class="anchor" id="a15d88bf9856d473ad4b29dbd79575629"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.ab.view.chart.DefaultRenderer.mZoomRate = 1.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The zoom rate. </p>
+
+</div>
+</div>
+<a class="anchor" id="a48d10b42cf4c1ea1914d2b0887123075"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.DefaultRenderer.NO_COLOR = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A no color constant. </p>
+
+</div>
+</div>
+<a class="anchor" id="a576495c5f1c9d0a05e032e01466bb387"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Typeface com.ab.view.chart.DefaultRenderer.REGULAR_TEXT_FONT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= Typeface</div>
+<div class="line">      .create(Typeface.SERIF, Typeface.NORMAL)</div>
+</div><!-- fragment --><p>A text font for regular text, like the chart labels. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d366d6cd02fba958a43db82d305f2c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.DefaultRenderer.selectableBuffer = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The selectable radius around a clickable point. </p>
+
+</div>
+</div>
+<a class="anchor" id="adda11045462dc3f99ed004397efec03d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.chart.DefaultRenderer.TEXT_COLOR = Color.LTGRAY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default color for text. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_default_renderer_8java.html">DefaultRenderer.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

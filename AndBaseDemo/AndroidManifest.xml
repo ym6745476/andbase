@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.andbase"
-    android:versionCode="14"
-    android:versionName="1.5.8" >
+    android:versionCode="18"
+    android:versionName="1.6">
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="17"/>
 
     <!-- 权限 -->
@@ -19,29 +19,13 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 　　  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     
     <!-- -->
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
     <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
-    
-     <!-- Frontia框架的公共权限 -->
-    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
-    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
-
-    <!-- FrontiaPush 和FrontiaStatistics 需要的权限 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
-
-    <!-- FrontiaPush 需要的权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-    <!-- 可选的权限 -->
-    <!-- 使用GPS获取用户精确定位信息 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
     
     
     <application
@@ -50,7 +34,7 @@
         android:label="@string/app_name"
         android:theme="@style/myTheme" >
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.LauncherActivity"
             android:launchMode="singleTop"
             android:configChanges="keyboardHidden|orientation" >
             <intent-filter>
@@ -59,13 +43,38 @@
             </intent-filter>
         </activity>
         
+        <activity
+            android:name=".main.MainActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
          <activity
             android:name=".demo.activity.DemoMainActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
+         <activity
+            android:name=".demo.activity.DialogActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+         <activity
+            android:name=".demo.activity.ImageDownActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+         <activity
+            android:name=".demo.activity.AnimationActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+         <activity
+            android:name=".demo.activity.UIElementActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
         <activity
-            android:name=".demo.activity.WelcomeActivity"
+            android:name=".demo.activity.CityListActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -75,17 +84,72 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.SlidingLeftActivity"
+            android:name=".demo.activity.DBInsideSampleActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
         <activity
-            android:name=".demo.activity.ImageDownActivity"
+            android:name=".demo.activity.DBSDSampleActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.DBOne2OneActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.DBOne2ManyActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.DBObjectActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
         <activity
             android:name=".demo.activity.TitleBarActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.ThreadControlActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.TabActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+         <activity
+            android:name=".demo.activity.TabTopActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.TabBottomActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.DownListActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.DBActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.PullToRefreshActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.ChartActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -100,21 +164,6 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.TableDataListActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.TableDataListActivity1"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.TableDataListActivity2"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
             android:name=".demo.activity.SlidingButtonActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
@@ -125,7 +174,13 @@
         </activity>
         
          <activity
-            android:name=".demo.activity.DownListActivity"
+            android:name=".demo.activity.SlidingLeftActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        
+        <activity
+            android:name=".demo.activity.WelcomeActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -155,22 +210,7 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.ChartActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.AboutActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
             android:name=".demo.activity.LevelChartActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.SlidingTabActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -190,49 +230,10 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.ThreadControlActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
             android:name=".demo.activity.CalendarActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
-        <activity
-            android:name=".demo.activity.TableActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DBInsideSampleActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DBSDSampleActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DBActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DBOne2OneActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DBOne2ManyActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DBObjectActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
         
         <activity
             android:name=".demo.activity.PHashActivity"
@@ -240,12 +241,12 @@
         </activity>
         
          <activity
-            android:name=".demo.activity.PullToRefreshActivity"
+            android:name=".demo.activity.PullToRefreshViewActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
          <activity
-            android:name=".demo.activity.PullToRefreshViewActivity"
+            android:name=".demo.activity.PullToRefreshMultiColumnListActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -305,11 +306,6 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.PullToRefreshMultiColumnListActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
             android:name=".demo.activity.ProgressBarActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
@@ -346,6 +342,16 @@
         
         <activity
             android:name=".demo.activity.HttpActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.HttpMiniActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+       <activity
+            android:name=".demo.activity.SoapActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
@@ -420,49 +426,24 @@
         </activity>
         
         <activity
-            android:name=".friend.FriendActivity"
+            android:name=".login.AboutActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
         <activity
-            android:name=".friend.ChatActivity"
+            android:name=".im.activity.ContacterActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
-        <!-- push service client -->
-        <receiver android:name="com.andbase.push.PushMessageReceiver">
-            <intent-filter>
-                <!-- 接收push消息 -->
-                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
-                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
-                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
-                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
-            </intent-filter>
-        </receiver>
+        <activity
+            android:name=".im.activity.ChatActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
         
-        <!-- push service -->
-        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
-            android:process=":bdservice_v1">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
-                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
-                <action android:name="com.baidu.android.pushservice.action.frontia.user" />
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
-            android:process=":bdservice_v1">
-            <intent-filter>
-                <action android:name="com.baidu.android.pushservice.action.METHOD" />
-                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <data android:scheme="package" />
-            </intent-filter>                   
-        </receiver>
+        <activity
+            android:name=".im.activity.MessageActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
         
         <activity android:name="com.kfb.c.Kf"
 			android:launchMode="singleInstance"
@@ -474,56 +455,27 @@
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         
-        <service
-            android:name="com.baidu.android.pushservice.PushService"
-            android:exported="true"
-            android:process=":bdservice_v1" />
         
-        <receiver 
-            android:name="com.baidu.frontia.module.deeplink.db.DLDataPushReceiver">
-            <intent-filter>
-                <action android:name="com.baidu.android.pushservice.action.SDK_MESSAGE" />
-                <action android:name="com.baidu.android.pushservice.action.sdk.RECEIVE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
+        <!-- push service client -->
+	    <receiver android:name=".im.receiver.IMMessageReceiver">
+	        <intent-filter>
+	            <!-- 接收消息 -->
+	            <action android:name="com.andbase.action.NEW_MESSAGE" />
+	            <action android:name="com.andbase.action.CHAT_MESSAGE" />
+	            <action android:name="com.andbase.action.SYS_MESSAGE" />
+	            <!-- 收到好友邀请 -->
+	            <action android:name="com.andbase.action.ROSTER_SUBSCRIBE" />
+	        </intent-filter>
+	    </receiver>
         
-         <activity
-            android:name="com.baidu.frontia.activity.share.FrontiaSocialOAuthActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
-        </activity>
-        
-        <activity
-            android:name="com.baidu.frontia.activity.share.FrontiaLocalShareActivity"
-            android:launchMode="singleTask" >
-        </activity>
-        
-        <activity
-            android:name="com.baidu.frontia.activity.share.FrontiaQQFriendShareReceiverActivity"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="tencent100358052" />
-            </intent-filter>
-        </activity>
-
-        <!-- 用户微信回调的 activity -->
-        <activity
-            android:name=".main.WXEntryActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
-        </activity>
+        <!-- 联系人服务 -->
+		<service android:name=".im.service.IMContactService"></service>
+		<!-- 聊天服务 -->
+		<service android:name=".im.service.IMChatService"></service>  
+		<!-- 系统消息服务 -->
+		<service android:name=".im.service.IMSystemMsgService"></service>
+		<!-- 重连接服务 -->
+ 		<service android:name=".im.service.ReConnectService"></service>
         
         
     </application>

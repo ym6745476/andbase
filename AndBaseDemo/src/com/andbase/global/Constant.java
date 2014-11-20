@@ -17,7 +17,7 @@ public class Constant {
     public static final String USERNAMECOOKIE = "cookieName";
     public static final String USERPASSWORDCOOKIE = "cookiePassword";
     public static final String USERPASSWORDREMEMBERCOOKIE = "cookieRemember";
-    public static final String FIRSTSTART = "firstStart";
+    public static final String ISFIRSTSTART = "isfirstStart";
     
     // 连接超时
  	public static final int timeOut = 12000;
@@ -35,7 +35,7 @@ public class Constant {
  	//3表示下载暂停
  	public static final int downLoadPause = 3;
  	
- 	public static final String BASEURL = "http://www.418log.org/";
+ 	public static final String BASEURL = "http://www.amsoft.cn/";
  	
  	//应用的key
  	//1512528
@@ -43,5 +43,6 @@ public class Constant {
  		
  	//jfa97P4HIhjxrAgfUdq1NoKC
  	public final static String APIKEY = "jfa97P4HIhjxrAgfUdq1NoKC";
+ 	
     
 }

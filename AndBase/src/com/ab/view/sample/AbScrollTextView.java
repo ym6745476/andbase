@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,15 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class AbScrollTextView.
+ * © 2012 amsoft.cn
+ * 名称：AbScrollTextView.java 
+ * 描述：跑马灯一直跑
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-10-24 下午1:39:31
  */
 public class AbScrollTextView extends TextView {
 
@@ -56,13 +63,7 @@ public class AbScrollTextView extends TextView {
 	}
 
 	/**
-	 * 描述：TODO.
-	 *
-	 * @return true, if is focused
-	 * @see android.view.View#isFocused()
-	 * @author: zhaoqp
-	 * @date：2013-6-17 上午9:04:47
-	 * @version v1.0
+	 * 描述：设置为焦点，能一直滚动.
 	 */
 	@Override
 	public boolean isFocused() {

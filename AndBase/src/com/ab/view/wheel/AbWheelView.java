@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,6 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
@@ -42,21 +41,21 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
-import com.ab.global.AbAppData;
-import com.ab.util.AbGraphical;
+import com.ab.util.AbGraphicUtil;
 import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * Numeric wheel view.
+ * © 2012 amsoft.cn
+ * 名称：AbWheelView.java 
+ * 描述：轮子View
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-05-17 下午6:46:29
  */
 public class AbWheelView extends View {
-	
-	/** The tag. */
-	private static String TAG = "AbWheelView";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
 	
 	/** The m context. */
 	private Context mContext = null;
@@ -667,7 +666,7 @@ public class AbWheelView extends View {
 		int maxLength = getMaxTextLength();
 		if (maxLength > 0) {
 			//一个字符宽度
-			float textWidth = (int)AbGraphical.getStringWidth("0", labelPaint);
+			float textWidth = (int)AbGraphicUtil.getStringWidth("0", labelPaint);
 			//不算lable的宽度
 			itemsWidth = (int) (maxLength * textWidth);
 		} else {
@@ -680,8 +679,7 @@ public class AbWheelView extends View {
 		//label宽度的计算
 		labelWidth = 0;
 		if (label != null && label.length() > 0) {
-			labelWidth = (int)AbGraphical.getStringWidth(label, labelPaint);
-			if(D)Log.d(TAG, "itemsWidth:"+itemsWidth+",labelWidth:"+labelWidth);
+			labelWidth = (int)AbGraphicUtil.getStringWidth(label, labelPaint);
 		}
 
 		boolean recalculate = false;
@@ -779,12 +777,12 @@ public class AbWheelView extends View {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param widthMeasureSpec the width measure spec
 	 * @param heightMeasureSpec the height measure spec
 	 * @see android.view.View#onMeasure(int, int)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:47
-	 * @version v1.0
 	 */
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -805,18 +803,17 @@ public class AbWheelView extends View {
 				height = Math.min(height, heightSize);
 			}
 		}
-        if(D)Log.d(TAG, "onMeasure:"+width);
 		setMeasuredDimension(width, height);
 	}
 
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param canvas the canvas
 	 * @see android.view.View#onDraw(android.graphics.Canvas)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:47
-	 * @version v1.0
 	 */
 	@Override
 	protected void onDraw(Canvas canvas) {
@@ -921,12 +918,12 @@ public class AbWheelView extends View {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.view.View#onTouchEvent(android.view.MotionEvent)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:47
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -1139,7 +1136,7 @@ public class AbWheelView extends View {
 	 * @param textSize the new value text size
 	 */
 	public void setValueTextSize(int textSize) {
-		this.valueTextSize = AbViewUtil.resizeTextSize(screenWidth,screenHeight, textSize);
+		this.valueTextSize = AbViewUtil.scale(mContext, textSize);
 		this.itemOffset = valueTextSize/5;
 	}
 
@@ -1230,7 +1227,7 @@ public class AbWheelView extends View {
 	 * @param labelTextSize the new label text size
 	 */
 	public void setLabelTextSize(int labelTextSize) {
-		this.labelTextSize = AbViewUtil.resizeTextSize(screenWidth,screenHeight, labelTextSize);
+		this.labelTextSize = AbViewUtil.scale(mContext, labelTextSize);
 	}
 
 	/**
@@ -1242,5 +1239,43 @@ public class AbWheelView extends View {
 		this.additionalItemHeight = additionalItemHeight;
 	}
 	
+	/**
+	 * Wheel scrolled listener interface.
+	 *
+	 * @see AbOnWheelScrollEvent
+	 */
+	public interface AbOnWheelScrollListener {
+		/**
+		 * Callback method to be invoked when scrolling started.
+		 * @param wheel the wheel view whose state has changed.
+		 */
+		void onScrollingStarted(AbWheelView wheel);
+		
+		/**
+		 * Callback method to be invoked when scrolling ended.
+		 * @param wheel the wheel view whose state has changed.
+		 */
+		void onScrollingFinished(AbWheelView wheel);
+	}
+	
+	/**
+	 * Wheel changed listener interface.
+	 * <p>The currentItemChanged() method is called whenever current wheel positions is changed:
+	 * <li> New Wheel position is set
+	 * <li> Wheel view is scrolled
+	 *
+	 * @see AbOnWheelChangedEvent
+	 */
+	public interface AbOnWheelChangedListener {
+		
+		/**
+		 * Callback method to be invoked when current item changed.
+		 *
+		 * @param wheel the wheel view whose state has changed
+		 * @param oldValue the old value of current item
+		 * @param newValue the new value of current item
+		 */
+		void onChanged(AbWheelView wheel, int oldValue, int newValue);
+	}
 	
 }

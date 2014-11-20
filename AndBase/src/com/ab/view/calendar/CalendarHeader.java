@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,22 +26,21 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.LinearLayout.LayoutParams;
 
-import com.ab.util.AbGraphical;
+import com.ab.util.AbGraphicUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：CalendarHeader.java 
  * 描述：日历控件头部绘制类
- * @author zhaoqp
- * @date：2013-7-9 下午2:07:52
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-7-9 下午2:07:52
  */
 public class CalendarHeader extends View {
 	
@@ -156,11 +155,11 @@ public class CalendarHeader extends View {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param canvas the canvas
 	 * @see android.view.View#onDraw(android.graphics.Canvas)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-7-19 下午4:30:45
-	 * @version v1.0
 	 */
 	@Override
 	protected void onDraw(Canvas canvas) {
@@ -208,7 +207,7 @@ public class CalendarHeader extends View {
 	        FontMetrics fm  = mTextPaint.getFontMetrics();
 	        //得到行高
 	        int textHeight = (int)Math.ceil(fm.descent - fm.ascent);
-	        int textWidth = (int)AbGraphical.getStringWidth(sDayName,mTextPaint);
+	        int textWidth = (int)AbGraphicUtil.getStringWidth(sDayName,mTextPaint);
 			
 			final int iPosX = (int) rect.left +cellWidth*(iDay-1)+(cellWidth-textWidth)/2;
 			final int iPosY = (int) (this.getHeight()

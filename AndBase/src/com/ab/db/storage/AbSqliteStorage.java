@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,43 +20,35 @@ import java.util.List;
 import android.content.Context;
 
 import com.ab.db.orm.dao.AbDBDaoImpl;
-import com.ab.db.storage.AbSqliteStorageListener.AbDataInfoListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataDeleteListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataInsertListListener;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataInsertListener;
-import com.ab.db.storage.AbSqliteStorageListener.AbDataOperationListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataSelectListener;
+import com.ab.db.storage.AbSqliteStorageListener.AbDataUpdateListener;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListListener;
-import com.ab.task.AbTaskListener;
+import com.ab.task.AbTaskObjectListener;
 import com.ab.task.AbTaskQueue;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class AbSqliteStorage.
+ * © 2012 amsoft.cn
+ * 名称：AbSqliteStorage.java 
+ * 描述：数据库对象操作类
+ *
+ * @author 还如一梦中
+ * @version v1.0
+ * @date：2013-10-16 下午1:33:39
  */
 public class AbSqliteStorage {
 	
-	/** The m context. */
-	private static Context mContext;
-	
-	/** The m sqlite storage. */
+	/** 单例. */
 	private static AbSqliteStorage mSqliteStorage = null;
 	
-	/** The m ab task queue. */
-	private static AbTaskQueue mAbTaskQueue = null;
+	/** 队列. */
+	private static AbTaskQueue mAbTask = null;
 	
-	/** The error code100. */
-	private int errorCode100 = 100;
-	
-	/** The error message100. */
-	private String errorMessage100 = "参数错误";
-	
-	/** The error code101. */
-	private int errorCode101 = 101;
-	
-	/** The error message101. */
-	private String errorMessage101 = "执行时错误";
-	
-	/** The ret value. */
-	private long retValue = -1;
 	
 	/**
 	 * 描述：获取存储实例.
@@ -65,17 +57,19 @@ public class AbSqliteStorage {
 	 * @return single instance of AbSqliteStorage
 	 */
 	public static AbSqliteStorage getInstance(Context context){
-		mContext = context;
 	    if (null == mSqliteStorage){
 	    	mSqliteStorage = new AbSqliteStorage(context);
 	    }
-	    //用队列避免并发访问数据库问题
-	    mAbTaskQueue = AbTaskQueue.getInstance();
+	    if(mAbTask == null){
+	        //用队列避免并发访问数据库问题
+	        mAbTask = new AbTaskQueue();
+	    }
+	    
 	    return mSqliteStorage;
 	}
 	
 	/**
-	 * Instantiates a new ab sqlite storage.
+	 * 初始化.
 	 *
 	 * @param context the context
 	 */
@@ -96,37 +90,49 @@ public class AbSqliteStorage {
 		 if (entity != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.listener = new AbTaskListener() {
-				
+	    	item.setListener(new AbTaskObjectListener() {
+	    		
+	    		@SuppressWarnings({ "hiding", "unchecked" })
 				@Override
-				public void update() {
-					if(retValue>=0){
+				public <T> T getObject() {
+					long rowId = -1;
+					try {
+						//(1)获取数据库 
+						dao.startWritableDatabase(false);
+						//(2)执行
+						rowId = dao.insert(entity);
+					} catch (Exception e) {
+						e.printStackTrace();
 						if (paramDataInsertListener != null){
-				    		paramDataInsertListener.onSuccess(retValue);
-					    }
-					}else{
-						if (paramDataInsertListener != null){
-			    		    paramDataInsertListener.onFailure(errorCode101, errorMessage101);
+			    		    paramDataInsertListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, e.getMessage());
 				        }
+					}finally{
+						//(3)关闭数据库
+						dao.closeDatabase();
 					}
+				  	return (T)Long.valueOf(rowId);
 				}
 				
+				@SuppressWarnings("hiding")
 				@Override
-				public void get() {
-					//执行插入 
-					//(1)获取数据库 
-					dao.startWritableDatabase(false);
-				  	//(2)执行
-					retValue = dao.insert(entity);
-				    //(3)关闭数据库
-				  	dao.closeDatabase(false);
+				public <T> void update(T obj) {
+				    long rowId = (Long)obj;
+				    if (paramDataInsertListener != null){
+				    	if(rowId > -1){
+					    	paramDataInsertListener.onSuccess(rowId);
+						}else{
+				    		paramDataInsertListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, "");
+						}
+				    }
+					
 				}
-			};
-			mAbTaskQueue.execute(item);
+				
+			});
+	    	mAbTask.execute(item);
 	    	
 	    }else{
 	    	if (paramDataInsertListener != null){
-	    		paramDataInsertListener.onFailure(errorCode100, errorMessage100);
+	    		paramDataInsertListener.onFailure(AbDBStatus.BAD_PARAMS_CODE, "");
 		    }
 	    }
 	    
@@ -140,43 +146,66 @@ public class AbSqliteStorage {
 	 * @param dao     实现AbDBDaoImpl的Dao
 	 * @param paramDataInsertListener 返回监听器
 	 */
-	public <T> void insertData(final List<T> entityList,final AbDBDaoImpl<T> dao, final AbDataInsertListener paramDataInsertListener){
-		 
+	public <T> void insertData(final List<T> entityList,final AbDBDaoImpl<T> dao, final AbDataInsertListListener paramDataInsertListListener){
 		 if (entityList != null){
-	    	
+			
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.listener = new AbTaskListener() {
-				
+	    	item.setListener(new AbTaskObjectListener() {
+	    		
+	    		@SuppressWarnings({ "hiding", "unchecked" })
 				@Override
-				public void update() {
-					if(retValue>=0){
-						if (paramDataInsertListener != null){
-				    		paramDataInsertListener.onSuccess(retValue);
-					    }
-					}else{
-						if (paramDataInsertListener != null){
-			    		    paramDataInsertListener.onFailure(errorCode101, errorMessage101);
+				public <T> T getObject() {
+	    			long[] rowIds = null;
+					try {
+						//(1)获取数据库 
+						dao.startWritableDatabase(false);
+						//(2)执行
+						rowIds = dao.insertList(entityList);
+					} catch (Exception e) {
+						e.printStackTrace();
+						if (paramDataInsertListListener != null){
+							paramDataInsertListListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, e.getMessage());
 				        }
+					}finally{
+						//(3)关闭数据库
+						dao.closeDatabase();
 					}
-				}
-				
-				@Override
-				public void get() {
-					//执行插入 
-					//(1)获取数据库 
-					dao.startWritableDatabase(false);
-				  	//(2)执行
-					retValue = dao.insertList(entityList);
-				    //(3)关闭数据库
-				  	dao.closeDatabase(false);
+					return (T)rowIds;
 			    	
 				}
-			};
-			mAbTaskQueue.execute(item);
+				
+				@SuppressWarnings("hiding")
+				@Override
+				public <T> void update(T obj) {
+					long sum = -1;
+					long[] rowIdsBase = null;
+				    if(obj!=null){
+				    	Long[] rowIds = (Long[])obj;
+				    	rowIdsBase = new long[rowIds.length];
+					    for(int i=0;i<rowIds.length;i++){
+					    	long rowId = rowIds[i];
+					    	sum += rowId;
+					    	rowIdsBase[i] = rowId;
+					    }
+				    }
+				    
+				    if (paramDataInsertListListener != null){
+				    	if(sum > -1){
+				    		paramDataInsertListListener.onSuccess(rowIdsBase);
+						}else{
+							paramDataInsertListListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, "");
+						}
+				    }
+					
+				}
+				
+				
+			});
+	    	mAbTask.execute(item);
 	    	
 	    }else{
-	    	if (paramDataInsertListener != null){
-	    		paramDataInsertListener.onFailure(errorCode100, errorMessage100);
+	    	if (paramDataInsertListListener != null){
+	    		paramDataInsertListListener.onFailure(AbDBStatus.BAD_PARAMS_CODE, "");
 		    }
 	    }
 	    
@@ -184,46 +213,51 @@ public class AbSqliteStorage {
 	
 	
 	/**
-	 * Find data.
+	 * 查找数据.
 	 *
 	 * @param <T> 描述：查询数据
 	 * @param storageQuery the storage query
 	 * @param dao     实现AbDBDaoImpl的Dao
 	 * @param paramDataInsertListener 返回监听器
 	 */
-	public <T> void findData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataInfoListener paramDataInsertListener){
+	public <T> void findData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataSelectListener paramDataSelectListener){
 		     
 	    	final AbTaskItem item = new AbTaskItem();
-	    	item.listener = new AbTaskListListener() {
+	    	item.setListener(new AbTaskListListener() {
+				
+				@Override
+				public List<?> getList() {
+					List<?> list = null;
+					try {
+						//(1)获取数据库 
+						dao.startReadableDatabase();
+						//(2)执行
+						if(storageQuery.getLimit()!=-1 && storageQuery.getOffset()!=-1){
+							list = dao.queryList(null, storageQuery.getWhereClause(),storageQuery.getWhereArgs(), storageQuery.getGroupBy(), storageQuery.getHaving(), storageQuery.getOrderBy()+" limit "+storageQuery.getLimit()+ " offset " +storageQuery.getOffset(), null);
+						}else{
+							list = dao.queryList(null, storageQuery.getWhereClause(),storageQuery.getWhereArgs(), storageQuery.getGroupBy(), storageQuery.getHaving(), storageQuery.getOrderBy(), null);
+						}
+						
+					} catch (Exception e) {
+						e.printStackTrace();
+						if (paramDataSelectListener != null){
+							paramDataSelectListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, e.getMessage());
+				        }
+					}finally{
+						//(3)关闭数据库
+						dao.closeDatabase();
+					}
+				  	return list;
+				}
 				
 				@Override
 				public void update(List<?> paramList) {
-					if (paramDataInsertListener != null){
-			    		paramDataInsertListener.onSuccess(paramList);
+					if (paramDataSelectListener != null){
+						paramDataSelectListener.onSuccess(paramList);
 				    }
 				}
-				
-				@Override
-				public void get() {
-					List<?> list = null;   
-					//执行插入 
-					//(1)获取数据库 
-					dao.startReadableDatabase(false);
-				  	//(2)执行
-					if(storageQuery.getLimit()!=-1 && storageQuery.getOffset()!=-1){
-						list = dao.queryList(null, storageQuery.getWhereClause(),storageQuery.getWhereArgs(), storageQuery.getGroupBy(), storageQuery.getHaving(), storageQuery.getOrderBy()+" limit "+storageQuery.getLimit()+ " offset " +storageQuery.getOffset(), null);
-					}else{
-						list = dao.queryList(null, storageQuery.getWhereClause(),storageQuery.getWhereArgs(), storageQuery.getGroupBy(), storageQuery.getHaving(), storageQuery.getOrderBy(), null);
-					}
-				    //(3)关闭数据库
-				  	dao.closeDatabase(false);
-				  	
-				  	//设置返回结果
-				  	item.setResult(list);
-			    	
-				}
-			};
-			mAbTaskQueue.execute(item);
+			});
+	    	mAbTask.execute(item);
 	    
 	  }
 	
@@ -235,43 +269,55 @@ public class AbSqliteStorage {
 	 * @param dao     实现AbDBDaoImpl的Dao
 	 * @param paramDataInsertListener 返回监听器
 	 */
-	public <T> void updateData(final T entity,final AbDBDaoImpl<T> dao, final AbDataOperationListener paramDataInsertListener){
+	public <T> void updateData(final T entity,final AbDBDaoImpl<T> dao, final AbDataUpdateListener paramDataUpdateListener){
 		 
 		 if (entity != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.listener = new AbTaskListListener() {
-				
+	    	item.setListener(new AbTaskObjectListener() {
+	    		
+				@SuppressWarnings({ "hiding", "unchecked" })
 				@Override
-				public void update(List<?> paramList) {
-					if(retValue>=0){
-						if (paramDataInsertListener != null){
-				    		paramDataInsertListener.onSuccess(retValue);
-					    }
-					}else{
-						if (paramDataInsertListener != null){
-			    		    paramDataInsertListener.onFailure(errorCode101, errorMessage101);
-				        }
+				public <T> T getObject() {
+					int rows = 0;
+				    try {
+						//(1)获取数据库 
+						dao.startWritableDatabase(false);
+						//(2)执行
+						rows = dao.update(entity);
+					} catch (Exception e) {
+						e.printStackTrace();
+						if (paramDataUpdateListener != null){
+							paramDataUpdateListener.onFailure(AbDBStatus.EXEC_ERROR_CODE,e.getMessage());
+                        }
+					}finally{
+						//(3)关闭数据库
+						dao.closeDatabase();
 					}
+				    return (T)Long.valueOf(rows);
 				}
 				
+                @SuppressWarnings("hiding")
 				@Override
-				public void get() {
-					//执行插入 
-					//(1)获取数据库 
-					dao.startWritableDatabase(false);
-				  	//(2)执行
-					retValue = dao.update(entity);
-				    //(3)关闭数据库
-				  	dao.closeDatabase(false);
-			    	
+				public <T> void update(T obj) {
+                	 int rows = (Integer)obj;
+                	 if (paramDataUpdateListener != null){
+                		 if(rows > 0){
+                			 paramDataUpdateListener.onSuccess(rows);
+                         }else{
+                        	 paramDataUpdateListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, "");
+                         }
+                     }
+                     
+					
 				}
-			};
-			mAbTaskQueue.execute(item);
+               
+			});
+	    	mAbTask.execute(item);
 	    	
 	    }else{
-	    	if (paramDataInsertListener != null){
-	    		paramDataInsertListener.onFailure(errorCode100, errorMessage100);
+	    	if (paramDataUpdateListener != null){
+	    		paramDataUpdateListener.onFailure(AbDBStatus.BAD_PARAMS_CODE, "");
 		    }
 	    }
 	    
@@ -285,43 +331,61 @@ public class AbSqliteStorage {
 	 * @param dao     实现AbDBDaoImpl的Dao
 	 * @param paramDataInsertListener 返回监听器
 	 */
-	public <T> void updateData(final List<T> entityList,final AbDBDaoImpl<T> dao, final AbDataOperationListener paramDataInsertListener){
+	public <T> void updateData(final List<T> entityList,final AbDBDaoImpl<T> dao, final AbDataUpdateListener paramDataUpdateListener){
 		 
 		 if (entityList != null){
 	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.listener = new AbTaskListener() {
+	    	item.setListener(new AbTaskObjectListener() {
 				
+				@SuppressWarnings({ "unchecked", "hiding" })
 				@Override
-				public void update() {
-					if(retValue>=0){
-						if (paramDataInsertListener != null){
-				    		paramDataInsertListener.onSuccess(retValue);
-					    }
-					}else{
-						if (paramDataInsertListener != null){
-			    		    paramDataInsertListener.onFailure(errorCode101, errorMessage101);
-				        }
+				public <T> T getObject() {
+					int rows = 0;
+					try {
+						//(1)获取数据库 
+						dao.startWritableDatabase(false);
+						//(2)执行
+						rows = dao.updateList(entityList);
+					} catch (Exception e) {
+						e.printStackTrace();
+						if (paramDataUpdateListener != null){
+							paramDataUpdateListener.onFailure(AbDBStatus.EXEC_ERROR_CODE,e.getMessage());
+                        }
+					}finally{
+						//(3)关闭数据库
+						dao.closeDatabase();
 					}
-				}
-				
-				@Override
-				public void get() {
-					//执行插入 
-					//(1)获取数据库 
-					dao.startWritableDatabase(false);
-				  	//(2)执行
-					retValue = dao.updateList(entityList);
-				    //(3)关闭数据库
-				  	dao.closeDatabase(false);
+					return (T)Integer.valueOf(rows);
 			    	
 				}
-			};
-			mAbTaskQueue.execute(item);
+				
+				@SuppressWarnings("hiding")
+				@Override
+				public <T> void update(T obj) {
+				    try {
+						int ret = (Integer)obj;
+						if (paramDataUpdateListener != null){
+							if(ret >= 0){
+								paramDataUpdateListener.onSuccess(ret);
+							}else{
+								paramDataUpdateListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, "");
+							}
+					    }
+						
+					} catch (Exception e) {
+						e.printStackTrace();
+						if (paramDataUpdateListener != null){
+							paramDataUpdateListener.onFailure(AbDBStatus.EXEC_ERROR_CODE,e.getMessage());
+                        }
+					}
+				}
+			});
+	    	mAbTask.execute(item);
 	    	
 	    }else{
-	    	if (paramDataInsertListener != null){
-	    		paramDataInsertListener.onFailure(errorCode100, errorMessage100);
+	    	if (paramDataUpdateListener != null){
+	    		paramDataUpdateListener.onFailure(AbDBStatus.BAD_PARAMS_CODE, "");
 		    }
 	    }
 	    
@@ -335,46 +399,57 @@ public class AbSqliteStorage {
 	 * @param dao     实现AbDBDaoImpl的Dao
 	 * @param paramDataInsertListener 返回监听器
 	 */
-	public <T> void deleteData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataOperationListener paramDataInsertListener){
+	public <T> void deleteData(final AbStorageQuery storageQuery,final AbDBDaoImpl<T> dao, final AbDataDeleteListener paramDataDeleteListener){
 		 
-	    	
 	    	AbTaskItem item = new AbTaskItem();
-	    	item.listener = new AbTaskListener() {
-				
+	    	item.setListener(new AbTaskObjectListener() {
+	    		
+	    		@SuppressWarnings({ "unchecked", "hiding" })
 				@Override
-				public void update() {
-					if(retValue>=0){
-						if (paramDataInsertListener != null){
-				    		paramDataInsertListener.onSuccess(retValue);
-					    }
-					}else{
-						if (paramDataInsertListener != null){
-			    		    paramDataInsertListener.onFailure(errorCode101, errorMessage101);
-				        }
+				public <T> T getObject() {
+	    			int rows = 0;
+					try {
+						//(1)获取数据库 
+						dao.startWritableDatabase(false);
+						//(2)执行
+						rows = dao.delete(storageQuery.getWhereClause(),storageQuery.getWhereArgs());
+					} catch (Exception e) {
+						e.printStackTrace();
+						if (paramDataDeleteListener != null){
+							paramDataDeleteListener.onFailure(AbDBStatus.EXEC_ERROR_CODE,e.getMessage());
+                        }
+					}finally{
+						//(3)关闭数据库
+						dao.closeDatabase();
 					}
+					return (T)Integer.valueOf(rows);
+				}
+	    		
+				@SuppressWarnings("hiding")
+				@Override
+				public <T> void update(T obj) {
+				    int rows = (Integer)obj;
+				    if (paramDataDeleteListener != null){
+				    	if(rows >= 0){
+							paramDataDeleteListener.onSuccess(rows);
+						}else{
+							paramDataDeleteListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, "");
+						}
+				    }
+					
 				}
 				
-				@Override
-				public void get() {
-					//执行插入 
-					//(1)获取数据库 
-					dao.startWritableDatabase(false);
-				  	//(2)执行
-					retValue = dao.delete(storageQuery.getWhereClause(),storageQuery.getWhereArgs());
-				    //(3)关闭数据库
-				  	dao.closeDatabase(false);
-			    	
-				}
-			};
-			mAbTaskQueue.execute(item);
+			});
+	    	mAbTask.execute(item);
 	}
 	
 	/**
 	 * 描述：释放存储实例.
 	 */
 	public void release(){
-		if(mAbTaskQueue!=null){
-			mAbTaskQueue.quit();
+		if(mAbTask!=null){
+			mAbTask.cancel(true);
+			mAbTask = null;
 		}
 	}
 	

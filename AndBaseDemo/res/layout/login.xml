@@ -31,6 +31,7 @@
                 android:hint="@string/userName"
                 android:inputType="text"
                 android:maxLength="20"
+                android:paddingBottom="10dip"
                 android:singleLine="true"
                 android:textColor="@color/gray"
                 android:textSize="18sp" />
@@ -40,8 +41,7 @@
                 android:layout_width="25dip"
                 android:layout_height="25dip"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="12dip"
+                android:layout_marginRight="10dip"
                 android:background="@drawable/clear_icon"
                 android:visibility="invisible" />
         </RelativeLayout>
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:layout_marginTop="10dip" >
+            android:layout_marginTop="20dip" >
 
             <EditText
                 android:id="@+id/userPwd"
@@ -63,6 +63,7 @@
                 android:inputType="textPassword"
                 android:maxLength="20"
                 android:singleLine="true"
+                android:paddingBottom="10dip"
                 android:textColor="@color/gray"
                 android:textSize="18sp" >
             </EditText>
@@ -72,8 +73,7 @@
                 android:layout_width="25dip"
                 android:layout_height="25dip"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="12dip"
+                android:layout_marginRight="10dip"
                 android:background="@drawable/clear_icon"
                 android:visibility="invisible" />
         </RelativeLayout>
@@ -129,7 +129,7 @@
                 android:id="@+id/loginBtn"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_selector_green"
+                android:background="@drawable/button_selector_yellow"
                 android:text="@string/login"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -139,9 +139,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dip"
-                android:background="@drawable/button_selector_yellow"
+                android:background="@drawable/button_selector_white"
                 android:text="@string/register"
-                android:textColor="@color/white"
+                android:textColor="@color/gray"
                 android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>

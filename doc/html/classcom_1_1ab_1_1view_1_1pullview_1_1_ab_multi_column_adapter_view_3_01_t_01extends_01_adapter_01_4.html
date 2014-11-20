@@ -1,0 +1,2319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>AndBase开发框架: com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1pullview.html">pullview</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html">AbMultiColumnAdapterView< T extends Adapter ></a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pac-static-attribs">静态包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.png" usemap="#com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;_map" alt=""/>
+  <map id="com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;_map" name="com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_721651b394656a596ef651b063bc65b7.html">AdapterContextMenuInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_cc673b4711434fe489c0a1c1441da632.html">AdapterDataSetObserver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapfd447b06d4861b5858758bcc08a0d087.html">OnItemClickListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapa42d8c0cdf5d5a5d36e5fa89cf67d1c8.html">OnItemLongClickListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapc2bb4dc2b4a260076f6418385341e932.html">OnItemSelectedListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a67a471936fdbe673f56c52e317b213bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a67a471936fdbe673f56c52e317b213bc">AbMultiColumnAdapterView</a> (Context context)</td></tr>
+<tr class="separator:a67a471936fdbe673f56c52e317b213bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63ac26bcae8861b440d4e16799f91e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#af63ac26bcae8861b440d4e16799f91e3">AbMultiColumnAdapterView</a> (Context context, AttributeSet attrs)</td></tr>
+<tr class="separator:af63ac26bcae8861b440d4e16799f91e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0d82ed353d355b57d7cd8307cbe397"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a0a0d82ed353d355b57d7cd8307cbe397">AbMultiColumnAdapterView</a> (Context context, AttributeSet attrs, int defStyle)</td></tr>
+<tr class="separator:a0a0d82ed353d355b57d7cd8307cbe397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef642a1e427f1ffb42a57ed6283b2bdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aef642a1e427f1ffb42a57ed6283b2bdf">setOnItemClickListener</a> (OnItemClickListener listener)</td></tr>
+<tr class="separator:aef642a1e427f1ffb42a57ed6283b2bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa5712b95c0263afa0dcab15ebc4c53"><td class="memItemLeft" align="right" valign="top">final OnItemClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#abfa5712b95c0263afa0dcab15ebc4c53">getOnItemClickListener</a> ()</td></tr>
+<tr class="separator:abfa5712b95c0263afa0dcab15ebc4c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af067eefd2d835ca864a03497e66265e6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#af067eefd2d835ca864a03497e66265e6">performItemClick</a> (View view, int position, long id)</td></tr>
+<tr class="separator:af067eefd2d835ca864a03497e66265e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482e7fcfe3921c68e78c8bc6e941d147"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a482e7fcfe3921c68e78c8bc6e941d147">setOnItemLongClickListener</a> (OnItemLongClickListener listener)</td></tr>
+<tr class="separator:a482e7fcfe3921c68e78c8bc6e941d147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd922202d3ab8495005a490d9805898"><td class="memItemLeft" align="right" valign="top">final OnItemLongClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#affd922202d3ab8495005a490d9805898">getOnItemLongClickListener</a> ()</td></tr>
+<tr class="separator:affd922202d3ab8495005a490d9805898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fad58a05e07cc700adbaf5993e3fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a08fad58a05e07cc700adbaf5993e3fbe">setOnItemSelectedListener</a> (OnItemSelectedListener listener)</td></tr>
+<tr class="separator:a08fad58a05e07cc700adbaf5993e3fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4929fb0e5375102599fc7a5b95492991"><td class="memItemLeft" align="right" valign="top">final OnItemSelectedListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a4929fb0e5375102599fc7a5b95492991">getOnItemSelectedListener</a> ()</td></tr>
+<tr class="separator:a4929fb0e5375102599fc7a5b95492991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ffefd34185a73b9c81755ba035d6ee"><td class="memItemLeft" align="right" valign="top">abstract T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a16ffefd34185a73b9c81755ba035d6ee">getAdapter</a> ()</td></tr>
+<tr class="separator:a16ffefd34185a73b9c81755ba035d6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3d97790c20444ad611232529bf96c3"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a0a3d97790c20444ad611232529bf96c3">setAdapter</a> (T adapter)</td></tr>
+<tr class="separator:a0a3d97790c20444ad611232529bf96c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bd26da1738fdb2ac4eceddfb709ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a55bd26da1738fdb2ac4eceddfb709ad7">addView</a> (View child)</td></tr>
+<tr class="separator:a55bd26da1738fdb2ac4eceddfb709ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc9f64584e0bb098ba58f2c384e0f10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a2bc9f64584e0bb098ba58f2c384e0f10">addView</a> (View child, int index)</td></tr>
+<tr class="separator:a2bc9f64584e0bb098ba58f2c384e0f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f446016c27909971059a54e4a46233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a76f446016c27909971059a54e4a46233">addView</a> (View child, LayoutParams params)</td></tr>
+<tr class="separator:a76f446016c27909971059a54e4a46233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763ed76499684227bad7ce0838951d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a763ed76499684227bad7ce0838951d1d">addView</a> (View child, int index, LayoutParams params)</td></tr>
+<tr class="separator:a763ed76499684227bad7ce0838951d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0056a43291e03ce0c2e5d7d955268415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a0056a43291e03ce0c2e5d7d955268415">removeView</a> (View child)</td></tr>
+<tr class="separator:a0056a43291e03ce0c2e5d7d955268415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad07b16f003f17790dc58e2394f001083"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ad07b16f003f17790dc58e2394f001083">removeViewAt</a> (int index)</td></tr>
+<tr class="separator:ad07b16f003f17790dc58e2394f001083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923e2727733a3fe96e998945ba155583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a923e2727733a3fe96e998945ba155583">removeAllViews</a> ()</td></tr>
+<tr class="separator:a923e2727733a3fe96e998945ba155583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19b8250462a853a7e67ca59ec208504"><td class="memItemLeft" align="right" valign="top">.CapturedViewProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ad19b8250462a853a7e67ca59ec208504">getSelectedItemPosition</a> ()</td></tr>
+<tr class="separator:ad19b8250462a853a7e67ca59ec208504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b9288ef5e111401509ab1a7927f8a1"><td class="memItemLeft" align="right" valign="top">.CapturedViewProperty long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a03b9288ef5e111401509ab1a7927f8a1">getSelectedItemId</a> ()</td></tr>
+<tr class="separator:a03b9288ef5e111401509ab1a7927f8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e728bd3e7409457876e6ae541ca14c"><td class="memItemLeft" align="right" valign="top">abstract View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a78e728bd3e7409457876e6ae541ca14c">getSelectedView</a> ()</td></tr>
+<tr class="separator:a78e728bd3e7409457876e6ae541ca14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac448d7da33954c6def508b73f57c3aa1"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ac448d7da33954c6def508b73f57c3aa1">getSelectedItem</a> ()</td></tr>
+<tr class="separator:ac448d7da33954c6def508b73f57c3aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29efc4f1d441c7031817344c3be2079"><td class="memItemLeft" align="right" valign="top">.CapturedViewProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#af29efc4f1d441c7031817344c3be2079">getCount</a> ()</td></tr>
+<tr class="separator:af29efc4f1d441c7031817344c3be2079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6474537d19555baf92d934936beb890a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a6474537d19555baf92d934936beb890a">getPositionForView</a> (View view)</td></tr>
+<tr class="separator:a6474537d19555baf92d934936beb890a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd20aafa907e00964513f5237f6ff10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aadd20aafa907e00964513f5237f6ff10">getFirstVisiblePosition</a> ()</td></tr>
+<tr class="separator:aadd20aafa907e00964513f5237f6ff10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7718869aa9d0ccc0b6da0bdf7b887f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a0c7718869aa9d0ccc0b6da0bdf7b887f">getLastVisiblePosition</a> ()</td></tr>
+<tr class="separator:a0c7718869aa9d0ccc0b6da0bdf7b887f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad300b4c17dc1dce0536ccafb8897042d"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ad300b4c17dc1dce0536ccafb8897042d">setSelection</a> (int position)</td></tr>
+<tr class="separator:ad300b4c17dc1dce0536ccafb8897042d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3c06927417462725af7f915fcb2131"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#abe3c06927417462725af7f915fcb2131">setEmptyView</a> (View emptyView)</td></tr>
+<tr class="separator:abe3c06927417462725af7f915fcb2131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac654f2d65fffca76128123564c39d445"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ac654f2d65fffca76128123564c39d445">getEmptyView</a> ()</td></tr>
+<tr class="separator:ac654f2d65fffca76128123564c39d445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686d8ff474ca810f3c2d74cc4da58cab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a686d8ff474ca810f3c2d74cc4da58cab">setFocusable</a> (boolean focusable)</td></tr>
+<tr class="separator:a686d8ff474ca810f3c2d74cc4da58cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74a02483765ad2ed451e5ae4256b649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ac74a02483765ad2ed451e5ae4256b649">setFocusableInTouchMode</a> (boolean focusable)</td></tr>
+<tr class="separator:ac74a02483765ad2ed451e5ae4256b649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff6ff0b75856847eff16c1b863b0467"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a8ff6ff0b75856847eff16c1b863b0467">getItemAtPosition</a> (int position)</td></tr>
+<tr class="separator:a8ff6ff0b75856847eff16c1b863b0467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa563514175fef28270d8831d42367e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a3aa563514175fef28270d8831d42367e">getItemIdAtPosition</a> (int position)</td></tr>
+<tr class="separator:a3aa563514175fef28270d8831d42367e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505038daef33778f1adfd5244dd24e64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a505038daef33778f1adfd5244dd24e64">setOnClickListener</a> (OnClickListener l)</td></tr>
+<tr class="separator:a505038daef33778f1adfd5244dd24e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2a83566422beccb7753264c5973cfa"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aeb2a83566422beccb7753264c5973cfa">dispatchPopulateAccessibilityEvent</a> (AccessibilityEvent event)</td></tr>
+<tr class="separator:aeb2a83566422beccb7753264c5973cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:aea3ee014652159cec658597b7a45cf9e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aea3ee014652159cec658597b7a45cf9e">ITEM_VIEW_TYPE_IGNORE</a> = -1</td></tr>
+<tr class="separator:aea3ee014652159cec658597b7a45cf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6917b417bc055e2c7ef3ea871d9843"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a5e6917b417bc055e2c7ef3ea871d9843">ITEM_VIEW_TYPE_HEADER_OR_FOOTER</a> = -2</td></tr>
+<tr class="separator:a5e6917b417bc055e2c7ef3ea871d9843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ff420c7681c5b7786a45de5aafe885"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a> = -1</td></tr>
+<tr class="separator:a60ff420c7681c5b7786a45de5aafe885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393f595a387d939fea49ca2722204e85"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a393f595a387d939fea49ca2722204e85">INVALID_ROW_ID</a> = Long.MIN_VALUE</td></tr>
+<tr class="separator:a393f595a387d939fea49ca2722204e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:affe2b6217dbf9bc2e422a0be0cfd6e82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#affe2b6217dbf9bc2e422a0be0cfd6e82">onLayout</a> (boolean changed, int left, int top, int right, int bottom)</td></tr>
+<tr class="separator:affe2b6217dbf9bc2e422a0be0cfd6e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66fd6cdf57958ad292f328d86996263"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aa66fd6cdf57958ad292f328d86996263">dispatchSaveInstanceState</a> (SparseArray&lt; Parcelable &gt; container)</td></tr>
+<tr class="separator:aa66fd6cdf57958ad292f328d86996263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47781ae371efe37a0da85927355ed225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a47781ae371efe37a0da85927355ed225">dispatchRestoreInstanceState</a> (SparseArray&lt; Parcelable &gt; container)</td></tr>
+<tr class="separator:a47781ae371efe37a0da85927355ed225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a3decf92cd854baf5b222e30a24bc2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a35a3decf92cd854baf5b222e30a24bc2">canAnimate</a> ()</td></tr>
+<tr class="separator:a35a3decf92cd854baf5b222e30a24bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a97ece7876c1738591b24ddf1e7ea4a32"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a97ece7876c1738591b24ddf1e7ea4a32">isInFilterMode</a> ()</td></tr>
+<tr class="separator:a97ece7876c1738591b24ddf1e7ea4a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03911001076da3e2e56a6a48ae359cb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a03911001076da3e2e56a6a48ae359cb6">checkFocus</a> ()</td></tr>
+<tr class="separator:a03911001076da3e2e56a6a48ae359cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6748d287c604bf978ebcc4f1badfd68e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a6748d287c604bf978ebcc4f1badfd68e">handleDataChanged</a> ()</td></tr>
+<tr class="separator:a6748d287c604bf978ebcc4f1badfd68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a4f35c0e25d225434051d34a299f29"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a66a4f35c0e25d225434051d34a299f29">findSyncPosition</a> ()</td></tr>
+<tr class="separator:a66a4f35c0e25d225434051d34a299f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a53d8526e610c443665fa1904d551c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a18a53d8526e610c443665fa1904d551c">lookForSelectablePosition</a> (int position, boolean lookDown)</td></tr>
+<tr class="separator:a18a53d8526e610c443665fa1904d551c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9604d1bc9aa9af211d7655db85a8ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a2e9604d1bc9aa9af211d7655db85a8ac">rememberSyncState</a> ()</td></tr>
+<tr class="separator:a2e9604d1bc9aa9af211d7655db85a8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:ae2efde3b611c1f0be197fd4a940b6ce4"><td class="memItemLeft" align="right" valign="top">.ExportedProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ae2efde3b611c1f0be197fd4a940b6ce4">mFirstPosition</a> = 0</td></tr>
+<tr class="separator:ae2efde3b611c1f0be197fd4a940b6ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb128d7a7cb465808115196d6b119b34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aeb128d7a7cb465808115196d6b119b34">mSpecificTop</a></td></tr>
+<tr class="separator:aeb128d7a7cb465808115196d6b119b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3890849acfca70a15b3c5f8551874467"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a3890849acfca70a15b3c5f8551874467">mSyncPosition</a></td></tr>
+<tr class="separator:a3890849acfca70a15b3c5f8551874467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3ac31fbd47da766456a0c7d99a3bcbe"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#aa3ac31fbd47da766456a0c7d99a3bcbe">mSyncRowId</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a393f595a387d939fea49ca2722204e85">INVALID_ROW_ID</a></td></tr>
+<tr class="separator:aa3ac31fbd47da766456a0c7d99a3bcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fbeca0ea95eed42b937c130e3aed5fa"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a8fbeca0ea95eed42b937c130e3aed5fa">mSyncHeight</a></td></tr>
+<tr class="separator:a8fbeca0ea95eed42b937c130e3aed5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745cbb362dd96ef876b3e61ca62de5df"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a745cbb362dd96ef876b3e61ca62de5df">mNeedSync</a> = false</td></tr>
+<tr class="separator:a745cbb362dd96ef876b3e61ca62de5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01589e1948914937928ee993002e81c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a01589e1948914937928ee993002e81c9">mSyncMode</a></td></tr>
+<tr class="separator:a01589e1948914937928ee993002e81c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d998ff4252be38a0fad138866050bb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#af4d998ff4252be38a0fad138866050bb">mInLayout</a> = false</td></tr>
+<tr class="separator:af4d998ff4252be38a0fad138866050bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79706964d4d0ed6b9f36d205fffe37e3"><td class="memItemLeft" align="right" valign="top">OnItemSelectedListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a79706964d4d0ed6b9f36d205fffe37e3">mOnItemSelectedListener</a></td></tr>
+<tr class="separator:a79706964d4d0ed6b9f36d205fffe37e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73c5b9a2fc85ec6868be4770e6eb4b2"><td class="memItemLeft" align="right" valign="top">OnItemClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ad73c5b9a2fc85ec6868be4770e6eb4b2">mOnItemClickListener</a></td></tr>
+<tr class="separator:ad73c5b9a2fc85ec6868be4770e6eb4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a488002e122c849c45ce21d992e66cb"><td class="memItemLeft" align="right" valign="top">OnItemLongClickListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a1a488002e122c849c45ce21d992e66cb">mOnItemLongClickListener</a></td></tr>
+<tr class="separator:a1a488002e122c849c45ce21d992e66cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3b88769a167970ee64ae187ea8f3c5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#add3b88769a167970ee64ae187ea8f3c5">mDataChanged</a></td></tr>
+<tr class="separator:add3b88769a167970ee64ae187ea8f3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3e97bf841d764630c64901d1bf80e3"><td class="memItemLeft" align="right" valign="top">.ExportedProperty int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#abf3e97bf841d764630c64901d1bf80e3">mItemCount</a></td></tr>
+<tr class="separator:abf3e97bf841d764630c64901d1bf80e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b56d004f340d52e4732c478755f624d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a2b56d004f340d52e4732c478755f624d">mOldItemCount</a></td></tr>
+<tr class="separator:a2b56d004f340d52e4732c478755f624d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4caa4caec2d7e83a77c5b05e9b6209"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a7e4caa4caec2d7e83a77c5b05e9b6209">mOldSelectedPosition</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a></td></tr>
+<tr class="separator:a7e4caa4caec2d7e83a77c5b05e9b6209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affac5f4acd9ca9fe48770de8f5c8da61"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#affac5f4acd9ca9fe48770de8f5c8da61">mOldSelectedRowId</a> = <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a393f595a387d939fea49ca2722204e85">INVALID_ROW_ID</a></td></tr>
+<tr class="separator:affac5f4acd9ca9fe48770de8f5c8da61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd496b35e389b4390227c538fb42e3d8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#acd496b35e389b4390227c538fb42e3d8">mBlockLayoutRequests</a> = false</td></tr>
+<tr class="separator:acd496b35e389b4390227c538fb42e3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-attribs"></a>
+静态包属性</h2></td></tr>
+<tr class="memitem:a138f28d7595b697d70b6deb769fbc34d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a138f28d7595b697d70b6deb769fbc34d">SYNC_SELECTED_POSITION</a> = 0</td></tr>
+<tr class="separator:a138f28d7595b697d70b6deb769fbc34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1816ada3fa1439a9ca3f97b417e874d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ad1816ada3fa1439a9ca3f97b417e874d">SYNC_FIRST_POSITION</a> = 1</td></tr>
+<tr class="separator:ad1816ada3fa1439a9ca3f97b417e874d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad6cd60ca3cb8b161ac10eeb91dfa53"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a4ad6cd60ca3cb8b161ac10eeb91dfa53">SYNC_MAX_DURATION_MILLIS</a> = 100</td></tr>
+<tr class="separator:a4ad6cd60ca3cb8b161ac10eeb91dfa53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ab8a015f147bfb866d13fd853fb5ec059"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ab8a015f147bfb866d13fd853fb5ec059">updateEmptyStatus</a> (boolean empty)</td></tr>
+<tr class="separator:ab8a015f147bfb866d13fd853fb5ec059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9b429300dc7d36f7f139a7da6b063eb4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a9b429300dc7d36f7f139a7da6b063eb4">mLayoutHeight</a></td></tr>
+<tr class="separator:a9b429300dc7d36f7f139a7da6b063eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba173694d41d3cb0f17664077071590"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a8ba173694d41d3cb0f17664077071590">mEmptyView</a></td></tr>
+<tr class="separator:a8ba173694d41d3cb0f17664077071590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef0769d2b8a3bb60854e79ab5c17aac"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a9ef0769d2b8a3bb60854e79ab5c17aac">mDesiredFocusableState</a></td></tr>
+<tr class="separator:a9ef0769d2b8a3bb60854e79ab5c17aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a51e1c31e5f4f2fbae6521dfb8b39a2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a9a51e1c31e5f4f2fbae6521dfb8b39a2">mDesiredFocusableInTouchModeState</a></td></tr>
+<tr class="separator:a9a51e1c31e5f4f2fbae6521dfb8b39a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An AdapterView is a view whose children are determined by an <a class="el" href="">Adapter</a>.</p>
+<p>See <a class="el" href="">ListView</a>, <a class="el" href="">GridView</a>, <a class="el" href="">Spinner</a> and <a class="el" href="">Gallery</a> for commonly used subclasses of AdapterView. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a67a471936fdbe673f56c52e317b213bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.AbMultiColumnAdapterView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af63ac26bcae8861b440d4e16799f91e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.AbMultiColumnAdapterView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0a0d82ed353d355b57d7cd8307cbe397"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.AbMultiColumnAdapterView </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AttributeSet&#160;</td>
+          <td class="paramname"><em>attrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a55bd26da1738fdb2ac4eceddfb709ad7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2bc9f64584e0bb098ba58f2c384e0f10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">index</td><td>Ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a76f446016c27909971059a54e4a46233"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayoutParams&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">params</td><td>Ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a763ed76499684227bad7ce0838951d1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.addView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayoutParams&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">index</td><td>Ignored. </td></tr>
+    <tr><td class="paramname">params</td><td>Ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a35a3decf92cd854baf5b222e30a24bc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.canAnimate </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03911001076da3e2e56a6a48ae359cb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.checkFocus </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeb2a83566422beccb7753264c5973cfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.dispatchPopulateAccessibilityEvent </td>
+          <td>(</td>
+          <td class="paramtype">AccessibilityEvent&#160;</td>
+          <td class="paramname"><em>event</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47781ae371efe37a0da85927355ed225"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.dispatchRestoreInstanceState </td>
+          <td>(</td>
+          <td class="paramtype">SparseArray&lt; Parcelable &gt;&#160;</td>
+          <td class="paramname"><em>container</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override to prevent thawing of any views created by the adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa66fd6cdf57958ad292f328d86996263"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.dispatchSaveInstanceState </td>
+          <td>(</td>
+          <td class="paramtype">SparseArray&lt; Parcelable &gt;&#160;</td>
+          <td class="paramname"><em>container</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override to prevent freezing of any views created by the adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="a66a4f35c0e25d225434051d34a299f29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.findSyncPosition </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Searches the adapter for a position matching mSyncRowId. The search starts at mSyncPosition and then alternates between moving up and moving down until 1) we find the right position, or 2) we run out of time, or 3) we have looked at every position</p>
+<dl class="section return"><dt>返回</dt><dd>Position of the row that matches mSyncRowId, or <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a> if it can't be found </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16ffefd34185a73b9c81755ba035d6ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract T com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getAdapter </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the adapter currently associated with this widget.</p>
+<dl class="section return"><dt>返回</dt><dd>The adapter used to provide this view's content. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af29efc4f1d441c7031817344c3be2079"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.CapturedViewProperty int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getCount </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>The number of items owned by the Adapter associated with this AdapterView. (This is the number of data items, which may be larger than the number of visible view.) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac654f2d65fffca76128123564c39d445"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getEmptyView </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When the current adapter is empty, the AdapterView can display a special view call the empty view. The empty view is used to provide feedback to the user that no data is available in this AdapterView.</p>
+<dl class="section return"><dt>返回</dt><dd>The view to show if the adapter is empty. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aadd20aafa907e00964513f5237f6ff10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getFirstVisiblePosition </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the position within the adapter's data set for the first item displayed on screen.</p>
+<dl class="section return"><dt>返回</dt><dd>The position within the adapter's data set </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ff6ff0b75856847eff16c1b863b0467"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getItemAtPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the data associated with the specified position in the list.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Which data to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The data associated with the specified position in the list </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3aa563514175fef28270d8831d42367e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getItemIdAtPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c7718869aa9d0ccc0b6da0bdf7b887f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getLastVisiblePosition </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the position within the adapter's data set for the last item displayed on screen.</p>
+<dl class="section return"><dt>返回</dt><dd>The position within the adapter's data set </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abfa5712b95c0263afa0dcab15ebc4c53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final OnItemClickListener com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getOnItemClickListener </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>The callback to be invoked with an item in this AdapterView has been clicked, or null id no callback has been set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="affd922202d3ab8495005a490d9805898"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final OnItemLongClickListener com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getOnItemLongClickListener </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>The callback to be invoked with an item in this AdapterView has been clicked and held, or null id no callback as been set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4929fb0e5375102599fc7a5b95492991"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final OnItemSelectedListener com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getOnItemSelectedListener </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6474537d19555baf92d934936beb890a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getPositionForView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position within the adapter's data set for the view, where view is a an adapter item or a descendant of an adapter item.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>an adapter item, or a descendant of an adapter item. This must be visible in this AdapterView at the time of the call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the position within the adapter's data set of the view, or <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a> if the view does not correspond to a list item (or it is not currently visible). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac448d7da33954c6def508b73f57c3aa1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getSelectedItem </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>The data corresponding to the currently selected item, or null if there is nothing selected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a03b9288ef5e111401509ab1a7927f8a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.CapturedViewProperty long com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getSelectedItemId </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>The id corresponding to the currently selected item, or <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a393f595a387d939fea49ca2722204e85">INVALID_ROW_ID</a> if nothing is selected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad19b8250462a853a7e67ca59ec208504"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.CapturedViewProperty int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getSelectedItemPosition </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the position of the currently selected item within the adapter's data set</p>
+<dl class="section return"><dt>返回</dt><dd>int Position (starting at 0), or <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a> if there is nothing selected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a78e728bd3e7409457876e6ae541ca14c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract View com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.getSelectedView </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>The view corresponding to the currently selected item, or null if nothing is selected </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6748d287c604bf978ebcc4f1badfd68e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.handleDataChanged </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a97ece7876c1738591b24ddf1e7ea4a32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.isInFilterMode </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates whether this view is in filter mode. Filter mode can for instance be enabled by a user when typing on the keyboard.</p>
+<dl class="section return"><dt>返回</dt><dd>True if the view is in filter mode, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a18a53d8526e610c443665fa1904d551c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.lookForSelectablePosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>lookDown</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find a position that can be selected (i.e., is not a separator).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The starting position to look at. </td></tr>
+    <tr><td class="paramname">lookDown</td><td>Whether to look down for other positions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The next selectable position starting at position and then searching either up or down. Returns <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a> if nothing can be found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="affe2b6217dbf9bc2e422a0be0cfd6e82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.onLayout </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>changed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af067eefd2d835ca864a03497e66265e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.performItemClick </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Call the <a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapfd447b06d4861b5858758bcc08a0d087.html">OnItemClickListener</a>, if it is defined.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>The view within the AdapterView that was clicked. </td></tr>
+    <tr><td class="paramname">position</td><td>The position of the view in the adapter. </td></tr>
+    <tr><td class="paramname">id</td><td>The row id of the item that was clicked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if there was an assigned <a class="el" href="interfacecom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapfd447b06d4861b5858758bcc08a0d087.html">OnItemClickListener</a> that was called, false otherwise is returned. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e9604d1bc9aa9af211d7655db85a8ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.rememberSyncState </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remember enough information to restore the screen state when the data has changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a923e2727733a3fe96e998945ba155583"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.removeAllViews </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0056a43291e03ce0c2e5d7d955268415"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.removeView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>child</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>Ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad07b16f003f17790dc58e2394f001083"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.removeViewAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is not supported and throws an UnsupportedOperationException when called.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Ignored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedOperationException</td><td>Every time this method is invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0a3d97790c20444ad611232529bf96c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setAdapter </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>adapter</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the adapter that provides the data and the views to represent the data in this widget.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adapter</td><td>The adapter to use to create this view's content. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abe3c06927417462725af7f915fcb2131"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setEmptyView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>emptyView</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the view to show if the adapter is empty </p>
+
+</div>
+</div>
+<a class="anchor" id="a686d8ff474ca810f3c2d74cc4da58cab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setFocusable </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>focusable</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac74a02483765ad2ed451e5ae4256b649"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setFocusableInTouchMode </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>focusable</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a505038daef33778f1adfd5244dd24e64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setOnClickListener </td>
+          <td>(</td>
+          <td class="paramtype">OnClickListener&#160;</td>
+          <td class="paramname"><em>l</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef642a1e427f1ffb42a57ed6283b2bdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setOnItemClickListener </td>
+          <td>(</td>
+          <td class="paramtype">OnItemClickListener&#160;</td>
+          <td class="paramname"><em>listener</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback to be invoked when an item in this AdapterView has been clicked.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The callback that will be invoked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a482e7fcfe3921c68e78c8bc6e941d147"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setOnItemLongClickListener </td>
+          <td>(</td>
+          <td class="paramtype">OnItemLongClickListener&#160;</td>
+          <td class="paramname"><em>listener</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback to be invoked when an item in this AdapterView has been clicked and held</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The callback that will run </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a08fad58a05e07cc700adbaf5993e3fbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setOnItemSelectedListener </td>
+          <td>(</td>
+          <td class="paramtype">OnItemSelectedListener&#160;</td>
+          <td class="paramname"><em>listener</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback to be invoked when an item in this AdapterView has been selected.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The callback that will run </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad300b4c17dc1dce0536ccafb8897042d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.setSelection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the currently selected item. To support accessibility subclasses that override this method must invoke the overriden super method first.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Index (starting at 0) of the data item to be selected. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8a015f147bfb866d13fd853fb5ec059"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.updateEmptyStatus </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>empty</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update the status of the list based on the empty parameter. If empty is true and we have an empty view, display it. In all the other cases, make sure that the listview is VISIBLE and that the empty view is GONE (if it's not null). </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a60ff420c7681c5b7786a45de5aafe885"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.INVALID_POSITION = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents an invalid position. All valid positions are in the range 0 to 1 less than the number of items in the current adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="a393f595a387d939fea49ca2722204e85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.INVALID_ROW_ID = Long.MIN_VALUE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents an empty or invalid row id </p>
+
+</div>
+</div>
+<a class="anchor" id="a5e6917b417bc055e2c7ef3ea871d9843"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.ITEM_VIEW_TYPE_HEADER_OR_FOOTER = -2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item view type returned by <a class="el" href="">Adapter#getItemViewType(int)</a> when the item is a header or footer. </p>
+
+</div>
+</div>
+<a class="anchor" id="aea3ee014652159cec658597b7a45cf9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.ITEM_VIEW_TYPE_IGNORE = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item view type returned by <a class="el" href="">Adapter#getItemViewType(int)</a> when the adapter does not want the item's view recycled. </p>
+
+</div>
+</div>
+<a class="anchor" id="acd496b35e389b4390227c538fb42e3d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mBlockLayoutRequests = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When set to true, calls to requestLayout() will not propagate up the parent hierarchy. This is used to layout the children during a layout pass. </p>
+
+</div>
+</div>
+<a class="anchor" id="add3b88769a167970ee64ae187ea8f3c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mDataChanged</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>True if the data has changed since the last layout </p>
+
+</div>
+</div>
+<a class="anchor" id="a9a51e1c31e5f4f2fbae6521dfb8b39a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mDesiredFocusableInTouchModeState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9ef0769d2b8a3bb60854e79ab5c17aac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mDesiredFocusableState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates what focusable state is requested when calling <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a686d8ff474ca810f3c2d74cc4da58cab">setFocusable()</a>. In addition to this, this view has other criteria for actually determining the focusable state (such as whether its empty or the text filter is shown).</p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a686d8ff474ca810f3c2d74cc4da58cab">setFocusable(boolean)</a> </dd>
+<dd>
+<a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a03911001076da3e2e56a6a48ae359cb6">checkFocus()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ba173694d41d3cb0f17664077071590"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mEmptyView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>View to show if there are no items to show. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae2efde3b611c1f0be197fd4a940b6ce4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mFirstPosition = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The position of the first child displayed </p>
+
+</div>
+</div>
+<a class="anchor" id="af4d998ff4252be38a0fad138866050bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mInLayout = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates that this view is currently being laid out. </p>
+
+</div>
+</div>
+<a class="anchor" id="abf3e97bf841d764630c64901d1bf80e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">.ExportedProperty int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mItemCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of items in the current adapter. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9b429300dc7d36f7f139a7da6b063eb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mLayoutHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Our height after the last layout </p>
+
+</div>
+</div>
+<a class="anchor" id="a745cbb362dd96ef876b3e61ca62de5df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mNeedSync = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>True if we need to sync to mSyncRowId </p>
+
+</div>
+</div>
+<a class="anchor" id="a2b56d004f340d52e4732c478755f624d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mOldItemCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of items in the adapter before a data changed event occured. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e4caa4caec2d7e83a77c5b05e9b6209"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mOldSelectedPosition = <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a60ff420c7681c5b7786a45de5aafe885">INVALID_POSITION</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The last selected position we used when notifying </p>
+
+</div>
+</div>
+<a class="anchor" id="affac5f4acd9ca9fe48770de8f5c8da61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mOldSelectedRowId = <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a393f595a387d939fea49ca2722204e85">INVALID_ROW_ID</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The id of the last selected position we used when notifying </p>
+
+</div>
+</div>
+<a class="anchor" id="ad73c5b9a2fc85ec6868be4770e6eb4b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnItemClickListener com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mOnItemClickListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The listener that receives notifications when an item is clicked. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1a488002e122c849c45ce21d992e66cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnItemLongClickListener com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mOnItemLongClickListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The listener that receives notifications when an item is long clicked. </p>
+
+</div>
+</div>
+<a class="anchor" id="a79706964d4d0ed6b9f36d205fffe37e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OnItemSelectedListener com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mOnItemSelectedListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The listener that receives notifications when an item is selected. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb128d7a7cb465808115196d6b119b34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mSpecificTop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The offset in pixels from the top of the AdapterView to the top of the view to select during the next layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8fbeca0ea95eed42b937c130e3aed5fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mSyncHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Height of the view when mSyncPosition and mSyncRowId where set </p>
+
+</div>
+</div>
+<a class="anchor" id="a01589e1948914937928ee993002e81c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mSyncMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates whether to sync based on the selection or position. Possible values are <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a138f28d7595b697d70b6deb769fbc34d">SYNC_SELECTED_POSITION</a> or <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#ad1816ada3fa1439a9ca3f97b417e874d">SYNC_FIRST_POSITION</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3890849acfca70a15b3c5f8551874467"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mSyncPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Position from which to start looking for mSyncRowId </p>
+
+</div>
+</div>
+<a class="anchor" id="aa3ac31fbd47da766456a0c7d99a3bcbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.mSyncRowId = <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a393f595a387d939fea49ca2722204e85">INVALID_ROW_ID</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Row id to look for when data has changed </p>
+
+</div>
+</div>
+<a class="anchor" id="ad1816ada3fa1439a9ca3f97b417e874d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.SYNC_FIRST_POSITION = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sync based on the first child displayed </p>
+
+</div>
+</div>
+<a class="anchor" id="a4ad6cd60ca3cb8b161ac10eeb91dfa53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.SYNC_MAX_DURATION_MILLIS = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum amount of time to spend in <a class="el" href="classcom_1_1ab_1_1view_1_1pullview_1_1_ab_multi_column_adapter_view_3_01_t_01extends_01_adapter_01_4.html#a66a4f35c0e25d225434051d34a299f29">findSyncPosition()</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a138f28d7595b697d70b6deb769fbc34d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.view.pullview.AbMultiColumnAdapterView&lt; T extends Adapter &gt;.SYNC_SELECTED_POSITION = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sync based on the selected child </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/pullview/<a class="el" href="_ab_multi_column_adapter_view_8java.html">AbMultiColumnAdapterView.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 三月 19日 星期三 16:24:31 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

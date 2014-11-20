@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.app;
 
 import java.util.HashMap;
@@ -17,38 +32,50 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+// TODO: Auto-generated Javadoc
+
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012-2015 amsoft.cn
  * 名称：AbPopoverView.java 
  * 描述：提示框
+ *
  * @author zhaoqp
- * @date：2013-11-18 下午5:02:16
  * @version v1.0
+ * @date：2013-11-18 下午5:02:16
  */
 public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	
 	/**
-	 * AbPopoverView的监听器
+	 * AbPopoverView的监听器.
+	 *
+	 * @see PopoverViewEvent
 	 */
 	public static interface PopoverViewListener{
+		
 		/**
-		 * Called when the popover is going to show
+		 * Called when the popover is going to show.
+		 *
 		 * @param view The whole popover view
 		 */
 		void popoverViewWillShow(AbPopoverView view);
+		
 		/**
-		 * Called when the popover did show
+		 * Called when the popover did show.
+		 *
 		 * @param view The whole popover view
 		 */
 		void popoverViewDidShow(AbPopoverView view);
+		
 		/**
-		 * Called when the popover is going to be dismissed
+		 * Called when the popover is going to be dismissed.
+		 *
 		 * @param view The whole popover view
 		 */
 		void popoverViewWillDismiss(AbPopoverView view);
+		
 		/**
-		 * Called when the popover was dismissed
+		 * Called when the popover was dismissed.
+		 *
 		 * @param view The whole popover view
 		 */
 		void popoverViewDidDismiss(AbPopoverView view);
@@ -76,76 +103,59 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	 */
 	public final static int PopoverArrowDirectionAny = PopoverArrowDirectionUp|PopoverArrowDirectionDown|PopoverArrowDirectionLeft|PopoverArrowDirectionRight;
 	
-	/**
-	 * The delegate of the view
-	 */
+	/** The delegate of the view. */
 	private PopoverViewListener popoverViewListener;
-	/**
-	 * The main popover containing the view we want to show
-	 */
+	
+	/** The main popover containing the view we want to show. */
 	private RelativeLayout popoverView;
 	/**
 	 * The view group storing this popover. We need this so, when we dismiss the popover, we remove it from the view group
 	 */
 	private ViewGroup superview;
-	/**
-	 * The content size for the view in the popover
-	 */
+	
+	/** The content size for the view in the popover. */
 	private Point contentSizeForViewInPopover = new Point(0, 0);
-	/**
-	 * The real content size we will use (it considers the padding)
-	 */
+	
+	/** The real content size we will use (it considers the padding). */
 	private Point realContentSize = new Point(0, 0);
-	/**
-	 * A hash containing
-	 */
+	
+	/** A hash containing. */
 	private Map<Integer, Rect> possibleRects;
-	/**
-	 * Whether the view is animating or not
-	 */
+	
+	/** Whether the view is animating or not. */
 	private boolean isAnimating = false;
-	/**
-	 * The fade animation time in milliseconds
-	 */
+	
+	/** The fade animation time in milliseconds. */
 	private int fadeAnimationTime = 300;
-	/**
-	 * The layout Rect, is the same as the superview rect
-	 */
+	
+	/** The layout Rect, is the same as the superview rect. */
 	private Rect popoverLayoutRect;
-	/**
-	 * The popover background drawable
-	 */
+	
+	/** The popover background drawable. */
 	private Drawable backgroundDrawable;
-	/**
-	 * The popover arrow up drawable
-	 */
+	
+	/** The popover arrow up drawable. */
 	private Drawable arrowUpDrawable;
-	/**
-	 * The popover arrow down drawable
-	 */
+	
+	/** The popover arrow down drawable. */
 	private Drawable arrowDownDrawable;
-	/**
-	 * The popover arrow left drawable
-	 */
+	
+	/** The popover arrow left drawable. */
 	private Drawable arrowLeftDrawable;
-	/**
-	 * The popover arrow down drawable
-	 */
+	
+	/** The popover arrow down drawable. */
 	private Drawable arrowRightDrawable;
 	
-	/**
-	 * 当前显示的箭头图标
-	 */
+	/** 当前显示的箭头图标. */
 	private ImageView arrowImageView = null;
 	
-	/**
-	 * 当前显示的提示的View
-	 */
+	/** 当前显示的提示的View. */
 	private View popoverContentView = null;
 	
 	
 	/**
-	 * Constructor to create a popover with a popover view
+	 * Constructor to create a popover with a popover view.
+	 *
 	 * @param context The context where we should create the popover view
 	 */
 	public AbPopoverView(Context context) {
@@ -154,7 +164,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 
 	/**
-	 * Constructor to create a popover with a popover view
+	 * Constructor to create a popover with a popover view.
+	 *
 	 * @param context The context where we should create the popover view
 	 * @param attrs Attribute set to init the view
 	 */
@@ -164,7 +175,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Constructor to create a popover with a popover view
+	 * Constructor to create a popover with a popover view.
+	 *
 	 * @param context The context where we should create the popover view
 	 * @param attrs Attribute set to init the view
 	 * @param defStyle The default style for this view
@@ -175,8 +187,7 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Init the popover view
-	 * @param viewToEnclose The view we wan to insert inside the popover
+	 * Init the popover view.
 	 */
 	private void initPopoverView(){
 		
@@ -187,7 +198,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Get the Rect frame for a view (relative to the Window of the application)
+	 * Get the Rect frame for a view (relative to the Window of the application).
+	 *
 	 * @param v The view to get the rect from
 	 * @return The rect of the view, relative to the application window
 	 */
@@ -200,7 +212,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	
 	
 	/**
-	 * Add the popover to the view with a defined rect inside the popover
+	 * Add the popover to the view with a defined rect inside the popover.
+	 *
 	 * @param insertRect The rect we want to insert the view
 	 */
 	private void addPopoverInRect(Rect insertRect){
@@ -214,6 +227,12 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	
+	/**
+	 * Inits the arrow.
+	 *
+	 * @param originRect the origin rect
+	 * @param arrowDirection the arrow direction
+	 */
 	private void initArrow(Rect originRect, Integer arrowDirection){
 		
 		//重新定位
@@ -270,7 +289,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	
 	
 	/**
-	 * Calculates the rect for showing the view with Arrow Up
+	 * Calculates the rect for showing the view with Arrow Up.
+	 *
 	 * @param originRect The origin rect
 	 * @return The calculated rect to show the view
 	 */
@@ -308,7 +328,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Calculates the rect for showing the view with Arrow Down
+	 * Calculates the rect for showing the view with Arrow Down.
+	 *
 	 * @param originRect The origin rect
 	 * @return The calculated rect to show the view
 	 */
@@ -347,7 +368,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	
 	
 	/**
-	 * Calculates the rect for showing the view with Arrow Right
+	 * Calculates the rect for showing the view with Arrow Right.
+	 *
 	 * @param originRect The origin rect
 	 * @return The calculated rect to show the view
 	 */
@@ -383,7 +405,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Calculates the rect for showing the view with Arrow Left
+	 * Calculates the rect for showing the view with Arrow Left.
+	 *
 	 * @param originRect The origin rect
 	 * @return The calculated rect to show the view
 	 */
@@ -420,7 +443,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	
 	
 	/**
-	 * Add available rects for each selected arrow direction
+	 * Add available rects for each selected arrow direction.
+	 *
 	 * @param originRect The rect where the popover will appear from
 	 * @param arrowDirections The bit mask for the possible arrow directions
 	 */
@@ -443,7 +467,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Get the best available rect (bigger area)
+	 * Get the best available rect (bigger area).
+	 *
 	 * @return The Integer key to get the Rect from posibleRects (PopoverArrowDirectionUp,PopoverArrowDirectionDown,PopoverArrowDirectionRight or PopoverArrowDirectionLeft)
 	 */
 	private Integer getBestRect(){
@@ -465,7 +490,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	
 	
 	/**
-	 * Gets the current fade animation time
+	 * Gets the current fade animation time.
+	 *
 	 * @return The fade animation time, in milliseconds
 	 */
 	public int getFadeAnimationTime() {
@@ -473,7 +499,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 
 	/**
-	 * Sets the fade animation time
+	 * Sets the fade animation time.
+	 *
 	 * @param fadeAnimationTime The time in milliseconds
 	 */
 	public void setFadeAnimationTime(int fadeAnimationTime) {
@@ -481,7 +508,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Get the content size for view in popover
+	 * Get the content size for view in popover.
+	 *
 	 * @return The point with the content size
 	 */
 	public Point getContentSizeForViewInPopover() {
@@ -489,8 +517,9 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 
 	/**
-	 * Sets the content size for the view in a popover, if point is (0,0) the popover will full the screen
-	 * @param contentSizeForViewInPopover
+	 * Sets the content size for the view in a popover, if point is (0,0) the popover will full the screen.
+	 *
+	 * @param contentSizeForViewInPopover the new content size for view in popover
 	 */
 	public void setContentSizeForViewInPopover(Point contentSizeForViewInPopover) {
 		this.contentSizeForViewInPopover = contentSizeForViewInPopover;
@@ -502,16 +531,27 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 
 
+	/**
+	 * Gets the popover view listener.
+	 *
+	 * @return the popover view listener
+	 */
 	public PopoverViewListener getPopoverViewListener() {
 		return popoverViewListener;
 	}
 
+	/**
+	 * Sets the popover view listener.
+	 *
+	 * @param popoverViewListener the new popover view listener
+	 */
 	public void setPopoverViewListener(PopoverViewListener popoverViewListener) {
 		this.popoverViewListener = popoverViewListener;
 	}
 
 	/**
-	 * This method shows a popover in a ViewGroup, from an origin rect (relative to the Application Window)
+	 * This method shows a popover in a ViewGroup, from an origin rect (relative to the Application Window).
+	 *
 	 * @param group The group we want to insert the popup. Normally a Relative Layout so it can stand on top of everything
 	 * @param originRect The rect we want the popup to appear from (relative to the Application Window!)
 	 * @param arrowDirections The mask of bits to tell in which directions we want the popover to be shown
@@ -591,7 +631,8 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	/**
-	 * Dismiss the current shown popover
+	 * Dismiss the current shown popover.
+	 *
 	 * @param animated Whether it should be dismissed animated or not
 	 */
 	public void dissmissPopover(boolean animated){
@@ -651,6 +692,9 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 	}
 	
 	
+	/* (non-Javadoc)
+	 * @see android.view.View.OnTouchListener#onTouch(android.view.View, android.view.MotionEvent)
+	 */
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
 		//If we touched over the background popover view (this)
@@ -660,56 +704,108 @@ public class AbPopoverView extends RelativeLayout implements OnTouchListener{
 		return true;
 	}
 
+	/**
+	 * Gets the background drawable.
+	 *
+	 * @return the background drawable
+	 */
 	public Drawable getBackgroundDrawable() {
 		return backgroundDrawable;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.View#setBackgroundDrawable(android.graphics.drawable.Drawable)
+	 */
 	public void setBackgroundDrawable(Drawable backgroundDrawable) {
 		this.backgroundDrawable = backgroundDrawable;
 		popoverView.setBackgroundDrawable(backgroundDrawable);
 	}
 
+	/**
+	 * Gets the arrow up drawable.
+	 *
+	 * @return the arrow up drawable
+	 */
 	public Drawable getArrowUpDrawable() {
 		return arrowUpDrawable;
 	}
 
+	/**
+	 * Sets the arrow up drawable.
+	 *
+	 * @param arrowUpDrawable the new arrow up drawable
+	 */
 	public void setArrowUpDrawable(Drawable arrowUpDrawable) {
 		this.arrowUpDrawable = arrowUpDrawable;
 	}
 
+	/**
+	 * Gets the arrow down drawable.
+	 *
+	 * @return the arrow down drawable
+	 */
 	public Drawable getArrowDownDrawable() {
 		return arrowDownDrawable;
 	}
 
+	/**
+	 * Sets the arrow down drawable.
+	 *
+	 * @param arrowDownDrawable the new arrow down drawable
+	 */
 	public void setArrowDownDrawable(Drawable arrowDownDrawable) {
 		this.arrowDownDrawable = arrowDownDrawable;
 	}
 
+	/**
+	 * Gets the arrow left drawable.
+	 *
+	 * @return the arrow left drawable
+	 */
 	public Drawable getArrowLeftDrawable() {
 		return arrowLeftDrawable;
 	}
 
+	/**
+	 * Sets the arrow left drawable.
+	 *
+	 * @param arrowLeftDrawable the new arrow left drawable
+	 */
 	public void setArrowLeftDrawable(Drawable arrowLeftDrawable) {
 		this.arrowLeftDrawable = arrowLeftDrawable;
 	}
 
+	/**
+	 * Gets the arrow right drawable.
+	 *
+	 * @return the arrow right drawable
+	 */
 	public Drawable getArrowRightDrawable() {
 		return arrowRightDrawable;
 	}
 
+	/**
+	 * Sets the arrow right drawable.
+	 *
+	 * @param arrowRightDrawable the new arrow right drawable
+	 */
 	public void setArrowRightDrawable(Drawable arrowRightDrawable) {
 		this.arrowRightDrawable = arrowRightDrawable;
 	}
 
+	/**
+	 * Gets the popover content view.
+	 *
+	 * @return the popover content view
+	 */
 	public View getPopoverContentView() {
 		return popoverContentView;
 	}
 
 	/**
-	 * 
-	 * 描述：设置显示的View
-	 * @param popoverContentView
-	 * @throws 
+	 * 描述：设置显示的View.
+	 *
+	 * @param popoverContentView the new popover content view
 	 */
 	public void setPopoverContentView(View popoverContentView) {
 		this.popoverContentView = popoverContentView;

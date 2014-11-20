@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/transparent_bg"
+    android:gravity="bottom"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:background="@color/crop_background" >
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
 
         <view
             android:id="@+id/crop_image"
@@ -23,8 +24,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/window_bg"
-        android:padding="5dip">
+        android:padding="5dip" >
 
         <Button
             android:id="@+id/rotateLeft"
@@ -42,8 +42,8 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector_gray"
-            android:text="@string/cancelBtn" 
-            android:textColor="@color/white"/>
+            android:text="@string/cancelBtn"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/okBtn"
@@ -53,8 +53,8 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/button_selector_green"
-            android:text="@string/okBtn" 
-            android:textColor="@color/white"/>
+            android:text="@string/okBtn"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/rotateRight"

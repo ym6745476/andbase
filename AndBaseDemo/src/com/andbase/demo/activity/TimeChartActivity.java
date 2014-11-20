@@ -23,10 +23,10 @@ import com.andbase.R;
 import com.andbase.global.MyApplication;
 
 /**
- * Copyright (c) 2011 All rights reserved。
+ * © 2012 amsoft.cn。
  * 名称：XYLineChartActivity
  * 描述：线图
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-13
  * @version
  */

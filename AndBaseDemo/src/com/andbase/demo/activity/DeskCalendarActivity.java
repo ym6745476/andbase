@@ -36,7 +36,7 @@ public class DeskCalendarActivity extends AbActivity {
         
         Drawable caleBg = this.getResources().getDrawable(R.drawable.desk_calendar);
         Drawable caleDot = null;
-		Point posYear = new Point(60,65);
+		Point posYear = new Point(60,80);
 		List<Drawable> dYearArray = new ArrayList<Drawable>();
 		dYearArray.add(this.getResources().getDrawable(R.drawable.year0));
 		dYearArray.add(this.getResources().getDrawable(R.drawable.year1));
@@ -50,7 +50,7 @@ public class DeskCalendarActivity extends AbActivity {
 		dYearArray.add(this.getResources().getDrawable(R.drawable.year9));
 		
 		
-		Point posMonth = new Point(260,67);
+		Point posMonth = new Point(300,80);
 		List<Drawable> dMonthArray = new ArrayList<Drawable>();
 		dMonthArray.add(this.getResources().getDrawable(R.drawable.month1));
 		dMonthArray.add(this.getResources().getDrawable(R.drawable.month2));
@@ -65,7 +65,7 @@ public class DeskCalendarActivity extends AbActivity {
 		dMonthArray.add(this.getResources().getDrawable(R.drawable.month11));
 		dMonthArray.add(this.getResources().getDrawable(R.drawable.month12));
 		
-		Point posDate = new Point(75,155);
+		Point posDate = new Point(90,180);
 		List<Drawable> dDateArray = new ArrayList<Drawable>();
 		dDateArray.add(this.getResources().getDrawable(R.drawable.date0));
 		dDateArray.add(this.getResources().getDrawable(R.drawable.date1));

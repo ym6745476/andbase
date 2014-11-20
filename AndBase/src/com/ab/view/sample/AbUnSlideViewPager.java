@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,18 +21,20 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
+ * 名称：AbUnSlideViewPager.java 
  * 描述：不能滑动的ViewPager.
  *
- * @author zhaoqp
- * @date：2013-5-17 下午6:46:29
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-05-17 下午6:46:29
  */
 public class AbUnSlideViewPager extends ViewPager {
 
 	/** The enabled. */
 	private boolean enabled;
-
 	
 	/**
 	 * Instantiates a new ab un slide view pager.
@@ -74,12 +76,12 @@ public class AbUnSlideViewPager extends ViewPager {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.support.v4.view.ViewPager#onInterceptTouchEvent(android.view.MotionEvent)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-6-17 上午9:04:50
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent event) {

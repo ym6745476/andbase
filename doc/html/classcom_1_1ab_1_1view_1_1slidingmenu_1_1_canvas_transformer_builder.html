@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.slidingmenu.CanvasTransformerBuilder类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1slidingmenu.html">slidingmenu</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html">CanvasTransformerBuilder</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.slidingmenu.CanvasTransformerBuilder类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4ffb9fbeec14de67663e3b67a87e5861"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a4ffb9fbeec14de67663e3b67a87e5861">zoom</a> (final int openedX, final int closedX, final int openedY, final int closedY, final int px, final int py)</td></tr>
+<tr class="separator:a4ffb9fbeec14de67663e3b67a87e5861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d615b9902f709860d3b018a1c73eaca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a3d615b9902f709860d3b018a1c73eaca">zoom</a> (final int openedX, final int closedX, final int openedY, final int closedY, final int px, final int py, final Interpolator interp)</td></tr>
+<tr class="separator:a3d615b9902f709860d3b018a1c73eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8c5ba5b3f73bdd7091ff669d193c68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a7d8c5ba5b3f73bdd7091ff669d193c68">rotate</a> (final int openedDeg, final int closedDeg, final int px, final int py)</td></tr>
+<tr class="separator:a7d8c5ba5b3f73bdd7091ff669d193c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d01f10bdc846d4af6d90b6c734f312e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a8d01f10bdc846d4af6d90b6c734f312e">rotate</a> (final int openedDeg, final int closedDeg, final int px, final int py, final Interpolator interp)</td></tr>
+<tr class="separator:a8d01f10bdc846d4af6d90b6c734f312e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92028097e5ef6260848e060785bc016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#ab92028097e5ef6260848e060785bc016">translate</a> (final int openedX, final int closedX, final int openedY, final int closedY)</td></tr>
+<tr class="separator:ab92028097e5ef6260848e060785bc016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06aa6a254a96fb8e994e1dfde788c4db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a06aa6a254a96fb8e994e1dfde788c4db">translate</a> (final int openedX, final int closedX, final int openedY, final int closedY, final Interpolator interp)</td></tr>
+<tr class="separator:a06aa6a254a96fb8e994e1dfde788c4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e65b60ba4e74bfd260c418802f5860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a58e65b60ba4e74bfd260c418802f5860">concatTransformer</a> (final <a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> t)</td></tr>
+<tr class="separator:a58e65b60ba4e74bfd260c418802f5860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a5a45375506aa9144572e96188bd5ab2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a5a45375506aa9144572e96188bd5ab2a">initTransformer</a> ()</td></tr>
+<tr class="separator:a5a45375506aa9144572e96188bd5ab2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:acd9dc4250cfc6b42a553220082463f5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#acd9dc4250cfc6b42a553220082463f5f">mTrans</a></td></tr>
+<tr class="separator:acd9dc4250cfc6b42a553220082463f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a7659eb63229bcca870b4dfa85daab3ed"><td class="memItemLeft" align="right" valign="top">static Interpolator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html#a7659eb63229bcca870b4dfa85daab3ed">lin</a></td></tr>
+<tr class="separator:a7659eb63229bcca870b4dfa85daab3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_canvas_transformer_builder.html">CanvasTransformerBuilder</a>. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a58e65b60ba4e74bfd260c418802f5860"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.concatTransformer </td>
+          <td>(</td>
+          <td class="paramtype">final <a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Concat transformer.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>the t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5a45375506aa9144572e96188bd5ab2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.CanvasTransformerBuilder.initTransformer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inits the transformer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7d8c5ba5b3f73bdd7091ff669d193c68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.rotate </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>py</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">openedDeg</td><td>the opened deg </td></tr>
+    <tr><td class="paramname">closedDeg</td><td>the closed deg </td></tr>
+    <tr><td class="paramname">px</td><td>the px </td></tr>
+    <tr><td class="paramname">py</td><td>the py </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d01f10bdc846d4af6d90b6c734f312e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.rotate </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Interpolator&#160;</td>
+          <td class="paramname"><em>interp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">openedDeg</td><td>the opened deg </td></tr>
+    <tr><td class="paramname">closedDeg</td><td>the closed deg </td></tr>
+    <tr><td class="paramname">px</td><td>the px </td></tr>
+    <tr><td class="paramname">py</td><td>the py </td></tr>
+    <tr><td class="paramname">interp</td><td>the interp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab92028097e5ef6260848e060785bc016"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.translate </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Translate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">openedX</td><td>the opened x </td></tr>
+    <tr><td class="paramname">closedX</td><td>the closed x </td></tr>
+    <tr><td class="paramname">openedY</td><td>the opened y </td></tr>
+    <tr><td class="paramname">closedY</td><td>the closed y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a06aa6a254a96fb8e994e1dfde788c4db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.translate </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Interpolator&#160;</td>
+          <td class="paramname"><em>interp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Translate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">openedX</td><td>the opened x </td></tr>
+    <tr><td class="paramname">closedX</td><td>the closed x </td></tr>
+    <tr><td class="paramname">openedY</td><td>the opened y </td></tr>
+    <tr><td class="paramname">closedY</td><td>the closed y </td></tr>
+    <tr><td class="paramname">interp</td><td>the interp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ffb9fbeec14de67663e3b67a87e5861"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.zoom </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>py</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zoom.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">openedX</td><td>the opened x </td></tr>
+    <tr><td class="paramname">closedX</td><td>the closed x </td></tr>
+    <tr><td class="paramname">openedY</td><td>the opened y </td></tr>
+    <tr><td class="paramname">closedY</td><td>the closed y </td></tr>
+    <tr><td class="paramname">px</td><td>the px </td></tr>
+    <tr><td class="paramname">py</td><td>the py </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d615b9902f709860d3b018a1c73eaca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.zoom </td>
+          <td>(</td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>openedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>closedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final int&#160;</td>
+          <td class="paramname"><em>py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Interpolator&#160;</td>
+          <td class="paramname"><em>interp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zoom.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">openedX</td><td>the opened x </td></tr>
+    <tr><td class="paramname">closedX</td><td>the closed x </td></tr>
+    <tr><td class="paramname">openedY</td><td>the opened y </td></tr>
+    <tr><td class="paramname">closedY</td><td>the closed y </td></tr>
+    <tr><td class="paramname">px</td><td>the px </td></tr>
+    <tr><td class="paramname">py</td><td>the py </td></tr>
+    <tr><td class="paramname">interp</td><td>the interp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the canvas transformer </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a7659eb63229bcca870b4dfa85daab3ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Interpolator com.ab.view.slidingmenu.CanvasTransformerBuilder.lin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Interpolator() {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">float</span> getInterpolation(<span class="keywordtype">float</span> t) {</div>
+<div class="line">            <span class="keywordflow">return</span> t;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>The lin. </p>
+
+</div>
+</div>
+<a class="anchor" id="acd9dc4250cfc6b42a553220082463f5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu_1_1_canvas_transformer.html">CanvasTransformer</a> com.ab.view.slidingmenu.CanvasTransformerBuilder.mTrans</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m trans. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/slidingmenu/<a class="el" href="_canvas_transformer_builder_8java.html">CanvasTransformerBuilder.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

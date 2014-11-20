@@ -1,28 +1,71 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.app;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
+// TODO: Auto-generated Javadoc
+
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbRotate3dAnimation2.java 
- * 描述：TODO
+ * 描述：3d旋转
+ *
  * @author 原作者  QQ：250333410
- * @date：2013-12-11 上午11:36:37
  * @version v1.0
+ * @date：2013-12-11 上午11:36:37
  */
 public class AbRotate3dAnimation2 extends Animation {
+	
+	/** The m from degree. */
 	private float mFromDegree;
+	
+	/** The m to degree. */
 	private float mToDegree;
+	
+	/** The m center x. */
 	private float mCenterX;
+	
+	/** The m center y. */
 	private float mCenterY;
+	
+	/** The m left. */
 	private float mLeft;
+	
+	/** The m top. */
 	private float mTop;
+	
+	/** The m camera. */
 	private Camera mCamera;
+	
+	/** The Constant TAG. */
 	private static final String TAG = "Rotate3d";
 
+	/**
+	 * Instantiates a new ab rotate3d animation2.
+	 *
+	 * @param fromDegree the from degree
+	 * @param toDegree the to degree
+	 * @param left the left
+	 * @param top the top
+	 * @param centerX the center x
+	 * @param centerY the center y
+	 */
 	public AbRotate3dAnimation2(float fromDegree, float toDegree, float left, float top,
 			float centerX, float centerY) {
 		this.mFromDegree = fromDegree;
@@ -34,6 +77,9 @@ public class AbRotate3dAnimation2 extends Animation {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.animation.Animation#initialize(int, int, int, int)
+	 */
 	@Override
 	public void initialize(int width, int height, int parentWidth,
 			int parentHeight) {
@@ -41,6 +87,9 @@ public class AbRotate3dAnimation2 extends Animation {
 		mCamera = new Camera();
 	}
 
+	/* (non-Javadoc)
+	 * @see android.view.animation.Animation#applyTransformation(float, android.view.animation.Transformation)
+	 */
 	@Override
 	protected void applyTransformation(float interpolatedTime, Transformation t) {
 		final float FromDegree = mFromDegree;

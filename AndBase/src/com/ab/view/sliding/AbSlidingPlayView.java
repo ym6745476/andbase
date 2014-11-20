@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,91 +38,74 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
 import com.ab.adapter.AbViewPagerAdapter;
-import com.ab.global.AbAppData;
 import com.ab.util.AbFileUtil;
-import com.ab.view.listener.AbOnChangeListener;
-import com.ab.view.listener.AbOnItemClickListener;
-import com.ab.view.listener.AbOnScrollListener;
-import com.ab.view.listener.AbOnTouchListener;
 import com.ab.view.sample.AbInnerViewPager;
 
 // TODO: Auto-generated Javadoc
 /**
+ * © 2012 amsoft.cn
  * 名称：AbPlayView
  * 描述：可播放显示的View.
  *
- * @author zhaoqp
+ * @author 还如一梦中
+ * @version 
  * @date 2011-11-28
- * @version
  */
+
 public class AbSlidingPlayView extends LinearLayout {
 	
-	/** The tag. */
-	private static String TAG = "AbSlidingPlayView";
-	
-	/** The Constant D. */
-	private static final boolean D = AbAppData.DEBUG;
-
-	/** The context. */
+	/** 上下文. */
 	private Context context;
 
-	/** The m view pager. */
+	/** 内部的ViewPager. */
 	private AbInnerViewPager mViewPager;
 
-	/** The page line layout. */
-	private LinearLayout pageLineLayout;
+	/** 导航的布局. */
+	private LinearLayout navLinearLayout;
 	
-	/** The layout params pageLine. */
-	public LinearLayout.LayoutParams pageLineLayoutParams = null;
+	/** 导航布局参数. */
+	public LinearLayout.LayoutParams navLayoutParams = null;
 
-	/** The i. */
+	/** 计数. */
 	private int count, position;
 
-	/** The hide image. */
+	/** 导航图片. */
 	private Bitmap displayImage, hideImage;
 	
-	/** The m on item click listener. */
+	/** 点击. */
 	private AbOnItemClickListener mOnItemClickListener;
 	
-	/** The m ab change listener. */
+	/** 改变. */
 	private AbOnChangeListener mAbChangeListener;
 	
-	/** The m ab scrolled listener. */
+	/** 滚动. */
 	private AbOnScrollListener mAbScrolledListener;
 	
-	/** The m ab touched listener. */
+	/** 触摸. */
 	private AbOnTouchListener mAbOnTouchListener;
 	
-	/** The layout params ff. */
-	public LinearLayout.LayoutParams layoutParamsFF = null;
-	
-	/** The layout params fw. */
-	public LinearLayout.LayoutParams layoutParamsFW = null;
-	
-	/** The layout params wf. */
-	public LinearLayout.LayoutParams layoutParamsWF = null;
-	
-	/** The m list views. */
+	/** List views. */
 	private ArrayList<View> mListViews = null;
 	
-	/** The m ab view pager adapter. */
+	/** 适配器. */
 	private AbViewPagerAdapter mAbViewPagerAdapter = null;
 	
-	/**导航的点父View*/
-	private LinearLayout mPageLineLayoutParent = null;
+	/** 导航的点父View. */
+	private LinearLayout mNavLayoutParent = null;
 	
-	/** The page line horizontal gravity. */
-	private int pageLineHorizontalGravity = Gravity.RIGHT;
+	/** 导航内容的对齐方式. */
+	private int navHorizontalGravity = Gravity.RIGHT;
 	
-	/**播放的方向*/
+	/** 播放的方向. */
 	private int playingDirection = 0;
 	
-	/**播放的开关*/
+	/** 播放的开关. */
 	private boolean play = false;
 	
 	/**
-	 * 创建一个AbSlidingPlayView
-	 * @param context
+	 * 创建一个AbSlidingPlayView.
+	 *
+	 * @param context the context
 	 */
 	public AbSlidingPlayView(Context context) {
 		super(context);
@@ -130,7 +113,8 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 
 	/**
-	 * 从xml初始化的AbSlidingPlayView
+	 * 从xml初始化的AbSlidingPlayView.
+	 *
 	 * @param context the context
 	 * @param attrs the attrs
 	 */
@@ -140,17 +124,13 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * 
-	 * 描述：初始化这个View
-	 * @param context
-	 * @throws 
+	 * 描述：初始化这个View.
+	 *
+	 * @param context the context
 	 */
 	public void initView(Context context){
 		this.context = context;
-		layoutParamsFF = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
-		layoutParamsFW = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
-		layoutParamsWF = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.FILL_PARENT);
-		pageLineLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		navLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		this.setOrientation(LinearLayout.VERTICAL);
 		this.setBackgroundColor(Color.rgb(255, 255, 255));
 		
@@ -160,12 +140,12 @@ public class AbSlidingPlayView extends LinearLayout {
 		//手动创建的ViewPager,如果用fragment必须调用setId()方法设置一个id
 		mViewPager.setId(1985);
 		//导航的点
-		mPageLineLayoutParent = new LinearLayout(context);
-		mPageLineLayoutParent.setPadding(0,5, 0, 5);
-		pageLineLayout = new LinearLayout(context);
-		pageLineLayout.setPadding(15, 1, 15, 1);
-		pageLineLayout.setVisibility(View.INVISIBLE);
-		mPageLineLayoutParent.addView(pageLineLayout,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+		mNavLayoutParent = new LinearLayout(context);
+		mNavLayoutParent.setPadding(0,5, 0, 5);
+		navLinearLayout = new LinearLayout(context);
+		navLinearLayout.setPadding(15, 1, 15, 1);
+		navLinearLayout.setVisibility(View.INVISIBLE);
+		mNavLayoutParent.addView(navLinearLayout,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
 		
 		RelativeLayout.LayoutParams lp1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp1.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM,RelativeLayout.TRUE);
@@ -175,11 +155,11 @@ public class AbSlidingPlayView extends LinearLayout {
 		
 		RelativeLayout.LayoutParams lp2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM,RelativeLayout.TRUE);
-		mRelativeLayout.addView(mPageLineLayoutParent,lp2);
-		addView(mRelativeLayout,layoutParamsFW);
+		mRelativeLayout.addView(mNavLayoutParent,lp2);
+		addView(mRelativeLayout,new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 		
-		displayImage = AbFileUtil.getBitmapFormSrc("image/play_display.png");
-		hideImage = AbFileUtil.getBitmapFormSrc("image/play_hide.png");
+		displayImage = AbFileUtil.getBitmapFromSrc("image/play_display.png");
+		hideImage = AbFileUtil.getBitmapFromSrc("image/play_hide.png");
 		
 		mListViews = new ArrayList<View>();
 		mAbViewPagerAdapter = new AbViewPagerAdapter(context,mListViews);
@@ -211,21 +191,21 @@ public class AbSlidingPlayView extends LinearLayout {
 	 */
 	public void creatIndex() {
 		//显示下面的点
-		pageLineLayout.removeAllViews();
-		mPageLineLayoutParent.setHorizontalGravity(pageLineHorizontalGravity);
-		pageLineLayout.setGravity(Gravity.CENTER);
-		pageLineLayout.setVisibility(View.VISIBLE);
+		navLinearLayout.removeAllViews();
+		mNavLayoutParent.setHorizontalGravity(navHorizontalGravity);
+		navLinearLayout.setGravity(Gravity.CENTER);
+		navLinearLayout.setVisibility(View.VISIBLE);
 		count = mListViews.size();
+		navLayoutParams.setMargins(5, 5, 5, 5);
 		for (int j = 0; j < count; j++) {
 			ImageView imageView = new ImageView(context);
-			pageLineLayoutParams.setMargins(5, 5, 5, 5);
-			imageView.setLayoutParams(pageLineLayoutParams);
+			imageView.setLayoutParams(navLayoutParams);
 			if (j == 0) {
 				imageView.setImageBitmap(displayImage);
 			} else {
 				imageView.setImageBitmap(hideImage);
 			}
-			pageLineLayout.addView(imageView, j);
+			navLinearLayout.addView(imageView, j);
 		}
 	}
 
@@ -237,9 +217,9 @@ public class AbSlidingPlayView extends LinearLayout {
 		position = mViewPager.getCurrentItem();
 		for (int j = 0; j < count; j++) {
 			if (position == j) {
-				((ImageView)pageLineLayout.getChildAt(position)).setImageBitmap(displayImage);
+				((ImageView)navLinearLayout.getChildAt(position)).setImageBitmap(displayImage);
 			} else {
-				((ImageView)pageLineLayout.getChildAt(j)).setImageBitmap(hideImage);
+				((ImageView)navLinearLayout.getChildAt(j)).setImageBitmap(hideImage);
 			}
 		}
 	}
@@ -441,10 +421,9 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
     
     /**
-     * 
      * 描述：设置页面Touch的监听器.
-     * @param abOnTouchListener
-     * @throws 
+     *
+     * @param abOnTouchListener the new on touch listener
      */
     public void setOnTouchListener(AbOnTouchListener abOnTouchListener){
     	mAbOnTouchListener = abOnTouchListener;
@@ -485,10 +464,10 @@ public class AbSlidingPlayView extends LinearLayout {
 	/**
 	 * 描述：设置页显示条的位置,在AddView前设置.
 	 *
-	 * @param horizontalGravity the new page line horizontal gravity
+	 * @param horizontalGravity the nav horizontal gravity
 	 */
-	public void setPageLineHorizontalGravity(int horizontalGravity) {
-		pageLineHorizontalGravity = horizontalGravity;
+	public void setNavHorizontalGravity(int horizontalGravity) {
+		navHorizontalGravity = horizontalGravity;
 	}
 	
 	/**
@@ -510,13 +489,85 @@ public class AbSlidingPlayView extends LinearLayout {
 	}
 	
 	/**
-	 * 
-	 * 描述：设置导航点的背景
-	 * @param resid
-	 * @throws 
+	 * 描述：设置导航点的背景.
+	 *
+	 * @param resid the new nav layout background
 	 */
-	public void setPageLineLayoutBackground(int resid){
-		pageLineLayout.setBackgroundResource(resid);
+	public void setNavLayoutBackground(int resid){
+		navLinearLayout.setBackgroundResource(resid);
 	}
+	
+	/**
+	 * 监听器.
+	 *
+	 * @see AbOnChangeEvent
+	 */
+	public interface AbOnChangeListener {
+	    
+	    /**
+	     * 改变.
+	     * @param position the position
+	     */
+	    public void onChange(int position); 
+
+	}
+	
+	/**
+	 * 条目点击接口.
+	 *
+	 * @see AbOnItemClickEvent
+	 */
+    public interface AbOnItemClickListener {
+        
+        /**
+         * 描述：点击事件.
+         * @param position 索引
+         */
+        public void onClick(int position); 
+    }
+    
+    /**
+     * 滚动.
+     *
+     * @see AbOnScrollEvent
+     */
+    public interface AbOnScrollListener {
+        
+        /**
+         * 滚动.
+         * @param arg1 返回参数
+         */
+        public void onScroll(int arg1); 
+        
+        /**
+         * 滚动停止.
+         */
+        public void onScrollStoped();
+
+        /**
+         * 滚到了最左边.
+         */
+        public void onScrollToLeft();
+
+        /**
+         * 滚到了最右边.
+         */
+        public void onScrollToRight();
+
+    }
+    
+    /**
+     * 触摸屏幕接口.
+     *
+     * @see AbOnTouchEvent
+     */
+    public interface AbOnTouchListener {
+    	/**
+    	 * 描述：Touch事件.
+    	 *
+    	 * @param event 触摸手势
+    	 */
+        public void onTouch(MotionEvent event); 
+    }
 	
 }

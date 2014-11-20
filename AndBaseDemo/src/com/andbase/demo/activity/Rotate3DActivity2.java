@@ -13,7 +13,7 @@ import com.andbase.R;
 
 /**
  * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：Rotate3DActivity2.java 
  * 描述：3d旋转View
  * @author 原作者  QQ：250333410

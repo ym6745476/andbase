@@ -3,13 +3,12 @@ package com.andbase.demo.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.ab.view.sliding.AbSlidingTabView;
 import com.andbase.R;
@@ -19,7 +18,7 @@ public class SlidingTabFragment extends Fragment {
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.sliding_tab, null);
+		View view = inflater.inflate(R.layout.tab_top, null);
 		AbSlidingTabView mAbSlidingTabView = (AbSlidingTabView)view.findViewById(R.id.mAbSlidingTabView);
 		
 		//如果里面的页面列表不能下载原因：
@@ -39,14 +38,14 @@ public class SlidingTabFragment extends Fragment {
 			
 		});*/
 
-		Fragment1 page1 = new Fragment1();
-		Fragment2 page2 = new Fragment2();
-		Fragment4 page3 = new Fragment4();
-		Fragment5 page4 = new Fragment5();
-		Fragment1 page5 = new Fragment1();
-		Fragment2 page6 = new Fragment2();
-		Fragment4 page7 = new Fragment4();
-		Fragment5 page8 = new Fragment5();
+		FragmentLoad page1 = new FragmentLoad();
+		FragmentLoad page2 = new FragmentLoad();
+		FragmentLoad page3 = new FragmentLoad();
+		FragmentLoad page4 = new FragmentLoad();
+		FragmentLoad page5 = new FragmentLoad();
+		FragmentLoad page6 = new FragmentLoad();
+		FragmentLoad page7 = new FragmentLoad();
+		FragmentLoad page8 = new FragmentLoad();
 		
 		List<Fragment> mFragments = new ArrayList<Fragment>();
 		mFragments.add(page1);

@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.bitmap.AbImageCache类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.8r3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1bitmap.html">bitmap</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html">AbImageCache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.bitmap.AbImageCache类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5306cf69de9bf050605383ba874b24fe"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a5306cf69de9bf050605383ba874b24fe">getBitmapFromCache</a> (String key)</td></tr>
+<tr class="separator:a5306cf69de9bf050605383ba874b24fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff582d05b129177575e87752b77a3ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a3ff582d05b129177575e87752b77a3ee">addBitmapToCache</a> (String key, Bitmap bitmap)</td></tr>
+<tr class="separator:a3ff582d05b129177575e87752b77a3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514fe350162cf76d954bb258478d754a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a514fe350162cf76d954bb258478d754a">removeBitmapFromCache</a> (String key)</td></tr>
+<tr class="separator:a514fe350162cf76d954bb258478d754a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f4d7318dd006416d4abd07c237b961"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a73f4d7318dd006416d4abd07c237b961">removeAllBitmapFromCache</a> ()</td></tr>
+<tr class="separator:a73f4d7318dd006416d4abd07c237b961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1422c804f1c15b6b269f4c39d69d0039"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a1422c804f1c15b6b269f4c39d69d0039">getCacheKey</a> (String url, int width, int height, int type)</td></tr>
+<tr class="separator:a1422c804f1c15b6b269f4c39d69d0039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06b777a4c2fd66de605cca2c0757ebf"><td class="memItemLeft" align="right" valign="top">static Runnable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#ac06b777a4c2fd66de605cca2c0757ebf">getRunRunnableFromCache</a> (String key)</td></tr>
+<tr class="separator:ac06b777a4c2fd66de605cca2c0757ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf831033866b5eca781337e96ae307fb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#acf831033866b5eca781337e96ae307fb">addToRunRunnableCache</a> (String key, Runnable runnable)</td></tr>
+<tr class="separator:acf831033866b5eca781337e96ae307fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96f3f2b2ac760042816fdaee5ef0270"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#ae96f3f2b2ac760042816fdaee5ef0270">removeRunRunnableFromCache</a> (String key)</td></tr>
+<tr class="separator:ae96f3f2b2ac760042816fdaee5ef0270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2f59421c805eda2fe09c91b5020436"><td class="memItemLeft" align="right" valign="top">static Runnable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a3b2f59421c805eda2fe09c91b5020436">getWaitRunnableFromCache</a> (String key)</td></tr>
+<tr class="separator:a3b2f59421c805eda2fe09c91b5020436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd785691599b37c568214d0ea0109c4c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#afd785691599b37c568214d0ea0109c4c">addToWaitRunnableCache</a> (String key, Runnable runnable)</td></tr>
+<tr class="separator:afd785691599b37c568214d0ea0109c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84b30f637b825c9808441a3353816ce"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#af84b30f637b825c9808441a3353816ce">removeWaitRunnableFromCache</a> (String key)</td></tr>
+<tr class="separator:af84b30f637b825c9808441a3353816ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a896f2e5f496a65ec8c0b70d6d33242ad"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a896f2e5f496a65ec8c0b70d6d33242ad">cacheSize</a> = 8 * 1024 * 1024</td></tr>
+<tr class="separator:a896f2e5f496a65ec8c0b70d6d33242ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278a2e012faa51b8bbf522414d753c51"><td class="memItemLeft" align="right" valign="top">static final ReentrantLock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a278a2e012faa51b8bbf522414d753c51">lock</a> = new ReentrantLock()</td></tr>
+<tr class="separator:a278a2e012faa51b8bbf522414d753c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:acde92634ab86eb177df05b1af8f54ef8"><td class="memItemLeft" align="right" valign="top">static final LruCache&lt; String, <br class="typebreak" />
+Bitmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#acde92634ab86eb177df05b1af8f54ef8">bitmapCache</a></td></tr>
+<tr class="separator:acde92634ab86eb177df05b1af8f54ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6cdaf129730492d7247d101e099766"><td class="memItemLeft" align="right" valign="top">static final HashMap&lt; String, <br class="typebreak" />
+Runnable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a7e6cdaf129730492d7247d101e099766">runRunnableCache</a> = new HashMap&lt;String, Runnable&gt;()</td></tr>
+<tr class="separator:a7e6cdaf129730492d7247d101e099766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f240b417d89eb6f125984b1f33bb0a"><td class="memItemLeft" align="right" valign="top">static final List&lt; HashMap<br class="typebreak" />
+&lt; String, Runnable &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#ac6f240b417d89eb6f125984b1f33bb0a">waitRunnableList</a> = new ArrayList&lt;HashMap&lt;String, Runnable&gt;&gt;()</td></tr>
+<tr class="separator:ac6f240b417d89eb6f125984b1f33bb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbImageCache.java 描述：图片缓存.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-5-23 上午10:10:53 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a3ff582d05b129177575e87752b77a3ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.addBitmapToCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一个图片到缓存.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>通过url计算的缓存key </td></tr>
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf831033866b5eca781337e96ae307fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.addToRunRunnableCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Runnable&#160;</td>
+          <td class="paramname"><em>runnable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一个正在执行线程的记录.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>通过url计算的缓存key </td></tr>
+    <tr><td class="paramname">runnable</td><td>the runnable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afd785691599b37c568214d0ea0109c4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.addToWaitRunnableCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Runnable&#160;</td>
+          <td class="paramname"><em>runnable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：增加一个等待线程的记录.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>通过url计算的缓存key </td></tr>
+    <tr><td class="paramname">runnable</td><td>the runnable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5306cf69de9bf050605383ba874b24fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.bitmap.AbImageCache.getBitmapFromCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从缓存中获取这个Bitmap.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap from mem cache </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1422c804f1c15b6b269f4c39d69d0039"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.bitmap.AbImageCache.getCacheKey </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>根据url计算缓存key,这个key+后缀就是文件名.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>图片地址. </td></tr>
+    <tr><td class="paramname">width</td><td>图片宽度. </td></tr>
+    <tr><td class="paramname">height</td><td>图片高度. </td></tr>
+    <tr><td class="paramname">type</td><td>处理类型. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the cache key </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac06b777a4c2fd66de605cca2c0757ebf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Runnable com.ab.bitmap.AbImageCache.getRunRunnableFromCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从缓存中获取这个正在执行线程.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the runnable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b2f59421c805eda2fe09c91b5020436"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Runnable com.ab.bitmap.AbImageCache.getWaitRunnableFromCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从缓存中获取这个正在等待线程.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the runnable </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a73f4d7318dd006416d4abd07c237b961"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.removeAllBitmapFromCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：清空缓存的Bitmap. </p>
+
+</div>
+</div>
+<a class="anchor" id="a514fe350162cf76d954bb258478d754a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.removeBitmapFromCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从缓存删除.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>通过url计算的缓存key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae96f3f2b2ac760042816fdaee5ef0270"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.removeRunRunnableFromCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从缓存一个正在执行的线程.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>通过url计算的缓存key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af84b30f637b825c9808441a3353816ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.bitmap.AbImageCache.removeWaitRunnableFromCache </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：从缓存删除一个等待线程.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>通过url计算的缓存key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="acde92634ab86eb177df05b1af8f54ef8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final LruCache&lt;String, Bitmap&gt; com.ab.bitmap.AbImageCache.bitmapCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> LruCache&lt;String, Bitmap&gt;(<a class="code" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_cache.html#a896f2e5f496a65ec8c0b70d6d33242ad">cacheSize</a>) {      </div>
+<div class="line">        <span class="keyword">protected</span> <span class="keywordtype">int</span> sizeOf(String key, Bitmap bitmap) { </div>
+<div class="line">            <span class="keywordflow">return</span> bitmap.getRowBytes() * bitmap.getHeight();        </div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        @Override</div>
+<div class="line">        <span class="keyword">protected</span> <span class="keywordtype">void</span> entryRemoved(<span class="keywordtype">boolean</span> evicted, String key,</div>
+<div class="line">                Bitmap oldValue, Bitmap newValue) {</div>
+<div class="line">            AbLogUtil.d(AbImageCache.class, <span class="stringliteral">&quot;LruCache:移除了&quot;</span>+key);</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        </div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>为了加快速度，在内存中开启缓存,最新的LruCache. </p>
+
+</div>
+</div>
+<a class="anchor" id="a896f2e5f496a65ec8c0b70d6d33242ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.bitmap.AbImageCache.cacheSize = 8 * 1024 * 1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>缓存空间大小8MB. </p>
+
+</div>
+</div>
+<a class="anchor" id="a278a2e012faa51b8bbf522414d753c51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ReentrantLock com.ab.bitmap.AbImageCache.lock = new ReentrantLock()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>锁对象. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e6cdaf129730492d7247d101e099766"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final HashMap&lt;String, Runnable&gt; com.ab.bitmap.AbImageCache.runRunnableCache = new HashMap&lt;String, Runnable&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>正在下载中的线程. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac6f240b417d89eb6f125984b1f33bb0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final List&lt;HashMap&lt;String, Runnable&gt; &gt; com.ab.bitmap.AbImageCache.waitRunnableList = new ArrayList&lt;HashMap&lt;String, Runnable&gt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>等待中的线程. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/bitmap/<a class="el" href="_ab_image_cache_8java.html">AbImageCache.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十月 28日 星期二 17:26:44 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

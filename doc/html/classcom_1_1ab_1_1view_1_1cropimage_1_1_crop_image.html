@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.cropimage.CropImage类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1cropimage.html">cropimage</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html">CropImage</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.cropimage.CropImage类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image_1_1_background_job.html">BackgroundJob</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a698de994a4293b2815b3ec3bf2bb407b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a698de994a4293b2815b3ec3bf2bb407b">CropImage</a> (Context context, <a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image_view.html">CropImageView</a> imageView, Handler handler)</td></tr>
+<tr class="separator:a698de994a4293b2815b3ec3bf2bb407b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d649e0ac1b41cbeab1458c5c5af1229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a5d649e0ac1b41cbeab1458c5c5af1229">crop</a> (Bitmap bm)</td></tr>
+<tr class="separator:a5d649e0ac1b41cbeab1458c5c5af1229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8810aea3970abbed963bd182afb83892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a8810aea3970abbed963bd182afb83892">startRotate</a> (float d)</td></tr>
+<tr class="separator:a8810aea3970abbed963bd182afb83892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274e5993f4f3dbb42b26738e92e5ff8e"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a274e5993f4f3dbb42b26738e92e5ff8e">cropAndSave</a> ()</td></tr>
+<tr class="separator:a274e5993f4f3dbb42b26738e92e5ff8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e741e7df2bc80488d0e0084db587358"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a4e741e7df2bc80488d0e0084db587358">cropAndSave</a> (Bitmap bm)</td></tr>
+<tr class="separator:a4e741e7df2bc80488d0e0084db587358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4217614fd65b1e56c49e4510e8a03c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#ae4217614fd65b1e56c49e4510e8a03c3">cropCancel</a> ()</td></tr>
+<tr class="separator:ae4217614fd65b1e56c49e4510e8a03c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186636c8e4c1b86442312ed1af133663"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a186636c8e4c1b86442312ed1af133663">saveToLocal</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a186636c8e4c1b86442312ed1af133663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac2ed3e8a1f04a6afa0f25a8525234a8e"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#ac2ed3e8a1f04a6afa0f25a8525234a8e">FILE_LOCAL</a> = null</td></tr>
+<tr class="separator:ac2ed3e8a1f04a6afa0f25a8525234a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada39f8c64640d6472673761f5fd75bcf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#ada39f8c64640d6472673761f5fd75bcf">mWaitingToPick</a></td></tr>
+<tr class="separator:ada39f8c64640d6472673761f5fd75bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba168a4d2d996ce57627142efcc4b89"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#acba168a4d2d996ce57627142efcc4b89">mSaving</a></td></tr>
+<tr class="separator:acba168a4d2d996ce57627142efcc4b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bffbfc848fa7bf608a74b2a9ee2b659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_highlight_view.html">HighlightView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a3bffbfc848fa7bf608a74b2a9ee2b659">mCrop</a></td></tr>
+<tr class="separator:a3bffbfc848fa7bf608a74b2a9ee2b659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:ab80755dcc569e2270e31e2e7781f97dd"><td class="memItemLeft" align="right" valign="top">Runnable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#ab80755dcc569e2270e31e2e7781f97dd">mRunFaceDetection</a></td></tr>
+<tr class="separator:ab80755dcc569e2270e31e2e7781f97dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a921d6db93cba4563e2474bd72a69729e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a921d6db93cba4563e2474bd72a69729e">startFaceDetection</a> ()</td></tr>
+<tr class="separator:a921d6db93cba4563e2474bd72a69729e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fddfdcf793fb3eb38c85c1132170aad"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a2fddfdcf793fb3eb38c85c1132170aad">onSaveClicked</a> (Bitmap bm)</td></tr>
+<tr class="separator:a2fddfdcf793fb3eb38c85c1132170aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac181b46bee6792985cd11846db48ce45"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#ac181b46bee6792985cd11846db48ce45">mContext</a></td></tr>
+<tr class="separator:ac181b46bee6792985cd11846db48ce45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cf8c2f9e4f2abaf10732e55784e904"><td class="memItemLeft" align="right" valign="top">Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#aa8cf8c2f9e4f2abaf10732e55784e904">mHandler</a></td></tr>
+<tr class="separator:aa8cf8c2f9e4f2abaf10732e55784e904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497ec95fec90772dbf2906eb1d4413bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image_view.html">CropImageView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a497ec95fec90772dbf2906eb1d4413bb">mImageView</a></td></tr>
+<tr class="separator:a497ec95fec90772dbf2906eb1d4413bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4b0eda38ad8c51a603c3949ebafaaf"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image.html#a2f4b0eda38ad8c51a603c3949ebafaaf">mBitmap</a></td></tr>
+<tr class="separator:a2f4b0eda38ad8c51a603c3949ebafaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>裁剪处理. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a698de994a4293b2815b3ec3bf2bb407b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.cropimage.CropImage.CropImage </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image_view.html">CropImageView</a>&#160;</td>
+          <td class="paramname"><em>imageView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Handler&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new crop image.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context </td></tr>
+    <tr><td class="paramname">imageView</td><td>the image view </td></tr>
+    <tr><td class="paramname">handler</td><td>the handler </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a5d649e0ac1b41cbeab1458c5c5af1229"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.cropimage.CropImage.crop </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片裁剪.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bm</td><td>the bm </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a274e5993f4f3dbb42b26738e92e5ff8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.cropimage.CropImage.cropAndSave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>裁剪并保存.</p>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4e741e7df2bc80488d0e0084db587358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.cropimage.CropImage.cropAndSave </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>裁剪并保存.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bm</td><td>the bm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae4217614fd65b1e56c49e4510e8a03c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.cropimage.CropImage.cropCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>取消裁剪. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2fddfdcf793fb3eb38c85c1132170aad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.cropimage.CropImage.onSaveClicked </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>On save clicked.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bm</td><td>the bm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a186636c8e4c1b86442312ed1af133663"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.cropimage.CropImage.saveToLocal </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Save to local.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a921d6db93cba4563e2474bd72a69729e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.cropimage.CropImage.startFaceDetection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Start face detection. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8810aea3970abbed963bd182afb83892"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.cropimage.CropImage.startRotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Start rotate.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the d </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ac2ed3e8a1f04a6afa0f25a8525234a8e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">File com.ab.view.cropimage.CropImage.FILE_LOCAL = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The file local. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f4b0eda38ad8c51a603c3949ebafaaf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bitmap com.ab.view.cropimage.CropImage.mBitmap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m bitmap. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac181b46bee6792985cd11846db48ce45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Context com.ab.view.cropimage.CropImage.mContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m context. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3bffbfc848fa7bf608a74b2a9ee2b659"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_highlight_view.html">HighlightView</a> com.ab.view.cropimage.CropImage.mCrop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The m crop. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa8cf8c2f9e4f2abaf10732e55784e904"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Handler com.ab.view.cropimage.CropImage.mHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m handler. </p>
+
+</div>
+</div>
+<a class="anchor" id="a497ec95fec90772dbf2906eb1d4413bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1cropimage_1_1_crop_image_view.html">CropImageView</a> com.ab.view.cropimage.CropImage.mImageView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m image view. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab80755dcc569e2270e31e2e7781f97dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Runnable com.ab.view.cropimage.CropImage.mRunFaceDetection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m run face detection. </p>
+
+</div>
+</div>
+<a class="anchor" id="acba168a4d2d996ce57627142efcc4b89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.cropimage.CropImage.mSaving</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The m saving. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada39f8c64640d6472673761f5fd75bcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.cropimage.CropImage.mWaitingToPick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The m waiting to pick. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/cropimage/<a class="el" href="_crop_image_8java.html">CropImage.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

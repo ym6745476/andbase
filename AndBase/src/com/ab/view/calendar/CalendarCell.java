@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,17 +29,17 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.ab.view.listener.AbOnItemClickListener;
+import com.ab.view.calendar.CalendarView.AbOnItemClickListener;
 
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：CalendarCell.java 
  * 描述：日历控件单元格绘制类
- * @author zhaoqp
- * @date：2013-7-9 下午3:54:16
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-7-9 下午3:54:16
  */
 public class CalendarCell extends View {
 	
@@ -326,12 +326,12 @@ public class CalendarCell extends View {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.view.View#onTouchEvent(android.view.MotionEvent)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-7-19 下午4:31:18
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -359,13 +359,13 @@ public class CalendarCell extends View {
 	/**
 	 * 描述：TODO.
 	 *
+	 * @version v1.0
 	 * @param keyCode the key code
 	 * @param event the event
 	 * @return true, if successful
 	 * @see android.view.View#onKeyDown(int, android.view.KeyEvent)
-	 * @author: zhaoqp
+	 * @author: amsoft.cn
 	 * @date：2013-7-19 下午4:31:18
-	 * @version v1.0
 	 */
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {

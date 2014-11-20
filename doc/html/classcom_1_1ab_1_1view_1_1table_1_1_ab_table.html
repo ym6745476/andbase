@@ -1,0 +1,1128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.table.AbTable类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.8r3</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1table.html">table</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html">AbTable</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.table.AbTable类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0afd89801f832bef9a3a4aa0fe75b6bd"><td class="memItemLeft" align="right" valign="top">String[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a0afd89801f832bef9a3a4aa0fe75b6bd">getTitles</a> ()</td></tr>
+<tr class="separator:a0afd89801f832bef9a3a4aa0fe75b6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaad7206a651f124a17f1eace884d801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#acaad7206a651f124a17f1eace884d801">setTitles</a> (String[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a6d4cd6d4cffba80d2311287435d81dd1">titles</a>)</td></tr>
+<tr class="separator:acaad7206a651f124a17f1eace884d801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1290a0bdb04b029ce6d495a2568548"><td class="memItemLeft" align="right" valign="top">List&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#afa1290a0bdb04b029ce6d495a2568548">getContents</a> ()</td></tr>
+<tr class="separator:afa1290a0bdb04b029ce6d495a2568548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ecb66df242302ce843654ec991c3cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a19ecb66df242302ce843654ec991c3cb">setContents</a> (List&lt; String[]&gt; <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#ae8379f70e0c2af9e28ad58bf3095ffb4">contents</a>)</td></tr>
+<tr class="separator:a19ecb66df242302ce843654ec991c3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa238f5ad6cf5d52dbbb121ddd55bd9b6"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#aa238f5ad6cf5d52dbbb121ddd55bd9b6">getCellTypes</a> ()</td></tr>
+<tr class="separator:aa238f5ad6cf5d52dbbb121ddd55bd9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03557784b719132a0d459e3fcb34b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#af03557784b719132a0d459e3fcb34b01">setCellTypes</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a1b81f75d5339aa23c777cf824f25a4ac">cellTypes</a>)</td></tr>
+<tr class="separator:af03557784b719132a0d459e3fcb34b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629149ab29f035121b58d19150849157"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a629149ab29f035121b58d19150849157">getCellWidth</a> ()</td></tr>
+<tr class="separator:a629149ab29f035121b58d19150849157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68181cda05578e1fc06e2d372de3c1de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a68181cda05578e1fc06e2d372de3c1de">setCellWidth</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a3d357c8d2eef48482332998507cb1321">cellWidth</a>)</td></tr>
+<tr class="separator:a68181cda05578e1fc06e2d372de3c1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0dc97c73df709a8bbed5751a0d3b35"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a3d0dc97c73df709a8bbed5751a0d3b35">getRowHeight</a> ()</td></tr>
+<tr class="separator:a3d0dc97c73df709a8bbed5751a0d3b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2aefbf06a098eafbe8384982280c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a3c2aefbf06a098eafbe8384982280c53">setRowHeight</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a74d43d255d50a56c93a30f4a72eb8209">rowHeight</a>)</td></tr>
+<tr class="separator:a3c2aefbf06a098eafbe8384982280c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca835981f555dac09298841e16c72d86"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#aca835981f555dac09298841e16c72d86">getRowTextSize</a> ()</td></tr>
+<tr class="separator:aca835981f555dac09298841e16c72d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad8933472838c9891c71f1b7f557962"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a5ad8933472838c9891c71f1b7f557962">setRowTextSize</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a3915eb7735bb21f3a717c3c1b2166397">rowTextSize</a>)</td></tr>
+<tr class="separator:a5ad8933472838c9891c71f1b7f557962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b1c5650bdd9461a0a0542cb1c420bd8"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a7b1c5650bdd9461a0a0542cb1c420bd8">getRowTextColor</a> ()</td></tr>
+<tr class="separator:a7b1c5650bdd9461a0a0542cb1c420bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6000b84e55d645ad3f2f87703fb9cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#afd6000b84e55d645ad3f2f87703fb9cc">setRowTextColor</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#acb133bf06870043d4dc7b680816425dc">rowTextColor</a>)</td></tr>
+<tr class="separator:afd6000b84e55d645ad3f2f87703fb9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374383486f249bff78500eba1918bc1f"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a374383486f249bff78500eba1918bc1f">getTableResource</a> ()</td></tr>
+<tr class="separator:a374383486f249bff78500eba1918bc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6c8e568d74c149c6f033e48f891721"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#abe6c8e568d74c149c6f033e48f891721">setTableResource</a> (int[] <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#aeca06ab5360b5925012b069c5c32bfb9">tableResource</a>)</td></tr>
+<tr class="separator:abe6c8e568d74c149c6f033e48f891721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d87bf95a646e48a2450e6832f59328e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a8d87bf95a646e48a2450e6832f59328e">getItemCellTouchListener</a> ()</td></tr>
+<tr class="separator:a8d87bf95a646e48a2450e6832f59328e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70151a1cf584cbeef6a6c21d223bc73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#af70151a1cf584cbeef6a6c21d223bc73">setItemCellTouchListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a67c33241dc01e57a41e7977acdb56418">itemCellTouchListener</a>)</td></tr>
+<tr class="separator:af70151a1cf584cbeef6a6c21d223bc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc47a34a256c08016cf35be8aefcfb42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#afc47a34a256c08016cf35be8aefcfb42">getItemCellCheckListener</a> ()</td></tr>
+<tr class="separator:afc47a34a256c08016cf35be8aefcfb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1c38f0c183a36c35146b8a0f27da63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a2c1c38f0c183a36c35146b8a0f27da63">setItemCellCheckListener</a> (<a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#ad0f65cc01dcd9feb36c8c3c3f63702d8">itemCellCheckListener</a>)</td></tr>
+<tr class="separator:a2c1c38f0c183a36c35146b8a0f27da63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0e77a301f1c20c3130c82d3d81ed88fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html">AbTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a0e77a301f1c20c3130c82d3d81ed88fd">newAbTable</a> (Context context, int columnSize)</td></tr>
+<tr class="separator:a0e77a301f1c20c3130c82d3d81ed88fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a6d4cd6d4cffba80d2311287435d81dd1"><td class="memItemLeft" align="right" valign="top">String[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a6d4cd6d4cffba80d2311287435d81dd1">titles</a></td></tr>
+<tr class="separator:a6d4cd6d4cffba80d2311287435d81dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8379f70e0c2af9e28ad58bf3095ffb4"><td class="memItemLeft" align="right" valign="top">List&lt; String[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#ae8379f70e0c2af9e28ad58bf3095ffb4">contents</a></td></tr>
+<tr class="separator:ae8379f70e0c2af9e28ad58bf3095ffb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b81f75d5339aa23c777cf824f25a4ac"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a1b81f75d5339aa23c777cf824f25a4ac">cellTypes</a></td></tr>
+<tr class="separator:a1b81f75d5339aa23c777cf824f25a4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d357c8d2eef48482332998507cb1321"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a3d357c8d2eef48482332998507cb1321">cellWidth</a></td></tr>
+<tr class="separator:a3d357c8d2eef48482332998507cb1321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d43d255d50a56c93a30f4a72eb8209"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a74d43d255d50a56c93a30f4a72eb8209">rowHeight</a></td></tr>
+<tr class="separator:a74d43d255d50a56c93a30f4a72eb8209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3915eb7735bb21f3a717c3c1b2166397"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a3915eb7735bb21f3a717c3c1b2166397">rowTextSize</a></td></tr>
+<tr class="separator:a3915eb7735bb21f3a717c3c1b2166397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb133bf06870043d4dc7b680816425dc"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#acb133bf06870043d4dc7b680816425dc">rowTextColor</a></td></tr>
+<tr class="separator:acb133bf06870043d4dc7b680816425dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca06ab5360b5925012b069c5c32bfb9"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#aeca06ab5360b5925012b069c5c32bfb9">tableResource</a></td></tr>
+<tr class="separator:aeca06ab5360b5925012b069c5c32bfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c33241dc01e57a41e7977acdb56418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a67c33241dc01e57a41e7977acdb56418">itemCellTouchListener</a></td></tr>
+<tr class="separator:a67c33241dc01e57a41e7977acdb56418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f65cc01dcd9feb36c8c3c3f63702d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#ad0f65cc01dcd9feb36c8c3c3f63702d8">itemCellCheckListener</a></td></tr>
+<tr class="separator:ad0f65cc01dcd9feb36c8c3c3f63702d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:afc2d6a56d6554a7136ebb0947e16b865"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html">AbTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#afc2d6a56d6554a7136ebb0947e16b865">mAbTable</a> = null</td></tr>
+<tr class="separator:afc2d6a56d6554a7136ebb0947e16b865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedb29e3ee657007e6059e3dd042a1cd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#abedb29e3ee657007e6059e3dd042a1cd">mScreenWidth</a> = 0</td></tr>
+<tr class="separator:abedb29e3ee657007e6059e3dd042a1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c516ce24aeb3e56e91f477981ab8df"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html#a55c516ce24aeb3e56e91f477981ab8df">mScreenHeight</a> = 0</td></tr>
+<tr class="separator:a55c516ce24aeb3e56e91f477981ab8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbCellType.java 描述：表格控件实体类 </p>
+<p>(1)标题配置 </p>
+<p>titles = new String[] { "标题1", "标题2", "标题3", "标题4","标题5"}; </p>
+<p>(2)内容列表配置(初始为空的) </p>
+<p>contents = new ArrayList&lt;String[]&gt;(); </p>
+<p>(3)列类型配置（参照AbCellType） </p>
+<p>cellTypes = new int[] { <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_cell_type.html#a9cd76e3526b769be3e8060d1a0d33883">AbCellType.STRING</a>, <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_cell_type.html#a9cd76e3526b769be3e8060d1a0d33883">AbCellType.STRING</a>, <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_cell_type.html#a9cd76e3526b769be3e8060d1a0d33883">AbCellType.STRING</a>, <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_cell_type.html#a9cd76e3526b769be3e8060d1a0d33883">AbCellType.STRING</a>,<a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_cell_type.html#a9cd76e3526b769be3e8060d1a0d33883">AbCellType.STRING</a>}; </p>
+<p>(4)列宽配置(%) 超过100% 可以横向滑动 </p>
+<p>cellWidth = new int[] {20,50,10,20,50}; </p>
+<p>(5)行高（索引0：标题高，1：内容列表高） </p>
+<p>rowHeight = new int[] { 35, 35 }; </p>
+<p>(6)行文字大小（索引0标题，1内容列表） </p>
+<p>rowTextSize = new int[] { 15, 12}; </p>
+<p>(7)行文字颜色（索引0标题，1内容列表） </p>
+<p>rowTextColor = new int[] {Color.rgb(255, 255, 255),Color.rgb(113, 113, 113) }; </p>
+<p>(8)背景资源（索引0标题行背景，1标题单元格背景，2内容列表行背景。3表格内容单元格背景） </p>
+<p>tableResource = new int[] {android.R.color.transparent,R.drawable.title_cell,android.R.color.transparent,R.drawable.content_cell}; </p>
+<p>(9)表格实体（通过newAbTable实例化并初始化列数，可自动完成AbTable的配置） </p>
+<p>table = AbTable.newAbTable(this,5); </p>
+<p>table.setTitles(titles); </p>
+<p>table.setContents(contents); </p>
+<p>table.setCellTypes(cellTypes); </p>
+<p>table.setCellWidth(cellWidth); </p>
+<p>table.setRowHeight(rowHeight); </p>
+<p>table.setRowTextSize(rowTextSize); </p>
+<p>table.setTableResource(tableResource); </p>
+<p>table.setRowTextColor(rowTextColor); </p>
+<p>(10)AbTableArrayAdapter对象 </p>
+<p>mAbTableArrayAdapter = new AbTableArrayAdapter(this, table); </p>
+<p>(12)ListView（布局参照）： </p>
+<p>&#160;&#160; &lt; HorizontalScrollView </p>
+<p>&#160;&#160;&#160;&#160; android:id="@+id/horView" </p>
+<p>&#160;&#160;&#160;&#160; android:layout_width="fill_parent" </p>
+<p>&#160;&#160;&#160;&#160; android:layout_height="fill_parent" &gt; </p>
+<p>&#160;&#160;&#160;&#160; &lt;ListView </p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160; android:id="@+id/mListView" </p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160; android:layout_width="wrap_content" </p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160; android:layout_height="wrap_content" </p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160; android:cacheColorHint="#00000000" </p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160; android:divider="@android:color/transparent" </p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160; android:dividerHeight="0dip" &gt; </p>
+<p>&#160;&#160;&#160;&#160; &lt; /ListView&gt; </p>
+<p>&#160;&#160;&lt; /HorizontalScrollView&gt; </p>
+<p>mListView = (ListView)findViewById(R.id.mListView); </p>
+<p>(11)设置Adapter </p>
+<p>mListView.setAdapter(tableAdapter);</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-01-18 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aa238f5ad6cf5d52dbbb121ddd55bd9b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.getCellTypes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the cell types.</p>
+<dl class="section return"><dt>返回</dt><dd>the cell types </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a629149ab29f035121b58d19150849157"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.getCellWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the cell width.</p>
+<dl class="section return"><dt>返回</dt><dd>the cell width </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa1290a0bdb04b029ce6d495a2568548"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String[]&gt; com.ab.view.table.AbTable.getContents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the contents.</p>
+<dl class="section return"><dt>返回</dt><dd>the contents </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afc47a34a256c08016cf35be8aefcfb42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> com.ab.view.table.AbTable.getItemCellCheckListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the item cell check listener.</p>
+<dl class="section return"><dt>返回</dt><dd>the item cell check listener </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d87bf95a646e48a2450e6832f59328e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> com.ab.view.table.AbTable.getItemCellTouchListener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the item cell touch listener.</p>
+<dl class="section return"><dt>返回</dt><dd>the item cell touch listener </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d0dc97c73df709a8bbed5751a0d3b35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.getRowHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the row height.</p>
+<dl class="section return"><dt>返回</dt><dd>the row height </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7b1c5650bdd9461a0a0542cb1c420bd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.getRowTextColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the row text color.</p>
+<dl class="section return"><dt>返回</dt><dd>the row text color </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca835981f555dac09298841e16c72d86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.getRowTextSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the row text size.</p>
+<dl class="section return"><dt>返回</dt><dd>the row text size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a374383486f249bff78500eba1918bc1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.getTableResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the table resource.</p>
+<dl class="section return"><dt>返回</dt><dd>the table resource </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0afd89801f832bef9a3a4aa0fe75b6bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String [] com.ab.view.table.AbTable.getTitles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取表格的标题.</p>
+<dl class="section return"><dt>返回</dt><dd>the titles </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0e77a301f1c20c3130c82d3d81ed88fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html">AbTable</a> com.ab.view.table.AbTable.newAbTable </td>
+          <td>(</td>
+          <td class="paramtype">Context&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columnSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：表格对象构造.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>context对象 </td></tr>
+    <tr><td class="paramname">columnSize</td><td>列数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the ab table </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af03557784b719132a0d459e3fcb34b01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setCellTypes </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>cellTypes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：列类型配置（参照AbCellType）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cellTypes</td><td>列类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a68181cda05578e1fc06e2d372de3c1de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setCellWidth </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>cellWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：列宽配置(%) 超过100% 可以横向滑动.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cellWidth</td><td>列宽的百分比 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a19ecb66df242302ce843654ec991c3cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setContents </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; String[]&gt;&#160;</td>
+          <td class="paramname"><em>contents</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置列表内容的数据.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contents</td><td>列表内容的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c1c38f0c183a36c35146b8a0f27da63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setItemCellCheckListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td>
+          <td class="paramname"><em>itemCellCheckListener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：复选框cell，一行中的某一个cell被点击.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itemCellCheckListener</td><td>the new item cell check listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af70151a1cf584cbeef6a6c21d223bc73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setItemCellTouchListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a>&#160;</td>
+          <td class="paramname"><em>itemCellTouchListener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：图片cell，一行中的某一个cell被点击.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itemCellTouchListener</td><td>the new item cell touch listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c2aefbf06a098eafbe8384982280c53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setRowHeight </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>rowHeight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置行高（索引0：标题高，1：内容列表高）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rowHeight</td><td>行高 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afd6000b84e55d645ad3f2f87703fb9cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setRowTextColor </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>rowTextColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置行文字的颜色.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rowTextColor</td><td>行文字的颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ad8933472838c9891c71f1b7f557962"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setRowTextSize </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>rowTextSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置行文字的大小（索引0标题，1内容列表）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rowTextSize</td><td>行文字的大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abe6c8e568d74c149c6f033e48f891721"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setTableResource </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>tableResource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：表格的背景资源（索引0标题行背景，1标题单元格背景，2内容列表行背景。3表格内容单元格背景）.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableResource</td><td>the new table resource </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acaad7206a651f124a17f1eace884d801"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.table.AbTable.setTitles </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>titles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：设置表格的标题.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">titles</td><td>表格的标题数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a1b81f75d5339aa23c777cf824f25a4ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.cellTypes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>单元格类型数组. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3d357c8d2eef48482332998507cb1321"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.cellWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>单元格宽度数组. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8379f70e0c2af9e28ad58bf3095ffb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;String[]&gt; com.ab.view.table.AbTable.contents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>内容列表数组. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad0f65cc01dcd9feb36c8c3c3f63702d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> com.ab.view.table.AbTable.itemCellCheckListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item cell check listener. </p>
+
+</div>
+</div>
+<a class="anchor" id="a67c33241dc01e57a41e7977acdb56418"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1ab_1_1view_1_1table_1_1_ab_table_1_1_ab_on_item_click_listener.html">AbOnItemClickListener</a> com.ab.view.table.AbTable.itemCellTouchListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The item cell touch listener. </p>
+
+</div>
+</div>
+<a class="anchor" id="afc2d6a56d6554a7136ebb0947e16b865"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1table_1_1_ab_table.html">AbTable</a> com.ab.view.table.AbTable.mAbTable = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>AbTable实例. </p>
+
+</div>
+</div>
+<a class="anchor" id="a55c516ce24aeb3e56e91f477981ab8df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.table.AbTable.mScreenHeight = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>屏幕的高. </p>
+
+</div>
+</div>
+<a class="anchor" id="abedb29e3ee657007e6059e3dd042a1cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.table.AbTable.mScreenWidth = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>屏幕的宽. </p>
+
+</div>
+</div>
+<a class="anchor" id="a74d43d255d50a56c93a30f4a72eb8209"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.rowHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>行高度数组（索引0标题，1内容列表）. </p>
+
+</div>
+</div>
+<a class="anchor" id="acb133bf06870043d4dc7b680816425dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.rowTextColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>行文字颜色数组（索引0标题，1内容列表）. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3915eb7735bb21f3a717c3c1b2166397"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.rowTextSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>行文字大小数组（索引0标题，1内容列表）. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeca06ab5360b5925012b069c5c32bfb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] com.ab.view.table.AbTable.tableResource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>表格资源数组（索引0标题行背景，1标题单元格背景，2内容列表行背景。3表格内容单元格背景）. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6d4cd6d4cffba80d2311287435d81dd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String [] com.ab.view.table.AbTable.titles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>标题数组. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/table/<a class="el" href="_ab_table_8java.html">AbTable.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十月 28日 星期二 17:26:46 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

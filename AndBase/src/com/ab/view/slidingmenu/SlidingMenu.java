@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2012 www.amsoft.cn
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ab.view.slidingmenu;
 
 import java.lang.reflect.Method;
@@ -27,12 +42,22 @@ import android.widget.RelativeLayout;
 
 import com.ab.view.slidingmenu.CustomViewAbove.OnPageChangeListener;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class SlidingMenu.
+ */
 public class SlidingMenu extends RelativeLayout {
 
+	/** The Constant TAG. */
 	private static final String TAG = "SlidingMenu";
 
+	/** The Constant SLIDING_WINDOW. */
 	public static final int SLIDING_WINDOW = 0;
+	
+	/** The Constant SLIDING_CONTENT. */
 	public static final int SLIDING_CONTENT = 1;
+	
+	/** The m actionbar overlay. */
 	private boolean mActionbarOverlay = false;
 
 	/** Constant value for use with setTouchModeAbove(). Allows the SlidingMenu to be opened with a swipe
@@ -62,14 +87,19 @@ public class SlidingMenu extends RelativeLayout {
 	 */
 	public static final int LEFT_RIGHT = 2;
 
+	/** The m view above. */
 	private CustomViewAbove mViewAbove;
 
+	/** The m view behind. */
 	private CustomViewBehind mViewBehind;
 
+	/** The m open listener. */
 	private OnOpenListener mOpenListener;
 	
+	/** The m secondary open listner. */
 	private OnOpenListener mSecondaryOpenListner;
 
+	/** The m close listener. */
 	private OnCloseListener mCloseListener;
 
 	/**
@@ -80,6 +110,8 @@ public class SlidingMenu extends RelativeLayout {
 	 * component's <code>addOnOpenListener<code> method. When
 	 * the onOpen event occurs, that object's appropriate
 	 * method is invoked
+	 *
+	 * @see OnOpenEvent
 	 */
 	public interface OnOpenListener {
 
@@ -287,8 +319,8 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Attaches the SlidingMenu to an entire Activity
-	 * 
+	 * Attaches the SlidingMenu to an entire Activity.
+	 *
 	 * @param activity the Activity
 	 * @param slideStyle either SLIDING_CONTENT or SLIDING_WINDOW
 	 */
@@ -297,8 +329,8 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Attaches the SlidingMenu to an entire Activity
-	 * 
+	 * Attaches the SlidingMenu to an entire Activity.
+	 *
 	 * @param activity the Activity
 	 * @param slideStyle either SLIDING_CONTENT or SLIDING_WINDOW
 	 * @param actionbarOverlay whether or not the ActionBar is overlaid
@@ -382,7 +414,7 @@ public class SlidingMenu extends RelativeLayout {
 	/**
 	 * Set the behind view (menu) content to the given View.
 	 *
-	 * @param view The desired content to display.
+	 * @param v the new menu
 	 */
 	public void setMenu(View v) {
 		mViewBehind.setContent(v);
@@ -409,7 +441,7 @@ public class SlidingMenu extends RelativeLayout {
 	/**
 	 * Set the secondary behind view (right menu) content to the given View.
 	 *
-	 * @param view The desired content to display.
+	 * @param v the new secondary menu
 	 */
 	public void setSecondaryMenu(View v) {
 		mViewBehind.setSecondaryContent(v);
@@ -666,7 +698,8 @@ public class SlidingMenu extends RelativeLayout {
 	}
 	
 	/**
-	 * Gets the touch mode margin threshold
+	 * Gets the touch mode margin threshold.
+	 *
 	 * @return the touch mode margin threshold
 	 */
 	public int getTouchmodeMarginThreshold() {
@@ -674,8 +707,9 @@ public class SlidingMenu extends RelativeLayout {
 	}
 	
 	/**
-	 * Set the touch mode margin threshold
-	 * @param touchmodeMarginThreshold
+	 * Set the touch mode margin threshold.
+	 *
+	 * @param touchmodeMarginThreshold the new touchmode margin threshold
 	 */
 	public void setTouchmodeMarginThreshold(int touchmodeMarginThreshold) {
 		mViewBehind.setMarginThreshold(touchmodeMarginThreshold);
@@ -798,7 +832,7 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Enables or disables the SlidingMenu's fade in and out
+	 * Enables or disables the SlidingMenu's fade in and out.
 	 *
 	 * @param b true to enable fade, false to disable it
 	 */
@@ -817,7 +851,7 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Enables or disables whether the selector is drawn
+	 * Enables or disables whether the selector is drawn.
 	 *
 	 * @param b true to draw the selector, false to not draw the selector
 	 */
@@ -853,7 +887,7 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Add a View ignored by the Touch Down event when mode is Fullscreen
+	 * Add a View ignored by the Touch Down event when mode is Fullscreen.
 	 *
 	 * @param v a view to be ignored
 	 */
@@ -862,7 +896,7 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Remove a View ignored by the Touch Down event when mode is Fullscreen
+	 * Remove a View ignored by the Touch Down event when mode is Fullscreen.
 	 *
 	 * @param v a view not wanted to be ignored anymore
 	 */
@@ -871,7 +905,7 @@ public class SlidingMenu extends RelativeLayout {
 	}
 
 	/**
-	 * Clear the list of Views ignored by the Touch Down event when mode is Fullscreen
+	 * Clear the list of Views ignored by the Touch Down event when mode is Fullscreen.
 	 */
 	public void clearIgnoredViews() {
 		mViewAbove.clearIgnoredViews();
@@ -926,20 +960,40 @@ public class SlidingMenu extends RelativeLayout {
 		mViewAbove.setOnClosedListener(listener);
 	}
 
+	/**
+	 * The Class SavedState.
+	 */
 	public static class SavedState extends BaseSavedState {
 
+		/** The m item. */
 		private final int mItem;
 
+		/**
+		 * Instantiates a new saved state.
+		 *
+		 * @param superState the super state
+		 * @param item the item
+		 */
 		public SavedState(Parcelable superState, int item) {
 			super(superState);
 			mItem = item;
 		}
 
+		/**
+		 * Instantiates a new saved state.
+		 *
+		 * @param in the in
+		 */
 		private SavedState(Parcel in) {
 			super(in);
 			mItem = in.readInt();
 		}
 
+		/**
+		 * Gets the item.
+		 *
+		 * @return the item
+		 */
 		public int getItem() {
 			return mItem;
 		}
@@ -952,6 +1006,7 @@ public class SlidingMenu extends RelativeLayout {
 			out.writeInt(mItem);
 		}
 
+		/** The Constant CREATOR. */
 		public static final Parcelable.Creator<SavedState> CREATOR =
 				new Parcelable.Creator<SavedState>() {
 			public SavedState createFromParcel(Parcel in) {
@@ -1002,6 +1057,7 @@ public class SlidingMenu extends RelativeLayout {
 		return true;
 	}
 	
+	/** The m handler. */
 	private Handler mHandler = new Handler();
 
 	/*@TargetApi(Build.VERSION_CODES.HONEYCOMB)

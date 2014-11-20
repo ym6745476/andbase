@@ -10,7 +10,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ab.global.AbMenuItem;
+import com.ab.model.AbMenuItem;
 import com.andbase.R;
 
 public class LeftMenuAdapter extends BaseExpandableListAdapter {

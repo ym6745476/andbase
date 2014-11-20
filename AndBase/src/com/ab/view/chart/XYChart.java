@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1011,12 +1011,12 @@ public abstract class XYChart extends AbstractChart {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param screenPoint the screen point
    * @return the series and point for screen coordinate
    * @see com.ab.view.chart.AbstractChart#getSeriesAndPointForScreenCoordinate(com.ab.view.chart.Point)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:49
-   * @version v1.0
    */
   public SeriesSelection getSeriesAndPointForScreenCoordinate(final Point screenPoint) {
     if (clickableAreas != null)

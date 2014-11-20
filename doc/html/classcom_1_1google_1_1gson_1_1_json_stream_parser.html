@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.JsonStreamParser类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html">JsonStreamParser</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1_json_stream_parser-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.JsonStreamParser类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.JsonStreamParser 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1_json_stream_parser.png" usemap="#com.google.gson.JsonStreamParser_map" alt=""/>
+  <map id="com.google.gson.JsonStreamParser_map" name="com.google.gson.JsonStreamParser_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a27ec28dae52909f52755c8a82bf16e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a27ec28dae52909f52755c8a82bf16e38">JsonStreamParser</a> (String json)</td></tr>
+<tr class="separator:a27ec28dae52909f52755c8a82bf16e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbe385b5313539c06434aff7dea0380"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a4dbe385b5313539c06434aff7dea0380">JsonStreamParser</a> (Reader reader)</td></tr>
+<tr class="separator:a4dbe385b5313539c06434aff7dea0380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435c92ec101b8129f255992c9d125a59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a435c92ec101b8129f255992c9d125a59">next</a> ()  throws JsonParseException </td></tr>
+<tr class="separator:a435c92ec101b8129f255992c9d125a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9132bc3af11ef60e0c11e83e985d1281"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a9132bc3af11ef60e0c11e83e985d1281">hasNext</a> ()</td></tr>
+<tr class="separator:a9132bc3af11ef60e0c11e83e985d1281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d436b9e8304fb0eafbb53ea5d63673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a46d436b9e8304fb0eafbb53ea5d63673">remove</a> ()</td></tr>
+<tr class="separator:a46d436b9e8304fb0eafbb53ea5d63673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5328afd43c8021456c70d63878f208b0"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html">JsonReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a5328afd43c8021456c70d63878f208b0">parser</a></td></tr>
+<tr class="separator:a5328afd43c8021456c70d63878f208b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973f06792fd0f095c15c7b3490cf05f7"><td class="memItemLeft" align="right" valign="top">final Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html#a973f06792fd0f095c15c7b3490cf05f7">lock</a></td></tr>
+<tr class="separator:a973f06792fd0f095c15c7b3490cf05f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A streaming parser that allows reading of multiple <a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a>s from the specified reader asynchronously.</p>
+<p>This class is conditionally thread-safe (see Item 70, Effective Java second edition). To properly use this class across multiple threads, you will need to add some external synchronization. For example:</p>
+<pre>
+<a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html">JsonStreamParser</a> parser = new <a class="el" href="classcom_1_1google_1_1gson_1_1_json_stream_parser.html">JsonStreamParser</a>("['first'] {'second':10} 'third'");
+<a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> element;
+synchronized (parser) {  // synchronize on an object shared by threads
+  if (parser.hasNext()) {
+    element = parser.next();
+  }
+}
+</pre><dl class="section author"><dt>作者</dt><dd>Inderjeet Singh </dd>
+<dd>
+Joel Leitch </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a27ec28dae52909f52755c8a82bf16e38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.JsonStreamParser.JsonStreamParser </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>json</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json</td><td>The string containing JSON elements concatenated to each other. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4dbe385b5313539c06434aff7dea0380"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.JsonStreamParser.JsonStreamParser </td>
+          <td>(</td>
+          <td class="paramtype">Reader&#160;</td>
+          <td class="paramname"><em>reader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>The data stream containing JSON elements concatenated to each other. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a9132bc3af11ef60e0c11e83e985d1281"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.JsonStreamParser.hasNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if a <a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> is available on the input for consumption </p><dl class="section return"><dt>返回</dt><dd>true if a <a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> is available on the input, false otherwise </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a435c92ec101b8129f255992c9d125a59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> com.google.gson.JsonStreamParser.next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws <a class="el" href="classcom_1_1google_1_1gson_1_1_json_parse_exception.html">JsonParseException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the next available <a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> on the reader. Null if none available.</p>
+<dl class="section return"><dt>返回</dt><dd>the next available <a class="el" href="classcom_1_1google_1_1gson_1_1_json_element.html">JsonElement</a> on the reader. Null if none available. </dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcom_1_1google_1_1gson_1_1_json_parse_exception.html">JsonParseException</a></td><td>if the incoming stream is malformed JSON. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a46d436b9e8304fb0eafbb53ea5d63673"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.JsonStreamParser.remove </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This optional <a class="el" href="">Iterator</a> method is not relevant for stream parsing and hence is not implemented. </p><dl class="section since"><dt>自从</dt><dd>1.4 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a973f06792fd0f095c15c7b3490cf05f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Object com.google.gson.JsonStreamParser.lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5328afd43c8021456c70d63878f208b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_reader.html">JsonReader</a> com.google.gson.JsonStreamParser.parser</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/<a class="el" href="_json_stream_parser_8java.html">JsonStreamParser.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

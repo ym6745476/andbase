@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,13 +26,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：CarouselItemView.java 
  * 描述：旋转木马的任意View
- * @author zhaoqp
- * @date：2013-8-23 下午2:02:31
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-8-23 下午2:02:31
  */
 public class CarouselItemView extends LinearLayout 
 	implements Comparable<CarouselItemView> {
@@ -126,11 +126,14 @@ public class CarouselItemView extends LinearLayout
 	}
 
 	/**
-	 * 描述：TODO
-	 * @see java.lang.Comparable#compareTo(java.lang.Object)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:34
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param another the another
+	 * @return the int
+	 * @see java.lang.Comparable#compareTo(java.lang.Object)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:34
 	 */
 	public int compareTo(CarouselItemView another) {
 		return (int)(another.itemZ - this.itemZ);

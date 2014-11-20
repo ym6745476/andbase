@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.internal.Excluder类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.internal.Excluder类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.internal.Excluder 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.png" usemap="#com.google.gson.internal.Excluder_map" alt=""/>
+  <map id="com.google.gson.internal.Excluder_map" name="com.google.gson.internal.Excluder_map">
+<area href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html" alt="com.google.gson.TypeAdapterFactory" shape="rect" coords="0,0,229,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a75674427d337a3f8da55879d7adcbe1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a75674427d337a3f8da55879d7adcbe1e">withVersion</a> (double ignoreVersionsAfter)</td></tr>
+<tr class="separator:a75674427d337a3f8da55879d7adcbe1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eefbcc1538eb5b57bdec42744f7c87e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a5eefbcc1538eb5b57bdec42744f7c87e">withModifiers</a> (int...modifiers)</td></tr>
+<tr class="separator:a5eefbcc1538eb5b57bdec42744f7c87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affad57b9fb0dbc53b284b41b5c0f8cea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#affad57b9fb0dbc53b284b41b5c0f8cea">disableInnerClassSerialization</a> ()</td></tr>
+<tr class="separator:affad57b9fb0dbc53b284b41b5c0f8cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada407401e881241eec7419b5d8e51059"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#ada407401e881241eec7419b5d8e51059">excludeFieldsWithoutExposeAnnotation</a> ()</td></tr>
+<tr class="separator:ada407401e881241eec7419b5d8e51059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c1b097c82335a492d1d559a27c5ca0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#aa1c1b097c82335a492d1d559a27c5ca0">withExclusionStrategy</a> (<a class="el" href="interfacecom_1_1google_1_1gson_1_1_exclusion_strategy.html">ExclusionStrategy</a> exclusionStrategy, boolean serialization, boolean deserialization)</td></tr>
+<tr class="separator:aa1c1b097c82335a492d1d559a27c5ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5efeca8cfad6e35f352afa74949a8d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#abb5efeca8cfad6e35f352afa74949a8d">excludeField</a> (Field field, boolean serialize)</td></tr>
+<tr class="separator:abb5efeca8cfad6e35f352afa74949a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b096c3698314f66a4d236a7b381241"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a45b096c3698314f66a4d236a7b381241">excludeClass</a> (Class&lt;?&gt; clazz, boolean serialize)</td></tr>
+<tr class="separator:a45b096c3698314f66a4d236a7b381241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html">com.google.gson.TypeAdapterFactory</a></td></tr>
+<tr class="memitem:a8f4c55ec13b384a3e1cba3c3a827ee48 inherit pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory"><td class="memItemLeft" align="right" valign="top">&lt; T &gt; TypeAdapter&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_type_adapter_factory.html#a8f4c55ec13b384a3e1cba3c3a827ee48">create</a> (<a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> gson, TypeToken&lt; T &gt; type)</td></tr>
+<tr class="separator:a8f4c55ec13b384a3e1cba3c3a827ee48 inherit pub_methods_interfacecom_1_1google_1_1gson_1_1_type_adapter_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a6b36c7c6dd586e0522bd9023717ab2c6"><td class="memItemLeft" align="right" valign="top">static final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a6b36c7c6dd586e0522bd9023717ab2c6">DEFAULT</a> = new <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>()</td></tr>
+<tr class="separator:a6b36c7c6dd586e0522bd9023717ab2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a4377dbcdfb87be22c79fecebf36f2b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a4377dbcdfb87be22c79fecebf36f2b87">clone</a> ()</td></tr>
+<tr class="separator:a4377dbcdfb87be22c79fecebf36f2b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a39aed0cb96873f3885b2204e82698e26"><td class="memItemLeft" align="right" valign="top">public&lt; T &gt; TypeAdapter&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a39aed0cb96873f3885b2204e82698e26">create</a> (final <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a> gson, final TypeToken&lt; T &gt; type)</td></tr>
+<tr class="separator:a39aed0cb96873f3885b2204e82698e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a45da1dd3d1b5a0f904a5ea215325a370"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a45da1dd3d1b5a0f904a5ea215325a370">isAnonymousOrLocal</a> (Class&lt;?&gt; clazz)</td></tr>
+<tr class="separator:a45da1dd3d1b5a0f904a5ea215325a370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9455e29f7be540d11728e6c8876bdd9f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a9455e29f7be540d11728e6c8876bdd9f">isInnerClass</a> (Class&lt;?&gt; clazz)</td></tr>
+<tr class="separator:a9455e29f7be540d11728e6c8876bdd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b3c8c9d28af808a3080c9ee7b8b569"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a97b3c8c9d28af808a3080c9ee7b8b569">isStatic</a> (Class&lt;?&gt; clazz)</td></tr>
+<tr class="separator:a97b3c8c9d28af808a3080c9ee7b8b569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770bb735b73bb305cd9f16980363e037"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a770bb735b73bb305cd9f16980363e037">isValidVersion</a> (Since since, Until until)</td></tr>
+<tr class="separator:a770bb735b73bb305cd9f16980363e037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac425e895685d1c360d2a09aa74673ce8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#ac425e895685d1c360d2a09aa74673ce8">isValidSince</a> (Since annotation)</td></tr>
+<tr class="separator:ac425e895685d1c360d2a09aa74673ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589397afced1fe803a74401991ccbc75"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a589397afced1fe803a74401991ccbc75">isValidUntil</a> (Until annotation)</td></tr>
+<tr class="separator:a589397afced1fe803a74401991ccbc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a637035c881d18b813fa3d15b667d2806"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a637035c881d18b813fa3d15b667d2806">version</a> = <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a8df51af17f5b5df01ad8221c9da392bc">IGNORE_VERSIONS</a></td></tr>
+<tr class="separator:a637035c881d18b813fa3d15b667d2806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99a0738e06e257f41d319d41d1a7bb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#ac99a0738e06e257f41d319d41d1a7bb8">modifiers</a> = Modifier.TRANSIENT | Modifier.STATIC</td></tr>
+<tr class="separator:ac99a0738e06e257f41d319d41d1a7bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc90d47135ef5fca75173db501790650"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#abc90d47135ef5fca75173db501790650">serializeInnerClasses</a> = true</td></tr>
+<tr class="separator:abc90d47135ef5fca75173db501790650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad483a51af18a98b2f2a9b8c2115157d8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#ad483a51af18a98b2f2a9b8c2115157d8">requireExpose</a></td></tr>
+<tr class="separator:ad483a51af18a98b2f2a9b8c2115157d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeff56e9953af36aa6516a4129408d4d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfacecom_1_1google_1_1gson_1_1_exclusion_strategy.html">ExclusionStrategy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#afeff56e9953af36aa6516a4129408d4d">serializationStrategies</a> = Collections.emptyList()</td></tr>
+<tr class="separator:afeff56e9953af36aa6516a4129408d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f95db09ca02320c26c58c691cc7fde1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfacecom_1_1google_1_1gson_1_1_exclusion_strategy.html">ExclusionStrategy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a7f95db09ca02320c26c58c691cc7fde1">deserializationStrategies</a> = Collections.emptyList()</td></tr>
+<tr class="separator:a7f95db09ca02320c26c58c691cc7fde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a8df51af17f5b5df01ad8221c9da392bc"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a8df51af17f5b5df01ad8221c9da392bc">IGNORE_VERSIONS</a> = -1.0d</td></tr>
+<tr class="separator:a8df51af17f5b5df01ad8221c9da392bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class selects which fields and types to omit. It is configurable, supporting version attributes <a class="el" href="">Since</a> and <a class="el" href="">Until</a>, modifiers, synthetic fields, anonymous and local classes, inner classes, and fields with the <a class="el" href="">Expose</a> annotation.</p>
+<p>This class is a type adapter factory; types that are excluded will be adapted to null. It may delegate to another type adapter if only one direction is excluded.</p>
+<dl class="section author"><dt>作者</dt><dd>Joel Leitch </dd>
+<dd>
+Jesse Wilson </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a4377dbcdfb87be22c79fecebf36f2b87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a39aed0cb96873f3885b2204e82698e26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public&lt;T&gt; TypeAdapter&lt;T&gt; com.google.gson.internal.Excluder.create </td>
+          <td>(</td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1google_1_1gson_1_1_gson.html">Gson</a>&#160;</td>
+          <td class="paramname"><em>gson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final TypeToken&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The delegate is lazily created because it may not be needed, and creating it may fail. </p>
+
+</div>
+</div>
+<a class="anchor" id="affad57b9fb0dbc53b284b41b5c0f8cea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.disableInnerClassSerialization </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45b096c3698314f66a4d236a7b381241"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.excludeClass </td>
+          <td>(</td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>clazz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serialize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb5efeca8cfad6e35f352afa74949a8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.excludeField </td>
+          <td>(</td>
+          <td class="paramtype">Field&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serialize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada407401e881241eec7419b5d8e51059"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.excludeFieldsWithoutExposeAnnotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45da1dd3d1b5a0f904a5ea215325a370"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.isAnonymousOrLocal </td>
+          <td>(</td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>clazz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9455e29f7be540d11728e6c8876bdd9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.isInnerClass </td>
+          <td>(</td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>clazz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a97b3c8c9d28af808a3080c9ee7b8b569"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.isStatic </td>
+          <td>(</td>
+          <td class="paramtype">Class&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>clazz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac425e895685d1c360d2a09aa74673ce8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.isValidSince </td>
+          <td>(</td>
+          <td class="paramtype">Since&#160;</td>
+          <td class="paramname"><em>annotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a589397afced1fe803a74401991ccbc75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.isValidUntil </td>
+          <td>(</td>
+          <td class="paramtype">Until&#160;</td>
+          <td class="paramname"><em>annotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a770bb735b73bb305cd9f16980363e037"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.isValidVersion </td>
+          <td>(</td>
+          <td class="paramtype">Since&#160;</td>
+          <td class="paramname"><em>since</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Until&#160;</td>
+          <td class="paramname"><em>until</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa1c1b097c82335a492d1d559a27c5ca0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.withExclusionStrategy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1gson_1_1_exclusion_strategy.html">ExclusionStrategy</a>&#160;</td>
+          <td class="paramname"><em>exclusionStrategy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serialization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>deserialization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5eefbcc1538eb5b57bdec42744f7c87e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.withModifiers </td>
+          <td>(</td>
+          <td class="paramtype">int...&#160;</td>
+          <td class="paramname"><em>modifiers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a75674427d337a3f8da55879d7adcbe1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.withVersion </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ignoreVersionsAfter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a6b36c7c6dd586e0522bd9023717ab2c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a> com.google.gson.internal.Excluder.DEFAULT = new <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html">Excluder</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f95db09ca02320c26c58c691cc7fde1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interfacecom_1_1google_1_1gson_1_1_exclusion_strategy.html">ExclusionStrategy</a>&gt; com.google.gson.internal.Excluder.deserializationStrategies = Collections.emptyList()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8df51af17f5b5df01ad8221c9da392bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final double com.google.gson.internal.Excluder.IGNORE_VERSIONS = -1.0d</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac99a0738e06e257f41d319d41d1a7bb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.google.gson.internal.Excluder.modifiers = Modifier.TRANSIENT | Modifier.STATIC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad483a51af18a98b2f2a9b8c2115157d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.requireExpose</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afeff56e9953af36aa6516a4129408d4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interfacecom_1_1google_1_1gson_1_1_exclusion_strategy.html">ExclusionStrategy</a>&gt; com.google.gson.internal.Excluder.serializationStrategies = Collections.emptyList()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc90d47135ef5fca75173db501790650"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.internal.Excluder.serializeInnerClasses = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a637035c881d18b813fa3d15b667d2806"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.google.gson.internal.Excluder.version = <a class="el" href="classcom_1_1google_1_1gson_1_1internal_1_1_excluder.html#a8df51af17f5b5df01ad8221c9da392bc">IGNORE_VERSIONS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/internal/<a class="el" href="_excluder_8java.html">Excluder.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

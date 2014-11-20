@@ -1,19 +1,20 @@
 package com.andbase.demo.activity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.ab.activity.AbActivity;
+import com.ab.fragment.AbAlertDialogFragment.AbDialogOnClickListener;
+import com.ab.util.AbDialogUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
 /**
  * 名称：NestScrollActivity
  * 描述：各种嵌套
- * @author zhaoqp
+ * @author 还如一梦中
  * @date 2011-12-13
  * @version
  */
@@ -38,7 +39,6 @@ public class NestScrollActivity extends AbActivity {
         Button listPager  = (Button)this.findViewById(R.id.listPager);
         Button slidingMenuPager  = (Button)this.findViewById(R.id.slidingMenuPager);
         Button slidingMenuTab  = (Button)this.findViewById(R.id.slidingMenuTab);
-        Button scrollList  = (Button)this.findViewById(R.id.scrollList);
         Button scrollPager  = (Button)this.findViewById(R.id.scrollPager);
         
         
@@ -69,29 +69,24 @@ public class NestScrollActivity extends AbActivity {
 			}
 		});
         
-        
-        scrollList.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				showDialog("提示", "把你的ListVie换成AbInnerListView就可以了", new DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface arg0, int arg1) {
-					}
-				});
-			}
-		});
-        
         scrollPager.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-                 showDialog("提示", "把你的ScrollView换成AbOuterScrollView就可以了", new DialogInterface.OnClickListener() {
-					
+				AbDialogUtil.showAlertDialog(NestScrollActivity.this,"提示", "把你的ScrollView换成AbOuterScrollView就可以了", new AbDialogOnClickListener() {
+
 					@Override
-					public void onClick(DialogInterface arg0, int arg1) {
+					public void onNegativeClick() {
+						// TODO Auto-generated method stub
+						
 					}
+
+					@Override
+					public void onPositiveClick() {
+						// TODO Auto-generated method stub
+						
+					}
+					
 				});
 			}
 		});

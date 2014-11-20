@@ -1,0 +1,1634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.util.AbImageUtil类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html">AbImageUtil</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classcom_1_1ab_1_1util_1_1_ab_image_util-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.util.AbImageUtil类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a35020c150ac7948ccce9cdf093df0ded"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a35020c150ac7948ccce9cdf093df0ded">getBitmap</a> (String url, int type, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a35020c150ac7948ccce9cdf093df0ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc22aed119b5cd0e6f69917b351679b"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a0dc22aed119b5cd0e6f69917b351679b">getBitmap</a> (File file)</td></tr>
+<tr class="separator:a0dc22aed119b5cd0e6f69917b351679b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ca5e287ba7526b0523af9621710d70"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a06ca5e287ba7526b0523af9621710d70">getScaleBitmap</a> (File file, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a06ca5e287ba7526b0523af9621710d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0177b3690cc6094d42f028d4a3442c4"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ac0177b3690cc6094d42f028d4a3442c4">getScaleBitmap</a> (Bitmap bitmap, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:ac0177b3690cc6094d42f028d4a3442c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38f2f87a96c3f8b5ce7214eebed1523"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ac38f2f87a96c3f8b5ce7214eebed1523">getScaleBitmap</a> (Bitmap bitmap, float scale)</td></tr>
+<tr class="separator:ac38f2f87a96c3f8b5ce7214eebed1523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f8d959c86640b3237355963993fb74c"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a3f8d959c86640b3237355963993fb74c">getCutBitmap</a> (File file, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a3f8d959c86640b3237355963993fb74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cde90ab1452fb72e328a1b96c3d794"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a54cde90ab1452fb72e328a1b96c3d794">getCutBitmap</a> (Bitmap bitmap, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a54cde90ab1452fb72e328a1b96c3d794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2319c71a349a9657d072a57b0dcb9e99"><td class="memItemLeft" align="right" valign="top">static float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a2319c71a349a9657d072a57b0dcb9e99">getBitmapSize</a> (File file)</td></tr>
+<tr class="separator:a2319c71a349a9657d072a57b0dcb9e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b29272cd77c4dfc5225fc3b361c71e"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ab2b29272cd77c4dfc5225fc3b361c71e">drawableToBitmap</a> (Drawable drawable)</td></tr>
+<tr class="separator:ab2b29272cd77c4dfc5225fc3b361c71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dae29e46c1f24e8d789f02a75b3c63"><td class="memItemLeft" align="right" valign="top">static Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a15dae29e46c1f24e8d789f02a75b3c63">bitmapToDrawable</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a15dae29e46c1f24e8d789f02a75b3c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e91832e88fa6fecae1b4b44963b9dd"><td class="memItemLeft" align="right" valign="top">static TransitionDrawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a09e91832e88fa6fecae1b4b44963b9dd">bitmapToTransitionDrawable</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a09e91832e88fa6fecae1b4b44963b9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf48d419caf65aea8ddadb8c02ced3c3"><td class="memItemLeft" align="right" valign="top">static TransitionDrawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#aaf48d419caf65aea8ddadb8c02ced3c3">drawableToTransitionDrawable</a> (Drawable drawable)</td></tr>
+<tr class="separator:aaf48d419caf65aea8ddadb8c02ced3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b67e9a7e81b6d712e9346111552a94f"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a0b67e9a7e81b6d712e9346111552a94f">bitmap2Bytes</a> (Bitmap bitmap, Bitmap.CompressFormat mCompressFormat, final boolean needRecycle)</td></tr>
+<tr class="separator:a0b67e9a7e81b6d712e9346111552a94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab91c2cf7a173fcf30065efa1a5b8acbd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ab91c2cf7a173fcf30065efa1a5b8acbd">getByteCount</a> (Bitmap bitmap, Bitmap.CompressFormat mCompressFormat)</td></tr>
+<tr class="separator:ab91c2cf7a173fcf30065efa1a5b8acbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947ee345987b658011f4fb5d21f58918"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a947ee345987b658011f4fb5d21f58918">bytes2Bimap</a> (byte[] b)</td></tr>
+<tr class="separator:a947ee345987b658011f4fb5d21f58918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7814cd9d94192fa05074e409d34c01c5"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a7814cd9d94192fa05074e409d34c01c5">imageView2Bitmap</a> (ImageView view)</td></tr>
+<tr class="separator:a7814cd9d94192fa05074e409d34c01c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8269c74ebfe899450fa88fd68070e678"><td class="memItemLeft" align="right" valign="top">static Drawable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a8269c74ebfe899450fa88fd68070e678">view2Drawable</a> (View view)</td></tr>
+<tr class="separator:a8269c74ebfe899450fa88fd68070e678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9416f62537003f78f1b63d56c5c31c5e"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a9416f62537003f78f1b63d56c5c31c5e">view2Bitmap</a> (View view)</td></tr>
+<tr class="separator:a9416f62537003f78f1b63d56c5c31c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1912b59e00b7d7259a91cb9aa1addf82"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a1912b59e00b7d7259a91cb9aa1addf82">view2Bytes</a> (View view, Bitmap.CompressFormat compressFormat)</td></tr>
+<tr class="separator:a1912b59e00b7d7259a91cb9aa1addf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2882871e5c53fc7e26d053f65d4d4b79"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a2882871e5c53fc7e26d053f65d4d4b79">rotateBitmap</a> (Bitmap bitmap, float degrees)</td></tr>
+<tr class="separator:a2882871e5c53fc7e26d053f65d4d4b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae486243705f270074fcea4948747051a"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ae486243705f270074fcea4948747051a">rotateBitmapTranslate</a> (Bitmap bitmap, float degrees)</td></tr>
+<tr class="separator:ae486243705f270074fcea4948747051a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b9e2eb8ed5a9c9bb0e79a9f2a89b5b"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a06b9e2eb8ed5a9c9bb0e79a9f2a89b5b">toRoundBitmap</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a06b9e2eb8ed5a9c9bb0e79a9f2a89b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c2b6343cf47eb9d38b18c6e91cb6f6"><td class="memItemLeft" align="right" valign="top">static Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a09c2b6343cf47eb9d38b18c6e91cb6f6">toReflectionBitmap</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a09c2b6343cf47eb9d38b18c6e91cb6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d4ce126f95e7dc93bc8f7c4fd30008"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a53d4ce126f95e7dc93bc8f7c4fd30008">releaseBitmap</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a53d4ce126f95e7dc93bc8f7c4fd30008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc9fb148dd263781ef541b6c2836244"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#abbc9fb148dd263781ef541b6c2836244">releaseBitmapArray</a> (Bitmap[] bitmaps)</td></tr>
+<tr class="separator:abbc9fb148dd263781ef541b6c2836244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53c0a8dc1e740a95dc8d7e03a6157b7"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ac53c0a8dc1e740a95dc8d7e03a6157b7">getHashCode</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:ac53c0a8dc1e740a95dc8d7e03a6157b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91db30ceda34a8d8e72da05db375c433"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a91db30ceda34a8d8e72da05db375c433">getDCTHashCode</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a91db30ceda34a8d8e72da05db375c433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72343ef9a127f804b54f24903f713932"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a72343ef9a127f804b54f24903f713932">getColorHistogram</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:a72343ef9a127f804b54f24903f713932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ed76922f5cfeff1882dcf90b0763d4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a42ed76922f5cfeff1882dcf90b0763d4">hammingDistance</a> (String sourceHashCode, String hashCode)</td></tr>
+<tr class="separator:a42ed76922f5cfeff1882dcf90b0763d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2699c734abdeed273f5c37209df5efb7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a2699c734abdeed273f5c37209df5efb7">main</a> (String[] args)</td></tr>
+<tr class="separator:a2699c734abdeed273f5c37209df5efb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a39efea05f624b33a62a3dbf07ad45d9d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a39efea05f624b33a62a3dbf07ad45d9d">CUTIMG</a> = 0</td></tr>
+<tr class="separator:a39efea05f624b33a62a3dbf07ad45d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88adb4fbbcb0fde37f05a8d798f8d412"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a88adb4fbbcb0fde37f05a8d798f8d412">SCALEIMG</a> = 1</td></tr>
+<tr class="separator:a88adb4fbbcb0fde37f05a8d798f8d412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad9e471f0ec27a6703a8deaebe2da41"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a7ad9e471f0ec27a6703a8deaebe2da41">ORIGINALIMG</a> = 2</td></tr>
+<tr class="separator:a7ad9e471f0ec27a6703a8deaebe2da41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21704d1cb79b47e0274b97f0c9b59740"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a21704d1cb79b47e0274b97f0c9b59740">MAX_WIDTH</a> = 4096/2</td></tr>
+<tr class="separator:a21704d1cb79b47e0274b97f0c9b59740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e52d5a590fdcfbd029149a3354fde1"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a91e52d5a590fdcfbd029149a3354fde1">MAX_HEIGHT</a> = 4096/2</td></tr>
+<tr class="separator:a91e52d5a590fdcfbd029149a3354fde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:aff433be336260edb22bbfb345b8890bd"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#aff433be336260edb22bbfb345b8890bd">getMinScale</a> (int srcWidth, int srcHeight, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:aff433be336260edb22bbfb345b8890bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8eba12a2cc17b0f5866a9c5005f62f"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a0d8eba12a2cc17b0f5866a9c5005f62f">resizeToMaxSize</a> (int srcWidth, int srcHeight, int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:a0d8eba12a2cc17b0f5866a9c5005f62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae655f061e4462edb5c259acc9eea4750"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ae655f061e4462edb5c259acc9eea4750">checkBitmap</a> (Bitmap bitmap)</td></tr>
+<tr class="separator:ae655f061e4462edb5c259acc9eea4750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac085199440428f292516ff952d8922e7"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#ac085199440428f292516ff952d8922e7">checkSize</a> (int desiredWidth, int desiredHeight)</td></tr>
+<tr class="separator:ac085199440428f292516ff952d8922e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1ff8765a761fd617a71c02a4997778"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_image_util.html#a6b1ff8765a761fd617a71c02a4997778">rgbToGray</a> (int pixels)</td></tr>
+<tr class="separator:a6b1ff8765a761fd617a71c02a4997778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbImageUtil.java 描述：图片处理类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-01-17 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a0b67e9a7e81b6d712e9346111552a94f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte [] com.ab.util.AbImageUtil.bitmap2Bytes </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap.CompressFormat&#160;</td>
+          <td class="paramname"><em>mCompressFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final boolean&#160;</td>
+          <td class="paramname"><em>needRecycle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将Bitmap转换为byte[].</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">mCompressFormat</td><td>图片格式 Bitmap.CompressFormat.JPEG,CompressFormat.PNG </td></tr>
+    <tr><td class="paramname">needRecycle</td><td>是否需要回收 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>byte[] 图片的byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a15dae29e46c1f24e8d789f02a75b3c63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Drawable com.ab.util.AbImageUtil.bitmapToDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Bitmap对象转换Drawable对象.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>要转化的Bitmap对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Drawable 转化完成的Drawable对象 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a09e91832e88fa6fecae1b4b44963b9dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static TransitionDrawable com.ab.util.AbImageUtil.bitmapToTransitionDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Bitmap对象转换TransitionDrawable对象.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>要转化的Bitmap对象 imageView.setImageDrawable(td); td.startTransition(200); </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Drawable 转化完成的Drawable对象 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a947ee345987b658011f4fb5d21f58918"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.bytes2Bimap </td>
+          <td>(</td>
+          <td class="paramtype">byte[]&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：将byte[]转换为Bitmap.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>图片格式的byte[]数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bitmap 得到的Bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae655f061e4462edb5c259acc9eea4750"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbImageUtil.checkBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac085199440428f292516ff952d8922e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbImageUtil.checkSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab2b29272cd77c4dfc5225fc3b361c71e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.drawableToBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>drawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Drawable转Bitmap.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawable</td><td>要转化的Drawable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaf48d419caf65aea8ddadb8c02ced3c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static TransitionDrawable com.ab.util.AbImageUtil.drawableToTransitionDrawable </td>
+          <td>(</td>
+          <td class="paramtype">Drawable&#160;</td>
+          <td class="paramname"><em>drawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Drawable对象转换TransitionDrawable对象.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawable</td><td>要转化的Drawable对象 imageView.setImageDrawable(td); td.startTransition(200); </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Drawable 转化完成的Drawable对象 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a35020c150ac7948ccce9cdf093df0ded"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getBitmap </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>直接获取互联网上的图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>要下载文件的网络地址 </td></tr>
+    <tr><td class="paramname">type</td><td>图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类） </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0dc22aed119b5cd0e6f69917b351679b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getBitmap </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取原图.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>File对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2319c71a349a9657d072a57b0dcb9e99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [] com.ab.util.AbImageUtil.getBitmapSize </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取图片尺寸</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>File对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab91c2cf7a173fcf30065efa1a5b8acbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbImageUtil.getByteCount </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap.CompressFormat&#160;</td>
+          <td class="paramname"><em>mCompressFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取Bitmap大小.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">mCompressFormat</td><td>图片格式 Bitmap.CompressFormat.JPEG,CompressFormat.PNG </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>图片的大小 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a72343ef9a127f804b54f24903f713932"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int [] com.ab.util.AbImageUtil.getColorHistogram </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：图像的特征值颜色分布 将颜色分4个区，0,1,2,3 区组合共64组，计算每个像素点属于哪个区.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the color histogram </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f8d959c86640b3237355963993fb74c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getCutBitmap </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：裁剪图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>File对象 </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a54cde90ab1452fb72e328a1b96c3d794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getCutBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：裁剪图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a91db30ceda34a8d8e72da05db375c433"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbImageUtil.getDCTHashCode </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：图像的特征值余弦相似度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the DCT hash code </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac53c0a8dc1e740a95dc8d7e03a6157b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbImageUtil.getHashCode </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：简单的图像的特征值，用于缩略图找原图比较好.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the hash code </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aff433be336260edb22bbfb345b8890bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float com.ab.util.AbImageUtil.getMinScale </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a06ca5e287ba7526b0523af9621710d70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getScaleBitmap </td>
+          <td>(</td>
+          <td class="paramtype">File&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：缩放图片.压缩</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>File对象 </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0177b3690cc6094d42f028d4a3442c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getScaleBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：缩放图片,不压缩的缩放.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">desiredWidth</td><td>新图片的宽 </td></tr>
+    <tr><td class="paramname">desiredHeight</td><td>新图片的高 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac38f2f87a96c3f8b5ce7214eebed1523"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.getScaleBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据等比例缩放图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">scale</td><td>比例 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Bitmap 新图片 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a42ed76922f5cfeff1882dcf90b0763d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbImageUtil.hammingDistance </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sourceHashCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>hashCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>计算"汉明距离"（Hamming distance）。 如果不相同的数据位不超过5，就说明两张图片很相似；如果大于10，就说明这是两张不同的图片。.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceHashCode</td><td>源hashCode </td></tr>
+    <tr><td class="paramname">hashCode</td><td>与之比较的hashCode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the int </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7814cd9d94192fa05074e409d34c01c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.imageView2Bitmap </td>
+          <td>(</td>
+          <td class="paramtype">ImageView&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将ImageView转换为Bitmap.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>要转换为bitmap的View </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>byte[] 图片的byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2699c734abdeed273f5c37209df5efb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbImageUtil.main </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The main method.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a53d4ce126f95e7dc93bc8f7c4fd30008"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbImageUtil.releaseBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>释放Bitmap对象.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>要释放的Bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abbc9fb148dd263781ef541b6c2836244"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbImageUtil.releaseBitmapArray </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap[]&#160;</td>
+          <td class="paramname"><em>bitmaps</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>释放Bitmap数组.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmaps</td><td>要释放的Bitmap数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d8eba12a2cc17b0f5866a9c5005f62f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int [] com.ab.util.AbImageUtil.resizeToMaxSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desiredHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b1ff8765a761fd617a71c02a4997778"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbImageUtil.rgbToGray </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>灰度值计算.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>像素 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 灰度值 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2882871e5c53fc7e26d053f65d4d4b79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.rotateBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>degrees</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：旋转Bitmap为一定的角度.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">degrees</td><td>the degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae486243705f270074fcea4948747051a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.rotateBitmapTranslate </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>degrees</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：旋转Bitmap为一定的角度并四周暗化处理.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>the bitmap </td></tr>
+    <tr><td class="paramname">degrees</td><td>the degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a09c2b6343cf47eb9d38b18c6e91cb6f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.toReflectionBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>转换图片转换成镜面效果的图片.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>传入Bitmap对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a06b9e2eb8ed5a9c9bb0e79a9f2a89b5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.toRoundBitmap </td>
+          <td>(</td>
+          <td class="paramtype">Bitmap&#160;</td>
+          <td class="paramname"><em>bitmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>转换图片转换成圆形.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>传入Bitmap对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9416f62537003f78f1b63d56c5c31c5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Bitmap com.ab.util.AbImageUtil.view2Bitmap </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将View转换为Bitmap.需要最上层布局为Linearlayout</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>要转换为bitmap的View </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>byte[] 图片的byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1912b59e00b7d7259a91cb9aa1addf82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte [] com.ab.util.AbImageUtil.view2Bytes </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap.CompressFormat&#160;</td>
+          <td class="paramname"><em>compressFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将View转换为byte[].</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>要转换为byte[]的View </td></tr>
+    <tr><td class="paramname">compressFormat</td><td>the compress format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>byte[] View图片的byte[] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8269c74ebfe899450fa88fd68070e678"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Drawable com.ab.util.AbImageUtil.view2Drawable </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将View转换为Drawable.需要最上层布局为Linearlayout</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>要转换为Drawable的View </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>BitmapDrawable Drawable </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a39efea05f624b33a62a3dbf07ad45d9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.util.AbImageUtil.CUTIMG = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片处理：裁剪. </p>
+
+</div>
+</div>
+<a class="anchor" id="a91e52d5a590fdcfbd029149a3354fde1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.util.AbImageUtil.MAX_HEIGHT = 4096/2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片最大高度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a21704d1cb79b47e0274b97f0c9b59740"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.util.AbImageUtil.MAX_WIDTH = 4096/2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片最大宽度. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ad9e471f0ec27a6703a8deaebe2da41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.util.AbImageUtil.ORIGINALIMG = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片处理：不处理. </p>
+
+</div>
+</div>
+<a class="anchor" id="a88adb4fbbcb0fde37f05a8d798f8d412"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.ab.util.AbImageUtil.SCALEIMG = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>图片处理：缩放. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/util/<a class="el" href="_ab_image_util_8java.html">AbImageUtil.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

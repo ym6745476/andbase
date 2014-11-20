@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>AndBase开发框架: com.ab.bitmap.AbImageDownloadTask类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1bitmap.html">bitmap</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html">AbImageDownloadTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.bitmap.AbImageDownloadTask类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.bitmap.AbImageDownloadTask 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.png" usemap="#com.ab.bitmap.AbImageDownloadTask_map" alt=""/>
+  <map id="com.ab.bitmap.AbImageDownloadTask_map" name="com.ab.bitmap.AbImageDownloadTask_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0561dd4534f3d1bc2e869dd16bbbaf9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#a0561dd4534f3d1bc2e869dd16bbbaf9c">AbImageDownloadTask</a> ()</td></tr>
+<tr class="separator:a0561dd4534f3d1bc2e869dd16bbbaf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a74bccbd934c6b02b2c26ba54f35c55f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_item.html">AbImageDownloadItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#a74bccbd934c6b02b2c26ba54f35c55f4">doInBackground</a> (AbImageDownloadItem...items)</td></tr>
+<tr class="separator:a74bccbd934c6b02b2c26ba54f35c55f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96783732b410286ab74bc5c9d1c16ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#aa96783732b410286ab74bc5c9d1c16ef">onCancelled</a> ()</td></tr>
+<tr class="separator:aa96783732b410286ab74bc5c9d1c16ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ebf408c1858d921b10499e76b54d64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#a84ebf408c1858d921b10499e76b54d64">onPostExecute</a> (<a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_item.html">AbImageDownloadItem</a> item)</td></tr>
+<tr class="separator:a84ebf408c1858d921b10499e76b54d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc55bde8616ee7d72cc40a1fccad0c0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#adc55bde8616ee7d72cc40a1fccad0c0f">onPreExecute</a> ()</td></tr>
+<tr class="separator:adc55bde8616ee7d72cc40a1fccad0c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07dfff7f2b4c1dc0810e121205fa6170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#a07dfff7f2b4c1dc0810e121205fa6170">onProgressUpdate</a> (Integer...values)</td></tr>
+<tr class="separator:a07dfff7f2b4c1dc0810e121205fa6170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a0868579b5533aa12bb238fde0f7f76e0"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#a0868579b5533aa12bb238fde0f7f76e0">TAG</a> = &quot;AbImageDownloadTask&quot;</td></tr>
+<tr class="separator:a0868579b5533aa12bb238fde0f7f76e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a5e3869421f694d1c273c5c0460a3f"><td class="memItemLeft" align="right" valign="top">static final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#a31a5e3869421f694d1c273c5c0460a3f">D</a> = <a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_data.html#acd537fab5c27e4f2c7cb650ab1a5bd5d">AbAppData.DEBUG</a></td></tr>
+<tr class="separator:a31a5e3869421f694d1c273c5c0460a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa691151464e54637ad16e9c0e004f0"><td class="memItemLeft" align="right" valign="top">static Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_task.html#abfa691151464e54637ad16e9c0e004f0">handler</a></td></tr>
+<tr class="separator:abfa691151464e54637ad16e9c0e004f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Copyright (c) 2012 All rights reserved 名称：AbImageDownloadTask.java 描述：AsyncTask实现的下载，单次下载 </p>
+<dl class="section author"><dt>作者</dt><dd>zhaoqp </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-9-2 下午12:47:51 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a0561dd4534f3d1bc2e869dd16bbbaf9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.bitmap.AbImageDownloadTask.AbImageDownloadTask </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a74bccbd934c6b02b2c26ba54f35c55f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_item.html">AbImageDownloadItem</a> com.ab.bitmap.AbImageDownloadTask.doInBackground </td>
+          <td>(</td>
+          <td class="paramtype">AbImageDownloadItem...&#160;</td>
+          <td class="paramname"><em>items</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>这里的第一个参数对应AsyncTask中的第一个参数 这里的String返回值对应AsyncTask的第三个参数 该方法并不运行在UI线程当中，主要用于异步操作，所有在该方法中不能对UI当中的空间进行设置和修改 但是可以调用publishProgress方法触发onProgressUpdate对UI进行操作 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa96783732b410286ab74bc5c9d1c16ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.bitmap.AbImageDownloadTask.onCancelled </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a84ebf408c1858d921b10499e76b54d64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.bitmap.AbImageDownloadTask.onPostExecute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1bitmap_1_1_ab_image_download_item.html">AbImageDownloadItem</a>&#160;</td>
+          <td class="paramname"><em>item</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc55bde8616ee7d72cc40a1fccad0c0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.bitmap.AbImageDownloadTask.onPreExecute </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07dfff7f2b4c1dc0810e121205fa6170"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.bitmap.AbImageDownloadTask.onProgressUpdate </td>
+          <td>(</td>
+          <td class="paramtype">Integer...&#160;</td>
+          <td class="paramname"><em>values</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a31a5e3869421f694d1c273c5c0460a3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.ab.bitmap.AbImageDownloadTask.D = <a class="el" href="classcom_1_1ab_1_1global_1_1_ab_app_data.html#acd537fab5c27e4f2c7cb650ab1a5bd5d">AbAppData.DEBUG</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Constant D. </p>
+
+</div>
+</div>
+<a class="anchor" id="abfa691151464e54637ad16e9c0e004f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Handler com.ab.bitmap.AbImageDownloadTask.handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Handler() { </div>
+<div class="line">        @Override </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> handleMessage(Message msg) { </div>
+<div class="line">            </div>
+<div class="line">            AbImageDownloadItem item = (AbImageDownloadItem)msg.obj; </div>
+<div class="line">            item.listener.update(item.bitmap, item.imageUrl); </div>
+<div class="line">        } </div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>下载完成后的消息句柄. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0868579b5533aa12bb238fde0f7f76e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.bitmap.AbImageDownloadTask.TAG = &quot;AbImageDownloadTask&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The tag. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/bitmap/<a class="el" href="_ab_image_download_task_8java.html">AbImageDownloadTask.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 三月 19日 星期三 16:24:29 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

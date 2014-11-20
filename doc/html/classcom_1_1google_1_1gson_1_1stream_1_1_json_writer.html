@@ -1,0 +1,1310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.google.gson.stream.JsonWriter类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google.html">google</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson.html">gson</a></li><li class="navelem"><a class="el" href="namespacecom_1_1google_1_1gson_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-methods">包函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.google.gson.stream.JsonWriter类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.google.gson.stream.JsonWriter 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.png" usemap="#com.google.gson.stream.JsonWriter_map" alt=""/>
+  <map id="com.google.gson.stream.JsonWriter_map" name="com.google.gson.stream.JsonWriter_map">
+<area href="classcom_1_1google_1_1gson_1_1internal_1_1bind_1_1_json_tree_writer.html" alt="com.google.gson.internal.bind.JsonTreeWriter" shape="rect" coords="0,112,273,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a15e1f93b35dc4819a37bbeec50b2e2c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> (Writer <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a97ff40d4cf3a80cd48b713af2e403224">out</a>)</td></tr>
+<tr class="separator:a15e1f93b35dc4819a37bbeec50b2e2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd975fbd29242ac8df62b42e5110657"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a7bd975fbd29242ac8df62b42e5110657">setIndent</a> (String <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a42c9c65c539bbccefffe3d20bb91ed54">indent</a>)</td></tr>
+<tr class="separator:a7bd975fbd29242ac8df62b42e5110657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9df47e3c8ad3b5d489eb849d9a18f7"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a5b9df47e3c8ad3b5d489eb849d9a18f7">setLenient</a> (boolean <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a74f0cce947c1275f9d4b036027fc490b">lenient</a>)</td></tr>
+<tr class="separator:a5b9df47e3c8ad3b5d489eb849d9a18f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac06bdc69ae7edd5c36227094d74270"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a7ac06bdc69ae7edd5c36227094d74270">isLenient</a> ()</td></tr>
+<tr class="separator:a7ac06bdc69ae7edd5c36227094d74270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf573cdf7213afeb8e2acc45dfe23208"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#acf573cdf7213afeb8e2acc45dfe23208">setHtmlSafe</a> (boolean <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a61256cb30ea876183930fa58fa70d223">htmlSafe</a>)</td></tr>
+<tr class="separator:acf573cdf7213afeb8e2acc45dfe23208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f778e38a67b1e14c03dbb9729488dd5"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a1f778e38a67b1e14c03dbb9729488dd5">isHtmlSafe</a> ()</td></tr>
+<tr class="separator:a1f778e38a67b1e14c03dbb9729488dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1944c31da73cf047ac848c5ba93a77f5"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a1944c31da73cf047ac848c5ba93a77f5">setSerializeNulls</a> (boolean <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#afa611a0d31980e5e9e1922ad43d2a683">serializeNulls</a>)</td></tr>
+<tr class="separator:a1944c31da73cf047ac848c5ba93a77f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba404fef1fe6b5f18b8fb28293252e85"><td class="memItemLeft" align="right" valign="top">final boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#aba404fef1fe6b5f18b8fb28293252e85">getSerializeNulls</a> ()</td></tr>
+<tr class="separator:aba404fef1fe6b5f18b8fb28293252e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53e703f6b3085bc5fb81c9fe7bb4578"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#ad53e703f6b3085bc5fb81c9fe7bb4578">beginArray</a> ()  throws IOException </td></tr>
+<tr class="separator:ad53e703f6b3085bc5fb81c9fe7bb4578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f70b1efe86811c13914671049cd762"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#aa6f70b1efe86811c13914671049cd762">endArray</a> ()  throws IOException </td></tr>
+<tr class="separator:aa6f70b1efe86811c13914671049cd762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1554e6735db843faf8532852a567b846"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a1554e6735db843faf8532852a567b846">beginObject</a> ()  throws IOException </td></tr>
+<tr class="separator:a1554e6735db843faf8532852a567b846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0096e0a8fb3c0c63f0cfaf40a0e706b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a0096e0a8fb3c0c63f0cfaf40a0e706b8">endObject</a> ()  throws IOException </td></tr>
+<tr class="separator:a0096e0a8fb3c0c63f0cfaf40a0e706b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba81293b1a8468dab288ae1777e637c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a3ba81293b1a8468dab288ae1777e637c">name</a> (String name)  throws IOException </td></tr>
+<tr class="separator:a3ba81293b1a8468dab288ae1777e637c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475f5dd598a964e8b931aa2a80040f32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> (String value)  throws IOException </td></tr>
+<tr class="separator:a475f5dd598a964e8b931aa2a80040f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7461b973c8cc2836370ce8b4d1781dd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a7461b973c8cc2836370ce8b4d1781dd3">nullValue</a> ()  throws IOException </td></tr>
+<tr class="separator:a7461b973c8cc2836370ce8b4d1781dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a1571bdcf08eb244db1621dcf3f0fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a60a1571bdcf08eb244db1621dcf3f0fb">value</a> (boolean value)  throws IOException </td></tr>
+<tr class="separator:a60a1571bdcf08eb244db1621dcf3f0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa919c5ec28ab11a2f2af5bf92bb30734"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#aa919c5ec28ab11a2f2af5bf92bb30734">value</a> (double value)  throws IOException </td></tr>
+<tr class="separator:aa919c5ec28ab11a2f2af5bf92bb30734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0fe58a95e5aedc07ad3d734c063794"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a6d0fe58a95e5aedc07ad3d734c063794">value</a> (long value)  throws IOException </td></tr>
+<tr class="separator:a6d0fe58a95e5aedc07ad3d734c063794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d99b425220b4b7dfeb36607d56acb84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a5d99b425220b4b7dfeb36607d56acb84">value</a> (Number value)  throws IOException </td></tr>
+<tr class="separator:a5d99b425220b4b7dfeb36607d56acb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1030ddc5a751dc7a81b488ba2c65b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a3d1030ddc5a751dc7a81b488ba2c65b3">flush</a> ()  throws IOException </td></tr>
+<tr class="separator:a3d1030ddc5a751dc7a81b488ba2c65b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d6d34e69f435599aa9e1f6ef83cf53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#af1d6d34e69f435599aa9e1f6ef83cf53">close</a> ()  throws IOException </td></tr>
+<tr class="separator:af1d6d34e69f435599aa9e1f6ef83cf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+包函数</h2></td></tr>
+<tr class="memitem:a464871f09c020e99ca1c2c3f50ac3186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a464871f09c020e99ca1c2c3f50ac3186">[instance initializer]</a></td></tr>
+<tr class="separator:a464871f09c020e99ca1c2c3f50ac3186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a2ee9ad196e8346d802fcdbab5fb1508e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a2ee9ad196e8346d802fcdbab5fb1508e">open</a> (<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> empty, String openBracket)  throws IOException </td></tr>
+<tr class="separator:a2ee9ad196e8346d802fcdbab5fb1508e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7125c877c9e1af48443ddae0a430cbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#af7125c877c9e1af48443ddae0a430cbc">close</a> (<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> empty, <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> nonempty, String closeBracket)  throws IOException </td></tr>
+<tr class="separator:af7125c877c9e1af48443ddae0a430cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5b88c5e08795d947d1a0d1d54f71e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#abb5b88c5e08795d947d1a0d1d54f71e3">peek</a> ()</td></tr>
+<tr class="separator:abb5b88c5e08795d947d1a0d1d54f71e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadca08d7b0e6518cbd49a1ad3ef8ce6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#aadca08d7b0e6518cbd49a1ad3ef8ce6b">replaceTop</a> (<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> topOfStack)</td></tr>
+<tr class="separator:aadca08d7b0e6518cbd49a1ad3ef8ce6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98fff7b2a322bdf7d28648b3aacc239c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a98fff7b2a322bdf7d28648b3aacc239c">writeDeferredName</a> ()  throws IOException </td></tr>
+<tr class="separator:a98fff7b2a322bdf7d28648b3aacc239c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00131321f0cd1c112ec8ba51796cefe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#ad00131321f0cd1c112ec8ba51796cefe">string</a> (String <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a>)  throws IOException </td></tr>
+<tr class="separator:ad00131321f0cd1c112ec8ba51796cefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db2ef7f24b40d87cf53ce1868845804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a0db2ef7f24b40d87cf53ce1868845804">newline</a> ()  throws IOException </td></tr>
+<tr class="separator:a0db2ef7f24b40d87cf53ce1868845804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a7024d754bd34f1e3d7bec7eb94251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a47a7024d754bd34f1e3d7bec7eb94251">beforeName</a> ()  throws IOException </td></tr>
+<tr class="separator:a47a7024d754bd34f1e3d7bec7eb94251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc38b724666e6934b4f6e319b844154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a9bc38b724666e6934b4f6e319b844154">beforeValue</a> (boolean root)  throws IOException </td></tr>
+<tr class="separator:a9bc38b724666e6934b4f6e319b844154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a97ff40d4cf3a80cd48b713af2e403224"><td class="memItemLeft" align="right" valign="top">final Writer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a97ff40d4cf3a80cd48b713af2e403224">out</a></td></tr>
+<tr class="separator:a97ff40d4cf3a80cd48b713af2e403224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae131fa4fa709782ab84aac497da166fa"><td class="memItemLeft" align="right" valign="top">final List&lt; <a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#ae131fa4fa709782ab84aac497da166fa">stack</a> = new ArrayList&lt;<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&gt;()</td></tr>
+<tr class="separator:ae131fa4fa709782ab84aac497da166fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c9c65c539bbccefffe3d20bb91ed54"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a42c9c65c539bbccefffe3d20bb91ed54">indent</a></td></tr>
+<tr class="separator:a42c9c65c539bbccefffe3d20bb91ed54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18e978c40f9c565d05bca1fb328d14d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#af18e978c40f9c565d05bca1fb328d14d">separator</a> = &quot;:&quot;</td></tr>
+<tr class="separator:af18e978c40f9c565d05bca1fb328d14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f0cce947c1275f9d4b036027fc490b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a74f0cce947c1275f9d4b036027fc490b">lenient</a></td></tr>
+<tr class="separator:a74f0cce947c1275f9d4b036027fc490b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61256cb30ea876183930fa58fa70d223"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a61256cb30ea876183930fa58fa70d223">htmlSafe</a></td></tr>
+<tr class="separator:a61256cb30ea876183930fa58fa70d223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d60f92825c431d53e810f0484948b7e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a7d60f92825c431d53e810f0484948b7e">deferredName</a></td></tr>
+<tr class="separator:a7d60f92825c431d53e810f0484948b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa611a0d31980e5e9e1922ad43d2a683"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#afa611a0d31980e5e9e1922ad43d2a683">serializeNulls</a> = true</td></tr>
+<tr class="separator:afa611a0d31980e5e9e1922ad43d2a683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Writes a JSON (<a href="http://www.ietf.org/rfc/rfc4627.txt">RFC 4627</a>) encoded value to a stream, one token at a time. The stream includes both literal values (strings, numbers, booleans and nulls) as well as the begin and end delimiters of objects and arrays.</p>
+<h3>Encoding JSON</h3>
+<p>To encode your data as JSON, create a new</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> </div>
+</div><!-- fragment --><p> . Each JSON document must contain one top-level array or object. Call methods on the writer as you walk the structure's contents, nesting arrays and objects as necessary: </p><ul>
+<li>
+To write <b>arrays</b>, first call <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#ad53e703f6b3085bc5fb81c9fe7bb4578">beginArray()</a>. Write each of the array's elements with the appropriate <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> methods or by nesting other arrays and objects. Finally close the array using <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#aa6f70b1efe86811c13914671049cd762">endArray()</a>. </li>
+<li>
+To write <b>objects</b>, first call <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a1554e6735db843faf8532852a567b846">beginObject()</a>. Write each of the object's properties by alternating calls to <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a3ba81293b1a8468dab288ae1777e637c">name</a> with the property's value. Write property values with the appropriate <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> method or by nesting other objects or arrays. Finally close the object using <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a0096e0a8fb3c0c63f0cfaf40a0e706b8">endObject()</a>. </li>
+</ul>
+<h3>Example</h3>
+<p>Suppose we'd like to encode a stream of messages such as the following: </p><pre><div class="fragment"><div class="line">[</div>
+<div class="line">  {</div>
+<div class="line">    <span class="stringliteral">&quot;id&quot;</span>: 912345678901,</div>
+<div class="line">    <span class="stringliteral">&quot;text&quot;</span>: <span class="stringliteral">&quot;How do I stream JSON in Java?&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;geo&quot;</span>: null,</div>
+<div class="line">    <span class="stringliteral">&quot;user&quot;</span>: {</div>
+<div class="line">      <span class="stringliteral">&quot;name&quot;</span>: <span class="stringliteral">&quot;json_newb&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">&quot;followers_count&quot;</span>: 41</div>
+<div class="line">     }</div>
+<div class="line">  },</div>
+<div class="line">  {</div>
+<div class="line">    <span class="stringliteral">&quot;id&quot;</span>: 912345678902,</div>
+<div class="line">    <span class="stringliteral">&quot;text&quot;</span>: <span class="stringliteral">&quot;@json_newb just use JsonWriter!&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;geo&quot;</span>: [50.454722, -104.606667],</div>
+<div class="line">    <span class="stringliteral">&quot;user&quot;</span>: {</div>
+<div class="line">      <span class="stringliteral">&quot;name&quot;</span>: <span class="stringliteral">&quot;jesse&quot;</span>,</div>
+<div class="line">      <span class="stringliteral">&quot;followers_count&quot;</span>: 2</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">] </div>
+</div><!-- fragment --> </pre><p> This code encodes the above structure: </p><pre><div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> writeJsonStream(OutputStream <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a97ff40d4cf3a80cd48b713af2e403224">out</a>, List&lt;Message&gt; messages) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> writer = <span class="keyword">new</span> <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a>(<span class="keyword">new</span> OutputStreamWriter(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a97ff40d4cf3a80cd48b713af2e403224">out</a>, <span class="stringliteral">&quot;UTF-8&quot;</span>));</div>
+<div class="line">  writer.setIndentSpaces(4);</div>
+<div class="line">  writeMessagesArray(writer, messages);</div>
+<div class="line">  writer.close();</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> writeMessagesArray(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> writer, List&lt;Message&gt; messages) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  writer.beginArray();</div>
+<div class="line">  <span class="keywordflow">for</span> (Message message : messages) {</div>
+<div class="line">    writeMessage(writer, message);</div>
+<div class="line">  }</div>
+<div class="line">  writer.endArray();</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> writeMessage(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> writer, Message message) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  writer.beginObject();</div>
+<div class="line">  writer.name(<span class="stringliteral">&quot;id&quot;</span>).value(message.getId());</div>
+<div class="line">  writer.name(<span class="stringliteral">&quot;text&quot;</span>).value(message.getText());</div>
+<div class="line">  <span class="keywordflow">if</span> (message.getGeo() != null) {</div>
+<div class="line">    writer.name(<span class="stringliteral">&quot;geo&quot;</span>);</div>
+<div class="line">    writeDoublesArray(writer, message.getGeo());</div>
+<div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    writer.name(<span class="stringliteral">&quot;geo&quot;</span>).nullValue();</div>
+<div class="line">  }</div>
+<div class="line">  writer.name(<span class="stringliteral">&quot;user&quot;</span>);</div>
+<div class="line">  writeUser(writer, message.getUser());</div>
+<div class="line">  writer.endObject();</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> writeUser(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> writer, User user) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  writer.beginObject();</div>
+<div class="line">  writer.name(<span class="stringliteral">&quot;name&quot;</span>).value(user.getName());</div>
+<div class="line">  writer.name(<span class="stringliteral">&quot;followers_count&quot;</span>).value(user.getFollowersCount());</div>
+<div class="line">  writer.endObject();</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> writeDoublesArray(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> writer, List&lt;Double&gt; doubles) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line">  writer.beginArray();</div>
+<div class="line">  <span class="keywordflow">for</span> (Double <a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> : doubles) {</div>
+<div class="line">    writer.value(<a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a>);</div>
+<div class="line">  }</div>
+<div class="line">  writer.endArray();</div>
+<div class="line">} </div>
+</div><!-- fragment --> </pre><p>Each</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a15e1f93b35dc4819a37bbeec50b2e2c3">JsonWriter</a> </div>
+</div><!-- fragment --><p> may be used to write a single JSON stream. Instances of this class are not thread safe. Calls that would result in a malformed JSON string will fail with an <a class="el" href="">IllegalStateException</a>.</p>
+<dl class="section author"><dt>作者</dt><dd>Jesse Wilson </dd></dl>
+<dl class="section since"><dt>自从</dt><dd>1.6 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a15e1f93b35dc4819a37bbeec50b2e2c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.stream.JsonWriter.JsonWriter </td>
+          <td>(</td>
+          <td class="paramtype">Writer&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new instance that writes a JSON-encoded stream to</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a97ff40d4cf3a80cd48b713af2e403224">out</a> </div>
+</div><!-- fragment --><p> . For best performance, ensure <a class="el" href="">Writer</a> is buffered; wrapping in <a class="el" href="">BufferedWriter</a> if necessary. </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a464871f09c020e99ca1c2c3f50ac3186"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.gson.stream.JsonWriter.[instance initializer] </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47a7024d754bd34f1e3d7bec7eb94251"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.beforeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts any necessary separators and whitespace before a name. Also adjusts the stack to expect the name's value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9bc38b724666e6934b4f6e319b844154"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.beforeValue </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts any necessary separators and whitespace before a literal value, inline array, or inline object. Also adjusts the stack to expect either a closing bracket or another element.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>true if the value is a new array or object, the two values permitted as top-level elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad53e703f6b3085bc5fb81c9fe7bb4578"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.beginArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begins encoding a new array. Each call to this method must be paired with a call to <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#aa6f70b1efe86811c13914671049cd762">endArray</a>.</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1554e6735db843faf8532852a567b846"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.beginObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begins encoding a new object. Each call to this method must be paired with a call to <a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a0096e0a8fb3c0c63f0cfaf40a0e706b8">endObject</a>.</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af7125c877c9e1af48443ddae0a430cbc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&#160;</td>
+          <td class="paramname"><em>empty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&#160;</td>
+          <td class="paramname"><em>nonempty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>closeBracket</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Closes the current scope by appending any necessary whitespace and the given bracket. </p>
+
+</div>
+</div>
+<a class="anchor" id="af1d6d34e69f435599aa9e1f6ef83cf53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Flushes and closes this writer and the underlying <a class="el" href="">Writer</a>.</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IOException</td><td>if the JSON document is incomplete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa6f70b1efe86811c13914671049cd762"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.endArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ends encoding the current array.</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0096e0a8fb3c0c63f0cfaf40a0e706b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.endObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ends encoding the current object.</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d1030ddc5a751dc7a81b488ba2c65b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ensures all buffered data is written to the underlying <a class="el" href="">Writer</a> and flushes that writer. </p>
+
+</div>
+</div>
+<a class="anchor" id="aba404fef1fe6b5f18b8fb28293252e85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.stream.JsonWriter.getSerializeNulls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if object members are serialized when their value is null. This has no impact on array elements. The default is true. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1f778e38a67b1e14c03dbb9729488dd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final boolean com.google.gson.stream.JsonWriter.isHtmlSafe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this writer writes JSON that's safe for inclusion in HTML and XML documents. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ac06bdc69ae7edd5c36227094d74270"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonWriter.isLenient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this writer has relaxed syntax rules. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ba81293b1a8468dab288ae1777e637c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.name </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes the property name.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the forthcoming value. May not be null. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0db2ef7f24b40d87cf53ce1868845804"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.newline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7461b973c8cc2836370ce8b4d1781dd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.nullValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes</p><div class="fragment"><div class="line">null </div>
+</div><!-- fragment --><p> .</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ee9ad196e8346d802fcdbab5fb1508e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&#160;</td>
+          <td class="paramname"><em>empty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>openBracket</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enters a new scope by appending any necessary whitespace and the given bracket. </p>
+
+</div>
+</div>
+<a class="anchor" id="abb5b88c5e08795d947d1a0d1d54f71e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a> com.google.gson.stream.JsonWriter.peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value on the top of the stack. </p>
+
+</div>
+</div>
+<a class="anchor" id="aadca08d7b0e6518cbd49a1ad3ef8ce6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.replaceTop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&#160;</td>
+          <td class="paramname"><em>topOfStack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace the value on the top of the stack with the given value. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf573cdf7213afeb8e2acc45dfe23208"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.google.gson.stream.JsonWriter.setHtmlSafe </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>htmlSafe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure this writer to emit JSON that's safe for direct inclusion in HTML and XML documents. This escapes the HTML characters</p><div class="fragment"><div class="line">&lt;</div>
+</div><!-- fragment --><p> ,</p><div class="fragment"><div class="line">&gt; </div>
+</div><!-- fragment --><p> , </p><div class="fragment"><div class="line">&amp; </div>
+</div><!-- fragment --><p> and</p><div class="fragment"><div class="line">= </div>
+</div><!-- fragment --><p> before writing them to the stream. Without this setting, your XML/HTML encoder should replace these characters with the corresponding escape sequences. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7bd975fbd29242ac8df62b42e5110657"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.google.gson.stream.JsonWriter.setIndent </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>indent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the indentation string to be repeated for each level of indentation in the encoded document. If</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a42c9c65c539bbccefffe3d20bb91ed54">indent</a>.isEmpty() </div>
+</div><!-- fragment --><p> the encoded document will be compact. Otherwise the encoded document will be more human-readable.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indent</td><td>a string containing only whitespace. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b9df47e3c8ad3b5d489eb849d9a18f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.google.gson.stream.JsonWriter.setLenient </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>lenient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure this writer to relax its syntax rules. By default, this writer only emits well-formed JSON as specified by <a href="http://www.ietf.org/rfc/rfc4627.txt">RFC 4627</a>. Setting the writer to lenient permits the following: </p><ul>
+<li>
+Top-level values of any type. With strict writing, the top-level value must be an object or an array. </li>
+<li>
+Numbers may be <a class="el" href="">NaNs</a> or <a class="el" href="">infinities</a>. </li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a1944c31da73cf047ac848c5ba93a77f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final void com.google.gson.stream.JsonWriter.setSerializeNulls </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>serializeNulls</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets whether object members are serialized when their value is null. This has no impact on array elements. The default is true. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad00131321f0cd1c112ec8ba51796cefe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.string </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a475f5dd598a964e8b931aa2a80040f32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.value </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> </div>
+</div><!-- fragment --><p> .</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the literal string value, or null to encode a null literal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a60a1571bdcf08eb244db1621dcf3f0fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.value </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> </div>
+</div><!-- fragment --><p> .</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa919c5ec28ab11a2f2af5bf92bb30734"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.value </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> </div>
+</div><!-- fragment --><p> .</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>a finite value. May not be <a class="el" href="">NaNs</a> or <a class="el" href="">infinities</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d0fe58a95e5aedc07ad3d734c063794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.value </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> </div>
+</div><!-- fragment --><p> .</p>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d99b425220b4b7dfeb36607d56acb84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html">JsonWriter</a> com.google.gson.stream.JsonWriter.value </td>
+          <td>(</td>
+          <td class="paramtype">Number&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encodes</p><div class="fragment"><div class="line"><a class="code" href="classcom_1_1google_1_1gson_1_1stream_1_1_json_writer.html#a475f5dd598a964e8b931aa2a80040f32">value</a> </div>
+</div><!-- fragment --><p> .</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>a finite value. May not be <a class="el" href="">NaNs</a> or <a class="el" href="">infinities</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>this writer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98fff7b2a322bdf7d28648b3aacc239c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.google.gson.stream.JsonWriter.writeDeferredName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a7d60f92825c431d53e810f0484948b7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonWriter.deferredName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a61256cb30ea876183930fa58fa70d223"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonWriter.htmlSafe</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a42c9c65c539bbccefffe3d20bb91ed54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonWriter.indent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A string containing a full set of spaces for a single level of indentation, or null for no pretty printing. </p>
+
+</div>
+</div>
+<a class="anchor" id="a74f0cce947c1275f9d4b036027fc490b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonWriter.lenient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a97ff40d4cf3a80cd48b713af2e403224"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Writer com.google.gson.stream.JsonWriter.out</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The output data, containing at most one top-level array or object. </p>
+
+</div>
+</div>
+<a class="anchor" id="af18e978c40f9c565d05bca1fb328d14d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.google.gson.stream.JsonWriter.separator = &quot;:&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The name/value separator; either ":" or ": ". </p>
+
+</div>
+</div>
+<a class="anchor" id="afa611a0d31980e5e9e1922ad43d2a683"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.google.gson.stream.JsonWriter.serializeNulls = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae131fa4fa709782ab84aac497da166fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final List&lt;<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&gt; com.google.gson.stream.JsonWriter.stack = new ArrayList&lt;<a class="el" href="enumcom_1_1google_1_1gson_1_1stream_1_1_json_scope.html">JsonScope</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/google/gson/stream/<a class="el" href="_json_writer_8java.html">JsonWriter.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:58 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

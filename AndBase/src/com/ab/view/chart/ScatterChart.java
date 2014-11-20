@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,12 +57,12 @@ public class ScatterChart extends XYChart {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param dataset the dataset
    * @param renderer the renderer
    * @see com.ab.view.chart.XYChart#setDatasetRenderer(com.ab.view.chart.XYMultipleSeriesDataset, com.ab.view.chart.XYMultipleSeriesRenderer)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:49
-   * @version v1.0
    */
   protected void setDatasetRenderer(XYMultipleSeriesDataset dataset,
       XYMultipleSeriesRenderer renderer) {
@@ -134,6 +134,7 @@ public class ScatterChart extends XYChart {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param points the points
    * @param values the values
    * @param yAxisValue the y axis value
@@ -141,9 +142,8 @@ public class ScatterChart extends XYChart {
    * @param startIndex the start index
    * @return the clickable area[]
    * @see com.ab.view.chart.XYChart#clickableAreasForPoints(float[], double[], float, int, int)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:49
-   * @version v1.0
    */
   @Override
   protected ClickableArea[] clickableAreasForPoints(float[] points, double[] values,

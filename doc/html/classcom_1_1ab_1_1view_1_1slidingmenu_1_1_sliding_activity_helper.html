@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.slidingmenu.SlidingActivityHelper类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1slidingmenu.html">slidingmenu</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html">SlidingActivityHelper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.slidingmenu.SlidingActivityHelper类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae9579c00d1ad64ca892d727133120794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ae9579c00d1ad64ca892d727133120794">SlidingActivityHelper</a> (Activity activity)</td></tr>
+<tr class="separator:ae9579c00d1ad64ca892d727133120794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add02e9bf031800453accfc597b05b637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#add02e9bf031800453accfc597b05b637">onCreate</a> (Bundle savedInstanceState)</td></tr>
+<tr class="separator:add02e9bf031800453accfc597b05b637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341869e151009b288d3f45aa84858db6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a341869e151009b288d3f45aa84858db6">onPostCreate</a> (Bundle savedInstanceState)</td></tr>
+<tr class="separator:a341869e151009b288d3f45aa84858db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac25d95482a9d5fa1d6a0be110249dfeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ac25d95482a9d5fa1d6a0be110249dfeb">setSlidingActionBarEnabled</a> (boolean slidingActionBarEnabled)</td></tr>
+<tr class="separator:ac25d95482a9d5fa1d6a0be110249dfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67e6bf773e1960a713235dc7f43aaff"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ac67e6bf773e1960a713235dc7f43aaff">findViewById</a> (int id)</td></tr>
+<tr class="separator:ac67e6bf773e1960a713235dc7f43aaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8cc40a8d3756ab46e490a4bb44662ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#af8cc40a8d3756ab46e490a4bb44662ec">onSaveInstanceState</a> (Bundle outState)</td></tr>
+<tr class="separator:af8cc40a8d3756ab46e490a4bb44662ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2e1f07da80f6a7bf2189393a87b5c61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#af2e1f07da80f6a7bf2189393a87b5c61">registerAboveContentView</a> (View v, LayoutParams params)</td></tr>
+<tr class="separator:af2e1f07da80f6a7bf2189393a87b5c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54268d81f6686c69be1191b421463661"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a54268d81f6686c69be1191b421463661">setContentView</a> (View v)</td></tr>
+<tr class="separator:a54268d81f6686c69be1191b421463661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ff1e46b7e17bc2df3317fd416695a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ad6ff1e46b7e17bc2df3317fd416695a9">setBehindContentView</a> (View view, LayoutParams layoutParams)</td></tr>
+<tr class="separator:ad6ff1e46b7e17bc2df3317fd416695a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37ceebe7b8d0bafce541e6916778dbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ad37ceebe7b8d0bafce541e6916778dbf">getSlidingMenu</a> ()</td></tr>
+<tr class="separator:ad37ceebe7b8d0bafce541e6916778dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab800735339d7d5f5c2d4e8537cbcf034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ab800735339d7d5f5c2d4e8537cbcf034">toggle</a> ()</td></tr>
+<tr class="separator:ab800735339d7d5f5c2d4e8537cbcf034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d8422cce7680333e8e325529614621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a24d8422cce7680333e8e325529614621">showContent</a> ()</td></tr>
+<tr class="separator:a24d8422cce7680333e8e325529614621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a80a89b358dbd38b9d394924e0620f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#af9a80a89b358dbd38b9d394924e0620f">showMenu</a> ()</td></tr>
+<tr class="separator:af9a80a89b358dbd38b9d394924e0620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a0f286f8a25a5e46c29f0e60c53652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a55a0f286f8a25a5e46c29f0e60c53652">showSecondaryMenu</a> ()</td></tr>
+<tr class="separator:a55a0f286f8a25a5e46c29f0e60c53652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776b70f31d7a61d5709e51db2bbf37ba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a776b70f31d7a61d5709e51db2bbf37ba">onKeyUp</a> (int keyCode, KeyEvent event)</td></tr>
+<tr class="separator:a776b70f31d7a61d5709e51db2bbf37ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a770ca399d54494d62aa2ef54acc13d90"><td class="memItemLeft" align="right" valign="top">Activity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a770ca399d54494d62aa2ef54acc13d90">mActivity</a></td></tr>
+<tr class="separator:a770ca399d54494d62aa2ef54acc13d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307f5842a609cf38b924dc929975c68e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a307f5842a609cf38b924dc929975c68e">mSlidingMenu</a></td></tr>
+<tr class="separator:a307f5842a609cf38b924dc929975c68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7569c4e8e5e2def092a3fbf9b1d3dd8a"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a7569c4e8e5e2def092a3fbf9b1d3dd8a">mViewAbove</a></td></tr>
+<tr class="separator:a7569c4e8e5e2def092a3fbf9b1d3dd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ad204897d490886db421015bdfa3c0"><td class="memItemLeft" align="right" valign="top">View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ac4ad204897d490886db421015bdfa3c0">mViewBehind</a></td></tr>
+<tr class="separator:ac4ad204897d490886db421015bdfa3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267d6f38065b43d0ceb5ee9a1b678ee4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a267d6f38065b43d0ceb5ee9a1b678ee4">mBroadcasting</a> = false</td></tr>
+<tr class="separator:a267d6f38065b43d0ceb5ee9a1b678ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1226d18b248cbf239759c8cff934bd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a0c1226d18b248cbf239759c8cff934bd">mOnPostCreateCalled</a> = false</td></tr>
+<tr class="separator:a0c1226d18b248cbf239759c8cff934bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7bd67323432d8707a3962506253c8e3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#ae7bd67323432d8707a3962506253c8e3">mEnableSlide</a> = true</td></tr>
+<tr class="separator:ae7bd67323432d8707a3962506253c8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>The Class <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html">SlidingActivityHelper</a>. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae9579c00d1ad64ca892d727133120794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.slidingmenu.SlidingActivityHelper.SlidingActivityHelper </td>
+          <td>(</td>
+          <td class="paramtype">Activity&#160;</td>
+          <td class="paramname"><em>activity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instantiates a new <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html">SlidingActivityHelper</a>.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">activity</td><td>the associated activity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac67e6bf773e1960a713235dc7f43aaff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.SlidingActivityHelper.findViewById </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Finds a view that was identified by the id attribute from the XML that was processed in <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#add02e9bf031800453accfc597b05b637">onCreate(Bundle)</a>.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the resource id of the desired view </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The view if found or null otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad37ceebe7b8d0bafce541e6916778dbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> com.ab.view.slidingmenu.SlidingActivityHelper.getSlidingMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> associated with this activity.</p>
+<dl class="section return"><dt>返回</dt><dd>the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> associated with this activity. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="add02e9bf031800453accfc597b05b637"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.onCreate </td>
+          <td>(</td>
+          <td class="paramtype">Bundle&#160;</td>
+          <td class="paramname"><em>savedInstanceState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets mSlidingMenu as a newly inflated <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a>. Should be called within the activitiy's <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#add02e9bf031800453accfc597b05b637">onCreate()</a></p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">savedInstanceState</td><td>the saved instance state (unused) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a776b70f31d7a61d5709e51db2bbf37ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.SlidingActivityHelper.onKeyUp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keyCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyEvent&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>On key up.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyCode</td><td>the key code </td></tr>
+    <tr><td class="paramname">event</td><td>the event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true, if successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a341869e151009b288d3f45aa84858db6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.onPostCreate </td>
+          <td>(</td>
+          <td class="paramtype">Bundle&#160;</td>
+          <td class="paramname"><em>savedInstanceState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Further <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> initialization. Should be called within the activitiy's <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#a341869e151009b288d3f45aa84858db6">onPostCreate()</a></p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">savedInstanceState</td><td>the saved instance state (unused) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af8cc40a8d3756ab46e490a4bb44662ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.onSaveInstanceState </td>
+          <td>(</td>
+          <td class="paramtype">Bundle&#160;</td>
+          <td class="paramname"><em>outState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called to retrieve per-instance state from an activity before being killed so that the state can be restored in <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_activity_helper.html#add02e9bf031800453accfc597b05b637">onCreate(Bundle)</a> or onRestoreInstanceState(Bundle) (the Bundle populated by this method will be passed to both).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outState</td><td>Bundle in which to place your saved state. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af2e1f07da80f6a7bf2189393a87b5c61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.registerAboveContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayoutParams&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register the above content view.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>the above content view to register </td></tr>
+    <tr><td class="paramname">params</td><td>LayoutParams for that view (unused) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6ff1e46b7e17bc2df3317fd416695a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.setBehindContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayoutParams&#160;</td>
+          <td class="paramname"><em>layoutParams</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the behind view content to an explicit view. This view is placed directly into the behind view 's view hierarchy. It can itself be a complex view hierarchy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>The desired content to display. </td></tr>
+    <tr><td class="paramname">layoutParams</td><td>Layout parameters for the view. (unused) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a54268d81f6686c69be1191b421463661"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.setContentView </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the activity content to an explicit view. This view is placed directly into the activity's view hierarchy. It can itself be a complex view hierarchy. When calling this method, the layout parameters of the specified view are ignored. Both the width and the height of the view are set by default to MATCH_PARENT. To use your own layout parameters, invoke setContentView(android.view.View, android.view.ViewGroup.LayoutParams) instead.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>The desired content to display. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac25d95482a9d5fa1d6a0be110249dfeb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.setSlidingActionBarEnabled </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>slidingActionBarEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Controls whether the ActionBar slides along with the above view when the menu is opened, or if it stays in place.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slidingActionBarEnabled</td><td>True if you want the ActionBar to slide along with the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a>, false if you want the ActionBar to stay in place </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a24d8422cce7680333e8e325529614621"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.showContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Close the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> and show the content view. </p>
+
+</div>
+</div>
+<a class="anchor" id="af9a80a89b358dbd38b9d394924e0620f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.showMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> and show the menu view. </p>
+
+</div>
+</div>
+<a class="anchor" id="a55a0f286f8a25a5e46c29f0e60c53652"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.showSecondaryMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> and show the secondary menu view. Will default to the regular menu if there is only one. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab800735339d7d5f5c2d4e8537cbcf034"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.slidingmenu.SlidingActivityHelper.toggle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Toggle the <a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a>. If it is open, it will be closed, and vice versa. </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a770ca399d54494d62aa2ef54acc13d90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Activity com.ab.view.slidingmenu.SlidingActivityHelper.mActivity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m activity. </p>
+
+</div>
+</div>
+<a class="anchor" id="a267d6f38065b43d0ceb5ee9a1b678ee4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.SlidingActivityHelper.mBroadcasting = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m broadcasting. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae7bd67323432d8707a3962506253c8e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.SlidingActivityHelper.mEnableSlide = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m enable slide. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0c1226d18b248cbf239759c8cff934bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.slidingmenu.SlidingActivityHelper.mOnPostCreateCalled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m on post create called. </p>
+
+</div>
+</div>
+<a class="anchor" id="a307f5842a609cf38b924dc929975c68e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1slidingmenu_1_1_sliding_menu.html">SlidingMenu</a> com.ab.view.slidingmenu.SlidingActivityHelper.mSlidingMenu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m sliding menu. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7569c4e8e5e2def092a3fbf9b1d3dd8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.SlidingActivityHelper.mViewAbove</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m view above. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4ad204897d490886db421015bdfa3c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">View com.ab.view.slidingmenu.SlidingActivityHelper.mViewBehind</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m view behind. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/slidingmenu/<a class="el" href="_sliding_activity_helper_8java.html">SlidingActivityHelper.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:57 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.view.chart.PieMapper类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1chart.html">chart</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html">PieMapper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pac-attribs">包属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.chart.PieMapper类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.chart.PieMapper 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.png" usemap="#com.ab.view.chart.PieMapper_map" alt=""/>
+  <map id="com.ab.view.chart.PieMapper_map" name="com.ab.view.chart.PieMapper_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a03f55c8406e5754bec1350b6714bae66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#a03f55c8406e5754bec1350b6714bae66">setDimensions</a> (int pieRadius, int centerX, int centerY)</td></tr>
+<tr class="separator:a03f55c8406e5754bec1350b6714bae66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af76324ba38b01a140e72b5eaeb4b8050"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#af76324ba38b01a140e72b5eaeb4b8050">areAllSegmentPresent</a> (int datasetSize)</td></tr>
+<tr class="separator:af76324ba38b01a140e72b5eaeb4b8050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe431600e4f65a0a191e1a737343ebc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#abe431600e4f65a0a191e1a737343ebc9">addPieSegment</a> (int dataIndex, float value, float startAngle, float angle)</td></tr>
+<tr class="separator:abe431600e4f65a0a191e1a737343ebc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850c0933fcbfd7cc9fbb6f93e196b029"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#a850c0933fcbfd7cc9fbb6f93e196b029">clearPieSegments</a> ()</td></tr>
+<tr class="separator:a850c0933fcbfd7cc9fbb6f93e196b029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb8d16334f7f0a108882cfc0ca23097"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#abbb8d16334f7f0a108882cfc0ca23097">getAngle</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> screenPoint)</td></tr>
+<tr class="separator:abbb8d16334f7f0a108882cfc0ca23097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad440cf9d0cfa1db0e16dc1e5b663b977"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#ad440cf9d0cfa1db0e16dc1e5b663b977">isOnPieChart</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> screenPoint)</td></tr>
+<tr class="separator:ad440cf9d0cfa1db0e16dc1e5b663b977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d3770a7e3a5c41cabf6d3d2f4b743c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#a99d3770a7e3a5c41cabf6d3d2f4b743c">getSeriesAndPointForScreenCoordinate</a> (<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> screenPoint)</td></tr>
+<tr class="separator:a99d3770a7e3a5c41cabf6d3d2f4b743c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
+包属性</h2></td></tr>
+<tr class="memitem:a76fb8ebdb4d58bbbaed2a4e9a46a170c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#a76fb8ebdb4d58bbbaed2a4e9a46a170c">mCenterY</a></td></tr>
+<tr class="separator:a76fb8ebdb4d58bbbaed2a4e9a46a170c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aa9cc4a3e0e5bf1dbd63474ab8057e124"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_segment.html">PieSegment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#aa9cc4a3e0e5bf1dbd63474ab8057e124">mPieSegmentList</a> = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_segment.html">PieSegment</a>&gt;()</td></tr>
+<tr class="separator:aa9cc4a3e0e5bf1dbd63474ab8057e124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad584e4064ef5258d938f51b83c2f135a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#ad584e4064ef5258d938f51b83c2f135a">mPieChartRadius</a></td></tr>
+<tr class="separator:ad584e4064ef5258d938f51b83c2f135a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a5144c1e5cba69fa8c614786a87aa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_mapper.html#a24a5144c1e5cba69fa8c614786a87aa5">mCenterX</a></td></tr>
+<tr class="separator:a24a5144c1e5cba69fa8c614786a87aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a> Segment Selection Management. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="abe431600e4f65a0a191e1a737343ebc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.PieMapper.addPieSegment </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dataIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>startAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add configuration for a <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a> Segment.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataIndex</td><td>the data index </td></tr>
+    <tr><td class="paramname">value</td><td>the value </td></tr>
+    <tr><td class="paramname">startAngle</td><td>the start angle </td></tr>
+    <tr><td class="paramname">angle</td><td>the angle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af76324ba38b01a140e72b5eaeb4b8050"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.PieMapper.areAllSegmentPresent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>datasetSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If we have all <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a> Config then there is no point in reloading it.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">datasetSize</td><td>the dataset size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if cfg for each segment is present </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a850c0933fcbfd7cc9fbb6f93e196b029"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.PieMapper.clearPieSegments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears the pie segments list. </p>
+
+</div>
+</div>
+<a class="anchor" id="abbb8d16334f7f0a108882cfc0ca23097"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double com.ab.view.chart.PieMapper.getAngle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fetches angle relative to pie chart center point where 3 O'Clock is 0 and 12 O'Clock is 270degrees.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>the screen point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>angle in degress from 0-360. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99d3770a7e3a5c41cabf6d3d2f4b743c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a> com.ab.view.chart.PieMapper.getSeriesAndPointForScreenCoordinate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fetches the <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_series_selection.html">SeriesSelection</a> for the <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_segment.html">PieSegment</a> selected.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>- the user tap location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>null if screen point is not in <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a> or its config if it is </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad440cf9d0cfa1db0e16dc1e5b663b977"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.chart.PieMapper.isOnPieChart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>screenPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_point.html">Point</a> falls within <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a>.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>the screen point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if in <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a03f55c8406e5754bec1350b6714bae66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.chart.PieMapper.setDimensions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pieRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>centerX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>centerY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set <a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_chart.html">PieChart</a> location on screen.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pieRadius</td><td>the pie radius </td></tr>
+    <tr><td class="paramname">centerX</td><td>the center x </td></tr>
+    <tr><td class="paramname">centerY</td><td>the center y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a24a5144c1e5cba69fa8c614786a87aa5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.PieMapper.mCenterX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m center y. </p>
+
+</div>
+</div>
+<a class="anchor" id="a76fb8ebdb4d58bbbaed2a4e9a46a170c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.PieMapper.mCenterY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad584e4064ef5258d938f51b83c2f135a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.ab.view.chart.PieMapper.mPieChartRadius</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m pie chart radius. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa9cc4a3e0e5bf1dbd63474ab8057e124"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_segment.html">PieSegment</a>&gt; com.ab.view.chart.PieMapper.mPieSegmentList = new ArrayList&lt;<a class="el" href="classcom_1_1ab_1_1view_1_1chart_1_1_pie_segment.html">PieSegment</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The m pie segment list. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/chart/<a class="el" href="_pie_mapper_8java.html">PieMapper.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

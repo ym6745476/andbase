@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,43 +16,38 @@
 package com.ab.http;
 
 import java.io.File;
-import java.io.IOException;
 
-import android.os.Environment;
+import android.content.Context;
 
 import com.ab.util.AbFileUtil;
 
-
-
 // TODO: Auto-generated Javadoc
 /**
- * 
- * Copyright (c) 2012 All rights reserved
+ * © 2012 amsoft.cn
  * 名称：AbBinaryHttpResponseListener.java 
  * 描述：Http文件响应监听器
- * @author zhaoqp
- * @date：2013-11-13 上午9:00:52
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-11-13 上午9:00:52
  */
-public class AbFileHttpResponseListener extends AbHttpResponseListener{
+public abstract class AbFileHttpResponseListener extends AbHttpResponseListener{
 	
-	/** The Constant TAG. */
-    private static final String TAG = "AbFileHttpResponseListener";
-    
     /** 当前缓存文件. */
     private File mFile;
     
     /**
-     * 下载文件的构造,用默认的缓存方式
-     * @param url
+     * 下载文件的构造,用默认的缓存方式.
+     *
+     * @param url the url
      */
 	public AbFileHttpResponseListener(String url) {
 		super();
 	}
 	
 	/**
-     * 默认的构造
-     */
+	 * 默认的构造.
+	 */
 	public AbFileHttpResponseListener() {
 		super();
 	}
@@ -68,39 +63,54 @@ public class AbFileHttpResponseListener extends AbHttpResponseListener{
 	
 	/**
 	 * 描述：下载文件成功会调用这里.
+	 *
+	 * @param statusCode the status code
+	 * @param file the file
 	 */
-    public void onSuccess(int statusCode,File file) {};
+    public void onSuccess(int statusCode,File file){};
     
     /**
-	 * 描述：多文件上传成功调用.
-	 */
-    public void onSuccess(int statusCode) {};
+     * 描述：多文件上传成功调用.
+     *
+     * @param statusCode the status code
+     */
+    public void onSuccess(int statusCode){};
     
-    
-    /**
-	 * 描述：文件上传下载失败调用.
-	 */
-    public void onFailure(int statusCode, String content,Throwable error) {}
    
    /**
-     * 成功消息.
-     */
+    * 成功消息.
+    *
+    * @param statusCode the status code
+    */
     public void sendSuccessMessage(int statusCode){
-    	sendMessage(obtainMessage(SUCCESS_MESSAGE, new Object[]{statusCode}));
+    	sendMessage(obtainMessage(AbHttpClient.SUCCESS_MESSAGE, new Object[]{statusCode}));
     }
     
     /**
      * 失败消息.
+     *
+     * @param statusCode the status code
+     * @param error the error
      */
     public void sendFailureMessage(int statusCode,Throwable error){
-    	sendMessage(obtainMessage(FAILURE_MESSAGE, new Object[]{statusCode, error}));
+    	sendMessage(obtainMessage(AbHttpClient.FAILURE_MESSAGE, new Object[]{statusCode, error}));
     }
     
 
+	/**
+	 * Gets the file.
+	 *
+	 * @return the file
+	 */
 	public File getFile() {
 		return mFile;
 	}
 
+	/**
+	 * Sets the file.
+	 *
+	 * @param file the new file
+	 */
 	public void setFile(File file) {
 		this.mFile = file;
 		try {
@@ -115,11 +125,17 @@ public class AbFileHttpResponseListener extends AbHttpResponseListener{
 		}
 	}
 	
-	public void setFile(String name) {
+	
+	/**
+	 * Sets the file.
+	 *
+	 * @param context the context
+	 * @param name the name
+	 */
+	public void setFile(Context context,String name) {
 		//生成缓存文件
         if(AbFileUtil.isCanUseSD()){
-	        File path = Environment.getExternalStorageDirectory();
-	    	File file = new File(path.getAbsolutePath() + AbFileUtil.getDownPathFileDir()+name);
+	    	File file = new File(AbFileUtil.getFileDownloadDir(context) + name);
 	    	setFile(file);
         }
 	}

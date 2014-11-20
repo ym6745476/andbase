@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,22 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 // TODO: Auto-generated Javadoc
+
 /**
+ * © 2012 amsoft.cn
+ * 名称：MyDBHelper.java 
  * 描述：数据库操作类.
- * @author zhaoqp
- * @date：2013-3-13 下午4:30:10
+ *
+ * @author 还如一梦中
  * @version v1.0
+ * @date：2013-7-23 上午9:47:10
  */
 public class MyDBHelper extends SQLiteOpenHelper {
 	
-	/** The Constant DBNAME. */
+	/** 数据库名. */
 	private static final String DBNAME = "andbase.db";
 	
-	/** The Constant VERSION. */
+	/** 数据库版本. */
 	private static final int VERSION = 1;
 	
 	/**

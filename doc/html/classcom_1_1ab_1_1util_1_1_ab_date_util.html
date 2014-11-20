@@ -1,0 +1,1382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase开发框架: com.ab.util.AbDateUtil类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.6</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html">AbDateUtil</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classcom_1_1ab_1_1util_1_1_ab_date_util-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.util.AbDateUtil类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a928af1c8ac427963ca1ea94ba602dec0"><td class="memItemLeft" align="right" valign="top">Date&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a928af1c8ac427963ca1ea94ba602dec0">getDateByOffset</a> (Date date, int calendarField, int offset)</td></tr>
+<tr class="separator:a928af1c8ac427963ca1ea94ba602dec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a7f53d7e189586b1717b3f96c1bd26567"><td class="memItemLeft" align="right" valign="top">static Date&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a7f53d7e189586b1717b3f96c1bd26567">getDateByFormat</a> (String strDate, String format)</td></tr>
+<tr class="separator:a7f53d7e189586b1717b3f96c1bd26567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8617d8545f77cadf91aa20e66fba5192"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a8617d8545f77cadf91aa20e66fba5192">getStringByOffset</a> (String strDate, String format, int calendarField, int offset)</td></tr>
+<tr class="separator:a8617d8545f77cadf91aa20e66fba5192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d1c6c3eb7a52533f885fd2943f190d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#af3d1c6c3eb7a52533f885fd2943f190d">getStringByOffset</a> (Date date, String format, int calendarField, int offset)</td></tr>
+<tr class="separator:af3d1c6c3eb7a52533f885fd2943f190d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeddb9979b487f935a78e777be911c78"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#adeddb9979b487f935a78e777be911c78">getStringByFormat</a> (Date date, String format)</td></tr>
+<tr class="separator:adeddb9979b487f935a78e777be911c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20135b5888432d1ef8467ff2474034b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#aa20135b5888432d1ef8467ff2474034b">getStringByFormat</a> (String strDate, String format)</td></tr>
+<tr class="separator:aa20135b5888432d1ef8467ff2474034b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee14a4015cd3c51f17d28142739abde"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a6ee14a4015cd3c51f17d28142739abde">getStringByFormat</a> (long milliseconds, String format)</td></tr>
+<tr class="separator:a6ee14a4015cd3c51f17d28142739abde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316b0dc734830a6f4340648a675571be"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a316b0dc734830a6f4340648a675571be">getCurrentDate</a> (String format)</td></tr>
+<tr class="separator:a316b0dc734830a6f4340648a675571be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d947f30ef6e39768d8e0e2f9a546255"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a5d947f30ef6e39768d8e0e2f9a546255">getCurrentDateByOffset</a> (String format, int calendarField, int offset)</td></tr>
+<tr class="separator:a5d947f30ef6e39768d8e0e2f9a546255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ffa2a76006c8f32041ec223d8d1f5ae"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a8ffa2a76006c8f32041ec223d8d1f5ae">getOffectDay</a> (long milliseconds1, long milliseconds2)</td></tr>
+<tr class="separator:a8ffa2a76006c8f32041ec223d8d1f5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88fd7360593379652ad805e3747a197f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a88fd7360593379652ad805e3747a197f">getOffectHour</a> (long date1, long date2)</td></tr>
+<tr class="separator:a88fd7360593379652ad805e3747a197f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed6b5fd43a75d5e60bd4b193315155a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a1ed6b5fd43a75d5e60bd4b193315155a">getOffectMinutes</a> (long date1, long date2)</td></tr>
+<tr class="separator:a1ed6b5fd43a75d5e60bd4b193315155a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16864055c0afaadf0efe531c79a214d7"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a16864055c0afaadf0efe531c79a214d7">getFirstDayOfWeek</a> (String format)</td></tr>
+<tr class="separator:a16864055c0afaadf0efe531c79a214d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142fa3126ccb14a18ca5061ff2d10dd1"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a142fa3126ccb14a18ca5061ff2d10dd1">getLastDayOfWeek</a> (String format)</td></tr>
+<tr class="separator:a142fa3126ccb14a18ca5061ff2d10dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42fef24ceecc379dbea10e83cd7383d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#aa42fef24ceecc379dbea10e83cd7383d">getFirstDayOfMonth</a> (String format)</td></tr>
+<tr class="separator:aa42fef24ceecc379dbea10e83cd7383d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbcc34d9433947769fc5beb47313d1e5"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#acbcc34d9433947769fc5beb47313d1e5">getLastDayOfMonth</a> (String format)</td></tr>
+<tr class="separator:acbcc34d9433947769fc5beb47313d1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04af8cec34ef959b3359a8482a3d646c"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a04af8cec34ef959b3359a8482a3d646c">getFirstTimeOfDay</a> ()</td></tr>
+<tr class="separator:a04af8cec34ef959b3359a8482a3d646c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae22134cd0603a3f6c1f7c3830ca33265"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#ae22134cd0603a3f6c1f7c3830ca33265">getLastTimeOfDay</a> ()</td></tr>
+<tr class="separator:ae22134cd0603a3f6c1f7c3830ca33265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf397906a2b60e87e49273cd53461e44"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#acf397906a2b60e87e49273cd53461e44">isLeapYear</a> (int year)</td></tr>
+<tr class="separator:acf397906a2b60e87e49273cd53461e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ade0902a206057a388a3e8346a74717"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a3ade0902a206057a388a3e8346a74717">formatDateStr2Desc</a> (String strDate, String outFormat)</td></tr>
+<tr class="separator:a3ade0902a206057a388a3e8346a74717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db228ca6f6c033ad33200d6ef08f874"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a7db228ca6f6c033ad33200d6ef08f874">getWeekNumber</a> (String strDate, String inFormat)</td></tr>
+<tr class="separator:a7db228ca6f6c033ad33200d6ef08f874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2fb589e0ee7ca1736f242377ecbdc5"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#aae2fb589e0ee7ca1736f242377ecbdc5">getTimeQuantum</a> (String strDate, String format)</td></tr>
+<tr class="separator:aae2fb589e0ee7ca1736f242377ecbdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b300e32354ec422fd24a9bdfec1150d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a1b300e32354ec422fd24a9bdfec1150d">getTimeDescription</a> (long milliseconds)</td></tr>
+<tr class="separator:a1b300e32354ec422fd24a9bdfec1150d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcc566f2661ddc121578295ac6becf8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#acdcc566f2661ddc121578295ac6becf8">main</a> (String[] args)</td></tr>
+<tr class="separator:acdcc566f2661ddc121578295ac6becf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:aa2e51191d962cb1db8b07d3a5e374b91"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#aa2e51191d962cb1db8b07d3a5e374b91">dateFormatYMDHMS</a> = &quot;yyyy-MM-dd HH:mm:ss&quot;</td></tr>
+<tr class="separator:aa2e51191d962cb1db8b07d3a5e374b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbdbf6ed2a7e32816b68cefb3a363fd8"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#abbdbf6ed2a7e32816b68cefb3a363fd8">dateFormatYMD</a> = &quot;yyyy-MM-dd&quot;</td></tr>
+<tr class="separator:abbdbf6ed2a7e32816b68cefb3a363fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc425d49ea1718aa2e058cd6b45da51c"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#acc425d49ea1718aa2e058cd6b45da51c">dateFormatYM</a> = &quot;yyyy-MM&quot;</td></tr>
+<tr class="separator:acc425d49ea1718aa2e058cd6b45da51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63773ed0ae2d73319c69466d79ea8ba9"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a63773ed0ae2d73319c69466d79ea8ba9">dateFormatYMDHM</a> = &quot;yyyy-MM-dd HH:mm&quot;</td></tr>
+<tr class="separator:a63773ed0ae2d73319c69466d79ea8ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3a758848c8966a1b2450374ef3195f"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a8f3a758848c8966a1b2450374ef3195f">dateFormatMD</a> = &quot;MM/dd&quot;</td></tr>
+<tr class="separator:a8f3a758848c8966a1b2450374ef3195f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0c3f4048ab5ff89086d17daf525816"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a4e0c3f4048ab5ff89086d17daf525816">dateFormatHMS</a> = &quot;HH:mm:ss&quot;</td></tr>
+<tr class="separator:a4e0c3f4048ab5ff89086d17daf525816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971dabc80f2ce4e5ebb00a4aaa752312"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a971dabc80f2ce4e5ebb00a4aaa752312">dateFormatHM</a> = &quot;HH:mm&quot;</td></tr>
+<tr class="separator:a971dabc80f2ce4e5ebb00a4aaa752312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bd6f7eb41249f2254d99cc4639dd8c"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a56bd6f7eb41249f2254d99cc4639dd8c">AM</a> = &quot;AM&quot;</td></tr>
+<tr class="separator:a56bd6f7eb41249f2254d99cc4639dd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfdd8587ac19025fa7921a6668a6aa9"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a1dfdd8587ac19025fa7921a6668a6aa9">PM</a> = &quot;PM&quot;</td></tr>
+<tr class="separator:a1dfdd8587ac19025fa7921a6668a6aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a494a3fee7ce469440f7d06adaeeeba11"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1util_1_1_ab_date_util.html#a494a3fee7ce469440f7d06adaeeeba11">getDayOfWeek</a> (String format, int calendarField)</td></tr>
+<tr class="separator:a494a3fee7ce469440f7d06adaeeeba11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbDateUtil.java 描述：日期处理类.</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-01-18 下午11:52:13 </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a3ade0902a206057a388a3e8346a74717"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.formatDateStr2Desc </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>strDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>outFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：根据时间返回格式化后的时间的描述. 小于1小时显示多少分钟前 大于1小时显示今天＋实际日期，大于今天全部显示实际时间</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strDate</td><td>the str date </td></tr>
+    <tr><td class="paramname">outFormat</td><td>the out format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a316b0dc734830a6f4340648a675571be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getCurrentDate </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取表示当前日期时间的字符串.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>格式化字符串，如："yyyy-MM-dd HH:mm:ss" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型的当前日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d947f30ef6e39768d8e0e2f9a546255"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getCurrentDateByOffset </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>calendarField</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取表示当前日期时间的字符串(可偏移).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>格式化字符串，如："yyyy-MM-dd HH:mm:ss" </td></tr>
+    <tr><td class="paramname">calendarField</td><td>Calendar属性，对应offset的值， 如(Calendar.DATE,表示+offset天,Calendar.HOUR_OF_DAY,表示＋offset小时) </td></tr>
+    <tr><td class="paramname">offset</td><td>偏移(值大于0,表示+,值小于0,表示－) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型的日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f53d7e189586b1717b3f96c1bd26567"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Date com.ab.util.AbDateUtil.getDateByFormat </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>strDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：String类型的日期时间转化为Date类型.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strDate</td><td>String形式的日期时间 </td></tr>
+    <tr><td class="paramname">format</td><td>格式化字符串，如："yyyy-MM-dd HH:mm:ss" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Date Date类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a928af1c8ac427963ca1ea94ba602dec0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Date com.ab.util.AbDateUtil.getDateByOffset </td>
+          <td>(</td>
+          <td class="paramtype">Date&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>calendarField</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取偏移之后的Date. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>日期时间 </td></tr>
+    <tr><td class="paramname">calendarField</td><td>Calendar属性，对应offset的值， 如(Calendar.DATE,表示+offset天,Calendar.HOUR_OF_DAY,表示＋offset小时) </td></tr>
+    <tr><td class="paramname">offset</td><td>偏移(值大于0,表示+,值小于0,表示－) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Date 偏移之后的日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a494a3fee7ce469440f7d06adaeeeba11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getDayOfWeek </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>calendarField</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取本周的某一天.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+    <tr><td class="paramname">calendarField</td><td>the calendar field </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa42fef24ceecc379dbea10e83cd7383d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getFirstDayOfMonth </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取本月第一天.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16864055c0afaadf0efe531c79a214d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getFirstDayOfWeek </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取本周一.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a04af8cec34ef959b3359a8482a3d646c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long com.ab.util.AbDateUtil.getFirstTimeOfDay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取表示当前日期的0点时间毫秒数.</p>
+<dl class="section return"><dt>返回</dt><dd>the first time of day </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acbcc34d9433947769fc5beb47313d1e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getLastDayOfMonth </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取本月最后一天.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a142fa3126ccb14a18ca5061ff2d10dd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getLastDayOfWeek </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取本周日.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae22134cd0603a3f6c1f7c3830ca33265"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static long com.ab.util.AbDateUtil.getLastTimeOfDay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取表示当前日期24点时间毫秒数.</p>
+<dl class="section return"><dt>返回</dt><dd>the last time of day </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ffa2a76006c8f32041ec223d8d1f5ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbDateUtil.getOffectDay </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>milliseconds1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>milliseconds2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：计算两个日期所差的天数.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">milliseconds1</td><td>the milliseconds1 </td></tr>
+    <tr><td class="paramname">milliseconds2</td><td>the milliseconds2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 所差的天数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a88fd7360593379652ad805e3747a197f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbDateUtil.getOffectHour </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>date1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>date2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：计算两个日期所差的小时数.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date1</td><td>第一个时间的毫秒表示 </td></tr>
+    <tr><td class="paramname">date2</td><td>第二个时间的毫秒表示 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 所差的小时数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ed6b5fd43a75d5e60bd4b193315155a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int com.ab.util.AbDateUtil.getOffectMinutes </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>date1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>date2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：计算两个日期所差的分钟数.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date1</td><td>第一个时间的毫秒表示 </td></tr>
+    <tr><td class="paramname">date2</td><td>第二个时间的毫秒表示 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 所差的分钟数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adeddb9979b487f935a78e777be911c78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getStringByFormat </td>
+          <td>(</td>
+          <td class="paramtype">Date&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：Date类型转化为String类型.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>the date </td></tr>
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa20135b5888432d1ef8467ff2474034b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getStringByFormat </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>strDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取指定日期时间的字符串,用于导出想要的格式.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strDate</td><td>String形式的日期时间，必须为yyyy-MM-dd HH:mm:ss格式 </td></tr>
+    <tr><td class="paramname">format</td><td>输出格式化字符串，如："yyyy-MM-dd HH:mm:ss" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String 转换后的String类型的日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ee14a4015cd3c51f17d28142739abde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getStringByFormat </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>milliseconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取milliseconds表示的日期时间的字符串.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">milliseconds</td><td>the milliseconds </td></tr>
+    <tr><td class="paramname">format</td><td>格式化字符串，如："yyyy-MM-dd HH:mm:ss" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String 日期时间字符串 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8617d8545f77cadf91aa20e66fba5192"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getStringByOffset </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>strDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>calendarField</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：获取指定日期时间的字符串(可偏移).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strDate</td><td>String形式的日期时间 </td></tr>
+    <tr><td class="paramname">format</td><td>格式化字符串，如："yyyy-MM-dd HH:mm:ss" </td></tr>
+    <tr><td class="paramname">calendarField</td><td>Calendar属性，对应offset的值， 如(Calendar.DATE,表示+offset天,Calendar.HOUR_OF_DAY,表示＋offset小时) </td></tr>
+    <tr><td class="paramname">offset</td><td>偏移(值大于0,表示+,值小于0,表示－) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型的日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af3d1c6c3eb7a52533f885fd2943f190d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getStringByOffset </td>
+          <td>(</td>
+          <td class="paramtype">Date&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>calendarField</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：Date类型转化为String类型(可偏移).</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>the date </td></tr>
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+    <tr><td class="paramname">calendarField</td><td>the calendar field </td></tr>
+    <tr><td class="paramname">offset</td><td>the offset </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String String类型日期时间 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1b300e32354ec422fd24a9bdfec1150d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getTimeDescription </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>milliseconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>根据给定的毫秒数算得时间的描述.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">milliseconds</td><td>the milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the time description </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae2fb589e0ee7ca1736f242377ecbdc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getTimeQuantum </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>strDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>根据给定的日期判断是否为上下午.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strDate</td><td>the str date </td></tr>
+    <tr><td class="paramname">format</td><td>the format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the time quantum </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7db228ca6f6c033ad33200d6ef08f874"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String com.ab.util.AbDateUtil.getWeekNumber </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>strDate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>inFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>取指定日期为星期几.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strDate</td><td>指定日期 </td></tr>
+    <tr><td class="paramname">inFormat</td><td>指定日期格式 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>String 星期几 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acf397906a2b60e87e49273cd53461e44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.util.AbDateUtil.isLeapYear </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：判断是否是闰年() </p>
+<p>(year能被4整除 并且 不能被100整除) 或者 year能被400整除,则该年为闰年.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年代（如2012） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>boolean 是否为闰年 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acdcc566f2661ddc121578295ac6becf8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void com.ab.util.AbDateUtil.main </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The main method.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a56bd6f7eb41249f2254d99cc4639dd8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.AM = &quot;AM&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>上午. </p>
+
+</div>
+</div>
+<a class="anchor" id="a971dabc80f2ce4e5ebb00a4aaa752312"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatHM = &quot;HH:mm&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时分. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4e0c3f4048ab5ff89086d17daf525816"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatHMS = &quot;HH:mm:ss&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时分秒. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8f3a758848c8966a1b2450374ef3195f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatMD = &quot;MM/dd&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时间日期格式化到月日. </p>
+
+</div>
+</div>
+<a class="anchor" id="acc425d49ea1718aa2e058cd6b45da51c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatYM = &quot;yyyy-MM&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时间日期格式化到年月. </p>
+
+</div>
+</div>
+<a class="anchor" id="abbdbf6ed2a7e32816b68cefb3a363fd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatYMD = &quot;yyyy-MM-dd&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时间日期格式化到年月日. </p>
+
+</div>
+</div>
+<a class="anchor" id="a63773ed0ae2d73319c69466d79ea8ba9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatYMDHM = &quot;yyyy-MM-dd HH:mm&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时间日期格式化到年月日时分. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa2e51191d962cb1db8b07d3a5e374b91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.dateFormatYMDHMS = &quot;yyyy-MM-dd HH:mm:ss&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>时间日期格式化到年月日时分秒. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1dfdd8587ac19025fa7921a6668a6aa9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.ab.util.AbDateUtil.PM = &quot;PM&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>下午. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/util/<a class="el" href="_ab_date_util_8java.html">AbDateUtil.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

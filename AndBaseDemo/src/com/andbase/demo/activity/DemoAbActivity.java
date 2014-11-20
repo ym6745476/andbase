@@ -1,22 +1,32 @@
 package com.andbase.demo.activity;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
+import com.ab.fragment.AbAlertDialogFragment.AbDialogOnClickListener;
+import com.ab.fragment.AbDialogFragment;
+import com.ab.fragment.AbDialogFragment.AbDialogOnLoadListener;
+import com.ab.fragment.AbLoadDialogFragment;
+import com.ab.fragment.AbRefreshDialogFragment;
+import com.ab.http.AbHttpListener;
+import com.ab.util.AbDialogUtil;
+import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
+import com.andbase.web.NetworkWeb;
 
 /**
  * 名称：DemoAbActivity 
  * 描述：AbActivity基本用法
- * @author zhaoqp
+ * 
+ * @author 还如一梦中
  * @date 2011-12-13
  * @version
  */
@@ -28,7 +38,7 @@ public class DemoAbActivity extends AbActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setAbContentView(R.layout.demo_ab);
+		setAbContentView(R.layout.ab_activity);
 
 		AbTitleBar mAbTitleBar = this.getTitleBar();
 		mAbTitleBar.setTitleText(R.string.ab_name);
@@ -40,12 +50,6 @@ public class DemoAbActivity extends AbActivity {
 		application = (MyApplication) abApplication;
 
 		Button btn1 = (Button) this.findViewById(R.id.btn1);
-		Button btn2 = (Button) this.findViewById(R.id.btn2);
-		Button btn3 = (Button) this.findViewById(R.id.btn3);
-		Button btn4 = (Button) this.findViewById(R.id.btn4);
-		Button btn5 = (Button) this.findViewById(R.id.btn5);
-		Button btn6 = (Button) this.findViewById(R.id.btn6);
-		Button btn7 = (Button) this.findViewById(R.id.btn7);
 
 		btn1.setOnClickListener(new View.OnClickListener() {
 
@@ -56,65 +60,7 @@ public class DemoAbActivity extends AbActivity {
 				startActivity(intent);
 			}
 		});
-
-		btn2.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				showProgressDialog();
-				// removeProgressDialog();
-			}
-		});
-
-		btn3.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				showToast("Toast提示框");
-			}
-		});
-
-		btn4.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				View mView = mInflater.inflate(R.layout.demo_text, null);
-				showDialog(AbConstant.DIALOGTOP, mView);
-			}
-		});
-
-		btn5.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				View mView = mInflater.inflate(R.layout.demo_text, null);
-				showDialog(AbConstant.DIALOGCENTER, mView);
-			}
-		});
-
-		btn6.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				View mView = mInflater.inflate(R.layout.demo_text, null);
-				showDialog(AbConstant.DIALOGBOTTOM, mView);
-			}
-		});
-
-		btn7.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				showDialog("标题", "描述", new OnClickListener() {
-
-					@Override
-					public void onClick(DialogInterface arg0, int arg1) {
-						showToast("点击了确认");
-					}
-
-				});
-			}
-		});
+		
 	}
 
 }

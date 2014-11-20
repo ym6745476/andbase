@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -112,22 +112,26 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
            
     
 	/**
-	 * 描述：TODO
-	 * @see com.ab.view.carousel.CarouselAdapter#getAdapter()
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:34
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @return the adapter
+	 * @see com.ab.view.carousel.CarouselAdapter#getAdapter()
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:34
 	 */
 	public SpinnerAdapter getAdapter() {
         return mAdapter;
     }
 
 	/**
-	 * 描述：TODO
-	 * @see com.ab.view.carousel.CarouselAdapter#setAdapter(android.widget.Adapter)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:34
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param adapter the new adapter
+	 * @see com.ab.view.carousel.CarouselAdapter#setAdapter(android.widget.Adapter)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:34
 	 */
 	public void setAdapter(SpinnerAdapter adapter) {
         if (null != mAdapter) {
@@ -170,11 +174,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
 	}
 
     /**
-     * 描述：TODO
-     * @see com.ab.view.carousel.CarouselAdapter#getSelectedView()
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:34
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @return the selected view
+     * @see com.ab.view.carousel.CarouselAdapter#getSelectedView()
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:34
      */
     public View getSelectedView() {
         if (mItemCount > 0 && mSelectedPosition >= 0) {
@@ -224,11 +230,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     abstract void layout(int delta, boolean animate);    
 
 	/**
-	 * 描述：TODO
-	 * @see com.ab.view.carousel.CarouselAdapter#setSelection(int)
-	 * @author: zhaoqp
-	 * @date：2013-11-28 上午11:14:34
+	 * 描述：TODO.
+	 *
 	 * @version v1.0
+	 * @param position the new selection
+	 * @see com.ab.view.carousel.CarouselAdapter#setSelection(int)
+	 * @author: amsoft.cn
+	 * @date：2013-11-28 上午11:14:34
 	 */
 	public void setSelection(int position) {
         setSelectionInt(position, false);
@@ -353,11 +361,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     }
     
     /**
-     * 描述：TODO
-     * @see android.view.ViewGroup#generateDefaultLayoutParams()
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:34
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @return the view group. layout params
+     * @see android.view.ViewGroup#generateDefaultLayoutParams()
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:34
      */
     protected ViewGroup.LayoutParams generateDefaultLayoutParams() {
         /*
@@ -399,11 +409,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     
 
     /**
-     * 描述：TODO
-     * @see com.ab.view.carousel.CarouselAdapter#getCount()
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:34
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @return the count
+     * @see com.ab.view.carousel.CarouselAdapter#getCount()
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:34
      */
     @Override
     public int getCount() {
@@ -542,11 +554,14 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         }
 
         /**
-         * 描述：TODO
-         * @see android.view.AbsSavedState#writeToParcel(android.os.Parcel, int)
-         * @author: zhaoqp
-         * @date：2013-11-28 上午11:14:34
+         * 描述：TODO.
+         *
          * @version v1.0
+         * @param out the out
+         * @param flags the flags
+         * @see android.view.AbsSavedState#writeToParcel(android.os.Parcel, int)
+         * @author: amsoft.cn
+         * @date：2013-11-28 上午11:14:34
          */
         @Override
         public void writeToParcel(Parcel out, int flags) {
@@ -556,11 +571,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
         }
 
         /**
-         * 描述：TODO
-         * @see java.lang.Object#toString()
-         * @author: zhaoqp
-         * @date：2013-11-28 上午11:14:34
+         * 描述：TODO.
+         *
          * @version v1.0
+         * @return the string
+         * @see java.lang.Object#toString()
+         * @author: amsoft.cn
+         * @date：2013-11-28 上午11:14:34
          */
         @Override
         public String toString() {
@@ -584,11 +601,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     }
 
     /**
-     * 描述：TODO
-     * @see android.view.View#onSaveInstanceState()
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:34
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @return the parcelable
+     * @see android.view.View#onSaveInstanceState()
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:34
      */
     @Override
     public Parcelable onSaveInstanceState() {
@@ -604,11 +623,13 @@ public abstract class CarouselSpinner extends CarouselAdapter<SpinnerAdapter> {
     }    
 
     /**
-     * 描述：TODO
-     * @see android.view.View#onRestoreInstanceState(android.os.Parcelable)
-     * @author: zhaoqp
-     * @date：2013-11-28 上午11:14:34
+     * 描述：TODO.
+     *
      * @version v1.0
+     * @param state the state
+     * @see android.view.View#onRestoreInstanceState(android.os.Parcelable)
+     * @author: amsoft.cn
+     * @date：2013-11-28 上午11:14:34
      */
     @Override
     public void onRestoreInstanceState(Parcelable state) {

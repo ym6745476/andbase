@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -29,15 +28,13 @@ import android.graphics.Paint.FontMetrics;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.os.Handler;
 import android.text.TextPaint;
-import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 
 import com.ab.util.AbFileUtil;
-import com.ab.util.AbGraphical;
+import com.ab.util.AbGraphicUtil;
 import com.ab.util.AbViewUtil;
 
 // TODO: Auto-generated Javadoc
@@ -64,8 +61,6 @@ public class GraphicalView extends View {
   private Bitmap zoomOutImage;
   /** The fit zoom icon. */
   private Bitmap fitZoomImage;
-  /** The zoom area size. */
-  private int zoomSize = 50;
   /** The zoom buttons background color. */
   private static final int ZOOM_BUTTONS_COLOR = Color.argb(175, 150, 150, 150);
   /** The zoom in tool. */
@@ -83,12 +78,6 @@ public class GraphicalView extends View {
   /** The old y coordinate. */
   private float oldY;
   
-  /** 屏幕宽度. */
-  private int screenWidth = 0;
-	
-  /** 屏幕高度. */
-  private int screenHeight = 0;
-  
   /**
    * Creates a new graphical view.
    * @param context the context
@@ -105,9 +94,9 @@ public class GraphicalView extends View {
       mRenderer = ((RoundChart) mChart).getRenderer();
     }
     if (mRenderer.isZoomButtonsVisible()) {
-      zoomInImage = AbFileUtil.getBitmapFormSrc("image/zoom_in.png");
-      zoomOutImage = AbFileUtil.getBitmapFormSrc("image/zoom_out.png");
-      fitZoomImage = AbFileUtil.getBitmapFormSrc("image/zoom-1.png");
+      zoomInImage = AbFileUtil.getBitmapFromSrc("image/zoom_in.png");
+      zoomOutImage = AbFileUtil.getBitmapFromSrc("image/zoom_out.png");
+      fitZoomImage = AbFileUtil.getBitmapFromSrc("image/zoom-1.png");
     }
 
     if (mRenderer instanceof XYMultipleSeriesRenderer
@@ -122,11 +111,6 @@ public class GraphicalView extends View {
     }
     mTouchHandler = new TouchHandler(this, mChart);
     
-    DisplayMetrics displayMetrics = new DisplayMetrics(); 
-	((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-	screenWidth = displayMetrics.widthPixels; 
-	screenHeight = displayMetrics.heightPixels; 
-    
     if (mChart instanceof XYChart) {
     	XYMultipleSeriesRenderer  mXYMultipleSeriesRenderer  = ((XYChart) mChart).getRenderer();
     	
@@ -137,30 +121,30 @@ public class GraphicalView extends View {
         int scaleRectWidth = mXYMultipleSeriesRenderer.getScaleRectWidth();
         int scaleRectHeight = mXYMultipleSeriesRenderer.getScaleRectHeight();
         //按分辨率转换
-        mXYMultipleSeriesRenderer.setExplainTextSize1(AbViewUtil.resizeTextSize(screenWidth, screenHeight, explainTextSize1));
-        mXYMultipleSeriesRenderer.setExplainTextSize2(AbViewUtil.resizeTextSize(screenWidth, screenHeight, explainTextSize2));
-        mXYMultipleSeriesRenderer.setScaleCircleRadius(AbViewUtil.resizeTextSize(screenWidth, screenHeight, scaleCircleRadius));
-        mXYMultipleSeriesRenderer.setScaleRectWidth(AbViewUtil.resizeTextSize(screenWidth, screenHeight, scaleRectWidth));
-        mXYMultipleSeriesRenderer.setScaleRectHeight(AbViewUtil.resizeTextSize(screenWidth, screenHeight, scaleRectHeight));
+        mXYMultipleSeriesRenderer.setExplainTextSize1(AbViewUtil.scale(mContext, explainTextSize1));
+        mXYMultipleSeriesRenderer.setExplainTextSize2(AbViewUtil.scale(mContext, explainTextSize2));
+        mXYMultipleSeriesRenderer.setScaleCircleRadius(AbViewUtil.scale(mContext, scaleCircleRadius));
+        mXYMultipleSeriesRenderer.setScaleRectWidth(AbViewUtil.scale(mContext, scaleRectWidth));
+        mXYMultipleSeriesRenderer.setScaleRectHeight(AbViewUtil.scale(mContext, scaleRectHeight));
         
         SimpleSeriesRenderer[]  mSimpleSeriesRenderers = mRenderer.getSeriesRenderers();
         if(mSimpleSeriesRenderers!=null && mSimpleSeriesRenderers.length>0){
         	for(int i=0;i<mSimpleSeriesRenderers.length;i++){
         		SimpleSeriesRenderer mSimpleSeriesRenderer = mSimpleSeriesRenderers[i];
         		int mChartValuesTextSize  = (int)mSimpleSeriesRenderer.getChartValuesTextSize();
-        		mSimpleSeriesRenderer.setChartValuesTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, mChartValuesTextSize));
+        		mSimpleSeriesRenderer.setChartValuesTextSize(AbViewUtil.scale(mContext, mChartValuesTextSize));
         	}
         }
     }
     
     int chartTitleTextSize = (int)mRenderer.getChartTitleTextSize();
-    mRenderer.setChartTitleTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, chartTitleTextSize));
+    mRenderer.setChartTitleTextSize(AbViewUtil.scale(mContext, chartTitleTextSize));
     //轴线上标签文字大小
     int mLabelsTextSize  = (int)mRenderer.getLabelsTextSize();
-    mRenderer.setLabelsTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, mLabelsTextSize));
+    mRenderer.setLabelsTextSize(AbViewUtil.scale(mContext, mLabelsTextSize));
   	//说明文字大小
     int mLegendTextSize  =  (int)mRenderer.getLegendTextSize();
-    mRenderer.setLabelsTextSize(AbViewUtil.resizeTextSize(screenWidth, screenHeight, mLegendTextSize));
+    mRenderer.setLegendTextSize(AbViewUtil.scale(mContext, mLegendTextSize));
     
   }
 
@@ -190,11 +174,11 @@ public class GraphicalView extends View {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param canvas the canvas
    * @see android.view.View#onDraw(android.graphics.Canvas)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:51
-   * @version v1.0
    */
   @Override
   protected void onDraw(Canvas canvas) {
@@ -214,14 +198,25 @@ public class GraphicalView extends View {
     
     if (mRenderer != null && mRenderer.isZoomEnabled() && mRenderer.isZoomButtonsVisible()) {
       mPaint.setColor(ZOOM_BUTTONS_COLOR);
-      zoomSize = Math.max(zoomSize, Math.min(width, height) / 7);
-      mZoomR.set(left + width - zoomSize * 3, top + height - zoomSize * 0.775f, left + width, top
-          + height);
-      canvas.drawRoundRect(mZoomR, zoomSize / 3, zoomSize / 3, mPaint);
-      float buttonY = top + height - zoomSize * 0.625f;
-      canvas.drawBitmap(zoomInImage, left + width - zoomSize * 2.75f, buttonY, null);
-      canvas.drawBitmap(zoomOutImage, left + width - zoomSize * 1.75f, buttonY, null);
-      canvas.drawBitmap(fitZoomImage, left + width - zoomSize * 0.75f, buttonY, null);
+      
+      int bitmapWidth = zoomInImage.getWidth();
+      int bitmapHeight = zoomInImage.getHeight();
+      
+      int rectMargin = 10;
+      int topPadding = 15;
+      int leftPadding = 20;
+      int leftRect = width - bitmapWidth * 3 - rectMargin - 4*leftPadding;
+      int topRect = height - bitmapHeight - rectMargin -2*topPadding; 
+      int rightRect = width-rectMargin; 
+      int bottomRect = height-rectMargin; 
+      
+      mZoomR.set(leftRect, topRect, rightRect, bottomRect);
+      canvas.drawRoundRect(mZoomR, bitmapWidth / 2, bitmapWidth / 2, mPaint);
+      //画图标
+      float buttonY = height - bitmapHeight - rectMargin-topPadding;
+      canvas.drawBitmap(zoomInImage, width - rectMargin-bitmapWidth*3-3*leftPadding, buttonY, null);
+      canvas.drawBitmap(zoomOutImage,width - rectMargin-bitmapWidth*2-2*leftPadding, buttonY, null);
+      canvas.drawBitmap(fitZoomImage, width - rectMargin-bitmapWidth-leftPadding, buttonY, null);
     }
     
     if (mChart instanceof XYChart) {
@@ -236,8 +231,8 @@ public class GraphicalView extends View {
 	        int explainTextSize2 = mXYMultipleSeriesRenderer.getExplainTextSize2();
 	        int scaleCircleRadius = mXYMultipleSeriesRenderer.getScaleCircleRadius();
 	        //按分辨率转换
-	        scaleTopPadding = AbViewUtil.resizeTextSize(width, height, scaleTopPadding);
-	        scaleBottomPadding = AbViewUtil.resizeTextSize(width, height, scaleBottomPadding);
+	        scaleTopPadding = AbViewUtil.scale(mContext, scaleTopPadding);
+	        scaleBottomPadding = AbViewUtil.scale(mContext, scaleBottomPadding);
 	        
 	        
 	        //Y轴位置
@@ -325,9 +320,10 @@ public class GraphicalView extends View {
 	              }
 	              if(showRect){
 	                  //画框框和点
+	            	  
 	            	  //获取文本的高度
 	            	  TextPaint mTextPaint1 = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-	                  mTextPaint1.setColor(Color.WHITE);
+	            	  mTextPaint1.setColor(Color.WHITE);
 	                  mTextPaint1.setTypeface(Typeface.DEFAULT);
 	                  mTextPaint1.setTextSize(explainTextSize1);
 	                  
@@ -335,19 +331,25 @@ public class GraphicalView extends View {
 	                  mTextPaint2.setColor(Color.WHITE);
 	                  mTextPaint2.setTypeface(Typeface.DEFAULT);
 	                  mTextPaint2.setTextSize(explainTextSize2);
-	                  FontMetrics  fm1  = mTextPaint1.getFontMetrics();
-	                  //行高
-	                  int hSize1 = (int)Math.ceil(fm1.descent - fm1.ascent)+2;
 	                  
-	                  FontMetrics  fm2  = mTextPaint2.getFontMetrics();
 	                  //行高
-	                  int hSize2 = (int)Math.ceil(fm2.descent - fm2.ascent)+2;
+	                  float hSize1 = AbGraphicUtil.getDesiredHeight(mTextPaint1);
+	                  
+	                  //行高
+	                  float hSize2 = AbGraphicUtil.getDesiredHeight(mTextPaint2);
+	                  
+	                  int textPadding = 8;
+	                  textPadding = AbViewUtil.scale(mContext, textPadding);
+	                  
 	                  //设置个新的长方形  
 	                  //判断文字是否超出设置的框框
-	                  int row1 = AbGraphical.getDrawRowCount(showValue,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint1);
-	                  int row2 = AbGraphical.getDrawRowCount(showExplain,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint2);
+	                  int row1 = AbGraphicUtil.getDrawRowCount(showValue,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint1);
+	                  int row2 = AbGraphicUtil.getDrawRowCount(showExplain,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint2);
 	                  RectF mRectF = null;
-	                  int  textHeight = row1*hSize1+row2*hSize2+10;
+	                  int textHeight = (int)(row1*hSize1+row2*hSize2+textPadding);
+	                  
+	                  //提示框的宽度和高度
+	                  int realScaleRectWidth = mXYMultipleSeriesRenderer.getScaleRectWidth();
 	                  int realScaleRectHeight = mXYMultipleSeriesRenderer.getScaleRectHeight();
 	                  
 	                  //画圆角矩形  //充满
@@ -356,12 +358,12 @@ public class GraphicalView extends View {
 	                  //设置画笔的锯齿效果  
 	                  mPaint.setAntiAlias(true);
 	                  
-	                  int mRectLeft  = (int)(double)mPoints.get(minIndex)+5;
-	                  int mRectTop  = (int)(double)mPoints.get(minIndex+1)+5;
-	                  int mRectRight  = mRectLeft+mXYMultipleSeriesRenderer.getScaleRectWidth();
-	                  int mRectBottom  = mRectTop+mXYMultipleSeriesRenderer.getScaleRectHeight();
+	                  int mRectLeft  = (int)(double)mPoints.get(minIndex);
+	                  int mRectTop  = (int)(double)mPoints.get(minIndex+1);
+	                  int mRectRight  = mRectLeft+realScaleRectWidth;
+	                  int mRectBottom  = mRectTop+realScaleRectHeight;
 	                  
-	                  if(textHeight > mXYMultipleSeriesRenderer.getScaleRectHeight()){
+	                  if(textHeight > realScaleRectHeight){
 	                	  realScaleRectHeight = textHeight;
 	                	  mRectBottom = mRectTop + realScaleRectHeight;
 	                  }
@@ -388,15 +390,9 @@ public class GraphicalView extends View {
 	                  //第二个参数是x半径，第三个参数是y半径
 	                  canvas.drawRoundRect(mRectF, 5, 5, mPaint);
 	                  
-	                  int textTopPadding = 15;
-	                  textTopPadding = AbViewUtil.resizeTextSize(screenWidth, screenHeight, textTopPadding);
+	                  AbGraphicUtil.drawText(canvas,showValue,mXYMultipleSeriesRenderer.getScaleRectWidth(),mTextPaint1,mRectLeft+textPadding, mRectTop+textPadding);
+	                  AbGraphicUtil.drawText(canvas,showExplain,mXYMultipleSeriesRenderer.getScaleRectWidth(),mTextPaint2,mRectLeft+textPadding, (int)(mRectTop+textPadding+row1*hSize1));
 	                  
-	                  AbGraphical.drawText(canvas,showValue,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint1,mRectLeft+5, mRectTop+textTopPadding);
-	                  AbGraphical.drawText(canvas,showExplain,mXYMultipleSeriesRenderer.getScaleRectWidth()-10,mTextPaint2,mRectLeft+5, mRectTop+textTopPadding+row1*hSize1);
-	                  //System.out.println("::::"+row*hSize);
-	                  //canvas.drawText(showValue,mRectLeft+10, mRectTop+20, mPaint);
-	                  //canvas.drawText(showExplain,mRectLeft+10, mRectTop+40, mPaint);
-	                  //canvas.drawText(minIndex/2+":"+values.get(minIndex)+","+values.get(minIndex+1),points.get(minIndex), points.get(minIndex+1)+20, mPaint);
 	              }
 	          }
 	          
@@ -513,12 +509,12 @@ public class GraphicalView extends View {
   /**
    * 描述：TODO.
    *
+   * @version v1.0
    * @param event the event
    * @return true, if successful
    * @see android.view.View#onTouchEvent(android.view.MotionEvent)
-   * @author: zhaoqp
+   * @author: amsoft.cn
    * @date：2013-6-17 上午9:04:51
-   * @version v1.0
    */
   @Override
   public boolean onTouchEvent(MotionEvent event) {

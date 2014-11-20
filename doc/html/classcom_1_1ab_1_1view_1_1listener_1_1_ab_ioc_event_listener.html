@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>AndBase开发框架: com.ab.view.listener.AbIocEventListener类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase开发框架
+   &#160;<span id="projectnumber">1.5.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view.html">view</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1view_1_1listener.html">listener</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.view.listener.AbIocEventListener类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.view.listener.AbIocEventListener 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.png" usemap="#com.ab.view.listener.AbIocEventListener_map" alt=""/>
+  <map id="com.ab.view.listener.AbIocEventListener_map" name="com.ab.view.listener.AbIocEventListener_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af3229fe9d5944d802cda27f7a05356c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#af3229fe9d5944d802cda27f7a05356c8">AbIocEventListener</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>)</td></tr>
+<tr class="separator:af3229fe9d5944d802cda27f7a05356c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2837686cd2360f1248e96319398b7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#aae2837686cd2360f1248e96319398b7f">click</a> (String method)</td></tr>
+<tr class="separator:aae2837686cd2360f1248e96319398b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb823d85def7fca6ad66fad4f530940"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a5cb823d85def7fca6ad66fad4f530940">longClick</a> (String method)</td></tr>
+<tr class="separator:a5cb823d85def7fca6ad66fad4f530940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f6bde7b810b8a31568d9c6947bca56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a58f6bde7b810b8a31568d9c6947bca56">itemLongClick</a> (String method)</td></tr>
+<tr class="separator:a58f6bde7b810b8a31568d9c6947bca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9d08f3821305f146fe2c4fd23a5662"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#abd9d08f3821305f146fe2c4fd23a5662">itemClick</a> (String method)</td></tr>
+<tr class="separator:abd9d08f3821305f146fe2c4fd23a5662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d6775b13d90895a8758a6c25a334e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#ae6d6775b13d90895a8758a6c25a334e2">select</a> (String method)</td></tr>
+<tr class="separator:ae6d6775b13d90895a8758a6c25a334e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4faa2ec14928c53eefae664b88adbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a4e4faa2ec14928c53eefae664b88adbe">noSelect</a> (String method)</td></tr>
+<tr class="separator:a4e4faa2ec14928c53eefae664b88adbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b30a9017a68b69bee0af53a105146be"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a3b30a9017a68b69bee0af53a105146be">onLongClick</a> (View v)</td></tr>
+<tr class="separator:a3b30a9017a68b69bee0af53a105146be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0f19b8d6b901e71154d63fcc73bd0b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#acc0f19b8d6b901e71154d63fcc73bd0b">onItemLongClick</a> (AdapterView&lt;?&gt; arg0, View arg1, int arg2, long arg3)</td></tr>
+<tr class="separator:acc0f19b8d6b901e71154d63fcc73bd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2eb74784a83d724caa167d29495907a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#ae2eb74784a83d724caa167d29495907a">onItemSelected</a> (AdapterView&lt;?&gt; arg0, View arg1, int arg2, long arg3)</td></tr>
+<tr class="separator:ae2eb74784a83d724caa167d29495907a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54fa6cfa3b04ffb2d27143f88c8d44a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#ac54fa6cfa3b04ffb2d27143f88c8d44a">onNothingSelected</a> (AdapterView&lt;?&gt; arg0)</td></tr>
+<tr class="separator:ac54fa6cfa3b04ffb2d27143f88c8d44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68dc65ae92ba43aacbc7bb120ee9c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#ac68dc65ae92ba43aacbc7bb120ee9c8c">onItemClick</a> (AdapterView&lt;?&gt; arg0, View arg1, int arg2, long arg3)</td></tr>
+<tr class="separator:ac68dc65ae92ba43aacbc7bb120ee9c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015158e81c5cbe028110e9f0162fe6fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a015158e81c5cbe028110e9f0162fe6fb">onClick</a> (View v)</td></tr>
+<tr class="separator:a015158e81c5cbe028110e9f0162fe6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a1830ae066755bd79f2829dea941ec94c"><td class="memItemLeft" align="right" valign="top">static Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a1830ae066755bd79f2829dea941ec94c">invokeClickMethod</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>, String methodName, Object...params)</td></tr>
+<tr class="separator:a1830ae066755bd79f2829dea941ec94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a2e1bcf9fa159cdbfbe2276ffce316"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a10a2e1bcf9fa159cdbfbe2276ffce316">invokeLongClickMethod</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>, String methodName, Object...params)</td></tr>
+<tr class="separator:a10a2e1bcf9fa159cdbfbe2276ffce316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3926b429705a935efa5dd354bd488bf4"><td class="memItemLeft" align="right" valign="top">static Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a3926b429705a935efa5dd354bd488bf4">invokeItemClickMethod</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>, String methodName, Object...params)</td></tr>
+<tr class="separator:a3926b429705a935efa5dd354bd488bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa359806d86b9a881448a49333a28547"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#afa359806d86b9a881448a49333a28547">invokeItemLongClickMethod</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>, String methodName, Object...params)</td></tr>
+<tr class="separator:afa359806d86b9a881448a49333a28547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af914f12d71ca5130c10640251b11f1b7"><td class="memItemLeft" align="right" valign="top">static Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#af914f12d71ca5130c10640251b11f1b7">invokeItemSelectMethod</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>, String methodName, Object...params)</td></tr>
+<tr class="separator:af914f12d71ca5130c10640251b11f1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e2f3ce638d28b2e4efcd482b70defe"><td class="memItemLeft" align="right" valign="top">static Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#ae8e2f3ce638d28b2e4efcd482b70defe">invokeNoSelectMethod</a> (Object <a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a>, String methodName, Object...params)</td></tr>
+<tr class="separator:ae8e2f3ce638d28b2e4efcd482b70defe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a0b59c6c55da31accf54b6cad384bd037"><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0b59c6c55da31accf54b6cad384bd037">handler</a></td></tr>
+<tr class="separator:a0b59c6c55da31accf54b6cad384bd037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36174f3b015a62c1b478ebba39f45dc1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a36174f3b015a62c1b478ebba39f45dc1">clickMethod</a></td></tr>
+<tr class="separator:a36174f3b015a62c1b478ebba39f45dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f06a7d875d2d8f2422c98e80aaf73fc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a5f06a7d875d2d8f2422c98e80aaf73fc">longClickMethod</a></td></tr>
+<tr class="separator:a5f06a7d875d2d8f2422c98e80aaf73fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6172c557171e2089c8503b01a0f74b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a9c6172c557171e2089c8503b01a0f74b">itemClickMethod</a></td></tr>
+<tr class="separator:a9c6172c557171e2089c8503b01a0f74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0743a1ca95fa8d1a53f6fb4de29caccb"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a0743a1ca95fa8d1a53f6fb4de29caccb">itemSelectMethod</a></td></tr>
+<tr class="separator:a0743a1ca95fa8d1a53f6fb4de29caccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a76a1381ee0a7bf3e11f39b460c93b5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a3a76a1381ee0a7bf3e11f39b460c93b5">nothingSelectedMethod</a></td></tr>
+<tr class="separator:a3a76a1381ee0a7bf3e11f39b460c93b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a03b111fb5fa37ebb0950711f11617"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html#a90a03b111fb5fa37ebb0950711f11617">itemLongClickMehtod</a></td></tr>
+<tr class="separator:a90a03b111fb5fa37ebb0950711f11617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="af3229fe9d5944d802cda27f7a05356c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.view.listener.AbIocEventListener.AbIocEventListener </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="aae2837686cd2360f1248e96319398b7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a> com.ab.view.listener.AbIocEventListener.click </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>method</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1830ae066755bd79f2829dea941ec94c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Object com.ab.view.listener.AbIocEventListener.invokeClickMethod </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3926b429705a935efa5dd354bd488bf4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Object com.ab.view.listener.AbIocEventListener.invokeItemClickMethod </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>onItemClick(AdapterView&lt;?&gt; arg0, View arg1, int arg2, long arg3) </p>
+
+</div>
+</div>
+<a class="anchor" id="afa359806d86b9a881448a49333a28547"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.view.listener.AbIocEventListener.invokeItemLongClickMethod </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>onItemLongClick(AdapterView&lt;?&gt; arg0, View arg1, int arg2,long arg3) </p>
+
+</div>
+</div>
+<a class="anchor" id="af914f12d71ca5130c10640251b11f1b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Object com.ab.view.listener.AbIocEventListener.invokeItemSelectMethod </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>onItemSelected(AdapterView&lt;?&gt; arg0, View arg1, int arg2,long arg3) </p>
+
+</div>
+</div>
+<a class="anchor" id="a10a2e1bcf9fa159cdbfbe2276ffce316"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.ab.view.listener.AbIocEventListener.invokeLongClickMethod </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8e2f3ce638d28b2e4efcd482b70defe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Object com.ab.view.listener.AbIocEventListener.invokeNoSelectMethod </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>methodName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abd9d08f3821305f146fe2c4fd23a5662"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a> com.ab.view.listener.AbIocEventListener.itemClick </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>method</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58f6bde7b810b8a31568d9c6947bca56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a> com.ab.view.listener.AbIocEventListener.itemLongClick </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>method</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5cb823d85def7fca6ad66fad4f530940"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a> com.ab.view.listener.AbIocEventListener.longClick </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>method</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e4faa2ec14928c53eefae664b88adbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a> com.ab.view.listener.AbIocEventListener.noSelect </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>method</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a015158e81c5cbe028110e9f0162fe6fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.listener.AbIocEventListener.onClick </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac68dc65ae92ba43aacbc7bb120ee9c8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.listener.AbIocEventListener.onItemClick </td>
+          <td>(</td>
+          <td class="paramtype">AdapterView&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>arg3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc0f19b8d6b901e71154d63fcc73bd0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.listener.AbIocEventListener.onItemLongClick </td>
+          <td>(</td>
+          <td class="paramtype">AdapterView&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>arg3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae2eb74784a83d724caa167d29495907a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.listener.AbIocEventListener.onItemSelected </td>
+          <td>(</td>
+          <td class="paramtype">AdapterView&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>arg3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b30a9017a68b69bee0af53a105146be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.ab.view.listener.AbIocEventListener.onLongClick </td>
+          <td>(</td>
+          <td class="paramtype">View&#160;</td>
+          <td class="paramname"><em>v</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac54fa6cfa3b04ffb2d27143f88c8d44a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.view.listener.AbIocEventListener.onNothingSelected </td>
+          <td>(</td>
+          <td class="paramtype">AdapterView&lt;?&gt;&#160;</td>
+          <td class="paramname"><em>arg0</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6d6775b13d90895a8758a6c25a334e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1view_1_1listener_1_1_ab_ioc_event_listener.html">AbIocEventListener</a> com.ab.view.listener.AbIocEventListener.select </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>method</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="a36174f3b015a62c1b478ebba39f45dc1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.listener.AbIocEventListener.clickMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b59c6c55da31accf54b6cad384bd037"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object com.ab.view.listener.AbIocEventListener.handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c6172c557171e2089c8503b01a0f74b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.listener.AbIocEventListener.itemClickMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a90a03b111fb5fa37ebb0950711f11617"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.listener.AbIocEventListener.itemLongClickMehtod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0743a1ca95fa8d1a53f6fb4de29caccb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.listener.AbIocEventListener.itemSelectMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5f06a7d875d2d8f2422c98e80aaf73fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.listener.AbIocEventListener.longClickMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a76a1381ee0a7bf3e11f39b460c93b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.view.listener.AbIocEventListener.nothingSelectedMethod</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/view/listener/<a class="el" href="_ab_ioc_event_listener_8java.html">AbIocEventListener.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2014年 三月 19日 星期三 16:24:31 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

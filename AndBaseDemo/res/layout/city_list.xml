@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fffafafa"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/searchBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fffafafa"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/activity_city_search_input"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/seacher_box"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4.0dip"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="15dip"
+                android:layout_gravity="center_vertical"
+                android:hint="中文/拼音搜索城市"
+                android:textColor="#ff404040"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.ab.view.sample.AbLetterFilterListView
+        android:id="@+id/letterView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"/>
+    </com.ab.view.sample.AbLetterFilterListView>
+
+</LinearLayout>

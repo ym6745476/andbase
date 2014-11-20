@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 www.418log.org
+ * Copyright (C) 2012 www.amsoft.cn
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,23 +40,26 @@ import com.ab.db.orm.annotation.Id;
 import com.ab.db.orm.annotation.Relations;
 import com.ab.db.orm.annotation.RelationsType;
 import com.ab.db.orm.annotation.Table;
+import com.ab.util.AbLogUtil;
 import com.ab.util.AbStrUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AbDBDaoImpl.
+ * © 2012 amsoft.cn
+ * 名称：AbDBDaoImpl.java 
+ * 描述：数据库表操作类接口实现类
  *
+ * @author 还如一梦中
+ * @version v1.0
  * @param <T> the generic type
+ * @date：2013-7-23 上午9:47:10
  */
 public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
-	
-	/** The tag. */
-	private String TAG = "AbDBDaoImpl";
 	
 	/** The db helper. */
 	private SQLiteOpenHelper dbHelper;
 	
-	/**锁对象*/
+	/** 锁对象. */
     private final ReentrantLock lock = new ReentrantLock();
 	
 	/** The table name. */
@@ -83,7 +86,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	/** The Constant TYPE_INCREMENT. */
 	private static final int TYPE_INCREMENT = 1;
 	
-	/**这个Dao的数据库对象*/
+	/** 这个Dao的数据库对象. */
 	private SQLiteDatabase db = null;
 
 	/**
@@ -120,7 +123,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			}
 		}
 
-		Log.d(TAG, "clazz:" + this.clazz + " tableName:" + this.tableName
+		AbLogUtil.d(AbDBDaoImpl.class, "clazz:" + this.clazz + " tableName:" + this.tableName
 				+ " idColumn:" + this.idColumn);
 	}
 
@@ -158,7 +161,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 		synchronized (lock) {
 			String selection = this.idColumn + " = ?";
 			String[] selectionArgs = { Integer.toString(id) };
-			Log.d(TAG, "[queryOne]: select * from " + this.tableName + " where "
+			AbLogUtil.d(AbDBDaoImpl.class, "[queryOne]: select * from " + this.tableName + " where "
 					+ this.idColumn + " = '" + id + "'");
 			List<T> list = queryList(null, selection, selectionArgs, null, null, null,
 					null);
@@ -185,11 +188,12 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 		Cursor cursor = null;
 		try {
 			lock.lock();
-			Log.d(TAG, "[rawQuery]: " + getLogSql(sql, selectionArgs));
+			checkDBOpened();
+			AbLogUtil.d(AbDBDaoImpl.class, "[rawQuery]: " + getLogSql(sql, selectionArgs));
 			cursor = db.rawQuery(sql, selectionArgs);
 			getListFromCursor(clazz,list, cursor);
 		} catch (Exception e) {
-			Log.e(this.TAG, "[rawQuery] from DB Exception.");
+			AbLogUtil.e(AbDBDaoImpl.class, "[rawQuery] from DB Exception.");
 			e.printStackTrace();
 		} finally {
 			closeCursor(cursor);
@@ -212,13 +216,14 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 		Cursor cursor = null;
 		try {
 			lock.lock();
-			Log.d(TAG, "[isExist]: " + getLogSql(sql, selectionArgs));
+			checkDBOpened();
+			AbLogUtil.d(AbDBDaoImpl.class, "[isExist]: " + getLogSql(sql, selectionArgs));
 			cursor = db.rawQuery(sql, selectionArgs);
 			if (cursor.getCount() > 0) {
 				return true;
 			}
 		} catch (Exception e) {
-			Log.e(this.TAG, "[isExist] from DB Exception.");
+			AbLogUtil.e(AbDBDaoImpl.class, "[isExist] from DB Exception.");
 			e.printStackTrace();
 		} finally {
 			closeCursor(cursor);
@@ -260,7 +265,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			Cursor cursor = null;
 			try {
 				lock.lock();
-				Log.d(TAG, "[queryList] from"+this.tableName+" where "+selection+"("+selectionArgs+")"+" group by "+groupBy+" having "+having+" order by "+orderBy+" limit "+limit);
+				checkDBOpened();
+				AbLogUtil.d(AbDBDaoImpl.class, "[queryList] from "+this.tableName+" where "+selection+"("+selectionArgs+")"+" group by "+groupBy+" having "+having+" order by "+orderBy+" limit "+limit);
 				cursor = db.query(this.tableName, columns, selection,
 						selectionArgs, groupBy, having, orderBy, limit);
 	
@@ -309,7 +315,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								for (Field relationsEntityField : relationsEntityFields) {
 									Column relationsEntityColumn = (Column) relationsEntityField.getAnnotation(Column.class);
 									//获取外键的值作为关联表的查询条件
-									if (relationsEntityColumn.name().equals(foreignKey)) {
+									if (relationsEntityColumn != null && relationsEntityColumn.name().equals(foreignKey)) {
 										
 										//主表的用于关联表的foreignKey值
 										String value = "-1";
@@ -354,7 +360,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								}
 								
 								if(listEntityClazz==null){
-									Log.e(TAG, "对象模型需要设置List的泛型");
+									AbLogUtil.e(AbDBDaoImpl.class, "对象模型需要设置List的泛型");
 									return null;
 								}
 								
@@ -370,7 +376,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								for (Field relationsEntityField : relationsEntityFields) {
 									Column relationsEntityColumn = (Column) relationsEntityField.getAnnotation(Column.class);
 									//获取外键的值作为关联表的查询条件
-									if (relationsEntityColumn.name().equals(foreignKey)) {
+									if (relationsEntityColumn != null && relationsEntityColumn.name().equals(foreignKey)) {
 										
 										//主表的用于关联表的foreignKey值
 										String value = "-1";
@@ -400,7 +406,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				}
 				
 			} catch (Exception e) {
-				Log.e(this.TAG, "[queryList] from DB Exception");
+				AbLogUtil.e(AbDBDaoImpl.class, "[queryList] from DB Exception");
 				e.printStackTrace();
 			} finally {
 				closeCursor(cursor);
@@ -418,7 +424,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
      * @param selectionArgs the selection args
      * @return the list
      * @see com.ab.db.orm.dao.AbDBDao#queryList(java.lang.String, java.lang.String[])
-     * @author: zhaoqp
+     * @author: amsoft.cn
      */
 	@Override
 	public List<T> queryList(String selection, String[] selectionArgs) {
@@ -428,6 +434,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	/**
 	 * 从游标中获得映射对象列表.
 	 *
+	 * @param clazz the clazz
 	 * @param list 返回的映射对象列表
 	 * @param cursor 当前游标
 	 * @return the list from cursor
@@ -520,9 +527,10 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	@Override
 	public long insert(T entity, boolean flag) {
 			String sql = null;
-			long row = 0L;
+			long rowId = -1;
 			try {
 				lock.lock();
+				checkDBOpened();
 				ContentValues cv = new ContentValues();
 				if (flag) {
 					// id自增
@@ -531,8 +539,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					// id需指定
 					sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 				}
-				Log.d(TAG, "[insert]: insert into " + this.tableName + " " + sql);
-				row = db.insert(this.tableName, null, cv);
+				AbLogUtil.d(AbDBDaoImpl.class, "[insert]: insert into " + this.tableName + " " + sql);
+				rowId = db.insert(this.tableName, null, cv);
 				
 				//获取关联域的操作类型和关系类型
 				String foreignKey = null;
@@ -555,7 +563,7 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					relationsField.setAccessible(true);
 					
 					if(!(action.indexOf(ActionType.insert)!=-1)){
-						return row;
+						return rowId;
 					}
 					
 					if(RelationsType.one2one.equals(type)){
@@ -577,8 +585,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								relationsTableName = table.name();
 							}
 							
-							Log.d(TAG, "[insert]: insert into " + relationsTableName + " " + sql);
-							row += db.insert(relationsTableName, null, relationsCv);
+							AbLogUtil.d(AbDBDaoImpl.class, "[insert]: insert into " + relationsTableName + " " + sql);
+							db.insert(relationsTableName, null, relationsCv);
 						}
 						
 					}else if(RelationsType.one2many.equals(type) || RelationsType.many2many.equals(type)){
@@ -602,8 +610,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 									relationsTableName = table.name();
 								}
 								
-								Log.d(TAG, "[insert]: insert into " + relationsTableName + " " + sql);
-								row += db.insert(relationsTableName, null, relationsCv);
+								AbLogUtil.d(AbDBDaoImpl.class, "[insert]: insert into " + relationsTableName + " " + sql);
+								db.insert(relationsTableName, null, relationsCv);
 							}
 						}
 						
@@ -611,36 +619,47 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				}
 				
 			} catch (Exception e) {
-				Log.d(this.TAG, "[insert] into DB Exception.");
+				AbLogUtil.d(AbDBDaoImpl.class, "[insert] into DB Exception.");
 				e.printStackTrace();
-				row = -1;
 			}finally {
 				lock.unlock();
 			}
-			return row;
+			return rowId;
 	}
 	
 	
 	/**
-	 * 描述：插入列表
+	 * 描述：插入列表.
+	 *
+	 * @param entityList the entity list
+	 * @return the long[] 插入成功的数据ID
 	 * @see com.ab.db.orm.dao.AbDBDao#insertList(java.util.List)
 	 */
 	@Override
-	public long insertList(List<T> entityList) {
+	public long[] insertList(List<T> entityList) {
 		return insertList(entityList, true);
 	}
 
 	/**
-	 * 描述：插入列表
+	 * 描述：插入列表.
+	 *
+	 * @param entityList the entity list
+	 * @param flag the flag
+	 * @return the long[] 插入成功的数据ID
 	 * @see com.ab.db.orm.dao.AbDBDao#insertList(java.util.List, boolean)
 	 */
 	@Override
-	public long insertList(List<T> entityList,boolean flag) {
+	public long[] insertList(List<T> entityList,boolean flag) {
 			String sql = null;
-			long rows = 0;
+			long[] rowIds = new long[entityList.size()];
+			for(int i=0;i<rowIds.length;i++){
+				rowIds[i] = -1;
+			}
 			try {
 				lock.lock();
-				for(T entity : entityList){
+				checkDBOpened();
+				for(int i=0;i<entityList.size();i++){
+					T entity  = entityList.get(i);
 					ContentValues cv = new ContentValues();
 					if (flag) {
 						// id自增
@@ -650,8 +669,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 						sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_INSERT);
 					}
 					
-					Log.d(TAG, "[insertList]: insert into " + this.tableName + " " + sql);
-					rows += db.insert(this.tableName, null, cv);
+					AbLogUtil.d(AbDBDaoImpl.class, "[insertList]: insert into " + this.tableName + " " + sql);
+					rowIds[i] = db.insert(this.tableName, null, cv);
 					
 					
 					//获取关联域的操作类型和关系类型
@@ -704,8 +723,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 								relationsTableName = table.name();
 							}
 							
-							Log.d(TAG, "[insertList]: insert into " + relationsTableName + " " + sql);
-							rows += db.insert(relationsTableName, null, relationsCv);
+							AbLogUtil.d(AbDBDaoImpl.class, "[insertList]: insert into " + relationsTableName + " " + sql);
+							db.insert(relationsTableName, null, relationsCv);
 						}
 						
 					}else if(RelationsType.one2many.equals(type) || RelationsType.many2many.equals(type)){
@@ -728,21 +747,21 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 									relationsTableName = table.name();
 								}
 								
-								Log.d(TAG, "[insertList]: insert into " + relationsTableName + " " + sql);
-								rows += db.insert(relationsTableName, null, relationsCv);
+								AbLogUtil.d(AbDBDaoImpl.class, "[insertList]: insert into " + relationsTableName + " " + sql);
+							    db.insert(relationsTableName, null, relationsCv);
 							}
 						}
 						
 					}
 				}
 			} catch (Exception e) {
-				Log.d(this.TAG, "[insertList] into DB Exception.");
+				AbLogUtil.d(AbDBDaoImpl.class, "[insertList] into DB Exception.");
 				e.printStackTrace();
 			} finally {
 				lock.unlock();
 			}
 	
-			return rows;
+			return rowIds;
 	}
 
 	
@@ -751,19 +770,22 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * 描述：按id删除.
 	 *
 	 * @param id the id
+	 * @return the int
 	 * @see com.ab.db.orm.dao.AbDBDao#delete(int)
 	 */
 	@Override
-	public long delete(int id) {
-	    long rows = -1;
+	public int delete(int id) {
+		int rows = 0;
 		try {
 			lock.lock();
+			checkDBOpened();
 			String where = this.idColumn + " = ?";
 		    String[] whereValue = { Integer.toString(id) };
-			Log.d(TAG, "[delete]: delelte from " + this.tableName + " where "
+			AbLogUtil.d(AbDBDaoImpl.class, "[delete]: delelte from " + this.tableName + " where "
 					+ where.replace("?", String.valueOf(id)));
 			rows =  db.delete(this.tableName, where, whereValue);
 		} catch (Exception e) {
+			AbLogUtil.d(AbDBDaoImpl.class, "[delete] DB Exception.");
 			e.printStackTrace();
 		}finally{
 			lock.unlock();
@@ -775,11 +797,12 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	 * 描述：按id删除.
 	 *
 	 * @param ids the ids
+	 * @return the int
 	 * @see com.ab.db.orm.dao.AbDBDao#delete(java.lang.Integer[])
 	 */
 	@Override
-	public long delete(Integer... ids) {
-		long rows = -1;
+	public int delete(Integer... ids) {
+		int rows = 0;
 		if (ids.length > 0) {
 			for (int i = 0; i < ids.length; i++) {
 				rows += delete(ids[i]);
@@ -790,21 +813,27 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	
 
 	/**
-	 * 描述：按条件删除数据
+	 * 描述：按条件删除数据.
+	 *
+	 * @param whereClause the where clause
+	 * @param whereArgs the where args
+	 * @return the int
 	 * @see com.ab.db.orm.dao.AbDBDao#delete(java.lang.String, java.lang.String[])
 	 */
 	@Override
-	public long delete(String whereClause, String[] whereArgs) {
-		long rows = -1;
+	public int delete(String whereClause, String[] whereArgs) {
+		int rows = 0;
 		try {
 			lock.lock();
+			checkDBOpened();
 			String mLogSql = getLogSql(whereClause,whereArgs);
 			if(!AbStrUtil.isEmpty(mLogSql)){
 				mLogSql +=" where ";
 			}
-			Log.d(TAG, "[delete]: delete from " + this.tableName + mLogSql);
+			AbLogUtil.d(AbDBDaoImpl.class, "[delete]: delete from " + this.tableName + mLogSql);
 		    rows = db.delete(this.tableName, whereClause, whereArgs);
 		} catch (Exception e) {
+			AbLogUtil.d(AbDBDaoImpl.class, "[delete] DB Exception.");
 			e.printStackTrace();
 		}finally{
 			lock.unlock();
@@ -813,17 +842,21 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 
 	/**
-	 * 描述：清空数据
+	 * 描述：清空数据.
+	 *
+	 * @return the int 影响的行
 	 * @see com.ab.db.orm.dao.AbDBDao#deleteAll()
 	 */
 	@Override
-	public long deleteAll() {
-		long rows = -1;
+	public int deleteAll() {
+		int rows = 0;
 		try {
 			lock.lock();
-			Log.d(TAG, "[delete]: delete from " + this.tableName );
+			checkDBOpened();
+			AbLogUtil.d(AbDBDaoImpl.class, "[delete]: delete from " + this.tableName );
 			rows = db.delete(this.tableName,null,null);
 		} catch (Exception e) {
+			AbLogUtil.d(AbDBDaoImpl.class, "[delete] DB Exception.");
 			e.printStackTrace();
 		}finally{
 			lock.unlock();
@@ -834,49 +867,54 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	/**
 	 * 描述：更新实体.
 	 * @param entity the entity
-	 * @return the long
+	 * @return the int 影响的行
 	 * @see com.ab.db.orm.dao.AbDBDao#update(java.lang.Object)
 	 */
 	@Override
-	public long update(T entity) {
-			long row = 0;
-			try {
-				lock.lock();
-				ContentValues cv = new ContentValues();
-	
-				//注意返回的sql中包含主键列
-				String sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_UPDATE);
-	
-				String where = this.idColumn + " = ?";
-				int id = Integer.parseInt(cv.get(this.idColumn).toString());
-				//set sql中不能包含主键列
-				cv.remove(this.idColumn);
-				
-				Log.d(TAG, "[update]: update " + this.tableName + " set " + sql
-						+ " where " + where.replace("?", String.valueOf(id)));
-	
-				String[] whereValue = { Integer.toString(id) };
-				row = db.update(this.tableName, cv, where, whereValue);
-			} catch (Exception e) {
-				Log.d(this.TAG, "[update] DB Exception.");
-				e.printStackTrace();
-			} finally {
-				lock.unlock();
-			}
-		    return row;
+	public int update(T entity) {
+		int rows = 0;
+		try {
+			lock.lock();
+			checkDBOpened();
+			ContentValues cv = new ContentValues();
+
+			//注意返回的sql中包含主键列
+			String sql = setContentValues(entity, cv, TYPE_NOT_INCREMENT,METHOD_UPDATE);
+
+			String where = this.idColumn + " = ?";
+			int id = Integer.parseInt(cv.get(this.idColumn).toString());
+			//set sql中不能包含主键列
+			cv.remove(this.idColumn);
+			
+			AbLogUtil.d(AbDBDaoImpl.class, "[update]: update " + this.tableName + " set " + sql
+					+ " where " + where.replace("?", String.valueOf(id)));
+
+			String[] whereValue = { Integer.toString(id) };
+			rows = db.update(this.tableName, cv, where, whereValue);
+		} catch (Exception e) {
+			AbLogUtil.d(AbDBDaoImpl.class, "[update] DB Exception.");
+			e.printStackTrace();
+		} finally {
+			lock.unlock();
+		}
+	    return rows;
 	}
 	
 
 	/**
-	 * 描述：更新列表
+	 * 描述：更新列表.
+	 *
+	 * @param entityList the entity list
+	 * @return the int 影响的行
 	 * @see com.ab.db.orm.dao.AbDBDao#updateList(java.util.List)
 	 */
 	@Override
-	public long updateList(List<T> entityList) {
+	public int updateList(List<T> entityList) {
 			String sql = null;
-			long row = 0;
+			int rows = 0;
 			try {
 				lock.lock();
+				checkDBOpened();
 				for(T entity:entityList){
 					ContentValues cv = new ContentValues();
 	
@@ -887,20 +925,20 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 					int id = Integer.parseInt(cv.get(this.idColumn).toString());
 					cv.remove(this.idColumn);
 	
-					Log.d(TAG, "[update]: update " + this.tableName + " set " + sql
+					AbLogUtil.d(AbDBDaoImpl.class, "[update]: update " + this.tableName + " set " + sql
 							+ " where " + where.replace("?", String.valueOf(id)));
 	
 					String[] whereValue = { Integer.toString(id) };
-					db.update(this.tableName, cv, where, whereValue);
+					rows += db.update(this.tableName, cv, where, whereValue);
 				}
 			} catch (Exception e) {
-				Log.d(this.TAG, "[update] DB Exception.");
+				AbLogUtil.d(AbDBDaoImpl.class, "[update] DB Exception.");
 				e.printStackTrace();
 			} finally {
 				lock.unlock();
 			}
 	
-			return row;
+			return rows;
 	}
 
 	/**
@@ -975,7 +1013,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 		List<Map<String, String>> retList = new ArrayList<Map<String, String>>();
 		try {
 			lock.lock();
-			Log.d(TAG, "[queryMapList]: " + getLogSql(sql, selectionArgs));
+			checkDBOpened();
+			AbLogUtil.d(AbDBDaoImpl.class, "[queryMapList]: " + getLogSql(sql, selectionArgs));
 			cursor = db.rawQuery(sql, selectionArgs);
 			while (cursor.moveToNext()) {
 				Map<String, String> map = new HashMap<String, String>();
@@ -990,8 +1029,8 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 				retList.add(map);
 			}
 		} catch (Exception e) {
+			AbLogUtil.e(AbDBDaoImpl.class, "[queryMapList] from DB exception");
 			e.printStackTrace();
-			Log.e(TAG, "[queryMapList] from DB exception");
 		} finally {
 			closeCursor(cursor);
 			lock.unlock();
@@ -1014,13 +1053,14 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
        int count = 0;
        try{
     	   lock.lock();
-    	   Log.d(TAG, "[queryCount]: " + getLogSql(sql, selectionArgs));
+    	   checkDBOpened();
+    	   AbLogUtil.d(AbDBDaoImpl.class, "[queryCount]: " + getLogSql(sql, selectionArgs));
            cursor = db.query(this.tableName, null, sql, selectionArgs, null, null,null);
            if(cursor != null){
         	   count = cursor.getCount();
            }
        }catch (Exception e){
-    	   Log.e(TAG, "[queryCount] from DB exception");
+    	   AbLogUtil.e(AbDBDaoImpl.class, "[queryCount] from DB exception");
            e.printStackTrace();
        }finally{
     	   closeCursor(cursor);
@@ -1040,14 +1080,15 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	public void execSql(String sql, Object[] selectionArgs) {
 		try {
 			lock.lock();
-			Log.d(TAG, "[execSql]: " + getLogSql(sql, selectionArgs));
+			checkDBOpened();
+			AbLogUtil.d(AbDBDaoImpl.class, "[execSql]: " + getLogSql(sql, selectionArgs));
 			if (selectionArgs == null) {
 				db.execSQL(sql);
 			} else {
 				db.execSQL(sql, selectionArgs);
 			}
 		} catch (Exception e) {
-			Log.e(TAG, "[execSql] DB exception.");
+			AbLogUtil.e(AbDBDaoImpl.class, "[execSql] DB exception.");
 			e.printStackTrace();
 		} finally {
 			lock.unlock();
@@ -1055,10 +1096,9 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 	
 	/**
-	 * 
-	 * 描述：获取写数据库，数据操作前必须调用
+	 * 描述：获取写数据库，数据操作前必须调用.
+	 *
 	 * @param transaction 是否开启事务
-	 * @throws 
 	 */
 	public void startWritableDatabase(boolean transaction){
 		try {
@@ -1078,41 +1118,15 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 	
 	/**
-	 * 
-	 * 描述：获取读数据库，数据操作前必须调用
-	 * @param transaction 是否开启事务
-	 * @throws 
+	 * 描述：获取读数据库，数据操作前必须调用.
 	 */
-	public void startReadableDatabase(boolean transaction){
+	public void startReadableDatabase(){
 		try {
 			lock.lock();
 			if(db == null || !db.isOpen()){
 				db = this.dbHelper.getReadableDatabase();
 			}
 			
-			if(db!=null && transaction){
-				db.beginTransaction();
-			}
-		}catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			lock.unlock();
-		}
-		
-	}
-	
-	
-	/**
-	 * 
-	 * 描述：操作完成后设置事务成功后才能调用closeDatabase(true);
-	 * @throws 
-	 */
-	public void setTransactionSuccessful(){
-		try {
-			lock.lock();
-			if(db!=null){
-				db.setTransactionSuccessful();
-			}
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally{
@@ -1122,16 +1136,14 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 	}
 	
 	/**
-	 * 
-	 * 描述：关闭数据库，数据操作后必须调用
-	 * @param transaction  关闭事务
-	 * @throws 
+	 * 描述：关闭数据库，数据操作后必须调用.
 	 */
-	public void closeDatabase(boolean transaction){
+	public void closeDatabase(){
 		try {
 			lock.lock();
 			if(db!=null){
-				if(transaction){
+				if(db.inTransaction()){
+					db.setTransactionSuccessful();
 					db.endTransaction();
 				}
 				if(db.isOpen()){
@@ -1162,5 +1174,15 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 			sql = sql.replaceFirst("\\?", "'" + String.valueOf(args[i]) + "'");
 		}
 		return sql;
+	}
+	
+	/**
+	 * 
+	 * 描述：检查DB是否已经打开.
+	 */
+	private void checkDBOpened(){
+		if(db == null){
+            throw new RuntimeException("先调用 startReadableDatabase()或者startWritableDatabase(boolean transaction)初始化数据库。");
+        }
 	}
 }
