@@ -17,6 +17,8 @@ package com.ab.util;
 
 import java.math.BigDecimal;
 
+import android.graphics.PointF;
+
 
 // TODO: Auto-generated Javadoc
 
@@ -473,6 +475,18 @@ public class AbMathUtil{
     	    return false;
 	   }
 	}
+    
+    
+    /**
+     * 
+     * 描述：获取两点间的距离.
+     * @param p1
+     * @param p2
+     * @return
+     */
+    public static double getDistance(PointF p1,PointF p2) {  
+        return getDistance(p1.x,p1.y,p2.x,p2.y);  
+    }  
 
     /**
      *  

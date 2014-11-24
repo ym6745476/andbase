@@ -30,10 +30,10 @@ import com.ab.util.AbJsonUtil;
 public class AbResult {
 	
 	/** 返回码：成功. */
-    public static final int RESULR_OK = 0;
+    public static final int RESULT_OK = 0;
     
     /** 返回码：失败. */
-    public static final int RESULR_ERROR = -1;
+    public static final int RESULT_ERROR = -1;
 
 	/** 结果code. */
 	private int resultCode;
