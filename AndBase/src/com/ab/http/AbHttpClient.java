@@ -618,6 +618,7 @@ public class AbHttpClient {
             HttpUriRequest request = (HttpUriRequest) mHttpContext.getAttribute(ExecutionContext.HTTP_REQUEST);
             //请求成功  
   			int statusCode = response.getStatusLine().getStatusCode();
+  			String statusDesc = response.getStatusLine().getReasonPhrase();
   			HttpEntity entity = response.getEntity();
   			String responseBody = null;
             //200直接返回结果
@@ -676,9 +677,17 @@ public class AbHttpClient {
                 }
             }else if(statusCode == HttpStatus.SC_NOT_FOUND){
             	//404
-            	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.NOT_FOUND_EXCEPTION, new AbAppException(AbAppConfig.NOT_FOUND_EXCEPTION));
+            	if(AbStrUtil.isEmpty(statusDesc)){
+            		statusDesc = AbAppConfig.NOT_FOUND_EXCEPTION;
+            	}
+            	
+            	mResponseListener.sendFailureMessage(statusCode, statusDesc, new AbAppException(AbAppConfig.NOT_FOUND_EXCEPTION));
             }else{
-  				mResponseListener.sendFailureMessage(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
+            	if(AbStrUtil.isEmpty(statusDesc)){
+            		statusDesc = AbAppConfig.REMOTE_SERVICE_EXCEPTION;
+            	}
+            	
+            	mResponseListener.sendFailureMessage(statusCode, statusDesc, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
             }
             return null;
         }
