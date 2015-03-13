@@ -70,7 +70,7 @@ public class AbAppException extends Exception {
 			}else if( e instanceof NullPointerException) {  
 				msg = AbAppConfig.NULL_POINTER_EXCEPTION;
 			}else if( e instanceof ClientProtocolException) {  
-				msg = AbAppConfig.CLIENTP_ROTOCOL_EXCEPTION;
+				msg = AbAppConfig.CLIENT_PROTOCOL_EXCEPTION;
 			}else {
 				if (e == null || AbStrUtil.isEmpty(e.getMessage())) {
 					msg = AbAppConfig.NULL_MESSAGE_EXCEPTION;

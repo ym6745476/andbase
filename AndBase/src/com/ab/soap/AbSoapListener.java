@@ -15,6 +15,9 @@
  */
 package com.ab.soap;
 
+import org.ksoap2.SoapFault;
+import org.ksoap2.serialization.SoapObject;
+
 import android.os.Handler;
 import android.os.Message;
 
@@ -64,7 +67,7 @@ public abstract class AbSoapListener {
 	 * @param statusCode the status code
 	 * @param content the content
 	 */
-    public abstract void onSuccess(int statusCode,String content);
+    public abstract void onSuccess(int statusCode,SoapObject object);
     
     /**
      * 描述：失败，调用.
@@ -75,6 +78,14 @@ public abstract class AbSoapListener {
      */
     public abstract void onFailure(int statusCode, String content,Throwable error);
     
+    
+    /**
+	 * 描述：失败，调用.
+	 *
+	 * @param statusCode the status code
+	 * @param fault the fault
+	 */
+    public abstract void onFailure(int statusCode,SoapFault fault);
     
     /**
 	 * 描述：获取数据开始.
@@ -116,6 +127,21 @@ public abstract class AbSoapListener {
 		sendMessage(obtainMessage(FAILURE_MESSAGE, new Object[] { statusCode,
 				content, error }));
 	}
+	
+	/**
+	 * 失败消息.
+	 *
+	 * @param statusCode
+	 *            the status code
+	 * @param fault
+	 *            the fault
+	 * @param error
+	 *            the error
+	 */
+	public void sendFailureMessage(int statusCode, SoapFault fault) {
+		sendMessage(obtainMessage(FAILURE_MESSAGE, new Object[] { statusCode,
+				fault}));
+	}
 
 	/**
 	 * Send success message.
@@ -123,9 +149,9 @@ public abstract class AbSoapListener {
 	 * @param statusCode the status code
 	 * @param content the content
 	 */
-	public void sendSuccessMessage(int statusCode, String content) {
+	public void sendSuccessMessage(int statusCode, SoapObject bodyIn) {
 		sendMessage(obtainMessage(SUCCESS_MESSAGE, new Object[] { statusCode,
-				content }));
+				bodyIn }));
 	}
 
 	/**
@@ -195,12 +221,17 @@ public abstract class AbSoapListener {
 				break;
 			case FAILURE_MESSAGE:
 				content = (Object[])msg.obj;
-				listener.onFailure((Integer)content[0],(String)content[1],(Throwable)content[2]);
+				if (content.length >= 2) {
+					listener.onFailure((Integer)content[0],(String)content[1],(Throwable)content[2]);
+				}else{
+					listener.onFailure((Integer)content[0],(SoapFault)content[1]);
+				}
+				
 				break;
 			case SUCCESS_MESSAGE:
 				content = (Object[]) msg.obj;
 				if (content.length >= 2) {
-					listener.onSuccess((Integer) content[0],(String) content[1]);
+					listener.onSuccess((Integer) content[0],(SoapObject) content[1]);
 				}
 
 				break;

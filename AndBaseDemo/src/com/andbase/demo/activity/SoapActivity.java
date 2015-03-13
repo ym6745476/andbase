@@ -1,10 +1,11 @@
 package com.andbase.demo.activity;
 
-import android.app.DialogFragment;
+import org.ksoap2.SoapFault;
+import org.ksoap2.serialization.SoapObject;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
 import com.ab.fragment.AbAlertDialogFragment.AbDialogOnClickListener;
@@ -13,7 +14,6 @@ import com.ab.soap.AbSoapParams;
 import com.ab.soap.AbSoapUtil;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
-import com.ab.view.progress.AbHorizontalProgressBar;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
@@ -68,9 +68,9 @@ public class SoapActivity extends AbActivity {
 					
 					//获取数据成功会调用这里
 		        	@Override
-					public void onSuccess(int statusCode, String content) {
+					public void onSuccess(int statusCode, SoapObject object) {
 		        		
-		        		AbDialogUtil.showAlertDialog(SoapActivity.this,"返回结果",content,new AbDialogOnClickListener(){
+		        		AbDialogUtil.showAlertDialog(SoapActivity.this,"返回结果",object.toString(),new AbDialogOnClickListener(){
 
 							@Override
 							public void onNegativeClick() {
@@ -95,8 +95,14 @@ public class SoapActivity extends AbActivity {
 		            	
 		            	AbToastUtil.showToast(SoapActivity.this,error.getMessage());
 					}
+		            
+		            // 失败，调用
+		            @Override
+					public void onFailure(int statusCode, SoapFault fault) {
+		            	AbToastUtil.showToast(SoapActivity.this,fault.faultstring);
+					}
 
-		            // 开始执行前
+					// 开始执行前
 		            @Override
 					public void onStart() {
 		            	//显示进度框

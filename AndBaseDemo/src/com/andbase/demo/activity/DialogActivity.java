@@ -395,7 +395,13 @@ public class DialogActivity extends AbActivity {
 		case R.id.button18:
 			AbDialogUtil.showProgressDialog(DialogActivity.this, 0,
 					"查询中...");
-			//AbDialogUtil.removeDialog(DemoAbActivity.this);
+			new Handler().postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					AbDialogUtil.removeDialog(DialogActivity.this);
+				}
+			}, 2000);
 			break;
 		case R.id.button19:
 			AbToastUtil.showToast(DialogActivity.this, "Toast提示框");

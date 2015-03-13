@@ -294,7 +294,7 @@ public class AbSqliteStorage {
 						//(3)关闭数据库
 						dao.closeDatabase();
 					}
-				    return (T)Long.valueOf(rows);
+				    return (T)Integer.valueOf(rows);
 				}
 				
                 @SuppressWarnings("hiding")
@@ -302,11 +302,7 @@ public class AbSqliteStorage {
 				public <T> void update(T obj) {
                 	 int rows = (Integer)obj;
                 	 if (paramDataUpdateListener != null){
-                		 if(rows > 0){
-                			 paramDataUpdateListener.onSuccess(rows);
-                         }else{
-                        	 paramDataUpdateListener.onFailure(AbDBStatus.EXEC_ERROR_CODE, "");
-                         }
+                		 paramDataUpdateListener.onSuccess(rows);
                      }
                      
 					

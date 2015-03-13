@@ -32,6 +32,7 @@ import org.apache.http.HttpStatus;
 import org.apache.http.HttpVersion;
 import org.apache.http.NoHttpResponseException;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.ResponseHandler;
@@ -98,6 +99,10 @@ public class AbHttpClient {
     private static final String HTTP_POST = "POST";
     private static final String USER_AGENT = "User-Agent";
     private static final String ACCEPT_ENCODING = "Accept-Encoding";
+    
+    /** CookieStore. */
+    private CookieStore mCookieStore;  
+
     /** 最大连接数. */
     private static final int DEFAULT_MAX_CONNECTIONS = 10;
     
@@ -148,7 +153,6 @@ public class AbHttpClient {
 	
 	/** HTTP 上下文*/
 	private HttpContext mHttpContext = null;
-	
     
     /**
      * 初始化.
@@ -265,17 +269,26 @@ public class AbHttpClient {
 		      httpPost.addHeader(USER_AGENT, userAgent);
 			  //压缩
 		      httpPost.addHeader(ACCEPT_ENCODING, "gzip");
+		      //是否包含文件
+		      boolean isContainFile = false;
 		      if(params != null){
 		    	  //使用NameValuePair来保存要传递的Post参数设置字符集 
 			      HttpEntity httpentity = params.getEntity(responseListener);
 			      //请求httpRequest  
 			      httpPost.setEntity(httpentity); 
+			      if(params.getFileParams().size()>0){
+			    	  isContainFile = true;
+			      }
 			  }
-
-              //取得默认的HttpClient
-      	      HttpClient httpClient = getHttpClient();  
+		      String  response = null;
+		      //取得默认的HttpClient
+		      DefaultHttpClient httpClient = getHttpClient();  
+		      if(isContainFile){
+		    	  AbLogUtil.i(mContext, "request："+url+",包含文件域!");
+		      }else{
+		      }
 		      //取得HttpResponse
-		      String  response = httpClient.execute(httpPost,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
+		      response = httpClient.execute(httpPost,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
 		      AbLogUtil.i(mContext, "request："+url+",result："+response);
 			  
 		} catch (Exception e) {
@@ -540,7 +553,7 @@ public class AbHttpClient {
      * 获取HttpClient，自签名的证书，如果想做签名参考AuthSSLProtocolSocketFactory类
      * @return
      */
-    public HttpClient getHttpClient(){
+    public DefaultHttpClient getHttpClient(){
     	
     	if(mHttpClient != null){
     		return mHttpClient;
@@ -554,7 +567,7 @@ public class AbHttpClient {
      * @param httpParams
      * @return
      */
-    public HttpClient createHttpClient(){
+    public DefaultHttpClient createHttpClient(){
     	BasicHttpParams httpParams = getHttpParams();
     	if(mIsOpenEasySSL){
     		 // 支持https的   SSL自签名的实现类
@@ -568,15 +581,13 @@ public class AbHttpClient {
                      httpParams, supportedSchemes);
              //取得HttpClient ThreadSafeClientConnManager
              mHttpClient = new DefaultHttpClient(connectionManager, httpParams);
-             //自动重试
-             mHttpClient.setHttpRequestRetryHandler(mRequestRetryHandler);
     	}else{
     		 //线程安全的HttpClient
     		 mHttpClient = new DefaultHttpClient(httpParams);
-    		 //自动重试
-    		 mHttpClient.setHttpRequestRetryHandler(mRequestRetryHandler);
     	}
-    	 
+    	//自动重试
+    	mHttpClient.setHttpRequestRetryHandler(mRequestRetryHandler);
+    	mHttpClient.setCookieStore(mCookieStore);
  	    return mHttpClient;
     }
 
@@ -766,4 +777,18 @@ public class AbHttpClient {
 	    	mHttpClient.getConnectionManager().shutdown();
 	    }
 	}
+
+
+	public CookieStore getCookieStore() {
+		if(mHttpClient!=null){
+			mCookieStore = mHttpClient.getCookieStore();
+		}
+		return mCookieStore;
+	}
+
+
+	public void setCookieStore(CookieStore cookieStore) {
+		this.mCookieStore = cookieStore;
+	}
+	
 }

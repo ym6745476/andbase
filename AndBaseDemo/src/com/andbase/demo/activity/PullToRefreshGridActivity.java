@@ -75,7 +75,7 @@ public class PullToRefreshGridActivity extends AbActivity implements OnHeaderRef
         //mAbPullListView.getHeaderView().setHeaderProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular2));
         //mAbPullListView.getFooterView().setFooterProgressBarDrawable(this.getResources().getDrawable(R.drawable.progress_circular2));
 		
-		mGridView.setColumnWidth(AbViewUtil.scale(this, 200));
+		mGridView.setColumnWidth(AbViewUtil.scaleValue(this, 200));
 		mGridView.setGravity(Gravity.CENTER);
 		mGridView.setHorizontalSpacing(5);
 		

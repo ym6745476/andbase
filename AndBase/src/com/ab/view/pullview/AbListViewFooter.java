@@ -104,7 +104,7 @@ public class AbListViewFooter extends LinearLayout {
 		//设置布局 水平方向  
 		footerView.setOrientation(LinearLayout.HORIZONTAL);
 		footerView.setGravity(Gravity.CENTER); 
-		footerView.setMinimumHeight(AbViewUtil.scale(mContext,100));
+		footerView.setMinimumHeight(AbViewUtil.scaleValue(mContext,100));
 		footerTextView = new TextView(context);  
 		footerTextView.setGravity(Gravity.CENTER_VERTICAL);
 		setTextColor(Color.rgb(107, 107, 107));
@@ -117,9 +117,9 @@ public class AbListViewFooter extends LinearLayout {
 		
 		LinearLayout.LayoutParams layoutParamsWW = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		layoutParamsWW.gravity = Gravity.CENTER;
-		layoutParamsWW.width = AbViewUtil.scale(mContext, 50);
-		layoutParamsWW.height = AbViewUtil.scale(mContext, 50);
-		layoutParamsWW.rightMargin = AbViewUtil.scale(mContext, 10);
+		layoutParamsWW.width = AbViewUtil.scaleValue(mContext, 50);
+		layoutParamsWW.height = AbViewUtil.scaleValue(mContext, 50);
+		layoutParamsWW.rightMargin = AbViewUtil.scaleValue(mContext, 10);
 		footerView.addView(footerProgressBar,layoutParamsWW);
 		
 		LinearLayout.LayoutParams layoutParamsWW1 = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);

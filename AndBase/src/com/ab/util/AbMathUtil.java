@@ -16,8 +16,14 @@
 package com.ab.util;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
-import android.graphics.PointF;
+import com.ab.model.AbCircle;
+import com.ab.model.AbPoint;
 
 
 // TODO: Auto-generated Javadoc
@@ -238,6 +244,16 @@ public class AbMathUtil{
 	}
     
     /**
+	 * 描述：计算对数
+	 * @param value value的对数
+	 * @param base  以base为底
+	 * @return
+	 */
+	public static double log(double value, double base) {
+		return Math.log(value) / Math.log(base);
+	}
+    
+    /**
      * 
      * 描述：点在直线上.
      * 点A（x，y）,B(x1,y1),C(x2,y2) 点A在直线BC上吗?
@@ -249,7 +265,7 @@ public class AbMathUtil{
      * @param y2
      * @return
      */
-    public boolean pointAtSLine(double x,double y,double x1,double y1,double x2,double y2){
+    public boolean pointOnLine(double x,double y,double x1,double y1,double x2,double y2){
         double result = ( x - x1 ) * ( y2 - y1 ) - ( y - y1 ) * ( x2 - x1 );
     	if(result==0){
 			return true;
@@ -299,7 +315,7 @@ public class AbMathUtil{
      * @param y4
      * @return
      */
-    public  static boolean LineAtLine(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
+    public  static boolean LineOnLine(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
 	    double k1 = ( y2-y1 )/(x2-x1);
 	    double k2 = ( y4-y3 )/(x4-x3);
 		if(k1==k2){
@@ -328,7 +344,7 @@ public class AbMathUtil{
      * @param y4
      * @return
      */
-    public static boolean eLineAtELine(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
+    public static boolean eLineOnELine(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
 		    double k1 = ( y2-y1 )/(x2-x1);
 		    double k2 = ( y4-y3 )/(x4-x3);
 			if(k1==k2){
@@ -366,7 +382,7 @@ public class AbMathUtil{
      * @param y4
      * @return
      */
-    public static boolean eLineAtLine(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
+    public static boolean eLineOnLine(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
 		    double k1 = ( y2-y1 )/(x2-x1);
 		    double k2 = ( y4-y3 )/(x4-x3);
 			if(k1==k2){
@@ -401,7 +417,7 @@ public class AbMathUtil{
      * @param y2
      * @return
      */
-    public static boolean pointAtRect(double x,double y,double x1,double y1,double x2,double y2){
+    public static boolean pointOnRect(double x,double y,double x1,double y1,double x2,double y2){
 	      if(x >= Math.min(x1, x2) && x <= Math.max(x1,x2) && y >= Math.min(y1, y2) && y <= Math.max(y1,y2)){
     	     //System.out.println("点（"+x+","+y+"）在矩形内上");
     	     return true;
@@ -426,7 +442,7 @@ public class AbMathUtil{
      * @param y4
      * @return
      */
-    public static boolean rectAtRect(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
+    public static boolean rectOnRect(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){
 	      if(x1 >= Math.min(x3, x4) && x1 <= Math.max(x3,x4) 
 			  && y1 >= Math.min(y3, y4) && y1 <= Math.max(y3,y4)
 			  && x2 >= Math.min(x3, x4) && x2 <= Math.max(x3,x4) 
@@ -453,7 +469,7 @@ public class AbMathUtil{
      * @param y2
      * @return
      */
-    public static boolean circleAtRect(double x,double y,double r,double x1,double y1,double x2,double y2){
+    public static boolean circleOnRect(double x,double y,double r,double x1,double y1,double x2,double y2){
 		//圆心在矩形内   
 		if(x >= Math.min(x1, x2) && x <= Math.max(x1,x2) 
 						  && y >= Math.min(y1, y2) && y <= Math.max(y1,y2)){
@@ -476,6 +492,59 @@ public class AbMathUtil{
 	   }
 	}
     
+    /**
+	 * 
+	 * 描述：点是否是两个圆的交点.
+	 * @param point
+	 * @param c1
+	 * @param c2
+	 * @return
+	 */
+    public static boolean pointOnCircle(AbPoint point,AbCircle c1,AbCircle c2){
+		
+		if(Math.pow(point.x-c2.point.x,2) + Math.pow(point.y-c2.point.y,2)==Math.pow(c2.r,2)
+				&& Math.pow(point.x-c1.point.x,2) + Math.pow(point.y-c1.point.y,2)==Math.pow(c1.r,2)){
+			return true;
+		}
+		return false;
+		
+	}
+    
+    /**
+ 	 * 
+ 	 * 描述：点是否是两个圆的交点,允许0.01误差.
+ 	 * @param point
+ 	 * @param c1
+ 	 * @param c2
+ 	 * @param offset
+ 	 * @return
+ 	 */
+     public static boolean pointOnCircle(AbPoint point,AbCircle c1,AbCircle c2,float offset){
+ 		
+ 		if((Math.pow(point.x-c2.point.x,2) + Math.pow(point.y-c2.point.y,2)<=Math.pow(c2.r,2)+offset && Math.pow(point.x-c2.point.x,2) + Math.pow(point.y-c2.point.y,2)>=Math.pow(c2.r,2)-offset)
+ 				&& (Math.pow(point.x-c1.point.x,2) + Math.pow(point.y-c1.point.y,2)<=Math.pow(c1.r,2)+offset && Math.pow(point.x-c1.point.x,2) + Math.pow(point.y-c1.point.y,2)>=Math.pow(c1.r,2)-offset)){
+ 			return true;
+ 		}
+ 		return false;
+ 		
+ 	}
+    
+    /**
+     * 
+     * 描述：点在圆上.
+     * @param point
+     * @param circle
+     * @return
+     */
+    public static boolean pointInCircle(AbPoint point,AbCircle circle){
+		//圆的方程 (x-x0)^2 + (y-y0)^2 <=r^2
+		if(Math.pow(point.x-circle.point.x,2) + Math.pow(point.y-circle.point.y,2) <= Math.pow(circle.r,2)){
+			return true;
+        }else{
+    	    return false;
+	   }
+	}
+    
     
     /**
      * 
@@ -484,7 +553,7 @@ public class AbMathUtil{
      * @param p2
      * @return
      */
-    public static double getDistance(PointF p1,PointF p2) {  
+    public static double getDistance(AbPoint p1,AbPoint p2) {  
         return getDistance(p1.x,p1.y,p2.x,p2.y);  
     }  
 
@@ -530,5 +599,97 @@ public class AbMathUtil{
 			return true;
 		}
 	}
+	
+	/**
+	 * 
+	 * 描述：求两个圆的交点.
+	 * @param c1
+	 * @param c2
+	 * @return
+	 */
+	public static List<AbPoint> circleCrossoverPoint(AbCircle circle1,AbCircle circle2){
+		List<AbPoint> pointList = new ArrayList<AbPoint>();
+		//第一个圆的参数方程:
+		// x = r1 * cosCita + x1
+		// y = r1 * sinCita + y1
+		
+		//第二个圆的方程
+		//(x0-x2)^2 + (y0-y2)^2 = r2^2
+		
+		//第一个带入第二个
+		//2r1(x1-x2)cosCita + 2r1(y1-y2)sinCita = r2^2 - r1^2 - (x1-x2)^2 - (y1-y2)^2
+		//令 :
+		//a = 2r1(x1-x2)
+		//b = 2r1(y1-y2)
+		//c = r2^2 - r1^2 - (x1-x2)^2 - (y1-y2)^2
+				
+		double a = 2 * circle1.r * (circle1.point.x - circle2.point.x);
+		
+		double b = 2 * circle1.r * (circle1.point.y - circle2.point.y);
+		
+		double c = (Math.pow(circle2.r, 2) - Math.pow(circle1.r, 2) - Math.pow((circle1.point.x - circle2.point.x), 2) - Math.pow((circle1.point.y - circle2.point.y), 2));
+		
+		//得到：
+		//acosCita + bsinCita = c
+		
+		//double sinCita = Math.sqrt(1-cosCita);
+		
+		//a*cosCita + b* Math.sqrt(1-cosCita) = c
+				
+		//得到：
+		//(a^2+b^2)cosCita^2 - 2ac*cosCita + (c^2-b^2) = 0
+		
+		//根据 ax^2+bx + c = 0 式
+		//令：p = a^2+b^2
+		//   q = - 2ac,
+		//   r = c^2-b^2
+		
+		//a
+		double p = (Math.pow(a, 2) + Math.pow(b, 2));
+		//b
+		double q = -2 * a * c;
+		//c
+		double r = (Math.pow(c, 2) - Math.pow(b, 2));
+		
+		//cosCita = (-b+-(b^2-4ac)^(1/2))/2a
+		double t = (Math.pow(q, 2) - 4 * p * r);
+		double cosCita = (Math.sqrt(t) - q) / (2 * p);
+		double cosCita2 = (-Math.sqrt(t) - q) / (2 * p);
+		
+		double x_1 = cosCita * circle1.r + circle1.point.x;
+		double y_1_1 = Math.sqrt(Math.pow(circle1.r, 2)-Math.pow(x_1-circle1.point.x,2))+circle1.point.y;
+		double y_1_2 = -Math.sqrt(Math.pow(circle1.r, 2)-Math.pow(x_1-circle1.point.x,2))+circle1.point.y;
+		
+		Set<AbPoint> pointSet = new HashSet<AbPoint>();
+		AbPoint p1_1 = new AbPoint(x_1,y_1_1);
+		if(pointOnCircle(p1_1,circle1,circle2)){
+			pointSet.add(p1_1);
+		}
+		
+		AbPoint p1_2 = new AbPoint(x_1,y_1_2);
+		if(pointOnCircle(p1_2,circle1,circle2)){
+			pointSet.add(p1_2);
+		}
+		
+		double x_2 = cosCita2 * circle1.r + circle1.point.x;
+		double y_2_1 = Math.sqrt(Math.pow(circle1.r, 2)-Math.pow(x_2-circle1.point.x,2))+circle1.point.y;
+		double y_2_2 = -Math.sqrt(Math.pow(circle1.r, 2)-Math.pow(x_2-circle1.point.x,2))+circle1.point.y;
+		
+		AbPoint p2_1 = new AbPoint(x_2,y_2_1);
+		if(pointOnCircle(p2_1,circle1,circle2)){
+			pointSet.add(p2_1);
+		}
+		
+		AbPoint p2_2 = new AbPoint(x_2,y_2_2);
+		if(pointOnCircle(p2_2,circle1,circle2)){
+			pointSet.add(p2_2);
+		}
+		for(Iterator<AbPoint> iter = pointSet.iterator();iter.hasNext();){   
+			AbPoint point = (AbPoint)iter.next();   
+			pointList.add(point);
+        }  
+		return pointList;
+	}
+	
  
 }

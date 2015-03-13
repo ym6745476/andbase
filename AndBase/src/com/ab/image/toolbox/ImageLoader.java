@@ -75,8 +75,10 @@ public class ImageLoader {
      * must not block. Implementation with an LruCache is recommended.
      */
     public interface ImageCache {
-        public Bitmap getBitmap(String url);
-        public void putBitmap(String url, Bitmap bitmap);
+        public Bitmap getBitmap(String cacheKey);
+        public void putBitmap(String cacheKey, Bitmap bitmap);
+        public String getCacheKey(String requestUrl,int maxWidth,int maxHeight);
+        public void removeBitmap(String requestUrl,int maxWidth,int maxHeight);
     }
 
     /**
@@ -126,7 +128,7 @@ public class ImageLoader {
     public boolean isCached(String requestUrl, int maxWidth, int maxHeight) {
         throwIfNotOnMainThread();
 
-        String cacheKey = getCacheKey(requestUrl, maxWidth, maxHeight);
+        String cacheKey = mCache.getCacheKey(requestUrl, maxWidth, maxHeight);
         return mCache.getBitmap(cacheKey) != null;
     }
 
@@ -161,7 +163,7 @@ public class ImageLoader {
         // only fulfill requests that were initiated from the main thread.
         throwIfNotOnMainThread();
 
-        final String cacheKey = getCacheKey(requestUrl, maxWidth, maxHeight);
+        final String cacheKey = mCache.getCacheKey(requestUrl, maxWidth, maxHeight);
 
         // Try to look up the request in the cache of remote images.
         Bitmap cachedBitmap = mCache.getBitmap(cacheKey);
@@ -436,16 +438,6 @@ public class ImageLoader {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             throw new IllegalStateException("ImageLoader must be invoked from the main thread.");
         }
-    }
-    /**
-     * Creates a cache key for use with the L1 cache.
-     * @param url The URL of the request.
-     * @param maxWidth The max-width of the output.
-     * @param maxHeight The max-height of the output.
-     */
-    private static String getCacheKey(String url, int maxWidth, int maxHeight) {
-        return new StringBuilder(url.length() + 12).append("#W").append(maxWidth)
-                .append("#H").append(maxHeight).append(url).toString();
     }
 
 	public void setExpiresTime(int expiresTime) {

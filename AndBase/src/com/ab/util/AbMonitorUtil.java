@@ -97,8 +97,8 @@ public final class AbMonitorUtil {
                                | LayoutParams.FLAG_NOT_TOUCHABLE;
          */
         // 设置悬浮窗的长得宽
-		mMonitorParams.width = AbViewUtil.scale(context, 100);
-		mMonitorParams.height = AbViewUtil.scale(context, 50);
+		mMonitorParams.width = AbViewUtil.scaleValue(context, 100);
+		mMonitorParams.height = AbViewUtil.scaleValue(context, 50);
         mWindowManager.addView(mAbMonitorView, mMonitorParams);
         mMonitorOpened = true;
 		mMonitorRunnable = new Runnable() {

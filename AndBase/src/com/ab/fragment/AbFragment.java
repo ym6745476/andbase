@@ -217,6 +217,17 @@ public class AbFragment extends Fragment {
 	}
 	
 	/**
+	 * 显示内容View
+	 */
+	public void showContentView(View view) {
+		rootView.removeAllViews();
+		AbViewUtil.removeSelfFromParent(mContentView);
+		mContentView  = view;
+		rootView.addView(mContentView,new LinearLayout.LayoutParams(
+				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+	}
+	
+	/**
 	 * 加载完成调用
 	 */
 	public void loadFinish(){

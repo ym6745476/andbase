@@ -63,7 +63,7 @@ public class ImageListAdapter extends BaseAdapter{
         //用于将xml转为View
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
-        mAbImageLoader = new AbImageLoader(mContext);
+        mAbImageLoader = AbImageLoader.newInstance(mContext);
         mAbImageLoader.setMaxWidth(150);
         mAbImageLoader.setMaxHeight(150);
         mAbImageLoader.setLoadingImage(R.drawable.image_loading);

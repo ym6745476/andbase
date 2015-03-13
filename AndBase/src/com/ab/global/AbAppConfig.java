@@ -34,7 +34,10 @@ public class AbAppConfig {
 	public static int UI_WIDTH = 720;
 	
 	/**  UI设计的基准高度. */
-	public static int UI_HEIGHT = 1080;
+	public static int UI_HEIGHT = 1280;
+	
+	/**  UI设计的密度. */
+	public static int UI_DENSITY = 2;
 	
 	/** 默认 SharePreferences文件名. */
 	public static String SHARED_PATH = "app_share";
@@ -79,7 +82,7 @@ public class AbAppConfig {
 	public static String NULL_MESSAGE_EXCEPTION = "抱歉，程序出错了";
 	
 	/** The Constant CLIENTPROTOCOLEXCEPTION. */
-	public static String CLIENTP_ROTOCOL_EXCEPTION = "Http请求参数错误";
+	public static String CLIENT_PROTOCOL_EXCEPTION = "Http请求参数错误";
 	
 	/** 参数个数不够. */
 	public static String MISSING_PARAMETERS = "参数没有包含足够的值";

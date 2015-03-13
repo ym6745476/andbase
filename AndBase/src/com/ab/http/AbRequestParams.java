@@ -19,6 +19,8 @@ package com.ab.http;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -99,7 +101,7 @@ public class AbRequestParams {
      */
     public void put(String key, String value) {
         if (key != null && value != null) {
-        	urlParams.put(key, value);
+        	urlParams.put(encode(key), encode(value));
         }
     }
     
@@ -112,7 +114,7 @@ public class AbRequestParams {
      */
     public void put(String key, File file,String contentType) {
         if (key != null && file != null) {
-        	fileParams.put(key, new FileWrapper(file,contentType));
+        	fileParams.put(encode(key), new FileWrapper(file,contentType));
         }
     }
     
@@ -123,7 +125,7 @@ public class AbRequestParams {
      * @param file the file
      */
     public void put(String key, File file) {
-    	put(key,file,APPLICATION_OCTET_STREAM);
+    	put(encode(key),file,APPLICATION_OCTET_STREAM);
     }
     
     
@@ -133,8 +135,8 @@ public class AbRequestParams {
      * @param key the key
      */
     public void remove(String key) {
-        urlParams.remove(key);
-        fileParams.remove(key);
+        urlParams.remove(encode(key));
+        fileParams.remove(encode(key));
     }
 
     /**
@@ -149,9 +151,9 @@ public class AbRequestParams {
             if (result.length() > 0)
                 result.append("&");
 
-            result.append(entry.getKey());
+            result.append(decode(entry.getKey()));
             result.append("=");
-            result.append(entry.getValue());
+            result.append(decode(entry.getValue()));
         }
 
         return result.toString();
@@ -164,7 +166,7 @@ public class AbRequestParams {
     public List<BasicNameValuePair> getParamsList() {
         List<BasicNameValuePair> paramsList = new LinkedList<BasicNameValuePair>();
         for (ConcurrentHashMap.Entry<String, String> entry : urlParams.entrySet()) {
-        	paramsList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+        	paramsList.add(new BasicNameValuePair(decode(entry.getKey()), decode(entry.getValue())));
         }
         return paramsList;
     }
@@ -241,6 +243,26 @@ public class AbRequestParams {
 	public ConcurrentHashMap<String, String> getUrlParams() {
 		return urlParams;
 	}
+	
+	
+
+	/**
+	 * Gets the file params.
+	 *
+	 * @return the file params
+	 */
+	public ConcurrentHashMap<String, FileWrapper> getFileParams() {
+		return fileParams;
+	}
+
+	/**
+	 * Sets the file params.
+	 *
+	 * @param fileParams the file params
+	 */
+	public void setFileParams(ConcurrentHashMap<String, FileWrapper> fileParams) {
+		this.fileParams = fileParams;
+	}
 
 	/**
 	 * 设置url参数.
@@ -250,6 +272,37 @@ public class AbRequestParams {
 	public void setUrlParams(ConcurrentHashMap<String, String> urlParams) {
 		this.urlParams = urlParams;
 	}
+	
+	/**
+	 * 
+	 * 描述：参数转换.
+	 * @param s
+	 * @return
+	 */
+	public String encode(String s){
+		try {
+			return URLEncoder.encode(s,HTTP.UTF_8);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return s;
+	}
+	
+	/**
+	 * 
+	 * 描述：参数转换.
+	 * @param s
+	 * @return
+	 */
+	public String decode(String s){
+		try {
+			return URLDecoder.decode(s,HTTP.UTF_8);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return s;
+	}
+	
 	
 	/**
      * 文件类.

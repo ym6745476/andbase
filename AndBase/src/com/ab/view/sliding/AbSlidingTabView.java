@@ -17,12 +17,13 @@ package com.ab.view.sliding;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build.VERSION;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -33,9 +34,9 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.ab.adapter.AbFragmentPagerAdapter;
 import com.ab.util.AbLogUtil;
+import com.ab.view.sample.AbViewPager;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -47,6 +48,7 @@ import com.ab.util.AbLogUtil;
  * @version v1.0
  * @date：2013-05-17 下午6:46:29
  */
+@SuppressLint("NewApi")
 public class AbSlidingTabView extends LinearLayout {
 	
 	/** The context. */
@@ -83,7 +85,7 @@ public class AbSlidingTabView extends LinearLayout {
 	private HorizontalScrollView mTabScrollView  = null;
 	
 	/** The m view pager. */
-	private ViewPager mViewPager;
+	private AbViewPager mViewPager;
 	
 	/** tab的文字. */
 	private List<String> tabItemTextList = null;
@@ -116,7 +118,7 @@ public class AbSlidingTabView extends LinearLayout {
     public AbSlidingTabView(Context context) {
         this(context, null);
     }
-
+    
     /**
      * Instantiates a new ab sliding tab view.
      *
@@ -126,47 +128,77 @@ public class AbSlidingTabView extends LinearLayout {
     public AbSlidingTabView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
-        
-        this.setOrientation(LinearLayout.VERTICAL);
-		this.setBackgroundColor(Color.rgb(255, 255, 255));
-		
-		mTabScrollView  = new HorizontalScrollView(context);
-		mTabScrollView.setHorizontalScrollBarEnabled(false);
-		mTabScrollView.setSmoothScrollingEnabled(true);
-		
-		mTabLayout = new LinearLayout(context);
-		mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
-		mTabLayout.setGravity(Gravity.CENTER);
-		
-		//mTabLayout是内容宽度
-		mTabScrollView.addView(mTabLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.FILL_PARENT));
-		
-		this.addView(mTabScrollView,new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        
-		//内容的View的适配
-  		mViewPager = new ViewPager(context);
-  		//手动创建的ViewPager,必须调用setId()方法设置一个id
-  		mViewPager.setId(1985);
-  		pagerItemList = new ArrayList<Fragment>();
-  	    //定义Tab栏
-  		tabItemList = new ArrayList<TextView>();
-  		tabItemTextList = new ArrayList<String>();
-  		tabItemDrawableList = new ArrayList<Drawable>();
-  		
-  	    //要求必须是FragmentActivity的实例
-		if(!(this.context instanceof FragmentActivity)){
-			AbLogUtil.e(AbSlidingTabView.class, "构造AbSlidingTabView的参数context,必须是FragmentActivity的实例。");
-		}
-  			
+        initView();
   		FragmentManager mFragmentManager = ((FragmentActivity)this.context).getFragmentManager();
 		mFragmentPagerAdapter = new AbFragmentPagerAdapter(
 				mFragmentManager, pagerItemList);
 		mViewPager.setAdapter(mFragmentPagerAdapter);
 		mViewPager.setOnPageChangeListener(new MyOnPageChangeListener());
 		mViewPager.setOffscreenPageLimit(3);
-  		
-		this.addView(mViewPager,new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+		this.addView(mViewPager,new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
     
+    }
+    
+    /**
+     * Instantiates a new ab sliding tab view.
+     *
+     * @param fragment the fragment
+     */
+    public AbSlidingTabView(Fragment fragment) {
+    	
+        super(fragment.getActivity());
+       
+        this.context = fragment.getActivity();
+        initView();
+  		if(VERSION.SDK_INT <= 17){	
+  			AbLogUtil.e(AbSlidingTabView.class, "AbSlidingTabView(Fragment fragment) 要求最低SDK版本17");
+  		    return;
+  		}
+  		FragmentManager mFragmentManager = fragment.getChildFragmentManager();
+		mFragmentPagerAdapter = new AbFragmentPagerAdapter(
+				mFragmentManager, pagerItemList);
+		mViewPager.setAdapter(mFragmentPagerAdapter);
+		mViewPager.setOnPageChangeListener(new MyOnPageChangeListener());
+		mViewPager.setOffscreenPageLimit(3);
+  		
+		this.addView(mViewPager,new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+    
+    }
+    
+    /**
+     * Inits the view.
+     */
+    public void initView(){
+    	this.setOrientation(LinearLayout.VERTICAL);
+ 		this.setBackgroundColor(Color.rgb(255, 255, 255));
+ 		
+ 		mTabScrollView  = new HorizontalScrollView(context);
+ 		mTabScrollView.setHorizontalScrollBarEnabled(false);
+ 		mTabScrollView.setSmoothScrollingEnabled(true);
+ 		
+ 		mTabLayout = new LinearLayout(context);
+ 		mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
+ 		mTabLayout.setGravity(Gravity.CENTER);
+ 		
+ 		//mTabLayout是内容宽度
+ 		mTabScrollView.addView(mTabLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.FILL_PARENT));
+ 		
+ 		this.addView(mTabScrollView,new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+         
+ 		//内容的View的适配
+   		mViewPager = new AbViewPager(context);
+   		//手动创建的ViewPager,必须调用setId()方法设置一个id
+   		mViewPager.setId(1985);
+   		pagerItemList = new ArrayList<Fragment>();
+   	    //定义Tab栏
+   		tabItemList = new ArrayList<TextView>();
+   		tabItemTextList = new ArrayList<String>();
+   		tabItemDrawableList = new ArrayList<Drawable>();
+   		
+   	    //要求必须是FragmentActivity的实例
+ 		if(!(this.context instanceof FragmentActivity)){
+ 			AbLogUtil.e(AbSlidingTabView.class, "构造AbSlidingTabView的参数context,必须是FragmentActivity的实例。");
+ 		}
     }
     
     /**
@@ -533,6 +565,16 @@ public class AbSlidingTabView extends LinearLayout {
 			TextView tv = tabItemList.get(i);
 			tv.setPadding(left, top, right, bottom);
 		}
+	}
+	
+	
+	/**
+	 * Sets the sliding enabled.
+	 *
+	 * @param sliding the new sliding enabled
+	 */
+	public void setSlidingEnabled(boolean sliding) {
+		mViewPager.setPagingEnabled(sliding);
 	}
     
 }

@@ -121,30 +121,30 @@ public class GraphicalView extends View {
         int scaleRectWidth = mXYMultipleSeriesRenderer.getScaleRectWidth();
         int scaleRectHeight = mXYMultipleSeriesRenderer.getScaleRectHeight();
         //按分辨率转换
-        mXYMultipleSeriesRenderer.setExplainTextSize1(AbViewUtil.scale(mContext, explainTextSize1));
-        mXYMultipleSeriesRenderer.setExplainTextSize2(AbViewUtil.scale(mContext, explainTextSize2));
-        mXYMultipleSeriesRenderer.setScaleCircleRadius(AbViewUtil.scale(mContext, scaleCircleRadius));
-        mXYMultipleSeriesRenderer.setScaleRectWidth(AbViewUtil.scale(mContext, scaleRectWidth));
-        mXYMultipleSeriesRenderer.setScaleRectHeight(AbViewUtil.scale(mContext, scaleRectHeight));
+        mXYMultipleSeriesRenderer.setExplainTextSize1(AbViewUtil.scaleTextValue(mContext, explainTextSize1));
+        mXYMultipleSeriesRenderer.setExplainTextSize2(AbViewUtil.scaleTextValue(mContext, explainTextSize2));
+        mXYMultipleSeriesRenderer.setScaleCircleRadius(AbViewUtil.scaleValue(mContext, scaleCircleRadius));
+        mXYMultipleSeriesRenderer.setScaleRectWidth(AbViewUtil.scaleValue(mContext, scaleRectWidth));
+        mXYMultipleSeriesRenderer.setScaleRectHeight(AbViewUtil.scaleValue(mContext, scaleRectHeight));
         
         SimpleSeriesRenderer[]  mSimpleSeriesRenderers = mRenderer.getSeriesRenderers();
         if(mSimpleSeriesRenderers!=null && mSimpleSeriesRenderers.length>0){
         	for(int i=0;i<mSimpleSeriesRenderers.length;i++){
         		SimpleSeriesRenderer mSimpleSeriesRenderer = mSimpleSeriesRenderers[i];
         		int mChartValuesTextSize  = (int)mSimpleSeriesRenderer.getChartValuesTextSize();
-        		mSimpleSeriesRenderer.setChartValuesTextSize(AbViewUtil.scale(mContext, mChartValuesTextSize));
+        		mSimpleSeriesRenderer.setChartValuesTextSize(AbViewUtil.scaleTextValue(mContext, mChartValuesTextSize));
         	}
         }
     }
     
     int chartTitleTextSize = (int)mRenderer.getChartTitleTextSize();
-    mRenderer.setChartTitleTextSize(AbViewUtil.scale(mContext, chartTitleTextSize));
+    mRenderer.setChartTitleTextSize(AbViewUtil.scaleTextValue(mContext, chartTitleTextSize));
     //轴线上标签文字大小
     int mLabelsTextSize  = (int)mRenderer.getLabelsTextSize();
-    mRenderer.setLabelsTextSize(AbViewUtil.scale(mContext, mLabelsTextSize));
+    mRenderer.setLabelsTextSize(AbViewUtil.scaleTextValue(mContext, mLabelsTextSize));
   	//说明文字大小
     int mLegendTextSize  =  (int)mRenderer.getLegendTextSize();
-    mRenderer.setLegendTextSize(AbViewUtil.scale(mContext, mLegendTextSize));
+    mRenderer.setLegendTextSize(AbViewUtil.scaleTextValue(mContext, mLegendTextSize));
     
   }
 
@@ -231,8 +231,8 @@ public class GraphicalView extends View {
 	        int explainTextSize2 = mXYMultipleSeriesRenderer.getExplainTextSize2();
 	        int scaleCircleRadius = mXYMultipleSeriesRenderer.getScaleCircleRadius();
 	        //按分辨率转换
-	        scaleTopPadding = AbViewUtil.scale(mContext, scaleTopPadding);
-	        scaleBottomPadding = AbViewUtil.scale(mContext, scaleBottomPadding);
+	        scaleTopPadding = AbViewUtil.scaleValue(mContext, scaleTopPadding);
+	        scaleBottomPadding = AbViewUtil.scaleValue(mContext, scaleBottomPadding);
 	        
 	        
 	        //Y轴位置
@@ -339,7 +339,7 @@ public class GraphicalView extends View {
 	                  float hSize2 = AbGraphicUtil.getDesiredHeight(mTextPaint2);
 	                  
 	                  int textPadding = 8;
-	                  textPadding = AbViewUtil.scale(mContext, textPadding);
+	                  textPadding = AbViewUtil.scaleValue(mContext, textPadding);
 	                  
 	                  //设置个新的长方形  
 	                  //判断文字是否超出设置的框框

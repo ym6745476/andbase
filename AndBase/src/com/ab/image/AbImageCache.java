@@ -62,21 +62,31 @@ public class AbImageCache implements ImageCache {
 		return mImageCache;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.android.volley.toolbox.ImageLoader.ImageCache#getBitmap(java.lang.String)
-	 */
 	@Override
-	public Bitmap getBitmap(String url) {
-		return mCache.get(url);
+	public Bitmap getBitmap(String cacheKey) {
+		return mCache.get(cacheKey);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.android.volley.toolbox.ImageLoader.ImageCache#putBitmap(java.lang.String, android.graphics.Bitmap)
-	 */
 	@Override
-	public void putBitmap(String url, Bitmap bitmap) {
-		mCache.put(url, bitmap);
+	public void putBitmap(String cacheKey, Bitmap bitmap) {
+		mCache.put(cacheKey, bitmap);
 	}
+	
+	@Override
+	public void removeBitmap(String requestUrl, int maxWidth, int maxHeight) {
+		 mCache.remove(getCacheKey(requestUrl,maxWidth,maxHeight));
+	}
+
+	/**
+     * Creates a cache key for use with the L1 cache.
+     * @param url The URL of the request.
+     * @param maxWidth The max-width of the output.
+     * @param maxHeight The max-height of the output.
+     */
+    public String getCacheKey(String url, int maxWidth, int maxHeight) {
+        return new StringBuilder(url.length() + 12).append("#W").append(maxWidth)
+                .append("#H").append(maxHeight).append(url).toString();
+    }
 	
 	/**
 	 * Clear bitmap.

@@ -44,13 +44,18 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.LinearLayout.LayoutParams;
 
 import com.ab.adapter.AbFragmentPagerAdapter;
+import com.ab.util.AbAppUtil;
 import com.ab.util.AbLogUtil;
+import com.ab.view.sample.AbViewPager;
   
 // TODO: Auto-generated Javadoc
 
@@ -72,13 +77,13 @@ public class AbBottomTabView extends LinearLayout {
 	private LinearLayout mTabLayout = null;
 	
 	/** The m view pager. */
-	private ViewPager mViewPager;
+	private AbViewPager mViewPager;
 	
 	/** The m listener. */
 	private ViewPager.OnPageChangeListener mListener;
 	
 	/** tab的列表. */
-	private ArrayList<TextView> tabItemList = null;
+	private ArrayList<AbTabItemView> tabItemList = null;
 	
 	/** 内容的View. */
 	private ArrayList<Fragment> pagerItemList = null;
@@ -107,6 +112,9 @@ public class AbBottomTabView extends LinearLayout {
 	/** tab的选中文字颜色. */
 	private int tabSelectColor = Color.WHITE;
 	
+	/**  图片尺寸. */
+	private int mDrawablesBoundsLeft,mDrawablesBoundsTop,mDrawablesBoundsRight,mDrawablesBoundsBottom;
+	
 	/** The m tab click listener. */
 	private OnClickListener mTabClickListener = new OnClickListener() {
         public void onClick(View view) {
@@ -114,6 +122,20 @@ public class AbBottomTabView extends LinearLayout {
             setCurrentItem(tabView.getIndex());
         }
     };
+    
+    /** 滑块动画图片. */
+	private ImageView mTabImg;
+	/** tab滑块的高度. */
+	private int tabSlidingHeight = 3;
+	
+	/** tab滑块颜色. */
+	private int tabSlidingColor = tabSelectColor;
+	
+	/** 当前tab的位置. */
+	private int startX = 0;
+	
+	/** The m width. */
+	private int mWidth = 0;
 	
 	
 	/**
@@ -134,21 +156,30 @@ public class AbBottomTabView extends LinearLayout {
 		mTabLayout.setGravity(Gravity.CENTER);
 		
 		//内容的View的适配
-		mViewPager = new ViewPager(context);
+		mViewPager = new AbViewPager(context);
 		//手动创建的ViewPager,必须调用setId()方法设置一个id
 		mViewPager.setId(1985);
 		pagerItemList = new ArrayList<Fragment>();
 		this.addView(mViewPager,new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,0,1));
-		addView(mTabLayout, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+		
+		//页卡滑动图片
+		mTabImg  = new ImageView(context);
+		mTabImg.setBackgroundColor(tabSlidingColor);
+		this.addView(mTabImg,new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,tabSlidingHeight));
+		
+		this.addView(mTabLayout, new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 		
 		//定义Tab栏
-  		tabItemList = new ArrayList<TextView>();
+  		tabItemList = new ArrayList<AbTabItemView>();
   		tabItemTextList = new ArrayList<String>();
   		tabItemDrawableList = new ArrayList<Drawable>();
 		//要求必须是FragmentActivity的实例
 		if(!(this.context instanceof FragmentActivity)){
 			AbLogUtil.e(AbBottomTabView.class, "构造AbSlidingTabView的参数context,必须是FragmentActivity的实例。");
 		}
+		
+		DisplayMetrics mDisplayMetrics = AbAppUtil.getDisplayMetrics(context);
+		mWidth = mDisplayMetrics.widthPixels;
 		
 		FragmentManager mFragmentManager = ((FragmentActivity)this.context).getFragmentManager();
 		mFragmentPagerAdapter = new AbFragmentPagerAdapter(
@@ -179,6 +210,9 @@ public class AbBottomTabView extends LinearLayout {
 		 */
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
+			if(mListener!=null){
+				mListener.onPageScrollStateChanged(arg0);
+			}
 			
 		}
 
@@ -187,7 +221,9 @@ public class AbBottomTabView extends LinearLayout {
 		 */
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
-			
+			if(mListener!=null){
+				mListener.onPageScrolled(arg0,arg1,arg2);
+			}
 		}
 
 		/* (non-Javadoc)
@@ -196,6 +232,9 @@ public class AbBottomTabView extends LinearLayout {
 		@Override
 		public void onPageSelected(int arg0) {
 			setCurrentItem(arg0);
+			if(mListener!=null){
+				mListener.onPageSelected(arg0);
+			}
 		}
 		
 	}
@@ -216,7 +255,6 @@ public class AbBottomTabView extends LinearLayout {
             final boolean isSelected = (i == index);
             child.setSelected(isSelected);
             if (isSelected) {
-            	child.setTabTextColor(tabSelectColor);
             	if(tabBackgroundResource!=-1){
             		 child.setTabBackgroundResource(tabBackgroundResource);
                 }
@@ -225,10 +263,11 @@ public class AbBottomTabView extends LinearLayout {
              	}else if(tabItemDrawableList.size() >= tabCount){
     			     child.setTabCompoundDrawables(null, tabItemDrawableList.get(index), null, null);
     		    }
+            	child.setTabTextColor(tabSelectColor);
             	mViewPager.setCurrentItem(index);
             }else{
             	if(tabBackgroundResource!=-1){
-           		   child.setBackgroundDrawable(null);
+           		   child.setTabBackgroundDrawable(null);
                 }
             	if(tabItemDrawableList.size() >= tabCount*2){
             		child.setTabCompoundDrawables(null, tabItemDrawableList.get(i*2), null, null);
@@ -236,6 +275,19 @@ public class AbBottomTabView extends LinearLayout {
             	child.setTabTextColor(tabTextColor);
             }
         }
+        
+        //判断滑动距离
+  		int itemWidth = mWidth/tabItemList.size();
+          
+        LayoutParams mParams  = new LayoutParams(itemWidth,tabSlidingHeight);
+        mParams.topMargin = -tabSlidingHeight;
+        mTabImg.setLayoutParams(mParams);
+      
+        int toX = itemWidth*index;
+        imageSlide(mTabImg,startX,toX,0,0);
+        startX  = toX;
+  		
+  		mSelectedTabIndex = index;
     }
     
     /**
@@ -332,14 +384,30 @@ public class AbBottomTabView extends LinearLayout {
        
         if(top!=null){
         	tabView.setTabCompoundDrawables(null, top, null, null);
+        	tabView.setTabCompoundDrawablesBounds(mDrawablesBoundsLeft, mDrawablesBoundsTop, mDrawablesBoundsRight, mDrawablesBoundsBottom);
         }
     	tabView.setTabTextColor(tabTextColor);
     	tabView.setTabTextSize(tabTextSize);
         
         tabView.init(index,text);
-        tabItemList.add(tabView.getTextView());
+        tabItemList.add(tabView);
         tabView.setOnClickListener(mTabClickListener);
         mTabLayout.addView(tabView, new LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+    }
+    
+    /**
+     * 描述：图片尺寸,在addItemViews之前设置.
+     *
+     * @param left the left
+     * @param top the top
+     * @param right the right
+     * @param bottom the bottom
+     */
+    public void setTabCompoundDrawablesBounds(int left, int top, int right, int bottom){
+    	mDrawablesBoundsLeft = left;
+    	mDrawablesBoundsTop = top;
+    	mDrawablesBoundsRight = right;
+    	mDrawablesBoundsBottom = bottom;
     }
     
     /**
@@ -474,9 +542,55 @@ public class AbBottomTabView extends LinearLayout {
 	 */
 	public void setTabPadding(int left, int top, int right, int bottom) {
 		for(int i = 0;i<tabItemList.size();i++){
-			TextView tv = tabItemList.get(i);
-			tv.setPadding(left, top, right, bottom);
+			AbTabItemView tabView = tabItemList.get(i);
+			tabView.setPadding(left, top, right, bottom);
 		}
+	}
+	
+	/**
+	 * Sets the sliding enabled.
+	 *
+	 * @param sliding the new sliding enabled
+	 */
+	public void setSlidingEnabled(boolean sliding) {
+		mViewPager.setPagingEnabled(sliding);
+	}
+	
+	
+	
+	/**
+	 * Gets the tab sliding color.
+	 *
+	 * @return the tab sliding color
+	 */
+	public int getTabSlidingColor() {
+		return tabSlidingColor;
+	}
+
+	/**
+	 * Sets the tab sliding color.
+	 *
+	 * @param tabSlidingColor the new tab sliding color
+	 */
+	public void setTabSlidingColor(int tabSlidingColor) {
+		this.tabSlidingColor = tabSlidingColor;
+		this.mTabImg.setBackgroundColor(tabSlidingColor);
+	}
+
+	/**
+	 * 描述：滑动动画.
+	 *
+	 * @param v the v
+	 * @param startX the start x
+	 * @param toX the to x
+	 * @param startY the start y
+	 * @param toY the to y
+	 */
+	public void imageSlide(View v, int startX, int toX, int startY, int toY) {
+		TranslateAnimation anim = new TranslateAnimation(startX, toX, startY, toY);
+		anim.setDuration(100);
+		anim.setFillAfter(true);
+		v.startAnimation(anim);
 	}
 	
 }

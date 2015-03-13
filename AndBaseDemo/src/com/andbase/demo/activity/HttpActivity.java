@@ -369,13 +369,17 @@ public class HttpActivity extends AbActivity {
 					//多文件上传添加多个即可
 					File pathRoot = Environment.getExternalStorageDirectory();
 					String path = pathRoot.getAbsolutePath();
-					params.put("data1",URLEncoder.encode("中文的处理",HTTP.UTF_8));
+					params.put("data1","你好");
 					params.put("data2","100");
 					//参数随便加，在sd卡根目录放图片
 					File file1 = new File(path+"/1.jpg");
 					File file2 = new File(path+"/1.txt");
+					//文件名称可能是中文
 					params.put(file1.getName(),file1);
 					params.put(file2.getName(),file2);
+					
+					//注意：框架默认将所有参数：URLDecoder.encode(fileName,HTTP.UTF_8)
+					//所以服务端要解析中文要用到 URLDecoder.decode(fileName,HTTP.UTF_8)
 					
 					//只支持最多2个文件域，因为会产生流中断的异常，所以你需要传递更多，请分次数上传
 					//File file3 = new File(path+"/3.log");

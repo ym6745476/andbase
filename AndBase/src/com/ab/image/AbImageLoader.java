@@ -18,6 +18,7 @@ package com.ab.image;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -68,9 +69,14 @@ public class AbImageLoader {
     /** 图片未找到的图片. */
     private Drawable emptyImage;
     
+    /** The m queue. */
     private RequestQueue mQueue;
     
+    /** The m image loader. */
     private ImageLoader mImageLoader = null;
+    
+    /** The m on image listener. */
+    private OnImageListener mOnImageListener = null;
     
     /**
      * 构造图片下载器.
@@ -99,11 +105,10 @@ public class AbImageLoader {
 	
      
     /**
-     * 显示这个图片
+     * 显示这个图片.
      *
      * @param imageView 显得的View
      * @param url the url
-     * @return the bitmap
      */
     public void display(final ImageView imageView,String url) { 
     	
@@ -149,6 +154,9 @@ public class AbImageLoader {
             public void onResponse(ImageContainer response, boolean isImmediate) {
             	
             	Bitmap bitmap = response.getBitmap();
+            	if(mOnImageListener!=null){
+            		mOnImageListener.onResponse(bitmap);
+            	}
             	AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
             	//要判断这个imageView的url有变化，如果没有变化才set
                 //有变化就取消，解决列表的重复利用View的问题
@@ -168,6 +176,40 @@ public class AbImageLoader {
         		}
             	
             	imageView.setVisibility(View.VISIBLE);
+            }
+        },maxWidth,maxHeight);
+    	
+    } 
+    
+    /**
+     * 下载这个图片.
+     *
+     * @param url the url
+     */
+    public void download(String url) { 
+    	
+    	if(AbStrUtil.isEmpty(url)){
+    		return;
+    	}
+    	
+    	if(Uri.parse(url).getHost() == null){
+    		return;
+    	}
+    	
+        mImageLoader.get(url,new ImageListener() {
+        	
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+
+            @Override
+            public void onResponse(ImageContainer response, boolean isImmediate) {
+            	
+            	Bitmap bitmap = response.getBitmap();
+            	if(mOnImageListener!=null){
+            		mOnImageListener.onResponse(bitmap);
+            	}
+            	AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
             }
         },maxWidth,maxHeight);
     	
@@ -211,31 +253,102 @@ public class AbImageLoader {
 	}
 
 
+	/**
+	 * Gets the max width.
+	 *
+	 * @return the max width
+	 */
 	public int getMaxWidth() {
 		return maxWidth;
 	}
 
+	/**
+	 * Sets the max width.
+	 *
+	 * @param maxWidth the new max width
+	 */
 	public void setMaxWidth(int maxWidth) {
 		this.maxWidth = maxWidth;
 	}
 
+	/**
+	 * Gets the max height.
+	 *
+	 * @return the max height
+	 */
 	public int getMaxHeight() {
 		return maxHeight;
 	}
 
+	/**
+	 * Sets the max height.
+	 *
+	 * @param maxHeight the new max height
+	 */
 	public void setMaxHeight(int maxHeight) {
 		this.maxHeight = maxHeight;
 	}
 
 
+	/**
+	 * Gets the expires time.
+	 *
+	 * @return the expires time
+	 */
 	public int getExpiresTime() {
 		return expiresTime;
 	}
 
 
+	/**
+	 * Sets the expires time.
+	 *
+	 * @param expiresTime the new expires time
+	 */
 	public void setExpiresTime(int expiresTime) {
 		this.expiresTime = expiresTime;
 	}
+	
+	/**
+	 * The listener interface for receiving onImage events.
+	 * The class that is interested in processing a onImage
+	 * event implements this interface, and the object created
+	 * with that class is registered with a component using the
+	 * component's <code>addOnImageListener<code> method. When
+	 * the onImage event occurs, that object's appropriate
+	 * method is invoked.
+	 *
+	 * @see OnImageEvent
+	 */
+	public interface OnImageListener {
+		
+		/**
+		 * On response.
+		 *
+		 * @param bitmap the bitmap
+		 */
+		public void onResponse(Bitmap bitmap);
+	}
+
+	/**
+	 * Gets the on image listener.
+	 *
+	 * @return the on image listener
+	 */
+	public OnImageListener getOnImageListener() {
+		return mOnImageListener;
+	}
+
+
+	/**
+	 * Sets the on image listener.
+	 *
+	 * @param onImageListener the new on image listener
+	 */
+	public void setOnImageListener(OnImageListener onImageListener) {
+		this.mOnImageListener = onImageListener;
+	}
+	
 
 }
 

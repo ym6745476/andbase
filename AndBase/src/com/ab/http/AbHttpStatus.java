@@ -43,5 +43,8 @@ public class AbHttpStatus {
 	
 	/** 未处理的HTTP返回码. */
 	public static final int UNTREATED_CODE = 900;
+	
+	/** 服务出错的HTTP返回码. */
+	public static final int SERVER_FAILURE_CODE = 500;
    
 }

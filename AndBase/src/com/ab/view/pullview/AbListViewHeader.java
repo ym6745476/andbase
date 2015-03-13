@@ -145,8 +145,8 @@ public class AbListViewHeader extends LinearLayout {
 		
 		LinearLayout.LayoutParams layoutParamsWW = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		layoutParamsWW.gravity = Gravity.CENTER;
-		layoutParamsWW.width = AbViewUtil.scale(mContext, 50);
-		layoutParamsWW.height = AbViewUtil.scale(mContext, 50);
+		layoutParamsWW.width = AbViewUtil.scaleValue(mContext, 50);
+		layoutParamsWW.height = AbViewUtil.scaleValue(mContext, 50);
 		headImage.addView(arrowImageView,layoutParamsWW);
 		headImage.addView(headerProgressBar,layoutParamsWW);
 		
@@ -167,7 +167,7 @@ public class AbListViewHeader extends LinearLayout {
 		
 		LinearLayout.LayoutParams layoutParamsWW3 = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		layoutParamsWW3.gravity = Gravity.CENTER;
-		layoutParamsWW3.rightMargin = AbViewUtil.scale(mContext, 10);
+		layoutParamsWW3.rightMargin = AbViewUtil.scaleValue(mContext, 10);
 		
 		LinearLayout headerLayout = new LinearLayout(context);
 		headerLayout.setOrientation(LinearLayout.HORIZONTAL);

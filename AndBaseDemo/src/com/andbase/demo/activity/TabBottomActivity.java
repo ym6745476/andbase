@@ -86,11 +86,11 @@ public class TabBottomActivity extends AbActivity {
 		tabDrawables.add(this.getResources().getDrawable(R.drawable.menu3_f));
 		tabDrawables.add(this.getResources().getDrawable(R.drawable.menu4_n));
 		tabDrawables.add(this.getResources().getDrawable(R.drawable.menu4_f));
-		
+		mBottomTabView.setTabCompoundDrawablesBounds(0, 0, 40, 40);
 		//演示增加一组
 		mBottomTabView.addItemViews(tabTexts,mFragments,tabDrawables);
 		
-		mBottomTabView.setTabPadding(2,10, 2, 2);
+		mBottomTabView.setTabPadding(10,10, 10, 10);
 		
 	}
 	

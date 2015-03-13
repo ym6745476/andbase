@@ -15,14 +15,14 @@
  */
 package com.ab.view.sliding;
 
-import com.ab.util.AbViewUtil;
-
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.ab.util.AbViewUtil;
 // TODO: Auto-generated Javadoc
 
 /**
@@ -38,13 +38,18 @@ public class AbTabItemView extends LinearLayout {
 	
 	/** The m context. */
 	private Context mContext;
-	//当前的索引
-    /** The m index. */
-	private int mIndex;
-    //包含的TextView
-    /** The m text view. */
-    private TextView mTextView;
 	
+    /** 当前的索引. */
+	private int mIndex;
+	
+    /** 包含的TextView. */
+    private TextView mTextView;
+    
+    /** 图片. */
+    private Drawable mLeftDrawable,mTopDrawable,mRightDrawable,mBottomDrawable;
+	
+    /** Bounds. */
+    private int leftBounds,topBounds,rightBounds,bottomBounds;
     /**
      * Instantiates a new ab tab item view.
      *
@@ -63,12 +68,15 @@ public class AbTabItemView extends LinearLayout {
 	public AbTabItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setOrientation(LinearLayout.HORIZONTAL);
+        this.setGravity(Gravity.CENTER);
+        this.setPadding(10, 10, 10, 10);
         this.mContext = context;
         mTextView = new TextView(context);
         mTextView.setGravity(Gravity.CENTER);
-        mTextView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+        mTextView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
         mTextView.setFocusable(true);
-        mTextView.setPadding(10, 0, 10, 0);
+        mTextView.setPadding(0 , 0, 0, 0);
+        mTextView.setCompoundDrawablePadding(10);
         mTextView.setSingleLine();
         this.addView(mTextView);
     }
@@ -123,7 +131,7 @@ public class AbTabItemView extends LinearLayout {
 	}
 	
 	/**
-	 * 描述：设置文字图片.
+	 * 描述：设置文字的图片.
 	 *
 	 * @param left the left
 	 * @param top the top
@@ -131,19 +139,39 @@ public class AbTabItemView extends LinearLayout {
 	 * @param bottom the bottom
 	 */
 	public void setTabCompoundDrawables(Drawable left, Drawable top, Drawable right, Drawable bottom) {
-		if(left!=null){
-			left.setBounds(0, 0, AbViewUtil.scale(mContext, left.getIntrinsicWidth()), AbViewUtil.scale(mContext, left.getIntrinsicHeight())); 
+		mLeftDrawable = left;
+		mTopDrawable = top;
+		mRightDrawable = right;
+		mBottomDrawable = bottom;
+		
+		if(mLeftDrawable!=null){
+			mLeftDrawable.setBounds(leftBounds, topBounds, rightBounds, bottomBounds); 
 		}
-		if(top!=null){
-		    top.setBounds(0, 0, AbViewUtil.scale(mContext, top.getIntrinsicWidth()), AbViewUtil.scale(mContext, top.getIntrinsicHeight())); 
+		if(mTopDrawable!=null){
+			mTopDrawable.setBounds(leftBounds, topBounds, rightBounds, bottomBounds); 
 		}
-		if(right!=null){
-		    right.setBounds(0, 0, AbViewUtil.scale(mContext, right.getIntrinsicWidth()), AbViewUtil.scale(mContext, right.getIntrinsicHeight()));
+		if(mRightDrawable!=null){
+			mRightDrawable.setBounds(leftBounds, topBounds, rightBounds, bottomBounds); 
 		}
-		if(bottom!=null){
-		    bottom.setBounds(0, 0, AbViewUtil.scale(mContext, bottom.getIntrinsicWidth()), AbViewUtil.scale(mContext, bottom.getIntrinsicHeight())); 
+		if(mBottomDrawable!=null){
+			mBottomDrawable.setBounds(leftBounds, topBounds, rightBounds, bottomBounds); 
 		}
-		mTextView.setCompoundDrawables(left, top, right, bottom);
+		mTextView.setCompoundDrawables(mLeftDrawable, mTopDrawable, mRightDrawable, mBottomDrawable);
+	}
+	
+	/**
+	 * 描述：设置图片尺寸.
+	 *
+	 * @param left the left
+	 * @param top the top
+	 * @param right the right
+	 * @param bottom the bottom
+	 */
+	public void setTabCompoundDrawablesBounds(int left, int top, int right, int bottom) {
+		leftBounds = AbViewUtil.scaleValue(mContext, left);
+		topBounds = AbViewUtil.scaleValue(mContext, top);
+		rightBounds = AbViewUtil.scaleValue(mContext, right);
+		bottomBounds = AbViewUtil.scaleValue(mContext, bottom);
 	}
 	
 	/**

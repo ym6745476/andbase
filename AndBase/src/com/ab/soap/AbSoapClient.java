@@ -21,6 +21,7 @@ import java.util.concurrent.Executor;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.ksoap2.SoapEnvelope;
+import org.ksoap2.SoapFault;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
@@ -122,8 +123,6 @@ public class AbSoapClient {
 	 * @param listener the listener
 	 */
 	public void doCall(String url,String nameSpace,String methodName,AbSoapParams params, AbSoapListener listener) {
-
-		String result = null;
 		try {
 			SoapObject request = new SoapObject(nameSpace, methodName);
 			// 传递参数
@@ -141,12 +140,19 @@ public class AbSoapClient {
 
 			AbLogUtil.d(AbSoapClient.class, "--call--");
 			httpTransportSE.call(nameSpace+methodName, envelope);
-
-			SoapObject bodyIn = (SoapObject) envelope.bodyIn;
-			result = bodyIn.toString();
-			if (result != null) {
-				listener.sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, result);
+			Object object = envelope.bodyIn;
+			if(object instanceof SoapObject){
+				SoapObject bodyIn = (SoapObject) envelope.bodyIn;
+				if (bodyIn != null) {
+					listener.sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, bodyIn);
+				}
+			}else if(object instanceof SoapFault){
+				SoapFault fault = (SoapFault) envelope.bodyIn;
+				if (fault != null) {
+				    listener.sendFailureMessage(AbHttpStatus.SERVER_FAILURE_CODE,fault );
+				}
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			listener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE, AbAppConfig.UNTREATED_EXCEPTION, new AbAppException(AbAppConfig.UNTREATED_EXCEPTION));

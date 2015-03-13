@@ -33,8 +33,8 @@ import android.widget.HorizontalScrollView;
  */
 public class AbHorizontalScrollView extends HorizontalScrollView {
 
-	/** The intit position. */
-	private int intitPosition;
+	/** The init position. */
+	private int initPosition;
 	
 	/** The child width. */
 	private int childWidth = 0;
@@ -48,7 +48,7 @@ public class AbHorizontalScrollView extends HorizontalScrollView {
 	 * @param context the context
 	 */
 	public AbHorizontalScrollView(Context context) {
-		super(context);
+		this(context,null);
 	}
 	
 	/**
@@ -68,7 +68,7 @@ public class AbHorizontalScrollView extends HorizontalScrollView {
 	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
 		
 		int newPosition = getScrollX();
-		if (intitPosition - newPosition == 0) {
+		if (initPosition - newPosition == 0) {
 			if (onScrollListner == null) {
 				return;
 			}
@@ -91,7 +91,7 @@ public class AbHorizontalScrollView extends HorizontalScrollView {
 			},200);
 			
 		} else {
-			intitPosition = getScrollX();
+			initPosition = getScrollX();
 			checkTotalWidth();
 		}
 		super.onScrollChanged(l, t, oldl, oldt);

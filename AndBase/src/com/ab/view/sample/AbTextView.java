@@ -103,7 +103,8 @@ public class AbTextView extends TextView {
      * @param right the right
      * @param bottom the bottom
      */
-    public void setPadding(float left,float top,float right,float bottom){
+    @Override
+    public void setPadding(int left,int top,int right,int bottom){
         leftPadding = left;
         topPadding = top;
         rightPadding = right;

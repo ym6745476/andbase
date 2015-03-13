@@ -24,6 +24,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Comparator;
@@ -765,6 +766,94 @@ public class AbFileUtil {
 			}
 		}
    }  
+	 
+    /**
+     * 将bitmap写入文件.
+     * @param path
+     * @param bitmap   png
+     */
+	 public static void writeBitmapToSD(String path,Bitmap bitmap,boolean create){  
+	    
+		 FileOutputStream fos = null;
+		 try {
+	    	File file = new File(path);  
+	    	//SD卡是否存在
+			if(!isCanUseSD()){
+				 return;
+		    }
+			//文件是否存在
+			if(!file.exists()){
+				if(create){
+					File parent = file.getParentFile();
+					if(!parent.exists()){
+						parent.mkdirs();
+						file.createNewFile();
+					}
+				}
+			}
+			fos = new FileOutputStream(path);  
+			bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			if(fos!=null){
+				try {
+					fos.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+   }  
+	 
+   /**
+    * 拷贝Assets目录内容到sd卡目录
+    * @param context
+    * @param assetDir  "dir"
+    * @param outDir    完整sd卡路径
+    */
+   public static void copyAssets2SD(Context context, String assetDir, String outDir) {
+		String[] files;
+		try {
+			files = context.getAssets().list(assetDir);
+			File outDirFile = new File(outDir);
+			if (!outDirFile.exists()) {
+				outDirFile.mkdirs();
+			}
+
+			for (int i = 0; i < files.length; i++) {
+				String fileName = files[i];
+				
+				String[] filesChild = context.getAssets().list(fileName);
+				if (filesChild!=null && filesChild.length>0) {
+					copyAssets2SD(context, fileName, outDir + "/"+fileName);
+				} else {
+					InputStream in = null;
+					if(!AbStrUtil.isEmpty(assetDir)){
+						in = context.getAssets().open(assetDir + "/" + fileName);
+					}else{
+						in = context.getAssets().open(fileName);
+					}
+					File outFile = new File(outDir+"/"+fileName);
+					if(outFile.exists()){
+						outFile.delete();
+					}
+					outFile.createNewFile();
+					OutputStream out = new FileOutputStream(outFile);
+					byte[] buf = new byte[1024];
+					int len;
+					while ((len = in.read(buf)) > 0) {
+						out.write(buf, 0, len);
+					}
+
+					in.close();
+					out.close();
+
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	 
 	/**
 	 * 描述：SD卡是否能用.
