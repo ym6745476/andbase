@@ -3,7 +3,9 @@ AndBase开发框架授权
                            Apache License
                       Version 2.0, January 2004
                    http://www.apache.org/licenses/
+
 作者解释为：
+
        （1）用户可任意修改复制，重新发布，但必须让任何修改过的文件附带明显的通知，声明已更改文件；
        
        （2）必须在作品的源程序形式中保留原作品版权、专利、商标和属性通知；
