@@ -235,7 +235,7 @@ public class DemoMainActivity extends AbActivity {
 					startActivity(intent);
 					break;
 				case 5:
-					intent = new Intent(DemoMainActivity.this, HttpMiniActivity.class);
+					intent = new Intent(DemoMainActivity.this, HttpQueueActivity.class);
 					startActivity(intent);
 					break;
 				case 6:

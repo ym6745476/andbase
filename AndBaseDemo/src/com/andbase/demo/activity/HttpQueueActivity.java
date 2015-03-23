@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,9 +15,9 @@ import com.ab.network.toolbox.Request;
 import com.ab.network.toolbox.Request.Method;
 import com.ab.network.toolbox.RequestQueue;
 import com.ab.network.toolbox.RequestQueue.RequestFilter;
+import com.ab.network.toolbox.RequestQueueUtil;
 import com.ab.network.toolbox.Response;
-import com.ab.network.toolbox.Volley;
-import com.ab.network.toolbox.VolleyError;
+import com.ab.network.toolbox.ResponseError;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
@@ -35,14 +34,14 @@ import com.andbase.global.MyApplication;
  * @date：2014-11-03 上午11:01:21
  * @version v1.0
  */
-public class HttpMiniActivity extends AbActivity {
+public class HttpQueueActivity extends AbActivity {
 
 	private MyApplication mApplication;
 	private RequestQueue mQueue = null;
 	private Response.Listener<String> mListener = new Response.Listener<String>() {
 		@Override
 		public void onResponse(String response) {
-			AbDialogUtil.showAlertDialog(HttpMiniActivity.this,"返回结果",response.trim(),new AbDialogOnClickListener(){
+			AbDialogUtil.showAlertDialog(HttpQueueActivity.this,"返回结果",response.trim(),new AbDialogOnClickListener(){
 
 				@Override
 				public void onNegativeClick() {
@@ -57,8 +56,8 @@ public class HttpMiniActivity extends AbActivity {
 	
 	private Response.ErrorListener mErrorListener = new Response.ErrorListener() {
 		@Override
-		public void onErrorResponse(VolleyError error) {
-			AbToastUtil.showToast(HttpMiniActivity.this,error.getMessage());
+		public void onErrorResponse(ResponseError error) {
+			AbToastUtil.showToast(HttpQueueActivity.this,error.getMessage());
 		}
     };
 	
@@ -79,7 +78,7 @@ public class HttpMiniActivity extends AbActivity {
 		mApplication = (MyApplication) abApplication;
 		Button getBtn = (Button) this.findViewById(R.id.getBtn);
 
-		mQueue = Volley.newRequestQueue(this);  
+		mQueue = RequestQueueUtil.newRequestQueue(this);  
 		
 		// get请求
 		getBtn.setOnClickListener(new View.OnClickListener() {

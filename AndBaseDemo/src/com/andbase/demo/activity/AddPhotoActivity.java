@@ -322,9 +322,9 @@ public class AddPhotoActivity extends AbActivity {
 
 			// 进度
 			@Override
-			public void onProgress(int bytesWritten, int totalSize) {
+			public void onProgress(long bytesWritten, long totalSize) {
 				maxText.setText(bytesWritten/(totalSize/max)+"/"+max);
-				mAbProgressBar.setProgress(bytesWritten/(totalSize/max));
+				mAbProgressBar.setProgress((int)(bytesWritten/(totalSize/max)));
 			}
 
 			// 完成后调用，失败，成功，都要调用

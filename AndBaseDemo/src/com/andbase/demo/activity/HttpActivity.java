@@ -85,7 +85,8 @@ public class HttpActivity extends AbActivity {
 			public void onClick(View v) {
 				
 				// 一个url地址
-				String urlString = "http://www.amsoft.cn/rss.php"; 
+				String urlString = "http://192.168.1.124:8080/CenterServer/identifyCode.do?phone=15150509567"; 
+				
 				mAbHttpUtil.get(urlString, new AbStringHttpResponseListener() {
 					
 					//获取数据成功会调用这里
@@ -107,11 +108,8 @@ public class HttpActivity extends AbActivity {
 								
 							}
 							
-		            		
 		            	});
-		        	
 		        	}
-		        	
 		        	
 		        	// 失败，调用
 		            @Override
@@ -150,13 +148,13 @@ public class HttpActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				String url = "http://www.amsoft.cn/sort/10";
+				String url = "http://192.168.1.124:8080/CenterServer/identifyCode.do";
 				// 绑定参数
 		        AbRequestParams params = new AbRequestParams(); 
-		        params.put("param1", "1");
+		        params.put("phone", "15150509567");
 		        params.put("param2", "2");
 		        params.put("param3", "10");
-		        mAbHttpUtil.post(url,params, new AbStringHttpResponseListener() {
+		        mAbHttpUtil.request(url,params, new AbStringHttpResponseListener() {
 		        	
 		        	// 获取数据成功会调用这里
 		        	@Override
@@ -331,9 +329,9 @@ public class HttpActivity extends AbActivity {
 					
 					// 下载进度
 					@Override
-					public void onProgress(int bytesWritten, int totalSize) {
+					public void onProgress(long bytesWritten, long totalSize) {
 						maxText.setText(bytesWritten/(totalSize/max)+"/"+max);
-						mAbProgressBar.setProgress(bytesWritten/(totalSize/max));
+						mAbProgressBar.setProgress((int)(bytesWritten/(totalSize/max)));
 					}
 
 					// 完成后调用，失败，成功
@@ -423,9 +421,9 @@ public class HttpActivity extends AbActivity {
 
 					// 进度
 					@Override
-					public void onProgress(int bytesWritten, int totalSize) {
+					public void onProgress(long bytesWritten, long totalSize) {
 						maxText.setText(bytesWritten/(totalSize/max)+"/"+max);
-						mAbProgressBar.setProgress(bytesWritten/(totalSize/max));
+						mAbProgressBar.setProgress((int)(bytesWritten/(totalSize/max)));
 					}
 
 					// 完成后调用，失败，成功，都要调用
