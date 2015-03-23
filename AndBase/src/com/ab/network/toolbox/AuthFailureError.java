@@ -22,7 +22,7 @@ import android.content.Intent;
  * Error indicating that there was an authentication failure when performing a Request.
  */
 @SuppressWarnings("serial")
-public class AuthFailureError extends VolleyError {
+public class AuthFailureError extends ResponseError {
     /** An intent that can be used to resolve this exception. (Brings up the password dialog.) */
     private Intent mResolutionIntent;
 

@@ -94,7 +94,7 @@ public class DiskBasedCache implements Cache {
         }
         mEntries.clear();
         mTotalSize = 0;
-        VolleyLog.d("Cache cleared.");
+        LogUtil.d("Cache cleared.");
     }
 
     /**
@@ -140,7 +140,7 @@ public class DiskBasedCache implements Cache {
     public synchronized void initialize() {
         if (!mRootDirectory.exists()) {
             if (!mRootDirectory.mkdirs()) {
-                VolleyLog.e("Unable to create cache dir %s", mRootDirectory.getAbsolutePath());
+                LogUtil.e("Unable to create cache dir %s", mRootDirectory.getAbsolutePath());
             }
             return;
         }
@@ -207,7 +207,7 @@ public class DiskBasedCache implements Cache {
         }
         boolean deleted = file.delete();
         if (!deleted) {
-            VolleyLog.d("Could not clean up file %s", file.getAbsolutePath());
+            LogUtil.d("Could not clean up file %s", file.getAbsolutePath());
         }
     }
 
@@ -219,7 +219,7 @@ public class DiskBasedCache implements Cache {
         boolean deleted = getFileForKey(key).delete();
         removeEntry(key);
         if (!deleted) {
-            VolleyLog.d("Could not delete cache entry for key=%s, filename=%s",
+            LogUtil.d("Could not delete cache entry for key=%s, filename=%s",
                     key, getFilenameForKey(key));
         }
     }
@@ -251,8 +251,8 @@ public class DiskBasedCache implements Cache {
         if ((mTotalSize + neededSpace) < mMaxCacheSizeInBytes) {
             return;
         }
-        if (VolleyLog.DEBUG) {
-            VolleyLog.v("Pruning old cache entries.");
+        if (LogUtil.DEBUG) {
+            LogUtil.v("Pruning old cache entries.");
         }
 
         long before = mTotalSize;
@@ -267,7 +267,7 @@ public class DiskBasedCache implements Cache {
             if (deleted) {
                 mTotalSize -= e.size;
             } else {
-               VolleyLog.d("Could not delete cache entry for key=%s, filename=%s",
+               LogUtil.d("Could not delete cache entry for key=%s, filename=%s",
                        e.key, getFilenameForKey(e.key));
             }
             iterator.remove();
@@ -278,8 +278,8 @@ public class DiskBasedCache implements Cache {
             }
         }
 
-        if (VolleyLog.DEBUG) {
-            VolleyLog.v("pruned %d files, %d bytes, %d ms",
+        if (LogUtil.DEBUG) {
+            LogUtil.v("pruned %d files, %d bytes, %d ms",
                     prunedFiles, (mTotalSize - before), SystemClock.elapsedRealtime() - startTime);
         }
     }
@@ -424,7 +424,7 @@ public class DiskBasedCache implements Cache {
                 os.flush();
                 return true;
             } catch (IOException e) {
-                VolleyLog.d("%s", e.toString());
+                LogUtil.d("%s", e.toString());
                 return false;
             }
         }

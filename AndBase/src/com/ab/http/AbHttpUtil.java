@@ -15,6 +15,15 @@
  */
 package com.ab.http;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.StringBody;
+import org.json.JSONObject;
+
 import android.content.Context;
 
 // TODO: Auto-generated Javadoc
@@ -34,7 +43,6 @@ public class AbHttpUtil {
 	
 	/** 工具类单例. */
 	private static AbHttpUtil mAbHttpUtil = null;
-	
 	
 	/**
 	 * 描述：获取实例.
@@ -140,6 +148,28 @@ public class AbHttpUtil {
 	}
 	
 	/**
+	 * 描述：一般通用请求.
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
+	 */
+	public void request(String url,AbStringHttpResponseListener responseListener) {
+		request(url,null,responseListener);
+	}
+	
+	/**
+	 * 描述：一般通用请求.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void request(String url, AbRequestParams params,
+			AbStringHttpResponseListener responseListener) {
+		mClient.doRequest(url, params, responseListener);
+	}
+	
+	/**
 	 * 描述：设置连接超时时间(第一次请求前设置).
 	 *
 	 * @param timeout 毫秒
@@ -181,5 +211,6 @@ public class AbHttpUtil {
 	    	mClient.shutdown();
 	    }
 	}
+	
 	
 }

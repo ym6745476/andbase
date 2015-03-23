@@ -1,4 +1,4 @@
-package com.ab.http;
+package com.ab.http.ssl;
 
 /***
  * Licensed to the Apache Software Foundation (ASF) under one

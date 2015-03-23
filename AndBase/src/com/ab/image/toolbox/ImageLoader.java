@@ -26,9 +26,9 @@ import android.widget.ImageView;
 
 import com.ab.network.toolbox.Request;
 import com.ab.network.toolbox.RequestQueue;
-import com.ab.network.toolbox.VolleyError;
 import com.ab.network.toolbox.Response.ErrorListener;
 import com.ab.network.toolbox.Response.Listener;
+import com.ab.network.toolbox.ResponseError;
 
 /**
  * Helper that handles loading and caching images from remote URLs.
@@ -185,7 +185,7 @@ public class ImageLoader {
             request.addContainer(imageContainer);
             return imageContainer;
         }
-
+        
         // The request is not already in flight. Send the new request to the network and
         // track it.
         Request<?> newRequest =
@@ -197,7 +197,7 @@ public class ImageLoader {
             }, maxWidth, maxHeight,
             Config.RGB_565, new ErrorListener() {
                 @Override
-                public void onErrorResponse(VolleyError error) {
+                public void onErrorResponse(ResponseError error) {
                     onGetImageError(cacheKey, error);
                 }
             },mExpiresTime);
@@ -242,7 +242,7 @@ public class ImageLoader {
      * Handler for when an image failed to load.
      * @param cacheKey The cache key that is associated with the image request.
      */
-    private void onGetImageError(String cacheKey, VolleyError error) {
+    private void onGetImageError(String cacheKey, ResponseError error) {
         // Notify the requesters that something failed via a null result.
         // Remove this request from the list of in-flight requests.
         BatchedImageRequest request = mInFlightRequests.remove(cacheKey);
@@ -341,7 +341,7 @@ public class ImageLoader {
         private Bitmap mResponseBitmap;
 
         /** Error if one occurred for this response */
-        private VolleyError mError;
+        private ResponseError mError;
 
         /** List of all of the active ImageContainers that are interested in the request */
         private final LinkedList<ImageContainer> mContainers = new LinkedList<ImageContainer>();
@@ -359,14 +359,14 @@ public class ImageLoader {
         /**
          * Set the error for this response
          */
-        public void setError(VolleyError error) {
+        public void setError(ResponseError error) {
             mError = error;
         }
 
         /**
          * Get the error for this response
          */
-        public VolleyError getError() {
+        public ResponseError getError() {
             return mError;
         }
 

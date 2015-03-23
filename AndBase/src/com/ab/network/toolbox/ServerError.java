@@ -21,7 +21,7 @@ package com.ab.network.toolbox;
  * Indicates that the error responded with an error response.
  */
 @SuppressWarnings("serial")
-public class ServerError extends VolleyError {
+public class ServerError extends ResponseError {
     public ServerError(NetworkResponse networkResponse) {
         super(networkResponse);
     }

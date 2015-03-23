@@ -82,7 +82,7 @@ public class DefaultRetryPolicy implements RetryPolicy {
      * @param error The error code of the last attempt.
      */
     @Override
-    public void retry(VolleyError error) throws VolleyError {
+    public void retry(ResponseError error) throws ResponseError {
         mCurrentRetryCount++;
         mCurrentTimeoutMs += (mCurrentTimeoutMs * mBackoffMultiplier);
         if (!hasAttemptRemaining()) {

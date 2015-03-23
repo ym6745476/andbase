@@ -73,7 +73,7 @@ public abstract class AbHttpResponseListener {
      * @param bytesWritten the bytes written
      * @param totalSize the total size
      */
-    public void onProgress(int bytesWritten, int totalSize) {}
+    public void onProgress(long bytesWritten, long totalSize) {}
     
     /**
      * 开始消息.
@@ -95,7 +95,7 @@ public abstract class AbHttpResponseListener {
      * @param bytesWritten the bytes written
      * @param totalSize the total size
      */
-    public void sendProgressMessage(int bytesWritten, int totalSize) {
+    public void sendProgressMessage(long bytesWritten, long totalSize) {
         sendMessage(obtainMessage(AbHttpClient.PROGRESS_MESSAGE, new Object[]{bytesWritten, totalSize}));
     }
     

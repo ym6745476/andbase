@@ -21,7 +21,7 @@ package com.ab.network.toolbox;
  * Indicates that there was a network error when performing a Volley request.
  */
 @SuppressWarnings("serial")
-public class NetworkError extends VolleyError {
+public class NetworkError extends ResponseError {
     public NetworkError() {
         super();
     }

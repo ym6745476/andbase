@@ -20,14 +20,13 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 
-import com.ab.global.AbAppConfig;
 import com.ab.network.toolbox.DefaultRetryPolicy;
 import com.ab.network.toolbox.HttpHeaderParser;
 import com.ab.network.toolbox.NetworkResponse;
 import com.ab.network.toolbox.ParseError;
 import com.ab.network.toolbox.Request;
 import com.ab.network.toolbox.Response;
-import com.ab.network.toolbox.VolleyLog;
+import com.ab.network.toolbox.LogUtil;
 import com.ab.util.AbImageUtil;
 
 /**
@@ -130,7 +129,7 @@ public class ImageRequest extends Request<Bitmap> {
             try {
                 return doParse(response);
             } catch (OutOfMemoryError e) {
-                VolleyLog.e("Caught OOM for %d byte image, url=%s", response.data.length, getUrl());
+                LogUtil.e("Caught OOM for %d byte image, url=%s", response.data.length, getUrl());
                 return Response.error(new ParseError(e));
             }
         }

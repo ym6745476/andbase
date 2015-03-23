@@ -38,7 +38,7 @@ public class Response<T> {
          * Callback method that an error has been occurred with the
          * provided error code and optional user-readable message.
          */
-        public void onErrorResponse(VolleyError error);
+        public void onErrorResponse(ResponseError error);
     }
 
     /** Returns a successful response containing the parsed result. */
@@ -50,7 +50,7 @@ public class Response<T> {
      * Returns a failed response containing the given error code and an optional
      * localized message displayed to the user.
      */
-    public static <T> Response<T> error(VolleyError error) {
+    public static <T> Response<T> error(ResponseError error) {
         return new Response<T>(error);
     }
 
@@ -61,7 +61,7 @@ public class Response<T> {
     public final Cache.Entry cacheEntry;
 
     /** Detailed error information if <code>errorCode != OK</code>. */
-    public final VolleyError error;
+    public final ResponseError error;
 
     /** True if this response was a soft-expired one and a second one MAY be coming. */
     public boolean intermediate = false;
@@ -80,7 +80,7 @@ public class Response<T> {
         this.error = null;
     }
 
-    private Response(VolleyError error) {
+    private Response(ResponseError error) {
         this.result = null;
         this.cacheEntry = null;
         this.error = error;

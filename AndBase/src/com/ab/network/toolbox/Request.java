@@ -28,7 +28,7 @@ import android.os.Looper;
 import android.os.SystemClock;
 import android.text.TextUtils;
 
-import com.ab.network.toolbox.VolleyLog.MarkerLog;
+import com.ab.network.toolbox.LogUtil.MarkerLog;
 
 /**
  * Base class for all network requests.
@@ -207,7 +207,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
         } else {
             long requestTime = SystemClock.elapsedRealtime() - mRequestBirthTime;
             if (requestTime >= SLOW_REQUEST_THRESHOLD_MS) {
-                VolleyLog.d("%d ms: %s", requestTime, this.toString());
+                LogUtil.d("%d ms: %s", requestTime, this.toString());
             }
         }
     }
@@ -493,7 +493,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @param volleyError the error retrieved from the network
      * @return an NetworkError augmented with additional information
      */
-    protected VolleyError parseNetworkError(VolleyError volleyError) {
+    protected ResponseError parseNetworkError(ResponseError volleyError) {
         return volleyError;
     }
 
@@ -512,7 +512,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      *
      * @param error Error details
      */
-    public void deliverError(VolleyError error) {
+    public void deliverError(ResponseError error) {
         if (mErrorListener != null) {
             mErrorListener.onErrorResponse(error);
         }

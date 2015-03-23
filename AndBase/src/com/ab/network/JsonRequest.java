@@ -23,7 +23,7 @@ import com.ab.network.toolbox.Request;
 import com.ab.network.toolbox.Response;
 import com.ab.network.toolbox.Response.ErrorListener;
 import com.ab.network.toolbox.Response.Listener;
-import com.ab.network.toolbox.VolleyLog;
+import com.ab.network.toolbox.LogUtil;
 
 /**
  * A request for retrieving a T type response body at a given URL that also
@@ -94,7 +94,7 @@ public abstract class JsonRequest<T> extends Request<T> {
         try {
             return mRequestBody == null ? null : mRequestBody.getBytes(PROTOCOL_CHARSET);
         } catch (UnsupportedEncodingException uee) {
-            VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s",
+            LogUtil.wtf("Unsupported Encoding while trying to get the bytes of %s using %s",
                     mRequestBody, PROTOCOL_CHARSET);
             return null;
         }

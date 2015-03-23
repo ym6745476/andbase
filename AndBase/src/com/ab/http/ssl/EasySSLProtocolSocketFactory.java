@@ -1,4 +1,4 @@
-package com.ab.http;
+package com.ab.http.ssl;
 
 import java.io.IOException;
 import java.net.InetAddress;

@@ -19,6 +19,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.concurrent.Executor;
 
 import javax.net.ssl.SSLHandshakeException;
@@ -49,6 +51,7 @@ import org.apache.http.conn.scheme.PlainSocketFactory;
 import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.conn.scheme.SocketFactory;
+import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.BasicHttpParams;
@@ -66,6 +69,7 @@ import android.os.Message;
 
 import com.ab.global.AbAppConfig;
 import com.ab.global.AbAppException;
+import com.ab.http.ssl.EasySSLProtocolSocketFactory;
 import com.ab.task.AbThreadFactory;
 import com.ab.util.AbAppUtil;
 import com.ab.util.AbFileUtil;
@@ -237,8 +241,8 @@ public class AbHttpClient {
 			  //取得默认的HttpClient
       	      HttpClient httpClient = getHttpClient();  
 		      //取得HttpResponse
-		      String  response = httpClient.execute(httpGet,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
-			  AbLogUtil.i(mContext, "[HTTP Request]:"+url+",result："+response);
+		      String response = httpClient.execute(httpGet,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
+			  AbLogUtil.i(mContext, "[HTTP GET]:"+url+",result："+response);
 		} catch (Exception e) {
 			e.printStackTrace();
 			//发送失败消息
@@ -273,7 +277,7 @@ public class AbHttpClient {
 		      boolean isContainFile = false;
 		      if(params != null){
 		    	  //使用NameValuePair来保存要传递的Post参数设置字符集 
-			      HttpEntity httpentity = params.getEntity(responseListener);
+			      HttpEntity httpentity = params.getEntity();
 			      //请求httpRequest  
 			      httpPost.setEntity(httpentity); 
 			      if(params.getFileParams().size()>0){
@@ -284,8 +288,9 @@ public class AbHttpClient {
 		      //取得默认的HttpClient
 		      DefaultHttpClient httpClient = getHttpClient();  
 		      if(isContainFile){
-		    	  AbLogUtil.i(mContext, "request："+url+",包含文件域!");
-		      }else{
+		    	  httpPost.addHeader("connection", "keep-alive");
+			      httpPost.addHeader("Content-Type", "multipart/form-data; boundary=" + params.boundaryString());
+		    	  AbLogUtil.i(mContext, "[HTTP POST]:"+url+",包含文件域!");
 		      }
 		      //取得HttpResponse
 		      response = httpClient.execute(httpPost,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
@@ -293,12 +298,72 @@ public class AbHttpClient {
 			  
 		} catch (Exception e) {
 			e.printStackTrace();
-			AbLogUtil.i(mContext, "request："+url+",error："+e.getMessage());
+			AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error："+e.getMessage());
 			//发送失败消息
 			responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
 		}finally{
 			responseListener.sendFinishMessage();
 		}
+	}
+	
+	/**
+     * 简单的请求,只支持返回的数据是String类型,不支持转发重定向
+     * @param url
+     * @param params
+     * @return
+     */
+    public void doRequest(final String url, final AbRequestParams params, final AbStringHttpResponseListener responseListener) {
+    	responseListener.setHandler(new ResponderHandler(responseListener));
+		mExecutorService.execute(new Runnable() { 
+    		public void run() {
+    			
+    			responseListener.sendStartMessage();
+    			
+    			if(!AbAppUtil.isNetworkAvailable(mContext)){
+					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+			        return;
+			    }
+			  
+    			HttpURLConnection urlConn = null;
+    			
+    			try {
+    				String resultString = null;
+					URL requestUrl = new URL(url);
+					urlConn = (HttpURLConnection) requestUrl.openConnection();
+			        urlConn.setRequestMethod("POST");
+			        urlConn.setConnectTimeout(mTimeout);
+			        urlConn.setReadTimeout(mTimeout);
+			        urlConn.setDoOutput(true);
+			        
+					if(params!=null){
+						urlConn.setRequestProperty("connection", "keep-alive");
+				        urlConn.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + params.boundaryString());
+						MultipartEntity reqEntity = params.getMultiPart();
+				        reqEntity.writeTo(urlConn.getOutputStream());
+					}else{
+						urlConn.connect();
+					}
+			       
+		            if (urlConn.getResponseCode() == HttpStatus.SC_OK){
+		            	resultString = readString(urlConn.getInputStream());
+		            }else{
+		            	resultString = readString(urlConn.getErrorStream());
+		            }
+		            urlConn.getInputStream().close();
+		            responseListener.sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, resultString);
+    			} catch (Exception e) { 
+    				e.printStackTrace();
+					AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error："+e.getMessage());
+					//发送失败消息
+					responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+    			} finally {
+					if (urlConn != null)
+						urlConn.disconnect();
+					
+					responseListener.sendFinishMessage();
+				}
+    		}                 
+    	});      
 	}
 	
 	
@@ -501,7 +566,7 @@ public class AbHttpClient {
 			case PROGRESS_MESSAGE:
 				 response = (Object[]) msg.obj;
 	             if (response != null && response.length >= 2){
-	            	 responseListener.onProgress((Integer) response[0], (Integer) response[1]);
+	            	 responseListener.onProgress((Long) response[0], (Long) response[1]);
 			     }else{
 			    	 AbLogUtil.e(mContext, "PROGRESS_MESSAGE "+AbAppConfig.MISSING_PARAMETERS);
 			     }
@@ -732,6 +797,23 @@ public class AbHttpClient {
             return false;
         }
     };
+    
+	private String readString(InputStream is) {
+		StringBuffer rst = new StringBuffer();
+		
+		byte[] buffer = new byte[1048576];
+		int len = 0;
+		
+		try {
+			while ((len = is.read(buffer)) > 0)
+				for (int i = 0; i < len; ++i)
+					rst.append((char)buffer[i]);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return rst.toString();
+	}
 
 
     /**

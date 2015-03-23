@@ -1,4 +1,4 @@
-package com.ab.http;
+package com.ab.http.ssl;
 
 /***
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -53,6 +53,7 @@ import org.apache.http.conn.scheme.LayeredSocketFactory;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
+import com.ab.http.AbHttpClient;
 import com.ab.util.AbLogUtil;
 
 /***

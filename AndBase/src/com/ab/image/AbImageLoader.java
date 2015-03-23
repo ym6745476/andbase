@@ -27,8 +27,8 @@ import com.ab.image.toolbox.ImageLoader;
 import com.ab.image.toolbox.ImageLoader.ImageContainer;
 import com.ab.image.toolbox.ImageLoader.ImageListener;
 import com.ab.network.toolbox.RequestQueue;
-import com.ab.network.toolbox.Volley;
-import com.ab.network.toolbox.VolleyError;
+import com.ab.network.toolbox.RequestQueueUtil;
+import com.ab.network.toolbox.ResponseError;
 import com.ab.util.AbLogUtil;
 import com.ab.util.AbStrUtil;
 
@@ -86,7 +86,7 @@ public class AbImageLoader {
     public AbImageLoader(Context context) {
     	this.mContext = context;
     	this.expiresTime = AbAppConfig.IMAGE_CACHE_EXPIRES_TIME;
-    	mQueue = Volley.newRequestQueue(context);
+    	mQueue = RequestQueueUtil.newRequestQueue(context);
     	mImageLoader = new ImageLoader(mQueue, AbImageCache.getInstance());
     	mImageLoader.setExpiresTime(expiresTime);
     } 
@@ -140,7 +140,7 @@ public class AbImageLoader {
         mImageLoader.get(url,new ImageListener() {
         	
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void onErrorResponse(ResponseError error) {
             	if(errorImage != null){
         			imageView.setImageDrawable(errorImage);
         		}
@@ -199,7 +199,7 @@ public class AbImageLoader {
         mImageLoader.get(url,new ImageListener() {
         	
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void onErrorResponse(ResponseError error) {
             }
 
             @Override

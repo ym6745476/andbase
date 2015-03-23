@@ -1,4 +1,4 @@
-package com.ab.http;
+package com.ab.http.ssl;
 
 import java.security.KeyStore;
 import java.security.KeyStoreException;
