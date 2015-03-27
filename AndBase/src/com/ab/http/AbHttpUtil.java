@@ -15,15 +15,6 @@
  */
 package com.ab.http;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import org.apache.http.entity.mime.MultipartEntity;
-import org.apache.http.entity.mime.content.StringBody;
-import org.json.JSONObject;
-
 import android.content.Context;
 
 // TODO: Auto-generated Javadoc

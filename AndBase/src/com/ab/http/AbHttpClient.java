@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.concurrent.Executor;
 
 import javax.net.ssl.SSLHandshakeException;
@@ -51,7 +52,6 @@ import org.apache.http.conn.scheme.PlainSocketFactory;
 import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.conn.scheme.SocketFactory;
-import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.BasicHttpParams;
@@ -69,6 +69,7 @@ import android.os.Message;
 
 import com.ab.global.AbAppConfig;
 import com.ab.global.AbAppException;
+import com.ab.http.entity.MultipartEntity;
 import com.ab.http.ssl.EasySSLProtocolSocketFactory;
 import com.ab.task.AbThreadFactory;
 import com.ab.util.AbAppUtil;
@@ -118,9 +119,6 @@ public class AbHttpClient {
     
     /** 缓冲大小. */
     private static final int DEFAULT_SOCKET_BUFFER_SIZE = 8192;
-    
-    /** 缓冲大小. */
-    private static final int BUFFER_SIZE = 4096;
     
     /** 成功. */
     protected static final int SUCCESS_MESSAGE = 0;
@@ -349,6 +347,7 @@ public class AbHttpClient {
 		            }else{
 		            	resultString = readString(urlConn.getErrorStream());
 		            }
+		            resultString = URLEncoder.encode(resultString, encode);
 		            urlConn.getInputStream().close();
 		            responseListener.sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, resultString);
     			} catch (Exception e) { 
@@ -394,7 +393,7 @@ public class AbHttpClient {
 	        outStream = new FileOutputStream(responseListener.getFile());
 	        if (inStream != null) {
 	          
-	              byte[] tmp = new byte[BUFFER_SIZE];
+	              byte[] tmp = new byte[4096];
 	              int l, count = 0;
 	              while ((l = inStream.read(tmp)) != -1 && !Thread.currentThread().isInterrupted()) {
 	                  count += l;
@@ -445,7 +444,7 @@ public class AbHttpClient {
 			long contentLength = entity.getContentLength();
 			if (inStream != null) {
 				  int l, count = 0;
-				  byte[] tmp = new byte[BUFFER_SIZE];
+				  byte[] tmp = new byte[4096];
 				  while((l = inStream.read(tmp))!=-1){ 
 					  count += l;
 			          outSteam.write(tmp,0,l); 

@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 import com.ab.global.AbAppConfig;
-import com.ab.global.AbConstant;
 
 //TODO: Auto-generated Javadoc
 

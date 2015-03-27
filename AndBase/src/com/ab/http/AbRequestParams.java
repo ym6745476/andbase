@@ -26,14 +26,15 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.entity.mime.HttpMultipartMode;
-import org.apache.http.entity.mime.MultipartEntity;
-import org.apache.http.entity.mime.content.ByteArrayBody;
-import org.apache.http.entity.mime.content.ContentBody;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
+
+import com.ab.http.entity.HttpMultipartMode;
+import com.ab.http.entity.MultipartEntity;
+import com.ab.http.entity.mine.content.ByteArrayBody;
+import com.ab.http.entity.mine.content.ContentBody;
+import com.ab.http.entity.mine.content.FileBody;
+import com.ab.http.entity.mine.content.StringBody;
 
 //TODO: Auto-generated Javadoc
 /**
@@ -150,10 +151,8 @@ public class AbRequestParams {
 	 */
 	public String getParamString() {
 		List<BasicNameValuePair> paramsList = new LinkedList<BasicNameValuePair>();
-		for (ConcurrentHashMap.Entry<String, String> entry : urlParams
-				.entrySet()) {
-			paramsList.add(new BasicNameValuePair(entry.getKey(), entry
-					.getValue()));
+		for (ConcurrentHashMap.Entry<String, String> entry : urlParams.entrySet()) {
+			paramsList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
 		}
 		return URLEncodedUtils.format(paramsList, HTTP.UTF_8);
 	}
@@ -165,10 +164,8 @@ public class AbRequestParams {
 	 */
 	public List<BasicNameValuePair> getParamsList() {
 		List<BasicNameValuePair> paramsList = new LinkedList<BasicNameValuePair>();
-		for (ConcurrentHashMap.Entry<String, String> entry : urlParams
-				.entrySet()) {
-			paramsList.add(new BasicNameValuePair(entry.getKey(), entry
-					.getValue()));
+		for (ConcurrentHashMap.Entry<String, String> entry : urlParams.entrySet()) {
+			paramsList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
 		}
 		return paramsList;
 	}
