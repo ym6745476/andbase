@@ -25,7 +25,7 @@ import java.io.ByteArrayOutputStream;import java.io.UnsupportedEncodingExceptio
  * @version v1.0
  * @date：2011-11-10 下午11:52:13
  */
-public final class AbBase64 {
+public class AbBase64 {
 	
     /** The Constant base64EncodeChars. */
     private static final char[] base64EncodeChars = new char[] {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
