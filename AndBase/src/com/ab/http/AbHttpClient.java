@@ -230,6 +230,9 @@ public class AbHttpClient {
 			  
 			  //HttpGet连接对象  
 			  if(params!=null){
+				  if(url.indexOf("?")==-1){
+					  url += "?";
+				  }
 				  url += params.getParamString();
 			  }
 			  HttpGet httpGet = new HttpGet(url);  

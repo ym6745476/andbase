@@ -44,7 +44,6 @@ public class AbFragment extends Fragment {
 	private TextView mRefreshTextView = null;
 	private ImageView mRefreshImageView = null;
 	private View mIndeterminateView = null;
-	private int mBackgroundColor = Color.parseColor("#88838B8B");
 	private AbFragmentOnLoadListener mAbFragmentOnLoadListener = null;
 	
 	/**
@@ -61,7 +60,6 @@ public class AbFragment extends Fragment {
 			Bundle savedInstanceState) { 
 		
 		rootView = new RelativeLayout(this.getActivity());
-		rootView.setBackgroundColor(mBackgroundColor);
 		mContentView = onCreateContentView(inflater,container,savedInstanceState);
 		//设置默认资源
 		setResource();
@@ -333,12 +331,8 @@ public class AbFragment extends Fragment {
 		}
 	}
 
-	public int getBackgroundColor() {
-		return mBackgroundColor;
-	}
-
 	public void setBackgroundColor(int backgroundColor) {
-		this.mBackgroundColor = backgroundColor;
+		rootView.setBackgroundColor(backgroundColor);
 	}
 	
 	public AbFragmentOnLoadListener getAbFragmentOnLoadListener() {

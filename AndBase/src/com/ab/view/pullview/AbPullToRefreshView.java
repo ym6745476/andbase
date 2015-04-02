@@ -291,7 +291,10 @@ public class AbPullToRefreshView extends LinearLayout {
 				View child = mAdapterView.getChildAt(0);
 				if (child == null) {
 					// 如果mAdapterView中没有数据,不拦截
-					return false;
+					//return false;
+					
+					mPullState = PULL_DOWN_STATE;
+					return true;
 				}
 				if (mAdapterView.getFirstVisiblePosition() == 0 && child.getTop() == 0) {
 					mPullState = PULL_DOWN_STATE;
@@ -299,7 +302,7 @@ public class AbPullToRefreshView extends LinearLayout {
 				}
 				int top = child.getTop();
 				int padding = mAdapterView.getPaddingTop();
-				if (mAdapterView.getFirstVisiblePosition() == 0 && Math.abs(top - padding) <= 11) {// 这里之前用3可以判断,但现在不行,还没找到原因
+				if (mAdapterView.getFirstVisiblePosition() == 0 && Math.abs(top - padding) <= 11) {
 					mPullState = PULL_DOWN_STATE;
 					return true;
 				}
@@ -312,7 +315,10 @@ public class AbPullToRefreshView extends LinearLayout {
 				View lastChild = mAdapterView.getChildAt(mAdapterView.getChildCount() - 1);
 				if (lastChild == null) {
 					// 如果mAdapterView中没有数据,不拦截
-					return false;
+					//return false;
+					
+					mPullState = PULL_UP_STATE;
+					return true;
 				}
 				// 最后一个子view的Bottom小于父View的高度说明mAdapterView的数据没有填满父view,
 				// 等于父View的高度说明mAdapterView已经滑动到最后
@@ -491,7 +497,7 @@ public class AbPullToRefreshView extends LinearLayout {
 		LayoutParams params = (LayoutParams) mHeaderView.getLayoutParams();
 		return params.topMargin;
 	}
-
+	
 
 	/**
 	 * 设置下拉刷新的监听器.

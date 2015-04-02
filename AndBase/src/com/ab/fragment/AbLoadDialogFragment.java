@@ -13,6 +13,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 /**
  * © 2012 amsoft.cn
@@ -33,7 +34,6 @@ public class AbLoadDialogFragment extends AbDialogFragment {
 	private View mContentView;
 	private TextView mTextView = null;
 	private ImageView mImageView = null;
-	private int mBackgroundColor = Color.parseColor("#88838B8B");
 
 	/**
 	 * Create a new instance of AbDialogFragment, providing "style" as an
@@ -63,7 +63,6 @@ public class AbLoadDialogFragment extends AbDialogFragment {
 			Bundle savedInstanceState) {
 
 		LinearLayout parent = new LinearLayout(this.getActivity());
-		parent.setBackgroundColor(mBackgroundColor);
 		parent.setGravity(Gravity.CENTER);
 		parent.setOrientation(LinearLayout.VERTICAL);
 		parent.setPadding(20, 20, 20, 20);
@@ -137,12 +136,8 @@ public class AbLoadDialogFragment extends AbDialogFragment {
 		this.mIndeterminateDrawable = indeterminateDrawable;
 	}
 
-	public int getBackgroundColor() {
-		return mBackgroundColor;
-	}
-
 	public void setBackgroundColor(int backgroundColor) {
-		this.mBackgroundColor = backgroundColor;
+		mContentView.setBackgroundColor(backgroundColor);
 	}
 	
 }
