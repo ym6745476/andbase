@@ -63,9 +63,9 @@ public class ImageListAdapter extends BaseAdapter{
         //用于将xml转为View
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
-        mAbImageLoader = AbImageLoader.newInstance(mContext);
-        mAbImageLoader.setMaxWidth(150);
-        mAbImageLoader.setMaxHeight(150);
+        mAbImageLoader = AbImageLoader.getInstance(mContext);
+        mAbImageLoader.setDesiredWidth(150);
+        mAbImageLoader.setDesiredHeight(150);
         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
         mAbImageLoader.setErrorImage(R.drawable.image_error);
         mAbImageLoader.setEmptyImage(R.drawable.image_empty);
@@ -103,9 +103,9 @@ public class ImageListAdapter extends BaseAdapter{
           itemsTitle.setText((String)obj.get("itemsTitle"));
           itemsText.setText((String)obj.get("itemsText"));
           //设置加载中的View
-          mAbImageLoader.setLoadingView(convertView.findViewById(R.id.progressBar));
+          View loadingView = convertView.findViewById(R.id.progressBar);
           //图片的下载
-          mAbImageLoader.display(itemsIcon,imageUrl);
+          mAbImageLoader.display(itemsIcon,loadingView,imageUrl);
           
           return convertView;
     }

@@ -76,42 +76,6 @@ public class AbFileUtil {
 	/** 剩余空间大于200M才使用SD缓存. */
 	private static int freeSdSpaceNeededToCache = 200*1024*1024;
 	 
-	 /**
-	  * 描述：通过文件的网络地址从SD卡中读取图片，如果SD中没有则自动下载并保存.
-	  * @param url 文件的网络地址
-	  * @param type 图片的处理类型（剪切或者缩放到指定大小，参考AbImageUtil类）
-	  * 如果设置为原图，则后边参数无效，得到原图
-	  * @param desiredWidth 新图片的宽
-	  * @param desiredHeight 新图片的高
-	  * @return Bitmap 新图片
-	  */
-	 public static Bitmap getBitmapFromSD(String url,int type,int desiredWidth, int desiredHeight){
-		 Bitmap bitmap = null;
-		 try {
-			 if(AbStrUtil.isEmpty(url)){
-		    	return null;
-		     }
-			 
-			 //SD卡不存在 或者剩余空间不足了就不缓存到SD卡了
-			 if(!isCanUseSD() || freeSdSpaceNeededToCache < freeSpaceOnSD()){
-				 bitmap = getBitmapFromURL(url,type,desiredWidth,desiredHeight);
-				 return bitmap;
-		     }
-			 //下载文件，如果不存在就下载，存在直接返回地址
-			 String downFilePath = downloadFile(url,imageDownloadDir);
-			 if(downFilePath != null){
-				 //获取图片
-				 return getBitmapFromSD(new File(downFilePath),type,desiredWidth,desiredHeight);
-			 }else{
-				 return null;
-			 }
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return bitmap;
-	 }
-	 
 	 
 	 /**
  	 * 描述：通过文件的本地地址从SD卡读取图片.
@@ -245,19 +209,18 @@ public class AbFileUtil {
 	/**
 	 * 描述：根据URL从互连网获取图片.
 	 * @param url 要下载文件的网络地址
-	 * @param type 图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类）
 	 * @param desiredWidth 新图片的宽
 	 * @param desiredHeight 新图片的高
 	 * @return Bitmap 新图片
 	 */
-	public static Bitmap getBitmapFromURL(String url,int type,int desiredWidth, int desiredHeight){
-		Bitmap bit = null;
+	public static Bitmap getBitmapFromURL(String url,int desiredWidth, int desiredHeight){
+		Bitmap bitmap = null;
 		try {
-			bit = AbImageUtil.getBitmap(url, type, desiredWidth, desiredHeight);
+			bitmap = AbImageUtil.getBitmap(url,desiredWidth,desiredHeight);
 	    } catch (Exception e) {
 	    	AbLogUtil.d(AbFileUtil.class, "下载图片异常："+e.getMessage());
 		}
-		return bit;
+		return bitmap;
 	}
 	
 	/**
@@ -347,17 +310,17 @@ public class AbFileUtil {
  			URL mUrl = new URL(url);
  			connection = (HttpURLConnection)mUrl.openConnection();
  			connection.connect();
-             //获取文件名，下载文件
-             String fileName  = getCacheFileNameFromUrl(url,connection);
+            //获取文件名，下载文件
+            String fileName  = getCacheFileNameFromUrl(url,connection);
              
-             file = new File(imageDownloadDir,fileName);
-             downFilePath = file.getPath();
-             if(!file.exists()){
-                 file.createNewFile();
-             }else{
-                 //文件已存在
-                 return file.getPath();
-             }
+            file = new File(imageDownloadDir,fileName);
+            downFilePath = file.getPath();
+            if(!file.exists()){
+                file.createNewFile();
+            }else{
+                //文件已存在
+                return file.getPath();
+            }
  			in = connection.getInputStream();
  			fileOutputStream = new FileOutputStream(file);
  			byte[] b = new byte[1024];

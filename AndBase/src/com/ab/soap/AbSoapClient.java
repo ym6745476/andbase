@@ -31,7 +31,7 @@ import android.content.Context;
 import com.ab.global.AbAppConfig;
 import com.ab.global.AbAppException;
 import com.ab.http.AbHttpStatus;
-import com.ab.task.AbThreadFactory;
+import com.ab.task.thread.AbThreadFactory;
 import com.ab.util.AbAppUtil;
 import com.ab.util.AbLogUtil;
 

@@ -57,11 +57,14 @@ public class AbAppConfig {
 	/** DB目录. */
 	public static  String DB_DIR = "db";
 	
-	/** 默认缓存超时时间设置. */
-	public static int IMAGE_CACHE_EXPIRES_TIME = 3600*24*3;
+	/** 默认缓存超时时间设置，毫秒. */
+	public static int IMAGE_CACHE_EXPIRES_TIME = 60*10000;
 	
-	/** 缓存大小  单位10M. */
+	/** 内存缓存大小  单位10M. */
 	public static int MAX_CACHE_SIZE_INBYTES = 10*1024*1024;
+	
+	/** 磁盘缓存大小  单位10M. */
+	public static int MAX_DISK_USAGE_INBYTES = 10*1024*1024;
 	
 	/** The Constant CONNECTEXCEPTION. */
 	public static String CONNECT_EXCEPTION = "无法连接到网络";

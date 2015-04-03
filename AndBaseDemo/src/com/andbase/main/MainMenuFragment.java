@@ -19,8 +19,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ab.cache.image.AbImageBaseCache;
 import com.ab.fragment.AbAlertDialogFragment.AbDialogOnClickListener;
-import com.ab.image.AbImageCache;
 import com.ab.image.AbImageLoader;
 import com.ab.model.AbMenuItem;
 import com.ab.task.AbTask;
@@ -29,7 +29,6 @@ import com.ab.task.AbTaskListener;
 import com.ab.util.AbAnimationUtil;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbFileUtil;
-import com.ab.util.AbImageUtil;
 import com.ab.util.AbToastUtil;
 import com.andbase.R;
 import com.andbase.demo.activity.DemoMainActivity;
@@ -93,7 +92,7 @@ public class MainMenuFragment extends Fragment {
 					public void get() {
 						try {
 							AbFileUtil.clearDownloadFile();
-							AbImageCache.getInstance().clearBitmap();
+							AbImageBaseCache.getInstance().clearBitmap();
 						} catch (Exception e) {
 							AbToastUtil.showToastInThread(mActivity,
 									e.getMessage());
@@ -141,8 +140,8 @@ public class MainMenuFragment extends Fragment {
 
 		// 图片的下载
 		mAbImageLoader = new AbImageLoader(mActivity);
-		mAbImageLoader.setMaxWidth(150);
-		mAbImageLoader.setMaxHeight(150);
+		mAbImageLoader.setDesiredWidth(150);
+		mAbImageLoader.setDesiredHeight(150);
 
 		initMenu();
 

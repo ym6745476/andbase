@@ -154,7 +154,7 @@ public class HttpActivity extends AbActivity {
 		        params.put("phone", "15150509567");
 		        params.put("param2", "2");
 		        params.put("param3", "10");
-		        mAbHttpUtil.request(url,params, new AbStringHttpResponseListener() {
+		        mAbHttpUtil.post(url,params, new AbStringHttpResponseListener() {
 		        	
 		        	// 获取数据成功会调用这里
 		        	@Override

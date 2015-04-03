@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.widget.ExpandableListView;
 
 import com.ab.activity.AbActivity;
-import com.ab.download.DownFile;
-import com.ab.download.DownFileDao;
-import com.ab.task.AbTaskPool;
+import com.ab.task.thread.AbTaskPool;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.demo.adapter.MyExpandableListAdapter;
 import com.andbase.global.Constant;
 import com.andbase.global.MyApplication;
+import com.andbase.util.download.DownFile;
+import com.andbase.util.download.DownFileDao;
 
 public class DownListActivity extends AbActivity{
 	

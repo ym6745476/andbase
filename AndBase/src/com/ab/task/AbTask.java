@@ -37,7 +37,7 @@ import android.os.AsyncTask;
 /**
  * © 2012 amsoft.cn
  * 名称：AbAsyncTask.java 
- * 描述：下载数据的任务实现，单次下载
+ * 描述：下载数据的任务实现
  *
  * @author 还如一梦中
  * @version v1.0
@@ -45,29 +45,32 @@ import android.os.AsyncTask;
  */
 public class AbTask extends AsyncTask<AbTaskItem, Integer, AbTaskItem> {
 	
-	/** The listener. */
+	/** 监听器. */
 	private AbTaskListener listener; 
 	
-	/** The result. */
+	/** 结果. */
 	private Object result;
 	
 	/**
-	 * Instantiates a new ab task.
+	 * 初始化Task.
 	 */
 	public AbTask() {
 		super();
 	}
 	
 	/**
-	 * Instantiates a new ab task.
+	 * 实例化.
 	 */
 	public static AbTask newInstance() {
 		AbTask mAbTask = new AbTask();
 		return mAbTask;
 	}
 	
-	/* (non-Javadoc)
-	 * @see android.os.AsyncTask#doInBackground(Params[])
+	/**
+	 * 
+	 * 执行任务.
+	 * @param items
+	 * @return
 	 */
 	@Override
 	protected AbTaskItem doInBackground(AbTaskItem... items) {
@@ -85,16 +88,19 @@ public class AbTask extends AsyncTask<AbTaskItem, Integer, AbTaskItem> {
 		return item;
 	}
 
-	/* (non-Javadoc)
-	 * @see android.os.AsyncTask#onCancelled()
+	/**
+	 * 
+	 * 取消.
 	 */
 	@Override
 	protected void onCancelled() {
 		super.onCancelled();
 	}
 
-	/* (non-Javadoc)
-	 * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+	/**
+	 * 
+	 * 执行完成.
+	 * @param item
 	 */
 	@Override
 	protected void onPostExecute(AbTaskItem item) {
@@ -109,16 +115,19 @@ public class AbTask extends AsyncTask<AbTaskItem, Integer, AbTaskItem> {
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see android.os.AsyncTask#onPreExecute()
+	/**
+	 * 
+	 * 执行前.
 	 */
 	@Override
 	protected void onPreExecute() {
 		super.onPreExecute();
 	}
 
-	/* (non-Javadoc)
-	 * @see android.os.AsyncTask#onProgressUpdate(Progress[])
+	/**
+	 * 
+	 * 进度更新.
+	 * @param values
 	 */
 	@Override
 	protected void onProgressUpdate(Integer... values) {

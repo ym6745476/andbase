@@ -16,6 +16,7 @@
 package com.ab.util;
 
 import java.util.Calendar;
+import java.util.Locale;
 
 import android.content.Context;
 import android.util.Log;
@@ -43,6 +44,7 @@ public class AbLogUtil {
 	
 	/** 起始执行时间. */
 	public static long startLogTimeInMillis = 0;
+	
 
 	/**
 	 * debug日志
@@ -74,6 +76,28 @@ public class AbLogUtil {
 	}
 	
 	/**
+	 * debug日志
+	 * @param context
+	 * @param format
+	 * @param args
+	 */
+	public static void d(Context context,String format, Object... args) {
+		String tag = context.getClass().getSimpleName();
+        d(tag, buildMessage(format, args));
+    }
+	
+	/**
+	 * debug日志
+	 * @param clazz
+	 * @param format
+	 * @param args
+	 */
+	public static void d(Class<?> clazz,String format, Object... args) {
+		String tag = clazz.getSimpleName();
+        d(tag, buildMessage(format, args));
+    }
+	
+	/**
 	 * info日志
 	 * @param tag
 	 * @param message
@@ -101,6 +125,28 @@ public class AbLogUtil {
 		String tag = clazz.getSimpleName();
 		i(tag, message);
 	}
+	
+	/**
+	 * info日志
+	 * @param context
+	 * @param format
+	 * @param args
+	 */
+	public static void i(Context context,String format, Object... args) {
+		String tag = context.getClass().getSimpleName();
+        i(tag, buildMessage(format, args));
+    }
+	
+	/**
+	 * info日志
+	 * @param clazz
+	 * @param format
+	 * @param args
+	 */
+	public static void i(Class<?> clazz,String format, Object... args) {
+		String tag = clazz.getSimpleName();
+        i(tag, buildMessage(format, args));
+    }
 	
 	
 	
@@ -132,6 +178,29 @@ public class AbLogUtil {
 		String tag = clazz.getSimpleName();
 		e(tag, message);
 	}
+	
+	
+	/**
+	 * error日志
+	 * @param context
+	 * @param format
+	 * @param args
+	 */
+	public static void e(Context context,String format, Object... args) {
+		String tag = context.getClass().getSimpleName();
+        e(tag, buildMessage(format, args));
+    }
+	
+	/**
+	 * error日志
+	 * @param clazz
+	 * @param format
+	 * @param args
+	 */
+	public static void e(Class<?> clazz,String format, Object... args) {
+		String tag = clazz.getSimpleName();
+        e(tag, buildMessage(format, args));
+    }
 	
 	/**
 	 * 描述：记录当前时间毫秒.
@@ -252,6 +321,30 @@ public class AbLogUtil {
 		I  = false;
 		E  = false;
 	}
+	
+	/**
+	 * format日志
+	 * @param format
+	 * @param args
+	 * @return
+	 */
+	private static String buildMessage(String format, Object... args) {
+        String msg = (args == null) ? format : String.format(Locale.US, format, args);
+        StackTraceElement[] trace = new Throwable().fillInStackTrace().getStackTrace();
+        String caller = "<unknown>";
+        for (int i = 2; i < trace.length; i++) {
+            Class<?> clazz = trace[i].getClass();
+            if (!clazz.equals(AbLogUtil.class)) {
+                String callingClass = trace[i].getClassName();
+                callingClass = callingClass.substring(callingClass.lastIndexOf('.') + 1);
+                callingClass = callingClass.substring(callingClass.lastIndexOf('$') + 1);
+                caller = callingClass + "." + trace[i].getMethodName();
+                break;
+            }
+        }
+        return String.format(Locale.US, "[%d] %s: %s",
+                Thread.currentThread().getId(), caller, msg);
+    }
 
 
 }

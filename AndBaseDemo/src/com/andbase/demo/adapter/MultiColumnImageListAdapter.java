@@ -82,12 +82,12 @@ public class MultiColumnImageListAdapter extends AbMultiColumnListAdapter{
           
           //获取该行的数据
           ImageInfo  mImageInfo = mImageList.get(position);
-		  mAbImageLoader.setMaxWidth(mImageInfo.getWidth());
-		  mAbImageLoader.setMaxHeight(mImageInfo.getHeight());
+		  mAbImageLoader.setDesiredWidth(mImageInfo.getWidth());
+		  mAbImageLoader.setDesiredHeight(mImageInfo.getHeight());
 		  String url = mImageInfo.getUrl();
 		  //设置加载中的View
-          mAbImageLoader.setLoadingView(convertView.getView().findViewById(R.id.progressBar));
-          mAbImageLoader.display(holder.itemsIcon,url);
+          View loadingView = convertView.getView().findViewById(R.id.progressBar);
+          mAbImageLoader.display(holder.itemsIcon,loadingView,url);
           
           convertView.setWidth(mImageInfo.getWidth());
           convertView.setHeight(mImageInfo.getHeight());

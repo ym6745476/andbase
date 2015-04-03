@@ -11,11 +11,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.ab.activity.AbActivity;
-import com.ab.global.AbConstant;
 import com.ab.model.AbResult;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskObjectListener;
-import com.ab.task.AbTaskPool;
+import com.ab.task.thread.AbTaskPool;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbStrUtil;
 import com.ab.util.AbToastUtil;

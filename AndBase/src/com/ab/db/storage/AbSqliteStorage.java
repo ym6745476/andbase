@@ -28,7 +28,7 @@ import com.ab.db.storage.AbSqliteStorageListener.AbDataUpdateListener;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListListener;
 import com.ab.task.AbTaskObjectListener;
-import com.ab.task.AbTaskQueue;
+import com.ab.task.thread.AbTaskQueue;
 
 // TODO: Auto-generated Javadoc
 

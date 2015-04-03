@@ -59,8 +59,8 @@ public class MessageListAdapter extends BaseAdapter{
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setMaxWidth(100);
-        mAbImageLoader.setMaxHeight(100);
+        mAbImageLoader.setDesiredWidth(100);
+        mAbImageLoader.setDesiredHeight(100);
         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
         mAbImageLoader.setErrorImage(R.drawable.image_error);
         mAbImageLoader.setEmptyImage(R.drawable.image_empty);

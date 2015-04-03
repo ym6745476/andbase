@@ -58,15 +58,13 @@ public class AbHorizontalProgressBar extends View {
 	/** The height. */
 	private int height; 
 	
-	//灰色轨迹
-	/** The path color. */
+	/** 灰色轨迹. */
 	private int pathColor = 0xFFF0EEDF;
 	
-	/** The path border color. */
+	/** 灰色轨迹边. */
 	private int pathBorderColor = 0xFFD2D1C4;
 	
-	//梯度渐变的填充颜色
-	/** The fill colors. */
+	/** 梯度渐变的填充颜色. */
 	private int[] fillColors = new int[] {0xFF3DF346,0xFF02C016};
 	
 	// 指定了光源的方向和环境光强度来添加浮雕效果
@@ -240,6 +238,61 @@ public class AbHorizontalProgressBar extends View {
 		this.invalidate();
 	}
 	
+	
+	/**
+	 * 获取颜色
+	 * @return
+	 */
+	public int[] getFillColors() {
+		return fillColors;
+	}
+
+	/**
+	 * 设置颜色
+	 * @param fillColors
+	 */
+	public void setFillColors(int[] fillColors) {
+		this.fillColors = fillColors;
+		invalidate();
+	}
+
+    /**
+     * 获取背景色
+     * @return
+     */
+	public int getPathColor() {
+		return pathColor;
+	}
+
+	/**
+     * 设置背景色
+     * @return
+     */
+	public void setPathColor(int pathColor) {
+		this.pathColor = pathColor;
+		invalidate();
+	}
+
+	/**
+     * 获取背景边框色
+     * @return
+     */
+	public int getPathBorderColor() {
+		return pathBorderColor;
+	}
+
+	/**
+     * 设置背景边框色
+     * @return
+     */
+	public void setPathBorderColor(int pathBorderColor) {
+		this.pathBorderColor = pathBorderColor;
+		invalidate();
+	}
+
+
+
+
 	/**
 	 * 进度监听器.
 	 *

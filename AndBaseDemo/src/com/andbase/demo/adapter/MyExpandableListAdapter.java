@@ -18,10 +18,6 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.ab.download.AbDownloadProgressListener;
-import com.ab.download.AbDownloadThread;
-import com.ab.download.AbFileDownloader;
-import com.ab.download.DownFile;
 import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
@@ -30,6 +26,10 @@ import com.ab.util.AbStrUtil;
 import com.ab.util.AbToastUtil;
 import com.andbase.R;
 import com.andbase.global.Constant;
+import com.andbase.util.download.AbDownloadProgressListener;
+import com.andbase.util.download.AbDownloadThread;
+import com.andbase.util.download.AbFileDownloader;
+import com.andbase.util.download.DownFile;
 
 public class MyExpandableListAdapter extends BaseExpandableListAdapter {
 	

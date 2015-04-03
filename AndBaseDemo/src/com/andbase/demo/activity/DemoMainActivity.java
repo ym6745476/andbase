@@ -101,102 +101,96 @@ public class DemoMainActivity extends AbActivity {
 		
 		map = new HashMap<String, Object>();
 		map.put("itemsIcon", mPhotoList.get(5));
-		map.put("itemsTitle", "频繁快速响应Request");
-		map.put("itemsText", "适合大量频繁快速响应的Http Request");
-		list.add(map);
-
-		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(6));
 		map.put("itemsTitle", "线程池与线程队列");
 		map.put("itemsText", "适应于Http工具类管理范围外，更灵活的应用");
 		list.add(map);
 		
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(7));
+		map.put("itemsIcon", mPhotoList.get(6));
 		map.put("itemsTitle", "一大波Dialog");
 		map.put("itemsText", "一大波Dialog,正在靠近");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(8));
+		map.put("itemsIcon", mPhotoList.get(7));
 		map.put("itemsTitle", "图片下载与处理");
 		map.put("itemsText", "图片下载,裁剪,缩放");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(9));
+		map.put("itemsIcon", mPhotoList.get(8));
 		map.put("itemsTitle", "下拉刷新与分页查询");
 		map.put("itemsText", "支持下拉刷新，上拉加载下一页");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(10));
+		map.put("itemsIcon", mPhotoList.get(9));
 		map.put("itemsTitle", "下载器");
 		map.put("itemsText", "多线程，断点续传");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(11));
+		map.put("itemsIcon", mPhotoList.get(10));
 		map.put("itemsTitle", "UI控件汇总");
 		map.put("itemsText", "一些常用的UI控件");
 		list.add(map);
 		
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(12));
+		map.put("itemsIcon", mPhotoList.get(11));
 		map.put("itemsTitle", "动画效果汇总");
 		map.put("itemsText", "一些常用的动画效果");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(13));
+		map.put("itemsIcon", mPhotoList.get(12));
 		map.put("itemsTitle", "侧边栏");
 		map.put("itemsText", "左右侧边栏");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(14));
+		map.put("itemsIcon", mPhotoList.get(13));
 		map.put("itemsTitle", "Tab切换");
 		map.put("itemsText", "可滑动的tab标签,顶部和底部");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(15));
+		map.put("itemsIcon", mPhotoList.get(14));
 		map.put("itemsTitle", "图表");
 		map.put("itemsText", "线状图，柱状图，饼状图，等级条图");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(16));
+		map.put("itemsIcon", mPhotoList.get(15));
 		map.put("itemsTitle", "图片相近搜索");
 		map.put("itemsText", "phash算法");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(17));
+		map.put("itemsIcon", mPhotoList.get(16));
 		map.put("itemsTitle", "旋转木马");
 		map.put("itemsText", "旋转木马");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(18));
+		map.put("itemsIcon", mPhotoList.get(17));
 		map.put("itemsTitle", "水平，环形进度条");
 		map.put("itemsText", "漂亮的水平，环形进度条控件");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(19));
+		map.put("itemsIcon", mPhotoList.get(18));
 		map.put("itemsTitle", "3D翻转效果");
 		map.put("itemsText", "2013纪念币,3D切换界面");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(20));
+		map.put("itemsIcon", mPhotoList.get(19));
 		map.put("itemsTitle", "各种滑动嵌套问题");
 		map.put("itemsText", "各种滑动嵌套问题的解决例子");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(21));
+		map.put("itemsIcon", mPhotoList.get(20));
 		map.put("itemsTitle", "场景化UI");
 		map.put("itemsText", "这玩意很流行");
 		list.add(map);
@@ -235,70 +229,66 @@ public class DemoMainActivity extends AbActivity {
 					startActivity(intent);
 					break;
 				case 5:
-					intent = new Intent(DemoMainActivity.this, HttpQueueActivity.class);
-					startActivity(intent);
-					break;
-				case 6:
 					intent = new Intent(DemoMainActivity.this, ThreadControlActivity.class);
 					startActivity(intent);
 					break;
-				case 7:
+				case 6:
 					intent = new Intent(DemoMainActivity.this, DialogActivity.class);
 					startActivity(intent);
 					break;
-				case 8:
+				case 7:
 					intent = new Intent(DemoMainActivity.this, ImageDownActivity.class);
 					startActivity(intent);
 					break;
-				case 9:
+				case 8:
 					intent = new Intent(DemoMainActivity.this, PullToRefreshActivity.class);
 					startActivity(intent);
 					break;
-				case 10:
+				case 9:
 					intent = new Intent(DemoMainActivity.this, DownListActivity.class);
 					startActivity(intent);
 					break;
-				case 11:
+				case 10:
 					intent = new Intent(DemoMainActivity.this, UIElementActivity.class);
 					startActivity(intent);
 					break;
-				case 12:
+				case 11:
 					intent = new Intent(DemoMainActivity.this, AnimationActivity.class);
 					startActivity(intent);
 					break;
-				case 13:
+				case 12:
 					intent = new Intent(DemoMainActivity.this, SlidingMenuActivity.class);
 					startActivity(intent);
 					break;
-				case 14:
+				case 13:
 					intent = new Intent(DemoMainActivity.this, TabActivity.class);
 					startActivity(intent);
 					break;
-				case 15:
+				case 14:
 					intent = new Intent(DemoMainActivity.this, ChartActivity.class);
 					startActivity(intent);
 					break;
-				case 16:
+				case 15:
 					intent = new Intent(DemoMainActivity.this, PHashActivity.class);
 					startActivity(intent);
 					break;
-				case 17:
+				case 16:
 					intent = new Intent(DemoMainActivity.this, CarouselActivity.class);
 					startActivity(intent);
 					break;
-				case 18:
+				case 17:
 					intent = new Intent(DemoMainActivity.this, ProgressBarActivity.class);
 					startActivity(intent);
 					break;
-				case 19:
+				case 18:
 					intent = new Intent(DemoMainActivity.this, Rotate3DActivity.class);
 					startActivity(intent);
 					break;
-				case 20:
+				case 19:
 					intent = new Intent(DemoMainActivity.this, NestScrollActivity.class);
 					startActivity(intent);
 					break;
-				case 21:
+				case 20:
 					intent = new Intent(DemoMainActivity.this, SceneActivity.class);
 					startActivity(intent);
 					break;

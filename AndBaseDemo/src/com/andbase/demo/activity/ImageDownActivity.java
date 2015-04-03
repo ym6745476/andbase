@@ -47,25 +47,25 @@ public class ImageDownActivity extends AbActivity {
         String imageUrl3 = Constant.BASEURL+"content/templates/amsoft/images/rand/2.jpg";
         
         //图片的下载
-        mAbImageLoader = AbImageLoader.newInstance(this);
+        mAbImageLoader = AbImageLoader.getInstance(this);
         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
         mAbImageLoader.setErrorImage(R.drawable.image_error);
         mAbImageLoader.setEmptyImage(R.drawable.image_empty);
         
         
         //原图片的下载
-        mAbImageLoader.setMaxWidth(0);
-        mAbImageLoader.setMaxHeight(0);
+        mAbImageLoader.setDesiredWidth(0);
+        mAbImageLoader.setDesiredHeight(0);
         mAbImageLoader.display(scaleView,imageUrl);
         
         //缩放图片的下载（保持宽高比，计算缩放比例，使一个方向缩放后，另一方向不小与显示的大小的最合适比例）
-        mAbImageLoader.setMaxWidth(150);
-        mAbImageLoader.setMaxHeight(150);
+        mAbImageLoader.setDesiredWidth(150);
+        mAbImageLoader.setDesiredHeight(150);
         mAbImageLoader.display(scaleView2,imageUrl2);
         
         //放大图片的下载
-        mAbImageLoader.setMaxWidth(180);
-        mAbImageLoader.setMaxHeight(180);
+        mAbImageLoader.setDesiredWidth(180);
+        mAbImageLoader.setDesiredHeight(180);
         mAbImageLoader.display(scaleView3,imageUrl3);
         
     }

@@ -10,8 +10,8 @@ import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
 import com.ab.task.AbTaskObjectListener;
-import com.ab.task.AbTaskPool;
-import com.ab.task.AbTaskQueue;
+import com.ab.task.thread.AbTaskPool;
+import com.ab.task.thread.AbTaskQueue;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
@@ -27,6 +27,7 @@ public class ThreadControlActivity extends AbActivity {
 	
 	private MyApplication application;
 	private AbTitleBar mAbTitleBar = null;
+	private AbTaskQueue mAbTaskQueue;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +85,7 @@ public class ThreadControlActivity extends AbActivity {
         });
         
         //线程队列
-        final AbTaskQueue mAbTaskQueue = AbTaskQueue.getInstance();;
+        mAbTaskQueue = AbTaskQueue.newInstance();
         queueBtn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -278,6 +279,17 @@ public class ThreadControlActivity extends AbActivity {
         
         //task.cancel(mayInterruptIfRunning)
     }
+
+
+	@Override
+	public void finish() {
+		if(mAbTaskQueue!=null){
+			mAbTaskQueue.cancel(true);
+		}
+		super.finish();
+	}
+	
+	
    
 }
 

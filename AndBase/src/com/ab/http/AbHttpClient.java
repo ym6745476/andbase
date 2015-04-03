@@ -71,7 +71,7 @@ import com.ab.global.AbAppConfig;
 import com.ab.global.AbAppException;
 import com.ab.http.entity.MultipartEntity;
 import com.ab.http.ssl.EasySSLProtocolSocketFactory;
-import com.ab.task.AbThreadFactory;
+import com.ab.task.thread.AbThreadFactory;
 import com.ab.util.AbAppUtil;
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbLogUtil;

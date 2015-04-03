@@ -27,8 +27,8 @@ public class FriendAdapter extends BaseAdapter {
 		mContext = context;
 		//图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setMaxWidth(120);
-        mAbImageLoader.setMaxHeight(120);
+        mAbImageLoader.setDesiredWidth(120);
+        mAbImageLoader.setDesiredHeight(120);
         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
         mAbImageLoader.setErrorImage(R.drawable.image_error);
         mAbImageLoader.setEmptyImage(R.drawable.image_empty);

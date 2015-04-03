@@ -55,8 +55,8 @@ public class MyListViewAdapter extends BaseAdapter{
          mTo = to;
          //图片下载器
          mAbImageLoader = new AbImageLoader(mContext);
-         mAbImageLoader.setMaxWidth(100);
-         mAbImageLoader.setMaxHeight(100);
+         mAbImageLoader.setDesiredWidth(100);
+         mAbImageLoader.setDesiredHeight(100);
          mAbImageLoader.setLoadingImage(R.drawable.image_loading);
          mAbImageLoader.setErrorImage(R.drawable.image_error);
          mAbImageLoader.setEmptyImage(R.drawable.image_empty);
@@ -103,10 +103,9 @@ public class MyListViewAdapter extends BaseAdapter{
           final Object data1 = dataSet.get(mFrom[1]);
           final Object data2 = dataSet.get(mFrom[2]);
           String imageUrl = (String)data0;
-          //设置加载中的View
-          mAbImageLoader.setLoadingView(convertView.findViewById(R.id.progressBar));
+          View loadingView = convertView.findViewById(R.id.progressBar);
           //图片的下载
-          mAbImageLoader.display(holder.itemsIcon,imageUrl);
+          mAbImageLoader.display(holder.itemsIcon,loadingView,imageUrl);
           holder.itemsTitle.setText(String.valueOf(position+1)+"."+data1.toString());
           holder.itemsText.setText(data2.toString());
           return convertView; 

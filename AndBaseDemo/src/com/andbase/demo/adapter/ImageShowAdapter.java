@@ -1,23 +1,5 @@
 package com.andbase.demo.adapter;
 
-
-/*
- * Copyright (C) 2013 www.418log.org
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-
 import java.io.File;
 import java.util.List;
 
@@ -32,7 +14,7 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.ab.image.AbImageCache;
+import com.ab.cache.image.AbImageBaseCache;
 import com.ab.image.AbImageLoader;
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbImageUtil;
@@ -74,8 +56,8 @@ public class ImageShowAdapter extends BaseAdapter {
 		this.mHeight = height;
 		//图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setMaxWidth(this.mWidth);
-        mAbImageLoader.setMaxHeight(this.mHeight);
+        mAbImageLoader.setDesiredWidth(this.mWidth);
+        mAbImageLoader.setDesiredHeight(this.mHeight);
         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
         mAbImageLoader.setErrorImage(R.drawable.image_error);
         mAbImageLoader.setEmptyImage(R.drawable.image_empty);
@@ -157,7 +139,7 @@ public class ImageShowAdapter extends BaseAdapter {
 		
 		if(!AbStrUtil.isEmpty(imagePath)){
 		  //从缓存中获取图片，很重要否则会导致页面闪动
-      	  Bitmap bitmap = AbImageCache.getInstance().getBitmap(imagePath);
+      	  Bitmap bitmap = AbImageBaseCache.getInstance().getBitmap(imagePath);
       	  //缓存中没有则从网络和SD卡获取
       	  if(bitmap == null){
       		    holder.mImageView1.setImageResource(R.drawable.image_loading);

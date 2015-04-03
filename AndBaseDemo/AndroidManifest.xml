@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.andbase"
-    android:versionCode="18"
-    android:versionName="1.6">
+    android:versionCode="19"
+    android:versionName="1.6.2">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -342,11 +342,6 @@
         
         <activity
             android:name=".demo.activity.HttpActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.HttpQueueActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         

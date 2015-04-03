@@ -20,7 +20,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -33,8 +32,7 @@ import com.ab.activity.AbActivity;
 import com.ab.model.AbResult;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskListener;
-import com.ab.task.AbTaskPool;
-import com.ab.util.AbAppUtil;
+import com.ab.task.thread.AbTaskPool;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbImageUtil;
@@ -52,7 +50,6 @@ import com.ab.view.chart.XYSeriesRenderer;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.demo.adapter.ImageShowAdapter;
-import com.andbase.global.Constant;
 import com.andbase.global.MyApplication;
 
 public class PHashActivity extends AbActivity {
@@ -83,7 +80,7 @@ public class PHashActivity extends AbActivity {
 	private List<String> hashCodes = new ArrayList<String>();
 	private List<File> files = new ArrayList<File>();
 	private HashMap<Integer, Integer> hashCodesAndDis = new HashMap<Integer, Integer>();
-	private com.ab.task.AbTaskPool mAbTaskPool = AbTaskPool.getInstance();
+	private AbTaskPool mAbTaskPool = AbTaskPool.getInstance();
 	
 	private List<int[]> colorHistogram = new ArrayList<int[]>();
 	private LinearLayout mChartLinearLayout = null;

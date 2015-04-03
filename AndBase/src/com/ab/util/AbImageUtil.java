@@ -74,21 +74,18 @@ public class AbImageUtil {
 	public static final int MAX_HEIGHT = 4096/2;
 
 	/**
-	 * 直接获取互联网上的图片.
+	 * 从互联网上获取原始大小图片.
 	 * 
 	 * @param url
 	 *            要下载文件的网络地址
-	 * @param type
-	 *            图片的处理类型（剪切或者缩放到指定大小，参考AbConstant类）
 	 * @param desiredWidth
 	 *            新图片的宽
 	 * @param desiredHeight
 	 *            新图片的高
 	 * @return Bitmap 新图片
 	 */
-	public static Bitmap getBitmap(String url, int type,
-			int desiredWidth, int desiredHeight) {
-		Bitmap bm = null;
+	public static Bitmap getBitmap(String url) {
+		Bitmap bitmap = null;
 		URLConnection con = null;
 		InputStream is = null;
 		try {
@@ -98,14 +95,7 @@ public class AbImageUtil {
 			con.connect();
 			is = con.getInputStream();
 			// 获取资源图片
-			Bitmap wholeBm = BitmapFactory.decodeStream(is, null, null);
-			if (type == CUTIMG) {
-				bm = getCutBitmap(wholeBm, desiredWidth, desiredHeight);
-			} else if (type == SCALEIMG) {
-				bm = getScaleBitmap(wholeBm, desiredWidth, desiredHeight);
-			} else {
-				bm = wholeBm;
-			}
+			bitmap = BitmapFactory.decodeStream(is, null, null);
 		} catch (Exception e) {
 			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
 		} finally {
@@ -117,9 +107,9 @@ public class AbImageUtil {
 				e.printStackTrace();
 			}
 		}
-		return bm;
+		return bitmap;
 	}
-
+	
 	/**
 	 * 描述：获取原图.
 	 * 
@@ -136,9 +126,136 @@ public class AbImageUtil {
 		}
 		return resizeBmp;
 	}
+	
+	/**
+	 * 从互联网上获取指定大小的图片.
+	 * 
+	 * @param url
+	 *            要下载文件的网络地址
+	 * @param desiredWidth
+	 *            新图片的宽
+	 * @param desiredHeight
+	 *            新图片的高
+	 * @return Bitmap 新图片
+	 */
+	public static Bitmap getBitmap(String url,int desiredWidth, int desiredHeight) {
+		Bitmap bitmap = null;
+		URLConnection con = null;
+		InputStream is = null;
+		try {
+			URL imageURL = new URL(url);
+			con = imageURL.openConnection();
+			con.setDoInput(true);
+			con.connect();
+			is = con.getInputStream();
+			bitmap = getBitmap(is,desiredWidth,desiredHeight);
+			//超出的裁掉
+			if (bitmap.getWidth() > desiredWidth || bitmap.getHeight() > desiredHeight) {
+				bitmap  = getCutBitmap(bitmap,desiredWidth,desiredHeight);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
+		} finally {
+			try {
+				if (is != null) {
+					is.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return bitmap;
+	}
+	
+	/**
+	 * 从流中获取指定大小的图片.
+	 * @param inputStream
+	 * @param desiredWidth
+	 * @param desiredHeight
+	 * @return
+	 */
+	public static Bitmap getBitmap(InputStream inputStream,int desiredWidth, int desiredHeight) {
+		Bitmap bitmap = null;
+		try {
+			byte [] data = AbStreamUtil.stream2bytes(inputStream);
+			bitmap = getBitmap(data,desiredWidth,desiredHeight);
+		} catch (Exception e) {
+			e.printStackTrace();
+			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
+		}finally {
+			try {
+				if (inputStream != null) {
+					inputStream.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return bitmap;
+	}
+	
+	/**
+	 * 从流中获取指定大小的图片.
+	 * @param data
+	 * @param desiredWidth
+	 * @param desiredHeight
+	 * @return
+	 */
+	public static Bitmap getBitmap(byte [] data,int desiredWidth, int desiredHeight) {
+		Bitmap bitmap = null;
+		try {
+			BitmapFactory.Options opts = new BitmapFactory.Options();
+			// 设置为true,decodeFile先不创建内存 只获取一些解码边界信息即图片大小信息
+			opts.inJustDecodeBounds = true;
+			BitmapFactory.decodeByteArray(data, 0, data.length, opts);
+
+			// 获取图片的原始宽度高度
+			int srcWidth = opts.outWidth;
+			int srcHeight = opts.outHeight;
+			int[] size = resizeToMaxSize(srcWidth, srcHeight, desiredWidth, desiredHeight);
+			desiredWidth = size[0];
+			desiredHeight = size[1];
+
+			// 缩放的比例
+			float scale = getMinScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
+			int destWidth = srcWidth;
+			int destHeight = srcHeight;
+			if (scale != 0) {
+				destWidth = (int) (srcWidth * scale);
+				destHeight = (int) (srcHeight * scale);
+			}
+
+			// 默认为ARGB_8888.
+			opts.inPreferredConfig = Bitmap.Config.RGB_565;
+			// 以下两个字段需一起使用：
+			// 产生的位图将得到像素空间，如果系统gc，那么将被清空。当像素再次被访问，如果Bitmap已经decode，那么将被自动重新解码
+			opts.inPurgeable = true;
+			// 位图可以共享一个参考输入数据(inputstream、阵列等)
+			opts.inInputShareable = true;
+			// 缩放的比例，缩放是很难按准备的比例进行缩放的，通过inSampleSize来进行缩放，其值表明缩放的倍数，SDK中建议其值是2的指数值
+			int sampleSize = findBestSampleSize(srcWidth,srcHeight,destWidth,destHeight);
+			opts.inSampleSize = sampleSize;
+
+			// 设置大小
+			opts.outWidth = destWidth;
+			opts.outHeight = destHeight;
+
+			// 创建内存
+			opts.inJustDecodeBounds = false;
+			// 使图片不抖动
+			opts.inDither = false;
+			bitmap =  BitmapFactory.decodeByteArray(data, 0, data.length, opts);
+		} catch (Exception e) {
+			e.printStackTrace();
+			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
+		}
+		return bitmap;
+	}
+
 
 	/**
-	 * 描述：缩放图片.压缩
+	 * 描述：缩放图片.
 	 * 
 	 * @param file
 	 *            File对象
@@ -179,18 +296,9 @@ public class AbImageUtil {
 		opts.inPurgeable = true;
 		// 位图可以共享一个参考输入数据(inputstream、阵列等)
 		opts.inInputShareable = true;
-
-		// inSampleSize=2 表示图片宽高都为原来的二分之一，即图片为原来的四分之一
-		// 缩放的比例，SDK中建议其值是2的指数值，通过inSampleSize来进行缩放，其值表明缩放的倍数
-		if (scale < 0.25) {
-			// 缩小到4分之一
-			opts.inSampleSize = 2;
-		} else if (scale < 0.125) {
-			// 缩小到8分之一
-			opts.inSampleSize = 4;
-		} else {
-			opts.inSampleSize = 1;
-		}
+		// 缩放的比例，缩放是很难按准备的比例进行缩放的，通过inSampleSize来进行缩放，其值表明缩放的倍数，SDK中建议其值是2的指数值
+		int sampleSize = findBestSampleSize(srcWidth,srcHeight,destWidth,destHeight);
+		opts.inSampleSize = sampleSize;
 
 		// 设置大小
 		opts.outWidth = destWidth;
@@ -203,12 +311,16 @@ public class AbImageUtil {
 
 		resizeBmp = BitmapFactory.decodeFile(file.getPath(), opts);
 		// 缩小或者放大
-		resizeBmp = getScaleBitmap(resizeBmp, scale);
+		resizeBmp = scaleBitmap(resizeBmp, scale);
+		//超出的裁掉
+		if (resizeBmp.getWidth() > desiredWidth || resizeBmp.getHeight() > desiredHeight) {
+			resizeBmp  = getCutBitmap(resizeBmp,desiredWidth,desiredHeight);
+		}
 		return resizeBmp;
 	}
 
 	/**
-	 * 描述：缩放图片,不压缩的缩放.
+	 * 描述：缩放图片.
 	 * 
 	 * @param bitmap
 	 *            the bitmap
@@ -234,7 +346,7 @@ public class AbImageUtil {
 		desiredHeight = size[1];
 
 		float scale = getMinScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
-		resizeBmp = getScaleBitmap(bitmap, scale);
+		resizeBmp = scaleBitmap(bitmap, scale);
 		//超出的裁掉
 		if (resizeBmp.getWidth() > desiredWidth || resizeBmp.getHeight() > desiredHeight) {
 			resizeBmp  = getCutBitmap(resizeBmp,desiredWidth,desiredHeight);
@@ -242,45 +354,6 @@ public class AbImageUtil {
 		return resizeBmp;
 	}
 
-	/**
-	 * 描述：根据等比例缩放图片.
-	 * 
-	 * @param bitmap
-	 *            the bitmap
-	 * @param scale
-	 *            比例
-	 * @return Bitmap 新图片
-	 */
-	public static Bitmap getScaleBitmap(Bitmap bitmap, float scale) {
-
-		if (!checkBitmap(bitmap)) {
-			return null;
-		}
-
-		if (scale == 1) {
-			return bitmap;
-		}
-
-		Bitmap resizeBmp = null;
-		try {
-			// 获取Bitmap资源的宽和高
-			int bmpW = bitmap.getWidth();
-			int bmpH = bitmap.getHeight();
-			
-			// 注意这个Matirx是android.graphics底下的那个
-			Matrix matrix = new Matrix();
-			// 设置缩放系数，分别为原来的0.8和0.8
-			matrix.postScale(scale, scale);
-			resizeBmp = Bitmap.createBitmap(bitmap, 0, 0, bmpW, bmpH, matrix, true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (resizeBmp != bitmap) {
-				bitmap.recycle();
-			}
-		}
-		return resizeBmp;
-	}
 
 	/**
 	 * 描述：裁剪图片.
@@ -328,15 +401,8 @@ public class AbImageUtil {
 		// 位图可以共享一个参考输入数据(inputstream、阵列等)
 		opts.inInputShareable = true;
 		// 缩放的比例，缩放是很难按准备的比例进行缩放的，通过inSampleSize来进行缩放，其值表明缩放的倍数，SDK中建议其值是2的指数值
-		if (scale < 0.25) {
-			// 缩小到4分之一
-			opts.inSampleSize = 2;
-		} else if (scale < 0.125) {
-			// 缩小
-			opts.inSampleSize = 4;
-		}else {
-			opts.inSampleSize = 1;
-		}
+		int sampleSize = findBestSampleSize(srcWidth,srcHeight,destWidth,destHeight);
+		opts.inSampleSize = sampleSize;
 		// 设置大小
 		opts.outHeight = destHeight;
 		opts.outWidth = destWidth;
@@ -394,6 +460,46 @@ public class AbImageUtil {
 			}
 
 			resizeBmp = Bitmap.createBitmap(bitmap, offsetX, offsetY, desiredWidth,desiredHeight);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (resizeBmp != bitmap) {
+				bitmap.recycle();
+			}
+		}
+		return resizeBmp;
+	}
+	
+	/**
+	 * 描述：根据等比例缩放图片.
+	 * 
+	 * @param bitmap
+	 *            the bitmap
+	 * @param scale
+	 *            比例
+	 * @return Bitmap 新图片
+	 */
+	public static Bitmap scaleBitmap(Bitmap bitmap, float scale) {
+
+		if (!checkBitmap(bitmap)) {
+			return null;
+		}
+
+		if (scale == 1) {
+			return bitmap;
+		}
+
+		Bitmap resizeBmp = null;
+		try {
+			// 获取Bitmap资源的宽和高
+			int bmpW = bitmap.getWidth();
+			int bmpH = bitmap.getHeight();
+			
+			// 注意这个Matirx是android.graphics底下的那个
+			Matrix matrix = new Matrix();
+			// 设置缩放系数，分别为原来的0.8和0.8
+			matrix.postScale(scale, scale);
+			resizeBmp = Bitmap.createBitmap(bitmap, 0, 0, bmpW, bmpH, matrix, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -1186,6 +1292,25 @@ public class AbImageUtil {
 		int _blue = (pixels) & 0xFF;
 		return (int) (0.3 * _red + 0.59 * _green + 0.11 * _blue);
 	}
+	
+	/**
+	 * 找到最合适的SampleSize
+	 * @param actualWidth
+	 * @param actualHeight
+	 * @param desiredWidth
+	 * @param desiredHeight
+	 * @return
+	 */
+	private static int findBestSampleSize(int actualWidth, int actualHeight, int desiredWidth, int desiredHeight) {
+        double wr = (double) actualWidth / desiredWidth;
+        double hr = (double) actualHeight / desiredHeight;
+        double ratio = Math.min(wr, hr);
+        float n = 1.0f;
+        while ((n * 2) <= ratio) {
+            n *= 2;
+        }
+        return (int) n;
+    }
 
 	/**
 	 * The main method.

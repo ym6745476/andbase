@@ -150,6 +150,16 @@ public abstract class AbActivity extends FragmentActivity {
 	public AbBottomBar getBottomBar() {
 		return mAbBottomBar;
 	}
+	
+	/**
+	 * 设置主标题栏高度.
+	 * @param width LayoutParams属性  和具体的大小px
+	 * @param height LayoutParams属性  和具体的大小px
+	 */
+	public void setTitleBarSize(int width,int height) {
+		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, height);
+	    mAbTitleBar.setLayoutParams(params);
+	}
 
 	/**
 	 * 描述：Activity结束.

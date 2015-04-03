@@ -15,20 +15,32 @@
  */
 package com.ab.image;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Context;
+import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.ab.cache.AbCacheHeaderParser;
+import com.ab.cache.AbCacheResponse;
+import com.ab.cache.AbCacheUtil;
+import com.ab.cache.AbDiskBaseCache;
+import com.ab.cache.AbDiskCache.Entry;
+import com.ab.cache.image.AbBitmapResponse;
+import com.ab.cache.image.AbImageBaseCache;
 import com.ab.global.AbAppConfig;
-import com.ab.image.toolbox.ImageLoader;
-import com.ab.image.toolbox.ImageLoader.ImageContainer;
-import com.ab.image.toolbox.ImageLoader.ImageListener;
-import com.ab.network.toolbox.RequestQueue;
-import com.ab.network.toolbox.RequestQueueUtil;
-import com.ab.network.toolbox.ResponseError;
+import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskObjectListener;
+import com.ab.task.thread.AbTaskQueue;
+import com.ab.util.AbAppUtil;
+import com.ab.util.AbFileUtil;
+import com.ab.util.AbImageUtil;
 import com.ab.util.AbLogUtil;
 import com.ab.util.AbStrUtil;
 
@@ -45,14 +57,17 @@ import com.ab.util.AbStrUtil;
  */
 public class AbImageLoader { 
 	
-    /** Context. */
-    private Context mContext = null;
+    /** 上下文. */
+    private Context context = null;
+    
+    /** 单例对象. */
+	private static AbImageLoader imageLoader = null; 
     
     /** 显示的图片的宽. */
-    private int maxWidth;
+    private int desiredWidth;
 	
 	/** 显示的图片的高. */
-    private int maxHeight;
+    private int desiredHeight;
     
     /** 缓存超时时间设置. */
     private int expiresTime;
@@ -60,23 +75,23 @@ public class AbImageLoader {
     /** 显示为下载中的图片. */
     private Drawable loadingImage;
     
-    /** 显示为下载中的View. */
-    private View loadingView;
-    
     /** 显示下载失败的图片. */
     private Drawable errorImage;
     
     /** 图片未找到的图片. */
     private Drawable emptyImage;
     
-    /** The m queue. */
-    private RequestQueue mQueue;
+    /** 请求队列. */
+    private List<AbTaskQueue> taskQueueList;
     
-    /** The m image loader. */
-    private ImageLoader mImageLoader = null;
+    /** 图片下载监听器. */
+    private OnImageListener onImageListener = null;
     
-    /** The m on image listener. */
-    private OnImageListener mOnImageListener = null;
+    /** 图片缓存. */
+    private AbImageBaseCache memCache;
+    
+    /** 磁盘缓存. */
+    private AbDiskBaseCache diskCache;
     
     /**
      * 构造图片下载器.
@@ -84,24 +99,43 @@ public class AbImageLoader {
      * @param context the context
      */
     public AbImageLoader(Context context) {
-    	this.mContext = context;
+    	this.context = context;
     	this.expiresTime = AbAppConfig.IMAGE_CACHE_EXPIRES_TIME;
-    	mQueue = RequestQueueUtil.newRequestQueue(context);
-    	mImageLoader = new ImageLoader(mQueue, AbImageCache.getInstance());
-    	mImageLoader.setExpiresTime(expiresTime);
+    	this.taskQueueList = new ArrayList<AbTaskQueue>();
+    	PackageInfo info = AbAppUtil.getPackageInfo(context);
+    	File cacheDir = null;
+    	if(!AbFileUtil.isCanUseSD()){
+    		cacheDir = new File(context.getCacheDir(), info.packageName);
+		}else{
+			cacheDir = new File(AbFileUtil.getCacheDownloadDir(context));
+		}
+    	this.diskCache = new AbDiskBaseCache(cacheDir);
+    	this.memCache = AbImageBaseCache.getInstance();
     } 
     
     
 	/**
-	 * New instance.
-	 *
-	 * @param context the context
-	 * @return the ab image downloader
+	 * 
+	 * 获得一个实例.
+	 * @param context
+	 * @return
 	 */
-	public static AbImageLoader newInstance(Context context) {
-		AbImageLoader imageDownloader = new AbImageLoader(context);
-		return imageDownloader;
+	public static AbImageLoader getInstance(Context context) {
+		if (imageLoader == null) { 
+			imageLoader = new AbImageLoader(context); 
+        } 
+		return imageLoader;
 	}
+	
+	/**
+     * 显示这个图片.
+     *
+     * @param imageView 显得的View
+     * @param url the url
+     */
+    public void display(final ImageView imageView,final String url) { 
+    	display(imageView,null,url);
+    }
 	
      
     /**
@@ -110,74 +144,108 @@ public class AbImageLoader {
      * @param imageView 显得的View
      * @param url the url
      */
-    public void display(final ImageView imageView,String url) { 
+    public void display(final ImageView imageView,final View loadingView,final String url) { 
     	
-    	if(AbStrUtil.isEmpty(url)){
-    		if(emptyImage != null){
-    			if(loadingView != null){
-        			loadingView.setVisibility(View.INVISIBLE);
+    	if(imageView != null){
+    		if(AbStrUtil.isEmpty(url)){
+        		if(emptyImage != null){
+        			if(loadingView != null){
+            			loadingView.setVisibility(View.INVISIBLE);
+            		}
+        			imageView.setVisibility(View.VISIBLE);
+        			imageView.setImageDrawable(emptyImage);
         		}
-    			imageView.setVisibility(View.VISIBLE);
-    			imageView.setImageDrawable(emptyImage);
+        		return;
+        	}
+        	
+        	//显示加载中
+        	if(loadingView!=null){
+    			loadingView.setVisibility(View.VISIBLE);
+    			imageView.setVisibility(View.INVISIBLE);
+    		}else {
+    			if(loadingImage != null){
+    			   imageView.setImageDrawable(loadingImage);
+    			   imageView.setVisibility(View.VISIBLE);
+    			}
     		}
-    		return;
+        	
+        	//设置标记,目的解决闪烁问题
+            imageView.setTag(url);
     	}
     	
-    	//显示加载中
-    	if(loadingView!=null){
-			loadingView.setVisibility(View.VISIBLE);
-			imageView.setVisibility(View.INVISIBLE);
-		}else {
-			if(loadingImage != null){
-			   imageView.setImageDrawable(loadingImage);
-			   imageView.setVisibility(View.VISIBLE);
-			}
-		}
     	
-    	//设置标记,目的解决闪烁问题
-        imageView.setTag(url);
+    	final String cacheKey = memCache.getCacheKey(url, desiredWidth, desiredHeight);
+    	//先看内存
+    	Bitmap bitmap = memCache.getBitmap(cacheKey);
     	
-        mImageLoader.get(url,new ImageListener() {
-        	
-            @Override
-            public void onErrorResponse(ResponseError error) {
-            	if(errorImage != null){
-        			imageView.setImageDrawable(errorImage);
-        		}
-            	imageView.setVisibility(View.VISIBLE);
-            	if(loadingView != null){
-        			loadingView.setVisibility(View.INVISIBLE);
-        		}
-            }
-
-            @Override
-            public void onResponse(ImageContainer response, boolean isImmediate) {
+    	if(bitmap != null){
+    		showView(url,imageView,loadingView,bitmap);
+    	}else{
+    		
+    		AbTaskItem item = new AbTaskItem();
+            item.setListener(new AbTaskObjectListener(){
             	
-            	Bitmap bitmap = response.getBitmap();
-            	if(mOnImageListener!=null){
-            		mOnImageListener.onResponse(bitmap);
-            	}
-            	AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
-            	//要判断这个imageView的url有变化，如果没有变化才set
-                //有变化就取消，解决列表的重复利用View的问题
-            	if(!response.getRequestUrl().equals(imageView.getTag())){
-            		return;
-            	}
-            	if (bitmap != null) {
-            		imageView.setImageBitmap(bitmap);
-                } else {
-                	if (emptyImage != null) {
-                	   imageView.setImageDrawable(emptyImage);
-                    }
+                @Override
+                public <T> void update(T entity) {
+                	AbBitmapResponse response = (AbBitmapResponse)entity;
+                	if(response == null){
+                		if(imageView != null){
+                			if(errorImage != null){
+                    			imageView.setImageDrawable(errorImage);
+                    		}
+                        	imageView.setVisibility(View.VISIBLE);
+                        	if(loadingView != null){
+                    			loadingView.setVisibility(View.INVISIBLE);
+                    		}
+                		}
+                		if(onImageListener!=null){
+                    		onImageListener.onResponse(null);
+                    	}
+                	}else{
+                		Bitmap bitmap = response.getBitmap();
+                		showView(url,imageView,loadingView,bitmap);
+                		if(onImageListener!=null){
+                    		onImageListener.onResponse(bitmap);
+                    	}
+                		AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
+                	}
+                	
                 }
-            	
-            	if(loadingView != null){
-        			loadingView.setVisibility(View.INVISIBLE);
-        		}
-            	
-            	imageView.setVisibility(View.VISIBLE);
-            }
-        },maxWidth,maxHeight);
+
+    			@Override
+                public AbBitmapResponse getObject() {
+                    try {
+                    	Bitmap bitmap = null;
+                		//看磁盘
+                		Entry entry = diskCache.get(cacheKey);
+                		if(entry == null || entry.isExpired()){
+                			AbLogUtil.i(AbImageLoader.class, "图片磁盘中没有，或者已经过期");
+                			
+                			AbCacheResponse response = AbCacheUtil.getCacheResponse(url,expiresTime);
+                			if(response!=null){
+                				bitmap =  AbImageUtil.getBitmap(response.data, desiredWidth, desiredHeight);
+                    			memCache.putBitmap(cacheKey, bitmap);
+                    			diskCache.put(cacheKey, AbCacheHeaderParser.parseCacheHeaders(response));
+                			}
+                		}else{
+                			//磁盘中有
+                			byte [] bitmapData = entry.data;
+                			bitmap =  AbImageUtil.getBitmap(bitmapData, desiredWidth, desiredHeight);
+                		}
+                    	
+                    	AbBitmapResponse bitmapResponse = new AbBitmapResponse(url);
+                    	bitmapResponse.setBitmap(bitmap);
+                    	return bitmapResponse;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    return null;
+                }
+                
+            });
+            
+            add2Queue(item);
+    	}
     	
     } 
     
@@ -186,7 +254,7 @@ public class AbImageLoader {
      *
      * @param url the url
      */
-    public void download(String url) { 
+    public void download(final String url) { 
     	
     	if(AbStrUtil.isEmpty(url)){
     		return;
@@ -196,51 +264,52 @@ public class AbImageLoader {
     		return;
     	}
     	
-        mImageLoader.get(url,new ImageListener() {
-        	
-            @Override
-            public void onErrorResponse(ResponseError error) {
-            }
-
-            @Override
-            public void onResponse(ImageContainer response, boolean isImmediate) {
-            	
-            	Bitmap bitmap = response.getBitmap();
-            	if(mOnImageListener!=null){
-            		mOnImageListener.onResponse(bitmap);
-            	}
-            	AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
-            }
-        },maxWidth,maxHeight);
-    	
+    	display(null,null,url);
     } 
+    
+    
+    public void showView(String url,ImageView imageView,View loadingView, Bitmap bitmap){
+    	//要判断这个imageView的url有变化，如果没有变化才set
+        //有变化就取消，解决列表的重复利用View的问题
+    	if(!url.equals(imageView.getTag())){
+    		return;
+    	}
+    	if (bitmap != null) {
+    		imageView.setImageBitmap(bitmap);
+        } else {
+        	if (emptyImage != null) {
+        	   imageView.setImageDrawable(emptyImage);
+            }
+        }
+    	imageView.setVisibility(View.VISIBLE);
+    	
+    	if(loadingView != null){
+			loadingView.setVisibility(View.INVISIBLE);
+		}
+    	
+    	if(onImageListener!=null){
+    		onImageListener.onResponse(bitmap);
+    	}
+    	
+    }
    
    
    /**
-    * 描述：设置下载中的图片.
-    *
-    * @param resID the new loading image
+    * 
+    * 设置下载中的图片.
+    * @param resID
     */
 	public void setLoadingImage(int resID) {
-		this.loadingImage = mContext.getResources().getDrawable(resID);
+		this.loadingImage = context.getResources().getDrawable(resID);
 	}
 	
-	/**
-	 * 描述：设置下载中的View，优先级高于setLoadingImage.
-	 *
-	 * @param view 放在ImageView的上边或者下边的View
-	 */
-	public void setLoadingView(View view) {
-		this.loadingView = view;
-	}
-
 	/**
 	 * 描述：设置下载失败的图片.
 	 *
 	 * @param resID the new error image
 	 */
 	public void setErrorImage(int resID) {
-		this.errorImage = mContext.getResources().getDrawable(resID);
+		this.errorImage = context.getResources().getDrawable(resID);
 	}
 
 	/**
@@ -249,49 +318,12 @@ public class AbImageLoader {
 	 * @param resID the new empty image
 	 */
 	public void setEmptyImage(int resID) {
-		this.emptyImage = mContext.getResources().getDrawable(resID);
+		this.emptyImage = context.getResources().getDrawable(resID);
 	}
 
 
 	/**
-	 * Gets the max width.
-	 *
-	 * @return the max width
-	 */
-	public int getMaxWidth() {
-		return maxWidth;
-	}
-
-	/**
-	 * Sets the max width.
-	 *
-	 * @param maxWidth the new max width
-	 */
-	public void setMaxWidth(int maxWidth) {
-		this.maxWidth = maxWidth;
-	}
-
-	/**
-	 * Gets the max height.
-	 *
-	 * @return the max height
-	 */
-	public int getMaxHeight() {
-		return maxHeight;
-	}
-
-	/**
-	 * Sets the max height.
-	 *
-	 * @param maxHeight the new max height
-	 */
-	public void setMaxHeight(int maxHeight) {
-		this.maxHeight = maxHeight;
-	}
-
-
-	/**
-	 * Gets the expires time.
+	 * 获取失效时间.
 	 *
 	 * @return the expires time
 	 */
@@ -301,7 +333,7 @@ public class AbImageLoader {
 
 
 	/**
-	 * Sets the expires time.
+	 * 设置失效时间.
 	 *
 	 * @param expiresTime the new expires time
 	 */
@@ -310,15 +342,7 @@ public class AbImageLoader {
 	}
 	
 	/**
-	 * The listener interface for receiving onImage events.
-	 * The class that is interested in processing a onImage
-	 * event implements this interface, and the object created
-	 * with that class is registered with a component using the
-	 * component's <code>addOnImageListener<code> method. When
-	 * the onImage event occurs, that object's appropriate
-	 * method is invoked.
-	 *
-	 * @see OnImageEvent
+	 * 监听器
 	 */
 	public interface OnImageListener {
 		
@@ -331,24 +355,99 @@ public class AbImageLoader {
 	}
 
 	/**
-	 * Gets the on image listener.
+	 * 获得监听器.
 	 *
 	 * @return the on image listener
 	 */
 	public OnImageListener getOnImageListener() {
-		return mOnImageListener;
+		return onImageListener;
 	}
 
 
 	/**
-	 * Sets the on image listener.
+	 * 设置监听器.
 	 *
 	 * @param onImageListener the new on image listener
 	 */
 	public void setOnImageListener(OnImageListener onImageListener) {
-		this.mOnImageListener = onImageListener;
+		this.onImageListener = onImageListener;
+	}
+
+	public int getDesiredWidth() {
+		return desiredWidth;
+	}
+
+
+	public void setDesiredWidth(int desiredWidth) {
+		this.desiredWidth = desiredWidth;
+	}
+
+
+	public int getDesiredHeight() {
+		return desiredHeight;
+	}
+
+
+	public void setDesiredHeight(int desiredHeight) {
+		this.desiredHeight = desiredHeight;
 	}
 	
+	/**
+	 * 
+	 * 增加到最少的队列中.
+	 * @param item
+	 */
+	private void add2Queue(AbTaskItem item){
+		int minQueueIndex = 0;
+		if(taskQueueList.size() == 0){
+			AbTaskQueue queue = AbTaskQueue.newInstance();
+			taskQueueList.add(queue);
+			queue.execute(item);
+		}else{
+			int minSize = 0;
+			for(int i=0;i<taskQueueList.size();i++){
+				AbTaskQueue queue = taskQueueList.get(i);
+				int size = queue.getTaskItemListSize();
+				if(i==0){
+					minSize = size;
+					minQueueIndex = i;
+				}else{
+					if(size < minSize){
+						minSize = size;
+						minQueueIndex = i;
+					}
+				}
+			}
+			if(taskQueueList.size() <5 && minSize > 2){
+				AbTaskQueue queue = AbTaskQueue.newInstance();
+				taskQueueList.add(queue);
+				queue.execute(item);
+			}else{
+				AbTaskQueue minQueue = taskQueueList.get(minQueueIndex);
+				minQueue.execute(item);
+			}
+			
+		}
+		
+		for(int i=0;i<taskQueueList.size();i++){
+			AbTaskQueue queue = taskQueueList.get(i);
+			int size = queue.getTaskItemListSize();
+			AbLogUtil.i(AbImageLoader.class, "线程队列["+i+"]的任务数："+size);
+		}
+		
+	}
+	
+	/**
+	 * 
+	 * 释放资源.
+	 */
+	public void release(){
+		for(int i=0;i<taskQueueList.size();i++){
+			AbTaskQueue queue = taskQueueList.get(i);
+			queue.cancel(true);
+		}
+		taskQueueList.clear();
+	}
 
 }
 
