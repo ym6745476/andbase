@@ -26,7 +26,6 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
-import com.ab.fragment.AbSampleDialogFragment;
 import com.ab.http.AbHttpUtil;
 import com.ab.http.AbRequestParams;
 import com.ab.http.AbStringHttpResponseListener;
