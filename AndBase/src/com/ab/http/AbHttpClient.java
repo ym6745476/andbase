@@ -224,6 +224,7 @@ public class AbHttpClient {
 			  responseListener.sendStartMessage();
 			  
 			  if(!AbAppUtil.isNetworkAvailable(mContext)){
+				    Thread.sleep(200);
 					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
 			        return;
 			  }
@@ -265,6 +266,7 @@ public class AbHttpClient {
 			  responseListener.sendStartMessage();
 			  
 			  if(!AbAppUtil.isNetworkAvailable(mContext)){
+				    Thread.sleep(200);
 					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
 			        return;
 			  }
@@ -317,17 +319,16 @@ public class AbHttpClient {
     	responseListener.setHandler(new ResponderHandler(responseListener));
 		mExecutorService.execute(new Runnable() { 
     		public void run() {
-    			
-    			responseListener.sendStartMessage();
-    			
-    			if(!AbAppUtil.isNetworkAvailable(mContext)){
-					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
-			        return;
-			    }
-			  
     			HttpURLConnection urlConn = null;
-    			
     			try {
+    				responseListener.sendStartMessage();
+        			
+        			if(!AbAppUtil.isNetworkAvailable(mContext)){
+        				Thread.sleep(200);
+    					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+    			        return;
+    			    }
+        			
     				String resultString = null;
 					URL requestUrl = new URL(url);
 					urlConn = (HttpURLConnection) requestUrl.openConnection();

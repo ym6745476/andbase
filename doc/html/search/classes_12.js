@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['unsafeallocator',['UnsafeAllocator',['../classcom_1_1google_1_1gson_1_1internal_1_1_unsafe_allocator.html',1,'com::google::gson::internal']]],
-  ['urlrewriter',['UrlRewriter',['../interfacecom_1_1ab_1_1network_1_1toolbox_1_1_hurl_stack_1_1_url_rewriter.html',1,'com::ab::network::toolbox::HurlStack']]],
-  ['user',['User',['../classcom_1_1ab_1_1util_1_1_ab_json_util_3_01_t_01_4_1_1_user.html',1,'com::ab::util::AbJsonUtil&lt; T &gt;']]]
+  ['wildcardtypeimpl',['WildcardTypeImpl',['../classcom_1_1google_1_1gson_1_1internal_1_1_0B_types_1_1_wildcard_type_impl.html',1,'com::google::gson::internal::$Types']]],
+  ['writebytelistener',['WriteByteListener',['../classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_write_byte_listener.html',1,'com::ab::http::entity::mine::content']]]
 ];

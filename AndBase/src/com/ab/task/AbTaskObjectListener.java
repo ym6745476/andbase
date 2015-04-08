@@ -15,7 +15,6 @@
  */
 package com.ab.task;
 
-import android.view.View;
 
 
 

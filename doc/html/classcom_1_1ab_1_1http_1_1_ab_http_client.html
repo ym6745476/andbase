@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>AndBase开发框架: com.ab.http.AbHttpClient类 参考</title>
+<title>AndBase快速开发框架: com.ab.http.AbHttpClient类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,8 +23,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">AndBase开发框架
-   &#160;<span id="projectnumber">1.6</span>
+   <div id="projectname">AndBase快速开发框架
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a46166e64cf3798f0eb79f994fd6dbf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02137a1d982c0c8be01514e77a71424b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a02137a1d982c0c8be01514e77a71424b">post</a> (final String url, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> responseListener)</td></tr>
 <tr class="separator:a02137a1d982c0c8be01514e77a71424b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65953318b5cf766dd867f1cd81e291aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a65953318b5cf766dd867f1cd81e291aa">doRequest</a> (final String url, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_string_http_response_listener.html">AbStringHttpResponseListener</a> responseListener)</td></tr>
+<tr class="separator:a65953318b5cf766dd867f1cd81e291aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdd6ab8ab7b591a6c17213ffbfb7e1a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#afdd6ab8ab7b591a6c17213ffbfb7e1a4">writeResponseData</a> (Context context, HttpEntity entity, String name, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_file_http_response_listener.html">AbFileHttpResponseListener</a> responseListener)</td></tr>
 <tr class="separator:afdd6ab8ab7b591a6c17213ffbfb7e1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d1e4482cc8d0bd45823940746a21a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a5d1e4482cc8d0bd45823940746a21a51">readResponseData</a> (HttpEntity entity, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_binary_http_response_listener.html">AbBinaryHttpResponseListener</a> responseListener)</td></tr>
@@ -126,10 +128,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2dc8b735fb365f5452a2d318870f03cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa96cfac7f71ed4793fac9c5108a0836c"><td class="memItemLeft" align="right" valign="top">BasicHttpParams&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aa96cfac7f71ed4793fac9c5108a0836c">getHttpParams</a> ()</td></tr>
 <tr class="separator:aa96cfac7f71ed4793fac9c5108a0836c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1d9ca437fccb1a72497a8c2080eb1f0"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#aa1d9ca437fccb1a72497a8c2080eb1f0">getHttpClient</a> ()</td></tr>
-<tr class="separator:aa1d9ca437fccb1a72497a8c2080eb1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acba64f8dff10fbfa8f51601decd75bb2"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acba64f8dff10fbfa8f51601decd75bb2">createHttpClient</a> ()</td></tr>
-<tr class="separator:acba64f8dff10fbfa8f51601decd75bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0172641485affbed5cd219ffe102bf8e"><td class="memItemLeft" align="right" valign="top">DefaultHttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a0172641485affbed5cd219ffe102bf8e">getHttpClient</a> ()</td></tr>
+<tr class="separator:a0172641485affbed5cd219ffe102bf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18364ece172eea55605e7dda4ea84fb"><td class="memItemLeft" align="right" valign="top">DefaultHttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af18364ece172eea55605e7dda4ea84fb">createHttpClient</a> ()</td></tr>
+<tr class="separator:af18364ece172eea55605e7dda4ea84fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a071981588ecf26cb52c0ae48f7501d83"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a071981588ecf26cb52c0ae48f7501d83">isOpenEasySSL</a> ()</td></tr>
 <tr class="separator:a071981588ecf26cb52c0ae48f7501d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4517919e6fc05768da9f27cb15dfbbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af4517919e6fc05768da9f27cb15dfbbe">setOpenEasySSL</a> (boolean <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a071981588ecf26cb52c0ae48f7501d83">isOpenEasySSL</a>)</td></tr>
@@ -144,6 +146,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad5eecbb08c8e0ed7c000e0fcf44d3027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a643ee95cabb1d91207c7e3048eef9325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a643ee95cabb1d91207c7e3048eef9325">shutdown</a> ()</td></tr>
 <tr class="separator:a643ee95cabb1d91207c7e3048eef9325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26738591829110e850a6c2dbe96d5848"><td class="memItemLeft" align="right" valign="top">CookieStore&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a26738591829110e850a6c2dbe96d5848">getCookieStore</a> ()</td></tr>
+<tr class="separator:a26738591829110e850a6c2dbe96d5848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8fbf02b3423d3f9416ca2dd4de94145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ae8fbf02b3423d3f9416ca2dd4de94145">setCookieStore</a> (CookieStore cookieStore)</td></tr>
+<tr class="separator:ae8fbf02b3423d3f9416ca2dd4de94145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静态 Public 属性</h2></td></tr>
@@ -177,6 +183,8 @@ Private 成员函数</h2></td></tr>
 <tr class="separator:a6f170797a1d86301d1797002e2e212ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d7eb88959b7917445912c081a1563da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a8d7eb88959b7917445912c081a1563da">doPost</a> (String url, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a> params, <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_response_listener.html">AbHttpResponseListener</a> responseListener)</td></tr>
 <tr class="separator:a8d7eb88959b7917445912c081a1563da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ce59c60ff0be5884e5e43ab8b17b16"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a48ce59c60ff0be5884e5e43ab8b17b16">readString</a> (InputStream is)</td></tr>
+<tr class="separator:a48ce59c60ff0be5884e5e43ab8b17b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 属性</h2></td></tr>
@@ -184,6 +192,8 @@ Private 属性</h2></td></tr>
 <tr class="separator:a74497f197940247239c84d92b5024548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af11173ce5fd368835ec106d5c65f5ecc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#af11173ce5fd368835ec106d5c65f5ecc">userAgent</a> = &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 BIDUBrowser/6.x Safari/537.31&quot;</td></tr>
 <tr class="separator:af11173ce5fd368835ec106d5c65f5ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70dc41e23f46b10b3405c112e13a2236"><td class="memItemLeft" align="right" valign="top">CookieStore&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a70dc41e23f46b10b3405c112e13a2236">mCookieStore</a></td></tr>
+<tr class="separator:a70dc41e23f46b10b3405c112e13a2236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a283f084fedaf0f736019742c309519b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#a283f084fedaf0f736019742c309519b1">mTimeout</a> = <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#acca01a6f1a000a0c2faf399cc081f4d8">DEFAULT_SOCKET_TIMEOUT</a></td></tr>
 <tr class="separator:a283f084fedaf0f736019742c309519b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0b2e02634356ba04ef115c46616f70e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ae0b2e02634356ba04ef115c46616f70e">mIsOpenEasySSL</a> = true</td></tr>
@@ -213,8 +223,6 @@ Private 属性</h2></td></tr>
 <tr class="separator:acdd4867974531ba2bc22b0a0890f9918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9aaecd8bb8577bf744d2891231252d1"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ab9aaecd8bb8577bf744d2891231252d1">DEFAULT_SOCKET_BUFFER_SIZE</a> = 8192</td></tr>
 <tr class="separator:ab9aaecd8bb8577bf744d2891231252d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae891bef0ed45894abec8683ce1cfe691"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1_ab_http_client.html#ae891bef0ed45894abec8683ce1cfe691">BUFFER_SIZE</a> = 4096</td></tr>
-<tr class="separator:ae891bef0ed45894abec8683ce1cfe691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>© 2012 amsoft.cn 名称：AbHttpClient.java 描述：Http客户端</p>
@@ -254,7 +262,7 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a class="anchor" id="acba64f8dff10fbfa8f51601decd75bb2"></a>
+<a class="anchor" id="af18364ece172eea55605e7dda4ea84fb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -262,7 +270,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HttpClient com.ab.http.AbHttpClient.createHttpClient </td>
+          <td class="memname">DefaultHttpClient com.ab.http.AbHttpClient.createHttpClient </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -382,6 +390,54 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a65953318b5cf766dd867f1cd81e291aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.doRequest </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_request_params.html">AbRequestParams</a>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1http_1_1_ab_string_http_response_listener.html">AbStringHttpResponseListener</a>&#160;</td>
+          <td class="paramname"><em>responseListener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>简单的请求,只支持返回的数据是String类型,不支持转发重定向 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td></td></tr>
+    <tr><td class="paramname">params</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a46166e64cf3798f0eb79f994fd6dbf97"></a>
 <div class="memitem">
 <div class="memproto">
@@ -431,6 +487,29 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a26738591829110e850a6c2dbe96d5848"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CookieStore com.ab.http.AbHttpClient.getCookieStore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1ae358194f272e85b5bb07fe3e2ad5cc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -455,7 +534,7 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa1d9ca437fccb1a72497a8c2080eb1f0"></a>
+<a class="anchor" id="a0172641485affbed5cd219ffe102bf8e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -463,7 +542,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HttpClient com.ab.http.AbHttpClient.getHttpClient </td>
+          <td class="memname">DefaultHttpClient com.ab.http.AbHttpClient.getHttpClient </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -639,6 +718,54 @@ Private 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a48ce59c60ff0be5884e5e43ab8b17b16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.AbHttpClient.readString </td>
+          <td>(</td>
+          <td class="paramtype">InputStream&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8fbf02b3423d3f9416ca2dd4de94145"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.AbHttpClient.setCookieStore </td>
+          <td>(</td>
+          <td class="paramtype">CookieStore&#160;</td>
+          <td class="paramname"><em>cookieStore</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -861,27 +988,6 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae891bef0ed45894abec8683ce1cfe691"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final int com.ab.http.AbHttpClient.BUFFER_SIZE = 4096</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>缓冲大小. </p>
 
 </div>
 </div>
@@ -1132,6 +1238,27 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>上下文. </p>
+
+</div>
+</div>
+<a class="anchor" id="a70dc41e23f46b10b3405c112e13a2236"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CookieStore com.ab.http.AbHttpClient.mCookieStore</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>CookieStore. </p>
 
 </div>
 </div>
@@ -1392,7 +1519,7 @@ Private 属性</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2014年 十一月 18日 星期二 16:00:55 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2015年 四月 7日 星期二 12:46:33 , 为 AndBase快速开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>AndBase开发框架: com.ab.soap.AbSoapListener类 参考</title>
+<title>AndBase快速开发框架: com.ab.soap.AbSoapListener类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,8 +23,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">AndBase开发框架
-   &#160;<span id="projectnumber">1.6</span>
+   <div id="projectname">AndBase快速开发框架
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -110,10 +110,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a5aa350c6374efb9b9a880f8b1b5c6cb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a5aa350c6374efb9b9a880f8b1b5c6cb9">AbSoapListener</a> ()</td></tr>
 <tr class="separator:a5aa350c6374efb9b9a880f8b1b5c6cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33dad1b78bba6ce82f9165b4e3e0d675"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a33dad1b78bba6ce82f9165b4e3e0d675">onSuccess</a> (int statusCode, String content)</td></tr>
-<tr class="separator:a33dad1b78bba6ce82f9165b4e3e0d675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268f9cd7246c9ff44866b8aa6518545f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a268f9cd7246c9ff44866b8aa6518545f">onSuccess</a> (int statusCode, SoapObject object)</td></tr>
+<tr class="separator:a268f9cd7246c9ff44866b8aa6518545f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad57ac649473ae69d533b7194b45c14a"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#aad57ac649473ae69d533b7194b45c14a">onFailure</a> (int statusCode, String content, Throwable error)</td></tr>
 <tr class="separator:aad57ac649473ae69d533b7194b45c14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2cb015a885cdfbd9a4b4017412e696"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a7c2cb015a885cdfbd9a4b4017412e696">onFailure</a> (int statusCode, SoapFault fault)</td></tr>
+<tr class="separator:a7c2cb015a885cdfbd9a4b4017412e696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895f82069d2798d09b7feadbe5019135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a895f82069d2798d09b7feadbe5019135">onStart</a> ()</td></tr>
 <tr class="separator:a895f82069d2798d09b7feadbe5019135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8acab86d049604d422964c97515118d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#ac8acab86d049604d422964c97515118d">onFinish</a> ()</td></tr>
@@ -124,8 +126,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ae7bc2ca804a647b5d9439a96f0f86f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5015855ca77aab888aa795aa3f155ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a5015855ca77aab888aa795aa3f155ae5">sendFailureMessage</a> (int statusCode, String content, Throwable error)</td></tr>
 <tr class="separator:a5015855ca77aab888aa795aa3f155ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ef0fce4093fc060eabb148f4354ba1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#ae4ef0fce4093fc060eabb148f4354ba1">sendSuccessMessage</a> (int statusCode, String content)</td></tr>
-<tr class="separator:ae4ef0fce4093fc060eabb148f4354ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396fcb37582c15968a258d206dccd292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#a396fcb37582c15968a258d206dccd292">sendFailureMessage</a> (int statusCode, SoapFault fault)</td></tr>
+<tr class="separator:a396fcb37582c15968a258d206dccd292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8c1eef50eec4b6efad45b9f6e0d793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#afd8c1eef50eec4b6efad45b9f6e0d793">sendSuccessMessage</a> (int statusCode, SoapObject bodyIn)</td></tr>
+<tr class="separator:afd8c1eef50eec4b6efad45b9f6e0d793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdab91137d77eeb7ce5e32da7a209e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1soap_1_1_ab_soap_listener.html#acdab91137d77eeb7ce5e32da7a209e49">sendMessage</a> (Message msg)</td></tr>
 <tr class="separator:acdab91137d77eeb7ce5e32da7a209e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -275,6 +279,48 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7c2cb015a885cdfbd9a4b4017412e696"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void com.ab.soap.AbSoapListener.onFailure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>statusCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SoapFault&#160;</td>
+          <td class="paramname"><em>fault</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>描述：失败，调用.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>the status code </td></tr>
+    <tr><td class="paramname">fault</td><td>the fault </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ac8acab86d049604d422964c97515118d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +369,7 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a33dad1b78bba6ce82f9165b4e3e0d675"></a>
+<a class="anchor" id="a268f9cd7246c9ff44866b8aa6518545f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -339,8 +385,8 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>content</em>&#160;</td>
+          <td class="paramtype">SoapObject&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -407,6 +453,49 @@ Private 属性</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">statusCode</td><td>the status code </td></tr>
     <tr><td class="paramname">content</td><td>the content </td></tr>
+    <tr><td class="paramname">error</td><td>the error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a396fcb37582c15968a258d206dccd292"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.soap.AbSoapListener.sendFailureMessage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>statusCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SoapFault&#160;</td>
+          <td class="paramname"><em>fault</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>失败消息.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">statusCode</td><td>the status code </td></tr>
+    <tr><td class="paramname">fault</td><td>the fault </td></tr>
     <tr><td class="paramname">error</td><td>the error </td></tr>
   </table>
   </dd>
@@ -493,7 +582,7 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae4ef0fce4093fc060eabb148f4354ba1"></a>
+<a class="anchor" id="afd8c1eef50eec4b6efad45b9f6e0d793"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -509,8 +598,8 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>content</em>&#160;</td>
+          <td class="paramtype">SoapObject&#160;</td>
+          <td class="paramname"><em>bodyIn</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -668,7 +757,7 @@ Private 属性</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2014年 十一月 18日 星期二 16:00:56 , 为 AndBase开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2015年 四月 7日 星期二 12:46:33 , 为 AndBase快速开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
