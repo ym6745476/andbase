@@ -123,7 +123,7 @@ public class PullToRefreshListActivity extends AbActivity implements
 	
 	public void refreshTask() {
 		AbLogUtil.prepareLog(PullToRefreshListActivity.class);
-		AbTask mAbTask = new AbTask();
+		AbTask mAbTask = AbTask.newInstance();
 		final AbTaskItem item = new AbTaskItem();
 		item.setListener(new AbTaskListListener() {
 			@Override
@@ -170,7 +170,7 @@ public class PullToRefreshListActivity extends AbActivity implements
 	}
 
 	public void loadMoreTask() {
-		AbTask mAbTask = new AbTask();
+		AbTask mAbTask = AbTask.newInstance();
 		final AbTaskItem item = new AbTaskItem();
 		item.setListener(new AbTaskListListener() {
 

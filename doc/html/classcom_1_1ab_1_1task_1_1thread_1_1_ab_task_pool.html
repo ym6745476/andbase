@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase快速开发框架: com.ab.task.thread.AbTaskPool类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase快速开发框架
+   &#160;<span id="projectnumber">1.6.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1task.html">task</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1task_1_1thread.html">thread</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html">AbTaskPool</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.task.thread.AbTaskPool类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af268ed8500dab25e7033dc8b87189552"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#af268ed8500dab25e7033dc8b87189552">execute</a> (final <a class="el" href="classcom_1_1ab_1_1task_1_1_ab_task_item.html">AbTaskItem</a> item)</td></tr>
+<tr class="separator:af268ed8500dab25e7033dc8b87189552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a2928c6dac02b78727ed56838249ba53a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html">AbTaskPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#a2928c6dac02b78727ed56838249ba53a">getInstance</a> ()</td></tr>
+<tr class="separator:a2928c6dac02b78727ed56838249ba53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a0c617201294f3920096f974199932dbb"><td class="memItemLeft" align="right" valign="top">static Executor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#a0c617201294f3920096f974199932dbb">mExecutorService</a> = null</td></tr>
+<tr class="separator:a0c617201294f3920096f974199932dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a4a13a9b28ed051eab2509e0fcc8519a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#a4a13a9b28ed051eab2509e0fcc8519a1">AbTaskPool</a> ()</td></tr>
+<tr class="separator:a4a13a9b28ed051eab2509e0fcc8519a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:aec0d94c6e8384d097de725c3760024e7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html">AbTaskPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#aec0d94c6e8384d097de725c3760024e7">abTaskPool</a> = null</td></tr>
+<tr class="separator:aec0d94c6e8384d097de725c3760024e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad027104a263cd0550d8bb2f6f5355eaa"><td class="memItemLeft" align="right" valign="top">static HashMap&lt; String, Object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#ad027104a263cd0550d8bb2f6f5355eaa">result</a></td></tr>
+<tr class="separator:ad027104a263cd0550d8bb2f6f5355eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff9eb3e34cd2e3a51459f884d37c110"><td class="memItemLeft" align="right" valign="top">static Handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#a2ff9eb3e34cd2e3a51459f884d37c110">handler</a></td></tr>
+<tr class="separator:a2ff9eb3e34cd2e3a51459f884d37c110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>© 2012 amsoft.cn 名称：AbTaskPool.java 描述：用andbase线程池</p>
+<dl class="section author"><dt>作者</dt><dd>还如一梦中 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>v1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>：2013-5-23 上午10:10:53 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a4a13a9b28ed051eab2509e0fcc8519a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.task.thread.AbTaskPool.AbTaskPool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构造线程池. </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="af268ed8500dab25e7033dc8b87189552"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.task.thread.AbTaskPool.execute </td>
+          <td>(</td>
+          <td class="paramtype">final <a class="el" href="classcom_1_1ab_1_1task_1_1_ab_task_item.html">AbTaskItem</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>执行任务. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>the item </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2928c6dac02b78727ed56838249ba53a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html">AbTaskPool</a> com.ab.task.thread.AbTaskPool.getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>单例构造图片下载器.</p>
+<dl class="section return"><dt>返回</dt><dd>single instance of AbHttpPool </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="aec0d94c6e8384d097de725c3760024e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html">AbTaskPool</a> com.ab.task.thread.AbTaskPool.abTaskPool = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>单例对象 The http pool. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2ff9eb3e34cd2e3a51459f884d37c110"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Handler com.ab.task.thread.AbTaskPool.handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Handler() { </div>
+<div class="line">        @Override </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> handleMessage(Message msg) { </div>
+<div class="line">            AbTaskItem item = (AbTaskItem)msg.obj; </div>
+<div class="line">            <span class="keywordflow">if</span>(item.getListener() instanceof AbTaskListListener){</div>
+<div class="line">                ((AbTaskListListener)item.getListener()).update((List&lt;?&gt;)<a class="code" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#ad027104a263cd0550d8bb2f6f5355eaa">result</a>.get(item.toString())); </div>
+<div class="line">            }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.getListener() instanceof AbTaskObjectListener){</div>
+<div class="line">                ((AbTaskObjectListener)item.getListener()).update(<a class="code" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#ad027104a263cd0550d8bb2f6f5355eaa">result</a>.get(item.toString())); </div>
+<div class="line">            }<span class="keywordflow">else</span>{</div>
+<div class="line">                item.getListener().update(); </div>
+<div class="line">            }</div>
+<div class="line">            <a class="code" href="classcom_1_1ab_1_1task_1_1thread_1_1_ab_task_pool.html#ad027104a263cd0550d8bb2f6f5355eaa">result</a>.remove(item.toString());</div>
+<div class="line">        } </div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>下载完成后的消息句柄. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0c617201294f3920096f974199932dbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Executor com.ab.task.thread.AbTaskPool.mExecutorService = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>线程执行器. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad027104a263cd0550d8bb2f6f5355eaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashMap&lt;String,Object&gt; com.ab.task.thread.AbTaskPool.result</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>存放返回的任务结果. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/task/thread/<a class="el" href="_ab_task_pool_8java.html">AbTaskPool.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2015年 四月 7日 星期二 12:46:33 , 为 AndBase快速开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

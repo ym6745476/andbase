@@ -77,7 +77,7 @@ public class MainMenuFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				AbDialogUtil.showProgressDialog(mActivity,0, "正在清空缓存...");
-				AbTask task = new AbTask();
+				AbTask task = AbTask.newInstance();
 				// 定义异步执行的对象
 				final AbTaskItem item = new AbTaskItem();
 				item.setListener(new AbTaskListener() {

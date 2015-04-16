@@ -164,7 +164,7 @@ public class ListNestViewPagerActivity extends AbActivity implements OnHeaderRef
 	}
    
 	public void refreshTask(){
-        AbTask mAbTask = new AbTask();
+		AbTask mAbTask = AbTask.newInstance();
     	AbTaskItem item = new AbTaskItem();
     	item.setListener(new AbTaskListener() {
 
@@ -205,7 +205,7 @@ public class ListNestViewPagerActivity extends AbActivity implements OnHeaderRef
     
     public void loadMoreTask(){
     	
-        AbTask mAbTask = new AbTask();
+    	AbTask mAbTask = AbTask.newInstance();
         AbTaskItem item = new AbTaskItem();
         item.setListener(new AbTaskListener() {
 

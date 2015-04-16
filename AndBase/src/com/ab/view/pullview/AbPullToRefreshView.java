@@ -255,6 +255,7 @@ public class AbPullToRefreshView extends LinearLayout {
 					setHeaderTopMargin(-mHeaderViewHeight);
 				}
 			} else if (mPullState == PULL_UP_STATE) {
+				//控制在什么时候加载更多
 				if (Math.abs(topMargin) >= mHeaderViewHeight + mFooterViewHeight) {
 					// 开始执行footer 刷新
 					footerLoading();
@@ -413,7 +414,6 @@ public class AbPullToRefreshView extends LinearLayout {
 		}
 		params.topMargin = (int) newTopMargin;
 		mHeaderView.setLayoutParams(params);
-		invalidate();
 		return params.topMargin;
 	}
 
@@ -450,7 +450,6 @@ public class AbPullToRefreshView extends LinearLayout {
 		LayoutParams params = (LayoutParams) mHeaderView.getLayoutParams();
 		params.topMargin = topMargin;
 		mHeaderView.setLayoutParams(params);
-		invalidate();
 	}
 
 	/**

@@ -57,7 +57,7 @@ public class ThreadControlActivity extends AbActivity {
 			public void onClick(View arg0) {
 				//显示进度框
 				AbDialogUtil.showProgressDialog(ThreadControlActivity.this,R.drawable.progress_circular,"正在查询...");
-				AbTask mAbTask = new AbTask();
+				AbTask mAbTask = AbTask.newInstance();
 				//定义异步执行的对象
 		    	final AbTaskItem item = new AbTaskItem();
 				item.setListener(new AbTaskListener() {

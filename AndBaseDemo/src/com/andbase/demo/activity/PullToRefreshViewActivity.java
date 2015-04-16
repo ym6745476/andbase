@@ -87,7 +87,7 @@ public class PullToRefreshViewActivity extends AbActivity implements OnHeaderRef
 	
 	
 	public void refreshTask(){
-        AbTask mAbTask = new AbTask();
+		AbTask mAbTask = AbTask.newInstance();
         final AbTaskItem item = new AbTaskItem();
         item.setListener(new AbTaskListener() {
 
@@ -111,7 +111,7 @@ public class PullToRefreshViewActivity extends AbActivity implements OnHeaderRef
     }
 	
 	public void loadMoreTask(){
-        AbTask mAbTask = new AbTask();
+		AbTask mAbTask = AbTask.newInstance();
         final AbTaskItem item = new AbTaskItem();
         item.setListener(new AbTaskListener() {
 

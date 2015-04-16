@@ -122,7 +122,7 @@ public class CityListActivity extends AbActivity{
 	
 	public void downTask() {
 		AbLogUtil.prepareLog(CityListActivity.class);
-		AbTask mAbTask = new AbTask();
+		AbTask mAbTask = AbTask.newInstance();
 		final AbTaskItem item = new AbTaskItem();
 		item.setListener(new AbTaskListListener() {
 			@Override

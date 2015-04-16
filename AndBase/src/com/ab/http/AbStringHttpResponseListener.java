@@ -15,6 +15,8 @@
  */
 package com.ab.http;
 
+import org.apache.http.Header;
+
 
 // TODO: Auto-generated Javadoc
 /**

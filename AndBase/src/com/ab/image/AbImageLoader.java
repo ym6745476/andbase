@@ -157,30 +157,36 @@ public class AbImageLoader {
         		}
         		return;
         	}
-        	
-        	//显示加载中
-        	if(loadingView!=null){
-    			loadingView.setVisibility(View.VISIBLE);
-    			imageView.setVisibility(View.INVISIBLE);
-    		}else {
-    			if(loadingImage != null){
-    			   imageView.setImageDrawable(loadingImage);
-    			   imageView.setVisibility(View.VISIBLE);
-    			}
-    		}
-        	
-        	//设置标记,目的解决闪烁问题
-            imageView.setTag(url);
     	}
     	
+    	//显示的图片的宽
+        final int imageWidth = desiredWidth;
     	
-    	final String cacheKey = memCache.getCacheKey(url, desiredWidth, desiredHeight);
+    	//显示的图片的高
+        final int imageHeight = desiredHeight;
+    	
+    	final String cacheKey = memCache.getCacheKey(url, imageWidth, imageHeight);
     	//先看内存
     	Bitmap bitmap = memCache.getBitmap(cacheKey);
+    	AbLogUtil.i(AbImageLoader.class, "从LRUCache中获取到的图片"+cacheKey+":"+bitmap);
     	
     	if(bitmap != null){
     		showView(url,imageView,loadingView,bitmap);
     	}else{
+    		if(imageView != null){
+	    		//显示加载中
+	        	if(loadingView!=null){
+	    			loadingView.setVisibility(View.VISIBLE);
+	    			imageView.setVisibility(View.INVISIBLE);
+	    		}else {
+	    			if(loadingImage != null){
+	    			   imageView.setImageDrawable(loadingImage);
+	    			   imageView.setVisibility(View.VISIBLE);
+	    			}
+	    		}
+	        	//设置标记,目的解决闪烁问题
+	            imageView.setTag(url);
+    		}
     		
     		AbTaskItem item = new AbTaskItem();
             item.setListener(new AbTaskObjectListener(){
@@ -203,7 +209,12 @@ public class AbImageLoader {
                     	}
                 	}else{
                 		Bitmap bitmap = response.getBitmap();
-                		showView(url,imageView,loadingView,bitmap);
+                		//要判断这个imageView的url有变化，如果没有变化才set
+                        //有变化就取消，解决列表的重复利用View的问题
+                    	if(url.equals(imageView.getTag())){
+                    		showView(url,imageView,loadingView,bitmap);
+                    	}
+                		
                 		if(onImageListener!=null){
                     		onImageListener.onResponse(bitmap);
                     	}
@@ -223,14 +234,15 @@ public class AbImageLoader {
                 			
                 			AbCacheResponse response = AbCacheUtil.getCacheResponse(url,expiresTime);
                 			if(response!=null){
-                				bitmap =  AbImageUtil.getBitmap(response.data, desiredWidth, desiredHeight);
+                				bitmap =  AbImageUtil.getBitmap(response.data, imageWidth, imageHeight);
                     			memCache.putBitmap(cacheKey, bitmap);
                     			diskCache.put(cacheKey, AbCacheHeaderParser.parseCacheHeaders(response));
                 			}
                 		}else{
                 			//磁盘中有
                 			byte [] bitmapData = entry.data;
-                			bitmap =  AbImageUtil.getBitmap(bitmapData, desiredWidth, desiredHeight);
+                			bitmap =  AbImageUtil.getBitmap(bitmapData, imageWidth, imageHeight);
+                			memCache.putBitmap(cacheKey, bitmap);
                 		}
                     	
                     	AbBitmapResponse bitmapResponse = new AbBitmapResponse(url);
@@ -269,23 +281,22 @@ public class AbImageLoader {
     
     
     public void showView(String url,ImageView imageView,View loadingView, Bitmap bitmap){
-    	//要判断这个imageView的url有变化，如果没有变化才set
-        //有变化就取消，解决列表的重复利用View的问题
-    	if(!url.equals(imageView.getTag())){
-    		return;
-    	}
-    	if (bitmap != null) {
-    		imageView.setImageBitmap(bitmap);
-        } else {
-        	if (emptyImage != null) {
-        	   imageView.setImageDrawable(emptyImage);
-            }
-        }
-    	imageView.setVisibility(View.VISIBLE);
     	
-    	if(loadingView != null){
-			loadingView.setVisibility(View.INVISIBLE);
-		}
+    	if(imageView != null){
+        	if (bitmap != null) {
+        		imageView.setImageBitmap(bitmap);
+            } else {
+            	if (emptyImage != null) {
+            	   imageView.setImageDrawable(emptyImage);
+                }
+            }
+        	imageView.setVisibility(View.VISIBLE);
+        	
+        	if(loadingView != null){
+    			loadingView.setVisibility(View.INVISIBLE);
+    		}
+        	
+    	}
     	
     	if(onImageListener!=null){
     		onImageListener.onResponse(bitmap);
@@ -441,7 +452,7 @@ public class AbImageLoader {
 	 * 
 	 * 释放资源.
 	 */
-	public void release(){
+	public void cancelAll(){
 		for(int i=0;i<taskQueueList.size();i++){
 			AbTaskQueue queue = taskQueueList.get(i);
 			queue.cancel(true);
@@ -449,5 +460,25 @@ public class AbImageLoader {
 		taskQueueList.clear();
 	}
 
+
+	public AbImageBaseCache getMemCache() {
+		return memCache;
+	}
+
+
+	public void setMemCache(AbImageBaseCache memCache) {
+		this.memCache = memCache;
+	}
+
+
+	public AbDiskBaseCache getDiskCache() {
+		return diskCache;
+	}
+
+
+	public void setDiskCache(AbDiskBaseCache diskCache) {
+		this.diskCache = diskCache;
+	}
+	
 }
 

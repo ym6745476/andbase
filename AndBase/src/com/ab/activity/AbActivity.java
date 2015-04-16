@@ -31,6 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 
+import com.ab.global.AbActivityManager;
 import com.ab.view.ioc.AbIocEventListener;
 import com.ab.view.ioc.AbIocSelect;
 import com.ab.view.ioc.AbIocView;
@@ -110,9 +111,11 @@ public abstract class AbActivity extends FragmentActivity {
 		
 		//Application初始化
 		abApplication = getApplication();
-        
+		
 		//设置ContentView
         setContentView(ab_base,new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        
+        AbActivityManager.getInstance().addActivity(this);
 	}
 	
 	/**

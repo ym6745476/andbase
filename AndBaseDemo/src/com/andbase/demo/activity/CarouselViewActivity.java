@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
 import com.ab.util.AbToastUtil;
-import com.ab.view.carousel.CarouselAdapter;
-import com.ab.view.carousel.CarouselAdapter.OnItemClickListener;
-import com.ab.view.carousel.CarouselAdapter.OnItemSelectedListener;
-import com.ab.view.carousel.CarouselView;
-import com.ab.view.carousel.CarouselViewAdapter;
 import com.andbase.R;
+import com.andbase.view.carousel.CarouselAdapter;
+import com.andbase.view.carousel.CarouselAdapter.OnItemClickListener;
+import com.andbase.view.carousel.CarouselAdapter.OnItemSelectedListener;
+import com.andbase.view.carousel.CarouselView;
+import com.andbase.view.carousel.CarouselViewAdapter;
 /**
  * 
  * © 2012 amsoft.cn

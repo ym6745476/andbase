@@ -22,6 +22,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.ab.cache.image.AbImageBaseCache;
+import com.ab.image.AbImageLoader;
 import com.ab.util.AbImageUtil;
 import com.ab.util.AbLogUtil;
 import com.ab.util.AbStrUtil;
@@ -103,4 +105,5 @@ public class AbCacheUtil {
 		}
 		return response;
 	}
+	
 }

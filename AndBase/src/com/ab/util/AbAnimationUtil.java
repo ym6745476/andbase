@@ -16,7 +16,6 @@
 package com.ab.util;
 
 
-import android.content.Context;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
@@ -26,7 +25,6 @@ import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
-import android.widget.ImageView;
 
 // TODO: Auto-generated Javadoc
 /**

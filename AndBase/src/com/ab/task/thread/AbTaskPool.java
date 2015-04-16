@@ -67,7 +67,7 @@ public class AbTaskPool{
 	/**
 	 * 构造线程池.
 	 */
-    protected AbTaskPool() {
+    private AbTaskPool() {
         result = new HashMap<String,Object>();
         mExecutorService = AbThreadFactory.getExecutorService();
     } 

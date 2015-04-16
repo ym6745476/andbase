@@ -115,7 +115,7 @@ public class AbHttpClient {
     public static final int DEFAULT_SOCKET_TIMEOUT = 10000;
     
     /** 重试次数. */
-    private static final int DEFAULT_MAX_RETRIES = 3;
+    private static final int DEFAULT_MAX_RETRIES = 2;
     
     /** 缓冲大小. */
     private static final int DEFAULT_SOCKET_BUFFER_SIZE = 8192;
@@ -702,7 +702,7 @@ public class AbHttpClient {
             //200直接返回结果
             if (statusCode == HttpStatus.SC_OK) {
                 
-                // 不打算读取response body   
+                // 不打算读取response body
                 // 调用request的abort方法  
                 // request.abort();  
                 
@@ -756,6 +756,9 @@ public class AbHttpClient {
             }else if(statusCode == HttpStatus.SC_NOT_FOUND){
             	//404
             	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.NOT_FOUND_EXCEPTION, new AbAppException(AbAppConfig.NOT_FOUND_EXCEPTION));
+            }else if(statusCode == HttpStatus.SC_FORBIDDEN){
+            	//403
+            	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.FORBIDDEN_EXCEPTION, new AbAppException(AbAppConfig.FORBIDDEN_EXCEPTION));
             }else{
   				mResponseListener.sendFailureMessage(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
             }

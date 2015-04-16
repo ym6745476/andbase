@@ -62,7 +62,7 @@ public class AbSqliteStorage {
 	    }
 	    if(mAbTask == null){
 	        //用队列避免并发访问数据库问题
-	        mAbTask = new AbTaskQueue();
+	        mAbTask = AbTaskQueue.newInstance();
 	    }
 	    
 	    return mSqliteStorage;

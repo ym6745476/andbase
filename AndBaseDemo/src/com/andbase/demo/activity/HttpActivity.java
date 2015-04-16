@@ -210,7 +210,7 @@ public class HttpActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				String url = "http://www.amsoft.cn/content/templates/amsoft/images/rand/8.jpg";
+				String url = "http://img4.duitang.com/uploads/item/201405/28/20140528203047_y5Swe.thumb.700_0.jpeg";
 				mAbHttpUtil.get(url, new AbBinaryHttpResponseListener() {
 		        	
 					// 获取数据成功会调用这里
@@ -271,7 +271,7 @@ public class HttpActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				String url = "http://www.amsoft.cn/content/uploadfile/201311/38ed1385599018.jpg";
+				String url = "http://img4.duitang.com/uploads/item/201405/28/20140528203047_y5Swe.thumb.700_0.jpeg";
 				
 				mAbHttpUtil.get(url, new AbFileHttpResponseListener(url) {
 		        	

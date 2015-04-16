@@ -79,7 +79,7 @@ public class AbTaskQueue extends Thread {
 	/**
 	 * 构造执行线程队列.
 	 */
-    public AbTaskQueue() {
+    private AbTaskQueue() {
     	quit = false;
     	taskItemList = new LinkedList<AbTaskItem>();
     	result = new HashMap<String,Object>();

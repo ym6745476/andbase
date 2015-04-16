@@ -39,7 +39,7 @@ public class ArticleListAdapter extends BaseAdapter{
     	 mContext = context;
     	 mList = list;
          //图片下载器
-         mAbImageLoader = new AbImageLoader(mContext);
+         mAbImageLoader = AbImageLoader.getInstance(context);
          mAbImageLoader.setDesiredWidth(200);
          mAbImageLoader.setDesiredHeight(200);
          mAbImageLoader.setLoadingImage(R.drawable.image_loading);

@@ -16,7 +16,6 @@
 
 package com.ab.cache;
 
-import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -24,8 +23,6 @@ import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -48,27 +45,27 @@ import com.ab.util.AbStreamUtil;
  */
 public class AbDiskBaseCache implements AbDiskCache {
 
-    /**  Map of the Key, CacheHeader pairs. */
+    /**  所有缓存文件. */
     private final Map<String, CacheHeader> mEntries =
             new LinkedHashMap<String, CacheHeader>(16, .75f, true);
 
-    /** Total amount of space currently used by the cache in bytes. */
+    /** 当前缓存大小. */
     private long mTotalSize = 0;
 
-    /** The root directory to use for the cache. */
+    /** 缓存根目录. */
     private final File mRootDirectory;
 
-    /** The maximum size of the cache in bytes. */
+    /** 最大缓存字节数. */
     private final int mMaxCacheSizeInBytes;
 
-    /**  High water mark percentage for the cache. */
+    /**  缓存达到高水品的百分比. */
     private static final float HYSTERESIS_FACTOR = 0.9f;
 
-    /** Magic number for current version of cache file format. */
+    /** 文件头标识. */
     private static final int CACHE_MAGIC = 0x20120504;
 
     /**
-     * 构造.
+     * 指定缓存空间的构造.
      * @param rootDirectory The root directory of the cache.
      * @param maxCacheSizeInBytes The maximum size of the cache in bytes.
      */
@@ -79,12 +76,50 @@ public class AbDiskBaseCache implements AbDiskCache {
     }
 
     /**
-     * 构造
+     * 默认缓存空间的构造.
      * the default maximum cache size of 5MB.
      * @param rootDirectory The root directory of the cache.
      */
     public AbDiskBaseCache(File rootDirectory) {
         this(rootDirectory, AbAppConfig.MAX_DISK_USAGE_INBYTES);
+    }
+    
+    /**
+     * 初始化磁盘缓存文件.
+     */
+    @Override
+    public synchronized void initialize() {
+        if (!mRootDirectory.exists()) {
+            if (!mRootDirectory.mkdirs()) {
+                AbLogUtil.e(AbDiskBaseCache.class,"缓存目录创建失败，"+mRootDirectory.getAbsolutePath());
+            }
+            return;
+        }
+
+        File[] files = mRootDirectory.listFiles();
+        if (files == null) {
+            return;
+        }
+        for (File file : files) {
+            FileInputStream fis = null;
+            try {
+                fis = new FileInputStream(file);
+                CacheHeader entry = CacheHeader.readHeader(fis);
+                entry.size = file.length();
+                putEntry(entry.key, entry);
+            } catch (IOException e) {
+                if (file != null) {
+                   file.delete();
+                }
+            } finally {
+                try {
+                    if (fis != null) {
+                        fis.close();
+                    }
+                } catch (Exception e) { 
+                }
+            }
+        }
     }
 
     /**
@@ -142,43 +177,6 @@ public class AbDiskBaseCache implements AbDiskCache {
     }
 
     /**
-     * 初始化.
-     */
-    @Override
-    public synchronized void initialize() {
-        if (!mRootDirectory.exists()) {
-            if (!mRootDirectory.mkdirs()) {
-                AbLogUtil.e(AbDiskBaseCache.class,"缓存目录创建失败，"+mRootDirectory.getAbsolutePath());
-            }
-            return;
-        }
-
-        File[] files = mRootDirectory.listFiles();
-        if (files == null) {
-            return;
-        }
-        for (File file : files) {
-            FileInputStream fis = null;
-            try {
-                fis = new FileInputStream(file);
-                CacheHeader entry = CacheHeader.readHeader(fis);
-                entry.size = file.length();
-                putEntry(entry.key, entry);
-            } catch (IOException e) {
-                if (file != null) {
-                   file.delete();
-                }
-            } finally {
-                try {
-                    if (fis != null) {
-                        fis.close();
-                    }
-                } catch (IOException ignored) { }
-            }
-        }
-    }
-
-    /**
      * 添加实体到缓存.
      *
      * @param key the key
@@ -223,7 +221,7 @@ public class AbDiskBaseCache implements AbDiskCache {
      * @param key The key to generate a file name for.
      * @return A pseudo-unique filename.
      */
-    private String getFilenameForKey(String key) {
+    private String getFileameForKey(String key) {
         int firstHalfLength = key.length() / 2;
         String localFilename = String.valueOf(key.substring(0, firstHalfLength).hashCode());
         localFilename += String.valueOf(key.substring(firstHalfLength).hashCode());
@@ -237,7 +235,7 @@ public class AbDiskBaseCache implements AbDiskCache {
      * @return the file for key
      */
     public File getFileForKey(String key) {
-        return new File(mRootDirectory, getFilenameForKey(key));
+        return new File(mRootDirectory, getFileameForKey(key));
     }
 
     /**
@@ -245,10 +243,12 @@ public class AbDiskBaseCache implements AbDiskCache {
      * @param neededSpace The amount of bytes we are trying to fit into the cache.
      */
     private void pruneIfNeeded(int neededSpace) {
+    	//可以缓存
         if ((mTotalSize + neededSpace) < mMaxCacheSizeInBytes) {
             return;
         }
 
+        //释放部分空间
         long before = mTotalSize;
         int prunedFiles = 0;
         long startTime = SystemClock.elapsedRealtime();
@@ -257,16 +257,18 @@ public class AbDiskBaseCache implements AbDiskCache {
         while (iterator.hasNext()) {
             Map.Entry<String, CacheHeader> entry = iterator.next();
             CacheHeader e = entry.getValue();
+            //删除
             boolean deleted = getFileForKey(e.key).delete();
             if (deleted) {
                 mTotalSize -= e.size;
             } else {
                AbLogUtil.d(AbDiskBaseCache.class,"Could not delete cache entry for key=%s, filename=%s",
-                       e.key, getFilenameForKey(e.key));
+                       e.key, getFileameForKey(e.key));
             }
             iterator.remove();
             prunedFiles++;
-
+            
+            //删除缓存到这个级别
             if ((mTotalSize + neededSpace) < mMaxCacheSizeInBytes * HYSTERESIS_FACTOR) {
                 break;
             }
@@ -307,7 +309,7 @@ public class AbDiskBaseCache implements AbDiskCache {
     }
 
     /**
-     * Handles holding onto the cache headers for an entry.
+     * 缓存头部信息.
      */
     static class CacheHeader {
     	
@@ -317,7 +319,7 @@ public class AbDiskBaseCache implements AbDiskCache {
         /** 实体的key. */
         public String key;
 
-        /** ETag. */
+        /** ETag仅仅是一个和文件相关的标记. */
         public String etag;
 
         /** 缓存时间 总毫秒数. */
@@ -358,19 +360,19 @@ public class AbDiskBaseCache implements AbDiskCache {
          */
         public static CacheHeader readHeader(InputStream is) throws IOException {
             CacheHeader entry = new CacheHeader();
-            int magic = readInt(is);
+            int magic = AbStreamUtil.readInt(is);
             if (magic != CACHE_MAGIC) {
                 // don't bother deleting, it'll get pruned eventually
                 throw new IOException();
             }
-            entry.key = readString(is);
-            entry.etag = readString(is);
+            entry.key = AbStreamUtil.readString(is);
+            entry.etag = AbStreamUtil.readString(is);
             if (entry.etag.equals("")) {
                 entry.etag = null;
             }
-            entry.serverTimeMillis = readLong(is);
-            entry.expiredTimeMillis = readLong(is);
-            entry.responseHeaders = readStringStringMap(is);
+            entry.serverTimeMillis = AbStreamUtil.readLong(is);
+            entry.expiredTimeMillis = AbStreamUtil.readLong(is);
+            entry.responseHeaders = AbStreamUtil.readStringStringMap(is);
             return entry;
         }
 
@@ -399,12 +401,12 @@ public class AbDiskBaseCache implements AbDiskCache {
          */
         public boolean writeHeader(OutputStream os) {
             try {
-                writeInt(os, CACHE_MAGIC);
-                writeString(os, key);
-                writeString(os, etag == null ? "" : etag);
-                writeLong(os, serverTimeMillis);
-                writeLong(os, expiredTimeMillis);
-                writeStringStringMap(responseHeaders, os);
+            	AbStreamUtil.writeInt(os, CACHE_MAGIC);
+            	AbStreamUtil.writeString(os, key);
+            	AbStreamUtil.writeString(os, etag == null ? "" : etag);
+            	AbStreamUtil.writeLong(os, serverTimeMillis);
+            	AbStreamUtil.writeLong(os, expiredTimeMillis);
+            	AbStreamUtil.writeStringStringMap(responseHeaders, os);
                 os.flush();
                 return true;
             } catch (IOException e) {
@@ -416,26 +418,17 @@ public class AbDiskBaseCache implements AbDiskCache {
     }
 
     /**
-     * The Class CountingInputStream.
+     * 计数.
      */
     private static class CountingInputStream extends FilterInputStream {
         
         /** The bytes read. */
         private int bytesRead = 0;
 
-        /**
-         * Instantiates a new counting input stream.
-         *
-         * @param in the in
-         */
         private CountingInputStream(InputStream in) {
             super(in);
         }
-
         
-        /* (non-Javadoc)
-         * @see java.io.FilterInputStream#read()
-         */
         @Override
         public int read() throws IOException {
             int result = super.read();
@@ -444,11 +437,7 @@ public class AbDiskBaseCache implements AbDiskCache {
             }
             return result;
         }
-
         
-        /* (non-Javadoc)
-         * @see java.io.FilterInputStream#read(byte[], int, int)
-         */
         @Override
         public int read(byte[] buffer, int offset, int count) throws IOException {
             int result = super.read(buffer, offset, count);
@@ -458,155 +447,5 @@ public class AbDiskBaseCache implements AbDiskCache {
             return result;
         }
     }
-
-    /**
-     * Simple wrapper around {@link InputStream#read()} that throws EOFException
-     * instead of returning -1.
-     *
-     * @param is the is
-     * @return the int
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    private static int read(InputStream is) throws IOException {
-        int b = is.read();
-        if (b == -1) {
-            throw new EOFException();
-        }
-        return b;
-    }
-
-    /**
-     * Write int.
-     *
-     * @param os the os
-     * @param n the n
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static void writeInt(OutputStream os, int n) throws IOException {
-        os.write((n >> 0) & 0xff);
-        os.write((n >> 8) & 0xff);
-        os.write((n >> 16) & 0xff);
-        os.write((n >> 24) & 0xff);
-    }
-
-    /**
-     * Read int.
-     *
-     * @param is the is
-     * @return the int
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static int readInt(InputStream is) throws IOException {
-        int n = 0;
-        n |= (read(is) << 0);
-        n |= (read(is) << 8);
-        n |= (read(is) << 16);
-        n |= (read(is) << 24);
-        return n;
-    }
-
-    /**
-     * Write long.
-     *
-     * @param os the os
-     * @param n the n
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static void writeLong(OutputStream os, long n) throws IOException {
-        os.write((byte)(n >>> 0));
-        os.write((byte)(n >>> 8));
-        os.write((byte)(n >>> 16));
-        os.write((byte)(n >>> 24));
-        os.write((byte)(n >>> 32));
-        os.write((byte)(n >>> 40));
-        os.write((byte)(n >>> 48));
-        os.write((byte)(n >>> 56));
-    }
-
-    /**
-     * Read long.
-     *
-     * @param is the is
-     * @return the long
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static long readLong(InputStream is) throws IOException {
-        long n = 0;
-        n |= ((read(is) & 0xFFL) << 0);
-        n |= ((read(is) & 0xFFL) << 8);
-        n |= ((read(is) & 0xFFL) << 16);
-        n |= ((read(is) & 0xFFL) << 24);
-        n |= ((read(is) & 0xFFL) << 32);
-        n |= ((read(is) & 0xFFL) << 40);
-        n |= ((read(is) & 0xFFL) << 48);
-        n |= ((read(is) & 0xFFL) << 56);
-        return n;
-    }
-
-    /**
-     * Write string.
-     *
-     * @param os the os
-     * @param s the s
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static void writeString(OutputStream os, String s) throws IOException {
-        byte[] b = s.getBytes("UTF-8");
-        writeLong(os, b.length);
-        os.write(b, 0, b.length);
-    }
-
-    /**
-     * Read string.
-     *
-     * @param is the is
-     * @return the string
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static String readString(InputStream is) throws IOException {
-        int n = (int) readLong(is);
-        byte[] b = AbStreamUtil.stream2Bytes(is, n);
-        return new String(b, "UTF-8");
-    }
-
-    /**
-     * Write string string map.
-     *
-     * @param map the map
-     * @param os the os
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static void writeStringStringMap(Map<String, String> map, OutputStream os) throws IOException {
-        if (map != null) {
-            writeInt(os, map.size());
-            for (Map.Entry<String, String> entry : map.entrySet()) {
-                writeString(os, entry.getKey());
-                writeString(os, entry.getValue());
-            }
-        } else {
-            writeInt(os, 0);
-        }
-    }
-
-    /**
-     * Read string string map.
-     *
-     * @param is the is
-     * @return the map
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    static Map<String, String> readStringStringMap(InputStream is) throws IOException {
-        int size = readInt(is);
-        Map<String, String> result = (size == 0)
-                ? Collections.<String, String>emptyMap()
-                : new HashMap<String, String>(size);
-        for (int i = 0; i < size; i++) {
-            String key = readString(is).intern();
-            String value = readString(is).intern();
-            result.put(key, value);
-        }
-        return result;
-    }
-
 
 }

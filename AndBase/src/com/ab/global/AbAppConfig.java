@@ -93,8 +93,11 @@ public class AbAppConfig {
 	/** The Constant REMOTESERVICEEXCEPTION. */
 	public static String REMOTE_SERVICE_EXCEPTION = "抱歉，远程服务出错了";
 	
-	/** 页面未找到. */
+	/** 资源未找到. */
 	public static String NOT_FOUND_EXCEPTION = "页面未找到";
+	
+	/** 没有权限访问资源. */
+	public static String FORBIDDEN_EXCEPTION = "没有权限访问资源";
 	
 	/** 其他异常. */
 	public static String UNTREATED_EXCEPTION = "未处理的异常";

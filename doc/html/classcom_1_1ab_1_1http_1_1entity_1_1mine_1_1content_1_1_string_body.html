@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>AndBase快速开发框架: com.ab.http.entity.mine.content.StringBody类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ic_launcher.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">AndBase快速开发框架
+   &#160;<span id="projectnumber">1.6.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全部</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>类</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>命名空间</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>文件</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>函数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>变量</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>枚举值</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>页</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab.html">ab</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http_1_1entity.html">entity</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http_1_1entity_1_1mine.html">mine</a></li><li class="navelem"><a class="el" href="namespacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content.html">content</a></li><li class="navelem"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.ab.http.entity.mine.content.StringBody类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 com.ab.http.entity.mine.content.StringBody 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.png" usemap="#com.ab.http.entity.mine.content.StringBody_map" alt=""/>
+  <map id="com.ab.http.entity.mine.content.StringBody_map" name="com.ab.http.entity.mine.content.StringBody_map">
+<area href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html" alt="com.ab.http.entity.mine.content.AbstractContentBody" shape="rect" coords="0,112,309,136"/>
+<area href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body.html" alt="com.ab.http.entity.mine.content.ContentBody" shape="rect" coords="0,56,309,80"/>
+<area href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_descriptor.html" alt="com.ab.http.entity.mine.content.ContentDescriptor" shape="rect" coords="0,0,309,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae49d52a5aabeb2b95b9f790d0449fb87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#ae49d52a5aabeb2b95b9f790d0449fb87">StringBody</a> (final String text, final String <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#a81912fa97b63d9c46a70c442f404e55b">mimeType</a>, Charset <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#add39361c1c4b42aed4c091cf70b30226">charset</a>)  throws UnsupportedEncodingException </td></tr>
+<tr class="separator:ae49d52a5aabeb2b95b9f790d0449fb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d72453cfa50a6be36b20ee35f55b583"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a0d72453cfa50a6be36b20ee35f55b583">StringBody</a> (final String text, final Charset <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#add39361c1c4b42aed4c091cf70b30226">charset</a>)  throws UnsupportedEncodingException </td></tr>
+<tr class="separator:a0d72453cfa50a6be36b20ee35f55b583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390691b046b2417c4ed33abb0b68847d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a390691b046b2417c4ed33abb0b68847d">StringBody</a> (final String text)  throws UnsupportedEncodingException </td></tr>
+<tr class="separator:a390691b046b2417c4ed33abb0b68847d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d0d744fd609a07a6df6d6d4f3dc40b"><td class="memItemLeft" align="right" valign="top">Reader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a12d0d744fd609a07a6df6d6d4f3dc40b">getReader</a> ()</td></tr>
+<tr class="separator:a12d0d744fd609a07a6df6d6d4f3dc40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f463f166d21fcbebe86cab91671260e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a1f463f166d21fcbebe86cab91671260e">writeTo</a> (final OutputStream out, <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_write_byte_listener.html">WriteByteListener</a> listener)  throws IOException </td></tr>
+<tr class="separator:a1f463f166d21fcbebe86cab91671260e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f6304a90b2835973286681f3720d90"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a93f6304a90b2835973286681f3720d90">getTransferEncoding</a> ()</td></tr>
+<tr class="separator:a93f6304a90b2835973286681f3720d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ecb4ea87dd011e6dcddedc479dfc5e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a01ecb4ea87dd011e6dcddedc479dfc5e">getCharset</a> ()</td></tr>
+<tr class="separator:a01ecb4ea87dd011e6dcddedc479dfc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32a2ab2265bda7a2cbcbc88ae618cfd"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#ab32a2ab2265bda7a2cbcbc88ae618cfd">getContentLength</a> ()</td></tr>
+<tr class="separator:ab32a2ab2265bda7a2cbcbc88ae618cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c8815a9f25b9657131ee3b8becc1b9"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a60c8815a9f25b9657131ee3b8becc1b9">getFilename</a> ()</td></tr>
+<tr class="separator:a60c8815a9f25b9657131ee3b8becc1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html">com.ab.http.entity.mine.content.AbstractContentBody</a></td></tr>
+<tr class="memitem:a5df8bebc5dea413401521b56628890c3 inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#a5df8bebc5dea413401521b56628890c3">AbstractContentBody</a> (final String <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#a81912fa97b63d9c46a70c442f404e55b">mimeType</a>)</td></tr>
+<tr class="separator:a5df8bebc5dea413401521b56628890c3 inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8939d774371a3ed26adf3d550e6f366 inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#ae8939d774371a3ed26adf3d550e6f366">getMimeType</a> ()</td></tr>
+<tr class="separator:ae8939d774371a3ed26adf3d550e6f366 inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa76266881269d1bd44a984db91e4ce inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#a3aa76266881269d1bd44a984db91e4ce">getMediaType</a> ()</td></tr>
+<tr class="separator:a3aa76266881269d1bd44a984db91e4ce inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddd148a7d55d100510760bfcb1d478d inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#a6ddd148a7d55d100510760bfcb1d478d">getSubType</a> ()</td></tr>
+<tr class="separator:a6ddd148a7d55d100510760bfcb1d478d inherit pub_methods_classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body.html">com.ab.http.entity.mine.content.ContentBody</a></td></tr>
+<tr class="memitem:a358fc1babc96c2504ba5cc7d4d6a85e9 inherit pub_methods_interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body.html#a358fc1babc96c2504ba5cc7d4d6a85e9">writeTo</a> (OutputStream out, <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_write_byte_listener.html">WriteByteListener</a> listener)  throws IOException</td></tr>
+<tr class="separator:a358fc1babc96c2504ba5cc7d4d6a85e9 inherit pub_methods_interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a059aedecf8eccbc8b5eb59ecdafbf31d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a059aedecf8eccbc8b5eb59ecdafbf31d">create</a> (final String text, final String <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_abstract_content_body.html#a81912fa97b63d9c46a70c442f404e55b">mimeType</a>, final Charset <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#add39361c1c4b42aed4c091cf70b30226">charset</a>)  throws IllegalArgumentException </td></tr>
+<tr class="separator:a059aedecf8eccbc8b5eb59ecdafbf31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f56cf3b5be76b685614c40cb3ce1181"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a6f56cf3b5be76b685614c40cb3ce1181">create</a> (final String text, final Charset <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#add39361c1c4b42aed4c091cf70b30226">charset</a>)  throws IllegalArgumentException </td></tr>
+<tr class="separator:a6f56cf3b5be76b685614c40cb3ce1181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe021212dac4d5df2b358887ceb270f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#abe021212dac4d5df2b358887ceb270f3">create</a> (final String text)  throws IllegalArgumentException </td></tr>
+<tr class="separator:abe021212dac4d5df2b358887ceb270f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5498234e1b213e3863a83d34847caac8"><td class="memItemLeft" align="right" valign="top">final byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#a5498234e1b213e3863a83d34847caac8">content</a></td></tr>
+<tr class="separator:a5498234e1b213e3863a83d34847caac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add39361c1c4b42aed4c091cf70b30226"><td class="memItemLeft" align="right" valign="top">final Charset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html#add39361c1c4b42aed4c091cf70b30226">charset</a></td></tr>
+<tr class="separator:add39361c1c4b42aed4c091cf70b30226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section since"><dt>自从</dt><dd>4.0 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ae49d52a5aabeb2b95b9f790d0449fb87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.http.entity.mine.content.StringBody.StringBody </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>mimeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Charset&#160;</td>
+          <td class="paramname"><em>charset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws UnsupportedEncodingException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a> from the specified text, mime type and character set.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>to be used for the body, not<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">mimeType</td><td>the mime type, not<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">charset</td><td>the character set, may be<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> , in which case the US-ASCII charset is used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedEncodingException</td><td></td></tr>
+    <tr><td class="paramname">IllegalArgumentException</td><td>if the<div class="fragment"><div class="line">text </div>
+</div><!-- fragment --> parameter is null </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d72453cfa50a6be36b20ee35f55b583"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.http.entity.mine.content.StringBody.StringBody </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Charset&#160;</td>
+          <td class="paramname"><em>charset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws UnsupportedEncodingException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a> from the specified text and character set. The mime type is set to "text/plain".</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>to be used for the body, not<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">charset</td><td>the character set, may be<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> , in which case the US-ASCII charset is used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedEncodingException</td><td></td></tr>
+    <tr><td class="paramname">IllegalArgumentException</td><td>if the<div class="fragment"><div class="line">text </div>
+</div><!-- fragment --> parameter is null </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a390691b046b2417c4ed33abb0b68847d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.ab.http.entity.mine.content.StringBody.StringBody </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> throws UnsupportedEncodingException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a> from the specified text. The mime type is set to "text/plain". The hosts default charset is used.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>to be used for the body, not<div class="fragment"><div class="line">null </div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">UnsupportedEncodingException</td><td></td></tr>
+    <tr><td class="paramname">IllegalArgumentException</td><td>if the<div class="fragment"><div class="line">text </div>
+</div><!-- fragment --> parameter is null </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a059aedecf8eccbc8b5eb59ecdafbf31d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a> com.ab.http.entity.mine.content.StringBody.create </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>mimeType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Charset&#160;</td>
+          <td class="paramname"><em>charset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IllegalArgumentException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section since"><dt>自从</dt><dd>4.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f56cf3b5be76b685614c40cb3ce1181"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a> com.ab.http.entity.mine.content.StringBody.create </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">final Charset&#160;</td>
+          <td class="paramname"><em>charset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IllegalArgumentException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section since"><dt>自从</dt><dd>4.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abe021212dac4d5df2b358887ceb270f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_string_body.html">StringBody</a> com.ab.http.entity.mine.content.StringBody.create </td>
+          <td>(</td>
+          <td class="paramtype">final String&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> throws IllegalArgumentException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section since"><dt>自从</dt><dd>4.1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a01ecb4ea87dd011e6dcddedc479dfc5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.entity.mine.content.StringBody.getCharset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The body descriptors character set, defaulted appropriately for the <a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1_m_i_m_e.html">MIME</a> type.</p>
+<p>For <code>TEXT</code> types, this will be defaulted to <code>us-ascii</code>. For other types, when the charset parameter is missing this property will be null. </p>
+<dl class="section return"><dt>返回</dt><dd>Character set, which has been parsed from the content-type definition. Not null for <code>TEXT</code> types, when unset will be set to default <code>us-ascii</code>. For other types, when unset, null will be returned. </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_descriptor.html#a30b1beec2df372e8c6602d36f8349aaa">com.ab.http.entity.mine.content.ContentDescriptor</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab32a2ab2265bda7a2cbcbc88ae618cfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.ab.http.entity.mine.content.StringBody.getContentLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the body descriptors content-length. </p><dl class="section return"><dt>返回</dt><dd>Content length, if known, or -1, to indicate the absence of a content-length header. </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_descriptor.html#a79f340c723f7066020e9641a49c67abd">com.ab.http.entity.mine.content.ContentDescriptor</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a60c8815a9f25b9657131ee3b8becc1b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.entity.mine.content.StringBody.getFilename </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_body.html#a5a09993eb1f5f33d0150b09dd4f1eb74">com.ab.http.entity.mine.content.ContentBody</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12d0d744fd609a07a6df6d6d4f3dc40b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Reader com.ab.http.entity.mine.content.StringBody.getReader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a93f6304a90b2835973286681f3720d90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.ab.http.entity.mine.content.StringBody.getTransferEncoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the body descriptors transfer encoding. </p><dl class="section return"><dt>返回</dt><dd>The transfer encoding. Must not be null, but "7bit", if no transfer-encoding was specified. </dd></dl>
+
+<p>实现了 <a class="el" href="interfacecom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_content_descriptor.html#ab9cf4bc40d6b9b6773d3aa9d4e4a31e0">com.ab.http.entity.mine.content.ContentDescriptor</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f463f166d21fcbebe86cab91671260e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.ab.http.entity.mine.content.StringBody.writeTo </td>
+          <td>(</td>
+          <td class="paramtype">final OutputStream&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1ab_1_1http_1_1entity_1_1mine_1_1content_1_1_write_byte_listener.html">WriteByteListener</a>&#160;</td>
+          <td class="paramname"><em>listener</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws IOException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="add39361c1c4b42aed4c091cf70b30226"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Charset com.ab.http.entity.mine.content.StringBody.charset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5498234e1b213e3863a83d34847caac8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final byte [] com.ab.http.entity.mine.content.StringBody.content</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/com/ab/http/entity/mine/content/<a class="el" href="_string_body_8java.html">StringBody.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2015年 四月 7日 星期二 12:46:33 , 为 AndBase快速开发框架使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

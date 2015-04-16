@@ -34,17 +34,18 @@ public class CityListAdapter extends BaseAdapter implements SectionIndexer{
 		return position;
 	}
 
-	public View getView(final int position, View view, ViewGroup arg2) {
+	public View getView(final int position, View convertView, ViewGroup arg2) {
 		ViewHolder viewHolder = null;
 		final City city = list.get(position);
-		if (view == null) { 
+		if (convertView == null) { 
 			viewHolder = new ViewHolder();
-			view = LayoutInflater.from(mContext).inflate(R.layout.city_list_item, null);
-			viewHolder.cityLetter = (TextView) view.findViewById(R.id.city_letter);
-			viewHolder.cityName = (TextView) view.findViewById(R.id.city_name);
-			view.setTag(viewHolder);
+			convertView = LayoutInflater.from(mContext).inflate(R.layout.city_list_item, null);
+			viewHolder.cityLetter = (TextView) convertView.findViewById(R.id.city_letter);
+			viewHolder.cityName = (TextView) convertView.findViewById(R.id.city_name);
+			convertView.setTag(viewHolder);
+			
 		} else {
-			viewHolder = (ViewHolder) view.getTag();
+			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		
 		//根据position获取分类的首字母的Char ascii值
@@ -57,10 +58,9 @@ public class CityListAdapter extends BaseAdapter implements SectionIndexer{
 		}else{
 			viewHolder.cityLetter.setVisibility(View.GONE);
 		}
-	
-		viewHolder.cityName.setText(this.list.get(position).getName());
 		
-		return view;
+		viewHolder.cityName.setText(this.list.get(position).getName());
+		return convertView;
 
 	}
 	

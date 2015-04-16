@@ -142,7 +142,7 @@ public class PullToRefreshGridActivity extends AbActivity implements OnHeaderRef
     }
     
     public void refreshTask(){
-        AbTask mAbTask = new AbTask();
+    	AbTask mAbTask = AbTask.newInstance();
         //定义两种查询的事件
         final AbTaskItem item = new AbTaskItem();
         item.setListener(new AbTaskListener() {
@@ -187,7 +187,7 @@ public class PullToRefreshGridActivity extends AbActivity implements OnHeaderRef
     }
     
     public void loadMoreTask(){
-        AbTask mAbTask = new AbTask();
+    	AbTask mAbTask = AbTask.newInstance();
         final AbTaskItem item = new AbTaskItem();
         item.setListener(new AbTaskListener() {
 
