@@ -1,7 +1,5 @@
 package com.ab.fragment;
 
-import com.ab.util.AbViewUtil;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,8 +11,9 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.ab.util.AbViewUtil;
 /**
  * © 2012 amsoft.cn
  * 名称：AbLoadDialogFragment.java 
