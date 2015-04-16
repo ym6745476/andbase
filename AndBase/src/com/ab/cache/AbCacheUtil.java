@@ -22,8 +22,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.ab.cache.image.AbImageBaseCache;
-import com.ab.image.AbImageLoader;
 import com.ab.util.AbImageUtil;
 import com.ab.util.AbLogUtil;
 import com.ab.util.AbStrUtil;
@@ -91,6 +89,7 @@ public class AbCacheUtil {
 			key = X-Android-Sent-Millis and value = [1427971373356]*/
 
 			response = new AbCacheResponse(data, mapHeaders);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
