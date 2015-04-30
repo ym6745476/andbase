@@ -132,7 +132,6 @@ public class AbSlidingPlayView extends LinearLayout {
 		this.context = context;
 		navLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		this.setOrientation(LinearLayout.VERTICAL);
-		this.setBackgroundColor(Color.rgb(255, 255, 255));
 		
 		RelativeLayout mRelativeLayout = new RelativeLayout(context);
 

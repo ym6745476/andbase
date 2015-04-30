@@ -388,7 +388,8 @@ public class AbImageUtil {
 		float scale = getMinScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
 		int destWidth = srcWidth;
 		int destHeight = srcHeight;
-		if (scale != 1) {
+		//只缩小，不放大
+		if (scale > 1) {
 			destWidth = (int) (srcWidth * scale);
 			destHeight = (int) (srcHeight * scale);
 		}
@@ -528,6 +529,15 @@ public class AbImageUtil {
 		return size;
 	}
 
+	/**
+	 * 
+	 * 获取缩小的比例.
+	 * @param srcWidth
+	 * @param srcHeight
+	 * @param desiredWidth
+	 * @param desiredHeight
+	 * @return
+	 */
 	private static float getMinScale(int srcWidth, int srcHeight, int desiredWidth,
 			int desiredHeight) {
 		// 缩放的比例

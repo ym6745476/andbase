@@ -22,8 +22,6 @@ import java.util.List;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -63,29 +61,11 @@ public class AbImageLoader {
     /** 单例对象. */
 	private static AbImageLoader imageLoader = null; 
     
-    /** 显示的图片的宽. */
-    private int desiredWidth;
-	
-	/** 显示的图片的高. */
-    private int desiredHeight;
-    
     /** 缓存超时时间设置. */
     private int expiresTime;
     
-    /** 显示为下载中的图片. */
-    private Drawable loadingImage;
-    
-    /** 显示下载失败的图片. */
-    private Drawable errorImage;
-    
-    /** 图片未找到的图片. */
-    private Drawable emptyImage;
-    
     /** 请求队列. */
     private List<AbTaskQueue> taskQueueList;
-    
-    /** 图片下载监听器. */
-    private OnImageListener onImageListener = null;
     
     /** 图片缓存. */
     private AbImageBaseCache memCache;
@@ -123,67 +103,145 @@ public class AbImageLoader {
 	public static AbImageLoader getInstance(Context context) {
 		if (imageLoader == null) { 
 			imageLoader = new AbImageLoader(context); 
-        } 
+        }
 		return imageLoader;
 	}
 	
 	/**
-     * 显示这个图片.
-     *
-     * @param imageView 显得的View
-     * @param url the url
+	 * 
+	 * 显示这个图片.
+	 * @param imageView
+	 * @param url
+	 * @param desiredWidth
+	 * @param desiredHeight
+	 */
+    public void display(ImageView imageView,String url,int desiredWidth, int desiredHeight){
+    	download(imageView,url,desiredWidth,desiredHeight,new OnImageListener() {
+			
+			@Override
+			public void onSuccess(ImageView imageView, Bitmap bitmap) {
+				imageView.setImageBitmap(bitmap);
+			}
+			
+			@Override
+			public void onLoading(ImageView imageView) {
+				
+			}
+			
+			@Override
+			public void onError(ImageView imageView) {
+				
+			}
+			
+			@Override
+			public void onEmpty(ImageView imageView) {
+				
+			}
+		});
+    }
+    
+    /**
+     * 
+     * 显示这个图片(按照原图尺寸).
+     * ImageView使用android:scaleType="fitXY"属性仍旧可以充满
+     * @param imageView
+     * @param url
      */
-    public void display(final ImageView imageView,final String url) { 
-    	display(imageView,null,url);
+    public void display(ImageView imageView,String url){
+    	download(imageView,url,-1,-1,new OnImageListener() {
+			
+			@Override
+			public void onSuccess(ImageView imageView, Bitmap bitmap) {
+				imageView.setImageBitmap(bitmap);
+			}
+			
+			@Override
+			public void onLoading(ImageView imageView) {
+				
+			}
+			
+			@Override
+			public void onError(ImageView imageView) {
+				
+			}
+			
+			@Override
+			public void onEmpty(ImageView imageView) {
+				
+			}
+		});
+    }
+    
+    /**
+     * 
+     * 显示这个图片.
+     * @param imageView
+     * @param loadingView
+     * @param url
+     * @param desiredWidth
+     * @param desiredHeight
+     */
+    public void display(final ImageView imageView,final View loadingView,final String url,final int desiredWidth,final int desiredHeight){
+    	download(imageView,url,desiredWidth,desiredHeight,new OnImageListener() {
+			
+    		public void onSuccess(ImageView imageView, Bitmap bitmap) {
+				imageView.setImageBitmap(bitmap);
+				imageView.setVisibility(View.VISIBLE);
+				loadingView.setVisibility(View.GONE);
+			}
+			
+			@Override
+			public void onLoading(ImageView imageView) {
+				imageView.setVisibility(View.GONE);
+				loadingView.setVisibility(View.VISIBLE);
+			}
+			
+			@Override
+			public void onError(ImageView imageView) {
+				
+			}
+			
+			@Override
+			public void onEmpty(ImageView imageView) {
+				
+			}
+		});
     }
 	
      
     /**
-     * 显示这个图片.
-     *
-     * @param imageView 显得的View
-     * @param url the url
+     * 
+     * 下载这个图片.
+     * @param imageView
+     * @param url
+     * @param desiredWidth
+     * @param desiredHeight
      */
-    public void display(final ImageView imageView,final View loadingView,final String url) { 
+    public void download(final ImageView imageView,final String url,final int desiredWidth,final int desiredHeight,final OnImageListener onImageListener) { 
     	
-    	if(imageView != null){
-    		if(AbStrUtil.isEmpty(url)){
-        		if(emptyImage != null){
-        			if(loadingView != null){
-            			loadingView.setVisibility(View.INVISIBLE);
-            		}
-        			imageView.setVisibility(View.VISIBLE);
-        			imageView.setImageDrawable(emptyImage);
-        		}
-        		return;
-        	}
+		if(AbStrUtil.isEmpty(url)){
+			if(onImageListener!=null){
+				onImageListener.onEmpty(imageView);
+			}
+    		return;
     	}
     	
-    	//显示的图片的宽
-        final int imageWidth = desiredWidth;
-    	
-    	//显示的图片的高
-        final int imageHeight = desiredHeight;
-    	
-    	final String cacheKey = memCache.getCacheKey(url, imageWidth, imageHeight);
+    	final String cacheKey = memCache.getCacheKey(url, desiredWidth, desiredHeight);
     	//先看内存
     	Bitmap bitmap = memCache.getBitmap(cacheKey);
     	AbLogUtil.i(AbImageLoader.class, "从LRUCache中获取到的图片"+cacheKey+":"+bitmap);
     	
     	if(bitmap != null){
-    		showView(url,imageView,loadingView,bitmap);
+    		if(onImageListener!=null){
+    		    onImageListener.onSuccess(imageView, bitmap);
+    		}
     	}else{
+    		
+    		if(onImageListener!=null){
+				onImageListener.onLoading(imageView);
+			}
+    		
     		if(imageView != null){
-	    		//显示加载中
-	        	if(loadingView!=null){
-	    			loadingView.setVisibility(View.VISIBLE);
-	    			imageView.setVisibility(View.INVISIBLE);
-	    		}else {
-	    			if(loadingImage != null){
-	    			   imageView.setImageDrawable(loadingImage);
-	    			   imageView.setVisibility(View.VISIBLE);
-	    			}
-	    		}
 	        	//设置标记,目的解决闪烁问题
 	            imageView.setTag(url);
     		}
@@ -195,28 +253,94 @@ public class AbImageLoader {
                 public <T> void update(T entity) {
                 	AbBitmapResponse response = (AbBitmapResponse)entity;
                 	if(response == null){
-                		if(imageView != null){
-                			if(errorImage != null){
-                    			imageView.setImageDrawable(errorImage);
-                    		}
-                        	imageView.setVisibility(View.VISIBLE);
-                        	if(loadingView != null){
-                    			loadingView.setVisibility(View.INVISIBLE);
-                    		}
-                		}
                 		if(onImageListener!=null){
-                    		onImageListener.onResponse(null);
+                			onImageListener.onError(imageView);
                     	}
                 	}else{
                 		Bitmap bitmap = response.getBitmap();
                 		//要判断这个imageView的url有变化，如果没有变化才set
                         //有变化就取消，解决列表的重复利用View的问题
-                    	if(url.equals(imageView.getTag())){
-                    		showView(url,imageView,loadingView,bitmap);
+                		if(bitmap==null){
+                			if(onImageListener!=null){
+                        		onImageListener.onEmpty(imageView);
+                        		
+                        	}
+                		}else if(imageView == null || url.equals(imageView.getTag())){
+                    		if(onImageListener!=null){
+                        		onImageListener.onSuccess(imageView, bitmap);
+                        	}
                     	}
-                		
+                		AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
+                	}
+                	
+                }
+
+    			@Override
+                public AbBitmapResponse getObject() {
+    				return getBitmapResponse(url, desiredWidth, desiredHeight);
+                }
+                
+            });
+            
+            add2Queue(item);
+    	}
+    	
+    } 
+    
+    
+    /**
+     * 
+     * 下载这个图片.
+     * @param url
+     * @param desiredWidth
+     * @param desiredHeight
+     */
+    public void download(final String url,final int desiredWidth,final int desiredHeight,final OnImageListener2 onImageListener) { 
+    	
+		if(AbStrUtil.isEmpty(url)){
+			if(onImageListener!=null){
+				onImageListener.onEmpty();
+			}
+    		return;
+    	}
+    	
+    	final String cacheKey = memCache.getCacheKey(url, desiredWidth, desiredHeight);
+    	//先看内存
+    	Bitmap bitmap = memCache.getBitmap(cacheKey);
+    	AbLogUtil.i(AbImageLoader.class, "从LRUCache中获取到的图片"+cacheKey+":"+bitmap);
+    	
+    	if(bitmap != null){
+    		if(onImageListener!=null){
+    		    onImageListener.onSuccess(bitmap);
+    		}
+    	}else{
+    		
+    		if(onImageListener!=null){
+				onImageListener.onLoading();
+			}
+    		
+    		AbTaskItem item = new AbTaskItem();
+            item.setListener(new AbTaskObjectListener(){
+            	
+                @Override
+                public <T> void update(T entity) {
+                	AbBitmapResponse response = (AbBitmapResponse)entity;
+                	if(response == null){
                 		if(onImageListener!=null){
-                    		onImageListener.onResponse(bitmap);
+                			onImageListener.onError();
+                    	}
+                	}else{
+                		Bitmap bitmap = response.getBitmap();
+                		//要判断这个imageView的url有变化，如果没有变化才set
+                        //有变化就取消，解决列表的重复利用View的问题
+                		if(bitmap==null){
+                			if(onImageListener!=null){
+                        		onImageListener.onEmpty();
+                        	}
+                		}else {
+                    		if(onImageListener!=null){
+                        		onImageListener.onSuccess(bitmap);
+                        	}
                     	}
                 		AbLogUtil.d(AbImageLoader.class, "获取到图片："+bitmap);
                 	}
@@ -226,28 +350,7 @@ public class AbImageLoader {
     			@Override
                 public AbBitmapResponse getObject() {
                     try {
-                    	Bitmap bitmap = null;
-                		//看磁盘
-                		Entry entry = diskCache.get(cacheKey);
-                		if(entry == null || entry.isExpired()){
-                			AbLogUtil.i(AbImageLoader.class, "图片磁盘中没有，或者已经过期");
-                			
-                			AbCacheResponse response = AbCacheUtil.getCacheResponse(url,expiresTime);
-                			if(response!=null){
-                				bitmap =  AbImageUtil.getBitmap(response.data, imageWidth, imageHeight);
-                    			memCache.putBitmap(cacheKey, bitmap);
-                    			diskCache.put(cacheKey, AbCacheHeaderParser.parseCacheHeaders(response));
-                			}
-                		}else{
-                			//磁盘中有
-                			byte [] bitmapData = entry.data;
-                			bitmap =  AbImageUtil.getBitmap(bitmapData, imageWidth, imageHeight);
-                			memCache.putBitmap(cacheKey, bitmap);
-                		}
-                    	
-                    	AbBitmapResponse bitmapResponse = new AbBitmapResponse(url);
-                    	bitmapResponse.setBitmap(bitmap);
-                    	return bitmapResponse;
+                    	return getBitmapResponse(url, desiredWidth, desiredHeight);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -262,76 +365,47 @@ public class AbImageLoader {
     } 
     
     /**
-     * 下载这个图片.
-     *
-     * @param url the url
+     * 
+     * 获取AbBitmapResponse.
+     * @param url
+     * @param desiredWidth
+     * @param desiredHeight
+     * @return
      */
-    public void download(final String url) { 
+    public AbBitmapResponse getBitmapResponse(String url,int desiredWidth,int desiredHeight){
+    	AbBitmapResponse bitmapResponse = null;
+		try {
+			final String cacheKey = memCache.getCacheKey(url, desiredWidth, desiredHeight);
+			Bitmap bitmap = null;
+			//看磁盘
+			Entry entry = diskCache.get(cacheKey);
+			if(entry == null || entry.isExpired()){
+				AbLogUtil.i(AbImageLoader.class, "图片磁盘中没有，或者已经过期");
+				
+				AbCacheResponse response = AbCacheUtil.getCacheResponse(url,expiresTime);
+				if(response!=null){
+					bitmap =  AbImageUtil.getBitmap(response.data, desiredWidth, desiredHeight);
+					if(bitmap!=null){
+						memCache.putBitmap(cacheKey, bitmap);
+						diskCache.put(cacheKey, AbCacheHeaderParser.parseCacheHeaders(response));
+					}
+				}
+			}else{
+				//磁盘中有
+				byte [] bitmapData = entry.data;
+				bitmap =  AbImageUtil.getBitmap(bitmapData, desiredWidth, desiredHeight);
+				memCache.putBitmap(cacheKey, bitmap);
+			}
+			
+			bitmapResponse = new AbBitmapResponse(url);
+			bitmapResponse.setBitmap(bitmap);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     	
-    	if(AbStrUtil.isEmpty(url)){
-    		return;
-    	}
-    	
-    	if(Uri.parse(url).getHost() == null){
-    		return;
-    	}
-    	
-    	display(null,null,url);
-    } 
-    
-    
-    public void showView(String url,ImageView imageView,View loadingView, Bitmap bitmap){
-    	
-    	if(imageView != null){
-        	if (bitmap != null) {
-        		imageView.setImageBitmap(bitmap);
-            } else {
-            	if (emptyImage != null) {
-            	   imageView.setImageDrawable(emptyImage);
-                }
-            }
-        	imageView.setVisibility(View.VISIBLE);
-        	
-        	if(loadingView != null){
-    			loadingView.setVisibility(View.INVISIBLE);
-    		}
-        	
-    	}
-    	
-    	if(onImageListener!=null){
-    		onImageListener.onResponse(bitmap);
-    	}
-    	
+    	return bitmapResponse;
     }
-   
-   
-   /**
-    * 
-    * 设置下载中的图片.
-    * @param resID
-    */
-	public void setLoadingImage(int resID) {
-		this.loadingImage = context.getResources().getDrawable(resID);
-	}
-	
-	/**
-	 * 描述：设置下载失败的图片.
-	 *
-	 * @param resID the new error image
-	 */
-	public void setErrorImage(int resID) {
-		this.errorImage = context.getResources().getDrawable(resID);
-	}
-
-	/**
-	 * 描述：设置未找到的图片.
-	 *
-	 * @param resID the new empty image
-	 */
-	public void setEmptyImage(int resID) {
-		this.emptyImage = context.getResources().getDrawable(resID);
-	}
-
+    
 
 	/**
 	 * 获取失效时间.
@@ -358,51 +432,64 @@ public class AbImageLoader {
 	public interface OnImageListener {
 		
 		/**
-		 * On response.
-		 *
-		 * @param bitmap the bitmap
+		 * On Empty.
+		 * @param imageView
 		 */
-		public void onResponse(Bitmap bitmap);
-	}
-
-	/**
-	 * 获得监听器.
-	 *
-	 * @return the on image listener
-	 */
-	public OnImageListener getOnImageListener() {
-		return onImageListener;
-	}
-
-
-	/**
-	 * 设置监听器.
-	 *
-	 * @param onImageListener the new on image listener
-	 */
-	public void setOnImageListener(OnImageListener onImageListener) {
-		this.onImageListener = onImageListener;
-	}
-
-	public int getDesiredWidth() {
-		return desiredWidth;
-	}
-
-
-	public void setDesiredWidth(int desiredWidth) {
-		this.desiredWidth = desiredWidth;
-	}
-
-
-	public int getDesiredHeight() {
-		return desiredHeight;
-	}
-
-
-	public void setDesiredHeight(int desiredHeight) {
-		this.desiredHeight = desiredHeight;
+		public void onEmpty(ImageView imageView);
+		
+		/**
+		 * On Loading.
+		 * @param imageView
+		 */
+		public void onLoading(ImageView imageView);
+		
+		/**
+		 * On Error.
+		 * @param imageView
+		 */
+		public void onError(ImageView imageView);
+		
+		/**
+		 * 
+		 * On response.
+		 * @param imageView
+		 * @param bitmap
+		 */
+		public void onSuccess(ImageView imageView,Bitmap bitmap);
 	}
 	
+	/**
+	 * 监听器
+	 */
+	public interface OnImageListener2 {
+		
+		/**
+		 * On Empty.
+		 * @param imageView
+		 */
+		public void onEmpty();
+		
+		/**
+		 * On Loading.
+		 * @param imageView
+		 */
+		public void onLoading();
+		
+		/**
+		 * On Error.
+		 * @param imageView
+		 */
+		public void onError();
+		
+		/**
+		 * 
+		 * On response.
+		 * @param imageView
+		 * @param bitmap
+		 */
+		public void onSuccess(Bitmap bitmap);
+	}
+
 	/**
 	 * 
 	 * 增加到最少的队列中.

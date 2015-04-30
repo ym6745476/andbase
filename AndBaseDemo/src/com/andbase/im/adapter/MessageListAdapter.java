@@ -59,11 +59,6 @@ public class MessageListAdapter extends BaseAdapter{
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setDesiredWidth(100);
-        mAbImageLoader.setDesiredHeight(100);
-        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
-        mAbImageLoader.setErrorImage(R.drawable.image_error);
-        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
     }   
     
     @Override
@@ -105,10 +100,8 @@ public class MessageListAdapter extends BaseAdapter{
           final IMMessage mMessage = (IMMessage)mData.get(position);
           holder.itemsTitle.setText(mMessage.getUserName());
           holder.itemsText.setText(mMessage.getContent());
-          //设置加载中的View
-          //mAbImageLoader.setLoadingView(convertView.findViewById(R.id.progressBar));
           //图片的下载
-          mAbImageLoader.display(holder.itemsIcon,"");
+          //mAbImageLoader.display(holder.itemsIcon,mMessage.g,100,100);
           if(mMessage.getType()==IMMessage.ADD_FRIEND_MSG){
               if(mMessage.getRequestState() == IMMessage.ALL){
                   holder.operateLayout.setVisibility(View.VISIBLE);

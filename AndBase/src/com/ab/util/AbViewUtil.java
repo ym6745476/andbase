@@ -35,8 +35,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ab.global.AbAppConfig;
-import com.ab.view.pullview.AbMultiColumnListView;
-import com.ab.view.pullview.AbPullToRefreshView;
+import com.ab.view.pullview.AbListViewFooter;
+import com.ab.view.pullview.AbListViewHeader;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -456,11 +456,11 @@ public class AbViewUtil {
      * @return
      */
     public static boolean isNeedScale(View view){
-    	if (view instanceof AbPullToRefreshView){
+    	if (view instanceof AbListViewHeader){
     		return false;
         }
     	
-    	if (view instanceof AbMultiColumnListView){
+    	if (view instanceof AbListViewFooter){
     		return false;
         }
     	return true;

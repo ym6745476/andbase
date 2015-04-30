@@ -20,9 +20,13 @@ import com.ab.global.AbAppConfig;
 public class AbSharedUtil {
 
 	private static final String SHARED_PATH = AbAppConfig.SHARED_PATH;
+	private static SharedPreferences sharedPreferences;
 
 	public static SharedPreferences getDefaultSharedPreferences(Context context) {
-		return context.getSharedPreferences(SHARED_PATH, Context.MODE_PRIVATE);
+		if(sharedPreferences==null){
+			sharedPreferences = context.getSharedPreferences(SHARED_PATH, Context.MODE_PRIVATE);
+		}
+		return sharedPreferences;
 	}
 	
 	public static void putInt(Context context,String key, int value) {
@@ -59,6 +63,13 @@ public class AbSharedUtil {
 	public static boolean getBoolean(Context context,String key,boolean defValue) {
 		SharedPreferences sharedPreferences = getDefaultSharedPreferences(context);
 		return sharedPreferences.getBoolean(key,defValue);
+	}
+	
+	public static void remove(Context context,String key) {
+		SharedPreferences sharedPreferences = getDefaultSharedPreferences(context);
+		Editor edit = sharedPreferences.edit();
+		edit.remove(key);
+		edit.commit();
 	}
 
 }

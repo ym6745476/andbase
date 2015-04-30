@@ -40,11 +40,6 @@ public class ArticleListAdapter extends BaseAdapter{
     	 mList = list;
          //图片下载器
          mAbImageLoader = AbImageLoader.getInstance(context);
-         mAbImageLoader.setDesiredWidth(200);
-         mAbImageLoader.setDesiredHeight(200);
-         mAbImageLoader.setLoadingImage(R.drawable.image_loading);
-         mAbImageLoader.setErrorImage(R.drawable.image_error);
-         mAbImageLoader.setEmptyImage(R.drawable.image_empty);
     }   
     
     @Override
@@ -90,7 +85,7 @@ public class ArticleListAdapter extends BaseAdapter{
           //设置加载中的View
           View loadingView = convertView.findViewById(R.id.progressBar);
           //图片的下载
-          mAbImageLoader.display(holder.itemsIcon,loadingView,imageUrl);
+          mAbImageLoader.display(holder.itemsIcon,loadingView,imageUrl,500,500);
           holder.itemsTitle.setText(mArticle.getTitle());
           holder.itemsText.setText(mArticle.getCreateTime());
           return convertView;

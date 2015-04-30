@@ -156,23 +156,14 @@ public abstract class AbActivity extends FragmentActivity {
 	
 	/**
 	 * 设置主标题栏高度.
-	 * @param width LayoutParams属性  和具体的大小px
 	 * @param height LayoutParams属性  和具体的大小px
 	 */
-	public void setTitleBarSize(int width,int height) {
-		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, height);
+	public void setTitleBarHeight(int height) {
+		ViewGroup.LayoutParams params = mAbTitleBar.getLayoutParams();
+		params.height = height;
 	    mAbTitleBar.setLayoutParams(params);
 	}
 
-	/**
-	 * 描述：Activity结束.
-	 *
-	 * @see android.app.Activity#finish()
-	 */
-	@Override
-	public void finish() {
-		super.finish();
-	}
 
 	/**
 	 * 描述：设置绝对定位的主标题栏覆盖到内容的上边.
@@ -334,6 +325,16 @@ public abstract class AbActivity extends FragmentActivity {
 			default:
 				break;
 		}
+	}
+	
+	/**
+	 * 描述：Activity结束.
+	 *
+	 * @see android.app.Activity#finish()
+	 */
+	@Override
+	public void finish() {
+		super.finish();
 	}
 	
 }

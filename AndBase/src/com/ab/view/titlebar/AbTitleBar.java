@@ -255,6 +255,15 @@ public class AbTitleBar extends LinearLayout {
 	}
 	
 	/**
+	 * 描述：标题文字字号.
+	 * @param unit
+	 * @param titleTextSize  文字字号
+	 */
+	public void setTitleTextSize(int unit,int titleTextSize) {
+		this.titleTextBtn.setTextSize(unit,titleTextSize);
+	}
+	
+	/**
 	 * 描述：设置标题文字对齐方式
 	 * 根据右边的具体情况判定方向：
 	 * （1）中间靠近 Gravity.CENTER,Gravity.CENTER

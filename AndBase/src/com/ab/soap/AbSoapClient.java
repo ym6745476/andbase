@@ -156,6 +156,8 @@ public class AbSoapClient {
 		} catch (Exception e) {
 			e.printStackTrace();
 			listener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE, AbAppConfig.UNTREATED_EXCEPTION, new AbAppException(AbAppConfig.UNTREATED_EXCEPTION));
+		}finally{
+			listener.sendFinishMessage();
 		}
 	}
 	

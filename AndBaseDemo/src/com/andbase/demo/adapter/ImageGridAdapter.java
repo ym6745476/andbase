@@ -57,11 +57,6 @@ public class ImageGridAdapter extends BaseAdapter{
         this.mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setDesiredWidth(100);
-        mAbImageLoader.setDesiredHeight(100);
-        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
-        mAbImageLoader.setErrorImage(R.drawable.image_error);
-        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
     } 
     
     @Override
@@ -97,7 +92,7 @@ public class ImageGridAdapter extends BaseAdapter{
           //设置加载中的View
           View loadingView = convertView.findViewById(R.id.progressBar);
           //图片的下载
-          mAbImageLoader.display(holder.itemsIcon,loadingView,imageUrl);
+          mAbImageLoader.display(holder.itemsIcon,loadingView,imageUrl,100,100);
          
           return convertView;
     }

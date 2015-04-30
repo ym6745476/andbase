@@ -56,11 +56,6 @@ public class ImageShowAdapter extends BaseAdapter {
 		this.mHeight = height;
 		//图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setDesiredWidth(this.mWidth);
-        mAbImageLoader.setDesiredHeight(this.mHeight);
-        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
-        mAbImageLoader.setErrorImage(R.drawable.image_error);
-        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
 	}
 	
 	/**
@@ -145,7 +140,7 @@ public class ImageShowAdapter extends BaseAdapter {
       		    holder.mImageView1.setImageResource(R.drawable.image_loading);
 	      		if(imagePath.indexOf("http://")!=-1){
 	      		    //图片的下载
-	                mAbImageLoader.display(holder.mImageView1,imagePath);
+	                mAbImageLoader.display(holder.mImageView1,imagePath,this.mWidth,this.mHeight);
 					
 				}else if(imagePath.indexOf("/")==-1){
 					//索引图片

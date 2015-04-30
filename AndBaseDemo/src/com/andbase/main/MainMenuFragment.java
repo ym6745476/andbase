@@ -140,16 +140,11 @@ public class MainMenuFragment extends Fragment {
 
 		// 图片的下载
 		mAbImageLoader = new AbImageLoader(mActivity);
-		mAbImageLoader.setDesiredWidth(150);
-		mAbImageLoader.setDesiredHeight(150);
 
 		initMenu();
 
 		AbAnimationUtil.playRotateAnimation(sunshineView, 2000, 5,
 				Animation.RESTART);
-
-		mAbImageLoader.setErrorImage(R.drawable.image_error);
-		mAbImageLoader.setEmptyImage(R.drawable.image_empty);
 
 		return view;
 	}
@@ -371,9 +366,7 @@ public class MainMenuFragment extends Fragment {
 
 	public void downSetPhoto(String mPhotoUrl) {
 		// 缩放图片的下载
-		mAbImageLoader.setEmptyImage(R.drawable.photo01);
-		mAbImageLoader.setErrorImage(R.drawable.photo01_error);
-		mAbImageLoader.display(mUserPhoto, mPhotoUrl);
+		mAbImageLoader.display(mUserPhoto, mPhotoUrl,150,150);
 	}
 
 	/**

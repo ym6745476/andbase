@@ -31,6 +31,15 @@ import java.util.Map;
  * @version v1.0
  */
 public class AbCacheResponse {
+	
+	/** 响应码. */
+	public final int statusCode;
+
+	/** 响应数据. */
+	public final byte[] data;
+
+	/** 响应头. */
+	public final Map<String, String> headers;
 
 	/**
 	 * 构造.
@@ -65,13 +74,6 @@ public class AbCacheResponse {
 		this(HttpStatus.SC_OK, data, headers);
 	}
 
-	/** 响应码. */
-	public final int statusCode;
-
-	/** 响应数据. */
-	public final byte[] data;
-
-	/** 响应头. */
-	public final Map<String, String> headers;
+	
 
 }

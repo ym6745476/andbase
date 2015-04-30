@@ -27,11 +27,6 @@ public class FriendAdapter extends BaseAdapter {
 		mContext = context;
 		//图片下载器
         mAbImageLoader = new AbImageLoader(mContext);
-        mAbImageLoader.setDesiredWidth(120);
-        mAbImageLoader.setDesiredHeight(120);
-        mAbImageLoader.setLoadingImage(R.drawable.image_loading);
-        mAbImageLoader.setErrorImage(R.drawable.image_error);
-        mAbImageLoader.setEmptyImage(R.drawable.image_empty);
 		
 		mList = new ArrayList<Friend>();
 		int i = page * pageSize;
@@ -74,7 +69,7 @@ public class FriendAdapter extends BaseAdapter {
 		String imageUrl = userInfo.getPhotoUrl();
 		
 		//图片的下载
-        mAbImageLoader.display(holder.itemIcon,imageUrl);
+        mAbImageLoader.display(holder.itemIcon,imageUrl,120,120);
 		
 		return convertView;
 	}
