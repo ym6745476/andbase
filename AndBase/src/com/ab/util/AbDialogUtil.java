@@ -20,6 +20,7 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -617,22 +618,29 @@ public class AbDialogUtil {
 	 * 描述：移除Fragment.
 	 * @param context the context
 	 */
-	public static void removeDialog(Context context){
-		try {
-			FragmentActivity activity = (FragmentActivity)context; 
-			FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-	        // 指定一个系统转场动画   
-	        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);  
-			Fragment prev = activity.getFragmentManager().findFragmentByTag(mDialogTag);
-			if (prev != null) {
-			    ft.remove(prev);
+	public static void removeDialog(final Context context){
+		new Handler().post(new Runnable() {
+			
+			@Override
+			public void run() {
+				try {
+					FragmentActivity activity = (FragmentActivity)context; 
+					FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
+			        // 指定一个系统转场动画   
+			        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);  
+					Fragment prev = activity.getFragmentManager().findFragmentByTag(mDialogTag);
+					if (prev != null) {
+					    ft.remove(prev);
+					}
+					ft.addToBackStack(null);
+				    ft.commit();
+				} catch (Exception e) {
+					//可能有Activity已经被销毁的异常
+					e.printStackTrace();
+				}
 			}
-			ft.addToBackStack(null);
-		    ft.commit();
-		} catch (Exception e) {
-			//可能有Activity已经被销毁的异常
-			e.printStackTrace();
-		}
+		});
+		
 	}
 	
 	/**

@@ -91,7 +91,7 @@ public class AbCacheUtil {
 			response = new AbCacheResponse(data, mapHeaders);
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
 		} finally {
 			try {
