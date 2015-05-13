@@ -55,12 +55,12 @@ public class AbTabView2 extends LinearLayout{
 		init(context);
 	}
 
-	public void updateShowText(int defaultPosition1, int defaultPosition2) {
-		if (defaultPosition1 == -1 || defaultPosition1 == -1) {
+	public void updateShowText(int groupId, int childId) {
+		if (groupId == -1 || childId == -1) {
 			return;
 		}
 		for (int i = 0; i < groups.size(); i++) {
-			if (groups.get(i).getId() == defaultPosition1) {
+			if (groups.get(i).getId() == groupId) {
 				listViewAdapter1.setSelectedPosition(i);
 				childrenItem.clear();
 				if (i < childrens.size()) {
@@ -71,12 +71,17 @@ public class AbTabView2 extends LinearLayout{
 			}
 		}
 		for (int j = 0; j < childrenItem.size(); j++) {
-			if (childrenItem.get(j).getId()==defaultPosition2) {
+			if (childrenItem.get(j).getId()==childId) {
 				listViewAdapter2.setSelectedPosition(j);
 				defaultChildrenPosition = j;
 				break;
 			}
 		}
+		
+		if (defaultChildrenPosition < childrenItem.size()){
+			showString = childrenItem.get(defaultChildrenPosition).getText();
+		}
+		
 		setDefaultSelect();
 	}
 

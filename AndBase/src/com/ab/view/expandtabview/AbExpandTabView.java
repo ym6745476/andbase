@@ -6,6 +6,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -89,6 +90,7 @@ public class AbExpandTabView extends LinearLayout implements OnDismissListener {
 			tButton.setBackgroundResource(tabSelectorResId);
 			tButton.setTextColor(Color.parseColor("#FF4C4C4C"));
 			tButton.setSingleLine(true);
+			tButton.setTextSize(TypedValue.COMPLEX_UNIT_SP,13);
 			
 			addView(tButton,new LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
 			
