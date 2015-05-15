@@ -214,5 +214,26 @@ public class AbExpandTabView extends LinearLayout implements OnDismissListener {
 		public void onClick(int selectPosition);
 	}
 
+	/**
+	 * 
+	 * 设置Tab上文字的大小.
+	 * @param size
+	 */
+	public void setTabTextSize(float size){
+		for(ToggleButton tab:mToggleButton){
+			tab.setTextSize(size);
+		}
+	}
+	
+	/**
+	 * 
+	 * 设置Tab上文字的颜色.
+	 * @param color
+	 */
+	public void setTabTextColor(int color){
+		for(ToggleButton tab:mToggleButton){
+			tab.setTextColor(color);
+		}
+	}
 }
 
