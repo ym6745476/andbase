@@ -140,7 +140,8 @@ public class AbSlidingTabView extends LinearLayout {
     }
     
     /**
-     * Instantiates a new ab sliding tab view.
+     * 如果控件的父亲是个Fragment，就不要使用xml声明，而是应该用这个方法代替，
+     * 关键是getChildFragmentManager，否则你的fragment将不能显示内容
      *
      * @param fragment the fragment
      */

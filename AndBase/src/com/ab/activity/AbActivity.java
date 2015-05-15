@@ -328,6 +328,14 @@ public abstract class AbActivity extends FragmentActivity {
 	}
 	
 	/**
+	 * 标题上的返回按钮
+	 * @param view
+	 */
+	public void back(View view){
+		finish();
+	}
+	
+	/**
 	 * 描述：Activity结束.
 	 *
 	 * @see android.app.Activity#finish()
