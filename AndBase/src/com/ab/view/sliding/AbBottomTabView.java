@@ -50,7 +50,6 @@ import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 
 import com.ab.adapter.AbFragmentPagerAdapter;
 import com.ab.util.AbAppUtil;

@@ -125,8 +125,6 @@ public abstract class AbActivity extends FragmentActivity {
 	public void setAbContentView(View contentView) {
 		contentLayout.removeAllViews();
 		contentLayout.addView(contentView,new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-		//ioc
-		initIocView();
 	}
 	
 	/**
