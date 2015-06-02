@@ -125,6 +125,7 @@ public abstract class AbActivity extends FragmentActivity {
 	public void setAbContentView(View contentView) {
 		contentLayout.removeAllViews();
 		contentLayout.addView(contentView,new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+		initIocView();
 	}
 	
 	/**
@@ -219,7 +220,6 @@ public abstract class AbActivity extends FragmentActivity {
 	public void setContentView(View view,
 			android.view.ViewGroup.LayoutParams params) {
 		super.setContentView(view, params);
-		initIocView();
 	}
 
 	/**
@@ -230,7 +230,6 @@ public abstract class AbActivity extends FragmentActivity {
 	 */
 	public void setContentView(View view) {
 		super.setContentView(view);
-		initIocView();
 	}
 	
 	/**
