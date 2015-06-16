@@ -221,7 +221,7 @@ public abstract class AbSoapListener {
 				break;
 			case FAILURE_MESSAGE:
 				content = (Object[])msg.obj;
-				if (content.length >= 2) {
+				if (content.length > 2) {
 					listener.onFailure((Integer)content[0],(String)content[1],(Throwable)content[2]);
 				}else{
 					listener.onFailure((Integer)content[0],(SoapFault)content[1]);
