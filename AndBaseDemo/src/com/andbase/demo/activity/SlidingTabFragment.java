@@ -29,14 +29,7 @@ public class SlidingTabFragment extends Fragment {
 		mAbSlidingTabView.getViewPager().setOffscreenPageLimit(5);
 		
 		//禁止滑动
-		/*mAbSlidingTabView.getViewPager().setOnTouchListener(new OnTouchListener(){
-
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				return true;
-			}
-			
-		});*/
+		mAbSlidingTabView.setSlidingEnabled(false);
 
 		FragmentLoad page1 = new FragmentLoad();
 		FragmentLoad page2 = new FragmentLoad();
