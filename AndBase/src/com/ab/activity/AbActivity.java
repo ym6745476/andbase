@@ -32,6 +32,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 
 import com.ab.global.AbActivityManager;
+import com.ab.util.AbViewUtil;
 import com.ab.view.ioc.AbIocEventListener;
 import com.ab.view.ioc.AbIocSelect;
 import com.ab.view.ioc.AbIocView;
@@ -152,17 +153,6 @@ public abstract class AbActivity extends FragmentActivity {
 	public AbBottomBar getBottomBar() {
 		return mAbBottomBar;
 	}
-	
-	/**
-	 * 设置主标题栏高度.
-	 * @param height LayoutParams属性  和具体的大小px
-	 */
-	public void setTitleBarHeight(int height) {
-		ViewGroup.LayoutParams params = mAbTitleBar.getLayoutParams();
-		params.height = height;
-	    mAbTitleBar.setLayoutParams(params);
-	}
-
 
 	/**
 	 * 描述：设置绝对定位的主标题栏覆盖到内容的上边.

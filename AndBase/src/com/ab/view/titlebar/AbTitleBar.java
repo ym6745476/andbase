@@ -25,6 +25,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -160,7 +161,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleTextBtn = new Button(context);
 		titleTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleTextBtn.setTextSize(20);
+		titleTextBtn.setTextSize(30);
 		titleTextBtn.setPadding(5, 0, 5, 0);
 		titleTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextBtn.setBackgroundDrawable(null);
@@ -169,7 +170,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleSmallTextBtn = new Button(context);
 		titleSmallTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleSmallTextBtn.setTextSize(15);
+		titleSmallTextBtn.setTextSize(20);
 		titleSmallTextBtn.setPadding(6, 0, 5, 0);
 		titleSmallTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleSmallTextBtn.setBackgroundDrawable(null);
@@ -483,6 +484,7 @@ public class AbTitleBar extends LinearLayout {
      */
 	public void addRightView(View rightView) {
 		rightLayout.setVisibility(View.VISIBLE);
+		AbViewUtil.scaleContentView((ViewGroup)rightView);
 		rightLayout.addView(rightView,layoutParamsFF);
 	}
 	
@@ -492,7 +494,9 @@ public class AbTitleBar extends LinearLayout {
      */
 	public void addRightView(int resId) {
 		rightLayout.setVisibility(View.VISIBLE);
-		rightLayout.addView(mInflater.inflate(resId, null),layoutParamsFF);
+		ViewGroup view = (ViewGroup)mInflater.inflate(resId, null);
+		AbViewUtil.scaleContentView(view);
+		rightLayout.addView(view,layoutParamsFF);
 	}
 	
 	/**
@@ -629,4 +633,13 @@ public class AbTitleBar extends LinearLayout {
 		
 	}
 	
+	/**
+	 * 设置主标题栏高度.
+	 * @param height LayoutParams属性  和具体的大小px
+	 */
+	public void setTitleBarHeight(int height) {
+		ViewGroup.LayoutParams params = this.getLayoutParams();
+		params.height = height;
+	    this.setLayoutParams(params);
+	}
 }
