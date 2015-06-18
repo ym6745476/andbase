@@ -179,11 +179,10 @@ public class AbWheelView extends View {
 	/** Current label text color. */
 	private int labelTextColor = 0xF0000000;
 	
-	//轮子的背景 底部的颜色 
-	/** The bottom gradient colors. */
+	/** 轮子的背景 底部的颜色 */
 	private int[] bottomGradientColors = new int[] { 0x333, 0xDDD, 0x333 };
-	//轮子的背景 顶部的颜色 
-	/** The top gradient colors. */
+	
+	/** 轮子的背景 顶部的颜色  */
 	private int[] topGradientColors = new int[] { 0xAAA, 0xFFF, 0xAAA };
 	
 	/** The top stroke width. */
@@ -198,17 +197,11 @@ public class AbWheelView extends View {
 	/** 标签的文字大小. */
 	private int labelTextSize = 35;
 
-	/** Top and bottom items offset. */
+	/** 单行文字的高度. */
 	private int itemOffset = valueTextSize / 5;
 	
 	/** 中间覆盖条高度. */
 	private int additionalItemHeight = 30;
-	
-	/** 屏幕宽度. */
-	private int screenWidth = 0;
-	
-	/** 屏幕高度. */
-	private int screenHeight = 0;
 	
 	/**
 	 * Constructor.
@@ -253,10 +246,6 @@ public class AbWheelView extends View {
 		gestureDetector = new GestureDetector(context, gestureListener);
 		gestureDetector.setIsLongpressEnabled(false);
 		scroller = new Scroller(context);
-		DisplayMetrics displayMetrics = new DisplayMetrics(); 
-		((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-		screenWidth = displayMetrics.widthPixels; 
-		screenHeight = displayMetrics.heightPixels; 
 	}
 
 	/**
@@ -276,7 +265,8 @@ public class AbWheelView extends View {
 	public void setAdapter(AbWheelAdapter adapter) {
 		this.adapter = adapter;
 		invalidateLayouts();
-		invalidate();// 重绘
+		// 重绘
+		invalidate();
 	}
 
 	/**
@@ -688,6 +678,7 @@ public class AbWheelView extends View {
 			recalculate = true;
 		} else {
 			width = itemsWidth + labelWidth + 2 * PADDING;
+			//有Label，添加一个间距
 			if (labelWidth > 0) {
 				width += LABEL_OFFSET;
 			}
@@ -709,18 +700,15 @@ public class AbWheelView extends View {
 			}
 			if (labelWidth > 0) {
 				//对半分后再调整下
-				int newItemsWidth = pureWidth/2;
-				int newLabelWidth = pureWidth - itemsWidth;
-				if(newItemsWidth<itemsWidth){
+				int newItemsWidth = (pureWidth+itemsWidth)/2-LABEL_OFFSET;
+				int newLabelWidth = pureWidth - newItemsWidth;
+				if(newItemsWidth < itemsWidth){
 					//放不下了,看label有空余宽度没有
-					itemsWidth = newItemsWidth + newLabelWidth-labelWidth;
+					itemsWidth = pureWidth-labelWidth;
 				}else{
 					labelWidth = newLabelWidth;
 					itemsWidth = newItemsWidth;
 				}
-				
-				
-				
 			} else {
 				// no label
 				itemsWidth = pureWidth + LABEL_OFFSET; 
@@ -829,7 +817,6 @@ public class AbWheelView extends View {
 
 		if (itemsWidth > 0) {
 			canvas.save();
-			// Skip padding space and hide a part of top and bottom items
 			canvas.translate(PADDING, -itemOffset);
 			drawItems(canvas);
 			drawValue(canvas);

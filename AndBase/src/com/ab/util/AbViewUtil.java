@@ -253,16 +253,22 @@ public class AbViewUtil {
 	public static int scaleValue(Context context, float value) {
 		DisplayMetrics mDisplayMetrics = AbAppUtil.getDisplayMetrics(context);
 		//为了兼容尺寸小密度大的情况
+		int width = mDisplayMetrics.widthPixels;
+		int height = mDisplayMetrics.heightPixels;
+		//解决横屏比例问题
+		if(width > height){
+			width = mDisplayMetrics.heightPixels;
+			height = mDisplayMetrics.widthPixels;
+		}
 		if(mDisplayMetrics.scaledDensity > AbAppConfig.UI_DENSITY){
 			//密度
-			if(mDisplayMetrics.widthPixels > AbAppConfig.UI_WIDTH){
+			if(width > AbAppConfig.UI_WIDTH){
 				value = value*(1.3f - 1.0f/mDisplayMetrics.scaledDensity);
-			}else if(mDisplayMetrics.widthPixels < AbAppConfig.UI_WIDTH){
+			}else if(width < AbAppConfig.UI_WIDTH){
 				value = value*(1.0f - 1.0f/mDisplayMetrics.scaledDensity);
 			}
 		}
-		return scale(mDisplayMetrics.widthPixels,
-				mDisplayMetrics.heightPixels, value);
+		return scale(mDisplayMetrics.widthPixels,mDisplayMetrics.heightPixels, value);
 	}
 	
 	/**
@@ -274,13 +280,7 @@ public class AbViewUtil {
 	 */
 	public static int scaleTextValue(Context context, float value) {
 		DisplayMetrics mDisplayMetrics = AbAppUtil.getDisplayMetrics(context);
-		//为了兼容尺寸小密度大的情况
-		if(mDisplayMetrics.scaledDensity > 2){
-			//缩小到密度分之一
-			//value = value*(1.1f - 1.0f/mDisplayMetrics.scaledDensity);
-		}
-		return scale(mDisplayMetrics.widthPixels,
-				mDisplayMetrics.heightPixels, value);
+		return scale(mDisplayMetrics.widthPixels,mDisplayMetrics.heightPixels, value);
 	}
 	
 	/**
@@ -297,8 +297,15 @@ public class AbViewUtil {
 		}
 		float scale = 1;
 		try {
-			float scaleWidth = (float) displayWidth / AbAppConfig.UI_WIDTH;
-			float scaleHeight = (float) displayHeight / AbAppConfig.UI_HEIGHT;
+			int width = displayWidth;
+			int height = displayHeight;
+			//解决横屏比例问题
+			if(width > height){
+				width = displayHeight;
+				height = displayWidth;
+			}
+			float scaleWidth = (float) width / AbAppConfig.UI_WIDTH;
+			float scaleHeight = (float) height / AbAppConfig.UI_HEIGHT;
 			scale = Math.min(scaleWidth, scaleHeight);
 		} catch (Exception e) {
 		}
@@ -530,7 +537,7 @@ public class AbViewUtil {
         if (widthPixels != INVALID){
             params.width = scaledWidth;
         }
-        if (heightPixels != INVALID){
+        if (heightPixels != INVALID && heightPixels!=1){
             params.height = scaledHeight;
         }
         view.setLayoutParams(params);

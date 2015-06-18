@@ -266,7 +266,7 @@ public class AbTitleBar extends LinearLayout {
 	/**
 	 * 描述：设置标题文字对齐方式
 	 * 根据右边的具体情况判定方向：
-	 * （1）中间靠近 Gravity.CENTER,Gravity.CENTER
+	 * （1）标题在中间 Gravity.CENTER,Gravity.CENTER
 	 * （2）左边居左 右边居右Gravity.LEFT,Gravity.RIGHT
 	 * （3）左边居中，右边居右Gravity.CENTER,Gravity.RIGHT
 	 * （4）左边居右，右边居右Gravity.RIGHT,Gravity.RIGHT
@@ -275,8 +275,8 @@ public class AbTitleBar extends LinearLayout {
 	 * @param gravity2  右边布局对齐方式
 	 */
 	public void setTitleBarGravity(int gravity1,int gravity2) {
-		AbViewUtil.measureView(this.rightLayout);
 		AbViewUtil.measureView(this.logoView);
+		AbViewUtil.measureView(this.rightLayout);
 		int leftWidth = this.logoView.getMeasuredWidth();
 		int rightWidth = this.rightLayout.getMeasuredWidth();
 		//if(D)Log.d(TAG, "测量布局的宽度："+leftWidth+","+rightWidth);
@@ -284,28 +284,19 @@ public class AbTitleBar extends LinearLayout {
 		this.titleTextLayoutParams.leftMargin = 0;
 		//全部中间靠
 		if((gravity1 == Gravity.CENTER_HORIZONTAL || gravity1 == Gravity.CENTER) ){
-            if(leftWidth==0 && rightWidth==0){
-            	this.titleTextLayout.setGravity(Gravity.CENTER_HORIZONTAL);
-			}else{
-				if(gravity2 == Gravity.RIGHT){
-					if(rightWidth==0){
-					}else{
-						this.titleTextBtn.setPadding(rightWidth/3*2, 0, 0, 0);
-					}
-					this.titleTextBtn.setGravity(Gravity.CENTER);
-					this.rightLayout.setHorizontalGravity(Gravity.RIGHT);
-				}if(gravity2 == Gravity.CENTER || gravity2 == Gravity.CENTER_HORIZONTAL){
-					this.titleTextLayout.setGravity(Gravity.CENTER_HORIZONTAL);
-					this.rightLayout.setHorizontalGravity(Gravity.LEFT);
-					this.titleTextBtn.setGravity(Gravity.CENTER);
-					int offset = leftWidth-rightWidth;
-					if(offset>0){
-						this.titleTextLayoutParams.rightMargin = offset;
-					}else{
-						this.titleTextLayoutParams.leftMargin = Math.abs(offset);
-					}
-				}
+            
+			this.titleTextLayout.setGravity(Gravity.CENTER_HORIZONTAL);
+			this.titleTextBtn.setGravity(Gravity.CENTER);
+			
+			if(gravity2 == Gravity.RIGHT){
+				this.rightLayout.setHorizontalGravity(Gravity.RIGHT);
+			}else if(gravity2 == Gravity.LEFT){
+				this.rightLayout.setHorizontalGravity(Gravity.LEFT);
+			}else if(gravity2 == Gravity.CENTER){
+				this.rightLayout.setHorizontalGravity(Gravity.CENTER);
 			}
+			int offset = leftWidth-rightWidth;
+			this.titleTextLayoutParams.leftMargin = -offset;
 		//左右
 		}else if(gravity1 == Gravity.LEFT && gravity2 == Gravity.RIGHT){
 			this.titleTextLayout.setGravity(Gravity.LEFT);

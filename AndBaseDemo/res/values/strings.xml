@@ -54,7 +54,8 @@
     <string name="nest_name">嵌套问题</string>
     <string name="list_pager_name">ListView与ViewPager组合</string>
     <string name="sliding_menu_pager_name">侧边栏与ViewPager组合</string>
-    <string name="scene_name">场景化UI</string>
+    <string name="design_name">DesignSupportLibrary Demo</string>
+    <string name="design_navigation_name">Navigation View</string>
     <string name="analog_clock_name">圆形挂钟</string>
     <string name="number_clock_name">数字时钟</string>
     <string name="desk_calendar_name">台历</string>

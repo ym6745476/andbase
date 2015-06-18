@@ -32,6 +32,9 @@ public class UIElementActivity extends AbActivity {
     @AbIocView(id = R.id.button6,click="btnClick")Button button6;
     @AbIocView(id = R.id.button7,click="btnClick")Button button7;
     @AbIocView(id = R.id.button8,click="btnClick")Button button8;
+    @AbIocView(id = R.id.button9,click="btnClick")Button button9;
+    @AbIocView(id = R.id.button10,click="btnClick")Button button10;
+    @AbIocView(id = R.id.button11,click="btnClick")Button button11;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,8 +91,20 @@ public class UIElementActivity extends AbActivity {
 			startActivity(intent);
 			break;
 		case R.id.button8:
-			//拍照和相册选取图片
+			//城市选择
 			intent = new Intent(UIElementActivity.this, CityListActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.button9:
+			intent = new Intent(UIElementActivity.this,AnalogClockActivity.class); 
+			startActivity(intent);
+			break;
+		case R.id.button10:
+			intent = new Intent(UIElementActivity.this,NumberClockActivity.class); 
+			startActivity(intent);
+			break;
+		case R.id.button11:
+			intent = new Intent(UIElementActivity.this,DeskCalendarActivity.class); 
 			startActivity(intent);
 			break;
 		default:

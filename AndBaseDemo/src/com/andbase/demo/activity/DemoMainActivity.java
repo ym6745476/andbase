@@ -191,8 +191,8 @@ public class DemoMainActivity extends AbActivity {
 
 		map = new HashMap<String, Object>();
 		map.put("itemsIcon", mPhotoList.get(20));
-		map.put("itemsTitle", "场景化UI");
-		map.put("itemsText", "这玩意很流行");
+		map.put("itemsTitle", "DesignSupportLibrary Demo");
+		map.put("itemsText", "官方DesignSupportLibrary的示例");
 		list.add(map);
 
 		// 使用自定义的Adapter
@@ -289,7 +289,7 @@ public class DemoMainActivity extends AbActivity {
 					startActivity(intent);
 					break;
 				case 20:
-					intent = new Intent(DemoMainActivity.this, SceneActivity.class);
+					intent = new Intent(DemoMainActivity.this, DesignSupportActivity.class);
 					startActivity(intent);
 					break;
 				default:

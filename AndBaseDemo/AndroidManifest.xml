@@ -366,7 +366,12 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.SceneActivity"
+            android:name=".demo.activity.DesignSupportActivity"
+            android:configChanges="keyboardHidden|orientation" >
+        </activity>
+        
+        <activity
+            android:name=".demo.activity.NavigationViewActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         
