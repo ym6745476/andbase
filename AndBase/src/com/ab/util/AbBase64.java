@@ -67,7 +67,6 @@ public class AbBase64 {
 
 		int end = len - 3;
 		int i = start;
-		int n = 0;
 
 		while (i <= end) {
 			int d = ((((int) data[i]) & 0x0ff) << 16)
@@ -80,11 +79,6 @@ public class AbBase64 {
 			buf.append(legalChars[d & 63]);
 
 			i += 3;
-
-			if (n++ >= 14) {
-				n = 0;
-				buf.append(" ");
-			}
 		}
 
 		if (i == start + len - 2) {

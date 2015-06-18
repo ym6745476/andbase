@@ -78,7 +78,7 @@ public class AbDes {
      */
     public static void main(String[] args) {
     	AbDes des = AbDes.newInstance("yxs!1sdf".getBytes());
-    	String a = des.encrypt("ssssss".getBytes(),"bywhjgpt");
+    	String a = des.encrypt("||||||863920023221158||9c:a9:e4:3b:a1:8a".getBytes(),"bywhjgpt");
     	System.out.println(a);
 		System.out.println(des.decrypt(a,"bywhjgpt"));
 	}
