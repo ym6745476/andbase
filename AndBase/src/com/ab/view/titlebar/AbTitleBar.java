@@ -22,6 +22,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -161,7 +162,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleTextBtn = new Button(context);
 		titleTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleTextBtn.setTextSize(30);
+		titleTextBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,35);
 		titleTextBtn.setPadding(5, 0, 5, 0);
 		titleTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextBtn.setBackgroundDrawable(null);
@@ -170,7 +171,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleSmallTextBtn = new Button(context);
 		titleSmallTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleSmallTextBtn.setTextSize(20);
+		titleSmallTextBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,25);
 		titleSmallTextBtn.setPadding(6, 0, 5, 0);
 		titleSmallTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleSmallTextBtn.setBackgroundDrawable(null);
