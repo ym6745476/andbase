@@ -366,11 +366,6 @@
         </activity>
         
         <activity
-            android:name=".demo.activity.NavigationViewActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
             android:name=".demo.activity.AnalogClockActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
