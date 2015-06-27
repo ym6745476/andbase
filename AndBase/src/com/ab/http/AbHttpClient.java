@@ -16,6 +16,7 @@
 package com.ab.http;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -64,13 +65,21 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
 import android.os.Handler;
 import android.os.Message;
 
+import com.ab.cache.AbCacheHeaderParser;
+import com.ab.cache.AbCacheResponse;
+import com.ab.cache.AbCacheUtil;
+import com.ab.cache.AbDiskBaseCache;
+import com.ab.cache.AbDiskCache.Entry;
+import com.ab.cache.http.AbHttpBaseCache;
 import com.ab.global.AbAppConfig;
 import com.ab.global.AbAppException;
 import com.ab.http.entity.MultipartEntity;
 import com.ab.http.ssl.EasySSLProtocolSocketFactory;
+import com.ab.image.AbImageLoader;
 import com.ab.task.thread.AbThreadFactory;
 import com.ab.util.AbAppUtil;
 import com.ab.util.AbFileUtil;
@@ -107,6 +116,9 @@ public class AbHttpClient {
     
     /** CookieStore. */
     private CookieStore mCookieStore;  
+    
+    /** 缓存超时时间设置. */
+    private long cacheMaxAge;
 
     /** 最大连接数. */
     private static final int DEFAULT_MAX_CONNECTIONS = 10;
@@ -155,6 +167,12 @@ public class AbHttpClient {
 	
 	/** HTTP 上下文*/
 	private HttpContext mHttpContext = null;
+	
+    /** HTTP缓存. */
+    private AbHttpBaseCache httpCache;
+	
+	 /** 磁盘缓存. */
+    private AbDiskBaseCache diskCache;
     
     /**
      * 初始化.
@@ -165,6 +183,16 @@ public class AbHttpClient {
 	    mContext = context;
 		mExecutorService =  AbThreadFactory.getExecutorService();
 		mHttpContext = new BasicHttpContext();
+		cacheMaxAge = AbAppConfig.DISK_CACHE_EXPIRES_TIME;
+    	PackageInfo info = AbAppUtil.getPackageInfo(context);
+    	File cacheDir = null;
+    	if(!AbFileUtil.isCanUseSD()){
+    		cacheDir = new File(context.getCacheDir(), info.packageName);
+		}else{
+			cacheDir = new File(AbFileUtil.getCacheDownloadDir(context));
+		}
+    	this.httpCache = AbHttpBaseCache.getInstance();
+    	this.diskCache = new AbDiskBaseCache(cacheDir);
 	}
 	
 
@@ -181,9 +209,84 @@ public class AbHttpClient {
 		mExecutorService.execute(new Runnable() { 
     		public void run() {
     			try {
+    				//放这里的目的是保证只执行一次，避免重定向后重复执行
+    				responseListener.sendStartMessage();
     				doGet(url,params,responseListener);
     			} catch (Exception e) { 
     				e.printStackTrace();
+    			}
+    		}                 
+    	});      
+	}
+	
+	/**
+	 * 描述：带参数的get请求(有缓存).
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void getWithCache(final String url,final AbRequestParams params,final AbHttpResponseListener responseListener) {
+		
+		responseListener.setHandler(new ResponderHandler(responseListener));
+		mExecutorService.execute(new Runnable() { 
+    		public void run() {
+    			try {
+    				responseListener.sendStartMessage();
+    				
+    				String httpUrl = url;
+    				//HttpGet连接对象  
+				    if(params!=null){
+					  if(url.indexOf("?")==-1){
+						  httpUrl += "?";
+					  }
+					  httpUrl += params.getParamString();
+				    }
+    				
+    				//查看本地缓存
+    				final String cacheKey = httpCache.getCacheKey(httpUrl);
+    				//看磁盘
+    				Entry entry = diskCache.get(cacheKey);
+    				if(entry == null || entry.isExpired()){
+    					AbLogUtil.i(AbImageLoader.class, "磁盘中没有缓存，或者已经过期");
+    					
+    					if(!AbAppUtil.isNetworkAvailable(mContext)){
+    					    Thread.sleep(200);
+    						responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+    				        return;
+    				    }
+    					
+    					AbCacheResponse response = AbCacheUtil.getCacheResponse(httpUrl);
+    					
+    					if(response!=null){
+    						String responseBody = new String(response.data);
+    						AbLogUtil.i(mContext, "[HTTP GET]:"+httpUrl+",result："+responseBody);
+    						Entry entryNew = AbCacheHeaderParser.parseCacheHeaders(response,cacheMaxAge);
+    						if(entryNew!=null){
+    							diskCache.put(cacheKey,entryNew);
+    							AbLogUtil.i(mContext, "HTTP 缓存成功");
+    						}else{
+    							AbLogUtil.i(AbImageLoader.class, "HTTP 缓存失败，parseCacheHeaders失败");
+    						}
+    						((AbStringHttpResponseListener)responseListener).sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, responseBody);
+    					}else{
+    						responseListener.sendFailureMessage(AbHttpStatus.SERVER_FAILURE_CODE, AbAppConfig.REMOTE_SERVICE_EXCEPTION,new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
+    					}
+    				}else{
+    					Thread.sleep(200);
+    					//磁盘中有
+    					byte [] httpData = entry.data;
+	      	            String responseBody = new String(httpData);
+	      	            ((AbStringHttpResponseListener)responseListener).sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, responseBody);
+	      	            AbLogUtil.i(mContext, "[HTTP GET CACHED]:"+httpUrl+",result："+responseBody);
+    				}
+    				
+    			}catch (Exception e) {
+    				e.printStackTrace();
+    				//发送失败消息
+    				responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+    			}finally{
+    				responseListener.sendFinishMessage();
     			}
     		}                 
     	});      
@@ -202,6 +305,7 @@ public class AbHttpClient {
 		mExecutorService.execute(new Runnable() { 
     		public void run() {
     			try {
+    				responseListener.sendStartMessage();
     				doPost(url,params,responseListener);
     			} catch (Exception e) { 
     				e.printStackTrace();
@@ -220,8 +324,6 @@ public class AbHttpClient {
 	 */
 	private void doGet(String url,AbRequestParams params,AbHttpResponseListener responseListener){
 		  try {
-			  
-			  responseListener.sendStartMessage();
 			  
 			  if(!AbAppUtil.isNetworkAvailable(mContext)){
 				    Thread.sleep(200);
@@ -243,14 +345,11 @@ public class AbHttpClient {
 			  //取得默认的HttpClient
       	      HttpClient httpClient = getHttpClient();  
 		      //取得HttpResponse
-		      String response = httpClient.execute(httpGet,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
-			  AbLogUtil.i(mContext, "[HTTP GET]:"+url+",result："+response);
+		      httpClient.execute(httpGet,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
 		} catch (Exception e) {
 			e.printStackTrace();
 			//发送失败消息
 			responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
-		}finally{
-			responseListener.sendFinishMessage();
 		}
 	}
 	
@@ -263,7 +362,6 @@ public class AbHttpClient {
 	 */
 	private void doPost(String url,AbRequestParams params,AbHttpResponseListener responseListener){
 		  try {
-			  responseListener.sendStartMessage();
 			  
 			  if(!AbAppUtil.isNetworkAvailable(mContext)){
 				    Thread.sleep(200);
@@ -287,7 +385,6 @@ public class AbHttpClient {
 			    	  isContainFile = true;
 			      }
 			  }
-		      String  response = null;
 		      //取得默认的HttpClient
 		      DefaultHttpClient httpClient = getHttpClient();  
 		      if(isContainFile){
@@ -296,16 +393,13 @@ public class AbHttpClient {
 		    	  AbLogUtil.i(mContext, "[HTTP POST]:"+url+",包含文件域!");
 		      }
 		      //取得HttpResponse
-		      response = httpClient.execute(httpPost,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
-		      AbLogUtil.i(mContext, "request："+url+",result："+response);
+		      httpClient.execute(httpPost,new RedirectionResponseHandler(url,responseListener),mHttpContext);  
 			  
 		} catch (Exception e) {
 			e.printStackTrace();
 			AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error："+e.getMessage());
 			//发送失败消息
 			responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
-		}finally{
-			responseListener.sendFinishMessage();
 		}
 	}
 	
@@ -368,7 +462,6 @@ public class AbHttpClient {
     		}                 
     	});      
 	}
-	
 	
 	/**
 	 * 描述：写入文件并回调进度.
@@ -701,7 +794,6 @@ public class AbHttpClient {
   			String responseBody = null;
             //200直接返回结果
             if (statusCode == HttpStatus.SC_OK) {
-                
                 // 不打算读取response body
                 // 调用request的abort方法  
                 // request.abort();  
@@ -721,14 +813,19 @@ public class AbHttpClient {
 	                      }
 	                      String charset = EntityUtils.getContentCharSet(entity) == null ? encode : EntityUtils.getContentCharSet(entity);
 	      	              responseBody = new String(EntityUtils.toByteArray(entity), charset);
-	  					  
+	      	              
+	      	              AbLogUtil.i(mContext, "[HTTP GET]:"+request.getURI()+",result："+responseBody);
+	      	              
 	      	              ((AbStringHttpResponseListener)mResponseListener).sendSuccessMessage(statusCode, responseBody);
+	  				      
 	  				  }else if(mResponseListener instanceof AbBinaryHttpResponseListener){
 	  					  responseBody = "Binary";
+	  					  AbLogUtil.i(mContext, "[HTTP GET]:"+request.getURI()+",result："+responseBody);
 	  					  readResponseData(entity,((AbBinaryHttpResponseListener)mResponseListener));
 	  				  }else if(mResponseListener instanceof AbFileHttpResponseListener){
 	  					  //获取文件名
 	  					  String fileName = AbFileUtil.getCacheFileNameFromUrl(mUrl, response);
+	  					  AbLogUtil.i(mContext, "[HTTP GET]:"+request.getURI()+",result："+fileName);
 	  					  writeResponseData(mContext,entity,fileName,((AbFileHttpResponseListener)mResponseListener));
 	  				  }
 	      		      //资源释放!!!
@@ -737,6 +834,9 @@ public class AbHttpClient {
 					  } catch (Exception e) {
 						  e.printStackTrace();
 					  }
+	            	  
+	            	  //完成消息
+	                  mResponseListener.sendFinishMessage();
 	      			  return responseBody;
                 }
                 
@@ -756,12 +856,19 @@ public class AbHttpClient {
             }else if(statusCode == HttpStatus.SC_NOT_FOUND){
             	//404
             	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.NOT_FOUND_EXCEPTION, new AbAppException(AbAppConfig.NOT_FOUND_EXCEPTION));
+            	//完成消息
+                mResponseListener.sendFinishMessage();
             }else if(statusCode == HttpStatus.SC_FORBIDDEN){
             	//403
             	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.FORBIDDEN_EXCEPTION, new AbAppException(AbAppConfig.FORBIDDEN_EXCEPTION));
+            	//完成消息
+                mResponseListener.sendFinishMessage();
             }else{
+            	//完成消息
+                mResponseListener.sendFinishMessage();
   				mResponseListener.sendFailureMessage(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
             }
+            
             return null;
         }
     }
@@ -877,6 +984,25 @@ public class AbHttpClient {
 
 	public void setCookieStore(CookieStore cookieStore) {
 		this.mCookieStore = cookieStore;
+	}
+	
+	/**
+	 * 
+	 * 设置缓存的最大时间.
+	 * @return
+	 */
+	public long getCacheMaxAge() {
+		return cacheMaxAge;
+	}
+
+
+	/**
+	 * 
+	 * 获取缓存的最大时间.
+	 * @param cacheMaxAge
+	 */
+	public void setCacheMaxAge(long cacheMaxAge) {
+		this.cacheMaxAge = cacheMaxAge;
 	}
 	
 }

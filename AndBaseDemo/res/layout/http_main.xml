@@ -11,6 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
         android:text="get请求" />
+    
+    <Button
+        android:id="@+id/getCacheBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="带缓存的get请求" />
 
     <Button
         android:id="@+id/postBtn"

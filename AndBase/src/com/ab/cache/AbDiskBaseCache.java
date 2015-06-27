@@ -221,7 +221,7 @@ public class AbDiskBaseCache implements AbDiskCache {
      * @param key The key to generate a file name for.
      * @return A pseudo-unique filename.
      */
-    private String getFileameForKey(String key) {
+    private String getFileNameForKey(String key) {
         int firstHalfLength = key.length() / 2;
         String localFilename = String.valueOf(key.substring(0, firstHalfLength).hashCode());
         localFilename += String.valueOf(key.substring(firstHalfLength).hashCode());
@@ -235,7 +235,7 @@ public class AbDiskBaseCache implements AbDiskCache {
      * @return the file for key
      */
     public File getFileForKey(String key) {
-        return new File(mRootDirectory, getFileameForKey(key));
+        return new File(mRootDirectory, getFileNameForKey(key));
     }
 
     /**
@@ -263,7 +263,7 @@ public class AbDiskBaseCache implements AbDiskCache {
                 mTotalSize -= e.size;
             } else {
                AbLogUtil.d(AbDiskBaseCache.class,"Could not delete cache entry for key=%s, filename=%s",
-                       e.key, getFileameForKey(e.key));
+                       e.key, getFileNameForKey(e.key));
             }
             iterator.remove();
             prunedFiles++;

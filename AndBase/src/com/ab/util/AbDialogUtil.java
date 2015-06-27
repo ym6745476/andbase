@@ -46,31 +46,17 @@ import com.ab.fragment.AbSampleDialogFragment;
 
 public class AbDialogUtil {
 	
-	/** dialog tag*/
-	private static String mDialogTag = "dialog";
+	/** dialog 标记*/
+	public static String dialogTag = "dialog";
+	
+	public static int ThemeHoloLightDialog = android.R.style.Theme_Holo_Light_Dialog;
+	
+	public static int ThemeLightPanel = android.R.style.Theme_Light_Panel;
+	
+	private static int defaultStyle = ThemeHoloLightDialog;
 	
 	/**
-	 * 全屏显示一个对话框不影响下面的View的点击
-	 * @param view
-	 * @return
-	 */
-	public static AbSampleDialogFragment showTipsDialog(View view) {
-		FragmentActivity activity = (FragmentActivity)view.getContext();
-        // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light);
-        newFragment.setContentView(view);
-        
-        FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-        // 作为全屏显示,使用“content”作为fragment容器的基本视图,这始终是Activity的基本视图  
-        ft.add(android.R.id.content, newFragment, mDialogTag).addToBackStack(null).commit(); 
-        
-        return newFragment;
-    }
-	
-	/**
-	 * 全屏显示一个对话框
+	 * 全屏显示一个对话框.
 	 * @param view
 	 * @return
 	 */
@@ -82,109 +68,109 @@ public class AbDialogUtil {
         FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画 
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-        newFragment.show(ft, mDialogTag);
+        newFragment.show(ft, dialogTag);
         return newFragment;
     }
 	
+	
 	/**
-	 * 显示一个自定义的对话框(有背景层)
+	 * 显示一个隐藏的的对话框.
+	 * @param view
+	 */
+	public static void showDialog(Context context,DialogFragment fragment) {
+		FragmentActivity activity = (FragmentActivity)context;
+		fragment.show(activity.getFragmentManager(), dialogTag);
+    }
+	
+	
+	/**
+	 * 显示一个自定义的对话框.
 	 * @param view
 	 */
 	public static AbSampleDialogFragment showDialog(View view) {
         return showDialog(view,Gravity.CENTER);
     }
 	
+	
 	/**
 	 * 
-	 * 描述：显示一个自定义的对话框(有背景层).
+	 * 描述：显示一个自定义的对话框.
 	 * @param view
 	 * @param gravity 位置
 	 * @return
 	 */
 	public static AbSampleDialogFragment showDialog(View view,int gravity) {
+		return showDialog(view,gravity,defaultStyle);
+    }
+	
+	/**
+	 * 
+	 * 描述：显示一个自定义的对话框.
+	 * @param view
+	 * @param gravity 位置
+	 * @param style
+	 * @return
+	 */
+	public static AbSampleDialogFragment showDialog(View view,int gravity,int style) {
 		FragmentActivity activity = (FragmentActivity)view.getContext();
         // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog,gravity);
+        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style,gravity);
         newFragment.setContentView(view);
         
         FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-        newFragment.show(ft, mDialogTag);
+        newFragment.show(ft, dialogTag);
         
         return newFragment;
     }
 	
-	/**
-	 * 显示一个自定义的对话框(有背景层)
-	 * @param view
-	 * @param animEnter
-	 * @param animExit
-	 * @param animPopEnter
-	 * @param animPopExit
-	 * @return
-	 */
-	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit) {
-        return showDialog(view,animEnter,animExit,animPopEnter,animPopExit,Gravity.CENTER);
-    }
 	
 	/**
-	 * 
-	 * 描述：显示一个自定义的对话框(有背景层).
-	 * @param view
-	 * @param animEnter
-	 * @param animExit
-	 * @param animPopEnter
-	 * @param animPopExit
-	 * @param gravity 位置
-	 * @return
-	 */
-	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,int gravity) {
-		FragmentActivity activity = (FragmentActivity)view.getContext();
-        // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog,gravity);
-        newFragment.setContentView(view);
-        //自定义转场动画
-        FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        ft.setCustomAnimations(animEnter,animExit,animPopEnter,animPopExit);
-        newFragment.show(ft, mDialogTag);
-        return newFragment;
-    }
-	
-	/**
-	 * 显示一个自定义的对话框(有背景层)
+	 * 显示一个自定义的对话框
 	 * @param view
 	 * @param onCancelListener
 	 * @return
 	 */
 	public static AbSampleDialogFragment showDialog(View view,DialogInterface.OnCancelListener onCancelListener) {
-        return showDialog(view,Gravity.CENTER,onCancelListener);
+        return showDialog(view,Gravity.CENTER,defaultStyle,onCancelListener);
+    }
+	
+	/**
+	 * 显示一个自定义的对话框
+	 * @param view
+	 * @param onCancelListener
+	 * @return
+	 */
+	public static AbSampleDialogFragment showDialog(View view,int style,DialogInterface.OnCancelListener onCancelListener) {
+        return showDialog(view,Gravity.CENTER,style,onCancelListener);
     }
 	
 	/**
 	 * 
-	 * 描述：显示一个自定义的对话框(有背景层).
+	 * 描述：显示一个自定义的对话框.
 	 * @param view
 	 * @param gravity 位置
+	 * @param style
 	 * @param onCancelListener　取消事件
 	 * @return
 	 */
-	public static AbSampleDialogFragment showDialog(View view,int gravity,DialogInterface.OnCancelListener onCancelListener) {
+	public static AbSampleDialogFragment showDialog(View view,int gravity,int style,DialogInterface.OnCancelListener onCancelListener) {
 		FragmentActivity activity = (FragmentActivity)view.getContext();
         // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog,gravity);
+        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style,gravity);
         newFragment.setContentView(view);
         FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画  
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
         newFragment.setOnCancelListener(onCancelListener);
-        newFragment.show(ft, mDialogTag);
+        newFragment.show(ft, dialogTag);
         return newFragment;
     }
 	
 	/**
 	 * 
-	 * 描述：显示一个自定义的对话框(有背景层).
+	 * 描述：显示一个自定义的对话框.
 	 * @param view
 	 * @param animEnter
 	 * @param animExit
@@ -194,12 +180,27 @@ public class AbDialogUtil {
 	 * @return
 	 */
 	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,DialogInterface.OnCancelListener onCancelListener) {
-        return showDialog(view,animEnter,animExit,animPopEnter,animPopExit,Gravity.CENTER,onCancelListener);
+        return showDialog(view,animEnter,animExit,animPopEnter,animPopExit,Gravity.CENTER,defaultStyle,onCancelListener);
     }
 	
 	/**
 	 * 
-	 * 描述：显示一个自定义的对话框(有背景层).
+	 * 描述：显示一个自定义的对话框.
+	 * @param view
+	 * @param animEnter
+	 * @param animExit
+	 * @param animPopEnter
+	 * @param animPopExit
+	 * @param onCancelListener
+	 * @return
+	 */
+	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,int style,DialogInterface.OnCancelListener onCancelListener) {
+        return showDialog(view,animEnter,animExit,animPopEnter,animPopExit,Gravity.CENTER,style,onCancelListener);
+    }
+	
+	/**
+	 * 
+	 * 描述：显示一个自定义的对话框.
 	 * @param view
 	 * @param animEnter
 	 * @param animExit
@@ -209,71 +210,64 @@ public class AbDialogUtil {
 	 * @param onCancelListener
 	 * @return
 	 */
-	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,int gravity,DialogInterface.OnCancelListener onCancelListener) {
+	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,int gravity,int style,DialogInterface.OnCancelListener onCancelListener) {
 		FragmentActivity activity = (FragmentActivity)view.getContext();
         // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog,gravity);
+        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style,gravity);
         newFragment.setContentView(view);
         FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         ft.setCustomAnimations(animEnter,animExit,animPopEnter,animPopExit);
         newFragment.setOnCancelListener(onCancelListener);
-        newFragment.show(ft, mDialogTag);
+        newFragment.show(ft, dialogTag);
         return newFragment;
     }
 	
 	/**
-	 * 显示一个自定义的对话框(无背景层)
+	 * 显示一个自定义的对话框.
 	 * @param view
+	 * @param animEnter
+	 * @param animExit
+	 * @param animPopEnter
+	 * @param animPopExit
+	 * @return
 	 */
-	public static AbSampleDialogFragment showPanel(View view) {
-        return showPanel(view,Gravity.CENTER);
+	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit) {
+        return showDialog(view,animEnter,animExit,animPopEnter,animPopExit,Gravity.CENTER,defaultStyle);
+    }
+	
+	/**
+	 * 显示一个自定义的对话框.
+	 * @param view
+	 * @param animEnter
+	 * @param animExit
+	 * @param animPopEnter
+	 * @param animPopExit
+	 * @return
+	 */
+	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,int style) {
+        return showDialog(view,animEnter,animExit,animPopEnter,animPopExit,Gravity.CENTER,style);
     }
 	
 	/**
 	 * 
-	 * 描述：显示一个自定义的对话框(无背景层).
+	 * 描述：显示一个自定义的对话框.
 	 * @param view
-	 * @param gravity
+	 * @param animEnter
+	 * @param animExit
+	 * @param animPopEnter
+	 * @param animPopExit
+	 * @param gravity 位置
 	 * @return
 	 */
-	public static AbSampleDialogFragment showPanel(View view,int gravity) {
+	public static AbSampleDialogFragment showDialog(View view,int animEnter, int animExit, int animPopEnter, int animPopExit,int gravity,int style) {
 		FragmentActivity activity = (FragmentActivity)view.getContext();
         // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Light_Panel,gravity);
+        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style,gravity);
         newFragment.setContentView(view);
+        //自定义转场动画
         FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-        newFragment.show(ft, mDialogTag);
-        return newFragment;
-    }
-	
-	/**
-	 * 显示一个自定义的对话框(无背景层)
-	 * @param view
-	 * @param onCancelListener
-	 * @return
-	 */
-	public static AbSampleDialogFragment showPanel(View view,DialogInterface.OnCancelListener onCancelListener) {
-        return showPanel(view,Gravity.CENTER,onCancelListener);
-    }
-	
-	/**
-	 * 显示一个自定义的对话框(无背景层)
-	 * @param view
-	 * @param onCancelListener
-	 * @return
-	 */
-	public static AbSampleDialogFragment showPanel(View view,int gravity,DialogInterface.OnCancelListener onCancelListener) {
-		FragmentActivity activity = (FragmentActivity)view.getContext();
-        // Create and show the dialog.
-        AbSampleDialogFragment newFragment = AbSampleDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Light_Panel,gravity);
-        newFragment.setContentView(view);
-        FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-        newFragment.setOnCancelListener(onCancelListener);
-        newFragment.show(ft, mDialogTag);
+        ft.setCustomAnimations(animEnter,animExit,animPopEnter,animPopExit);
+        newFragment.show(ft, dialogTag);
         return newFragment;
     }
 	
@@ -291,7 +285,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
 	    // 指定一个系统转场动画   
 	    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -309,7 +303,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -327,7 +321,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -341,7 +335,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -356,7 +350,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -372,7 +366,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -389,7 +383,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -404,7 +398,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -420,7 +414,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -436,7 +430,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
 	}
 	
@@ -453,7 +447,7 @@ public class AbDialogUtil {
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
     }
 	
@@ -464,15 +458,7 @@ public class AbDialogUtil {
 	 * @param message the message
 	 */
 	public static AbLoadDialogFragment showLoadDialog(Context context,int indeterminateDrawable,String message) {
-		FragmentActivity activity = (FragmentActivity)context; 
-		AbLoadDialogFragment newFragment = AbLoadDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog);
-		newFragment.setIndeterminateDrawable(indeterminateDrawable);
-		newFragment.setMessage(message);
-		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-	    newFragment.show(ft, mDialogTag);
-	    return newFragment;
+		return showLoadDialog(context,indeterminateDrawable,message,defaultStyle);
     }
 	
 	/**
@@ -482,16 +468,7 @@ public class AbDialogUtil {
 	 * @param message the message
 	 */
 	public static AbLoadDialogFragment showLoadDialog(Context context,int indeterminateDrawable,String message,AbDialogOnLoadListener abDialogOnLoadListener) {
-		FragmentActivity activity = (FragmentActivity)context; 
-		AbLoadDialogFragment newFragment = AbLoadDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog);
-		newFragment.setIndeterminateDrawable(indeterminateDrawable);
-		newFragment.setMessage(message);
-		newFragment.setAbDialogOnLoadListener(abDialogOnLoadListener);
-		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-	    newFragment.show(ft, mDialogTag);
-	    return newFragment;
+	    return showLoadDialog(context,indeterminateDrawable,message,defaultStyle,abDialogOnLoadListener);
     }
 	
 	/**
@@ -499,16 +476,17 @@ public class AbDialogUtil {
 	 * @param context the context
 	 * @param indeterminateDrawable
 	 * @param message the message
+	 * @param style
 	 */
-	public static AbLoadDialogFragment showLoadPanel(Context context,int indeterminateDrawable,String message) {
+	public static AbLoadDialogFragment showLoadDialog(Context context,int indeterminateDrawable,String message,int style) {
 		FragmentActivity activity = (FragmentActivity)context; 
-		AbLoadDialogFragment newFragment = AbLoadDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Light_Panel);
+		AbLoadDialogFragment newFragment = AbLoadDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style);
 		newFragment.setIndeterminateDrawable(indeterminateDrawable);
 		newFragment.setMessage(message);
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-	    newFragment.show(ft, mDialogTag);
+	    newFragment.show(ft, dialogTag);
 	    return newFragment;
     }
 	
@@ -517,18 +495,19 @@ public class AbDialogUtil {
 	 * @param context the context
 	 * @param indeterminateDrawable
 	 * @param message the message
+	 * @param style
 	 * @param abDialogOnRefreshListener
 	 */
-	public static AbLoadDialogFragment showLoadPanel(Context context,int indeterminateDrawable,String message,AbDialogOnLoadListener abDialogOnLoadListener) {
+	public static AbLoadDialogFragment showLoadDialog(Context context,int indeterminateDrawable,String message,int style,AbDialogOnLoadListener abDialogOnLoadListener) {
 		FragmentActivity activity = (FragmentActivity)context; 
-		AbLoadDialogFragment newFragment = AbLoadDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Light_Panel);
+		AbLoadDialogFragment newFragment = AbLoadDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style);
 		newFragment.setIndeterminateDrawable(indeterminateDrawable);
 		newFragment.setMessage(message);
 		newFragment.setAbDialogOnLoadListener(abDialogOnLoadListener);
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-	    newFragment.show(ft, mDialogTag);
+	    newFragment.show(ft, dialogTag);
 	    return newFragment;
     }
 	
@@ -540,16 +519,7 @@ public class AbDialogUtil {
 	 * @param abDialogOnRefreshListener
 	 */
 	public static AbRefreshDialogFragment showRefreshDialog(Context context,int indeterminateDrawable,String message) {
-		FragmentActivity activity = (FragmentActivity)context; 
-		AbRefreshDialogFragment newFragment = AbRefreshDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog);
-		newFragment.setIndeterminateDrawable(indeterminateDrawable);
-		newFragment.setMessage(message);
-		newFragment.setAbDialogOnLoadListener(null);
-		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-	    newFragment.show(ft, mDialogTag);
-	    return newFragment;
+		return showRefreshDialog(context,indeterminateDrawable,message,defaultStyle);
     }
 	
 	/**
@@ -561,16 +531,7 @@ public class AbDialogUtil {
 	 * @return
 	 */
 	public static AbRefreshDialogFragment showRefreshDialog(Context context,int indeterminateDrawable,String message,AbDialogOnLoadListener abDialogOnLoadListener) {
-		FragmentActivity activity = (FragmentActivity)context; 
-		AbRefreshDialogFragment newFragment = AbRefreshDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Holo_Light_Dialog);
-		newFragment.setIndeterminateDrawable(indeterminateDrawable);
-		newFragment.setMessage(message);
-		newFragment.setAbDialogOnLoadListener(abDialogOnLoadListener);
-		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-        // 指定一个系统转场动画   
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
-	    return newFragment;
+		return showRefreshDialog(context,indeterminateDrawable,message,defaultStyle,abDialogOnLoadListener);
     }
 	
 	/**
@@ -578,17 +539,18 @@ public class AbDialogUtil {
 	 * @param context the context
 	 * @param indeterminateDrawable
 	 * @param message the message
+	 * @param style
 	 */
-	public static AbRefreshDialogFragment showRefreshPanel(Context context,int indeterminateDrawable,String message) {
+	public static AbRefreshDialogFragment showRefreshDialog(Context context,int indeterminateDrawable,String message,int style) {
 		FragmentActivity activity = (FragmentActivity)context; 
-		AbRefreshDialogFragment newFragment = AbRefreshDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Light_Panel);
+		AbRefreshDialogFragment newFragment = AbRefreshDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style);
 		newFragment.setIndeterminateDrawable(indeterminateDrawable);
 		newFragment.setMessage(message);
 		newFragment.setAbDialogOnLoadListener(null);
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
     }
 	
@@ -597,19 +559,20 @@ public class AbDialogUtil {
 	 * @param context
 	 * @param indeterminateDrawable
 	 * @param message
+	 * @param style
 	 * @param abDialogOnRefreshListener
 	 * @return
 	 */
-	public static AbRefreshDialogFragment showRefreshPanel(Context context,int indeterminateDrawable,String message,AbDialogOnLoadListener abDialogOnLoadListener) {
+	public static AbRefreshDialogFragment showRefreshDialog(Context context,int indeterminateDrawable,String message,int style,AbDialogOnLoadListener abDialogOnLoadListener) {
 		FragmentActivity activity = (FragmentActivity)context; 
-		AbRefreshDialogFragment newFragment = AbRefreshDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,android.R.style.Theme_Light_Panel);
+		AbRefreshDialogFragment newFragment = AbRefreshDialogFragment.newInstance(DialogFragment.STYLE_NO_TITLE,style);
 		newFragment.setIndeterminateDrawable(indeterminateDrawable);
 		newFragment.setMessage(message);
 		newFragment.setAbDialogOnLoadListener(abDialogOnLoadListener);
 		FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
         // 指定一个系统转场动画   
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);  
-		newFragment.show(ft, mDialogTag);
+		newFragment.show(ft, dialogTag);
 	    return newFragment;
     }
 	
@@ -619,28 +582,21 @@ public class AbDialogUtil {
 	 * @param context the context
 	 */
 	public static void removeDialog(final Context context){
-		new Handler().post(new Runnable() {
-			
-			@Override
-			public void run() {
-				try {
-					FragmentActivity activity = (FragmentActivity)context; 
-					FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
-			        // 指定一个系统转场动画   
-			        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);  
-					Fragment prev = activity.getFragmentManager().findFragmentByTag(mDialogTag);
-					if (prev != null) {
-					    ft.remove(prev);
-					}
-					ft.addToBackStack(null);
-				    ft.commit();
-				} catch (Exception e) {
-					//可能有Activity已经被销毁的异常
-					e.printStackTrace();
-				}
+		try {
+			FragmentActivity activity = (FragmentActivity)context; 
+			FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
+	        // 指定一个系统转场动画   
+	        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);  
+			Fragment prev = activity.getFragmentManager().findFragmentByTag(dialogTag);
+			if (prev != null) {
+			    ft.remove(prev);
 			}
-		});
-		
+			ft.addToBackStack(null);
+		    ft.commit();
+		} catch (Exception e) {
+			//可能有Activity已经被销毁的异常
+			e.printStackTrace();
+		}
 	}
 	
 	/**

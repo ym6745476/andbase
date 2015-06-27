@@ -46,7 +46,7 @@ public class AbCacheUtil {
 	 * @param expiresTime the expires time
 	 * @return the cache response
 	 */
-	public static AbCacheResponse getCacheResponse(String url,int expiresTime){
+	public static AbCacheResponse getCacheResponse(String url){
 		URLConnection con = null;
 		InputStream is = null;
 		AbCacheResponse response = null;
@@ -69,11 +69,6 @@ public class AbCacheUtil {
 				mapHeaders.put(key, values.get(0));
 				
 		    }  
-			
-			//强制缓存
-			if(!mapHeaders.containsKey("Cache-Control")){
-				mapHeaders.put("Cache-Control", "max-age="+expiresTime);
-			}
 			
 			/*key = null and value = [HTTP/1.1 200 OK]
 		    key = Accept-Ranges and value = [bytes]

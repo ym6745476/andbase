@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.andbase"
-    android:versionCode="19"
-    android:versionName="1.6.2">
+    android:versionCode="20"
+    android:versionName="1.6.3">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -362,11 +362,6 @@
         
         <activity
             android:name=".demo.activity.SlidingMenuNestViewPagerActivity"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
-        
-        <activity
-            android:name=".demo.activity.DesignSupportActivity"
             android:configChanges="keyboardHidden|orientation" >
         </activity>
         

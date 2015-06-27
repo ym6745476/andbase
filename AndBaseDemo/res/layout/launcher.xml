@@ -1,48 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/launch"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/app_bg" >
+    android:id="@+id/launcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:gravity="center_horizontal" >
+
+    <LinearLayout
+        android:id="@+id/launcherView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="180px"
+            android:text="@string/app_name"
+            android:textColor="@color/orange"
+            android:textSize="45px" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_gravity="center"
+            android:paddingTop="10px"
+            android:text="AndBase开发框架"
+            android:textColor="@color/gray"
+            android:textSize="35px" />
+    </LinearLayout>
 
     <ImageView
-        android:id="@+id/launchImage"
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@drawable/ic_launcher"
-        android:scaleType="fitXY" />
+        android:src="@drawable/ic_launcher" />
 
-    <RelativeLayout
-        android:id="@+id/launchBottom"
+    <TextView
+        android:id="@+id/version"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@+id/imageView1"
+        android:gravity="center"
+        android:paddingTop="10px"
+        android:text="V1.0"
+        android:textColor="@color/gray_dark"
+        android:textSize="40px" />
 
-        <TextView
-            android:id="@+id/bottomText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:shadowColor="@color/gray"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="1"
-            android:text="@string/app_name"
-            android:textColor="@color/gray_dark"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/bottomText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/bottomText1"
-            android:layout_centerHorizontal="true"
-            android:paddingTop="10dip"
-            android:text="@string/copyright"
-            android:textColor="@color/gray_dark"
-            android:textSize="18sp" />
-    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="5px"
+        android:text="@string/copyright"
+        android:textColor="@color/gray"
+        android:textSize="25px" />
 
 </RelativeLayout>

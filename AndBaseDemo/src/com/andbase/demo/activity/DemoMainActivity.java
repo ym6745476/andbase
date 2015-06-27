@@ -189,12 +189,6 @@ public class DemoMainActivity extends AbActivity {
 		map.put("itemsText", "各种滑动嵌套问题的解决例子");
 		list.add(map);
 
-		map = new HashMap<String, Object>();
-		map.put("itemsIcon", mPhotoList.get(20));
-		map.put("itemsTitle", "DesignSupportLibrary Demo");
-		map.put("itemsText", "官方DesignSupportLibrary的示例");
-		list.add(map);
-
 		// 使用自定义的Adapter
 		myListViewAdapter = new MyListViewAdapter(DemoMainActivity.this, list,
 				R.layout.item_list, new String[] { "itemsIcon", "itemsTitle",
@@ -286,10 +280,6 @@ public class DemoMainActivity extends AbActivity {
 					break;
 				case 19:
 					intent = new Intent(DemoMainActivity.this, NestScrollActivity.class);
-					startActivity(intent);
-					break;
-				case 20:
-					intent = new Intent(DemoMainActivity.this, DesignSupportActivity.class);
 					startActivity(intent);
 					break;
 				default:

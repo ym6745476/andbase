@@ -1,102 +1,114 @@
 package com.andbase.main;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.ab.activity.AbActivity;
+import com.ab.util.AbAppUtil;
+import com.ab.util.AbViewUtil;
 import com.andbase.R;
 
 
-public class LauncherActivity extends Activity {
+public class LauncherActivity extends AbActivity {
 	
-	private RelativeLayout mLaunchLayout;
+	private LinearLayout launcherView;
 	private Animation mFadeIn;
 	private Animation mFadeInScale;
-	private Animation mFadeOut;
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.launcher);
-		mLaunchLayout = (RelativeLayout) findViewById(R.id.launch);
+		setAbContentView(R.layout.launcher);
+
+		launcherView = (LinearLayout) this.findViewById(R.id.launcherView);
+		AbViewUtil.scaleContentView(launcherView);
+		// Font path
+		String fontPath1 = "fonts/jianxiqian.ttf";
+		String fontPath2 = "fonts/jianchilun.ttf";
+		TextView title1 = (TextView) findViewById(R.id.textView1);
+		Typeface tf = Typeface.createFromAsset(getAssets(), fontPath2);
+		title1.setTypeface(tf);
+
+		TextView title2 = (TextView) findViewById(R.id.textView2);
+		Typeface tf2 = Typeface.createFromAsset(getAssets(), fontPath1);
+		title2.setTypeface(tf2);
+		
+		
+		TextView version = (TextView) findViewById(R.id.version);
+		version.setTypeface(tf2);
+		
+		PackageInfo packageInfo = AbAppUtil.getPackageInfo(this);
+		version.setText("V"+packageInfo.versionName);
+
 		init();
 		setListener();
 	}
 
 	private void setListener() {
-		
-		/**
-		 * 动画切换原理:开始时是用第一个渐现动画,当第一个动画结束时开始第二个放大动画,当第二个动画结束时调用第三个渐隐动画,
-		 * 第三个动画结束时修改显示的内容并且重新调用第一个动画,从而达到循环效果
-		 */
+
 		mFadeIn.setAnimationListener(new AnimationListener() {
 
+			@Override
 			public void onAnimationStart(Animation animation) {
 
 			}
 
+			@Override
 			public void onAnimationRepeat(Animation animation) {
 
 			}
 
+			@Override
 			public void onAnimationEnd(Animation animation) {
-				mLaunchLayout.startAnimation(mFadeInScale);
-			}
-		});
-		mFadeInScale.setAnimationListener(new AnimationListener() {
-
-			public void onAnimationStart(Animation animation) {
-
-			}
-
-			public void onAnimationRepeat(Animation animation) {
-
-			}
-
-			public void onAnimationEnd(Animation animation) {
-				mLaunchLayout.startAnimation(mFadeOut);
+				launcherView.startAnimation(mFadeInScale);
 			}
 		});
 		
-		mFadeOut.setAnimationListener(new AnimationListener() {
+		mFadeInScale.setAnimationListener(new AnimationListener() {
 
+			@Override
 			public void onAnimationStart(Animation animation) {
+
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+
+			}
+
+			@Override
+			public void onAnimationEnd(Animation animation) {
 				Intent intent = new Intent();
 				intent.setClass(LauncherActivity.this, MainActivity.class);
 				startActivity(intent);
 				finish();
 			}
-
-			public void onAnimationRepeat(Animation animation) {
-
-			}
-
-			public void onAnimationEnd(Animation animation) {
-				
-			}
 		});
-		
 
 	}
 
 	private void init() {
 		initAnim();
-		mLaunchLayout.startAnimation(mFadeIn);
+		launcherView.startAnimation(mFadeIn);
 	}
 
 	private void initAnim() {
-		mFadeIn = AnimationUtils.loadAnimation(LauncherActivity.this,R.anim.welcome_fade_in);
+		mFadeIn = AnimationUtils.loadAnimation(LauncherActivity.this,
+				R.anim.welcome_fade_in);
 		mFadeIn.setDuration(500);
-		mFadeInScale = AnimationUtils.loadAnimation(LauncherActivity.this,R.anim.welcome_fade_in_scale);
-		mFadeInScale.setDuration(1000);
-		mFadeOut = AnimationUtils.loadAnimation(LauncherActivity.this,R.anim.welcome_fade_out);
-		mFadeOut.setDuration(500);
+		mFadeIn.setFillAfter(true);
+		
+		mFadeInScale = AnimationUtils.loadAnimation(LauncherActivity.this,
+				R.anim.welcome_fade_in_scale);
+		mFadeInScale.setDuration(800);
+		mFadeInScale.setFillAfter(true);
 	}
 
 }

@@ -17,6 +17,8 @@ package com.ab.http;
 
 import android.content.Context;
 
+import com.ab.global.AbAppConfig;
+
 // TODO: Auto-generated Javadoc
 /**
  * © 2012 amsoft.cn
@@ -34,6 +36,7 @@ public class AbHttpUtil {
 	
 	/** 工具类单例. */
 	private static AbHttpUtil mAbHttpUtil = null;
+	
 	
 	/**
 	 * 描述：获取实例.
@@ -102,6 +105,51 @@ public class AbHttpUtil {
 	public void get(String url, AbRequestParams params,
 			AbFileHttpResponseListener responseListener) {
 		mClient.get(url, params, responseListener);
+	}
+	
+	/**
+	 * 描述：无参数的get请求.
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
+	 */
+	public void getWithCache(String url, AbHttpResponseListener responseListener) {
+		mClient.getWithCache(url,null,responseListener);
+	}
+	
+	/**
+	 * 描述：带参数的get请求.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void getWithCache(String url, AbRequestParams params,
+			AbHttpResponseListener responseListener) {
+		mClient.getWithCache(url, params, responseListener);
+	}
+	
+	/**
+	 *  
+	 * 描述：下载数据使用，会返回byte数据(下载文件或图片).
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
+	 */
+	public void getWithCache(String url, AbBinaryHttpResponseListener responseListener) {
+		mClient.getWithCache(url,null,responseListener);
+	}
+	
+	/**
+	 * 描述：文件下载的get.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void getWithCache(String url, AbRequestParams params,
+			AbFileHttpResponseListener responseListener) {
+		mClient.getWithCache(url, params, responseListener);
 	}
 	
 	/**
@@ -203,5 +251,23 @@ public class AbHttpUtil {
 	    }
 	}
 	
+	/**
+	 * 
+	 * 设置缓存的最大时间.
+	 * @return
+	 */
+	public long getCacheMaxAge() {
+		return mClient.getCacheMaxAge();
+	}
+
+
+	/**
+	 * 
+	 * 获取缓存的最大时间.
+	 * @param cacheMaxAge
+	 */
+	public void setCacheMaxAge(long cacheMaxAge) {
+		mClient.setCacheMaxAge(cacheMaxAge);
+	}
 	
 }

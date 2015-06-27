@@ -1,17 +1,16 @@
 package com.andbase.demo.activity;
 
 import java.io.File;
-import java.net.URLEncoder;
-
-import org.apache.http.protocol.HTTP;
 
 import android.app.DialogFragment;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -70,6 +69,8 @@ public class HttpActivity extends AbActivity {
 	    
         application = (MyApplication)abApplication;
         Button getBtn  = (Button)this.findViewById(R.id.getBtn);
+        Button getCacheBtn  = (Button)this.findViewById(R.id.getCacheBtn);
+        
         Button postBtn  = (Button)this.findViewById(R.id.postBtn);
         Button byteBtn  = (Button)this.findViewById(R.id.byteBtn);
         Button fileDownBtn  = (Button)this.findViewById(R.id.fileBtn);
@@ -78,6 +79,7 @@ public class HttpActivity extends AbActivity {
         //获取Http工具类
         mAbHttpUtil = AbHttpUtil.getInstance(this);
         mAbHttpUtil.setTimeout(10000);
+        
         //get请求
         getBtn.setOnClickListener(new View.OnClickListener() {
 			
@@ -85,26 +87,26 @@ public class HttpActivity extends AbActivity {
 			public void onClick(View v) {
 				
 				// 一个url地址
-				String urlString = "http://192.168.1.124:8080/CenterServer/identifyCode.do?phone=15150509567"; 
+				String url = "http://www.baidu.com"; 
 				
-				mAbHttpUtil.get(urlString, new AbStringHttpResponseListener() {
+				mAbHttpUtil.get(url, new AbStringHttpResponseListener() {
 					
 					//获取数据成功会调用这里
 		        	@Override
 					public void onSuccess(int statusCode, String content) {
 		        		Log.d(TAG, "onSuccess");
 		        		
+		        		AbDialogUtil.removeDialog(HttpActivity.this);
+		        		
 		        		AbDialogUtil.showAlertDialog(HttpActivity.this,"返回结果",content.trim(),new AbDialogOnClickListener(){
 
 							@Override
 							public void onNegativeClick() {
-								// TODO Auto-generated method stub
 								
 							}
 
 							@Override
 							public void onPositiveClick() {
-								// TODO Auto-generated method stub
 								
 							}
 							
@@ -115,8 +117,8 @@ public class HttpActivity extends AbActivity {
 		            @Override
 					public void onFailure(int statusCode, String content,
 							Throwable error) {
-		            	
 		            	Log.d(TAG, "onFailure");
+		            	AbDialogUtil.removeDialog(HttpActivity.this);
 		            	AbToastUtil.showToast(HttpActivity.this,error.getMessage());
 					}
 
@@ -133,12 +135,69 @@ public class HttpActivity extends AbActivity {
 		            @Override
 		            public void onFinish() { 
 		            	Log.d(TAG, "onFinish");
-		            	//移除进度框
-		            	AbDialogUtil.removeDialog(HttpActivity.this);
 		            };
 		            
 		        });
 				
+			}
+		});
+        
+        //带缓存的get请求
+        getCacheBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				// 一个url地址
+				String url = "http://www.baidu.com"; 
+				
+				mAbHttpUtil.getWithCache(url, new AbStringHttpResponseListener() {
+					
+					//获取数据成功会调用这里
+		        	@Override
+					public void onSuccess(int statusCode, String content) {
+		        		Log.i(TAG, "onSuccess");
+		        		AbDialogUtil.removeDialog(HttpActivity.this);
+		        		AbDialogUtil.showAlertDialog(HttpActivity.this,"返回结果",content.trim(),new AbDialogOnClickListener(){
+
+							@Override
+							public void onNegativeClick() {
+								
+							}
+
+							@Override
+							public void onPositiveClick() {
+								
+							}
+							
+		            	});
+		        	}
+		        	
+		        	// 失败，调用
+		            @Override
+					public void onFailure(int statusCode, String content,
+							Throwable error) {
+		            	Log.d(TAG, "onFailure");
+		            	AbDialogUtil.removeDialog(HttpActivity.this);
+		            	AbToastUtil.showToast(HttpActivity.this,error.getMessage());
+					}
+
+		            // 开始执行前
+		            @Override
+					public void onStart() {
+		            	Log.d(TAG, "onStart");
+		            	//显示进度框
+		            	AbDialogUtil.showProgressDialog(HttpActivity.this,0,"正在查询...");
+					}
+
+
+					// 完成后调用，失败，成功
+		            @Override
+		            public void onFinish() { 
+		            	Log.d(TAG, "onFinish");
+		            };
+		            
+		        });
 			}
 		});
         
@@ -148,7 +207,7 @@ public class HttpActivity extends AbActivity {
 			@Override
 			public void onClick(View v) {
 				
-				String url = "http://192.168.1.124:8080/CenterServer/identifyCode.do";
+				String url = "http://www.baidu.com";
 				// 绑定参数
 		        AbRequestParams params = new AbRequestParams(); 
 		        params.put("phone", "15150509567");
@@ -160,18 +219,16 @@ public class HttpActivity extends AbActivity {
 		        	@Override
 		        	public void onSuccess(int statusCode, String content) {
 		        		Log.d(TAG, "onSuccess");
+		        		AbDialogUtil.removeDialog(HttpActivity.this);
 		        		AbDialogUtil.showAlertDialog(HttpActivity.this,"返回结果",content,new AbDialogOnClickListener(){
 
 							@Override
 							public void onPositiveClick() {
-								// TODO Auto-generated method stub
 								
 							}
 
 							@Override
 							public void onNegativeClick() {
-								// TODO Auto-generated method stub
-								
 							}
 		            		
 		            	});
@@ -189,6 +246,7 @@ public class HttpActivity extends AbActivity {
 		            @Override
 					public void onFailure(int statusCode, String content,
 							Throwable error) {
+		            	AbDialogUtil.removeDialog(HttpActivity.this);
 		            	AbToastUtil.showToast(HttpActivity.this,error.getMessage());
 					}
 
@@ -196,8 +254,6 @@ public class HttpActivity extends AbActivity {
 		            @Override
 		            public void onFinish() { 
 		            	Log.d(TAG, "onFinish");
-		            	//移除进度框
-		            	AbDialogUtil.removeDialog(HttpActivity.this);
 		            };
 		            
 		        });
@@ -217,6 +273,7 @@ public class HttpActivity extends AbActivity {
 		        	@Override
 					public void onSuccess(int statusCode, byte[] content) {
 		        		Log.d(TAG, "onSuccess");
+		        		AbDialogUtil.removeDialog(HttpActivity.this);
 		        		Bitmap bitmap = AbImageUtil.bytes2Bimap(content);
 		            	ImageView view = new ImageView(HttpActivity.this);
 		            	view.setImageBitmap(bitmap);
@@ -225,13 +282,11 @@ public class HttpActivity extends AbActivity {
 
 							@Override
 							public void onPositiveClick() {
-								// TODO Auto-generated method stub
 								
 							}
 
 							@Override
 							public void onNegativeClick() {
-								// TODO Auto-generated method stub
 								
 							}
 		            		
@@ -250,6 +305,7 @@ public class HttpActivity extends AbActivity {
 		            @Override
 					public void onFailure(int statusCode, String content,
 							Throwable error) {
+		            	AbDialogUtil.removeDialog(HttpActivity.this);
 		            	AbToastUtil.showToast(HttpActivity.this,error.getMessage());
 					}
 
@@ -257,8 +313,6 @@ public class HttpActivity extends AbActivity {
 		            @Override
 		            public void onFinish() { 
 		            	Log.d(TAG, "onFinish");
-		            	//移除进度框
-		            	AbDialogUtil.removeDialog(HttpActivity.this);
 		            };
 		            
 		        });
@@ -284,21 +338,22 @@ public class HttpActivity extends AbActivity {
 		            	ImageView view = new ImageView(HttpActivity.this);
 		            	view.setImageBitmap(bitmap);
 		            	
+		            	
+		            	//下载完成取消进度框
+		            	AbDialogUtil.removeDialog(HttpActivity.this);
+		            	
 		            	AbDialogUtil.showAlertDialog("返回结果",view,new AbDialogOnClickListener(){
 
 							@Override
 							public void onPositiveClick() {
-								// TODO Auto-generated method stub
 								
 							}
 
 							@Override
 							public void onNegativeClick() {
-								// TODO Auto-generated method stub
 								
 							}
 							
-		            		
 		            	});
 					}
 		        	
@@ -324,6 +379,7 @@ public class HttpActivity extends AbActivity {
 					public void onFailure(int statusCode, String content,
 							Throwable error) {
 						Log.d(TAG, "onFailure");
+						AbDialogUtil.removeDialog(HttpActivity.this);
 						AbToastUtil.showToast(HttpActivity.this,error.getMessage());
 					}
 					
@@ -336,12 +392,6 @@ public class HttpActivity extends AbActivity {
 
 					// 完成后调用，失败，成功
 		            public void onFinish() { 
-		            	//下载完成取消进度框
-		            	if(mAlertDialog!=null){
-		            		mAlertDialog.dismiss();
-			            	mAlertDialog  = null;
-		            	}
-		            	
 		            	Log.d(TAG, "onFinish");
 		            };
 		            
@@ -356,7 +406,7 @@ public class HttpActivity extends AbActivity {
 			public void onClick(View v) {
 				//已经在后台上传
 				if(mAlertDialog!=null){
-					mAlertDialog.show(getFragmentManager(), "dialog");
+					AbDialogUtil.showDialog(HttpActivity.this,mAlertDialog);
 					return;
 				}
 				String url = "http://192.168.1.124:8080/demo/upload.do";
@@ -393,6 +443,10 @@ public class HttpActivity extends AbActivity {
 					
 					@Override
 					public void onSuccess(int statusCode, String content) {
+						
+						//下载完成取消进度框
+						AbDialogUtil.removeDialog(HttpActivity.this);
+						
 						AbToastUtil.showToast(HttpActivity.this,"onSuccess");
 					}
 
@@ -416,6 +470,7 @@ public class HttpActivity extends AbActivity {
 					@Override
 					public void onFailure(int statusCode, String content,
 							Throwable error) {
+						AbDialogUtil.removeDialog(HttpActivity.this);
 						AbToastUtil.showToast(HttpActivity.this,error.getMessage());
 					}
 
@@ -429,13 +484,7 @@ public class HttpActivity extends AbActivity {
 					// 完成后调用，失败，成功，都要调用
 		            public void onFinish() { 
 		            	Log.d(TAG, "onFinish");
-		            	//下载完成取消进度框
-		            	if(mAlertDialog!=null){
-		            	    mAlertDialog.dismiss();
-		            	    mAlertDialog  = null;
-		            	}
 		            };
-					
 		            
 		        });
 			}

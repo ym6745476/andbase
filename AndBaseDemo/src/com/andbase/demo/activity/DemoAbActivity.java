@@ -1,26 +1,14 @@
 package com.andbase.demo.activity;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
 import com.ab.activity.AbActivity;
-import com.ab.fragment.AbAlertDialogFragment.AbDialogOnClickListener;
-import com.ab.fragment.AbDialogFragment;
-import com.ab.fragment.AbDialogFragment.AbDialogOnLoadListener;
-import com.ab.fragment.AbLoadDialogFragment;
-import com.ab.fragment.AbRefreshDialogFragment;
-import com.ab.http.AbHttpListener;
-import com.ab.util.AbDialogUtil;
-import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
-import com.andbase.web.NetworkWeb;
 
 /**
  * 名称：DemoAbActivity 

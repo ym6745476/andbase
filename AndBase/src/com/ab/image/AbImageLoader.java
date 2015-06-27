@@ -62,7 +62,7 @@ public class AbImageLoader {
 	private static AbImageLoader imageLoader = null; 
     
     /** 缓存超时时间设置. */
-    private int expiresTime;
+    private long cacheMaxAge;
     
     /** 请求队列. */
     private List<AbTaskQueue> taskQueueList;
@@ -80,7 +80,7 @@ public class AbImageLoader {
      */
     public AbImageLoader(Context context) {
     	this.context = context;
-    	this.expiresTime = AbAppConfig.IMAGE_CACHE_EXPIRES_TIME;
+    	this.cacheMaxAge = AbAppConfig.DISK_CACHE_EXPIRES_TIME;
     	this.taskQueueList = new ArrayList<AbTaskQueue>();
     	PackageInfo info = AbAppUtil.getPackageInfo(context);
     	File cacheDir = null;
@@ -380,14 +380,21 @@ public class AbImageLoader {
 			//看磁盘
 			Entry entry = diskCache.get(cacheKey);
 			if(entry == null || entry.isExpired()){
-				AbLogUtil.i(AbImageLoader.class, "图片磁盘中没有，或者已经过期");
+				if(entry == null){
+					AbLogUtil.i(AbImageLoader.class, "磁盘中没有这个图片");
+				}else{
+					if(entry.isExpired()){
+						AbLogUtil.i(AbImageLoader.class, "磁盘中图片已经过期");
+					}
+				}
 				
-				AbCacheResponse response = AbCacheUtil.getCacheResponse(url,expiresTime);
+				AbCacheResponse response = AbCacheUtil.getCacheResponse(url);
 				if(response!=null){
 					bitmap =  AbImageUtil.getBitmap(response.data, desiredWidth, desiredHeight);
 					if(bitmap!=null){
 						memCache.putBitmap(cacheKey, bitmap);
-						diskCache.put(cacheKey, AbCacheHeaderParser.parseCacheHeaders(response));
+						AbLogUtil.i(AbImageLoader.class, "图片缓存成功");
+						diskCache.put(cacheKey, AbCacheHeaderParser.parseCacheHeaders(response,cacheMaxAge));
 					}
 				}
 			}else{
@@ -407,25 +414,27 @@ public class AbImageLoader {
     }
     
 
-	/**
-	 * 获取失效时间.
-	 *
-	 * @return the expires time
-	 */
-	public int getExpiresTime() {
-		return expiresTime;
-	}
-
-
-	/**
-	 * 设置失效时间.
-	 *
-	 * @param expiresTime the new expires time
-	 */
-	public void setExpiresTime(int expiresTime) {
-		this.expiresTime = expiresTime;
-	}
 	
+	/**
+	 * 
+	 * 设置缓存的最大时间.
+	 * @return
+	 */
+	public long getCacheMaxAge() {
+		return cacheMaxAge;
+	}
+
+
+	/**
+	 * 
+	 * 获取缓存的最大时间.
+	 * @param cacheMaxAge
+	 */
+	public void setCacheMaxAge(long cacheMaxAge) {
+		this.cacheMaxAge = cacheMaxAge;
+	}
+
+
 	/**
 	 * 监听器
 	 */

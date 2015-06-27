@@ -57,8 +57,8 @@ public class AbAppConfig {
 	/** DB目录. */
 	public static  String DB_DIR = "db";
 	
-	/** 默认缓存超时时间设置，毫秒. */
-	public static int IMAGE_CACHE_EXPIRES_TIME = 60*10000;
+	/** 默认磁盘缓存超时时间设置，毫秒. */
+	public static long DISK_CACHE_EXPIRES_TIME = 60*1000*1000;
 	
 	/** 内存缓存大小  单位10M. */
 	public static int MAX_CACHE_SIZE_INBYTES = 10*1024*1024;
@@ -94,7 +94,7 @@ public class AbAppConfig {
 	public static String REMOTE_SERVICE_EXCEPTION = "抱歉，远程服务出错了";
 	
 	/** 资源未找到. */
-	public static String NOT_FOUND_EXCEPTION = "页面未找到";
+	public static String NOT_FOUND_EXCEPTION = "请求的资源无效404";
 	
 	/** 没有权限访问资源. */
 	public static String FORBIDDEN_EXCEPTION = "没有权限访问资源";

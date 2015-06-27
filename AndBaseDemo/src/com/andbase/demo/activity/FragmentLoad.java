@@ -15,17 +15,20 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.ab.fragment.AbFragment;
-import com.ab.http.AbHttpListener;
+import com.ab.http.AbHttpUtil;
 import com.ab.http.AbRequestParams;
-import com.ab.util.AbToastUtil;
+import com.ab.http.AbStringHttpResponseListener;
+import com.ab.model.AbResult;
+import com.ab.util.AbFileUtil;
+import com.ab.util.AbJsonUtil;
 import com.ab.view.pullview.AbPullToRefreshView;
 import com.ab.view.pullview.AbPullToRefreshView.OnFooterLoadListener;
 import com.ab.view.pullview.AbPullToRefreshView.OnHeaderRefreshListener;
 import com.andbase.R;
 import com.andbase.demo.adapter.ArticleListAdapter;
 import com.andbase.demo.model.Article;
+import com.andbase.demo.model.ArticleListResult;
 import com.andbase.global.MyApplication;
-import com.andbase.web.NetworkWeb;
 
 
 public class FragmentLoad extends AbFragment {
@@ -39,6 +42,7 @@ public class FragmentLoad extends AbFragment {
 	private ArticleListAdapter myListViewAdapter = null;
 	private int total = 50;
 	private int pageSize = 5;
+	private AbHttpUtil httpUtil;
 
 	@Override
 	public View onCreateContentView(LayoutInflater inflater, ViewGroup container,
@@ -98,6 +102,8 @@ public class FragmentLoad extends AbFragment {
     		 
     	 });
     	 
+    	 httpUtil = AbHttpUtil.getInstance(mActivity);
+    	 
     	 return view;
 	} 
 	
@@ -121,41 +127,61 @@ public class FragmentLoad extends AbFragment {
 		params.put("cityCode", "11");
 		params.put("pageSize", String.valueOf(pageSize));
 		params.put("toPageNo",String.valueOf(currentPage));
-		// 下载网络数据
-		NetworkWeb web = NetworkWeb.newInstance(mActivity);
-		web.findLogList(params, new AbHttpListener(){
+		
+    	final String result = AbFileUtil.readAssetsByName(mActivity, "article_list.json","UTF-8");
+		// 一个url地址
+	    String urlString = "http://www.amsoft.cn/rss.php?";
+	    httpUtil.get(urlString,params,new AbStringHttpResponseListener(){
 
 			@Override
-			public void onSuccess(List<?> newList) {
-				mList.clear();
-				if(newList!=null && newList.size()>0){
-					mList.addAll((List<Article>)newList);
-	                myListViewAdapter.notifyDataSetChanged();
-	                newList.clear();
-   		    	}
-				mAbPullToRefreshView.onHeaderRefreshFinish();
+			public void onSuccess(int statusCode, String content) {
 				
-				//模拟用，真是开发中需要直接调用run内的内容
-				new Handler().postDelayed(new Runnable(){
-
-					@Override
-					public void run() {
-						//显示内容
-						showContentView();
-					}
+				//模拟数据
+				content = result;
+				mList.clear();
+				AbResult result = new AbResult(content);
+				if (result.getResultCode()>0) {
+					//成功
+					ArticleListResult mArticleListResult = (ArticleListResult)AbJsonUtil.fromJson(content,ArticleListResult.class);
+					List<Article> articleList = mArticleListResult.getItems();
+					if(articleList!=null && articleList.size()>0){
+						mList.addAll(articleList);
+		                myListViewAdapter.notifyDataSetChanged();
+		                articleList.clear();
+	   		    	}
+					mAbPullToRefreshView.onHeaderRefreshFinish();
 					
-				}, 3000);
+					//模拟用，真是开发中需要直接调用run内的内容
+					new Handler().postDelayed(new Runnable(){
+
+						@Override
+						public void run() {
+							//显示内容
+							showContentView();
+						}
+						
+					}, 3000);
+				}
 				
 			}
 
 			@Override
-			public void onFailure(String content) {
-				AbToastUtil.showToast(mActivity, content);
+			public void onStart() {
+			}
+
+			@Override
+			public void onFinish() {
+			}
+
+			@Override
+			public void onFailure(int statusCode, String content,
+					Throwable error) {
 				//显示重试的框
 				showRefreshView();
 			}
-			
-		});
+	    	
+	    });
+		
 	}
     
     public void loadMoreTask(){
@@ -165,27 +191,51 @@ public class FragmentLoad extends AbFragment {
 		params.put("cityCode", "11");
 		params.put("pageSize", String.valueOf(pageSize));
 		params.put("toPageNo",String.valueOf(currentPage));
-    	// 下载网络数据
-		NetworkWeb web = NetworkWeb.newInstance(this.getActivity());
-		web.findLogList(params, new AbHttpListener(){
+    			
+    	final String result = AbFileUtil.readAssetsByName(mActivity, "article_list.json","UTF-8");
+		// 一个url地址
+	    String urlString = "http://www.amsoft.cn/rss.php?";
+	    httpUtil.get(urlString,params,new AbStringHttpResponseListener(){
 
 			@Override
-			public void onSuccess(List<?> newList) {
-				if(newList!=null && newList.size()>0){
-					mList.addAll((List<Article>)newList);
-	                myListViewAdapter.notifyDataSetChanged();
-	                newList.clear();
-   		    	}
-				mAbPullToRefreshView.onFooterLoadFinish();
-			}
-
-			@Override
-			public void onFailure(String content) {
+			public void onSuccess(int statusCode, String content) {
+				
+				//模拟数据
+				content = result;
+				
+				AbResult result = new AbResult(content);
+				if (result.getResultCode()>0) {
+					//成功
+					ArticleListResult mArticleListResult = (ArticleListResult)AbJsonUtil.fromJson(content,ArticleListResult.class);
+					List<Article> articleList = mArticleListResult.getItems();
+					if(articleList!=null && articleList.size()>0){
+						mList.addAll(articleList);
+		                myListViewAdapter.notifyDataSetChanged();
+		                articleList.clear();
+	   		    	}
+					mAbPullToRefreshView.onFooterLoadFinish();
+				}
 				
 			}
-			
-		});
+
+			@Override
+			public void onStart() {
+			}
+
+			@Override
+			public void onFinish() {
+			}
+
+			@Override
+			public void onFailure(int statusCode, String content,
+					Throwable error) {
+			}
+	    	
+	    });
+    	
     }
+    
+    
 
 }
 

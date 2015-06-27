@@ -17,14 +17,14 @@ import com.ab.fragment.AbDialogFragment;
 import com.ab.fragment.AbDialogFragment.AbDialogOnLoadListener;
 import com.ab.fragment.AbLoadDialogFragment;
 import com.ab.fragment.AbRefreshDialogFragment;
-import com.ab.http.AbHttpListener;
+import com.ab.http.AbHttpUtil;
+import com.ab.http.AbStringHttpResponseListener;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbToastUtil;
 import com.ab.view.ioc.AbIocView;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
-import com.andbase.web.NetworkWeb;
 
 /**
  * 名称：DemoAbActivity 描述：AbActivity基本用法
@@ -36,6 +36,7 @@ import com.andbase.web.NetworkWeb;
 public class DialogActivity extends AbActivity {
 
 	private MyApplication application;
+	private AbHttpUtil httpUtil;
 
 	
     @AbIocView(id = R.id.button2,click="btnClick")Button button2;
@@ -70,6 +71,7 @@ public class DialogActivity extends AbActivity {
 		mAbTitleBar.setLogoLine(R.drawable.line);
 
 		application = (MyApplication) abApplication;
+		httpUtil = AbHttpUtil.getInstance(this);
 	}
 
 	/**
@@ -78,12 +80,13 @@ public class DialogActivity extends AbActivity {
 	 * @param mDialogFragment
 	 */
 	public void downRss(final AbDialogFragment mDialogFragment) {
-		// 下载网络数据
-		NetworkWeb web = NetworkWeb.newInstance(DialogActivity.this);
-		web.testHttpGet("test1", "test1", new AbHttpListener() {
+		// 一个url地址
+		String urlString = "http://www.amsoft.cn/rss.php";
+		httpUtil.get(urlString, new AbStringHttpResponseListener(){
 
 			@Override
-			public void onSuccess(String content) {
+			public void onSuccess(int statusCode, String content) {
+				
 				mDialogFragment.loadFinish();
 				AbDialogUtil.showAlertDialog(DialogActivity.this,
 						R.drawable.ic_alert, "返回结果", content,
@@ -107,7 +110,18 @@ public class DialogActivity extends AbActivity {
 			}
 
 			@Override
-			public void onFailure(String content) {
+			public void onStart() {
+				
+			}
+
+			@Override
+			public void onFinish() {
+				
+			}
+
+			@Override
+			public void onFailure(int statusCode, String content,
+					Throwable error) {
 				mDialogFragment.loadStop();
 
 				// 模拟用，真是开发中需要直接调用run内的内容
@@ -123,10 +137,11 @@ public class DialogActivity extends AbActivity {
 
 				// 错误提示
 				AbToastUtil.showToast(DialogActivity.this, content);
-
 			}
-
+			
 		});
+				
+		
 	}
 
 	/**
@@ -162,7 +177,7 @@ public class DialogActivity extends AbActivity {
 	public void showLoadPanel() {
 
 		final AbLoadDialogFragment mDialogFragment = AbDialogUtil
-				.showLoadPanel(this, R.drawable.ic_load, "正在查询,请稍候");
+				.showLoadDialog(this, R.drawable.ic_load, "正在查询,请稍候",AbDialogUtil.ThemeLightPanel);
 		mDialogFragment.setAbDialogOnLoadListener(new AbDialogOnLoadListener() {
 
 			@Override
@@ -216,7 +231,7 @@ public class DialogActivity extends AbActivity {
 	public void showRefreshPanel() {
 		// 显示重新刷新的框
 		final AbRefreshDialogFragment mDialogFragment = AbDialogUtil
-				.showRefreshPanel(this, R.drawable.ic_refresh, "请求出错，请重试");
+				.showRefreshDialog(this, R.drawable.ic_refresh, "请求出错，请重试",AbDialogUtil.ThemeLightPanel);
 		mDialogFragment.setAbDialogOnLoadListener(new AbDialogOnLoadListener() {
 
 			@Override
@@ -255,8 +270,7 @@ public class DialogActivity extends AbActivity {
 			break;
 		case R.id.button3:
 			mView = mInflater.inflate(R.layout.dialog_custom_view,null);
-			// AbDialogUtil.showPanel(mView);
-			AbDialogUtil.showPanel(mView,
+			AbDialogUtil.showDialog(mView,AbDialogUtil.ThemeLightPanel,
 				new DialogInterface.OnCancelListener() {
 
 					@Override

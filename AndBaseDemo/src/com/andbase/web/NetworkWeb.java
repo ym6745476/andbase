@@ -33,43 +33,7 @@ public class NetworkWeb {
 		return web;
 	}
 
-	/**
-	 * 调用请求的模版
-	 * @param param1  参数1
-	 * @param param2 参数2
-	 * @param abHttpListener 请求的监听器
-	 */
-	public void testHttpGet(String param1,String param2,final AbHttpListener abHttpListener){
-        
-		// 一个url地址
-		String urlString = "http://www.amsoft.cn/rss.php";
-		mAbHttpUtil.get(urlString, new AbStringHttpResponseListener(){
-
-			@Override
-			public void onSuccess(int statusCode, String content) {
-				//将结果传递回去
-				abHttpListener.onSuccess(content);
-			}
-
-			@Override
-			public void onStart() {
-				
-			}
-
-			@Override
-			public void onFinish() {
-				
-			}
-
-			@Override
-			public void onFailure(int statusCode, String content,
-					Throwable error) {
-				//将失败错误信息传递回去
-				abHttpListener.onFailure(content);
-			}
-			
-		});
-	}
+	
 	
 	/**
 	 * 调用一个列表请求
@@ -78,52 +42,7 @@ public class NetworkWeb {
 	 */
 	public void findLogList(AbRequestParams params,final AbHttpListener abHttpListener){
 		
-		final String result = AbFileUtil.readAssetsByName(mContext, "article_list.json","UTF-8");
-		// 一个url地址
-	    String urlString = "http://www.amsoft.cn/rss.php?";
-	    mAbHttpUtil.get(urlString,params,new AbStringHttpResponseListener(){
-
-			@Override
-			public void onSuccess(int statusCode, String content) {
-				try {
-					//模拟数据
-					content = result;
-					
-					AbResult result = new AbResult(content);
-					if (result.getResultCode()>0) {
-						//成功
-						ArticleListResult mArticleListResult = (ArticleListResult)AbJsonUtil.fromJson(content,ArticleListResult.class);
-						List<Article> articleList = mArticleListResult.getItems();
-						//将结果传递回去
-						abHttpListener.onSuccess(articleList);
-					} else {
-						//将错误信息传递回去
-						abHttpListener.onFailure(result.getResultMessage());
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-					abHttpListener.onFailure(e.getMessage());
-				}	
-			}
-
-			@Override
-			public void onStart() {
-				//开始的状态传递回去
-			}
-
-			@Override
-			public void onFinish() {
-				//完成的状态传递回去
-			}
-
-			@Override
-			public void onFailure(int statusCode, String content,
-					Throwable error) {
-				//将失败错误信息传递回去
-				abHttpListener.onFailure(content);
-			}
-	    	
-	    });
+		
 		
 	}
 

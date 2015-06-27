@@ -1,6 +1,7 @@
 package com.andbase.demo.activity;
 
 import java.util.Calendar;
+import java.util.Date;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -10,7 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
+import com.ab.util.AbDateUtil;
 import com.ab.util.AbDialogUtil;
+import com.ab.util.AbStrUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.ab.view.wheel.AbNumericWheelAdapter;
 import com.ab.view.wheel.AbWheelUtil;
@@ -160,11 +163,22 @@ public class WheelActivity extends AbActivity {
     }
     
     public void initWheelDate(View mDateView,TextView mText){
+    	
     	//年月日时间选择器
         Calendar calendar = Calendar.getInstance();
-		int year = calendar.get(Calendar.YEAR);
+        int year = calendar.get(Calendar.YEAR);
 		int month = calendar.get(Calendar.MONTH)+1;
 		int day = calendar.get(Calendar.DATE);
+        String date =  mText.getText().toString().trim();
+        if(!AbStrUtil.isEmpty(date)){
+        	Date dateNew = AbDateUtil.getDateByFormat(date, AbDateUtil.dateFormatYMD);
+        	if(dateNew!=null){
+        		year = 1900+dateNew.getYear();
+        		month = dateNew.getMonth()+1;
+        		day = dateNew.getDate();
+        	}
+        }
+        
 		final AbWheelView mWheelViewY = (AbWheelView)mDateView.findViewById(R.id.wheelView1);
 		final AbWheelView mWheelViewM = (AbWheelView)mDateView.findViewById(R.id.wheelView2);
 		final AbWheelView mWheelViewD = (AbWheelView)mDateView.findViewById(R.id.wheelView3);

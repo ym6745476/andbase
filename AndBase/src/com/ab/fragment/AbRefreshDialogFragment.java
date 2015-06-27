@@ -29,7 +29,7 @@ public class AbRefreshDialogFragment extends AbDialogFragment {
 	private int mStyle;
 	private int mIndeterminateDrawable;
 	private int mTextSize = 15;
-	private int mTextColor = Color.WHITE;
+	private int mTextColor = Color.GRAY;
 	private View mContentView;
 	private TextView mTextView = null;
 	private ImageView mImageView = null;

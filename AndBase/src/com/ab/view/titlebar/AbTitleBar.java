@@ -49,7 +49,7 @@ import com.ab.util.AbViewUtil;
 public class AbTitleBar extends LinearLayout {
 	
 	/** The m context. */
-	private Activity mActivity;
+	private Activity activity;
 	
 	/** 标题布局. */
 	protected LinearLayout titleTextLayout = null;
@@ -136,7 +136,7 @@ public class AbTitleBar extends LinearLayout {
 	 */
 	public void ininTitleBar(Context context){
 		
-		mActivity  = (Activity)context;
+		activity  = (Activity)context;
 		//水平排列
 		this.setOrientation(LinearLayout.HORIZONTAL);
 		this.setId(mAbTitleBarID);
@@ -162,7 +162,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleTextBtn = new Button(context);
 		titleTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleTextBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,35);
+		titleTextBtn.setTextSize(AbViewUtil.scaleTextValue(context, 20));
 		titleTextBtn.setPadding(5, 0, 5, 0);
 		titleTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextBtn.setBackgroundDrawable(null);
@@ -171,7 +171,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleSmallTextBtn = new Button(context);
 		titleSmallTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleSmallTextBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,25);
+		titleSmallTextBtn.setTextSize(AbViewUtil.scaleTextValue(context, 15));
 		titleSmallTextBtn.setPadding(6, 0, 5, 0);
 		titleSmallTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleSmallTextBtn.setBackgroundDrawable(null);
@@ -206,7 +206,7 @@ public class AbTitleBar extends LinearLayout {
 				
 			@Override
 			public void onClick(View v) {
-				mActivity.finish();
+				activity.finish();
 			}
 		});
 	}
@@ -253,16 +253,15 @@ public class AbTitleBar extends LinearLayout {
 	 * @param titleTextSize  文字字号
 	 */
 	public void setTitleTextSize(int titleTextSize) {
-		this.titleTextBtn.setTextSize(titleTextSize);
+		this.titleTextBtn.setTextSize(AbViewUtil.scaleTextValue(activity, titleTextSize));
 	}
 	
 	/**
-	 * 描述：标题文字字号.
-	 * @param unit
-	 * @param titleTextSize  文字字号
+	 * 描述：小标题文字字号.
+	 * @param titleSmallTextSize  文字字号
 	 */
-	public void setTitleTextSize(int unit,int titleTextSize) {
-		this.titleTextBtn.setTextSize(unit,titleTextSize);
+	public void setTitleSmallTextSize(int titleSmallTextSize) {
+		this.titleSmallTextBtn.setTextSize(AbViewUtil.scaleTextValue(activity, titleSmallTextSize));
 	}
 	
 	/**
@@ -640,7 +639,7 @@ public class AbTitleBar extends LinearLayout {
 	 */
 	public void setTitleBarHeight(int height) {
 		ViewGroup.LayoutParams params = this.getLayoutParams();
-		params.height = height;
+		params.height = AbViewUtil.scaleValue(activity, height);
 	    this.setLayoutParams(params);
 	}
 }
