@@ -31,7 +31,9 @@ import com.ab.view.slidingmenu.SlidingMenu;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.friend.UserDao;
+import com.andbase.global.LocationProvider;
 import com.andbase.global.MyApplication;
+import com.andbase.global.LocationProvider.LocationListener;
 import com.andbase.im.activity.ChatActivity;
 import com.andbase.im.activity.ContacterActivity;
 import com.andbase.im.model.IMMessage;
@@ -40,6 +42,7 @@ import com.andbase.login.AboutActivity;
 import com.andbase.login.LoginActivity;
 import com.andbase.model.AppUser;
 import com.andbase.model.User;
+import com.baidu.location.BDLocation;
 import com.kfb.a.Zhao;
 import com.kfb.c.Kfb;
 
@@ -135,8 +138,6 @@ public class MainActivity extends AbActivity {
 		
 		httpUtil = AbHttpUtil.getInstance(this);
 		
-		uploadAppUser();
-
 	}
 	
 
@@ -395,10 +396,12 @@ public class MainActivity extends AbActivity {
         startActivity(friendIntent);
     }
 	
-	
+	/**
+	 * http测试
+	 */
 	public void uploadAppUser(){
 		// 一个url地址
-		String url = "http://amsoft.cn/content/templates/amsoft/upload_app_user.php"; 
+		String url = "http://amsoft.cn/content/templates/amsoft/test.php"; 
 		
 		AppUser user = new AppUser();
 		user.setImei(AbAppUtil.getIMEI(this));
@@ -417,7 +420,8 @@ public class MainActivity extends AbActivity {
 			//获取数据成功会调用这里
         	@Override
 			public void onSuccess(int statusCode, String content) {
-        		Log.d(TAG, "onSuccess uploadAppUser:"+content);
+        		//Log.d(TAG, "onSuccess uploadAppUser:"+content);
+        		//AbToastUtil.showToast(MainActivity.this, "测试："+content);
         		//AbDialogUtil.removeDialog(MainActivity.this);
         	}
         	
@@ -425,15 +429,15 @@ public class MainActivity extends AbActivity {
             @Override
 			public void onFailure(int statusCode, String content,
 					Throwable error) {
-            	Log.d(TAG, "onFailure");
-            	AbDialogUtil.removeDialog(MainActivity.this);
-            	AbToastUtil.showToast(MainActivity.this,error.getMessage());
+            	//Log.d(TAG, "onFailure");
+            	//AbDialogUtil.removeDialog(MainActivity.this);
+            	//AbToastUtil.showToast(MainActivity.this,error.getMessage());
 			}
 
             // 开始执行前
             @Override
 			public void onStart() {
-            	Log.d(TAG, "onStart");
+            	//Log.d(TAG, "onStart");
             	//显示进度框
             	//AbDialogUtil.showProgressDialog(HttpActivity.this,0,"正在查询...");
 			}
@@ -442,7 +446,7 @@ public class MainActivity extends AbActivity {
 			// 完成后调用，失败，成功
             @Override
             public void onFinish() { 
-            	Log.d(TAG, "onFinish");
+            	//Log.d(TAG, "onFinish");
             };
             
         });
@@ -462,6 +466,14 @@ public class MainActivity extends AbActivity {
 	@Override
 	protected void onResume() {
 		AbLogUtil.d(this, "--onResume--");
+		new Handler().postDelayed(new Runnable() {
+			
+			@Override
+			public void run() {
+				ininLocation();
+			}
+		}, 5000);
+		
 		//如果debug模式被打开，显示监控
         //AbMonitorUtil.openMonitor(this);
 		super.onResume();
@@ -473,6 +485,29 @@ public class MainActivity extends AbActivity {
 		
 	}
 	
+	public void ininLocation(){
+		LocationProvider loaction = new LocationProvider(this);
+		loaction.setListener(new LocationListener() {
+
+			@Override
+			public void onReceiveLocation(BDLocation location) {
+				String province = location.getProvince();
+				String city = location.getCity();
+				double longitude = location.getLongitude();
+				double latitude = location.getLatitude();
+				String address = location.getAddrStr();
+				application.province = province;
+				application.city = city;
+				application.longitude = longitude;
+				application.latitude = latitude;
+				application.address = address;
+				
+				uploadAppUser();
+			}
+
+		});
+		loaction.startLocation();
+	}
 	
 
 }

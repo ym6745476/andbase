@@ -104,7 +104,6 @@ public class LauncherActivity extends AbActivity {
 
 	private void init() {
 		initAnim();
-		ininLocation();
 		launcherView.startAnimation(mFadeIn);
 	}
 
@@ -120,26 +119,6 @@ public class LauncherActivity extends AbActivity {
 		mFadeInScale.setFillAfter(true);
 	}
 	
-	public void ininLocation(){
-		LocationProvider loaction = new LocationProvider(this);
-		loaction.setListener(new LocationListener() {
-
-			@Override
-			public void onReceiveLocation(BDLocation location) {
-				String province = location.getProvince();
-				String city = location.getCity();
-				double longitude = location.getLongitude();
-				double latitude = location.getLatitude();
-				String address = location.getAddrStr();
-				application.province = province;
-				application.city = city;
-				application.longitude = longitude;
-				application.latitude = latitude;
-				application.address = address;
-			}
-
-		});
-		loaction.startLocation();
-	}
+	
 
 }
