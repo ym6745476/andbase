@@ -452,9 +452,6 @@ public class MainActivity extends AbActivity {
         });
 	}
 	
-	
-	
-	
 	@Override
 	protected void onPause() {
 		initTitleRightLayout();
