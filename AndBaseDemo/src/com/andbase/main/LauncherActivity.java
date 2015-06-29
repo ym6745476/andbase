@@ -11,22 +11,30 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ab.activity.AbActivity;
+import com.ab.http.AbRequestParams;
 import com.ab.util.AbAppUtil;
+import com.ab.util.AbStrUtil;
 import com.ab.util.AbViewUtil;
 import com.andbase.R;
+import com.andbase.global.LocationProvider;
+import com.andbase.global.MyApplication;
+import com.andbase.global.LocationProvider.LocationListener;
+import com.baidu.location.BDLocation;
 
 
 public class LauncherActivity extends AbActivity {
 	
+	private MyApplication application;
 	private LinearLayout launcherView;
 	private Animation mFadeIn;
 	private Animation mFadeInScale;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setAbContentView(R.layout.launcher);
-
+		application = (MyApplication) abApplication;
 		launcherView = (LinearLayout) this.findViewById(R.id.launcherView);
 		AbViewUtil.scaleContentView(launcherView);
 		// Font path
@@ -57,7 +65,7 @@ public class LauncherActivity extends AbActivity {
 
 			@Override
 			public void onAnimationStart(Animation animation) {
-
+				
 			}
 
 			@Override
@@ -96,6 +104,7 @@ public class LauncherActivity extends AbActivity {
 
 	private void init() {
 		initAnim();
+		ininLocation();
 		launcherView.startAnimation(mFadeIn);
 	}
 
@@ -109,6 +118,28 @@ public class LauncherActivity extends AbActivity {
 				R.anim.welcome_fade_in_scale);
 		mFadeInScale.setDuration(800);
 		mFadeInScale.setFillAfter(true);
+	}
+	
+	public void ininLocation(){
+		LocationProvider loaction = new LocationProvider(this);
+		loaction.setListener(new LocationListener() {
+
+			@Override
+			public void onReceiveLocation(BDLocation location) {
+				String province = location.getProvince();
+				String city = location.getCity();
+				double longitude = location.getLongitude();
+				double latitude = location.getLatitude();
+				String address = location.getAddrStr();
+				application.province = province;
+				application.city = city;
+				application.longitude = longitude;
+				application.latitude = latitude;
+				application.address = address;
+			}
+
+		});
+		loaction.startLocation();
 	}
 
 }

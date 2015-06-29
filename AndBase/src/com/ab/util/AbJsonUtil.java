@@ -35,7 +35,7 @@ import com.google.gson.reflect.TypeToken;
  * @date：2013-01-17 下午11:52:13
  * @param <T>
  */
-public class AbJsonUtil<T> {
+public class AbJsonUtil {
 	
 	/**
 	 * 

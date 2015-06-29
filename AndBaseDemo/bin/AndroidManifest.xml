@@ -467,6 +467,20 @@
 		<!-- 重连接服务 -->
  		<service android:name=".im.service.ReConnectService"></service>
         
+ 		<service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="L38XchDPaaY2661BWnqI1sdn" />
         
     </application>
 

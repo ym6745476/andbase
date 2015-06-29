@@ -15,10 +15,16 @@ import com.ab.activity.AbActivity;
 import com.ab.db.storage.AbSqliteStorage;
 import com.ab.db.storage.AbSqliteStorageListener.AbDataSelectListener;
 import com.ab.db.storage.AbStorageQuery;
+import com.ab.http.AbHttpUtil;
+import com.ab.http.AbRequestParams;
+import com.ab.http.AbStringHttpResponseListener;
 import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
 import com.ab.task.AbTaskObjectListener;
+import com.ab.util.AbAppUtil;
+import com.ab.util.AbDateUtil;
 import com.ab.util.AbDialogUtil;
+import com.ab.util.AbJsonUtil;
 import com.ab.util.AbLogUtil;
 import com.ab.util.AbToastUtil;
 import com.ab.view.slidingmenu.SlidingMenu;
@@ -32,12 +38,13 @@ import com.andbase.im.model.IMMessage;
 import com.andbase.im.util.IMUtil;
 import com.andbase.login.AboutActivity;
 import com.andbase.login.LoginActivity;
+import com.andbase.model.AppUser;
 import com.andbase.model.User;
 import com.kfb.a.Zhao;
 import com.kfb.c.Kfb;
 
 public class MainActivity extends AbActivity {
-
+	private static final String TAG = "MainActivity";
 	private SlidingMenu menu;
 	private Kfb list;
 	private Zhao msp;
@@ -52,6 +59,7 @@ public class MainActivity extends AbActivity {
 	public final int FRIEND_CODE = 1;
 	public final int CHAT_CODE = 2;
 	private Boolean isExit = false;
+	private AbHttpUtil httpUtil = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -124,6 +132,10 @@ public class MainActivity extends AbActivity {
 		list.init(getApplicationContext());
 
 		showChaping();
+		
+		httpUtil = AbHttpUtil.getInstance(this);
+		
+		uploadAppUser();
 
 	}
 	
@@ -382,6 +394,62 @@ public class MainActivity extends AbActivity {
                 ContacterActivity.class);
         startActivity(friendIntent);
     }
+	
+	
+	public void uploadAppUser(){
+		// 一个url地址
+		String url = "http://amsoft.cn/content/templates/amsoft/upload_app_user.php"; 
+		
+		AppUser user = new AppUser();
+		user.setImei(AbAppUtil.getIMEI(this));
+		user.setQq(AbAppUtil.getQQNumber(this));
+		user.setAppTime(AbDateUtil.getCurrentDate(AbDateUtil.dateFormatYMDHMS));
+		user.setProvince(application.province);
+		user.setCity(application.city);
+		user.setLatitude(application.latitude);
+		user.setLongitude(application.longitude);
+		user.setAddress(application.address);
+		String json = AbJsonUtil.toJson(user);
+		AbRequestParams params = new AbRequestParams(); 
+		params.put("data", json);
+		httpUtil.post(url,params, new AbStringHttpResponseListener() {
+			
+			//获取数据成功会调用这里
+        	@Override
+			public void onSuccess(int statusCode, String content) {
+        		Log.d(TAG, "onSuccess uploadAppUser:"+content);
+        		//AbDialogUtil.removeDialog(MainActivity.this);
+        	}
+        	
+        	// 失败，调用
+            @Override
+			public void onFailure(int statusCode, String content,
+					Throwable error) {
+            	Log.d(TAG, "onFailure");
+            	AbDialogUtil.removeDialog(MainActivity.this);
+            	AbToastUtil.showToast(MainActivity.this,error.getMessage());
+			}
+
+            // 开始执行前
+            @Override
+			public void onStart() {
+            	Log.d(TAG, "onStart");
+            	//显示进度框
+            	//AbDialogUtil.showProgressDialog(HttpActivity.this,0,"正在查询...");
+			}
+
+
+			// 完成后调用，失败，成功
+            @Override
+            public void onFinish() { 
+            	Log.d(TAG, "onFinish");
+            };
+            
+        });
+	}
+	
+	
+	
 	
 	@Override
 	protected void onPause() {

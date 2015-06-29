@@ -19,6 +19,8 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -29,6 +31,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import org.xmlpull.v1.XmlPullParser;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -46,7 +50,11 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
+import android.util.Xml;
 import android.view.inputmethod.InputMethodManager;
 
 import com.ab.model.AbAppProcessInfo;
@@ -714,31 +722,39 @@ public class AbAppUtil {
 	 * @return 应用程序是/否获取Root权限
 	 */
 	public static boolean getRootPermission(Context context) {
-		String packageCodePath = context.getPackageCodePath();  
-	    Process process = null;
-	    DataOutputStream os = null;
-	    try {
-	        String cmd="chmod 777 " + packageCodePath;
-	        //切换到root帐号
-	        process = Runtime.getRuntime().exec("su"); 
-	        os = new DataOutputStream(process.getOutputStream());
-	        os.writeBytes(cmd + "\n");
-	        os.writeBytes("exit\n");
-	        os.flush();
-	        process.waitFor();
-	    } catch (Exception e) {
-	        return false;
-	    } finally {
-	        try {
-	            if (os != null) {
-	                os.close();
-	            }
-	            process.destroy();
-	        } catch (Exception e) {
-	        	e.printStackTrace();
-	        }
-	    }
-	    return true;
+		String path = context.getPackageCodePath();  
+	    return getRootPermission(path);
+	}
+	
+	/**
+	 * 修改文件权限
+	 * @return 文件路径
+	 */
+	public static boolean getRootPermission(String path) {
+		Process process = null;
+		DataOutputStream os = null;
+		try {
+			String cmd = "chmod 777 " + path;
+			// 切换到root帐号
+			process = Runtime.getRuntime().exec("su");
+			os = new DataOutputStream(process.getOutputStream());
+			os.writeBytes(cmd + "\n");
+			os.writeBytes("exit\n");
+			os.flush();
+			process.waitFor();
+		} catch (Exception e) {
+			return false;
+		} finally {
+			try {
+				if (os != null) {
+					os.close();
+				}
+				process.destroy();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return true;
 	}
 	
 	/**
@@ -917,5 +933,125 @@ public class AbAppUtil {
         return memory;  
     }  
     
+	/**
+	 * 
+	 * 获取mac地址.
+	 * @param context
+	 * @return
+	 */
+	public static String getMac(Context context) {
+		WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+		WifiInfo info = wifi.getConnectionInfo();
+		if (info.getMacAddress() == null) {
+			return null;
+		} else {
+			return info.getMacAddress();
+		}
+	}
+	
+	/**
+	 * 
+	 * 获取SSID地址.
+	 * @param context
+	 * @return
+	 */
+	public static String getSSID(Context context) {
+
+		WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+		WifiInfo info = wifi.getConnectionInfo();
+		if (info.getSSID() == null) {
+			return null;
+		} else {
+			return info.getSSID();
+		}
+	}
+
+	/**
+	 * 
+	 * 获取IMSI.
+	 * @return
+	 */
+	public static String getIMSI(Context context) {
+		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		if (telephonyManager.getSubscriberId() == null) {
+			return null;
+		} else {
+			return telephonyManager.getSubscriberId();
+		}
+	}
+
+	/**
+	 * 
+	 * 获取IMEI.
+	 * @return
+	 */
+	public static String getIMEI(Context context) {
+		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		if (telephonyManager.getDeviceId() == null) {
+			return null;
+		} else {
+			return telephonyManager.getDeviceId();
+		}
+	}
+	
+	/**
+	 * 手机号码
+	 * @return
+	 */
+	public static String getPhoneNumber(Context context) {
+		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		if (telephonyManager.getLine1Number() == null || telephonyManager.getLine1Number().length() < 11) {
+			return null;
+		} else {
+			return telephonyManager.getLine1Number();
+		}
+	}
+	
+	/**
+	 * 
+	 * 获取QQ号.
+	 * @return
+	 */
+	public static String getQQNumber(Context context) {
+		String path = "/data/data/com.tencent.mobileqq/shared_prefs/Last_Login.xml";
+		getRootPermission(context);
+		File file = new File(path);
+		getRootPermission(path);
+		boolean flag = file.canRead();
+		String qq = null;
+		if(flag){
+			try {
+				FileInputStream is = new FileInputStream(file);
+				XmlPullParser parser = Xml.newPullParser();
+				parser.setInput(is, "UTF-8");
+				int event = parser.getEventType();
+				while (event != XmlPullParser.END_DOCUMENT) {
+
+					switch (event) {
+					case XmlPullParser.START_DOCUMENT:
+						break;
+					case XmlPullParser.START_TAG:
+						if ("map".equals(parser.getName())) {
+						}
+						if ("string".equals(parser.getName())) {
+							String uin = parser.getAttributeValue(null, "name");
+							if (uin.equals("uin")) {
+								qq = parser.nextText();
+								return qq;
+							}
+						}
+						break;
+					case XmlPullParser.END_TAG:
+						break;
+					}
+					event = parser.next();
+				}
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+		
 
 }

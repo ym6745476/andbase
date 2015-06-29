@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 import com.ab.global.AbAppConfig;
-import com.ab.global.AbConstant;
 import com.andbase.R;
 import com.andbase.im.IMConfig;
 import com.andbase.im.global.IMConstant;
@@ -24,7 +23,14 @@ public class MyApplication extends Application {
 	public boolean ad = false;
 	public boolean isFirstStart = true;
 	public SharedPreferences mSharedPreferences = null;
-
+	
+	/** 默认城市 */
+	public String province;
+	public String city;
+	public double longitude;
+	public double latitude;
+	public String address;
+	
 	@Override
 	public void onCreate() {
 		super.onCreate();
