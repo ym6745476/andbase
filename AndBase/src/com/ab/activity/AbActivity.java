@@ -32,7 +32,6 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 
 import com.ab.global.AbActivityManager;
-import com.ab.util.AbViewUtil;
 import com.ab.view.ioc.AbIocEventListener;
 import com.ab.view.ioc.AbIocSelect;
 import com.ab.view.ioc.AbIocView;
