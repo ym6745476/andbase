@@ -95,6 +95,7 @@ public class HttpActivity extends AbActivity {
 					public void onSuccess(int statusCode, String content) {
 		        		Log.d(TAG, "onSuccess");
 		        		
+		        		//不能写在完成中，因为完成在有重定向的情况会提前结束
 		        		AbDialogUtil.removeDialog(HttpActivity.this);
 		        		
 		        		AbDialogUtil.showAlertDialog(HttpActivity.this,"返回结果",content.trim(),new AbDialogOnClickListener(){

@@ -50,6 +50,7 @@ public class SlidingPlayViewActivity extends AbActivity {
 		mPlayText2.setText("33333333333333333");
 		mPlayImage2.setBackgroundResource(R.drawable.pic3);
 
+		mSlidingPlayView.setNavPageResources(R.drawable.play_display,R.drawable.play_hide);
 		mSlidingPlayView.setNavHorizontalGravity(Gravity.RIGHT);
 		mSlidingPlayView.addView(mPlayView);
 		mSlidingPlayView.addView(mPlayView1);
