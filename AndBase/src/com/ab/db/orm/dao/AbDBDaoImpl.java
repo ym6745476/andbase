@@ -1157,6 +1157,28 @@ public class AbDBDaoImpl<T> extends AbBasicDBDao implements AbDBDao<T> {
 		}
 	}
 	
+	/**
+	* 描述：关闭数据库 ，数据操作后必须调用.
+	* 当发生异常时，事务可以回滚。
+	*/
+	public void closeDatabaseAndRollback(){
+	        try {
+	            lock.lock();
+	            if(db!=null){
+	                if(db.inTransaction()){
+	                    db.endTransaction();
+	                }
+	                if(db.isOpen()){
+	                    db.close();
+	                }
+	            }
+	        }catch (Exception e) {
+	            e.printStackTrace();
+	        }finally{
+	            lock.unlock();
+	        }
+	    }
+	
 
 	/**
 	 * 打印当前sql语句.

@@ -20,7 +20,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
@@ -39,6 +39,7 @@ import android.widget.ScrollView;
 
 import com.ab.adapter.AbViewPagerAdapter;
 import com.ab.util.AbFileUtil;
+import com.ab.util.AbViewUtil;
 import com.ab.view.sample.AbInnerViewPager;
 
 // TODO: Auto-generated Javadoc
@@ -70,7 +71,8 @@ public class AbSlidingPlayView extends LinearLayout {
 	private int count, position;
 
 	/** 导航图片. */
-	private Bitmap displayImage, hideImage;
+	private Drawable displayDrawable;
+	private Drawable hideDrawable;
 	
 	/** 点击. */
 	private AbOnItemClickListener mOnItemClickListener;
@@ -157,9 +159,6 @@ public class AbSlidingPlayView extends LinearLayout {
 		mRelativeLayout.addView(mNavLayoutParent,lp2);
 		addView(mRelativeLayout,new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 		
-		displayImage = AbFileUtil.getBitmapFromSrc("image/play_display.png");
-		hideImage = AbFileUtil.getBitmapFromSrc("image/play_hide.png");
-		
 		mListViews = new ArrayList<View>();
 		mAbViewPagerAdapter = new AbViewPagerAdapter(context,mListViews);
 		mViewPager.setAdapter(mAbViewPagerAdapter);
@@ -196,16 +195,20 @@ public class AbSlidingPlayView extends LinearLayout {
 		navLinearLayout.setVisibility(View.VISIBLE);
 		count = mListViews.size();
 		navLayoutParams.setMargins(5, 5, 5, 5);
+		navLayoutParams.width = 15;
+		navLayoutParams.height = 15;
 		for (int j = 0; j < count; j++) {
 			ImageView imageView = new ImageView(context);
 			imageView.setLayoutParams(navLayoutParams);
 			if (j == 0) {
-				imageView.setImageBitmap(displayImage);
+				imageView.setImageDrawable(displayDrawable);
 			} else {
-				imageView.setImageBitmap(hideImage);
+				imageView.setImageDrawable(hideDrawable);
 			}
+			AbViewUtil.scaleView(imageView);
 			navLinearLayout.addView(imageView, j);
 		}
+		
 	}
 
 
@@ -216,9 +219,9 @@ public class AbSlidingPlayView extends LinearLayout {
 		position = mViewPager.getCurrentItem();
 		for (int j = 0; j < count; j++) {
 			if (position == j) {
-				((ImageView)navLinearLayout.getChildAt(position)).setImageBitmap(displayImage);
+				((ImageView)navLinearLayout.getChildAt(position)).setImageDrawable(displayDrawable);
 			} else {
-				((ImageView)navLinearLayout.getChildAt(j)).setImageBitmap(hideImage);
+				((ImageView)navLinearLayout.getChildAt(j)).setImageDrawable(hideDrawable);
 			}
 		}
 	}
@@ -428,19 +431,19 @@ public class AbSlidingPlayView extends LinearLayout {
     	mAbOnTouchListener = abOnTouchListener;
     }
     
-    
+	
 	/**
-	 * Sets the page line image.
+	 * 设置页的指示图标
 	 *
-	 * @param displayImage the display image
-	 * @param hideImage the hide image
+	 * @param displayDrawable 选择状态图
+	 * @param hideDrawable 未选择状态图
 	 */
-	public void setPageLineImage(Bitmap displayImage,Bitmap hideImage) {
-		this.displayImage = displayImage;
-		this.hideImage = hideImage;
+	public void setNavPageResources(int displayResId,int hideResId) {
+		this.displayDrawable = this.getResources().getDrawable(displayResId);
+		this.hideDrawable = this.getResources().getDrawable(hideResId);
 		creatIndex();
-		
 	}
+	
 
 	/**
 	 * 描述：获取这个滑动的ViewPager类.

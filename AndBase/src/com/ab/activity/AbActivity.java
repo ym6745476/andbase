@@ -329,6 +329,7 @@ public abstract class AbActivity extends FragmentActivity {
 	 */
 	@Override
 	public void finish() {
+		AbActivityManager.getInstance().removeActivity(this);
 		super.finish();
 	}
 	

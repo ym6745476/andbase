@@ -162,12 +162,14 @@ public class AbImageLoader {
 			
 			@Override
 			public void onError(ImageView imageView) {
-				
+				imageView.setVisibility(View.VISIBLE);
+				imageView.setImageBitmap(null);
 			}
 			
 			@Override
 			public void onEmpty(ImageView imageView) {
-				
+				imageView.setVisibility(View.VISIBLE);
+				imageView.setImageBitmap(null);
 			}
 		});
     }
@@ -198,12 +200,16 @@ public class AbImageLoader {
 			
 			@Override
 			public void onError(ImageView imageView) {
-				
+				loadingView.setVisibility(View.GONE);
+				imageView.setVisibility(View.VISIBLE);
+				imageView.setImageBitmap(null);
 			}
 			
 			@Override
 			public void onEmpty(ImageView imageView) {
-				
+				imageView.setImageBitmap(null);
+				loadingView.setVisibility(View.GONE);
+				imageView.setVisibility(View.VISIBLE);
 			}
 		});
     }

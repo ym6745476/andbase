@@ -107,7 +107,7 @@ public class AbDiskBaseCache implements AbDiskCache {
                 CacheHeader entry = CacheHeader.readHeader(fis);
                 entry.size = file.length();
                 putEntry(entry.key, entry);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 if (file != null) {
                    file.delete();
                 }

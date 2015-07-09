@@ -40,6 +40,14 @@ public class AbActivityManager {
 	public void addActivity(Activity activity) {
 		activityList.add(activity);
 	}
+	
+	/**
+	 * 移除Activity从容器中.
+	 * @param activity
+	 */
+	public void removeActivity(Activity activity) {
+		activityList.remove(activity);
+	}
 
 	/**
 	 * 遍历所有Activity并finish.

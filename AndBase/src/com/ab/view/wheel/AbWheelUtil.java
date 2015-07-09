@@ -108,9 +108,9 @@ public class AbWheelUtil {
 		
 		// 日
 		// 判断大小月及是否闰年,用来确定"日"的数据
-		if (list_big.contains(String.valueOf(month + 1))) {
+		if (list_big.contains(String.valueOf(month))) {
 			mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 31));
-		} else if (list_little.contains(String.valueOf(month + 1))) {
+		} else if (list_little.contains(String.valueOf(month))) {
 			mWheelViewD.setAdapter(new AbNumericWheelAdapter(1, 30));
 		} else {
 			// 闰年
