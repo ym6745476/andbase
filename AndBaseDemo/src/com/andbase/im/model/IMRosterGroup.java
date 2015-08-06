@@ -2,6 +2,8 @@ package com.andbase.im.model;
 
 import java.util.List;
 
+import com.andbase.model.User;
+
 /**
  * 
  * IM联系人分组
@@ -11,9 +13,9 @@ public class IMRosterGroup {
 	// 分组名称
 	private String name;
 	// 好友列表
-	private List<IMUser> users;
+	private List<User> users;
 
-	public IMRosterGroup(String name, List<IMUser> users) {
+	public IMRosterGroup(String name, List<User> users) {
 		this.name = name;
 		this.users = users;
 	}
@@ -32,11 +34,11 @@ public class IMRosterGroup {
 		this.name = name;
 	}
 
-	public List<IMUser> getUsers() {
+	public List<User> getUsers() {
 		return users;
 	}
 
-	public void setUsers(List<IMUser> users) {
+	public void setUsers(List<User> users) {
 		this.users = users;
 	}
 }

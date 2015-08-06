@@ -55,12 +55,7 @@ public class GraphicalView extends View {
   private Handler mHandler;
   /** The zoom buttons rectangle. */
   private RectF mZoomR = new RectF();
-  /** The zoom in icon. */
-  private Bitmap zoomInImage;
-  /** The zoom out icon. */
-  private Bitmap zoomOutImage;
-  /** The fit zoom icon. */
-  private Bitmap fitZoomImage;
+ 
   /** The zoom buttons background color. */
   private static final int ZOOM_BUTTONS_COLOR = Color.argb(175, 150, 150, 150);
   /** The zoom in tool. */
@@ -93,18 +88,14 @@ public class GraphicalView extends View {
     } else {
       mRenderer = ((RoundChart) mChart).getRenderer();
     }
-    if (mRenderer.isZoomButtonsVisible()) {
-      zoomInImage = AbFileUtil.getBitmapFromSrc("image/zoom_in.png");
-      zoomOutImage = AbFileUtil.getBitmapFromSrc("image/zoom_out.png");
-      fitZoomImage = AbFileUtil.getBitmapFromSrc("image/zoom-1.png");
-    }
 
     if (mRenderer instanceof XYMultipleSeriesRenderer
         && ((XYMultipleSeriesRenderer) mRenderer).getMarginsColor() == XYMultipleSeriesRenderer.NO_COLOR) {
       ((XYMultipleSeriesRenderer) mRenderer).setMarginsColor(mPaint.getColor());
     }
-    if (mRenderer.isZoomEnabled() && mRenderer.isZoomButtonsVisible()
-        || mRenderer.isExternalZoomEnabled()) {
+    
+    //缩放控制器
+    if (mRenderer.isZoomEnabled()) {
       mZoomIn = new Zoom(mChart, true, mRenderer.getZoomRate());
       mZoomOut = new Zoom(mChart, false, mRenderer.getZoomRate());
       mFitZoom = new FitZoom(mChart);
@@ -171,15 +162,6 @@ public class GraphicalView extends View {
     return null;
   }
 
-  /**
-   * 描述：TODO.
-   *
-   * @version v1.0
-   * @param canvas the canvas
-   * @see android.view.View#onDraw(android.graphics.Canvas)
-   * @author: amsoft.cn
-   * @date：2013-6-17 上午9:04:51
-   */
   @Override
   protected void onDraw(Canvas canvas) {
     super.onDraw(canvas);
@@ -196,29 +178,6 @@ public class GraphicalView extends View {
     }
     mChart.draw(canvas, left, top, width, height, mPaint);
     
-    if (mRenderer != null && mRenderer.isZoomEnabled() && mRenderer.isZoomButtonsVisible()) {
-      mPaint.setColor(ZOOM_BUTTONS_COLOR);
-      
-      int bitmapWidth = zoomInImage.getWidth();
-      int bitmapHeight = zoomInImage.getHeight();
-      
-      int rectMargin = 10;
-      int topPadding = 15;
-      int leftPadding = 20;
-      int leftRect = width - bitmapWidth * 3 - rectMargin - 4*leftPadding;
-      int topRect = height - bitmapHeight - rectMargin -2*topPadding; 
-      int rightRect = width-rectMargin; 
-      int bottomRect = height-rectMargin; 
-      
-      mZoomR.set(leftRect, topRect, rightRect, bottomRect);
-      canvas.drawRoundRect(mZoomR, bitmapWidth / 2, bitmapWidth / 2, mPaint);
-      //画图标
-      float buttonY = height - bitmapHeight - rectMargin-topPadding;
-      canvas.drawBitmap(zoomInImage, width - rectMargin-bitmapWidth*3-3*leftPadding, buttonY, null);
-      canvas.drawBitmap(zoomOutImage,width - rectMargin-bitmapWidth*2-2*leftPadding, buttonY, null);
-      canvas.drawBitmap(fitZoomImage, width - rectMargin-bitmapWidth-leftPadding, buttonY, null);
-    }
-    
     if (mChart instanceof XYChart) {
     	XYMultipleSeriesRenderer  mXYMultipleSeriesRenderer  = ((XYChart) mChart).getRenderer();
     
@@ -233,7 +192,6 @@ public class GraphicalView extends View {
 	        //按分辨率转换
 	        scaleTopPadding = AbViewUtil.scaleValue(mContext, scaleTopPadding);
 	        scaleBottomPadding = AbViewUtil.scaleValue(mContext, scaleBottomPadding);
-	        
 	        
 	        //Y轴位置
 	        int bottomY = 0;
@@ -532,7 +490,7 @@ public class GraphicalView extends View {
             } else {
             }
             if(newY >= bottom-10){
-          	//不是图表事件
+          	  //不是图表事件
               if (mTouchHandler.handleTouchControl(event)) {
                 return true;
               }

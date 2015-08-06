@@ -8,11 +8,13 @@ import android.graphics.Paint.Align;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.ab.activity.AbActivity;
 import com.ab.view.chart.CategorySeries;
 import com.ab.view.chart.ChartFactory;
+import com.ab.view.chart.GraphicalView;
 import com.ab.view.chart.PointStyle;
 import com.ab.view.chart.XYMultipleSeriesDataset;
 import com.ab.view.chart.XYMultipleSeriesRenderer;
@@ -128,7 +130,6 @@ public class XYLineChartActivity extends AbActivity {
 	    renderer.setYLabelsAlign(Align.LEFT);
 	    renderer.setPanEnabled(true, true);
 	    renderer.setZoomEnabled(true);
-	    renderer.setZoomButtonsVisible(true);
 	    renderer.setZoomRate(1.1f);
 	    renderer.setBarSpacing(0.5f);
 	    
@@ -177,7 +178,7 @@ public class XYLineChartActivity extends AbActivity {
 	    renderer.setMarginsColor(Color.rgb(222, 222, 200));
 	    
 	    //线图
-	    View chart = ChartFactory.getLineChartView(this,mXYMultipleSeriesDataset,renderer);
+	    final GraphicalView chart = ChartFactory.getLineChartView(this,mXYMultipleSeriesDataset,renderer);
         linearLayout.addView(chart);
 	    
 	    //获取图形View
@@ -188,6 +189,34 @@ public class XYLineChartActivity extends AbActivity {
         
         /*Intent intent = ChartFactory.getLineChartIntent(this, mXYMultipleSeriesDataset, renderer);
 		startActivity(intent);*/
+        
+        ImageView  zoomIn = (ImageView)this.findViewById(R.id.zoomIn);
+		ImageView  zoomOut = (ImageView)this.findViewById(R.id.zoomOut);
+		ImageView  zoom1 = (ImageView)this.findViewById(R.id.zoom1);
+		
+		zoomIn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				chart.zoomIn();
+			}
+		});
+		
+		zoomOut.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				chart.zoomOut();
+			}
+		});
+		
+		zoom1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				chart.zoomReset();
+			}
+		});
 		
       } 
     

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -24,7 +23,7 @@ import com.ab.db.storage.AbSqliteStorageListener.AbDataSelectListener;
 import com.ab.db.storage.AbStorageQuery;
 import com.ab.task.AbTask;
 import com.ab.task.AbTaskItem;
-import com.ab.task.AbTaskObjectListener;
+import com.ab.task.AbTaskListener;
 import com.ab.util.AbDialogUtil;
 import com.ab.util.AbSharedUtil;
 import com.ab.util.AbStrUtil;
@@ -42,8 +41,8 @@ public class LoginActivity extends AbActivity {
 	private EditText userName = null;
 	private EditText userPwd = null;
 	private MyApplication application;
-	private String mStr_name = null;
-	private String mStr_pwd = null;
+	private String mStrName = null;
+	private String mStrPwd = null;
 	private ImageButton mClear1;
 	private ImageButton mClear2;
 	private AbTitleBar mAbTitleBar = null;
@@ -134,6 +133,9 @@ public class LoginActivity extends AbActivity {
 			checkBox.setChecked(false);
 		}
 		
+		userName.setText("15150509589");
+		userPwd.setText("123456");
+
         initTitleRightLayout();
         
         userName.addTextChangedListener(new TextWatcher() {
@@ -238,112 +240,97 @@ public class LoginActivity extends AbActivity {
 		
 		@Override
 		public void onClick(View v) {
-			if(v==loginBtn){
-				mStr_name = userName.getText().toString();
-				mStr_pwd = userPwd.getText().toString();
+			if(v == loginBtn){
+				mStrName = userName.getText().toString();
+				mStrPwd = userPwd.getText().toString();
 				
-				if (TextUtils.isEmpty(mStr_name)) {
+				if (TextUtils.isEmpty(mStrName)) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_name);
 					userName.setFocusable(true);
 					userName.requestFocus();
 					return;
 				}
 				
-				if (!AbStrUtil.isNumberLetter(mStr_name)) {
+				if (!AbStrUtil.isNumberLetter(mStrName)) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_name_expr);
 					userName.setFocusable(true);
 					userName.requestFocus();
 					return;
 				}
 				
-				if (AbStrUtil.strLength(mStr_name)<3) {
+				if (AbStrUtil.strLength(mStrName)<3) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_name_length1);
 					userName.setFocusable(true);
 					userName.requestFocus();
 					return;
 				}
 				
-				if (AbStrUtil.strLength(mStr_name)>20) {
+				if (AbStrUtil.strLength(mStrName)>20) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_name_length2);
 					userName.setFocusable(true);
 					userName.requestFocus();
 					return;
 				}
 				
-				if (TextUtils.isEmpty(mStr_pwd)) {
+				if (AbStrUtil.isEmpty(mStrPwd)) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_pwd);
 					userPwd.setFocusable(true);
 					userPwd.requestFocus();
 					return;
 				}
 				
-				if (AbStrUtil.strLength(mStr_pwd)<6) {
+				if (AbStrUtil.strLength(mStrPwd)<6) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_pwd_length1);
 					userPwd.setFocusable(true);
 					userPwd.requestFocus();
 					return;
 				}
 				
-				if (AbStrUtil.strLength(mStr_pwd)>20) {
+				if (AbStrUtil.strLength(mStrPwd)>20) {
 					AbToastUtil.showToast(LoginActivity.this,R.string.error_pwd_length2);
 					userPwd.setFocusable(true);
 					userPwd.requestFocus();
 					return;
 				}
 				
-				
-				AbDialogUtil.showProgressDialog(LoginActivity.this,R.drawable.ic_load,"登录到IM");
-				
-				loginIMTask(mStr_name,mStr_pwd);
-
+				login(mStrName,mStrPwd);
 			}
 			
 		}
 	}
    
    
-   public void loginIMTask(final String userName,final String password){
-       AbTask task = new AbTask();
-       final AbTaskItem item = new AbTaskItem();
-       item.setListener(new AbTaskObjectListener(){
+   public void  login(final String userName, final String password){
+	    AbDialogUtil.showProgressDialog(LoginActivity.this, 0, "正在登录...");
+	    AbTask task = AbTask.newInstance();
+		//定义异步执行的对象
+  	    final AbTaskItem item = new AbTaskItem();
+		item.setListener(new AbTaskListener() {
 
-           @Override
-           public <T> void update(T entity) {
-        	   AbDialogUtil.removeDialog(LoginActivity.this);
-               Log.d("TAG", "登录执行完成");
-               int code = (Integer)entity;
-               if(code == IMUtil.SUCCESS_CODE || code == IMUtil.LOGGED_CODE){
-            	   AbToastUtil.showToast(LoginActivity.this,"IM登录成功");
-            	   
-            	   User user = new User();
-            	   user.setUserName(userName);
-            	   user.setPassword(password);
-            	   user.setLoginUser(true);
-            	   application.updateLoginParams(user); 
-            	   saveUserData(user);
-                   setResult(RESULT_OK);
-                   finish();
-               }else if(code == IMUtil.FAIL_CODE){
-            	   AbToastUtil.showToast(LoginActivity.this,"IM登录失败");
-               }
-               
-           }
+			@Override
+			public void update() {
+				AbDialogUtil.removeDialog(LoginActivity.this);
+				AbToastUtil.showToast(LoginActivity.this,"登录成功！");
+         	    User user = new User();
+         	    user.setUserName(userName);
+         	    user.setPassword(password);
+         	    user.setLoginUser(true);
+         	    application.updateLoginParams(user); 
+         	    saveUserData(user);
+                setResult(RESULT_OK);
+                finish();
+			}
 
-           @SuppressWarnings("unchecked")
-           @Override
-           public Integer getObject() {
-        	   int code = IMUtil.FAIL_CODE;
-               try{
-                   code = IMUtil.loginIM(mStr_name,mStr_pwd);
-               } catch (Exception e) {
-                   e.printStackTrace();
-               }
-               return code;
-           }
-           
-       });
-       
-       task.execute(item);
+			@Override
+			public void get() {
+	   		    try {
+	   				IMUtil.login(LoginActivity.this,userName, password);
+	   		    } catch (Exception e) {
+	   		    	e.printStackTrace();
+	   		    }
+		  };
+		});
+        task.execute(item);
    }
    
 	/**

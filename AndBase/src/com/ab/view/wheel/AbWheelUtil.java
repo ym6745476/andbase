@@ -20,6 +20,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
+import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -62,7 +63,7 @@ public class AbWheelUtil {
 	 * @param endYearOffset 结束的年与开始的年的偏移
 	 * @param initStart  轮子是否初始化默认时间为当前时间
 	 */
-	public static void initWheelDatePicker(final AbActivity activity,final TextView mText,final AbWheelView mWheelViewY,final AbWheelView mWheelViewM,final AbWheelView mWheelViewD,
+	public static void initWheelDatePicker(final Activity activity,final TextView mText,final AbWheelView mWheelViewY,final AbWheelView mWheelViewM,final AbWheelView mWheelViewD,
 			 Button okBtn,Button cancelBtn,
 			 int defaultYear,int defaultMonth,int defaultDay,final int startYear,int endYearOffset,boolean initStart){
 		
@@ -206,7 +207,7 @@ public class AbWheelUtil {
 	 * 描述：默认的月日时分的时间选择器.
 	 *
 	 * @version v1.0
-	 * @param activity     AbActivity对象
+	 * @param activity     Activity对象
 	 * @param mText the m text
 	 * @param mWheelViewMD  选择月日的轮子
 	 * @param mWheelViewHH the m wheel view hh
@@ -344,7 +345,7 @@ public class AbWheelUtil {
 	/**
 	 * 描述：默认的时分的时间选择器.
 	 *
-	 * @param activity     AbActivity对象
+	 * @param activity     Activity对象
 	 * @param mText the m text
 	 * @param mWheelViewHH the m wheel view hh
 	 * @param mWheelViewMM  选择分的轮子
@@ -354,7 +355,7 @@ public class AbWheelUtil {
 	 * @param defaultMinute the default minute
 	 * @param initStart the init start
 	 */
-	public static void initWheelTimePicker2(final AbActivity activity,final TextView mText,final AbWheelView mWheelViewHH,final AbWheelView mWheelViewMM,
+	public static void initWheelTimePicker2(final Activity activity,final TextView mText,final AbWheelView mWheelViewHH,final AbWheelView mWheelViewMM,
 			 Button okBtn,Button cancelBtn,
 			 int defaultHour,int defaultMinute,boolean initStart){
 		Calendar calendar = Calendar.getInstance();

@@ -206,7 +206,7 @@ public class MainMenuFragment extends Fragment {
 		mChild2.add(m6);
 
 		mUser = application.mUser;
-		if (mUser != null) {
+		if (application.isLogin) {
 			AbMenuItem m7 = new AbMenuItem();
 			m7.setIconId(R.drawable.quit);
 			m7.setText("注销");
@@ -222,7 +222,7 @@ public class MainMenuFragment extends Fragment {
 			mMenuListView.expandGroup(i);
 		}
 
-		if (mUser == null) {
+		if (!application.isLogin) {
 			setNameText("登录");
 			setUserPhoto(R.drawable.photo01);
 			setUserPoint("0");
@@ -231,9 +231,7 @@ public class MainMenuFragment extends Fragment {
 
 				@Override
 				public void onClick(View arg0) {
-					if (mUser == null) {
-						mActivity.toLogin(mActivity.LOGIN_CODE);
-					}
+					mActivity.toLogin(mActivity.LOGIN_CODE);
 				}
 			});
 		} else {
@@ -271,7 +269,7 @@ public class MainMenuFragment extends Fragment {
 				if (groupPosition == 0) {
 					if (childPosition == 0) {
 						// 联系人
-						if (application.mUser == null) {
+						if (!application.isLogin) {
 							mActivity.toLogin(mActivity.FRIEND_CODE);
 						} else {
 							Intent intent = new Intent(mActivity,
@@ -300,7 +298,7 @@ public class MainMenuFragment extends Fragment {
 						// 推荐
 
 					} else if (childPosition == 2) {
-						if (mUser != null) {
+						if (application.isLogin) {
 							AbDialogUtil.showAlertDialog(mActivity, "注销",
 									"确定要注销该用户吗?",
 									new AbDialogOnClickListener() {
@@ -328,7 +326,7 @@ public class MainMenuFragment extends Fragment {
 							startActivity(intent);
 						}
 					} else if (childPosition == 3) {
-						if (application.mUser != null) {
+						if (application.isLogin) {
 							// 关于
 							Intent intent = new Intent(mActivity,
 									AboutActivity.class);

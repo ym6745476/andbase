@@ -20,9 +20,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.util.concurrent.Executor;
 
 import javax.net.ssl.SSLHandshakeException;
@@ -78,6 +79,7 @@ import com.ab.cache.http.AbHttpBaseCache;
 import com.ab.global.AbAppConfig;
 import com.ab.global.AbAppException;
 import com.ab.http.entity.MultipartEntity;
+import com.ab.http.entity.mine.content.StringBody;
 import com.ab.http.ssl.EasySSLProtocolSocketFactory;
 import com.ab.image.AbImageLoader;
 import com.ab.task.thread.AbThreadFactory;
@@ -195,6 +197,152 @@ public class AbHttpClient {
     	this.diskCache = new AbDiskBaseCache(cacheDir);
 	}
 	
+	/**
+	 * 
+	 * 无线程的get请求(无参数).
+	 * @param url 如果有特殊字符需要URLEncoder
+	 * @param responseListener
+	 */
+	public void getWithoutThread(String url,AbStringHttpResponseListener responseListener){
+		getWithoutThread(url,responseListener);
+	}
+	
+	
+	/**
+	 * 描述：无线程的get请求.
+	 *
+	 * @param url the url  如果有特殊字符需要URLEncoder
+	 * @param params the params  不需要URLEncoder
+	 * @param responseListener the response listener
+	 */
+	public void getWithoutThread(String url,AbRequestParams params,final AbStringHttpResponseListener responseListener) {
+		HttpURLConnection urlConn = null;
+		InputStream is = null;
+		try {
+			responseListener.onStart();
+			
+			if(!AbAppUtil.isNetworkAvailable(mContext)){
+				Thread.sleep(200);
+				responseListener.onFailure(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+		        return;
+		    }
+			
+			String resultString = null;
+			
+			if(params!=null){
+			  if(url.indexOf("?")==-1){
+				  url += "?";
+			  }
+			  url += params.getParamString();
+			}
+			URL requestUrl = new URL(url);
+			urlConn = (HttpURLConnection) requestUrl.openConnection();
+	        urlConn.setRequestMethod("GET");
+	        urlConn.setConnectTimeout(mTimeout);
+	        urlConn.setReadTimeout(mTimeout);
+			is = urlConn.getInputStream();
+            if (urlConn.getResponseCode() == HttpStatus.SC_OK){
+            	resultString = readString(is);
+            }else{
+            	resultString = readString(urlConn.getErrorStream());
+            }
+            is.close();
+            responseListener.onSuccess(AbHttpStatus.SUCCESS_CODE, resultString);
+		} catch (Exception e) { 
+			e.printStackTrace();
+			AbLogUtil.i(mContext, "[HTTP GET]:"+url+",error："+e.getMessage());
+			//发送失败消息
+			responseListener.onFailure(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+		} finally {
+			if (urlConn != null){
+				urlConn.disconnect();
+			}
+			responseListener.onFinish();
+		}
+	}
+	
+	/**
+	 * 描述：无线程的post请求.
+	 * @param url the url
+	 * @param responseListener the response listener
+	 */
+	public void postWithoutThread(String url,AbStringHttpResponseListener responseListener) {
+		postWithoutThread(url,null,responseListener);
+	}
+	
+	/**
+	 * 描述：无线程的post请求.
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void postWithoutThread(String url,AbRequestParams params,AbStringHttpResponseListener responseListener) {
+		HttpURLConnection urlConn = null;
+		InputStream is = null;
+		OutputStream os = null;
+		try {
+			responseListener.onStart();
+			
+			if(!AbAppUtil.isNetworkAvailable(mContext)){
+				Thread.sleep(200);
+				responseListener.onFailure(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+		        return;
+		    }
+			
+			String resultString = null;
+			URL requestUrl = new URL(url);
+			urlConn = (HttpURLConnection) requestUrl.openConnection();
+	        urlConn.setRequestMethod("POST");
+	        urlConn.setConnectTimeout(mTimeout);
+	        urlConn.setReadTimeout(mTimeout);
+	        urlConn.setDoOutput(true);
+	        
+	        os = urlConn.getOutputStream();
+	        
+	        //是否包含文件
+	        boolean isContainFile = false;
+	        
+	        if(params != null){
+	    	    //使用NameValuePair来保存要传递的Post参数设置字符集 
+		        HttpEntity reqEntity = params.getEntity();
+		        reqEntity.writeTo(os);
+		        if(params.getFileParams().size()>0){
+		    	    isContainFile = true;
+		        }
+		    }
+	        
+			if(isContainFile){
+				urlConn.setRequestProperty("connection", "keep-alive");
+		        urlConn.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + params.boundaryString());
+				MultipartEntity reqEntity = params.getMultiPart();
+		        reqEntity.writeTo(os);
+			}
+			
+			os.flush();
+			os.close();
+			
+			is = urlConn.getInputStream();
+            if (urlConn.getResponseCode() == HttpStatus.SC_OK){
+            	resultString = readString(is);
+            }else{
+            	resultString = readString(urlConn.getErrorStream());
+            }
+            is.close();
+            responseListener.onSuccess(AbHttpStatus.SUCCESS_CODE, resultString);
+		} catch (Exception e) { 
+			e.printStackTrace();
+			AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error："+e.getMessage());
+			//发送失败消息
+			responseListener.onFailure(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+		} finally {
+			if (urlConn != null){
+				urlConn.disconnect();
+			}
+			responseListener.onFinish();
+		}
+	}
+	
+	
 
 	/**
 	 * 描述：带参数的get请求.
@@ -218,6 +366,7 @@ public class AbHttpClient {
     		}                 
     	});      
 	}
+	
 	
 	/**
 	 * 描述：带参数的get请求(有缓存).
@@ -397,10 +546,75 @@ public class AbHttpClient {
 			  
 		} catch (Exception e) {
 			e.printStackTrace();
-			AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error："+e.getMessage());
+			AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error:"+e.getMessage());
 			//发送失败消息
 			responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
 		}
+	}
+	
+	/**
+     * 发送Json请求
+     * @param url
+     * @param params
+     * @return
+     */
+    public void postJson(final String url, final AbJsonParams params, final AbStringHttpResponseListener responseListener) {
+    	responseListener.setHandler(new ResponderHandler(responseListener));
+		mExecutorService.execute(new Runnable() {
+    		public void run() {
+    			HttpURLConnection urlConn = null;
+    			try {
+    				responseListener.sendStartMessage();
+        			
+        			if(!AbAppUtil.isNetworkAvailable(mContext)){
+        				Thread.sleep(200);
+    					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+    			        return;
+    			    }
+        			
+    				String resultString = null;
+					URL requestUrl = new URL(url);
+					urlConn = (HttpURLConnection) requestUrl.openConnection();
+			        urlConn.setRequestMethod("POST");
+			        urlConn.setConnectTimeout(mTimeout);
+			        urlConn.setReadTimeout(mTimeout);
+			        urlConn.setDoOutput(true);
+			        StringBody body = null;
+					if(params!=null){
+						urlConn.setRequestProperty("connection", "keep-alive");
+				        urlConn.setRequestProperty("Content-Type", "application/json");
+				        body = StringBody.create(params.getJson(),"application/json", Charset.forName("UTF-8"));
+				        body.writeTo(urlConn.getOutputStream(),null);
+					}else{
+						urlConn.connect();
+					}
+					if(body!=null){
+						AbLogUtil.i(mContext, "[HTTP POST]:"+url+",body:"+params.getJson());
+					}else{
+						AbLogUtil.i(mContext, "[HTTP POST]:"+url+",body:无");
+					}
+					
+		            if (urlConn.getResponseCode() == HttpStatus.SC_OK){
+		            	resultString = readString(urlConn.getInputStream());
+		            }else{
+		            	resultString = readString(urlConn.getErrorStream());
+		            }
+		            AbLogUtil.i(mContext, "[HTTP POST]Result:"+resultString);
+		            urlConn.getInputStream().close();
+		            responseListener.sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, resultString);
+    			} catch (Exception e) { 
+    				e.printStackTrace();
+					AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error："+e.getMessage());
+					//发送失败消息
+					responseListener.sendFailureMessage(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+    			} finally {
+					if (urlConn != null)
+						urlConn.disconnect();
+					
+					responseListener.sendFinishMessage();
+				}
+    		}                 
+    	});      
 	}
 	
 	/**
@@ -445,7 +659,6 @@ public class AbHttpClient {
 		            }else{
 		            	resultString = readString(urlConn.getErrorStream());
 		            }
-		            resultString = URLEncoder.encode(resultString, encode);
 		            urlConn.getInputStream().close();
 		            responseListener.sendSuccessMessage(AbHttpStatus.SUCCESS_CODE, resultString);
     			} catch (Exception e) { 
@@ -814,18 +1027,18 @@ public class AbHttpClient {
 	                      String charset = EntityUtils.getContentCharSet(entity) == null ? encode : EntityUtils.getContentCharSet(entity);
 	      	              responseBody = new String(EntityUtils.toByteArray(entity), charset);
 	      	              
-	      	              AbLogUtil.i(mContext, "[HTTP GET]:"+request.getURI()+",result："+responseBody);
+	      	              AbLogUtil.i(mContext, "[HTTP Response]:"+request.getURI()+",result："+responseBody);
 	      	              
 	      	              ((AbStringHttpResponseListener)mResponseListener).sendSuccessMessage(statusCode, responseBody);
 	  				      
 	  				  }else if(mResponseListener instanceof AbBinaryHttpResponseListener){
 	  					  responseBody = "Binary";
-	  					  AbLogUtil.i(mContext, "[HTTP GET]:"+request.getURI()+",result："+responseBody);
+	  					  AbLogUtil.i(mContext, "[HTTP Response]:"+request.getURI()+",result："+responseBody);
 	  					  readResponseData(entity,((AbBinaryHttpResponseListener)mResponseListener));
 	  				  }else if(mResponseListener instanceof AbFileHttpResponseListener){
 	  					  //获取文件名
 	  					  String fileName = AbFileUtil.getCacheFileNameFromUrl(mUrl, response);
-	  					  AbLogUtil.i(mContext, "[HTTP GET]:"+request.getURI()+",result："+fileName);
+	  					  AbLogUtil.i(mContext, "[HTTP Response]:"+request.getURI()+",result："+fileName);
 	  					  writeResponseData(mContext,entity,fileName,((AbFileHttpResponseListener)mResponseListener));
 	  				  }
 	      		      //资源释放!!!
@@ -914,17 +1127,17 @@ public class AbHttpClient {
 	private String readString(InputStream is) {
 		StringBuffer rst = new StringBuffer();
 		
-		byte[] buffer = new byte[1048576];
+		byte[] buffer = new byte[1024];
 		int len = 0;
 		
 		try {
-			while ((len = is.read(buffer)) > 0)
-				for (int i = 0; i < len; ++i)
-					rst.append((char)buffer[i]);
-		} catch (IOException e) {
+			while ((len = is.read(buffer)) > 0){
+				rst.append(new String(buffer, 0,len,"UTF-8"));
+			}
+			
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		return rst.toString();
 	}
 

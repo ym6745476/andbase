@@ -7,7 +7,6 @@ import android.media.MediaRecorder;
 import android.util.Log;
 
 import com.ab.util.AbFileUtil;
-import com.andbase.im.global.IMConstant;
 
 
 public class IMRecorder {
@@ -54,13 +53,16 @@ public class IMRecorder {
 	 * 开始录音
 	 */
 	public void startRecording() {
+		
+		//录音的文件类型
+	    String AMR_FILE = ".amr";
 	    
 		if (isPreRecording || isRecording){
 		    return;
 		}
 		
 		if(fileName == null){
-		    fileName = System.currentTimeMillis()+IMConstant.AMR_FILE;
+		    fileName = System.currentTimeMillis()+AMR_FILE;
 		}
 		
 		if(!AbFileUtil.isCanUseSD()){

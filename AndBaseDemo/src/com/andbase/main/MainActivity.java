@@ -54,8 +54,6 @@ public class MainActivity extends AbActivity {
 	private AbTitleBar mAbTitleBar = null;
 	private MyApplication application;
 	// 数据库操作类
-	public AbSqliteStorage mAbSqliteStorage = null;
-	public UserDao mUserDao = null;
 	private MainMenuFragment mMainMenuFragment = null;
 	private MainContentFragment mMainContentFragment = null;
 	public final int LOGIN_CODE = 0;
@@ -112,12 +110,6 @@ public class MainActivity extends AbActivity {
 
 		initTitleRightLayout();
 
-		// 初始化AbSqliteStorage
-		mAbSqliteStorage = AbSqliteStorage.getInstance(this);
-
-		// 初始化数据库操作实现类
-		mUserDao = new UserDao(this);
-
 		if(application.mUser!=null){
 			// 自动登录
 			checkLogin(application.mUser);
@@ -138,6 +130,10 @@ public class MainActivity extends AbActivity {
 		
 		httpUtil = AbHttpUtil.getInstance(this);
 		
+		
+		String  weixin = AbAppUtil.getWeiXinNumber(this);
+		AbToastUtil.showToast(this,"获取到:"+weixin);
+		
 	}
 	
 
@@ -152,17 +148,17 @@ public class MainActivity extends AbActivity {
 	    //聊天对象
         String userName = intent.getStringExtra("USERNAME");
         //会话类型,跳转到不同的界面
-        int type = intent.getIntExtra("TYPE",IMMessage.SYS_MSG);
-        if (type == IMMessage.ADD_FRIEND_MSG) {
+        int type = intent.getIntExtra("TYPE",0);
+        if (type == 2) {
             
-        }else if(type == IMMessage.CHAT_MSG){
-            if(application.mUser == null){
+        }else if(type == 0){
+            if(!application.isLogin){
                 toLogin(CHAT_CODE);
             }else{
             	toChat(userName);
             }
-        }else if(type == IMMessage.SYS_MSG){
-           //系统消息
+        }else if(type == 1){
+        	
         }
 	}
 
@@ -238,30 +234,7 @@ public class MainActivity extends AbActivity {
 	 * 登录
 	 */
 	public void checkLogin(User user) {
-		// 查询本地数据
-		AbStorageQuery mAbStorageQuery = new AbStorageQuery();
-		mAbStorageQuery.equals("user_name", user.getUserName());
-		mAbStorageQuery.equals("password", user.getPassword());
-		mAbStorageQuery.equals("is_login_user", true);
-		mAbSqliteStorage.findData(mAbStorageQuery, mUserDao,
-			new AbDataSelectListener() {
-
-				@Override
-				public void onFailure(int errorCode, String errorMessage) {
-					AbToastUtil.showToast(MainActivity.this,errorMessage);
-				}
-
-				@Override
-				public void onSuccess(List<?> paramList) {
-					if (paramList != null && paramList.size() > 0) {
-					    //登录IM
-						loginIMTask((User) paramList.get(0));
-					}else{
-						AbToastUtil.showToast(MainActivity.this,"IM信息缺失");
-					}
-				}
-
-		});
+		
 	}
 
 	/**
@@ -276,7 +249,7 @@ public class MainActivity extends AbActivity {
 	 */
 	public void startIMService(){
 		Log.d("TAG", "----启动IM服务----");
-		IMUtil.startIMService(this);
+		//IMUtil.startIMService(this);
 	}
 	
 	/**
@@ -284,8 +257,8 @@ public class MainActivity extends AbActivity {
 	 */
 	public void stopIMService(){
 		Log.d("TAG", "----关闭IM服务----");
-		IMUtil.logoutIM();
-		IMUtil.stopIMService(this);
+		//IMUtil.logoutIM();
+		//IMUtil.stopIMService(this);
 	}
 
 	@Override
@@ -329,54 +302,6 @@ public class MainActivity extends AbActivity {
 		}
 	}
 
-	/**
-	 * 登录IM
-	 * 
-	 * */
-	public void loginIMTask(final User user){
-		   if(IMUtil.isLogin()){
-		       return;
-		   }
-		   AbDialogUtil.showProgressDialog(MainActivity.this,R.drawable.ic_load,"登录到IM");
-	       AbTask task = new AbTask();
-	       final AbTaskItem item = new AbTaskItem();
-	       item.setListener(new AbTaskObjectListener(){
-
-	           @Override
-	           public <T> void update(T entity) {
-	        	   AbDialogUtil.removeDialog(MainActivity.this);
-	               Log.d("TAG", "登录执行完成");
-	               int code = (Integer)entity;
-	               if(code == IMUtil.SUCCESS_CODE || code == IMUtil.LOGGED_CODE){
-	            	   AbToastUtil.showToast(MainActivity.this,"IM登录成功");
-	                    //启动IM服务
-                       startIMService();
-                       //要跳转到哪里
-                       toByIntent(getIntent());
-	               }else if(code == IMUtil.FAIL_CODE){
-	            	   AbToastUtil.showToast(MainActivity.this,"IM登录失败");
-	               }
- 
-	           }
-
-	           @SuppressWarnings("unchecked")
-	           @Override
-	           public Integer getObject() {
-	               int code = IMUtil.FAIL_CODE;
-	               try{
-	                   //设置用户名与密码
-	                   code = IMUtil.loginIM(user.getUserName(),user.getPassword());
-	               } catch (Exception e) {
-	                   e.printStackTrace();
-	               }
-	               return code;
-	           }
-	           
-	       });
-	       
-	       task.execute(item);
-	}
-	
 	public void toLogin(int requestCode){
 	    Intent loginIntent = new Intent(this,LoginActivity.class);
         startActivityForResult(loginIntent,requestCode);

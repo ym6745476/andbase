@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:padding="20dip">
+    android:layout_height="fill_parent"
+    android:padding="20dip" >
 
-    <LinearLayout
-        android:id="@+id/chart01"
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
-    </LinearLayout>
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/chart01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="10px" >
+
+            <ImageView
+                android:id="@+id/zoomIn"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/zoom_in" />
+
+            <ImageView
+                android:id="@+id/zoomOut"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/zoom_out" />
+
+            <ImageView
+                android:id="@+id/zoom1"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/zoom_1" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

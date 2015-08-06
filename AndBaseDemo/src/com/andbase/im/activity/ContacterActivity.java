@@ -44,12 +44,12 @@ public class ContacterActivity extends AbActivity {
             
         });*/
 
-        FragmentLoad page1 = new FragmentLoad();
+        ChatMessageFragment mChatMessageFragment = new ChatMessageFragment();
         ContacterFragment mContacterFragment = new ContacterFragment();
         FragmentLoad page3 = new FragmentLoad();
         
         List<Fragment> mFragments = new ArrayList<Fragment>();
-        mFragments.add(page1);
+        mFragments.add(mChatMessageFragment);
         mFragments.add(mContacterFragment);
         mFragments.add(page3);
         

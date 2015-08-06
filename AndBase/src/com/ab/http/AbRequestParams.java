@@ -127,6 +127,20 @@ public class AbRequestParams {
 			fileParams.put(attr, new ByteArrayBody(data, fileName));
 		}
 	}
+	
+	/**
+	 * 添加一个int参数
+	 * 
+	 * @param attr
+	 * @param str
+	 */
+	public void put(String attr, int value) {
+		try {
+			urlParams.put(attr, String.valueOf(value));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	/**
 	 * 添加一个String参数

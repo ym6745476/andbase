@@ -63,6 +63,27 @@ public class AbHttpUtil {
 	}
 	
 	/**
+	 * 描述：无线程的get请求.
+	 *
+	 * @param url the url
+	 * @param responseListener the response listener
+	 */
+	public void getWithoutThread(String url, AbStringHttpResponseListener responseListener) {
+		mClient.getWithoutThread(url,null,responseListener);
+	}
+	
+	/**
+	 * 描述：无线程的get请求.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void getWithoutThread(String url, AbRequestParams params, AbStringHttpResponseListener responseListener) {
+		mClient.getWithoutThread(url,params,responseListener);
+	}
+	
+	/**
 	 * 描述：无参数的get请求.
 	 *
 	 * @param url the url
@@ -184,6 +205,18 @@ public class AbHttpUtil {
 	public void post(String url, AbRequestParams params,
 			AbFileHttpResponseListener responseListener) {
 		mClient.post(url, params, responseListener);
+	}
+	
+	/**
+	 * 描述：post Json.
+	 *
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void postJson(String url, AbJsonParams params,
+			AbStringHttpResponseListener responseListener) {
+		mClient.postJson(url, params, responseListener);
 	}
 	
 	/**

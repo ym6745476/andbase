@@ -6,10 +6,6 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 import com.ab.global.AbAppConfig;
-import com.andbase.R;
-import com.andbase.im.IMConfig;
-import com.andbase.im.global.IMConstant;
-import com.andbase.im.util.IMUtil;
 import com.andbase.model.User;
 
 public class MyApplication extends Application {
@@ -22,6 +18,7 @@ public class MyApplication extends Application {
 	public boolean userPasswordRemember = false;
 	public boolean ad = false;
 	public boolean isFirstStart = true;
+	public boolean isLogin = false;
 	public SharedPreferences mSharedPreferences = null;
 	
 	/** 默认城市 */
@@ -34,29 +31,23 @@ public class MyApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		mSharedPreferences = getSharedPreferences(AbAppConfig.SHARED_PATH,
-				Context.MODE_PRIVATE);
+		mSharedPreferences = getSharedPreferences(AbAppConfig.SHARED_PATH,Context.MODE_PRIVATE);
 		initLoginParams();
-		initIMConfig();
 	}
 
 	/**
 	 * 上次登录参数
 	 */
 	private void initLoginParams() {
-		SharedPreferences preferences = getSharedPreferences(
-				AbAppConfig.SHARED_PATH, Context.MODE_PRIVATE);
-		String userName = preferences.getString(Constant.USERNAMECOOKIE, null);
-		String userPwd = preferences.getString(Constant.USERPASSWORDCOOKIE,
+		String userName = mSharedPreferences.getString(Constant.USERNAMECOOKIE, null);
+		String userPwd = mSharedPreferences.getString(Constant.USERPASSWORDCOOKIE,
 				null);
-		Boolean userPwdRemember = preferences.getBoolean(
+		Boolean userPwdRemember = mSharedPreferences.getBoolean(
 				Constant.USERPASSWORDREMEMBERCOOKIE, false);
-		if (userName != null) {
-			mUser = new User();
-			mUser.setUserName(userName);
-			mUser.setPassword(userPwd);
-			userPasswordRemember = userPwdRemember;
-		}
+		mUser = new User();
+		mUser.setUserName(userName);
+		mUser.setPassword(userPwd);
+		userPasswordRemember = userPwdRemember;
 	}
 
 	public void updateLoginParams(User user) {
@@ -73,6 +64,7 @@ public class MyApplication extends Application {
 			editor.commit();
 		}
 		isFirstStart = false;
+		isLogin = true;
 	}
 
 	/**
@@ -83,34 +75,9 @@ public class MyApplication extends Application {
 		editor.clear();
 		editor.commit();
 		mUser = null;
+		isLogin = false;
 	}
 
-	/**
-	 * IM配置
-	 */
-	public void initIMConfig() {
-	    IMConfig mIMConfig = new IMConfig();
-
-	    mIMConfig.setXmppHost(mSharedPreferences.getString(
-				IMConstant.XMPP_HOST,
-				getResources().getString(R.string.xmpp_host)));
-
-	    mIMConfig.setXmppPort(mSharedPreferences.getInt(
-				IMConstant.XMPP_PORT,
-				getResources().getInteger(R.integer.xmpp_port)));
-
-	    mIMConfig.setXmppServiceName(mSharedPreferences.getString(
-				IMConstant.XMPP_SEIVICE_NAME,
-				getResources().getString(R.string.xmpp_service_name)));
-
-	    mIMConfig.setNovisible(mSharedPreferences.getBoolean(
-				IMConstant.IS_NOVISIBLE,
-				getResources().getBoolean(R.bool.is_novisible)));
-		
-		IMUtil.setIMConfig(this.getApplicationContext(),mIMConfig);
-		
-	}
-	
 	@Override
 	public void onTerminate() {
 		super.onTerminate();

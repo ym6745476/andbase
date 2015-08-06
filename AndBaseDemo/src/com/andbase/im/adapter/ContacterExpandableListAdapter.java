@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.andbase.R;
 import com.andbase.im.model.IMRosterGroup;
-import com.andbase.im.model.IMUser;
+import com.andbase.model.User;
 
 public class ContacterExpandableListAdapter extends BaseExpandableListAdapter {
 
@@ -61,12 +61,11 @@ public class ContacterExpandableListAdapter extends BaseExpandableListAdapter {
 			childHolder = (ChildHolder) convertView.getTag();
 		}
 		
-		IMUser user = groups.get(groupPosition).getUsers().get(childPosition);
+		User user = groups.get(groupPosition).getUsers().get(childPosition);
 		
 		//childHolder.mood.setText("");
-		childHolder.userName.setText(user.getName()
-				+ (user.isAvailable() ? "(在线)" : "(离线)"));
-		if (user.isAvailable()) {
+		childHolder.userName.setText(user.getUserName() + "(在线)");
+		if (true) {
 		    childHolder.image.setImageResource(R.drawable.user_online);
 			childHolder.userName.setTextColor(context.getResources().getColor(R.color.blue));
 			childHolder.mood.setTextColor(Color.BLACK);

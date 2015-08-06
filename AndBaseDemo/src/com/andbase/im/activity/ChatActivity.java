@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.packet.Message;
 
 import android.content.BroadcastReceiver;
@@ -43,11 +42,9 @@ import com.andbase.global.Constant;
 import com.andbase.global.MyApplication;
 import com.andbase.im.adapter.ChatMsgViewAdapter;
 import com.andbase.im.dao.IMMsgDao;
-import com.andbase.im.global.IMConstant;
 import com.andbase.im.model.IMMessage;
 import com.andbase.im.util.IMRecordListener;
 import com.andbase.im.util.IMRecorder;
-import com.andbase.im.util.IMUtil;
 import com.andbase.model.User;
 
 
@@ -86,8 +83,6 @@ public class ChatActivity extends AbActivity {
 	private IMMsgDao mIMMsgDao = null;
 	private int pageSize = 10;
 	
-	// 聊天
-	private Chat chat = null;
 	// 登录用户
 	protected String userName;
 	// 和谁聊天
@@ -106,7 +101,7 @@ public class ChatActivity extends AbActivity {
 			
 			if(mIMMessage!=null){
 			    if(D) Log.d(TAG, "收到了消息:" + mIMMessage.getContent());
-                mIMMessage.setSendState(IMMessage.READ);
+                //mIMMessage.setSendState(IMMessage.READ);
                 if(application.mUser!=null){
                     if(mIMMessage.getToUserName().equals(application.mUser.getUserName())){
                         mChatMsgList.add(mIMMessage);
@@ -151,8 +146,6 @@ public class ChatActivity extends AbActivity {
             userName  = application.mUser.getUserName();
         }
        
-        chat = IMUtil.createChat(toUserName);
-        
 		mAbTitleBar.setTitleText("与"+toUserName+"的会话");
 		
 		mContentEdit = (EditText)findViewById(R.id.content);
@@ -249,13 +242,13 @@ public class ChatActivity extends AbActivity {
 	                
 	                String time = AbDateUtil.getCurrentDate(AbDateUtil.dateFormatYMDHMS);
 	                IMMessage mIMMessage = new IMMessage();
-	                mIMMessage.setType(IMMessage.CHAT_MSG);
-	                mIMMessage.setSendState(IMMessage.UNSEND);
-	                mIMMessage.setContent(mContentStr);
-	                mIMMessage.setTime(time);
-	                mIMMessage.setUserName(userName);
+	                //mIMMessage.setType(IMMessage.CHAT_MSG);
+	                //mIMMessage.setSendState(IMMessage.UNSEND);
+	                //mIMMessage.setContent(mContentStr);
+	                //mIMMessage.setTime(time);
+	                //mIMMessage.setUserName(userName);
 	                mIMMessage.setToUserName(toUserName);
-	                mIMMessage.setTime(time);
+	                //mIMMessage.setTime(time);
 	                
 	                saveMessageData(mIMMessage);
 					
@@ -309,8 +302,8 @@ public class ChatActivity extends AbActivity {
 	protected void onStart() {
 		// 注册广播接收器
 		IntentFilter mIntentFilter = new IntentFilter(action);
-		mIntentFilter.addAction(IMConstant.ACTION_NEW_MESSAGE);
-		mIntentFilter.addAction(IMConstant.ACTION_CHAT_MESSAGE);
+		//mIntentFilter.addAction(IMConstant.ACTION_NEW_MESSAGE);
+		//mIntentFilter.addAction(IMConstant.ACTION_CHAT_MESSAGE);
 		registerReceiver(mDataReceiver, mIntentFilter);
 		super.onStart();
 	}
@@ -335,20 +328,20 @@ public class ChatActivity extends AbActivity {
      * @throws 
      */
 	protected void sendMessage(IMMessage mIMMessage){
-	    mIMMessage.setSendState(IMMessage.SENDING);
+	    //mIMMessage.setSendState(IMMessage.SENDING);
         mChatMsgViewAdapter.notifyDataSetChanged();
 	    try{
             Message mMessage = new Message();
             mMessage.setSubject("会话消息");
-            mMessage.setProperty(IMMessage.KEY_TIME, mIMMessage.getTime());
+           // mMessage.setProperty(IMMessage.KEY_TIME, mIMMessage.getTime());
             mMessage.setBody(mIMMessage.getContent());
-            chat.sendMessage(mMessage);
-            mIMMessage.setSendState(IMMessage.SENDED);
+            //chat.sendMessage(mMessage);
+           // mIMMessage.setSendState(IMMessage.SENDED);
             mChatMsgViewAdapter.notifyDataSetChanged();
             updateData(mIMMessage);
         }catch (Exception e){
             e.printStackTrace();
-            mIMMessage.setSendState(IMMessage.FAILED);
+           // mIMMessage.setSendState(IMMessage.FAILED);
             mChatMsgViewAdapter.notifyDataSetChanged();
         }
 	    isSendEnable = true;
@@ -460,7 +453,7 @@ public class ChatActivity extends AbActivity {
 					User user = (User)paramList.get(0);
 					if(user!=null){
 					    IMMessage msg = mChatMsgList.get(position);
-						msg.setUser(user);
+						//msg.setUser(user);
 						mChatMsgViewAdapter.notifyDataSetChanged();
 					}
 				}

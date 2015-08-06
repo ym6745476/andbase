@@ -113,24 +113,24 @@ public class ChatMsgViewAdapter extends BaseAdapter {
 	    viewHolder.userHead.setFocusable(false);
         viewHolder.chatAttach.setFocusable(false);
         if(mChatMsg.getSendState()==IMMessage.SENDING){
-        	viewHolder.sendTime.setText(mChatMsg.getTime()+" 正在发送...");
-        }else if(mChatMsg.getSendState()==IMMessage.FAILED){
-        	viewHolder.sendTime.setText(mChatMsg.getTime()+" 发送失败");
-        }else if(mChatMsg.getSendState()==IMMessage.SENDED){
-        	viewHolder.sendTime.setText(mChatMsg.getTime()+" 已发送");
+        	viewHolder.sendTime.setText(mChatMsg.getCreateDate()+" 正在发送...");
+        }else if(mChatMsg.getSendState()==IMMessage.SEND_FAILED){
+        	viewHolder.sendTime.setText(mChatMsg.getCreateDate()+" 发送失败");
+        }else if(mChatMsg.getSendState()==IMMessage.SEND_FINISH){
+        	viewHolder.sendTime.setText(mChatMsg.getCreateDate()+" 已发送");
         }else if(mChatMsg.getSendState()==IMMessage.RECEIVED){
-        	viewHolder.sendTime.setText(mChatMsg.getTime()+" 已接收");
+        	viewHolder.sendTime.setText(mChatMsg.getCreateDate()+" 已接收");
         }
 	    
 	    viewHolder.chatContent.setText(mChatMsg.getContent());
-	    viewHolder.userName.setText(mChatMsg.getUserName());
-	    final User u = mChatMsg.getUser();
+	    //viewHolder.userName.setText(mChatMsg.getUserName());
+	    //final User u = mChatMsg.getUser();
 	    String headUrl = null;
-	    if(u!=null){
-	    	 headUrl = u.getHeadUrl();
-	    }else{
+	    //if(u!=null){
+	    //	 headUrl = u.getHeadUrl();
+	    //}else{
 	    	 //activity.queryUserById(mChatMsg.getuId(),position);
-	    }
+	    //}
 	    
 	    //图片的下载
         mAbImageLoader.display(viewHolder.userHead,headUrl,100,100);

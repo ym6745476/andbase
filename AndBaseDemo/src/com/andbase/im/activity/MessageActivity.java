@@ -118,11 +118,7 @@ public class MessageActivity extends AbActivity implements OnHeaderRefreshListen
     public void queryData(final int query){
         //查询数据
         AbStorageQuery mAbStorageQuery = new AbStorageQuery();
-        mAbStorageQuery.equals("type", IMMessage.SYS_MSG);
-        
-        AbStorageQuery mAbStorageQuery2 = new AbStorageQuery();
-        mAbStorageQuery2.equals("type", IMMessage.ADD_FRIEND_MSG);
-        mAbStorageQuery.or(mAbStorageQuery2);
+        mAbStorageQuery.equals("message_type", IMMessage.SYS_MSG);
         mAbStorageQuery.setLimit(pageSize);
         mAbStorageQuery.setOffset((pageNum-1)*pageSize);
         

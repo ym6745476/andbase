@@ -128,7 +128,6 @@ private MyApplication application;
 	    renderer.setYLabelsAlign(Align.LEFT);
 	    renderer.setPanEnabled(true, false);
 	    renderer.setZoomEnabled(true);
-	    renderer.setZoomButtonsVisible(true);
 	    renderer.setZoomRate(1.1f);
 	    renderer.setBarSpacing(0.5f);
 	    

@@ -3,7 +3,6 @@ package com.andbase.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,11 +14,16 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.ab.activity.AbActivity;
+import com.ab.task.AbTask;
+import com.ab.task.AbTaskItem;
+import com.ab.task.AbTaskListener;
+import com.ab.util.AbDialogUtil;
 import com.ab.util.AbStrUtil;
 import com.ab.util.AbToastUtil;
 import com.ab.view.titlebar.AbTitleBar;
 import com.andbase.R;
 import com.andbase.global.MyApplication;
+import com.andbase.im.util.IMUtil;
 
 public class RegisterActivity extends AbActivity {
 	
@@ -61,10 +65,10 @@ public class RegisterActivity extends AbActivity {
         mClear4 = (ImageButton)findViewById(R.id.clearEmail);
         Button agreementBtn = (Button) findViewById(R.id.agreementBtn);
         
-        //userName.setText("amsoft.cn");
-        //userPwd.setText("123456");
-        //userPwd2.setText("123456");
-        //email.setText("amsoft.cn2010@163.com");
+        userName.setText("15150509589");
+        userPwd.setText("123456");
+        userPwd2.setText("123456");
+        email.setText("amsoft.cn2010@163.com");
         
 		agreementBtn.setOnClickListener(new OnClickListener() {
 			
@@ -296,7 +300,8 @@ public class RegisterActivity extends AbActivity {
 			final String mStr_pwd = userPwd.getText().toString().trim();
 			final String mStr_pwd2 = userPwd2.getText().toString().trim();
 			final String mStr_email = email.getText().toString().trim();
-			if (TextUtils.isEmpty(mStr_name)) {
+			
+			if (AbStrUtil.isEmpty(mStr_name)) {
 				AbToastUtil.showToast(RegisterActivity.this,R.string.error_name);
 				userName.setFocusable(true);
 				userName.requestFocus();
@@ -324,7 +329,7 @@ public class RegisterActivity extends AbActivity {
 				return;
 			}
 			
-			if (TextUtils.isEmpty(mStr_pwd)) {
+			if (AbStrUtil.isEmpty(mStr_pwd)) {
 				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd);
 				userPwd.setFocusable(true);
 				userPwd.requestFocus();
@@ -345,7 +350,7 @@ public class RegisterActivity extends AbActivity {
 				return;
 			}
 			
-			if (TextUtils.isEmpty(mStr_pwd2)) {
+			if (AbStrUtil.isEmpty(mStr_pwd2)) {
 				AbToastUtil.showToast(RegisterActivity.this,R.string.error_pwd);
 				userPwd2.setFocusable(true);
 				userPwd2.requestFocus();
@@ -392,14 +397,36 @@ public class RegisterActivity extends AbActivity {
 				return;
 			}
 			
-			
-			//showProgressDialog();
-			AbToastUtil.showToast(RegisterActivity.this,"演示界面,没什么用");
-			
+			//注册
+			register(mStr_name,mStr_pwd);
 		}
 	}
    
    
+   public void  register(final String userName,final String password){
+	    AbDialogUtil.showProgressDialog(RegisterActivity.this, 0, "正在注册...");
+	    AbTask task = AbTask.newInstance();
+		//定义异步执行的对象
+   	    final AbTaskItem item = new AbTaskItem();
+		item.setListener(new AbTaskListener() {
+
+			@Override
+			public void update() {
+				AbDialogUtil.removeDialog(RegisterActivity.this);
+				AbToastUtil.showToast(RegisterActivity.this,"注册成功！");
+			}
+
+			@Override
+			public void get() {
+	   		    try {
+	   				IMUtil.register(userName, password);
+	   		    } catch (Exception e) {
+	   		    	e.printStackTrace();
+	   		    }
+		  };
+		});
+       task.execute(item);
+   }
 }
 
 

@@ -141,14 +141,10 @@ public class TouchHandler implements ITouchHandler {
   }
 
   /**
-   * 描述：标尺滑动和比例缩放的点击的事件.
-   *
-   * @version v1.0
-   * @param event the event
-   * @return true, if successful
-   * @see com.ab.view.chart.ITouchHandler#handleTouchControl(android.view.MotionEvent)
-   * @author: amsoft.cn
-   * @date：2013-6-7 上午9:56:06
+   * 
+   * 标尺滑动和点击的事件.
+   * @param event
+   * @return
    */
   @Override
   public boolean handleTouchControl(MotionEvent event) {
@@ -168,16 +164,6 @@ public class TouchHandler implements ITouchHandler {
     } else if (action == MotionEvent.ACTION_DOWN) {
       oldX = event.getX(0);
       oldY = event.getY(0);
-      if (mRenderer != null && mRenderer.isZoomEnabled() && zoomR.contains(oldX, oldY)) {
-        if (oldX < zoomR.left + zoomR.width() / 3) {
-          graphicalView.zoomIn();
-        } else if (oldX < zoomR.left + zoomR.width() * 2 / 3) {
-          graphicalView.zoomOut();
-        } else {
-          graphicalView.zoomReset();
-        }
-        return true;
-      }
     } else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_POINTER_UP) {
       oldX2 = 0;
       oldY2 = 0;

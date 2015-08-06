@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent">
 
     <RelativeLayout
         android:id="@+id/itemImageLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:padding="5dip">
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="5dip"
-            android:layout_marginTop="5dip"
-            android:paddingBottom="2dip" />
+            android:layout_centerInParent="true"/>
 
         <ImageView
             android:id="@+id/item_icon"
             android:layout_width="50dip"
             android:layout_height="50dip"
-            android:layout_alignParentLeft="true"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dip"
-            android:layout_marginTop="5dip"
-            android:scaleType="fitXY" />
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_launcher"/>
     </RelativeLayout>
 
     <TextView
@@ -35,10 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_toRightOf="@+id/itemImageLayout"
-        android:paddingLeft="10dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
         android:paddingTop="5dip"
         android:textColor="@color/gray_dark"
-        android:textSize="18sp" />
+        android:textSize="18sp" 
+        android:text="1111111111"/>
 
     <TextView
         android:id="@+id/item_text"
@@ -47,43 +45,28 @@
         android:layout_below="@+id/item_title"
         android:layout_toRightOf="@+id/itemImageLayout"
         android:gravity="left"
-        android:paddingBottom="2dip"
-        android:paddingLeft="10dip"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:text="11111111111111"
         android:textColor="@color/gray"
         android:textSize="15sp" />
-
-    <LinearLayout
-        android:id="@+id/operate_layout"
-        android:layout_width="wrap_content"
+    
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" 
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/item_text"
-        android:paddingRight="10dip"
-        android:paddingBottom="5dip">
-
-        <Button
-            android:id="@+id/accept_button"
-            android:layout_width="80dip"
-            android:layout_height="32dip"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/button_selector_green"
-            android:gravity="center"
-            android:text="@string/accept_btn"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-        
-        <Button
-            android:id="@+id/reject_button"
-            android:layout_width="80dip"
-            android:layout_height="32dip"
-            android:layout_marginLeft="8dip"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/button_selector_white"
-            android:gravity="center"
-            android:text="@string/reject_btn"
-            android:textColor="@color/gray"
-            android:textSize="16sp" />
-    </LinearLayout>
+        android:layout_below="@+id/item_title"
+        android:layout_toRightOf="@+id/itemImageLayout"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:text="2015-07-10"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
 
 </RelativeLayout>

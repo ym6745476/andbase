@@ -15,7 +15,6 @@
  */
 package com.ab.view.chart;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ import android.graphics.Typeface;
 /**
  * An abstract renderer to be extended by the multiple series classes.
  */
-public class DefaultRenderer implements Serializable {
+public class DefaultRenderer{
   /** The chart title. */
   private String mChartTitle = "";
   /** The chart title text size. */
@@ -84,12 +83,9 @@ public class DefaultRenderer implements Serializable {
   private boolean mPanEnabled = true;
   /** A flag for enabling the zoom. */
   private boolean mZoomEnabled = true;
-  /** A flag for enabling the visibility of the zoom buttons. */
-  private boolean mZoomButtonsVisible = false;
   /** The zoom rate. */
   private float mZoomRate = 1.5f;
-  /** A flag for enabling the external zoom. */
-  private boolean mExternalZoomEnabled = false;
+  
   /** The original chart scale. */
   private float mOriginalScale = mScale;
   /** A flag for enabling the click on elements. */
@@ -526,8 +522,7 @@ public class DefaultRenderer implements Serializable {
   }
 
   /**
-   * Returns the enabled state of the zoom.
-   * 
+   * 缩放的开关,控制2点触控.
    * @return if zoom is enabled
    */
   public boolean isZoomEnabled() {
@@ -535,48 +530,11 @@ public class DefaultRenderer implements Serializable {
   }
 
   /**
-   * Sets the enabled state of the zoom.
-   * 缩放打开默认拖动也打开
+   * 缩放打开，控制2点触控，默认拖动也打开
    * @param enabled zoom enabled
    */
   public void setZoomEnabled(boolean enabled) {
     mZoomEnabled = enabled;
-  }
-
-  /**
-   * Returns the visible state of the zoom buttons.
-   * 
-   * @return if zoom buttons are visible
-   */
-  public boolean isZoomButtonsVisible() {
-    return mZoomButtonsVisible;
-  }
-
-  /**
-   * Sets the visible state of the zoom buttons.
-   * 
-   * @param visible if the zoom buttons are visible
-   */
-  public void setZoomButtonsVisible(boolean visible) {
-    mZoomButtonsVisible = visible;
-  }
-
-  /**
-   * Returns the enabled state of the external (application implemented) zoom.
-   * 
-   * @return if external zoom is enabled
-   */
-  public boolean isExternalZoomEnabled() {
-    return mExternalZoomEnabled;
-  }
-
-  /**
-   * Sets the enabled state of the external (application implemented) zoom.
-   * 
-   * @param enabled external zoom enabled
-   */
-  public void setExternalZoomEnabled(boolean enabled) {
-    mExternalZoomEnabled = enabled;
   }
 
   /**

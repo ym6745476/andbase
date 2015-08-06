@@ -5,8 +5,6 @@ package com.andbase.im.adapter;
 
 import java.util.List;
 
-import org.jivesoftware.smack.packet.Presence;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,11 +17,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ab.image.AbImageLoader;
-import com.ab.util.AbImageUtil;
+import com.ab.util.AbDateUtil;
 import com.andbase.R;
-import com.andbase.global.Constant;
 import com.andbase.im.model.IMMessage;
-import com.andbase.im.util.IMUtil;
 /**
  * © 2012 amsoft.cn
  * 名称：MessageListAdapter
@@ -34,9 +30,7 @@ import com.andbase.im.util.IMUtil;
  */
 public class MessageListAdapter extends BaseAdapter{
 	
-	private static String TAG = "ImageListAdapter";
-	private static final boolean D = Constant.DEBUG;
-  
+	private static String TAG = "MessageListAdapter";
 	private Context mContext;
 	//xml转View对象
     private LayoutInflater mInflater;
@@ -88,9 +82,7 @@ public class MessageListAdapter extends BaseAdapter{
 			   holder.itemsIcon = (ImageView) convertView.findViewById(R.id.item_icon) ;
 			   holder.itemsTitle = (TextView) convertView.findViewById(R.id.item_title);
 			   holder.itemsText = (TextView) convertView.findViewById(R.id.item_text);
-			   holder.acceptBtn = (Button) convertView.findViewById(R.id.accept_button);
-			   holder.rejectBtn = (Button) convertView.findViewById(R.id.reject_button);
-			   holder.operateLayout = (LinearLayout) convertView.findViewById(R.id.operate_layout);
+			   holder.itemsTime = (TextView) convertView.findViewById(R.id.item_time);
 			   convertView.setTag(holder);
           }else{
         	   holder = (ViewHolder) convertView.getTag();
@@ -98,39 +90,12 @@ public class MessageListAdapter extends BaseAdapter{
           
 		  //获取该行的数据
           final IMMessage mMessage = (IMMessage)mData.get(position);
-          holder.itemsTitle.setText(mMessage.getUserName());
+          holder.itemsTitle.setText(mMessage.getFromUserName());
           holder.itemsText.setText(mMessage.getContent());
+          holder.itemsTime.setText(AbDateUtil.getStringByFormat(mMessage.getSendDate(), AbDateUtil.dateFormatYMDHM));
           //图片的下载
+          holder.itemsIcon.setBackgroundResource(R.drawable.ic_launcher);
           //mAbImageLoader.display(holder.itemsIcon,mMessage.g,100,100);
-          if(mMessage.getType()==IMMessage.ADD_FRIEND_MSG){
-              if(mMessage.getRequestState() == IMMessage.ALL){
-                  holder.operateLayout.setVisibility(View.VISIBLE);
-              }else{
-                  holder.operateLayout.setVisibility(View.GONE);
-              }
-          }
-          
-          holder.acceptBtn.setFocusable(false);
-          holder.rejectBtn.setFocusable(false);
-          holder.acceptBtn.setOnClickListener(new OnClickListener(){
-            
-                @Override
-                public void onClick(View v){
-                    // 接受请求
-                    IMUtil.sendSubscribe(Presence.Type.subscribed, IMUtil.getJidByName(mMessage.getUserName()));
-                    IMUtil.sendSubscribe(Presence.Type.subscribe, mMessage.getUserName());
-                    holder.operateLayout.setVisibility(View.GONE);
-                }
-          });
-          
-          holder.rejectBtn.setOnClickListener(new OnClickListener(){
-              
-                  @Override
-                  public void onClick(View v){
-                      IMUtil.sendSubscribe(Presence.Type.unsubscribe, IMUtil.getJidByName(mMessage.getUserName()));
-                      holder.operateLayout.setVisibility(View.GONE);
-                  }
-          });
           
           return convertView;
     }
@@ -142,9 +107,7 @@ public class MessageListAdapter extends BaseAdapter{
 		ImageView itemsIcon;
 		TextView itemsTitle;
 		TextView itemsText;
-		LinearLayout operateLayout;
-		Button acceptBtn;
-		Button rejectBtn;
+		TextView itemsTime;
 	}
     
 }

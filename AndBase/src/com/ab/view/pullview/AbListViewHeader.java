@@ -20,6 +20,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -356,7 +357,7 @@ public class AbListViewHeader extends LinearLayout {
 	 * @param size the new state text size
 	 */
 	public void setStateTextSize(int size) {
-		tipsTextview.setTextSize(size);
+		tipsTextview.setTextSize(TypedValue.COMPLEX_UNIT_PX,size);
 	}
 
 	/**
@@ -365,7 +366,7 @@ public class AbListViewHeader extends LinearLayout {
 	 * @param size the new time text size
 	 */
 	public void setTimeTextSize(int size) {
-		headerTimeView.setTextSize(size);
+		headerTimeView.setTextSize(TypedValue.COMPLEX_UNIT_PX,size);
 	}
 
 	/**

@@ -41,8 +41,10 @@ public class Constant {
  	//1512528
  	public final static String APPID = "1512528";
  		
- 	//jfa97P4HIhjxrAgfUdq1NoKC
+ 	//百度地图 jfa97P4HIhjxrAgfUdq1NoKC
  	public final static String APIKEY = "jfa97P4HIhjxrAgfUdq1NoKC";
  	
-    
+ 	//消息服务
+	public static final String xmppHost = "192.168.1.106";
+	public static final int xmppPort = 5222;    
 }

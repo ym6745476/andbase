@@ -260,13 +260,22 @@ public class AbViewUtil {
 			width = mDisplayMetrics.heightPixels;
 			height = mDisplayMetrics.widthPixels;
 		}
-		if(mDisplayMetrics.scaledDensity > AbAppConfig.UI_DENSITY){
+		if(mDisplayMetrics.scaledDensity >= AbAppConfig.UI_DENSITY){
 			//密度
 			if(width > AbAppConfig.UI_WIDTH){
 				value = value*(1.3f - 1.0f/mDisplayMetrics.scaledDensity);
 			}else if(width < AbAppConfig.UI_WIDTH){
 				value = value*(1.0f - 1.0f/mDisplayMetrics.scaledDensity);
 			}
+		}else{
+			//密度小屏幕大:缩小比例
+			float offset = AbAppConfig.UI_DENSITY-mDisplayMetrics.scaledDensity;
+			if(offset > 0.5f){
+				value = value * 0.9f;
+			}else{
+				value = value * 0.95f;
+			}
+			
 		}
 		return scale(mDisplayMetrics.widthPixels,mDisplayMetrics.heightPixels, value);
 	}
@@ -279,8 +288,7 @@ public class AbViewUtil {
 	 * @return the int
 	 */
 	public static int scaleTextValue(Context context, float value) {
-		DisplayMetrics mDisplayMetrics = AbAppUtil.getDisplayMetrics(context);
-		return scale(mDisplayMetrics.widthPixels,mDisplayMetrics.heightPixels, value);
+		return scaleValue(context, value);
 	}
 	
 	/**

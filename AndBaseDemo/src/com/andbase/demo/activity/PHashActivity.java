@@ -503,7 +503,6 @@ public class PHashActivity extends AbActivity {
 	    renderer.setYLabelsAlign(Align.LEFT);
 	    renderer.setPanEnabled(false, false);
 	    renderer.setZoomEnabled(false);
-	    renderer.setZoomButtonsVisible(false);
 	    renderer.setZoomRate(1.1f);
 	    renderer.setBarSpacing(0.5f);
 	    

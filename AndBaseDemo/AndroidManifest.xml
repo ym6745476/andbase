@@ -445,28 +445,6 @@
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         
-        
-        <!-- push service client -->
-	    <receiver android:name=".im.receiver.IMMessageReceiver">
-	        <intent-filter>
-	            <!-- 接收消息 -->
-	            <action android:name="com.andbase.action.NEW_MESSAGE" />
-	            <action android:name="com.andbase.action.CHAT_MESSAGE" />
-	            <action android:name="com.andbase.action.SYS_MESSAGE" />
-	            <!-- 收到好友邀请 -->
-	            <action android:name="com.andbase.action.ROSTER_SUBSCRIBE" />
-	        </intent-filter>
-	    </receiver>
-        
-        <!-- 联系人服务 -->
-		<service android:name=".im.service.IMContactService"></service>
-		<!-- 聊天服务 -->
-		<service android:name=".im.service.IMChatService"></service>  
-		<!-- 系统消息服务 -->
-		<service android:name=".im.service.IMSystemMsgService"></service>
-		<!-- 重连接服务 -->
- 		<service android:name=".im.service.ReConnectService"></service>
-        
  		<service
             android:name="com.baidu.location.f"
             android:enabled="true"

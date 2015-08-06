@@ -17,19 +17,26 @@ package com.ab.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.ShortBuffer;
+import java.text.SimpleDateFormat;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.ImageFormat;
 import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
+import android.graphics.YuvImage;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
@@ -39,6 +46,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -1325,34 +1333,120 @@ public class AbImageUtil {
         return (int) n;
     }
 	
+	/**
+	 * 
+	 * 将yuv格式转换成灰度bitmap.
+	 * @param yuvData
+	 * @param width
+	 * @param height
+	 * @return
+	 */
+	public Bitmap yuv2GrayBitmap(byte[] yuvData, int width, int height) {
+		int[] pixels = new int[width * height];
+		byte[] yuv = yuvData;
+		int inputOffset = 0;
+		for (int y = 0; y < height; y++) {
+			int outputOffset = y * width;
+			for (int x = 0; x < width; x++) {
+				int grey = yuv[inputOffset + x] & 0xff;
+				pixels[outputOffset + x] = 0xFF000000 | (grey * 0x00010101);
+			}
+			inputOffset += width;
+		}
+
+		Bitmap bitmap = Bitmap.createBitmap(width, height,Bitmap.Config.ARGB_8888);
+		bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return bitmap;
+	}
 	
 	/**
 	 * 将yuv格式转换成bitmap
+	 * ImageFormat.NV21 || format == ImageFormat.YUY2
 	 * @param yuv
 	 * @param width
 	 * @param height
 	 * @return RGB565 format bitmap
 	 */
-	public static Bitmap fromYUV420P(byte[] yuv, int width, int height) {
-		if (yuv == null) {
-			Log.e(TAG, "yuv data==null");
-			return null;
-		}
-		if (yuv.length != width * height * 1.5) {
-			Log.e(TAG, "yudData does not match the provided width and height");
-			return null;
-		}
-		Bitmap bitmap = Bitmap.createBitmap(width, height,Bitmap.Config.RGB_565);
-		int offsetY = 0;
-		ShortBuffer buffer = ShortBuffer.allocate(width * height * 2);
-		for (int line = 0; line < height; line++) {
-			for (int col = 0; col < width; col++) {
-				int y = yuv[offsetY++] & 0xFF;
-				buffer.put((short) ((y >> 3) << 11 | (y >> 2) << 5 | (y >> 3)));
-			}
-		}
-		bitmap.copyPixelsFromBuffer(buffer);
+	public static Bitmap yuv2Bitmap(byte[] data, int width, int height) {
+		final YuvImage image = new YuvImage(data, ImageFormat.NV21, width, height, null);
+	    ByteArrayOutputStream os = new ByteArrayOutputStream(data.length);
+	    if(!image.compressToJpeg(new Rect(0, 0, width, height), 100, os)){
+	        return null;
+	    }
+	    byte[] tmp = os.toByteArray();
+	    Bitmap bitmap = BitmapFactory.decodeByteArray(tmp, 0,tmp.length); 
 		return bitmap;
+	}
+		
+	/**
+	 * 
+	 * TODO
+	 * ImageFormat.NV21 || format == ImageFormat.YUY2.
+	 * @param data
+	 * @param width
+	 * @param height
+	 * @param rect
+	 * @return
+	 */
+    public static Bitmap cropYuv2Bitmap(byte []data, int width, int height, Rect rect){
+		int w = rect.width();
+		int h = rect.height();
+		int frameSize = width*height;
+		int []pixels = new int [w*h];
+		byte []yuv = data;
+		int yOffset = rect.top*width + rect.left;
+		int uvOffset = (rect.top/2)*width + (rect.left/2)*2 + frameSize;
+		int y, u, v, k;
+		
+		for(int i = 0; i < h; ++i){
+			int outputOffset = i*w;
+			for(int j = 0; j < w; ++j){
+				y = (0xff & yuv[yOffset+j])-16;
+				
+				k = ((j>>1)<<1);
+				v = (0xff & yuv[uvOffset+k])-128;
+				u = (0xff & yuv[uvOffset+k+1])-128;
+				
+	            int y1192 = 1192 * y;
+                int r = (y1192 + 1634 * v);
+                int g = (y1192 - 833 * v - 400 * u);
+                int b = (y1192 + 2066 * u);
+
+                if (r < 0) r = 0; else if (r > 262143) r = 262143;
+                if (g < 0) g = 0; else if (g > 262143) g = 262143;
+                if (b < 0) b = 0; else if (b > 262143) b = 262143;
+
+                pixels[outputOffset+j] = 0xff000000 | ((r << 6) & 0xff0000) | ((g >> 2) & 0xff00) | ((b >> 10) & 0xff);
+			}
+			yOffset += width;
+			if(((rect.top+i) & 1) == 1){ uvOffset+= width; }
+		}
+		Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+		bitmap.setPixels(pixels, 0, w, 0, 0, w, h);
+		return bitmap;
+    }
+    
+    /**
+	 * 保存yuv为文件.
+	 * @param data the data
+	 * @param width the width
+	 * @param height the height
+	 * @return the string
+	 */
+    public static String savetoJPEG(byte[] data, int width, int height,String file) {
+		Rect frame = new Rect(0, 0, width, height);
+		YuvImage img = new YuvImage(data, ImageFormat.NV21, width, height, null);
+		OutputStream os = null;
+		File jpgfile = new File(file);
+		try {
+			os = new FileOutputStream(jpgfile);
+			img.compressToJpeg(frame, 100, os);
+			os.flush();
+			os.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return jpgfile.getPath();
 	}
 
 	/**

@@ -4,8 +4,6 @@ package com.andbase.im.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jivesoftware.smack.Roster;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,8 +17,6 @@ import com.andbase.R;
 import com.andbase.global.MyApplication;
 import com.andbase.im.adapter.ContacterExpandableListAdapter;
 import com.andbase.im.model.IMRosterGroup;
-import com.andbase.im.model.IMUser;
-import com.andbase.im.util.IMUtil;
 import com.andbase.model.User;
 
 /**
@@ -56,9 +52,9 @@ public class ContacterFragment extends Fragment {
 				public boolean onChildClick(ExpandableListView parent, View v,
 						int groupPosition, int childPosition, long id) {
 					IMRosterGroup  mIMRosterGroup  = mIMRosterGroups.get(groupPosition);
-					List<IMUser> mUsers = mIMRosterGroup.getUsers();
-					IMUser user = mUsers.get(childPosition);
-					toChat(user.getName());
+					List<User> mUsers = mIMRosterGroup.getUsers();
+					User user = mUsers.get(childPosition);
+					toChat(user.getUserName());
 					return true;
 				}
 		});
@@ -83,9 +79,14 @@ public class ContacterFragment extends Fragment {
 		mIMRosterGroups.clear();
 		//增加分组
 		try {
-			Roster mRoster = IMUtil.getRoster();
-			mGroupNames.addAll(IMUtil.getGroupNames(mRoster));
-			mIMRosterGroups.addAll(IMUtil.getRosterGroups(mRoster));
+			List<String> mGroupNames = new ArrayList<String>();
+			mGroupNames.add("我的好友");
+			List<User> users = new ArrayList<User>();
+			User user = new User();
+			user.setUserName("客服1");
+			users.add(user);
+			IMRosterGroup group = new IMRosterGroup("我的好友",users);
+			mIMRosterGroups.add(group);
 		} catch (Exception e) {
 		    e.printStackTrace();
 			mGroupNames.clear();
