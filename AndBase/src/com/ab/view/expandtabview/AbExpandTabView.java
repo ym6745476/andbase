@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.ab.util.AbAppUtil;
+import com.ab.util.AbViewUtil;
 
 /**
  * 菜单控件头部，封装了下拉动画，动态生成头部按钮个数
@@ -83,14 +84,14 @@ public class AbExpandTabView extends LinearLayout implements OnDismissListener {
 			mViewArray.add(r);
 			r.setTag(SMALL);
 			
-			ToggleButton  tButton = new ToggleButton(mContext);
+			ToggleButton tButton = new ToggleButton(mContext);
 			tButton.setGravity(Gravity.CENTER);
 			tButton.setTextOn(null);
 			tButton.setTextOff(null);
 			tButton.setBackgroundResource(tabSelectorResId);
 			tButton.setTextColor(Color.parseColor("#FF4C4C4C"));
 			tButton.setSingleLine(true);
-			tButton.setTextSize(TypedValue.COMPLEX_UNIT_SP,13);
+			tButton.setTextSize(TypedValue.COMPLEX_UNIT_PX,AbViewUtil.scaleTextValue(tButton.getContext(), 25));
 			
 			addView(tButton,new LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
 			
@@ -221,7 +222,7 @@ public class AbExpandTabView extends LinearLayout implements OnDismissListener {
 	 */
 	public void setTabTextSize(float size){
 		for(ToggleButton tab:mToggleButton){
-			tab.setTextSize(size);
+			AbViewUtil.setTextSize(tab, size);
 		}
 	}
 	

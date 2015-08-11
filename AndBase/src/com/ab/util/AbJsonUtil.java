@@ -37,6 +37,8 @@ import com.google.gson.reflect.TypeToken;
  */
 public class AbJsonUtil {
 	
+	private static GsonBuilder gsonBuilder = new GsonBuilder();
+	
 	/**
 	 * 
 	 * 描述：将对象转化为json.
@@ -46,8 +48,7 @@ public class AbJsonUtil {
 	public static String toJson(Object src) {
 		String json = null;
 		try {
-			GsonBuilder gsonb = new GsonBuilder();
-			Gson gson = gsonb.create();
+			Gson gson = gsonBuilder.create();
 			json = gson.toJson(src);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -64,8 +65,7 @@ public class AbJsonUtil {
 	public static String toJson(List<?> list) {
 		String json = null;
 		try {
-			GsonBuilder gsonb = new GsonBuilder();
-			Gson gson = gsonb.create();
+			Gson gson = gsonBuilder.create();
 			json = gson.toJson(list);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -83,8 +83,7 @@ public class AbJsonUtil {
 	public static List<?> fromJson(String json,TypeToken typeToken) {
 		List<?> list = null;
 		try {
-			GsonBuilder gsonb = new GsonBuilder();
-			Gson gson = gsonb.create();
+			Gson gson = gsonBuilder.create();
 			Type type = typeToken.getType();
 			list = gson.fromJson(json,type);
 		} catch (Exception e) {
@@ -103,8 +102,7 @@ public class AbJsonUtil {
 	public static Object fromJson(String json,Class clazz) {
 		Object obj = null;
 		try {
-			GsonBuilder gsonb = new GsonBuilder();
-			Gson gson = gsonb.create();
+			Gson gson = gsonBuilder.create();
 			obj = gson.fromJson(json,clazz);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -145,5 +143,10 @@ public class AbJsonUtil {
 		}
         
     }
+
+	public static void setGsonBuilderDateFormat(String format) {
+		  gsonBuilder.setDateFormat(format);
+	}
+    
 
 }

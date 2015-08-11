@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 // TODO: Auto-generated Javadoc
 
@@ -162,6 +163,27 @@ public class AbDateUtil {
 			e.printStackTrace();
 		}
 		return strDate;
+	}
+	
+	/**
+	 * 描述：获取指定日期时间的字符串,用于导出想要的格式.
+	 * MMM dd,yyyy kk:mm:ss aa
+	 * @param date the date
+	 * @param format the format
+	 * @return String String类型日期时间
+	 */
+	public static String getStringByDateFormat(String strDate, String format) {
+		String mDateTime = null;
+		try {
+			Calendar c = new GregorianCalendar();
+			SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat("MMM dd,yyyy kk:mm:ss aa", Locale.ENGLISH);
+			c.setTime(mSimpleDateFormat.parse(strDate));
+			SimpleDateFormat mSimpleDateFormat2 = new SimpleDateFormat(format);
+			mDateTime = mSimpleDateFormat2.format(c.getTime());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return mDateTime;
 	}
 	
 	/**

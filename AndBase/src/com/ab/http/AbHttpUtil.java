@@ -84,6 +84,25 @@ public class AbHttpUtil {
 	}
 	
 	/**
+	 * 描述：无线程的post请求.
+	 * @param url the url
+	 * @param responseListener the response listener
+	 */
+	public void postWithoutThread(String url,AbStringHttpResponseListener responseListener) {
+		mClient.postWithoutThread(url,null,responseListener);
+	}
+	
+	/**
+	 * 描述：无线程的post请求.
+	 * @param url the url
+	 * @param params the params
+	 * @param responseListener the response listener
+	 */
+	public void postWithoutThread(String url,AbRequestParams params,AbStringHttpResponseListener responseListener) {
+		mClient.postWithoutThread(url,params,responseListener);
+	}
+	
+	/**
 	 * 描述：无参数的get请求.
 	 *
 	 * @param url the url

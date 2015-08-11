@@ -197,16 +197,6 @@ public class AbHttpClient {
     	this.diskCache = new AbDiskBaseCache(cacheDir);
 	}
 	
-	/**
-	 * 
-	 * 无线程的get请求(无参数).
-	 * @param url 如果有特殊字符需要URLEncoder
-	 * @param responseListener
-	 */
-	public void getWithoutThread(String url,AbStringHttpResponseListener responseListener){
-		getWithoutThread(url,responseListener);
-	}
-	
 	
 	/**
 	 * 描述：无线程的get请求.
@@ -259,15 +249,6 @@ public class AbHttpClient {
 			}
 			responseListener.onFinish();
 		}
-	}
-	
-	/**
-	 * 描述：无线程的post请求.
-	 * @param url the url
-	 * @param responseListener the response listener
-	 */
-	public void postWithoutThread(String url,AbStringHttpResponseListener responseListener) {
-		postWithoutThread(url,null,responseListener);
 	}
 	
 	/**
@@ -354,11 +335,10 @@ public class AbHttpClient {
 	public void get(final String url,final AbRequestParams params,final AbHttpResponseListener responseListener) {
 		
 		responseListener.setHandler(new ResponderHandler(responseListener));
+		responseListener.onStart();
 		mExecutorService.execute(new Runnable() { 
     		public void run() {
     			try {
-    				//放这里的目的是保证只执行一次，避免重定向后重复执行
-    				responseListener.sendStartMessage();
     				doGet(url,params,responseListener);
     			} catch (Exception e) { 
     				e.printStackTrace();
@@ -376,13 +356,11 @@ public class AbHttpClient {
 	 * @param responseListener the response listener
 	 */
 	public void getWithCache(final String url,final AbRequestParams params,final AbHttpResponseListener responseListener) {
-		
 		responseListener.setHandler(new ResponderHandler(responseListener));
+		responseListener.onStart();
 		mExecutorService.execute(new Runnable() { 
     		public void run() {
     			try {
-    				responseListener.sendStartMessage();
-    				
     				String httpUrl = url;
     				//HttpGet连接对象  
 				    if(params!=null){
@@ -451,12 +429,12 @@ public class AbHttpClient {
 	public void post(final String url,final AbRequestParams params,
 			final AbHttpResponseListener responseListener) {
 		responseListener.setHandler(new ResponderHandler(responseListener));
+		responseListener.onStart();
 		mExecutorService.execute(new Runnable() { 
     		public void run() {
     			try {
-    				responseListener.sendStartMessage();
     				doPost(url,params,responseListener);
-    			} catch (Exception e) { 
+    			} catch (Exception e) {
     				e.printStackTrace();
     			}
     		}                 
@@ -560,12 +538,11 @@ public class AbHttpClient {
      */
     public void postJson(final String url, final AbJsonParams params, final AbStringHttpResponseListener responseListener) {
     	responseListener.setHandler(new ResponderHandler(responseListener));
-		mExecutorService.execute(new Runnable() {
+    	responseListener.onStart();
+    	mExecutorService.execute(new Runnable() {
     		public void run() {
     			HttpURLConnection urlConn = null;
     			try {
-    				responseListener.sendStartMessage();
-        			
         			if(!AbAppUtil.isNetworkAvailable(mContext)){
         				Thread.sleep(200);
     					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
@@ -625,12 +602,11 @@ public class AbHttpClient {
      */
     public void doRequest(final String url, final AbRequestParams params, final AbStringHttpResponseListener responseListener) {
     	responseListener.setHandler(new ResponderHandler(responseListener));
-		mExecutorService.execute(new Runnable() { 
+    	responseListener.onStart();
+    	mExecutorService.execute(new Runnable() { 
     		public void run() {
     			HttpURLConnection urlConn = null;
     			try {
-    				responseListener.sendStartMessage();
-        			
         			if(!AbAppUtil.isNetworkAvailable(mContext)){
         				Thread.sleep(200);
     					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
@@ -1077,9 +1053,9 @@ public class AbHttpClient {
             	//完成消息
                 mResponseListener.sendFinishMessage();
             }else{
+            	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
             	//完成消息
                 mResponseListener.sendFinishMessage();
-  				mResponseListener.sendFailureMessage(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
             }
             
             return null;
