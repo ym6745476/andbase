@@ -214,7 +214,7 @@ public class AbImageUtil {
 	 * @return
 	 */
 	public static Bitmap getBitmap(byte [] data,int desiredWidth, int desiredHeight) {
-		Bitmap bitmap = null;
+		Bitmap resizeBmp = null;
 		try {
 			BitmapFactory.Options opts = new BitmapFactory.Options();
 			// 设置为true,decodeFile先不创建内存 只获取一些解码边界信息即图片大小信息
@@ -228,15 +228,6 @@ public class AbImageUtil {
 			desiredWidth = size[0];
 			desiredHeight = size[1];
 
-			// 缩放的比例
-			float scale = getMinScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
-			int destWidth = srcWidth;
-			int destHeight = srcHeight;
-			if (scale != 0) {
-				destWidth = (int) (srcWidth * scale);
-				destHeight = (int) (srcHeight * scale);
-			}
-
 			// 默认为ARGB_8888.
 			opts.inPreferredConfig = Bitmap.Config.RGB_565;
 			// 以下两个字段需一起使用：
@@ -245,23 +236,24 @@ public class AbImageUtil {
 			// 位图可以共享一个参考输入数据(inputstream、阵列等)
 			opts.inInputShareable = true;
 			// 缩放的比例，缩放是很难按准备的比例进行缩放的，通过inSampleSize来进行缩放，其值表明缩放的倍数，SDK中建议其值是2的指数值
-			int sampleSize = findBestSampleSize(srcWidth,srcHeight,destWidth,destHeight);
+			int sampleSize = findBestSampleSize(srcWidth,srcHeight,desiredWidth,desiredHeight);
 			opts.inSampleSize = sampleSize;
-
-			// 设置大小
-			opts.outWidth = destWidth;
-			opts.outHeight = destHeight;
 
 			// 创建内存
 			opts.inJustDecodeBounds = false;
 			// 使图片不抖动
 			opts.inDither = false;
-			bitmap =  BitmapFactory.decodeByteArray(data, 0, data.length, opts);
+			resizeBmp =  BitmapFactory.decodeByteArray(data, 0, data.length, opts);
+			
+			if (resizeBmp != null) {
+				resizeBmp = getCutBitmap(resizeBmp, desiredWidth, desiredHeight);
+			}
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 			AbLogUtil.d(AbImageUtil.class, "" + e.getMessage());
 		}
-		return bitmap;
+		return resizeBmp;
 	}
 
 
@@ -287,18 +279,11 @@ public class AbImageUtil {
 		// 获取图片的原始宽度高度
 		int srcWidth = opts.outWidth;
 		int srcHeight = opts.outHeight;
+		
+		//需要的尺寸重置
 		int[] size = resizeToMaxSize(srcWidth, srcHeight, desiredWidth, desiredHeight);
 		desiredWidth = size[0];
 		desiredHeight = size[1];
-
-		// 缩放的比例
-		float scale = getMinScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
-		int destWidth = srcWidth;
-		int destHeight = srcHeight;
-		if (scale != 0) {
-			destWidth = (int) (srcWidth * scale);
-			destHeight = (int) (srcHeight * scale);
-		}
 
 		// 默认为ARGB_8888.
 		opts.inPreferredConfig = Bitmap.Config.RGB_565;
@@ -308,21 +293,22 @@ public class AbImageUtil {
 		// 位图可以共享一个参考输入数据(inputstream、阵列等)
 		opts.inInputShareable = true;
 		// 缩放的比例，缩放是很难按准备的比例进行缩放的，通过inSampleSize来进行缩放，其值表明缩放的倍数，SDK中建议其值是2的指数值
-		int sampleSize = findBestSampleSize(srcWidth,srcHeight,destWidth,destHeight);
+		int sampleSize = findBestSampleSize(srcWidth,srcHeight,desiredWidth,desiredHeight);
 		opts.inSampleSize = sampleSize;
-
-		// 设置大小
-		opts.outWidth = destWidth;
-		opts.outHeight = destHeight;
-
 		// 创建内存
 		opts.inJustDecodeBounds = false;
 		// 使图片不抖动
 		opts.inDither = false;
-
+		
 		resizeBmp = BitmapFactory.decodeFile(file.getPath(), opts);
-		// 缩小或者放大
-		resizeBmp = scaleBitmap(resizeBmp, scale);
+		
+		// 缩放的比例
+		float scale = getMinScale(resizeBmp.getWidth(), resizeBmp.getHeight(), desiredWidth, desiredHeight);
+		if(scale < 1){
+			// 缩小
+			resizeBmp = scaleBitmap(resizeBmp, scale);
+		}
+		
 		//超出的裁掉
 		if (resizeBmp.getWidth() > desiredWidth || resizeBmp.getHeight() > desiredHeight) {
 			resizeBmp  = getCutBitmap(resizeBmp,desiredWidth,desiredHeight);
@@ -395,16 +381,6 @@ public class AbImageUtil {
 		desiredWidth = size[0];
 		desiredHeight = size[1];
 
-		// 缩放的比例
-		float scale = getMinScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
-		int destWidth = srcWidth;
-		int destHeight = srcHeight;
-		//只缩小，不放大
-		if (scale > 1) {
-			destWidth = (int) (srcWidth * scale);
-			destHeight = (int) (srcHeight * scale);
-		}
-
 		// 默认为ARGB_8888.
 		opts.inPreferredConfig = Bitmap.Config.RGB_565;
 		// 以下两个字段需一起使用：
@@ -413,18 +389,16 @@ public class AbImageUtil {
 		// 位图可以共享一个参考输入数据(inputstream、阵列等)
 		opts.inInputShareable = true;
 		// 缩放的比例，缩放是很难按准备的比例进行缩放的，通过inSampleSize来进行缩放，其值表明缩放的倍数，SDK中建议其值是2的指数值
-		int sampleSize = findBestSampleSize(srcWidth,srcHeight,destWidth,destHeight);
+		int sampleSize = findBestSampleSize(srcWidth,srcHeight,desiredWidth,desiredHeight);
 		opts.inSampleSize = sampleSize;
-		// 设置大小
-		opts.outHeight = destHeight;
-		opts.outWidth = destWidth;
 		// 创建内存
 		opts.inJustDecodeBounds = false;
 		// 使图片不抖动
 		opts.inDither = false;
-		Bitmap bitmap = BitmapFactory.decodeFile(file.getPath(), opts);
-		if (bitmap != null) {
-			resizeBmp = getCutBitmap(bitmap, desiredWidth, desiredHeight);
+		resizeBmp = BitmapFactory.decodeFile(file.getPath(), opts);
+				
+		if (resizeBmp != null) {
+			resizeBmp = getCutBitmap(resizeBmp, desiredWidth, desiredHeight);
 		}
 		return resizeBmp;
 	}
@@ -985,6 +959,61 @@ public class AbImageUtil {
 		canvas.drawBitmap(bitmap, src, dst, paint);
 		return output;
 	}
+	
+	/**
+	 * 转换图片转换成圆角.
+	 * 
+	 * @param bitmap
+	 *            传入Bitmap对象
+	 * @return the bitmap
+	 */
+	public static Bitmap toRoundBitmap(Bitmap bitmap,int roundPx) {
+		if (bitmap == null) {
+			return null;
+		}
+		int width = bitmap.getWidth();
+		int height = bitmap.getHeight();
+		float left, top, right, bottom, dst_left, dst_top, dst_right, dst_bottom;
+		if (width <= height) {
+			top = 0;
+			bottom = width;
+			left = 0;
+			right = width;
+			height = width;
+			dst_left = 0;
+			dst_top = 0;
+			dst_right = width;
+			dst_bottom = width;
+		} else {
+			float clip = (width - height) / 2;
+			left = clip;
+			right = width - clip;
+			top = 0;
+			bottom = height;
+			width = height;
+			dst_left = 0;
+			dst_top = 0;
+			dst_right = height;
+			dst_bottom = height;
+		}
+
+		Bitmap output = Bitmap.createBitmap(width, height, Config.ARGB_8888);
+		Canvas canvas = new Canvas(output);
+		final int color = 0xff424242;
+		final Paint paint = new Paint();
+		final Rect src = new Rect((int) left, (int) top, (int) right,
+				(int) bottom);
+		final Rect dst = new Rect((int) dst_left, (int) dst_top,
+				(int) dst_right, (int) dst_bottom);
+		final RectF rectF = new RectF(dst);
+		paint.setAntiAlias(true);
+		canvas.drawARGB(0, 0, 0, 0);
+		paint.setColor(color);
+		canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+		paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+		canvas.drawBitmap(bitmap, src, dst, paint);
+		return output;
+	}
 
 	/**
 	 * 转换图片转换成镜面效果的图片.
@@ -1316,15 +1345,15 @@ public class AbImageUtil {
 	
 	/**
 	 * 找到最合适的SampleSize
-	 * @param actualWidth
-	 * @param actualHeight
+	 * @param width
+	 * @param height
 	 * @param desiredWidth
 	 * @param desiredHeight
 	 * @return
 	 */
-	private static int findBestSampleSize(int actualWidth, int actualHeight, int desiredWidth, int desiredHeight) {
-        double wr = (double) actualWidth / desiredWidth;
-        double hr = (double) actualHeight / desiredHeight;
+	private static int findBestSampleSize(int width, int height, int desiredWidth, int desiredHeight) {
+        double wr = (double) width / desiredWidth;
+        double hr = (double) height / desiredHeight;
         double ratio = Math.min(wr, hr);
         float n = 1.0f;
         while ((n * 2) <= ratio) {

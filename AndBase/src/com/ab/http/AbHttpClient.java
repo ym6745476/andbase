@@ -20,7 +20,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
@@ -68,6 +67,7 @@ import org.apache.http.util.EntityUtils;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 
 import com.ab.cache.AbCacheHeaderParser;
@@ -173,7 +173,7 @@ public class AbHttpClient {
     /** HTTP缓存. */
     private AbHttpBaseCache httpCache;
 	
-	 /** 磁盘缓存. */
+	/** 磁盘缓存. */
     private AbDiskBaseCache diskCache;
     
     /**
@@ -205,8 +205,40 @@ public class AbHttpClient {
 	 * @param params the params  不需要URLEncoder
 	 * @param responseListener the response listener
 	 */
-	public void getWithoutThread(String url,AbRequestParams params,final AbStringHttpResponseListener responseListener) {
-		HttpURLConnection urlConn = null;
+	public void getWithoutThread(String url,AbRequestParams params,final AbHttpResponseListener responseListener) {
+		
+		try {
+			  responseListener.onStart();
+			  
+			  if(!AbAppUtil.isNetworkAvailable(mContext)){
+				    Thread.sleep(200);
+					responseListener.sendFailureMessage(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+			        return;
+			  }
+			  
+			  //HttpGet连接对象  
+			  if(params!=null){
+				  if(url.indexOf("?")==-1){
+					  url += "?";
+				  }
+				  url += params.getParamString();
+			  }
+			  HttpGet httpGet = new HttpGet(url);  
+			  httpGet.addHeader(USER_AGENT, userAgent);
+			  //压缩
+			  httpGet.addHeader(ACCEPT_ENCODING, "gzip");
+			  //取得默认的HttpClient
+    	      HttpClient httpClient = getHttpClient();  
+		      //取得HttpResponse
+		      httpClient.execute(httpGet,new RedirectionResponseHandler2(url,responseListener),mHttpContext);  
+		} catch (Exception e) {
+			e.printStackTrace();
+			//发送失败消息
+			responseListener.onFailure(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+		}
+		
+    	//HTTP  URL实现的，为了sessionId  保持相同client
+		/*HttpURLConnection urlConn = null;
 		InputStream is = null;
 		try {
 			responseListener.onStart();
@@ -248,7 +280,7 @@ public class AbHttpClient {
 				urlConn.disconnect();
 			}
 			responseListener.onFinish();
-		}
+		}*/
 	}
 	
 	/**
@@ -257,8 +289,51 @@ public class AbHttpClient {
 	 * @param params the params
 	 * @param responseListener the response listener
 	 */
-	public void postWithoutThread(String url,AbRequestParams params,AbStringHttpResponseListener responseListener) {
-		HttpURLConnection urlConn = null;
+	public void postWithoutThread(String url,AbRequestParams params,AbHttpResponseListener responseListener) {
+    	try {
+    		  responseListener.onStart();
+			  
+			  if(!AbAppUtil.isNetworkAvailable(mContext)){
+				    Thread.sleep(200);
+					responseListener.onFailure(AbHttpStatus.CONNECT_FAILURE_CODE,AbAppConfig.CONNECT_EXCEPTION, new AbAppException(AbAppConfig.CONNECT_EXCEPTION));
+			        return;
+			  }
+			  
+			  //HttpPost连接对象  
+		      HttpPost httpPost = new HttpPost(url);  
+		      httpPost.addHeader(USER_AGENT, userAgent);
+			  //压缩
+		      httpPost.addHeader(ACCEPT_ENCODING, "gzip");
+		      //是否包含文件
+		      boolean isContainFile = false;
+		      if(params != null){
+		    	  //使用NameValuePair来保存要传递的Post参数设置字符集 
+			      HttpEntity httpentity = params.getEntity();
+			      //请求httpRequest  
+			      httpPost.setEntity(httpentity); 
+			      if(params.getFileParams().size()>0){
+			    	  isContainFile = true;
+			      }
+			  }
+		      //取得默认的HttpClient
+		      DefaultHttpClient httpClient = getHttpClient();  
+		      if(isContainFile){
+		    	  httpPost.addHeader("connection", "keep-alive");
+			      httpPost.addHeader("Content-Type", "multipart/form-data; boundary=" + params.boundaryString());
+		    	  AbLogUtil.i(mContext, "[HTTP POST]:"+url+",包含文件域!");
+		      }
+		      //取得HttpResponse
+		      httpClient.execute(httpPost,new RedirectionResponseHandler2(url,responseListener),mHttpContext);  
+			  
+		} catch (Exception e) {
+			e.printStackTrace();
+			AbLogUtil.i(mContext, "[HTTP POST]:"+url+",error:"+e.getMessage());
+			//发送失败消息
+			responseListener.onFailure(AbHttpStatus.UNTREATED_CODE,e.getMessage(),new AbAppException(e));
+		}
+    	
+    	
+		/*HttpURLConnection urlConn = null;
 		InputStream is = null;
 		OutputStream os = null;
 		try {
@@ -277,7 +352,6 @@ public class AbHttpClient {
 	        urlConn.setConnectTimeout(mTimeout);
 	        urlConn.setReadTimeout(mTimeout);
 	        urlConn.setDoOutput(true);
-	        
 	        os = urlConn.getOutputStream();
 	        
 	        //是否包含文件
@@ -320,7 +394,7 @@ public class AbHttpClient {
 				urlConn.disconnect();
 			}
 			responseListener.onFinish();
-		}
+		}*/
 	}
 	
 	
@@ -705,6 +779,61 @@ public class AbHttpClient {
 				e.printStackTrace();
 			}
         }
+    }
+    
+    /**
+	 * 描述：写入文件并回调进度.
+	 * 
+	 * @param context the context
+	 * @param entity the entity
+	 * @param name the name
+	 * @param responseListener the response listener
+	 */
+    public void writeResponseData2(Context context,HttpEntity entity,String name,AbFileHttpResponseListener responseListener){
+        
+    	if(entity == null){
+        	return;
+        }
+    	
+    	if(responseListener.getFile() == null){
+    		//创建缓存文件
+    		responseListener.setFile(context,name);
+        }
+    	
+    	InputStream inStream = null;
+    	FileOutputStream outStream = null;
+        try {
+	        inStream = entity.getContent();
+	        long contentLength = entity.getContentLength();
+	        outStream = new FileOutputStream(responseListener.getFile());
+	        if (inStream != null) {
+	          
+	              byte[] tmp = new byte[4096];
+	              int l, count = 0;
+	              while ((l = inStream.read(tmp)) != -1 && !Thread.currentThread().isInterrupted()) {
+	                  count += l;
+	                  outStream.write(tmp, 0, l);
+	                  responseListener.onProgress(count, (int) contentLength);
+	              }
+	        }
+	        responseListener.onSuccess(AbHttpStatus.SUCCESS_CODE);;
+	    }catch(Exception e){
+	        e.printStackTrace();
+	        //发送失败消息
+			responseListener.onFailure(AbHttpStatus.RESPONSE_TIMEOUT_CODE,AbAppConfig.SOCKET_TIMEOUT_EXCEPTION,e);
+	    } finally {
+        	try {
+        		if(inStream!=null){
+        			inStream.close();
+        		}
+        		if(outStream!=null){
+        			outStream.flush();
+    				outStream.close();
+        		}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+        }
         
         
     }
@@ -755,6 +884,54 @@ public class AbHttpClient {
 				e.printStackTrace();
 			}
 		}
+    }
+    
+    /**
+     * 描述：转换为二进制并回调进度.
+     *
+     * @param entity the entity
+     * @param responseListener the response listener
+     */
+    public void readResponseData2(HttpEntity entity,AbBinaryHttpResponseListener responseListener){
+        
+    	if(entity == null){
+        	return;
+        }
+    	
+        InputStream inStream = null;
+        ByteArrayOutputStream outSteam = null; 
+       
+    	try {
+    		inStream = entity.getContent();
+			outSteam = new ByteArrayOutputStream(); 
+			long contentLength = entity.getContentLength();
+			if (inStream != null) {
+				  int l, count = 0;
+				  byte[] tmp = new byte[4096];
+				  while((l = inStream.read(tmp))!=-1){ 
+					  count += l;
+			          outSteam.write(tmp,0,l); 
+			          responseListener.onProgress(count, (int) contentLength);
+
+			     } 
+			  }
+			 responseListener.onSuccess(HttpStatus.SC_OK,outSteam.toByteArray());
+		} catch (Exception e) {
+			e.printStackTrace();
+			//发送失败消息
+			responseListener.onFailure(AbHttpStatus.RESPONSE_TIMEOUT_CODE,AbAppConfig.SOCKET_TIMEOUT_EXCEPTION,e);
+		}finally{
+			try {
+				if(inStream!=null){
+					inStream.close();
+				}
+				if(outSteam!=null){
+					outSteam.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
     	
         
     }
@@ -784,7 +961,6 @@ public class AbHttpClient {
 		
 		/** 响应消息监听. */
 		private AbHttpResponseListener responseListener;
-		
 
 		/**
 		 * 响应消息处理.
@@ -795,9 +971,6 @@ public class AbHttpClient {
 			this.responseListener = responseListener;
 		}
 
-		/* (non-Javadoc)
-		 * @see android.os.Handler#handleMessage(android.os.Message)
-		 */
 		@Override
 		public void handleMessage(Message msg) {
 			
@@ -1056,6 +1229,111 @@ public class AbHttpClient {
             	mResponseListener.sendFailureMessage(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
             	//完成消息
                 mResponseListener.sendFinishMessage();
+            }
+            
+            return null;
+        }
+    }
+    
+    /**
+     * 使用ResponseHandler接口处理响应,支持重定向
+     */
+    private class RedirectionResponseHandler2 implements ResponseHandler<String>{
+        
+    	private AbHttpResponseListener mResponseListener = null;
+    	private String mUrl = null;
+    	
+		public RedirectionResponseHandler2(String url,
+				AbHttpResponseListener responseListener) {
+			super();
+			this.mUrl = url;
+			this.mResponseListener = responseListener;
+		}
+
+
+		@Override
+        public String handleResponse(HttpResponse response)
+                throws ClientProtocolException, IOException{
+            HttpUriRequest request = (HttpUriRequest) mHttpContext.getAttribute(ExecutionContext.HTTP_REQUEST);
+            //请求成功  
+  			int statusCode = response.getStatusLine().getStatusCode();
+  			HttpEntity entity = response.getEntity();
+  			String responseBody = null;
+            //200直接返回结果
+            if (statusCode == HttpStatus.SC_OK) {
+                // 不打算读取response body
+                // 调用request的abort方法  
+                // request.abort();  
+                
+                if (entity != null){
+	  				  if(mResponseListener instanceof AbStringHttpResponseListener){
+	  					  //entity中的内容只能读取一次,否则Content has been consumed
+	  					  //如果压缩要解压
+	                      Header header = entity.getContentEncoding();
+	                      if (header != null){
+	                          String contentEncoding = header.getValue();
+	                          if (contentEncoding != null){
+	                              if (contentEncoding.contains("gzip")){
+	                                  entity = new AbGzipDecompressingEntity(entity);
+	                              }
+	                          }
+	                      }
+	                      String charset = EntityUtils.getContentCharSet(entity) == null ? encode : EntityUtils.getContentCharSet(entity);
+	      	              responseBody = new String(EntityUtils.toByteArray(entity), charset);
+	      	              
+	      	              AbLogUtil.i(mContext, "[HTTP Response]:"+request.getURI()+",result："+responseBody);
+	      	              
+	      	              ((AbStringHttpResponseListener)mResponseListener).onSuccess(statusCode, responseBody);
+	  				      
+	  				  }else if(mResponseListener instanceof AbBinaryHttpResponseListener){
+	  					  responseBody = "Binary";
+	  					  AbLogUtil.i(mContext, "[HTTP Response]:"+request.getURI()+",result："+responseBody);
+	  					  readResponseData2(entity,((AbBinaryHttpResponseListener)mResponseListener));
+	  				  }else if(mResponseListener instanceof AbFileHttpResponseListener){
+	  					  //获取文件名
+	  					  String fileName = AbFileUtil.getCacheFileNameFromUrl(mUrl, response);
+	  					  AbLogUtil.i(mContext, "[HTTP Response]:"+request.getURI()+",result："+fileName);
+	  					  writeResponseData(mContext,entity,fileName,((AbFileHttpResponseListener)mResponseListener));
+	  				  }
+	      		      //资源释放!!!
+	            	  try {
+						  entity.consumeContent();
+					  } catch (Exception e) {
+						  e.printStackTrace();
+					  }
+	            	  
+	            	  //完成消息
+	                  mResponseListener.onFinish();
+	      			  return responseBody;
+                }
+                
+            }
+            //301 302进行重定向请求
+            else if (statusCode == HttpStatus.SC_MOVED_TEMPORARILY
+                    || statusCode == HttpStatus.SC_MOVED_PERMANENTLY){
+                // 从头中取出转向的地址
+                Header locationHeader = response.getLastHeader("location");
+                String location = locationHeader.getValue();
+                if (request.getMethod().equalsIgnoreCase(HTTP_POST)){
+                    postWithoutThread(location, new AbRequestParams(), mResponseListener);
+                }
+                else if (request.getMethod().equalsIgnoreCase(HTTP_GET)){
+                	getWithoutThread(location, new AbRequestParams(), mResponseListener);
+                }
+            }else if(statusCode == HttpStatus.SC_NOT_FOUND){
+            	//404
+            	mResponseListener.onFailure(statusCode, AbAppConfig.NOT_FOUND_EXCEPTION, new AbAppException(AbAppConfig.NOT_FOUND_EXCEPTION));
+            	//完成消息
+                mResponseListener.onFinish();
+            }else if(statusCode == HttpStatus.SC_FORBIDDEN){
+            	//403
+            	mResponseListener.onFailure(statusCode, AbAppConfig.FORBIDDEN_EXCEPTION, new AbAppException(AbAppConfig.FORBIDDEN_EXCEPTION));
+            	//完成消息
+                mResponseListener.onFinish();
+            }else{
+            	mResponseListener.onFailure(statusCode, AbAppConfig.REMOTE_SERVICE_EXCEPTION, new AbAppException(AbAppConfig.REMOTE_SERVICE_EXCEPTION));
+            	//完成消息
+                mResponseListener.onFinish();
             }
             
             return null;

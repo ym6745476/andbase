@@ -281,7 +281,7 @@ public class AbFileUtil {
  	 * 下载网络文件到SD卡中.如果SD中存在同名文件将不再下载
  	 *
  	 * @param url 要下载文件的网络地址
- 	 * @param dirPath the dir path
+ 	 * @param dirPath 文件路径
  	 * @return 下载好的本地文件地址
  	 */
  	 public static String downloadFile(String url,String dirPath){
@@ -296,16 +296,21 @@ public class AbFileUtil {
  	    	}
              //先判断SD卡中有没有这个文件，不比较后缀部分比较
              String fileNameNoMIME  = getCacheFileNameFromUrl(url);
-             File parentFile = new File(imageDownloadDir);
+             File parentFile = new File(dirPath);
+             if(!parentFile.exists()){
+         		 parentFile.mkdirs();
+			 }
              File[] files = parentFile.listFiles();
-             for(int i = 0; i < files.length; ++i){
-                  String fileName = files[i].getName();
-                  String name = fileName.substring(0,fileName.lastIndexOf("."));
-                  if(name.equals(fileNameNoMIME)){
-                      //文件已存在
-                      return files[i].getPath();
-                  }
-             } 
+             if(files!=null){
+            	 for(int i = 0; i < files.length; ++i){
+                     String fileName = files[i].getName();
+                     String name = fileName.substring(0,fileName.lastIndexOf("."));
+                     if(name.equals(fileNameNoMIME)){
+                         //文件已存在
+                         return files[i].getPath();
+                     }
+                } 
+            }
              
  			URL mUrl = new URL(url);
  			connection = (HttpURLConnection)mUrl.openConnection();
@@ -313,7 +318,7 @@ public class AbFileUtil {
             //获取文件名，下载文件
             String fileName  = getCacheFileNameFromUrl(url,connection);
              
-            file = new File(imageDownloadDir,fileName);
+            file = new File(dirPath,fileName);
             downFilePath = file.getPath();
             if(!file.exists()){
                 file.createNewFile();

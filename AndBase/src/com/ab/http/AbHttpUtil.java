@@ -17,8 +17,6 @@ package com.ab.http;
 
 import android.content.Context;
 
-import com.ab.global.AbAppConfig;
-
 // TODO: Auto-generated Javadoc
 /**
  * © 2012 amsoft.cn

@@ -386,7 +386,13 @@ public class AbListViewHeader extends LinearLayout {
 	public void setArrowImage(int resId) {
 		this.arrowImageView.setImageResource(resId);
 	}
-	
-    
+
+	public TextView getTipsTextview() {
+		return tipsTextview;
+	}
+
+	public TextView getHeaderTimeView() {
+		return headerTimeView;
+	}
 
 }
