@@ -260,7 +260,7 @@ public class AbViewUtil {
 			width = mDisplayMetrics.heightPixels;
 			height = mDisplayMetrics.widthPixels;
 		}
-		if(mDisplayMetrics.scaledDensity >= AbAppConfig.UI_DENSITY){
+		if(mDisplayMetrics.scaledDensity == AbAppConfig.UI_DENSITY){
 			//密度
 			if(width > AbAppConfig.UI_WIDTH){
 				value = value*(1.3f - 1.0f/mDisplayMetrics.scaledDensity);

@@ -80,7 +80,7 @@ public class AbJsonUtil {
 	 * @param typeToken new TypeToken<ArrayList<?>>() {};
 	 * @return
 	 */
-	public static List<?> fromJson(String json,TypeToken typeToken) {
+	public static <T> T fromJson(String json,TypeToken<T> typeToken) {
 		List<?> list = null;
 		try {
 			Gson gson = gsonBuilder.create();
@@ -89,7 +89,7 @@ public class AbJsonUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return list;
+		return (T)list;
 	}
 	
 	/**
@@ -99,7 +99,7 @@ public class AbJsonUtil {
 	 * @param clazz
 	 * @return
 	 */
-	public static Object fromJson(String json,Class clazz) {
+	public static <T> T fromJson(String json,Class<T> clazz) {
 		Object obj = null;
 		try {
 			Gson gson = gsonBuilder.create();
@@ -107,7 +107,7 @@ public class AbJsonUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return obj;
+		return (T)obj;
 	}
 	
 	/**

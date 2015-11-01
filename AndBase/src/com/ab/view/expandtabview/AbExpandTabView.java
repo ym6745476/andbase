@@ -91,7 +91,7 @@ public class AbExpandTabView extends LinearLayout implements OnDismissListener {
 			tButton.setBackgroundResource(tabSelectorResId);
 			tButton.setTextColor(Color.parseColor("#FF4C4C4C"));
 			tButton.setSingleLine(true);
-			tButton.setTextSize(TypedValue.COMPLEX_UNIT_PX,AbViewUtil.scaleTextValue(tButton.getContext(), 25));
+			AbViewUtil.setTextSize(tButton, 30);
 			
 			addView(tButton,new LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
 			
